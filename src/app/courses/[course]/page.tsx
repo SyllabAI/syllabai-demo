@@ -39,7 +39,7 @@ export default async function CourseHubPage({
   const qual = `Edexcel ${meta.level} ${meta.subject}`;
   // the 4CH1 pilot runs on the official Pearson tree; every other course runs
   // on the corpus's own (SME) tree until the official mapping lands upstream
-  const officialTree = hub.manifest.treeKind !== "sme-native";
+  const officialTree = hub.treeKind !== "sme-native";
 
   const resources = [
     {

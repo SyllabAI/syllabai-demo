@@ -9,9 +9,9 @@ const PILOT = "igcse-chemistry-19";
  */
 const nextConfig: NextConfig = {
   output: "standalone",
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  // Type errors now fail the build: the previous ignoreBuildErrors:true let a
+  // runtime crash (undefined property access on the hub page) ship silently.
+  typescript: {},
   reactStrictMode: false,
   async redirects() {
     return [

@@ -154,6 +154,8 @@ export interface HubCourse {
   meta: CourseMeta;
   /** true when the corpus came through the DemoDataProvider seam (ladder modes) */
   viaProvider: boolean;
+  /** which navigation tree powers this hub: "official" (parsed Pearson spec) or "sme-native" (corpus tree) */
+  treeKind: string;
   index: ReturnType<typeof import("@/lib/spec-tree").buildSpecTreeIndex>;
   counts: Record<string, { notes: number; questions: number; flashcards: number }>;
   hrefs: {
@@ -193,7 +195,8 @@ export async function loadHubCourse(slug: string): Promise<HubCourse | null> {
   if (bundle) {
     ({ notes, questionTopics, flashcards, curriculum } = bundle);
   } else if (slug === pilot) {
-    // pilot without a committed bundle → provider seam (neon / core-api ladder)
+    // pilot without a committed bundle → provider seam (neon / core-api ladder);
+    // the demo provider corpus rides the official 4CH1 tree
     const provider = getDataProvider();
     [notes, questionTopics, flashcards, curriculum] = await Promise.all([
       provider.revisionNotes(),
@@ -207,6 +210,7 @@ export async function loadHubCourse(slug: string): Promise<HubCourse | null> {
     return {
       meta,
       viaProvider: false,
+      treeKind: "sme-native",
       index: emptyIndex(slug, meta.subject),
       counts: {},
       hrefs: { notes: {}, questions: {}, flashcards: {} },
@@ -257,6 +261,7 @@ export async function loadHubCourse(slug: string): Promise<HubCourse | null> {
   return {
     meta,
     viaProvider,
+    treeKind: viaProvider ? "official" : ((bundle as NonNullable<typeof bundle>).manifest.treeKind ?? "sme-native"),
     index,
     counts,
     hrefs,
