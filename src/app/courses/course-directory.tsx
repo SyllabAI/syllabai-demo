@@ -15,6 +15,7 @@ export function CourseDirectory({ courses }: { courses: CourseMeta[] }) {
     if (!needle) return courses;
     return courses.filter(
       (c) =>
+        c.label.toLowerCase().includes(needle) ||
         c.subject.toLowerCase().includes(needle) ||
         c.code.toLowerCase().includes(needle) ||
         c.level.toLowerCase().includes(needle),
@@ -53,11 +54,17 @@ export function CourseDirectory({ courses }: { courses: CourseMeta[] }) {
                 >
                   <CardContent className="flex items-start gap-3 p-4">
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-semibold group-hover:text-primary">{c.subject}</p>
-                      <p className="mt-0.5 font-mono text-xs text-muted-foreground">{c.code}</p>
+                      <p className="truncate text-sm font-semibold group-hover:text-primary">{c.label}</p>
+                      <p className="mt-0.5 font-mono text-xs text-muted-foreground">
+                        {c.code ? c.code : <span className="not-italic">code pending</span>}
+                      </p>
                       <div className="mt-2 flex flex-wrap gap-1.5">
                         {c.status === "pilot" ? (
-                          <Badge className="text-[9px] uppercase">pilot corpus</Badge>
+                          <Badge className="text-[9px] uppercase">pilot corpus · official spec tree</Badge>
+                        ) : c.status === "full" ? (
+                          <Badge variant="outline" className="text-[9px] uppercase">
+                            full corpus
+                          </Badge>
                         ) : (
                           <Badge variant="outline" className="text-[9px] uppercase text-muted-foreground">
                             import pending

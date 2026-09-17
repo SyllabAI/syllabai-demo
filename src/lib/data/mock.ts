@@ -6,13 +6,13 @@
  * see that script for provenance). Canonical ids (rn_*, qstn_*, 4CH1-*) are
  * preserved exactly as they exist upstream.
  */
-import manifestJson from "../../../content/igcse-chemistry/manifest.json";
-import curriculumJson from "../../../content/igcse-chemistry/curriculum.json";
-import conceptGraphJson from "../../../content/igcse-chemistry/concept-graph.json";
-import notesJson from "../../../content/igcse-chemistry/notes.json";
-import questionsJson from "../../../content/igcse-chemistry/questions.json";
-import flashcardsJson from "../../../content/igcse-chemistry/flashcards.json";
-import learnerJson from "../../../content/igcse-chemistry/learner-sim.json";
+import manifestJson from "../../../content/igcse-chemistry-19/manifest.json";
+import curriculumJson from "../../../content/igcse-chemistry-19/curriculum.json";
+import conceptGraphJson from "../../../content/igcse-chemistry-19/concept-graph.json";
+import notesJson from "../../../content/igcse-chemistry-19/notes.json";
+import questionsJson from "../../../content/igcse-chemistry-19/questions.json";
+import flashcardsJson from "../../../content/igcse-chemistry-19/flashcards.json";
+import learnerJson from "../../../content/igcse-chemistry-19/learner-sim.json";
 import { z } from "zod";
 import {
   ContentManifest,

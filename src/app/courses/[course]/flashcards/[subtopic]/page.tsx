@@ -39,8 +39,8 @@ export default async function FlashcardDeckPage({
           title={`${subtopic.title} (${meta.subject}): Flashcards`}
           description={
             topic
-              ? `Deck ${topic.number}.${subtopic.label} — ${cards.length} card${cards.length === 1 ? "" : "s"} from the “${subtopic.title}” revision notes.`
-              : `${cards.length} cards from the “${subtopic.title}” revision notes.`
+              ? `Deck ${topic.number}.${subtopic.label} — ${cards.length} card${cards.length === 1 ? "" : "s"} for “${subtopic.title}”, imported from the Save My Exams deck corpus.`
+              : `${cards.length} cards for “${subtopic.title}”, imported from the Save My Exams deck corpus.`
           }
         />
         <div className="mt-6">

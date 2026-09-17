@@ -15,6 +15,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getDataProvider } from "@/lib/data";
+import { pilotCourseSlug } from "@/lib/courses";
 import { publicConfig } from "@/lib/config";
 import { ProvenanceBadge } from "@/components/provenance";
 
@@ -23,6 +24,7 @@ export const dynamic = "force-dynamic";
 export default async function HubPage() {
   const provider = getDataProvider();
   const cfg = publicConfig();
+  const pilotSlug = await pilotCourseSlug();
   const [manifest, graph, notes, topics] = await Promise.all([
     provider.manifest(),
     provider.conceptGraph(),
@@ -39,7 +41,7 @@ export default async function HubPage() {
       desc: "SaveMyExams-style per-subject hubs (pilot: Edexcel IGCSE Chemistry 4CH1): sidebar topic tree, notes reader, question player, flashcards.",
     },
     {
-      href: "/courses/igcse-chemistry",
+      href: `/courses/${pilotSlug ?? ""}`,
       icon: BookOpen,
       title: "4CH1 Learning Hub",
       desc: "The fully-loaded pilot course — revision notes, exam questions by topic, flashcards and strengths & weaknesses.",

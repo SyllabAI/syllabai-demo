@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { loadHubCourse } from "@/lib/courses";
+import { loadHubCourse, pilotCourseSlug } from "@/lib/courses";
 import { publicConfig } from "@/lib/config";
 import { CourseHeader } from "@/components/hub/course-header";
 import { FrameworkTags } from "@/components/hub/chrome";
@@ -32,17 +32,23 @@ export default async function CourseHubPage({
   const { course: slug } = await params;
   const hub = await loadHubCourse(slug);
   if (!hub) notFound();
+  const pilotSlug = await pilotCourseSlug();
   const cfg = publicConfig();
   const { meta, stats } = hub;
   const base = `/courses/${meta.slug}`;
   const qual = `Edexcel ${meta.level} ${meta.subject}`;
+  // the 4CH1 pilot runs on the official Pearson tree; every other course runs
+  // on the corpus's own (SME) tree until the official mapping lands upstream
+  const officialTree = hub.manifest.treeKind !== "sme-native";
 
   const resources = [
     {
       href: `${base}/revision-notes`,
       icon: BookOpen,
       title: "Revision Notes",
-      desc: "Topic-anchored revision notes mapped to the official specification points.",
+      desc: officialTree
+        ? "Topic-anchored revision notes mapped to the official specification points."
+        : "Topic-anchored revision notes anchored to corpus spec points (official-spec mapping pending upstream).",
       count: stats.notes,
       countLabel: `${stats.notes} note${stats.notes === 1 ? "" : "s"}`,
       ready: stats.notes > 0,
@@ -60,7 +66,7 @@ export default async function CourseHubPage({
       href: `${base}/flashcards`,
       icon: CircleHelp,
       title: "Flashcards",
-      desc: "Per-sub-topic recall decks generated from the note corpus (demo-derived).",
+      desc: "Save My Exams recall decks with their spec-point anchors, imported per sub-topic.",
       count: stats.flashcards,
       countLabel: `${stats.flashcards} card${stats.flashcards === 1 ? "" : "s"}`,
       ready: stats.flashcards > 0,
@@ -91,7 +97,7 @@ export default async function CourseHubPage({
         meta={meta}
         activeTab="resources"
         title={`${qual} Revision`}
-        description={`Tools designed specifically for the ${qual} syllabus (${meta.code}): revision notes, exam-style questions and flashcards organised around the official specification tree — with provenance kept visible on every item.`}
+        description={`Tools designed specifically for the ${qual} syllabus (${meta.code}): revision notes, exam-style questions and flashcards organised around the ${officialTree ? "official specification tree" : "corpus specification tree"} — with provenance kept visible on every item.`}
       />
 
       {!hub.viaProvider && stats.notes + stats.questions === 0 ? (
@@ -118,7 +124,7 @@ export default async function CourseHubPage({
             <p>
               Explore the fully-loaded pilot course instead:{" "}
               <Link
-                href="/courses/igcse-chemistry"
+                href={`/courses/${pilotSlug ?? ""}`}
                 className="font-medium text-primary underline underline-offset-2"
               >
                 Edexcel IGCSE Chemistry (4CH1)
@@ -137,7 +143,9 @@ export default async function CourseHubPage({
                 <div>
                   <p className="text-sm font-semibold">Specification {meta.code}</p>
                   <p className="text-xs text-muted-foreground">
-                    Parsed specification points — the canonical tree powering this hub
+                    {officialTree
+                      ? "Parsed specification points — the canonical tree powering this hub"
+                      : "Corpus spec points (SME-native anchors) — the navigation tree powering this hub; official-code mapping is pending upstream"}
                   </p>
                 </div>
               </div>

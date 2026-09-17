@@ -1,20 +1,83 @@
 "use client";
 
+import "katex/dist/katex.min.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+
+/**
+ * Markdown renderer for corpus content (SME notes, questions, solutions,
+ * flashcards). The upstream corpus carries:
+ *   - inline/display LaTeX in $…$ / $$…$$ (converted from Wiris MathML
+ *     upstream) → rendered with KaTeX;
+ *   - light inline HTML (<sub>/<sup> for chemical formulae, <br/>, tables)
+ *     → rehype-raw (content is operator-imported, not user input);
+ *   - images hotlinked from the public syllabai-resources repo;
+ *   - `> **Exam Hint**` / `> **Worked Example**` / `> **Case Study**` /
+ *     `> **Top Tip**` blockquote callouts → SME-style tinted boxes.
+ */
+
+type HastNode = {
+  type?: string;
+  value?: string;
+  tagName?: string;
+  children?: HastNode[];
+};
+
+function hastText(node: HastNode | undefined | null): string {
+  if (!node) return "";
+  if (node.type === "text") return node.value ?? "";
+  return (node.children ?? []).map(hastText).join("");
+}
+
+const CALLOUT_STYLES: { match: RegExp; label: string; className: string }[] = [
+  {
+    match: /exam hint/i,
+    label: "Exam hint",
+    className: "border-l-amber-500 bg-amber-500/10",
+  },
+  {
+    match: /worked example/i,
+    label: "Worked example",
+    className: "border-l-emerald-600 bg-emerald-600/10",
+  },
+  {
+    match: /case study/i,
+    label: "Case study",
+    className: "border-l-violet-500 bg-violet-500/10",
+  },
+  {
+    match: /top tip|top tips/i,
+    label: "Top tip",
+    className: "border-l-sky-500 bg-sky-500/10",
+  },
+];
+
+/** Corpus spec-point anchor rendered as a quiet provenance chip. */
+const SPEC_ANCHOR_RE = /^\s*Spec point\b/i;
+
+function blockquoteVariant(node: HastNode | undefined) {
+  const text = hastText(node?.children?.[0]);
+  if (SPEC_ANCHOR_RE.test(text)) {
+    return { label: "Spec point", className: "border-l-primary/40 bg-muted/60" };
+  }
+  for (const v of CALLOUT_STYLES) {
+    if (v.match.test(text)) return { label: v.label, className: v.className };
+  }
+  return null;
+}
 
 /** Markdown renderer for corpus content (SME notes, questions, solutions). */
 export function Markdown({ children, className }: { children: string; className?: string }) {
   return (
     <div className={cn("prose-sm space-y-3 leading-relaxed", className)}>
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        // corpus markdown carries light inline HTML (<sub>/<sup> for chemical
-        // formulae, <br/>); content is operator-imported, not user input
-        rehypePlugins={[rehypeRaw]}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeRaw, [rehypeKatex, { throwOnError: false, errorColor: "#b91c1c", strict: false }]]}
         components={{
           h1: ({ children }) => (
             <h2 className="mt-5 border-b pb-1 text-lg font-bold">{children}</h2>
@@ -58,6 +121,17 @@ export function Markdown({ children, className }: { children: string; className?
                 </span>
               );
             }
+            // corpus images are hotlinked from the public resources repo
+            if (s.startsWith("https://")) {
+              return (
+                <img
+                  src={s}
+                  alt={alt ?? ""}
+                  loading="lazy"
+                  className="mx-auto block h-auto max-w-full rounded-md border md:max-w-md"
+                />
+              );
+            }
             return <span className="text-sm italic text-muted-foreground">{alt}</span>;
           },
           table: ({ children }) => (
@@ -69,11 +143,29 @@ export function Markdown({ children, className }: { children: string; className?
             <th className="border-b bg-muted/50 px-2.5 py-1.5 text-left font-medium">{children}</th>
           ),
           td: ({ children }) => <td className="border-b px-2.5 py-1.5 align-top">{children}</td>,
-          blockquote: ({ children }) => (
-            <blockquote className="rounded-r-md border-l-2 border-primary/50 bg-primary/5 px-3 py-1.5 text-[13px]">
-              {children}
-            </blockquote>
-          ),
+          blockquote: ({ node, children }) => {
+            const variant = blockquoteVariant(node as HastNode);
+            if (!variant) {
+              return (
+                <blockquote className="rounded-r-md border-l-2 border-primary/50 bg-primary/5 px-3 py-1.5 text-[13px]">
+                  {children}
+                </blockquote>
+              );
+            }
+            return (
+              <blockquote
+                className={cn(
+                  "rounded-r-md border-l-[3px] px-3 py-2 text-[13px]",
+                  variant.className,
+                )}
+              >
+                <span className="mb-1 block text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                  {variant.label}
+                </span>
+                {children}
+              </blockquote>
+            );
+          },
           code: ({ children }) => (
             <code className="rounded bg-muted px-1 py-0.5 text-[12px]">{children}</code>
           ),

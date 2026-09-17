@@ -48,12 +48,14 @@ export const CurriculumIdentity = z.object({
 
 // ── curriculum skeleton (from graph/relationships.yaml, RULE_DERIVED) ──
 export const CurriculumNode = z.object({
-  code: z.string(), // "4CH1-S1", "4CH1-1.1", "4CH1-PR-03" …
-  family: z.string(), // TOPIC | SUBTOPIC | SPEC_POINT | PRACTICAL
+  code: z.string(), // "4CH1-1.1" | SME-native "spcpt_*" / section-topic slugs
+  family: z.string(), // SUBJECT | TOPIC | SUBTOPIC | SPEC_POINT | PRACTICAL
   title: z.string(),
   description: z.string().nullable(),
   parents: z.array(z.string()),
   provenanceTier: ProvenanceTier,
+  /** corpus-native ordering (SME-native trees); code-sorted when absent */
+  order: z.number().optional(),
 });
 
 export const CurriculumEdge = z.object({
@@ -116,11 +118,14 @@ export const RevisionNote = z.object({
   title: z.string(),
   sourceUrl: z.string().nullable(),
   specPointIds: z.array(z.string()), // upstream spcpt_* ids
-  specPointCodes: z.array(z.string()), // canonical 4CH1-x.y anchors
+  specPointCodes: z.array(z.string()), // official anchors (4CH1 pilot only)
   guidedStudy: z.boolean(),
   path: z.string().nullable(),
   updatedAt: z.string(),
   bodyMd: z.string(),
+  // corpus-native placement (SME section/topic slugs) — set by the importer
+  sectionSlug: z.string().optional(),
+  topicSlug: z.string().optional(),
 });
 export type RevisionNote = z.infer<typeof RevisionNote>;
 
@@ -135,6 +140,16 @@ export const QuestionPart = z.object({
   specPointCodes: z.array(z.string()),
   problemMd: z.string(),
   solutionMd: z.string().nullable(),
+  /** real past-paper provenance from the corpus (e.g. Jan 2022 · WCH11/01) */
+  sourcePaper: z
+    .object({
+      date: z.string().nullable(),
+      number: z.string().nullable(),
+      questionNumber: z.number().nullable(),
+      questionPart: z.string().nullable(),
+    })
+    .nullable()
+    .optional(),
 });
 
 export const ExamQuestion = z.object({
@@ -151,8 +166,12 @@ export const ExamQuestionTopic = z.object({
   topicId: z.string(),
   slug: z.string(),
   name: z.string(),
+  /** corpus set page kind, e.g. "Multiple-Choice Questions" (null on mixed sets) */
+  setName: z.string().nullable().optional(),
+  /** SME topic slug this set page belongs to (corpus-native placement) */
+  topicSlug: z.string().optional(),
+  sectionSlug: z.string().optional(),
   section: z.string(),
-  sectionSlug: z.string(),
   curriculum: CurriculumIdentity,
   source: z.object({
     provider: z.string(),
@@ -160,12 +179,14 @@ export const ExamQuestionTopic = z.object({
     pageUrl: z.string().nullable(),
   }),
   schema: z.string().nullable(),
-  relatedRevisionNotesFolder: z.string().nullable(),
+  relatedRevisionNotesFolder: z.string().nullable().optional(),
+  /** note ids (rn_*) the corpus links this topic's questions to */
+  relatedNoteIds: z.array(z.string()).optional(),
   questions: z.array(ExamQuestion),
 });
 export type ExamQuestionTopic = z.infer<typeof ExamQuestionTopic>;
 
-// ── flashcards (DEMO_DERIVED — never canonical content) ──────────────
+// ── flashcards (corpus decks; SME spec_links preserved) ─────────────
 export const Flashcard = z.object({
   id: z.string(),
   specPointCode: z.string().nullable(),
@@ -174,6 +195,14 @@ export const Flashcard = z.object({
   sourceNoteId: z.string().nullable(),
   sourceTitle: z.string().nullable(),
   provenanceTier: ProvenanceTier,
+  // corpus-native fields (set by the importer)
+  cardType: z.string().nullable().optional(), // keyword_definition | question_and_answer | true_or_false | fill_in_the_blanks
+  specPointIds: z.array(z.string()).optional(), // SME spcpt_* anchors as printed upstream
+  deckSlug: z.string().nullable().optional(),
+  sectionSlug: z.string().nullable().optional(),
+  topicSlug: z.string().nullable().optional(),
+  /** resolved navigation sub-topic code (corpus topic or official sub-topic) */
+  subtopicCode: z.string().nullable().optional(),
 });
 export type Flashcard = z.infer<typeof Flashcard>;
 
@@ -220,6 +249,8 @@ export const ContentManifest = z.object({
   curriculum: CurriculumIdentity,
   license: z.string(),
   counts: z.record(z.string(), z.number()),
+  /** "official" (4CH1 pilot) or "sme-native" (corpus tree) */
+  treeKind: z.string().optional(),
 });
 export type ContentManifest = z.infer<typeof ContentManifest>;
 

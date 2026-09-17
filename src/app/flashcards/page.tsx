@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { CircleHelp, RotateCcw } from "lucide-react";
-import cardsJson from "../../../content/igcse-chemistry/flashcards.json";
+import cardsJson from "../../../content/igcse-chemistry-19/flashcards.json";
 import type { Flashcard } from "@/lib/contracts";
 import { Markdown } from "@/components/markdown";
 import { SpecChip, SimulatedBanner } from "@/components/provenance";

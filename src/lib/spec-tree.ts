@@ -44,17 +44,32 @@ export interface SpecTreeIndex {
   topicByCode: Map<string, SpecTopic>;
 }
 
-function letterOf(subtopicCode: string, topicCode: string): string {
+/**
+ * Sub-topic display label. Official-tree codes suffix a letter ("4CH1-S1-a"
+ * → "a"); SME-native topic slugs lead with a number ("1-1-formulae-and-
+ * equations" → "1.1"). Falls back to the ordinal position.
+ */
+function subtopicLabel(subtopicCode: string, topicCode: string, ordinal: number): string {
   const suffix = subtopicCode.slice(topicCode.length);
-  return suffix.startsWith("-") ? suffix.slice(1) : suffix;
+  if (suffix.startsWith("-") && /^[a-z]\d*$/i.test(suffix.slice(1))) {
+    return suffix.slice(1);
+  }
+  const m = subtopicCode.match(/^(\d+)-(\d+)-/);
+  if (m) return `${m[1]}.${m[2]}`;
+  return String(ordinal + 1);
+}
+
+function byNodeOrder(a: CurriculumNode, b: CurriculumNode): number {
+  const ao = a.order ?? Number.POSITIVE_INFINITY;
+  const bo = b.order ?? Number.POSITIVE_INFINITY;
+  if (ao !== bo) return ao - bo;
+  return a.code.localeCompare(b.code);
 }
 
 export function buildSpecTreeIndex(curriculum: Curriculum): SpecTreeIndex {
   const nodes = curriculum.nodes;
   const subject = nodes.find((n) => n.family === "SUBJECT");
-  const topics = nodes
-    .filter((n) => n.family === "TOPIC")
-    .sort((a, b) => a.code.localeCompare(b.code));
+  const topics = nodes.filter((n) => n.family === "TOPIC").sort(byNodeOrder);
 
   const tree: SpecTree = {
     subjectCode: curriculum.code,
@@ -70,6 +85,8 @@ export function buildSpecTreeIndex(curriculum: Curriculum): SpecTreeIndex {
   for (const [i, topic] of topics.entries()) {
     const spec: SpecTopic = {
       code: topic.code,
+      // display number is always the 1-based position (corpus order); the
+      // node's `order` field only drives sorting
       number: i + 1,
       title: topic.title,
       subtopics: [],
@@ -78,20 +95,20 @@ export function buildSpecTreeIndex(curriculum: Curriculum): SpecTreeIndex {
 
     const subs = nodes
       .filter((n) => n.family === "SUBTOPIC" && n.parents.includes(topic.code))
-      .sort((a, b) => a.code.localeCompare(b.code));
+      .sort(byNodeOrder);
 
     const orphanSpecs: CurriculumNode[] = [];
 
-    for (const sub of subs) {
+    for (const [j, sub] of subs.entries()) {
       const points = nodes
         .filter((n) => n.family === "SPEC_POINT" && n.parents.includes(sub.code))
-        .map((n) => n.code)
-        .sort(bySpecPointOrder);
+        .sort(byNodeOrder)
+        .map((n) => n.code);
       for (const c of points) subtopicOfSpecPoint.set(c, sub.code);
       topicOfSubtopic.set(sub.code, topic.code);
       spec.subtopics.push({
         code: sub.code,
-        label: letterOf(sub.code, topic.code),
+        label: subtopicLabel(sub.code, topic.code, j),
         title: sub.title,
         topicCode: topic.code,
         specPointCodes: points,
@@ -111,7 +128,7 @@ export function buildSpecTreeIndex(curriculum: Curriculum): SpecTreeIndex {
       }
     }
     if (orphanSpecs.length > 0) {
-      const codes = orphanSpecs.map((n) => n.code).sort(bySpecPointOrder);
+      const codes = orphanSpecs.sort(byNodeOrder).map((n) => n.code);
       const general: SpecSubtopic = {
         code: `${topic.code}-gen`,
         label: "gen",
@@ -148,7 +165,10 @@ export interface SubtopicResourceCounts {
   flashcards: number;
 }
 
-/** First mapped subtopic for a note (notes map to one or two spec points). */
+/**
+ * First placed sub-topic for a note: official codes → corpus-native topic
+ * slug → SME spec ids. Every path is corpus-derived; nothing is guessed.
+ */
 export function subtopicOfNote(
   note: RevisionNote,
   index: SpecTreeIndex,
@@ -157,19 +177,31 @@ export function subtopicOfNote(
     const s = index.subtopicOfSpecPoint.get(c);
     if (s) return s;
   }
+  if (note.topicSlug && index.subtopicByCode.has(note.topicSlug)) {
+    return note.topicSlug;
+  }
+  for (const id of note.specPointIds) {
+    const s = index.subtopicOfSpecPoint.get(id);
+    if (s) return s;
+  }
   return null;
 }
 
-/** Subtopic with the most anchored questions — the set's canonical home. */
+/** Subtopic with the most anchored questions — the set's canonical home.
+ *  Corpus-native placement (topicSlug) wins; spec-anchor tally is the
+ *  fallback for the official-tree pilot. */
 export function subtopicOfQuestionSet(
   topic: ExamQuestionTopic,
   index: SpecTreeIndex,
 ): string | null {
+  if (topic.topicSlug && index.subtopicByCode.has(topic.topicSlug)) {
+    return topic.topicSlug;
+  }
   const tally = new Map<string, number>();
   for (const q of topic.questions) {
     const codes = new Set<string>();
     for (const p of q.parts) {
-      for (const c of p.specPointCodes) {
+      for (const c of [...p.specPointCodes, ...p.specPointIds]) {
         const s = index.subtopicOfSpecPoint.get(c);
         if (s) codes.add(s);
       }
@@ -187,14 +219,32 @@ export function subtopicOfQuestionSet(
   return best;
 }
 
+/**
+ * Placement priority (all corpus-derived): importer-resolved subtopicCode →
+ * SME spec anchors → the card's source note → deck topic slug.
+ */
 export function subtopicOfFlashcard(
   card: Flashcard,
   notes: RevisionNote[],
   index: SpecTreeIndex,
 ): string | null {
+  if (card.subtopicCode && index.subtopicByCode.has(card.subtopicCode)) {
+    return card.subtopicCode;
+  }
+  for (const id of card.specPointIds ?? []) {
+    const s = index.subtopicOfSpecPoint.get(id);
+    if (s) return s;
+  }
+  if (card.specPointCode) {
+    const s = index.subtopicOfSpecPoint.get(card.specPointCode);
+    if (s) return s;
+  }
   const note = notes.find((n) => n.noteId === card.sourceNoteId);
-  if (!note) return null;
-  return subtopicOfNote(note, index);
+  if (note) return subtopicOfNote(note, index);
+  if (card.topicSlug && index.subtopicByCode.has(card.topicSlug)) {
+    return card.topicSlug;
+  }
+  return null;
 }
 
 /** Per-subtopic counts for every resource type at once (sidebar + hub). */

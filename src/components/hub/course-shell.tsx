@@ -40,7 +40,7 @@ import type { SpecTree } from "@/lib/spec-tree";
 export type SidebarVariant = "hub" | "notes" | "questions" | "flashcards";
 
 export interface SidebarData {
-  course: { slug: string; subject: string; level: string; code: string };
+  course: { slug: string; subject: string; label?: string; level: string; code: string };
   tree: SpecTree;
   /** sub-topic code → per-resource counts */
   counts: Record<string, { notes: number; questions: number; flashcards: number }>;
@@ -181,7 +181,7 @@ export function CourseShell({
           </Button>
         ) : (
           <>
-            <span className="text-sm font-semibold tracking-tight">{data.course.subject}</span>
+            <span className="text-sm font-semibold tracking-tight">{data.course.label ?? data.course.subject}</span>
             <Button
               variant="ghost"
               size="sm"
@@ -397,7 +397,7 @@ export function CourseShell({
           <Button variant="outline" size="sm" className="gap-1.5" onClick={() => setOpen(true)}>
             <Menu className="size-4" aria-hidden /> Menu
           </Button>
-          <span className="truncate text-sm font-medium">{data.course.subject}</span>
+          <span className="truncate text-sm font-medium">{data.course.label ?? data.course.subject}</span>
         </div>
         {children}
       </div>

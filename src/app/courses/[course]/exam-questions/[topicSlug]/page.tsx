@@ -47,7 +47,8 @@ export default async function QuestionSetPage({
         <header className="space-y-3">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <h1 className="max-w-2xl text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
-              {topic.name}{" "}
+              {topic.name}
+              {topic.setName ? ` — ${topic.setName}` : ""}{" "}
               <span className="text-muted-foreground">
                 (Edexcel {meta.level} {meta.subject}): Exam Questions
               </span>

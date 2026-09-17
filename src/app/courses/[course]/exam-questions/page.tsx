@@ -61,7 +61,7 @@ export default async function ExamQuestionsIndexPage({
     <div className="px-4 py-6 sm:px-6 lg:px-8">
       <CourseHeader
         meta={meta}
-        title={`Edexcel ${meta.level} ${meta.subject} Exam Questions By Topic`}
+        title={`Edexcel ${meta.level} ${meta.label} Exam Questions By Topic`}
         description={`Real exam-style questions organised by topic — ${stats.questions} questions across ${stats.questionSets} sets, with parts, command words, mark schemes and self-marking. Difficulty and timing metadata come straight from the corpus.`}
       />
 
@@ -97,6 +97,7 @@ export default async function ExamQuestionsIndexPage({
                     <span className="min-w-0 flex-1">
                       <span className="block text-sm font-semibold leading-snug group-hover:text-primary">
                         {set.name}
+                        {set.setName ? ` — ${set.setName}` : ""}
                       </span>
                       <span className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
                         <Badge variant="outline" className="text-[10px]">

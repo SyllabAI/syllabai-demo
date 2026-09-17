@@ -34,17 +34,19 @@ export default async function FlashcardsIndexPage({
     <div className="px-4 py-6 sm:px-6 lg:px-8">
       <CourseHeader
         meta={meta}
-        title={`Edexcel ${meta.level} ${meta.subject} Flashcards`}
-        description={`Per-sub-topic recall decks — ${stats.flashcards} cards generated from the revision-note corpus. Rating a card (Still learning / Know) feeds your sub-topic rings in the local overlay.`}
+        title={`Edexcel ${meta.level} ${meta.label} Flashcards`}
+        description={`Per-sub-topic recall decks — ${stats.flashcards} cards imported from the Save My Exams corpus. Rating a card (Still learning / Know) feeds your sub-topic rings in the local overlay.`}
       />
 
       <div className="mt-6 space-y-2">
         <Badge variant="outline" className="border-violet-300 text-[10px] text-violet-700 dark:text-violet-300">
-          DEMO_DERIVED content
+          RULE_DERIVED corpus content
         </Badge>
         <p className="max-w-3xl text-xs leading-relaxed text-muted-foreground">
-          These cards are demo-generated from note anchors (provenance tier on every card) — they
-          are an experiment surface, never canonical educational content.
+          Cards are imported verbatim from the operator-authorized Save My Exams deck corpus
+          (front/back markdown, card types preserved). Their SME spec-point anchors are kept on
+          every card and drive the sub-topic placement — nothing here is fabricated. Courses the
+          upstream corpus has no decks for show honestly empty.
         </p>
       </div>
 

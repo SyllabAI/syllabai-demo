@@ -25,6 +25,7 @@ export default async function CourseLayout({
     course: {
       slug: hub.meta.slug,
       subject: hub.meta.subject,
+      label: hub.meta.label,
       level: hub.meta.level,
       code: hub.meta.code,
     },

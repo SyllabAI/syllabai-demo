@@ -15,7 +15,7 @@ export function CourseHeader({
   description,
   children,
 }: {
-  meta: Pick<CourseMeta, "level" | "subject" | "code" | "slug">;
+  meta: Pick<CourseMeta, "level" | "subject" | "label" | "code" | "slug">;
   activeTab?: "resources" | "strengths";
   title: string;
   description?: string;
@@ -32,7 +32,7 @@ export function CourseHeader({
       <Breadcrumbs
         items={[
           { label: meta.level, href: "/courses" },
-          { label: meta.subject, href: base },
+          { label: meta.label, href: base },
           { label: "Edexcel" },
         ]}
       />

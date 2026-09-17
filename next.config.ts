@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const PILOT = "igcse-chemistry";
+const PILOT = "igcse-chemistry-19";
 
 /**
  * The per-course Learning Hub is the primary IA now. The pre-hub experiment

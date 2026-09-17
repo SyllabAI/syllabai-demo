@@ -44,8 +44,10 @@ const CourseRegistry = z.object({
       slug: z.string(),
       level: z.string(),
       subject: z.string(),
+      /** display label incl. course variant ("Maths — Pure 1", "Chemistry (Higher)") */
+      label: z.string().optional(),
       code: z.string(),
-      status: z.enum(["pilot", "registered"]),
+      status: z.enum(["pilot", "full", "registered"]),
     }),
   ),
 });
@@ -54,8 +56,9 @@ export interface CourseMeta {
   slug: string;
   level: string;
   subject: string;
+  label: string;
   code: string;
-  status: "pilot" | "registered";
+  status: "pilot" | "full" | "registered";
   /** true when a validated content bundle is committed under content/<slug>/ */
   hasBundle: boolean;
 }
@@ -81,6 +84,7 @@ export async function listCourses(): Promise<CourseMeta[]> {
   const parsed = CourseRegistry.parse(raw);
   registryCache = parsed.courses.map((c) => ({
     ...c,
+    label: c.label ?? c.subject,
     hasBundle: existsSync(path.join(CONTENT_DIR, c.slug, "manifest.json")),
   }));
   return registryCache;
@@ -91,7 +95,7 @@ export async function getCourseMeta(slug: string): Promise<CourseMeta | null> {
   return all.find((c) => c.slug === slug) ?? null;
 }
 
-/** The one slug with a committed demo bundle (the pilot). */
+/** The one slug with a committed official-tree bundle (the 4CH1 pilot). */
 export async function pilotCourseSlug(): Promise<string | null> {
   const all = await listCourses();
   return all.find((c) => c.status === "pilot" && c.hasBundle)?.slug ?? null;
