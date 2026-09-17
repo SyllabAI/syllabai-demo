@@ -2,6 +2,7 @@
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +12,9 @@ export function Markdown({ children, className }: { children: string; className?
     <div className={cn("prose-sm space-y-3 leading-relaxed", className)}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
+        // corpus markdown carries light inline HTML (<sub>/<sup> for chemical
+        // formulae, <br/>); content is operator-imported, not user input
+        rehypePlugins={[rehypeRaw]}
         components={{
           h1: ({ children }) => (
             <h2 className="mt-5 border-b pb-1 text-lg font-bold">{children}</h2>

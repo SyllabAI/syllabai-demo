@@ -4,6 +4,7 @@ import {
   BookOpen,
   CircleHelp,
   FlaskConical,
+  GraduationCap,
   Network,
   ScrollText,
   ShieldCheck,
@@ -32,28 +33,22 @@ export default async function HubPage() {
 
   const surfaces = [
     {
+      href: "/courses",
+      icon: GraduationCap,
+      title: "Courses — 39 Learning Hubs",
+      desc: "SaveMyExams-style per-subject hubs (pilot: Edexcel IGCSE Chemistry 4CH1): sidebar topic tree, notes reader, question player, flashcards.",
+    },
+    {
+      href: "/courses/igcse-chemistry",
+      icon: BookOpen,
+      title: "4CH1 Learning Hub",
+      desc: "The fully-loaded pilot course — revision notes, exam questions by topic, flashcards and strengths & weaknesses.",
+    },
+    {
       href: "/knowledge-graph",
       icon: Network,
       title: "Knowledge Graph",
       desc: "Official spec anchor + the T-C11 concept web (provenance-shown). Graph → resource → question navigation.",
-    },
-    {
-      href: "/revision-notes",
-      icon: BookOpen,
-      title: "Revision Notes",
-      desc: "The real SME corpus reader with spec-point anchors and source provenance.",
-    },
-    {
-      href: "/exam-questions",
-      icon: ScrollText,
-      title: "Exam Questions",
-      desc: `${questionCount} real exam questions with parts, command words and mark-scheme reveal.`,
-    },
-    {
-      href: "/flashcards",
-      icon: CircleHelp,
-      title: "Flashcards",
-      desc: "DEMO_DERIVED cards generated from the notes — an example of fast, disposable experiments.",
     },
     {
       href: "/practice",

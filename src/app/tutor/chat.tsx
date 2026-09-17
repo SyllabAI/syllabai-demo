@@ -9,7 +9,8 @@
  * and streams citations + answer. Chat output NEVER mutates canonical KG or
  * learner state (brief §6/§27) — it is display-only by construction.
  */
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,6 +41,22 @@ export function TutorChat() {
   const [meta, setMeta] = useState<{ provider?: string; model?: string | null }>({});
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // anchored entry points: /tutor?q=…&spec=4CH1-1.1 ("Ask about this" and
+  // "Question help" across the Learning Hub). The spec code is appended to
+  // the REQUEST for retrieval anchoring only — the user's words are displayed
+  // verbatim, and nothing here writes to canonical data.
+  const params = useSearchParams();
+  const anchoredSpec = params.get("spec");
+  const bootQuestion = params.get("q");
+  const bootedRef = useRef(false);
+
+  useEffect(() => {
+    if (bootQuestion && !bootedRef.current) {
+      bootedRef.current = true;
+      void ask(bootQuestion);
+    }
+  }, [bootQuestion]);
+
   const ask = async (question: string) => {
     if (!question.trim() || busy) return;
     const history = messages.map((m) => ({ role: m.role, content: m.content }));
@@ -51,7 +68,10 @@ export function TutorChat() {
       const res = await fetch("/api/ai/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, history }),
+        body: JSON.stringify({
+          question: anchoredSpec ? `${question} (specification point ${anchoredSpec})` : question,
+          history,
+        }),
       });
       if (!res.body || !res.ok) throw new Error(`stream failed (${res.status})`);
 
@@ -147,6 +167,15 @@ export function TutorChat() {
         KA-RAG path (hybrid retrieval, fusion, reranking, claim validation) remains authoritative
         in syllabai-core.
       </SimulatedBanner>
+
+      {anchoredSpec && (
+        <div className="flex items-center gap-2 rounded-md border border-primary/30 bg-primary/5 px-3 py-2 text-xs">
+          <Sparkles className="size-3.5 text-primary" aria-hidden />
+          Anchored to specification point
+          <code className="rounded bg-muted px-1.5 py-0.5 font-mono">{anchoredSpec}</code>
+          — retrieval and citations prefer this anchor.
+        </div>
+      )}
 
       {messages.length === 0 && (
         <div className="flex flex-wrap gap-2">

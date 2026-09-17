@@ -116,28 +116,47 @@ Re-run the script to refresh the bundle; the app never fetches GitHub at runtime
 src/
 ├── app/
 │   ├── page.tsx                     # hub
+│   ├── courses/                     # ── SaveMyExams-style Learning Hubs ──
+│   │   ├── page.tsx                 # 39-course directory (registry-driven)
+│   │   └── [course]/
+│   │       ├── layout.tsx           # persistent sidebar shell (spec tree + rings)
+│   │       ├── page.tsx             # Course Resources hub cards
+│   │       ├── strengths/           # Strengths & Weaknesses tab (overlay analytics)
+│   │       ├── revision-notes/      # accordion topic index + note reader
+│   │       ├── exam-questions/      # bank index, set player, saved questions
+│   │       └── flashcards/          # deck index + flip/rate player
 │   ├── knowledge-graph/             # anchor + concept web (client island)
-│   ├── revision-notes/              # index + [noteId] reader (server-rendered markdown)
-│   ├── exam-questions/              # question browser + mark-scheme reveal (client)
-│   ├── flashcards/ practice/        # client-only experiment surfaces
-│   ├── tutor/                       # streaming chat client
-│   ├── learner/                     # simulated overlay dashboard
+│   ├── revision-notes/ exam-questions/ flashcards/   # legacy → redirect into the pilot hub
+│   ├── practice/ tutor/ learner/    # experiment surfaces (tutor accepts ?q=&spec= anchors)
 │   ├── experiments/                 # isolated prototypes
 │   └── api/{ai/chat,health}/        # the only AI entry point + self-report
 ├── components/
 │   ├── layout/app-shell.tsx         # sidebar + provider badges
+│   ├── hub/                         # course shell, topic tree, rings, hub chrome
 │   ├── graph/{layout,spec-graph-canvas,concept-web}   # ported viz engine
 │   ├── markdown.tsx provenance.tsx  # corpus rendering + honesty badges
 ├── lib/
 │   ├── contracts.ts                 # Zod semantic contracts (canonical-aligned)
+│   ├── courses.ts                   # 39-course registry + per-course bundle loader
+│   ├── spec-tree.ts                 # canonical spec tree + resource→subtopic indexes
+│   ├── progress.ts                  # SIMULATED browser-local progress overlay
 │   ├── config.ts                    # public (non-secret) runtime config
 │   ├── tutor.ts                     # grounded tutor orchestration
 │   ├── data/{types,mock,neon,core-api,index}.ts       # provider seam
 │   └── ai/{providers,retrieval}.ts  # provider abstraction + retrieval-lite
+content/courses.json                # 39-course registry (pilot: igcse-chemistry)
 content/igcse-chemistry/*.json      # committed real-corpus bundles
 scripts/import_content.py           # reproducible importer
 docs/                               # this file, repository map, experiment guide
 ```
+
+### Learning Hub data flow (one canonical tree, zero second-taxonomy)
+
+`content/courses.json` (registry) → `loadHubCourse(slug)` (bundle or provider seam →
+`buildSpecTreeIndex` → per-sub-topic resource counts + canonical hrefs) →
+`CourseShell` sidebar (rings computed client-side from the SIMULATED progress overlay).
+Legacy experiment surfaces and `/knowledge-graph` deep links (`?spec=4CH1-1.1`) resolve through
+the same tree, so there is exactly one educational truth model and the UX tree mirrors it.
 
 ## 8. Performance posture (brief §24)
 

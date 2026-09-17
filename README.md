@@ -1,6 +1,6 @@
 # syllabai-demo
 
-**Status: IMPLEMENTED (initial shell) — a fast, disposable experimental application around SyllabAI.**
+**Status: IMPLEMENTED (initial shell + SaveMyExams-style Learning Hubs) — a fast, disposable experimental application around SyllabAI.**
 
 This is **not** a second production frontend. It is the playground where learning-surface ideas
 get prototyped in hours against **real** SyllabAI content, tested with real learners/agents, and
@@ -11,15 +11,36 @@ supports it. Failed experiments should be deletable in minutes.
 
 | Surface | Route | What it demonstrates |
 |---|---|---|
-| Hub | `/` | Corpus stats, provider badges, provenance discipline |
+| Courses directory | `/courses` | All **39 Edexcel IAL/IGCSE courses** in the registry; each gets its own Learning Hub |
+| Learning Hub (per course) | `/courses/igcse-chemistry` | SaveMyExams-style per-subject hub: persistent sidebar, numbered spec topic tree with progress rings, resource cards, Strengths & Weaknesses tab |
+| Revision Notes (hub) | `/courses/igcse-chemistry/revision-notes` | Numbered topic accordion index → note reader (provenance block, guided-study "Ask about this", helpfulness vote, build-on-this-topic cross-links) |
+| Exam Questions (hub) | `/courses/igcse-chemistry/exam-questions` | Bank index → set page with difficulty tabs + question grid → player with Save, full screen, self-score "How did you do?", full-screen mark-scheme modal (`[N mark]` AND-joined points), MCQ instant marking where option text exists |
+| Flashcards (hub) | `/courses/igcse-chemistry/flashcards` | Per-sub-topic decks with the flip / Still learning / Know loop |
 | Knowledge Graph | `/knowledge-graph` | Official curriculum anchor (layered SVG, ported from `syllabai-web`) + T-C11 concept web with provenance |
-| Revision Notes | `/revision-notes` | Real SME corpus reader with canonical `rn_*` ids and spec-point anchors |
-| Exam Questions | `/exam-questions` | 58 real questions, parts, command words, mark-scheme reveal |
-| Flashcards | `/flashcards` | `DEMO_DERIVED` deck generated from notes — a disposable experiment |
 | Practice | `/practice` | Part-level player with confidence/self-doubt telemetry (production attempt shape) |
-| Tutor | `/tutor` | Grounded AI tutor: retrieval → sufficiency gate → cited answer / honest refusal |
+| Tutor | `/tutor?q=…&spec=4CH1-1.1` | Grounded AI tutor: retrieval → sufficiency gate → cited answer / honest refusal; **anchored** entry points from notes ("Ask about this") and questions ("Question help") |
 | Learner Overlay | `/learner` | **SIMULATED** BKT-style state over curriculum truth |
 | Experiments | `/experiments` | Isolated, deletable prototypes (`kg-navigation`, `semantic-search`) |
+
+Legacy top-level routes (`/revision-notes`, `/exam-questions`, `/flashcards`) redirect into the
+pilot course's hub with query strings (`?spec=4CH1-1.1`) preserved.
+
+### The Learning Hub model (ported from SaveMyExams UX research)
+
+`research/sme/` holds the 25-screenshot live walkthrough of savemyexams.com behind the design
+(full report: `download/SaveMyExams_UX_Feature_Research.docx`). Key ported decisions:
+
+- **One canonical tree.** SME's numbered topic tree is, in SyllabAI terms, the official
+  specification tree (`src/lib/spec-tree.ts` builds it from the imported curriculum — no second
+  taxonomy). It drives the sidebar, the URLs, the index pages and the progress rings.
+- **Progress is a browser-local overlay** (`src/lib/progress.ts`, labelled `SIMULATED`): notes
+  read, question self-scores / MCQ marks, and flashcard ratings live in `localStorage` per
+  course. SME gates progress writes behind accounts; the demo is honest about having none.
+  Nothing ever writes to canonical content.
+- **39-course registry, one pilot.** `content/courses.json` registers all 39 subjects (mirroring
+  what is downloaded in `syllabai-resources`); only the 4CH1 pilot has a committed bundle, and
+  every other hub renders an honest "import pending" state instead of fake content. Drop a
+  validated bundle under `content/<slug>/` and the hub activates with no code changes.
 
 The bundled corpus (committed under `content/`) is a curated subset of
 [`SyllabAI/syllabai-resources`](https://github.com/SyllabAI/syllabai-resources) imported by

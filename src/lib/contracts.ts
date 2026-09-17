@@ -145,6 +145,7 @@ export const ExamQuestion = z.object({
   totalMarks: z.number(),
   parts: z.array(QuestionPart),
 });
+export type ExamQuestion = z.infer<typeof ExamQuestion>;
 
 export const ExamQuestionTopic = z.object({
   topicId: z.string(),

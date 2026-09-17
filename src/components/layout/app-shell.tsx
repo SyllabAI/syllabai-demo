@@ -8,6 +8,7 @@ import {
   BookOpen,
   CircleHelp,
   FlaskConical,
+  GraduationCap,
   Layers,
   Network,
   ScrollText,
@@ -23,6 +24,7 @@ import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
 const NAV = [
+  { href: "/courses", label: "Courses", icon: GraduationCap },
   { href: "/", label: "Hub", icon: Layers },
   { href: "/knowledge-graph", label: "Knowledge Graph", icon: Network },
   { href: "/revision-notes", label: "Revision Notes", icon: BookOpen },
