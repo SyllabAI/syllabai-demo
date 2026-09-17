@@ -1,0 +1,2730 @@
+[
+ {
+  "topicId": "top_FY3Z2yxS9gpwZjVx",
+  "slug": "1-1-states-of-matter",
+  "name": "States of Matter",
+  "section": "1. Principles of Chemistry",
+  "sectionSlug": "1-principles-of-chemistry",
+  "curriculum": {
+   "board": "Edexcel",
+   "level": "IGCSE",
+   "subject": "Chemistry",
+   "code": "4CH1",
+   "syllabusVersion": "2017"
+  },
+  "source": {
+   "provider": "Save My Exams",
+   "license": "operator-authorized; see repo LICENSE-DATA.md (SME attestation 2026-09-17)",
+   "pageUrl": "https://www.savemyexams.com/igcse/chemistry/edexcel/19/topic-questions/1-principles-of-chemistry/1-1-states-of-matter/exam-questions/"
+  },
+  "schema": "syllabai.sme-exam-questions/1.1",
+  "relatedRevisionNotesFolder": "Chemistry IGCSE Revision Notes/1. Principles of Chemistry/a. States of Matter",
+  "questions": [
+   {
+    "id": "qstn_qvGp5JXnjTRp3tP3",
+    "order": 9,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_pbtGP3y54wMYyJ2j",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_J8pKKwSTHgfFw6tt",
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.1",
+       "4CH1-1.2"
+      ],
+      "problemMd": "This question is about states of matter.\n\nThe names of some terms are given in the box.\n\n| melting | deposition | evaporation |\n|---|---|---|\n| condensing | sublimation | freezing |\n| boiling point | liquid | gas |\n\nComplete the table by choosing the term from the box that matches each description.\n\nEach substance may be used once, more than once, or not at all.\n\n| Description | Substance |\n|---|---|\n| the state of ammonia at room temperature |   |\n| when particles gain the most energy at constant temperature |   |\n| the process of forming frost on a cold day |   |\n| particles break away from their fixed arrangement |   |\n| when kerosene is produced from crude oil |   |",
+      "solutionMd": "The completed table is:\n\n| Description | Substance |\n|---|---|\n| the state of ammonia at room temperature | **gas** **[1]** |\n| when particles gain the most kinetic energy at constant temperature | **boiling point** **[1]** |\n| the process of forming frost on a cold day | **deposition** **[1]** |\n| particles break away from their fixed arrangement | **melting** **[1]** |\n| when kerosene is formed from crude oil | **condensing** **[1]** |\n\n> **[exam-tip]**\n> Particles gain kinetic energy when the temperature increases or they change state. If the temperature is constant, the particles only gain energy by changing state, which occurs at the melting point and boiling point. Since the question refers to the most kinetic energy, the answer must be the boiling point.\n> \n> Frost forms when very cold, moist air turns into ice crystals, without going through the liquid state. This change from gas to solid is called deposition.\n> \n> The only state where particles are in a fixed arrangement is a solid, so breaking away from the arrangement occurs during melting.\n> \n> Kerosene is one of the products of the fractional distillation of crude oil. To form the fractions, the hot vapours have to condense to liquids."
+     },
+     {
+      "id": "qstnprt_DkqJjgVvB9n3jtrK",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_3FKt47F9rGRtJttG"
+      ],
+      "specPointCodes": [
+       "4CH1-2.44"
+      ],
+      "problemMd": "Describe a test for ammonia.",
+      "solutionMd": "> **[mark-scheme]**\n> The test for ammonia is:\n> \n> Any **one** of the following pairs (1 mark for the test and 1 mark for the result):\n> \n> - Test: Damp / moist red litmus paper **[1 mark]**\n> - Result: Turns blue** [1 mark]**\n> \n> **OR**\n> \n> - Test: Damp / moist universal indicator paper **[1 mark]**\n> - Result: Turns blue / purple** [1 mark]**\n> \n> **OR**\n> \n> - Test: Hold a (glass rod dipped in) concentrated hydrochloric acid near the gas **[1 mark]**\n> - Result: Dense white smoke / fumes (of ammonium chloride) form **[1 mark]**\n\n> **[exam-tip]**\n> Always state both the starting colour and the result: damp red litmus paper turns blue. Missing \"red\" loses you the first mark.\n> \n> The litmus paper should be damp. Ammonia dissolves in the water on the paper to form hydroxide ions, which cause the colour change. Dry litmus paper will not react.\n> \n> Do not confuse with the test for chlorine, which bleaches litmus paper. Ammonia turns it blue, not white.\n> \n> If the question asks about ammonium ions (NH<sub>4</sub><sup>+</sup>) rather than ammonia gas (NH<sub>3</sub>), you must first add sodium hydroxide solution and warm to release the ammonia before testing with litmus paper."
+     }
+    ]
+   },
+   {
+    "id": "qstn_zmCy9CPHH9NwXqNM",
+    "order": 7,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_CDPMgmyWcYNRdVWd",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "Substances exist as solids, liquids or gases.\n\n![1-1-q6-image](/content-assets/0366f4ce85dcda72.png)\n\nWhat change of state occurs at Y?",
+      "solutionMd": "**Final answer:** **The correct answer is C**\n\n- The change of state that occurs at Y is Boiling.\n- **C** is the correct answer because boiling is the change of state which occurs when a liquid changes into a gas\n- **A**, **B** and **D** are incorrect as:\n\n  - **A** - melting occurs when a solid turns into a liquid\n  - **B** - freezing occurs when a liquid turns into a solid\n  - **D **- condensation occurs when a gas turns into a liquid"
+     }
+    ]
+   },
+   {
+    "id": "qstn_XmdQkvhSG3RTQXPD",
+    "order": 19,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_DbzFbW8N62HrskY8",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "which",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "The table gives the melting and boiling points of four pure substances, W, X, Y and Z.\n\n|   | **Melting point in °C** | **Boiling point in °C** |\n|---|---|---|\n| W | -7 | 60 |\n| X | 660 | 2500 |\n| Y | 180 | 1330 |\n| Z | 115 | 445 |\n\nUse data from the table to answer the questions.\n\ni) Which substance is a gas at 100 °C?\n\n(1)\n\n| ☐ | **A** | W |\n|---|---|---|\n| ☐ | **B** | X |\n| ☐ | **C** | Y |\n| ☐ | **D** | Z |\n\nii) Which substance is a liquid for the largest range of temperature?\n\n(1)\n\n| ☐ | **A** | W |\n|---|---|---|\n| ☐ | **B** | X |\n| ☐ | **C** | Y |\n| ☐ | **D** | Z |\n\niii) Which substance is a liquid at 1000 °C and a gas at 2000 °C?\n\n(1)\n\n| ☐ | **A** | W |\n|---|---|---|\n| ☐ | **B** | X |\n| ☐ | **C** | Y |\n| ☐ | **D** | Z |",
+      "solutionMd": "i) The substance which is a gas at 100 °C is:\n\n- Option A / substance W; **[1 mark]**\n\nii) The substance which is a liquid for the largest range of temperature is:\n\n- Option B / substance X;** [1 mark]**\n\niii) The substance which is a liquid at 1000 °C and a gas at 2000 °C is:\n\n- Option C / substance Y; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *In part (i):*\n\n  - *A is the correct answer because 100 °C is above the boiling point of W*\n  - *B, C and D cannot be the correct answer because substances X, Y and Z all have melting points above 100 °C, which means that they are solid *\n- *In part (ii):*\n\n  - *The substance that is a liquid for the largest range of temperature is the one that has the largest difference between the melting and boiling point*\n  \n    - *Option B / substance X is the correct answer because it is a liquid for 1840 °C *\n    - *Option A / substance W is only a liquid for 67 °C (-7 → 60)*\n    - *Option C / substance Y is only a liquid for 1150 °C (180 → 1330)*\n    - *Option D / substance Z is only a liquid for 330 °C (115 → 445)*\n- *In part (iii)*\n\n  - *The substance needs to have a melting point below 1000 *<sup>*o*</sup>*C and a boiling point below 2000 *<sup>*o*</sup>*C*\n  \n    - *Only option C / substance Y meets these two criteria*\n    - *Option A / substance W and option D / substance Z are both gases at 1000 *<sup>*o*</sup>*C as their boiling points are below 1000 *<sup>*o*</sup>*C *\n    - *Option B / substance X will be a liquid at 1000 *<sup>*o*</sup>*C as its melting point is below 1000 *<sup>*o*</sup>*C but it is not a gas at 2000 *<sup>*o*</sup>*C because its boiling point is above 2000 *<sup>*o*</sup>*C*"
+     },
+     {
+      "id": "qstnprt_wnypSQFHCWy6f7WR",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_J362t3mqkKc6BQ25"
+      ],
+      "specPointCodes": [
+       "4CH1-1.43"
+      ],
+      "problemMd": "Substance Y does not conduct electricity when solid but does conduct electricity when molten.\n\nGive the type of bonding in substance Y.",
+      "solutionMd": "The type of bonding in substance Y is:\n\n- Ionic; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *In ionic compounds, ions are free to move when the substance is molten or in an aqueous solution so can conduct electricity*\n- *When solid, the ions are not free so cannot conduct electricity*\n- *It cannot be metallic bonding as metals conduct electricity when solid as they have delocalised electrons which are free to move through the structure*\n- *It cannot be covalent bonding as covalent compounds do not conduct electricity (with the exception of graphite)*"
+     },
+     {
+      "id": "qstnprt_TtCZQmMvrX3RYkRm",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "suggest",
+      "specPointIds": [
+       "spcpt_Kbt5nNhMpGyvZxR2"
+      ],
+      "specPointCodes": [
+       "4CH1-1.9"
+      ],
+      "problemMd": "Suggest how the melting point of a pure substance changes when an impurity is added.",
+      "solutionMd": "The melting point of a pure substance changes when an impurity is added because:\n\n- The (impure) substance will melt over a range of temperatures \n**OR** \nThe (impure) substance will have a lower melting point; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *A pure substance will have a sharp melting point at a fixed temperature*\n- *Mixtures will melt over a range of temperatures and they tend to melt at a lower temperature than a pure substance*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_vW2HKvcvBNkvgtrj",
+    "order": 4,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_TxzHYkC4427Jt8W5",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3"
+      ],
+      "problemMd": "The diagram below shows a bottle of perfume which has been sprayed in a room. Very soon the perfume can be smelled in every part of the room.\n\n![1-1-q2-image](/content-assets/3574ab11a4ccba27.png)\n\nWhich statement explains these observations?",
+      "solutionMd": "**The correct answer is ****A**\n\n- The statement which explains these observations is: The perfume particles diffuse into the air\n- When the perfume is sprayed the particles are in the gaseous state\n- The gas particles move freely and randomly in all directions\n- This is called diffusion"
+     }
+    ]
+   },
+   {
+    "id": "qstn_vJnDGkyT2TnDM4n3",
+    "order": 21,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 9,
+    "parts": [
+     {
+      "id": "qstnprt_c73RDhY9tYcTKtnj",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "A student investigates the solubility of potassium nitrate in water. She measures the masses of potassium nitrate that dissolve in 25 cm<sup>3</sup> of water at different temperatures.\n\nThe table shows the student’s results.\n\nOne of the results is anomalous.\n\n| Temperature in °C | 10 | 20 | 30 | 40 | 50 | 60 | 70 |\n|---|---|---|---|---|---|---|---|\n| Mass of potassium nitrate in g | 8.0 | 10.0 | 12.5 | 16.0 | 17.5 | 26.5 | 34.0 |\n\ni) Plot the results on the grid.\n\n(1)\n\nii) Draw a circle around the anomalous result.\n\n(1)\n\niii) Ignoring the anomalous result, draw a curve of best fit.\n\n(1)\n\n![screen-shot-2022-10-20-at-12-05-28](/content-assets/adcb345c6393bac1.png)",
+      "solutionMd": "i) The graph should contain:\n\n- All points plotted correctly to the nearest grid line 1; **[1 mark]**\n\nii) The graph should contain:\n\n- Point at 50 <sup>o</sup>C and 17.5 g circled on grid / in table from incorrect plotting;** [1 mark**]\n\niii) The graph should contain:\n\n- Smooth curve of best fit;** [1 mark]**\n\n*[004-02d8f141-a02f-498a-8ccb-58547272e39d — asset omitted]*\n\n**[Total: 3 marks] **\n\n- *Always use x's to plot your graph, as if you use dots they will not show up on the line of best fit*\n- *Check your scale as well*\n\n  - *Each square on the y-axis is the equivalent to 0.5 g of potassium nitrate *\n  - *Each square on the x-axis is the equivalent to 1 °C*"
+     },
+     {
+      "id": "qstnprt_8YmH6bkSgcWWdR93",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "suggest",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "Suggest two possible mistakes that could have caused the anomalous result.\n\n1. ..............................................................\n\n2. ..............................................................",
+      "solutionMd": "The cause of the anomalous result could be due to:\n\nAny **two** from:\n\n- Less than 25 cm<sup>3</sup> of water was used; **[1 mark]**\n- The temperature was less than 50 <sup>o</sup>C; **[1 mark] **\n- Not enough potassium nitrate was added; **[1 mark]**\n- The solution was not stirred; **[1 mark]**\n\n**[Total: 2 marks] **\n\n- *The result is less than it should be in terms of the mass in grams of potassium nitrate*\n- *Therefore think about what would cause this:*\n\n  - *If a lower volume of water is used, then less solid will be able to dissolve*\n  - *As solubility increases with temperature, the temperature could have been less than 50 *<sup>*o*</sup>*C*\n- *If the anomalous result was more than expected (falls above the trend) then it could be that the volume of water or temperature used was too high*"
+     },
+     {
+      "id": "qstnprt_S8rcH8CHXRTCk4j9",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "show",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "Use your graph to find the maximum mass of potassium nitrate that dissolves in 25 cm<sup>3</sup> of water at 75 °C.\n\nShow on your graph how you obtained your answer.\n\nmass = ............................................... g",
+      "solutionMd": "The maximum mass of potassium nitrate that dissolves in 25 cm<sup>3</sup> of water at 75 °C is:\n\n![Graph with reading at 75](/content-assets/2cb4cca0a2bdb64c.jpeg)\n\n- Curve extended to 75 <sup>o</sup>C; **[1 mark] **\n- Correct mass read from graph to the nearest grid line / in the region of 39 - 40 g; **[1 mark]**\n\n**[Total: 2 marks] **\n\n- *You must show your working by drawing two lines on the graph and also extend the curve, if you don't follow these steps you will not gain any marks!*\n- *Make sure you use a ruler for this*"
+     },
+     {
+      "id": "qstnprt_8TkkcV8BYbVT3svD",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "Use your graph to calculate the solubility of potassium nitrate in g per 100 g of water at 25 °C.\n\n[1.0 cm<sup>3</sup> of water has a mass of 1.0 g]\n\nsolubility = ............................................... g per 100g of water",
+      "solutionMd": "The solubility of potassium nitrate in g per 100g of water at 25 °C is:\n\n*[006-graph-showing-the-solubility-curve-o — asset omitted]*\n\n- Mass at 25 <sup>o</sup>C read from graph to nearest grid line; **[1 mark] **\n- Mass from graph multiplied by 4; **[1 mark]**\n\n**[Total: 2 marks] **\n\n- *A common error here would be to not multiply the value from the graph read at 25 *<sup>*o*</sup>*C by 4 *\n- *In the question, it asks for the solubility in 100 cm*<sup>*3 *</sup>*of water*\n\n  - *100 ÷ 25 = 4 *\n  - *So you need to multiply your value read from the graph*\n  - *11 g x 4 = 44 g per 100 g water*\n- *Again, make sure you draw lines with a ruler to read the value from the graph!*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_SmRxBFZhdqbGRkxB",
+    "order": 11,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 9,
+    "parts": [
+     {
+      "id": "qstnprt_GrHYnMt24xmjRRKk",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_M4GXnt7WGTmCbzFp"
+      ],
+      "specPointCodes": [
+       "4CH1-1.38"
+      ],
+      "problemMd": "This question is about ammonium chloride.\n\nGive the formula of the ammonium ion.",
+      "solutionMd": "The formula of an ammonium ion is:\n\n- NH<sub>4</sub><sup>+</sup> / NH<sub>4</sub><sup>+1</sup> / NH<sub>4</sub><sup>1+</sup>; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *You need to recall common ions like this and it is important to write the charge superscript*\n- *As the charge is a single positive charge the 1 is not needed, but you will not be penalised for including it*"
+     },
+     {
+      "id": "qstnprt_zMKc5M7DbtwJ8DrC",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_nZSG8QtkxBzvBNWf"
+      ],
+      "specPointCodes": [
+       "4CH1-2.47"
+      ],
+      "problemMd": "Describe a test to show that ammonium chloride contains ammonium ions.",
+      "solutionMd": "A test for ammonium ions is:\n\n- Add sodium hydroxide solution (and warm);** [1 mark]**\n\nAnd **one **of the following pairs:\n\nPair 1:\n\n- (Test the gas with damp) red litmus; **[1 mark]**\n- Turns blue; **[1 mark]**\n\nPair 2:\n\n- (Test the gas with damp) Universal indicator; **[1 mark]**\n- Turns blue / purple; **[1 mark]**\n\nPair 3:\n\n- Expose the gas to concentrated hydrochloric acid; **[1 mark]**\n- White smoke produced; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *Adding sodium hydroxide solution results in the production of ammonia gas*\n\n  - *If sodium hydroxide solution is not added then a maximum of 1 mark can be awarded*\n- *This can be tested by any method; the gas will change the colour of damp litmus paper as it is an alkaline gas or react with concentrated HCl to make a white 'smoke' of ammonium chloride (as the formed crystals of the salt are tiny and are suspended in the air when formed in this way*"
+     },
+     {
+      "id": "qstnprt_qskFn9nbY6JpPXXQ",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_tbzcnKqMXvrvqrkM"
+      ],
+      "specPointCodes": [
+       "4CH1-3.18"
+      ],
+      "problemMd": "The equation shows the thermal decomposition of ammonium chloride.\n\nNH<sub>4</sub>Cl(s) $\\rightleftharpoons$ NH<sub>3</sub>(g) + HCl(g)\n\nState what the $\\rightleftharpoons$ symbol indicates about this reaction.",
+      "solutionMd": "The symbol means that:\n\n- (The reaction is) reversible / goes both ways / both forwards and backwards reactions occur; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *References to equilibrium are ignored in your answer*\n- *This is a symbol you must recognise and be able to explain the meaning of*"
+     },
+     {
+      "id": "qstnprt_bkxJYcXWJHJrVkf5",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3"
+      ],
+      "problemMd": "The diagram shows the formation of ammonium chloride in a glass tube.\n\n![Diagram of a tube with cotton wool soaked in hydrochloric acid on the left and ammonia on the right, forming ammonium chloride in the centre.](/content-assets/09cd4082c2a52c30.png)\n\ni) Explain how the mean speed of ammonia molecules compares with the mean speed of hydrogen chloride molecules.\n\n(2)\n\nii) Gas particles travel very quickly.\n\nGive two reasons why it takes several minutes for the ammonium chloride to form.\n\n(2)",
+      "solutionMd": "i) The differences in the mean speed of ammonia and hydrochloric acid are:\n\n- (Molecules / particles of) ammonia move / diffuse faster; **[1 mark]**\n\nPlus any **one** of the following\n\n- Because the ammonium chloride forms near(er) to the HCl;** [1 mark]**\n- Because the ammonia has travelled further (in the same time);** [1 mark]**\n\nii) It takes several minutes for ammonium chloride to form because:\n\nAny **one **of the following pairs:\n\nPair 1:\n\n- (Gas particles) move in random directions / don’t travel in straight lines; **[1 mark]**\n- (Gas particles) collide with air / other particles; **[1 mark]**\n\nPair 2:\n\n- Air / other particles slow them down; **[1 mark]**\n- (Gas particles) collide with the walls / sides (of the tube); **[1 mark]**\n*Allow air / other particles slow them down*\n\n**[Total: 4 marks]**\n\n- *The question is asking about the evidence from the diagram provided; so the masses are not needed, just the observation that the smoke ring does not form in the middle, but closer to the hydrogen chloride/HCl*\n\n  - *The speed of a gas relative to its mass is not on the specification so this question is about deducing from observation rather than recall*\n- *You should know from earlier studies that many gas particles are present in the air and that these would act as a complex obstacle course for the reacting particles*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_rTRzsbgrjHswzjmC",
+    "order": 3,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_6PnnfMK27rhtZ2zN",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "The diagram shows a mirror in a bathroom. As the water vapour cools it turns into droplets of water on the bathroom mirror.\n\n![1-1-q1-image](/content-assets/751afd034c6a74ff.png)\n\nWhen the water vapour changes to liquid water the change is called",
+      "solutionMd": "**Final answer:** **The correct answer is ****B**** **\n\n- The water vapour changes to liquid water the change is called Condensation\n- Water vapour is a gas and changes into liquid water\n- The change of state from gas to liquid is called condensation"
+     }
+    ]
+   },
+   {
+    "id": "qstn_rDFZSdznhBRCwgbm",
+    "order": 12,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_ggppHwQKXxCVBq9H",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "draw",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "The boxes list changes that may happen in a laboratory and the names of some changes.\n\nDraw **one** straight line from each change to its correct name.\n\n![matching-changes-q](/content-assets/719502f33b80843f.png)",
+      "solutionMd": "The correct pairs are:\n\n![matching-changes-a](/content-assets/e886bf5b0da360a0.png)\n\n- Ice turns to water = melting; **[1 mark]**\n- Solid carbon dioxide turns directly into a gas = sublimation; **[1 mark]**\n- A solute is stirred into a solvent = dissolving; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *For these match-up questions, if more than one line comes from the box on the left then the mark for that box cannot be awarded*\n- *Ice turning into water is a solid changing into a liquid, which is melting*\n- *Solid carbon dioxide turning directly into a gas is sublimation*\n- *The solute being stirred into a solvent is, arguably, the trickiest of the three*\n\n  - *It could only be diffusion or dissolving as all the other options are changes of state*\n  - *Diffusion is moving from an area of high concentration to an area of low concentration, which is not happening*\n  - *This leaves dissolving as the only option*\n  \n    - *You could use the SOLV of solvent as a guide*"
+     },
+     {
+      "id": "qstnprt_qmXg68h6Mzt8np3N",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_Kbt5nNhMpGyvZxR2"
+      ],
+      "specPointCodes": [
+       "4CH1-1.9"
+      ],
+      "problemMd": "A student has two solids, X and Y.\n\nOne of these solids is a pure substance and the other is a mixture.\n\nDescribe how the student could identify which solid is pure and which is a mixture by measuring a physical property of each solid.",
+      "solutionMd": "The student could identify which solid is pure and which is a mixture by:\n\n- Measuring the melting / boiling point; **[1 mark]**\n- The melting / boiling point is fixed / sharp if the substance is pure **OR **The melting / boiling point is a narrow / tight range if the substance is pure; **[1 mark]**\n- The melting / boiling point is broad if the substance is not pure **OR **The melting / boiling point is a broad / wide range if the substance is not pure; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *The purity of a solid is tested by measuring the melting point*\n\n  - *A narrow / tight temperature range for the melting point indicates that it is pure*\n  - *A  broad / wide temperature range for the melting point indicates that it is not pure *\n- *The purity of a liquid is tested by measuring the boiling point*\n\n  - *A narrow / tight temperature range for the boiling point indicates that it is pure*\n  - *A  broad / wide temperature range for the boiling point indicates that it is not pure*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_pMtcKzWkYjQWHWGC",
+    "order": 14,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_WZsZxKGnNRb9B6Yf",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "This question is about states of matter.\n\nThe box gives words relating to changes of state.\n\n| condensation | cooling | evaporation |\n|---|---|---|\n| freezing | melting | sublimation |\n\nComplete the table by giving the correct word from the box for each change of state.\n\n| **Change of state** | **Name of change** |\n|---|---|\n| solid to liquid |   |\n| solid to gas |   |\n| liquid to solid |   |",
+      "solutionMd": "The completed table is:\n\n| **Change of state** | **Name of change** |\n|---|---|\n| solid to liquid | melting; **[1 mark]** |\n| solid to gas | sublimation; **[1 mark]** |\n| liquid to solid | freezing; **[1 mark]** |\n\n**[Total: 3 marks]**\n\n- *Solid to gas is the only one that you might have to just know*\n- *Tip: **You can work out the other changes of state by considering water:*\n\n  - *Solid to liquid = ice to water*\n  \n    - *Therefore, this is melting*\n  - *Liquid to solid = water to ice*\n  \n    - *Therefore, this is freezing*"
+     },
+     {
+      "id": "qstnprt_8h5C4RBpYCkdn66x",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3"
+      ],
+      "problemMd": "When ammonia gas and hydrogen chloride gas mix, they react together to form a white solid called ammonium chloride.\n\nThe equation for the reaction is\n\nNH<sub>3</sub> (g) + HCl (g) → NH<sub>4</sub>Cl (s)\n\nA teacher soaks a piece of cotton wool in concentrated ammonia solution and another piece of cotton wool in concentrated hydrochloric acid.\n\nThe teacher places the two pieces of cotton wool at opposite ends of a glass tube at the same time.\n\nAfter several minutes, a white ring of solid ammonium chloride forms.\n\n![ammonium-chloride-tube-experiment](/content-assets/f77b6260c6e63840.png)\n\ni) State the name given to the spreading out of gas particles.\n\n(1)\n\nii) State how the diagram shows that the particles of ammonia gas are travelling at higher speeds than the particles of hydrogen chloride gas.\n\n(1)\n\niii) Gas particles travel at high speeds.\n\nGive a reason why the white ring of ammonium chloride takes several minutes to form.\n\n(1)\n\niv) Concentrated ammonia solution and concentrated hydrochloric acid are corrosive.\n\nGive one safety precaution the teacher should take.\n\n(1)",
+      "solutionMd": "i) The name given to the spreading out of gas particles is:\n\n- Diffusion; **[1 mark]**\n\nii) The diagram shows that the particles of ammonia gas are travelling at higher speeds than the particles of hydrogen chloride gas because\n\n- Ammonia travels further (in the same length of time) \n**OR **\nThe ammonium chloride/ white ring / solid forms further away from the ammonia \n**OR **\nThe ammonium chloride/ white ring / solid forms further closer to the hydrochloric acid;** [1 mark]**\n\niii) A reason why the white ring of ammonium chloride takes several minutes to form is:\n\n- Gas particles move in random directions \n**OR** \nGas particles collide with air particles / each other \n**OR **\nGas particles collide with the (wall of the) tube; [1 mark]\n\niv) One safety precaution the teacher should take is to:\n\n- Wear eye protection / safety glasses / safety goggles \n**OR **\nWear gloves \n**OR **\nWear an apron / lab coat \n**OR **\nPut a bung / cork in both ends; **[1 mark]**\n\n**[Total: 4 marks]**\n\n- *This experiment is used to show diffusion in action*\n\n  - *Diffusion is the process where particles move from an area of high concentration to an area of low concentration*\n- *The ammonia and hydrochloric are both concentrated and corrosive, so safety precautions need to be in place*\n\n  - *These include the use of safety glasses, gloves, lab coat and using bungs to seal the tube to limit the fumes that are released*\n- *Ammonia has a mass of 17 while hydrochloric acid has a mass of 36.5*\n\n  - *So, ammonia is less dense than hydrochloric acid *\n  - *This means that the ammonia is able to travel further in the same period of time, which is why the white ring of solid ammonium chloride (seen as smoke as the particles are very small) does not form in the middle of the tube*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_nw3Cz5qdPj9QQ2QN",
+    "order": 16,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 4,
+    "parts": [
+     {
+      "id": "qstnprt_s6xXFfPh7n5FWDyW",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw",
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2",
+       "4CH1-1.3"
+      ],
+      "problemMd": "Potassium permanganate is a purple solid that is soluble in water.\n\nA crystal of potassium permanganate is placed in a beaker containing water.\n\nAfter a short time, the crystal becomes smaller and the liquid at the bottom of the beaker becomes purple.\n\nWhich statement explains this observation?",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The statement that explains why the crystal becomes smaller and the liquid becomes purple is the crystal dissolves in the water\n- Potassium permanganate is a solid\n\n  - This means that it cannot be condensing (gas → liquid) or evaporating (liquid → gas)\n- You would typically need to heat a material for it to melt and there is no mention of the beaker being heated, so melting is unlikely\n\n  - Also, potassium permanganate is a salt which usually dissolve in water"
+     },
+     {
+      "id": "qstnprt_z7FgNGsnYkwRkm5F",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw",
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2",
+       "4CH1-1.3"
+      ],
+      "problemMd": "The beaker is left until there is no further change in the appearance of the liquid.\n\ni) Which statement describes the final appearance of the liquid?\n\n(1)\n\n| ☐ | **A** | all of the liquid is purple |\n|---|---|---|\n| ☐ | **B** | none of the liquid is purple |\n| ☐ | **C** | only the bottom half of the liquid is purple |\n| ☐ | **D** | only the top half of the liquid is purple |\n\nii) Which process causes this change in appearance?\n\n(1)\n\n| ☐ | **A** | condensation |\n|---|---|---|\n| ☐ | **B** | crystallisation |\n| ☐ | **C** | diffusion |\n| ☐ | **D** | evaporation |",
+      "solutionMd": "i) The statement that best describes the final appearance of the liquid is:\n\n- **A** / all of the liquid is purple; **[1 mark]**\n\nii) The process that causes this change in appearance is:\n\n- **C** / diffusion; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The crystal will dissolve into the water (as described in the question and part (a))*\n- *This will result in there being an area of high concentration which will diffuse until the potassium permanganate is evenly spread throughout the water, resulting in all of the liquid being purple*"
+     },
+     {
+      "id": "qstnprt_vNGPgkdJtCRCCggw",
+      "order": 2,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_dd2mv5dWRJYx4Z3q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.26"
+      ],
+      "problemMd": "The formula of potassium permanganate is KMnO<sub>4</sub>.\n\nHow many different elements are there in potassium permanganate?",
+      "solutionMd": "**Final answer:** **The correct answer is A**\n\n- The number of elements present in KMnO<sub>4</sub> is 3.\n- When you are looking for the number of elements in a compound, you can ignore the numbers and look only for the chemical symbols that are on the Periodic Table\n\n  - A simpler view can be to count the number of capital letters as each new capital letter should show a new element in the formula\n- The elements are:\n\n  - K = potassium (K from its Latin name Kalium)\n  - Mn = manganese\n  - O = oxygen\n- 6 would be the most common incorrect answer\n\n  - Presumably coming from students recognising that there is 1 x K, 1 x Mn and 4 x O"
+     }
+    ]
+   },
+   {
+    "id": "qstn_NJTK5FtNSVHQmK53",
+    "order": 0,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_smxznrg8dFtKfc6t",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_J8pKKwSTHgfFw6tt"
+      ],
+      "specPointCodes": [
+       "4CH1-1.1"
+      ],
+      "problemMd": "This question is about states of matter.\n\nThe diagram shows how the particles of a substance are arranged in two different states.\n\n![solid-liquid-gas-diagrams](/content-assets/b9e6195b0604b1b1.webp)\n\ni) Complete the diagram to show how particles are arranged in the liquid state.\n\n(1)\n\nii) Identify the state of matter in which the particles have the most energy.\n\n(1)",
+      "solutionMd": "i) The completed diagram should show:\n\n- Particles should be close together **AND **Particles should fill from the bottom of the box **AND **Some particles should be touching; **[1 mark]**\n\n![1-1-q4-image](/content-assets/bc4eee3f8c84aeaa.png)\n\nii) The state of matter where the particles have the most energy is:\n\n- Gas / gaseous; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *You will lose the mark in part (i) if there is a regular arrangement / pattern to your diagram*\n- *The liquid particle diagram is the one that is most commonly drawn incorrectly*\n\n  - *In a liquid particles are still close together and mostly touching*\n  - *But there is an irregular arrangement that allows particles to 'roll past' each other if you are imagining them as spheres*\n- *Try to draw particles of a similar size to those in the other boxes or larger; don't make your life hard by drawing tiny particles*"
+     },
+     {
+      "id": "qstnprt_sZwJcdB8vrx4NTwC",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "The state symbols (s), (l), (g) and (aq) are often used in chemistry. The table shows some physical changes. Complete the table by giving the state symbol before and after each change.\n\n|   | **State symbol** |   |\n|---|---|---|\n| **Physical change** | **before change** | **after change** |\n| water evaporates |   |   |\n| crystals of iodine sublime |   |   |\n| ice melts |   |   |",
+      "solutionMd": "The completed table should include:\n\nWater evaporates:\n\n- Before change = (l) / l / liquid \n**AND **\nAfter change = (g) / g / gas; **[1 mark]**\n\nCrystals of iodine sublime:\n\n- Before change = (s) / s / solid \n**AND **\nAfter change = (g) / g / gas; **[1 mark]**\n\nIce melts:\n\n- Before change = (s) / s / solid \n**AND **\nAfter change = (l) / l / liquid; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *You must ensure you know key terms for changes of state and be able to apply them to both familiar and unfamiliar contexts*"
+     },
+     {
+      "id": "qstnprt_hGTPvkw3K6F8qxs4",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "Explain why hot water evaporates more quickly than cold water.",
+      "solutionMd": "Hot water evaporates more quickly than cold water as:\n\n- (Particles / molecules / water have) more energy / move faster; **[1 mark]**\n- To overcome / break the forces / bonds (between water molecules)\n**OR**\nTo break away from one another\n**OR**\nSo, escape more easily; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *References to collisions or activation energy in your answer will be ignored*\n- *If in doubt when explaining changes of state, refer to energy changes involved*\n\n> **[exam-tip]**\n> Don't stop at 'more energy', complete the chain by explaining what that energy allows the particles to do.\n> \n> The forces between water molecules are the same whether hot or cold; it's the greater energy that lets particles overcome them, not weaker forces."
+     }
+    ]
+   },
+   {
+    "id": "qstn_n34QTcBmqjrpGRQx",
+    "order": 13,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_BdbK7TSK5V6JrTfG",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "This question is about states of matter.\n\nUse the words solid, liquid or gas to give the initial and final state of matter for each of the changes listed in the table. The first one has been done for you.\n\n| **Change** | **Initial state** | **Final state** |\n|---|---|---|\n| melting | solid | liquid |\n| sublimation |   |   |\n| condensing |   |   |\n| evaporation |   |   |",
+      "solutionMd": "The correct states for each of the changes are:\n\n| **Change** | **Initial state** | **Final state** |\n|---|---|---|\n| melting | solid | liquid |\n| sublimation | **solid** | **gas** |\n| condensing | **gas** | **liquid** |\n| evaporation | **liquid** | **gas** |\n\n- Award 1 mark for each correct row; **[3 marks]**\n\n**[Total: 3 marks]**\n\n- *You could also be asked to give the name of the physical change between two given states*"
+     },
+     {
+      "id": "qstnprt_fbKGMZYt5T4cF25m",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_J8pKKwSTHgfFw6tt"
+      ],
+      "specPointCodes": [
+       "4CH1-1.1"
+      ],
+      "problemMd": "Particles in a solid are closely packed, arranged in a regular pattern and vibrate about fixed positions.\n\nDescribe the arrangement and movement of the particles in a gas.",
+      "solutionMd": "A description of the arrangement and movement of the particles in a gas is:\n\nAny **three** from:\n\n- Irregular / random arrangement (of particles); **[1 mark]**\n- Large gaps between them / far apart / widely spaced; **[1 mark]**\n- Random movement / move freely; **[1 mark]**\n- Move (very) quickly; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *Make sure you can describe the arrangement and movement of particles in solids, liquids and gases*\n- *You may be asked to compare the arrangement and movement of particles between different states where you would need to give similarities and differences between the states in question*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_KvZDfYyg5M26DyNk",
+    "order": 2,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_prV7j4G3ShTt2Ysq",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_xXBBzJpwCY62cfVc"
+      ],
+      "specPointCodes": [
+       "4CH1-1.4"
+      ],
+      "problemMd": "i) State the meaning of the term **solute**.\n\n(1)\n\nii) State the meaning of the term **solvent**.\n\n(1)",
+      "solutionMd": "i) Solute means:\n\n- The substance/solid that dissolves/dissolved (in a solvent)\n**OR**\nThe substance that is dissolved / that is being dissolved); **[1 mark]**\n\nii) Solvent means:\n\n- The substance/liquid that the solute solid dissolves in (accept: the substance that does the dissolving / that dissolves the solute); **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Although these terms are more commonly used in questions, it is useful to know their definitions*\n- *This is in case the examiner decides to check that you correctly understand the underpinning definitions, like this question*\n\n> **[exam-tip]**\n> Be careful not to swap the two terms round — the solute dissolves, the solvent is what it dissolves into\n> \n> Always include the idea of dissolving; stating only physical state or a vague role will not gain the mark"
+     },
+     {
+      "id": "qstnprt_2zNN3rD9DcfKRzVM",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_xXBBzJpwCY62cfVc"
+      ],
+      "specPointCodes": [
+       "4CH1-1.4"
+      ],
+      "problemMd": "Explain what is meant by a **saturated solution.**",
+      "solutionMd": "A saturated solution is:\n\n- A solution that contains as much dissolved solute / solid / substance as possible; **[1 mark]**\n- At a given / particular temperature; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Questions about saturated solutions will tend to be based on practical experiments and commonly focus on crystallisation*\n- *You do, however, need to know this definition*"
+     },
+     {
+      "id": "qstnprt_GkqBt78Z52vXhtfd",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3"
+      ],
+      "problemMd": "A dark purple liquid is diluted by adding water.\n\nThe diluted liquid becomes a pale purple colour.\n\nExplain the process that causes this change.\n\nRefer to particles in your answer.",
+      "solutionMd": "The process that causes this change is:\n\n- Diffusion; **[1 mark]**\n- (This is where) particles move from an area of high concentration to an area of low concentration \n**OR **\n(This is where) the particles spread out (evenly through the water / solution / liquid); **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Careful: **This question is asking about the colour moving throughout the liquid*\n\n  - *There is no change in the concentration, so the process involved in this question cannot be dilution *\n- *The most common answer to this question was the higher-level comment about moving from an area of high concentration to an area of low concentration*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_jYM6y2qQj9ysjSXw",
+    "order": 6,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_47KCbfhQmS3GZtwj",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "Substances can exist as solids, liquids or gases.\n\ni) Give the change of state that occurs when a substance melts.\n\n(1)\n\nii) Complete the word equation for the sublimation of iodine.\n\niodine (s) → iodine (...........)\n\n(1)",
+      "solutionMd": "i) When a substance melts the change is:\n\n- Solid to liquid; **[1 mark] **\n\nii) The word equation for the sublimation of iodine is:\n\nIodine (s) → Iodine (g)\n\n- (g) \n**OR**\nGas; **[1 mark] **\n\n**[Total: 2 marks] **\n\n- *You should be able to link the following processes to the correct changes of state*\n\n  - *Melting is when a solid changes into a liquid*\n  - *Boiling is when a liquid changes into a gas*\n  - *Freezing is when a liquid changes into a solid*\n  - *Evaporation is when a liquid changes into a gas*\n  - *Condensation is when a gas changes into a liquid, usually on cooling*\n  - *Sublimation is when a solid changes directly into a gas*\n\n> **[exam-tip]**\n> Name both states in a change of state (e.g. solid to liquid), not just the end state or the process name\n> \n> Remember sublimation goes directly from solid to gas, with no liquid in between"
+     },
+     {
+      "id": "qstnprt_87W3JjjThtkjV7g6",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "show",
+      "specPointIds": [
+       "spcpt_J8pKKwSTHgfFw6tt"
+      ],
+      "specPointCodes": [
+       "4CH1-1.1"
+      ],
+      "problemMd": "The circle in the diagram represents a particle.\n\nComplete the diagram to show the arrangement of particles in a gas.\n\n![screen-shot-2022-10-19-at-09-26-45](/content-assets/58fb25cbb2694853.png)",
+      "solutionMd": "The diagram for particles in a gas should be:\n\n- Diagram showing particles well spread out with none touching; **[1 mark]**\n\n**[Total: 1 mark] **\n\n- *Your diagram could look like this:*\n\n*[015-liquid-sme-blue.png — asset omitted]*\n\n- *The particles in a gas should not be touching and be in a random arrangement*"
+     },
+     {
+      "id": "qstnprt_cT4TD2yrzQ6tzHKh",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "place",
+      "specPointIds": [
+       "spcpt_J8pKKwSTHgfFw6tt"
+      ],
+      "specPointCodes": [
+       "4CH1-1.1"
+      ],
+      "problemMd": "The table lists some statements about particles.\n\nPlace ticks (✔) in boxes to show which two statements are correct for water particles.\n\n| **Statement** | **Tick** |\n|---|---|\n| the particles only vibrate |   |\n| the particles do not move |   |\n| the particles have no gaps between them |   |\n| the particles move randomly |   |\n| the particles have more energy than in ice |   |\n| the particles have a regular arrangement |   |",
+      "solutionMd": "The completed table is:\n\n| **Statement** | **Tick** |\n|---|---|\n| the particles only vibrate |   |\n| the particles do not move |   |\n| the particles have no gaps between them |   |\n| the particles move randomly | **✓**; **[1 mark]** |\n| the particles have more energy than in ice | **✓**; **[1 mark] ** |\n| the particles have a regular arrangement |   |\n\n**[Total: 2 marks] **\n\n- *Water is a liquid so the particles will be:*\n\n  - *Randomly arranged*\n  - *Moving around each other*\n  - *Close together*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_jSZTJnWC63R4jdX9",
+    "order": 5,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_wCq9Z3Gg56Z3mRww",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_xXBBzJpwCY62cfVc"
+      ],
+      "specPointCodes": [
+       "4CH1-1.4"
+      ],
+      "problemMd": "A crystal of potassium permanganate is placed in a beaker and left for a short time and a purple liquid is seen at the bottom of the beaker.\n\n*[016-1-1-q3-image.png — asset omitted]*\n\nWhich statement is correct?",
+      "solutionMd": "**Final answer:** **The correct answer is A**\n\n- The statement which is correct is: Potassium permanganate solution is formed\n- **A** is the correct answer because the potassium permanganate forms a purple-coloured solution, so the crystal has dissolved in the water\n- **B**, **C** and **D **are incorrect because:\n\n  - **B** - water is the solvent, not the solute\n  - **C** - you can't tell if the solution is saturated as it may not have finished dissolving\n  - **D** - subliming refers to the change of state from a solid to a gas"
+     }
+    ]
+   },
+   {
+    "id": "qstn_jqfsn2rdNhdD96tK",
+    "order": 1,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_5SbtMp4dGF4CsKwT",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3"
+      ],
+      "problemMd": "Some sugar is added to cold water in a beaker.\n\nAfter some time, all the sugar dissolves and spreads throughout the water.\n\ni) Name the process that occurs that causes the sugar to spread throughout the water.\n\n(1)\n\nii) State two ways to make the sugar dissolve more quickly.\n\n(2)",
+      "solutionMd": "i) The process that occurs which causes the sugar to spread throughout the water is:\n\n- Diffusion; **[1 mark]**\n\nii) Two ways to make the sugar dissolve more quickly are:\n\nAny **two** of the following:\n\n- Stir / shake / swirl (the mixture); **[1 mark]**\n- Heat (the mixture)\n **OR**\n** **A description of heating; **[1 mark]**\n- Grind the sugar (into a powder)\n **OR**\n** **Break the sugar into smaller pieces \n**OR **\nIncrease the surface area of the sugar; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *When the sugar is added to the cold water it will form an area of high concentration*\n\n  - *Once it has dissolved it will move from an area of high concentration to an area of low concentration *\n  - *The dissolved sugar will continue this until it is evenly spread throughout the water*\n- *You can think of a cup of tea for part (ii) as you heat the water and stir the tea to make the sugar spread evenly throughout the cup of tea*\n\n  - *Also, granulated sugar dissolves quicker than sugar cubes / lumps because it has a greater surface area*"
+     },
+     {
+      "id": "qstnprt_VNvdkzH9vGZHgd36",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_kXdX76GTHCRfmgjJ"
+      ],
+      "specPointCodes": [
+       "4CH1-1.10"
+      ],
+      "problemMd": "Pure water can be obtained from the sugar solution using this apparatus.\n\n*[017-general-simple-distillation-experime — asset omitted]*\n\ni) Name the process used to obtain pure water from the sugar solution.\n\n(1)\n\nii) Explain the purpose of the piece of apparatus labelled X.\n\n(2)",
+      "solutionMd": "i) The process used to obtain pure water from the sugar solution is:\n\n- Distilling / (simple) distillation; **[1 mark]**\n\nii) The purpose of the piece of apparatus labelled X is to:\n\n- Water / water vapour / steam / gas is cooled; **[1 mark]**\n- And condenses \n**OR **\nIn the condenser; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *Separating soluble liquids from a mixture / solution by boiling points is distillation*\n\n  - *This process cannot be fractional distillation as that is used for a complex mixture rather than a simple one like sugar solution*\n  - *Therefore, fractional distillation is not accepted as an answer*\n- *You should know that the piece of equipment labelled X is a condenser*\n\n  - *As the name suggests, this will condense gases back to liquids*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_Gd5gbVn5P3T23QZr",
+    "order": 10,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_mwjCGQm9qpKCm9jH",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_gxBSnPcpmjTsv6sw"
+      ],
+      "specPointCodes": [
+       "4CH1-1.2"
+      ],
+      "problemMd": "This question is about the three states of matter, solid, liquid and gas.\n\nSolids, liquids and gases can be changed from one state to another.\n\n| condensing | evaporation | melting | sublimation |\n|---|---|---|---|\n\nUse words from the box to complete the sentences.\n\nEach word may be used once, more than once or not at all.\n\ni) The change from solid to liquid is called\n\n(1)\n\nii) The change from liquid to gas is called\n\n(1)\n\niii) The change from solid to gas is called\n\n(1)",
+      "solutionMd": "i) The change from solid to liquid is called:\n\n- Melt / melting; **[1 mark]**\n\nii) The change from liquid to gas is called:\n\n- Evaporate / evaporating / evaporation; **[1 mark]**\n\niii) The change from solid to gas is called:\n\n- Subliming / sublimation; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *You need to know all of the terms which are used to describe the interconversions between the states*"
+     },
+     {
+      "id": "qstnprt_q8VMbF4mmKrk6HD6",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_J8pKKwSTHgfFw6tt"
+      ],
+      "specPointCodes": [
+       "4CH1-1.1"
+      ],
+      "problemMd": "Describe the arrangement and the movement of particles in a solid.",
+      "solutionMd": "The arrangement and the movement of particles in a solid can be described by:\n\nAny **three **from:\n\n- (The particles are) close together / tightly packed / touching; **[1 mark]**\n- (The particles are) regularly arranged / in a lattice; **[1 mark]**\n- (The particles) do not move around / freely; **[1 mark]**\n- (The particles) vibrate (about a fixed position); **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *References to a fixed shape and / or volume in your answer will be ignored*\n- *The arrangement and movement of particles in the three states of matter is a common question, either asking you to describe their arrangement and movement of the particles, as in this question*\n- *You can also be asked to compare the arrangement and movement of the particles; this is when you need to explain the similarities and differences in how the particles are arranged and how they move*\n- *A suitable diagram that would gain the first two marking points is:*\n\n*[018-2019-ju1cr-q1a-answer.png — asset omitted]*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_Fq3msWn597zZcRMD",
+    "order": 17,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_3996Hx6DrKF9cfYJ",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_KrPyxhBnnHhzP9rj",
+       "spcpt_hj852XZ7nQ2cCZgc"
+      ],
+      "specPointCodes": [
+       "4CH1-1.5C",
+       "4CH1-1.6C"
+      ],
+      "problemMd": "The solubility curve for copper(II)sulfate is shown below:\n\n*[019-1-1-q5-image.png — asset omitted]*\n\nWhich of these statements is supported by the graph?",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The correct statement supported by the graph is:  At 60 <sup>o</sup>C the solubility of copper(II) sulfate is 41 g per 100 g of water.\n- **B** is correct because a tie-line drawn from 60 <sup>o</sup>C on the x-axis intercepts the curve at 41 g per 100 g water\n\n*[020-avylwr1l-1-1-a3.png — asset omitted]*\n\n- **A** is incorrect as the axes have been misread since a solubility of 50 g per 100 g water corresponds to the temperature of 71 <sup>o</sup>C\n- **C** is incorrect as the solubility does not double for every 10 <sup>o</sup>C rise; comparing any two temperature lines 10 <sup>o</sup>C apart would show this, e.g. at 30 <sup>o</sup>C and 40 <sup>o</sup>C the solubility is 23 g per 100 g and 28 g per 100 g water respectively\n- **D** is incorrect as at 20 <sup>o</sup>C the solubility is only 19 g per 100 g water so 30 g cannot dissolve"
+     }
+    ]
+   },
+   {
+    "id": "qstn_cH8WqtgDdDnr8Syz",
+    "order": 18,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 8,
+    "parts": [
+     {
+      "id": "qstnprt_Mkj2NCyNr2RWgpcw",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "name",
+      "specPointIds": [
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3"
+      ],
+      "problemMd": "Lead nitrate and potassium iodide react to form the insoluble solid lead iodide. Crystals of lead nitrate and potassium iodide are placed at opposite ends of a container of water. Solid lead iodide forms after several minutes.\n\nThe diagram shows the container at the start and after several minutes.\n\n*[021-2021-ja1c-q3a.png — asset omitted]*\n\nName the two processes that occur before the solid lead iodide forms.",
+      "solutionMd": "The two processes that occur before the solid lead iodide forms are:\n\n- Dissolving; **[1 mark]**\n- Diffusion; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Lead nitrate and potassium iodide will not be able to react initially as they are not in contact with one another, and their ions are fixed in a lattice*\n- *The crystals of lead nitrate and potassium iodide will dissolve in the water*\n- *The ions will then diffuse so will spread out in the water*\n- *You do not need to give dissolving or diffusion in any particular order to be awarded the marks*"
+     },
+     {
+      "id": "qstnprt_gwPsCgCxxhdbxTWW",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "explain",
+      "specPointIds": [],
+      "specPointCodes": [],
+      "problemMd": "Explain why solid lead iodide takes less time to form when the reaction is repeated using water at a higher temperature.",
+      "solutionMd": "Solid lead iodide takes less time to form when the reaction is repeated using water at a higher temperature because:\n\n- Crystals dissolve faster; **[1 mark]**\n- (Potassium iodide / lead nitrate / water) particles move faster / have more (kinetic) energy / (lead / iodide) ions move faster / rate of diffusion increases; **[1 mark]**\n- Therefore (lead and iodide) ions / particles meet / collide after a shorter period of time / sooner; **[1 mark]**\n\n**[Total:  3 marks]**\n\n- *As the temperature of the water increases, the amount of kinetic energy the particles have increases causing them to move faster*\n\n> **[exam-tip]**\n> This is a dissolving and diffusion question, not a standard rate of reaction question. Do not write about \"more collisions\" or \"more successful collisions\" as examiners will ignore this. The process is: crystals dissolve, ions diffuse through the water, ions meet and react.\n> \n> Build the full causal chain: crystals dissolve faster in warmer water, the dissolved ions move faster (more kinetic energy), so they meet and react sooner. Stopping at \"particles move faster\" without linking forwards to ions meeting sooner will cost you a mark.\n> \n> Be careful which substance dissolves: it is the reactant crystals (potassium iodide and lead nitrate), not the lead iodide product. Lead iodide is the insoluble precipitate that forms.\n> \n> Refer to ions or particles, not molecules. Lead nitrate and potassium iodide are ionic compounds."
+     },
+     {
+      "id": "qstnprt_WBSKBzrHyhrCrQd8",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_M4GXnt7WGTmCbzFp"
+      ],
+      "specPointCodes": [
+       "4CH1-1.38"
+      ],
+      "problemMd": "The formula for lead nitrate is Pb(NO<sub>3</sub>)<sub>2</sub>\n\ni) Give the number of different elements in lead nitrate.\n\n(1)\n\nii) Give the charge on the lead ion in Pb(NO<sub>3</sub>)<sub>2</sub>\n\n(1)",
+      "solutionMd": "i) The number of different elements in lead nitrate is:\n\n- Three / 3; **[1 mark]**\n\nii) The charge on the lead ion in Pb(NO<sub>3</sub>)<sub>2 </sub>is:\n\n- 2+ / +2 / Pb<sup>2+</sup>; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Lead nitrate comprises of the following atoms:*\n\n  - *1 x Pb, 2 x N and 6 x O*\n- *You should know that the nitrate ion has a 1- charge*\n- *There are two nitrate ions whose combined charges will cancel out the charge on the lead ion, so the charge on the lead ion must be 2+*\n- *When writing charges, you should put the number before the sign, although you would not be penalised if you did it the other way in this question*"
+     },
+     {
+      "id": "qstnprt_DY3zjNYQD69dHYCM",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_yyYs65BrQr57gGSq"
+      ],
+      "specPointCodes": [
+       "4CH1-1.25"
+      ],
+      "problemMd": "Complete the chemical equation for the reaction between lead nitrate and potassium iodide.\n\nPb(NO<sub>3</sub>)<sub>2</sub> (aq) + .......... KI (aq) → PbI<sub>2</sub> (s) + .......... KNO<sub>3</sub> (aq)",
+      "solutionMd": "The chemical equation for the reaction between lead nitrate and potassium iodide is:\n\n- Pb(NO<sub>3</sub>)<sub>2 </sub>(aq) +<u>**2**</u>KI (aq) → PbI<sub>2 </sub>(s) +<u>**2**</u>KNO<sub>3 </sub>(aq); **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *There are 2 nitrate ions on the LHS of the equation but 1 on the RHS, so first balance these:*\n\n  - *Pb(NO*<sub>*3*</sub>*)*<sub>*2 *</sub>*(aq) + KI (aq) → PbI*<sub>*2 *</sub>*(s) +**2**KNO*<sub>*3 *</sub>*(aq)*\n- *Now, there are 2 x K and 2 x I on the RHS but 1 of each on the LHS, so balance these:*\n\n  - *Pb(NO*<sub>*3*</sub>*)*<sub>*2 *</sub>*(aq) +**2**KI (aq) → PbI*<sub>*2 *</sub>*(s) +**2**KNO*<sub>*3 *</sub>*(aq)*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_BBjMrgZks4V8CmTv",
+    "order": 15,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_23QSwP8K9dm2pXMx",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_tbzcnKqMXvrvqrkM"
+      ],
+      "specPointCodes": [
+       "4CH1-3.18"
+      ],
+      "problemMd": "Ammonium chloride decomposes in a reversible reaction. The equation for this reaction is\n\nNH<sub>4</sub>Cl (s) $\\rightleftharpoons$ NH<sub>3 </sub>(g) + HCl (g)\n\nState how the equation shows that the reaction is reversible.",
+      "solutionMd": "The equation shows that the reaction is reversible by:\n\n- Reversible arrow; **[1 mark] **\n\n**[Total: 1 mark] **\n\n- *Reversible reactions are reactions in which reactants will form products and products can form back into reactants *\n- *They are represented by *$\\rightleftharpoons$* rather than →*"
+     },
+     {
+      "id": "qstnprt_7KbbTBbdy8393DyX",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_tbzcnKqMXvrvqrkM"
+      ],
+      "specPointCodes": [
+       "4CH1-3.18"
+      ],
+      "problemMd": "Some ammonium chloride is heated gently in a test tube.\n\nThe diagram shows the test tube after it has been heated gently for a short time.\n\n*[022-screen-shot-2022-10-10-at-11-57-04.p — asset omitted]*\n\ni) Identify solid X and the two gases formed in region Y of the test tube.\n\nSolid** X** ................................................................................................\n\nGases at **Y** ..................................................................................................\n\n(2)\n\nii) Which change of state occurs in the test tube during heating?\n\n(1)\n\n| ☐ | **A** | condensing |\n|---|---|---|\n| ☐ | **B** | evaporating |\n| ☐ | **C** | melting |\n| ☐ | **D** | subliming |",
+      "solutionMd": "i)  The solid X and the two gases formed in region Y of the test tube\n\n- Solid X: ammonium chloride NH<sub>4</sub>Cl; **[1 mark]**\n- Gases at Y: ammonia **AND** hydrogen chloride **OR **NH<sub>3</sub> **AND** HCl; **[1 mark]**\n\nii) The change of state occurs in the test tube during heating is:\n\n- **D** /subliming; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *Heating ammonium chloride produces ammonia and hydrogen chloride gases:*\n\n  - *NH*<sub>*4*</sub>*Cl (s) → NH*<sub>*3 *</sub>*(g) + HCl (g)*\n- *As the hot gases cool down they recombine to form solid ammonium chloride*\n\n  - *NH*<sub>*3 *</sub>*(g) + HCl (g) → NH*<sub>*4*</sub>*Cl (s)  *\n- *Therefore the solid will be the original ammonium chloride where the test tube has cooled, and the gases will be both ammonia and hydrogen chloride*"
+     },
+     {
+      "id": "qstnprt_2pbtM3KWtZqg4mwh",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_dd2mv5dWRJYx4Z3q",
+       "spcpt_2g4Qfpg487fjpxCH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.3",
+       "4CH1-1.26"
+      ],
+      "problemMd": "An experiment involving ammonium chloride can be used to show the process of diffusion.\n\nThe diagram shows the apparatus at the start of the experiment.\n\n*[023-screen-shot-2022-10-10-at-12-35-41.p — asset omitted]*\n\nAt the end of the experiment, a white solid forms in the test tube.\n\nExplain which position, A, B or C, shows where the white solid forms.",
+      "solutionMd": "The position where the white solid forms is:\n\n- C; **[1 mark]**\n- Because ammonia molecules have lower mass or smaller *M*<sub>r</sub> (hence travel faster); **[1 mark]**\n- And so travel further in the same time; **[1 mark] **\n\n**[Total: 3 marks] **\n\n- *The reverse argument for hydrogen chloride is accepted *\n- *This is a very common exam question as well as a classroom demonstration*\n- *This could also be shown with different gases as well, so don't always assume that is it ammonia and hydrogen chloride *\n- *The gas with a smaller **M*<sub>*r*</sub>* will diffuse faster than the gas with a higher **M*<sub>*r*</sub>\n\n  - *M*<sub>*r *</sub>*of NH*<sub>*3*</sub>* = 14 + (3 x 1) = 17*\n  - *M*<sub>*r*</sub>* of HCl = 1 + 35.5 = 36.5*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_8G2BFhsKprhB4xQs",
+    "order": 22,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 9,
+    "parts": [
+     {
+      "id": "qstnprt_bz9T6HkS2mkTKjMK",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_KrPyxhBnnHhzP9rj"
+      ],
+      "specPointCodes": [
+       "4CH1-1.6C"
+      ],
+      "problemMd": "This question is about solubility.\n\nThe graph shows the solubilities of copper(II) chloride and sodium chloride at different temperatures.\n\n*[024-solubility-curve-cucl2-and-nacl.png — asset omitted]*\n\ni) Determine the temperature at which copper(II) chloride and sodium chloride have the same solubility.\n\nShow on the graph how you obtained your answer.\n\n(2)\n\ntemperature = .............................. °C\n\nii) A saturated solution of copper(II) chloride in 100 g of water is cooled from 40 °C to 10 °C.\n\nDetermine the mass, in grams, of copper(II) chloride that crystallises.\n\n(2)\n\nmass of copper(II) chloride = .............................. g",
+      "solutionMd": "i) The temperature at which copper(II) chloride and sodium chloride have the same solubility is:\n\n*[025-solubility-curve-cucl2-and-nacl-56.p — asset omitted]*\n\n- Working evident on graph; **[1 mark]**\n- Any answer between 56 and 57 (<sup>o</sup>C) inclusive; **[1 mark]**\n\nii) The mass, in grams, of copper(II) chloride that crystallises is:\n\n- 31 - 13; **[1 mark]**\n- 18 (g); **[1 mark]**\n\n**[Total: 4 marks]**\n\n- *The temperature at which copper(II) chloride and sodium chloride have the same solubility is found by reading the temperature from the graph at the point where the two curves meet / cross*\n- *The mass of copper(II) chloride crystals that form as the solution cools from 40 °C to 10 °C can be determined by reading from the NaCl curve at those specific temperatures*\n\n  - *40 *<sup>*o*</sup>*C = 31 g of copper sulfate*\n  - *10 *<sup>*o*</sup>*C = 13 g of copper sulfate*\n  - *As the temperature cools, 31 - 13 g of copper sulfate crystals will crystallise / crash out of the solution*"
+     },
+     {
+      "id": "qstnprt_P6wj2HnQSHtYkrFZ",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_KrPyxhBnnHhzP9rj"
+      ],
+      "specPointCodes": [
+       "4CH1-1.6C"
+      ],
+      "problemMd": "A student uses this method to determine the solubility of potassium chloride in water at room temperature.\n\n- record the mass of an empty evaporating basin\n- pour some saturated potassium chloride solution into the evaporating basin\n- record the mass of the evaporating basin and saturated potassium chloride solution\n- heat the evaporating basin to remove all the water\n- record the mass of the evaporating basin and the dry potassium chloride\n\nThe table shows the student’s results.\n\n|   | **Mass in grams** |\n|---|---|\n| evaporating basin | 58.1 |\n| evaporating basin and saturated potassium chloride solution | 78.2 |\n| evaporating basin and dry potassium chloride | 63.2 |\n\ni) Calculate the mass of dry potassium chloride obtained.\n\n(1)\n\nmass = .............................. g\n\nii) Calculate the mass of water removed.\n\n(1)\n\nmass = .............................. g\n\niii) Calculate the solubility of potassium chloride in grams per 100 grams of water.\n\n(2)\n\nsolubility = .............................. g per 100 g of water\n\niv) Suggest why the student’s method is not suitable for determining the solubility of hydrated copper(II) sulfate.\n\n(1)",
+      "solutionMd": "i) The mass of dry potassium chloride obtained is:\n\n- 5.1 (g); **[1 mark]**\n\nii) The mass of water removed is:\n\n- 15 (g); **[1 mark]**\n\niii) The solubility of potassium chloride in grams per 100 grams of water is:\n\n- $\\frac{5.1}{15}$ \n**OR **\n0.34 (g); **[1 mark]**\n- 34 (g); **[1 mark]** *A correct answer of 34 g without working scores both marks*\n\niv) The student’s method is not suitable for determining the solubility of hydrated copper(II) sulfate because:\n\n- The (hydrated) copper(II) sulfate would become anhydrous copper(II) sulfate **OR **The (hydrated) copper(II) sulfate would lose water **OR **The (hydrated) copper(II) sulfate would decompose; **[1 mark]**\n\n**[Total: 4 marks]**\n\n- *The masses for parts (i) and (ii) are calculated using the information in the table*\n- *For part (iii)*\n\n  - *The marks can be awarded for use of incorrect values in part (i) and part (ii) by error carried forward*\n  - *A correct answer of 34 g without working scores both marks*\n- *These values will show that there is 5.1 g of potassium chloride in 15 cm*<sup>*3*</sup>* of potassium chloride solution*\n\n  - *You can then convert this into grams per cm*<sup>*3*</sup>* as shown*\n  - *Then scale it up to grams per 100 cm*<sup>*3*</sup>"
+     }
+    ]
+   },
+   {
+    "id": "qstn_3Yv9MGCHtnB7fHdM",
+    "order": 8,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_XMpH2XdYYCRKtwnH",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_xXBBzJpwCY62cfVc"
+      ],
+      "specPointCodes": [
+       "4CH1-1.4"
+      ],
+      "problemMd": "The diagram shows the three states of matter for a substance:\n\n![1-1-q4-image](/content-assets/bc4eee3f8c84aeaa.png)\n\nWhich statement is correct about the movement or arrangement of the particles?",
+      "solutionMd": "**Final answer:** **The correct answer is C**\n\n- The correct statement about the movement or arrangement of the particles is  In the liquid the particles move randomly.\n- **C** is the correct answer because\n\n  - In the liquid state, the particles are arranged randomly and are close together\n  - They move around each other"
+     }
+    ]
+   },
+   {
+    "id": "qstn_3VwFR5j7pKyX9S9M",
+    "order": 20,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_Yx8JW3pvgvXCFT33",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "This is a method used to measure the solubility of a solid in water:\n\n- add an excess of solid to some water in a boiling tube and stir\n- measure the temperature of the saturated solution formed\n- weigh an empty evaporating basin\n- pour some of the saturated solution into the evaporating basin\n- weigh the basin and contents\n- heat the evaporating basin to remove all of the water\n- weigh the evaporating basin and remaining solid\n\nThe table shows the results of an experiment using this method.\n\n| mass of evaporating basin / g | 89.6 |\n|---|---|\n| mass of evaporating basin + saturated solution / g | 115.8 |\n| mass of evaporating basin + solid / g | 94.9 |\n\nCalculate the mass of solid obtained and the mass of water removed.\n\nmass of solid = .............................................................. g mass of water = .............................................................. g",
+      "solutionMd": "To calculate the mass of solid obtained and the mass of water removed:\n\n- (mass of solid) 5.3 (g); **[1 mark]**\n- (mass of water) 20.9 (g); **[1 mark] **\n\n**[Total: 2 marks] **\n\n- *The mass of solid is calculated by 94.9 - 89.6 = 5.3 g*\n- *The mass of water is calculated by 115.8 - 94.9 = 20.9 g*"
+     },
+     {
+      "id": "qstnprt_QQP2249t96wVvZ2c",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "In another experiment, at a different temperature, the mass of solid obtained is 10.5 g and the mass of water removed is 16.8 g.\n\nCalculate the solubility of the solid, in g per 100 g of water, at this temperature.\n\nsolubility = .............................................................. g per 100 g of water",
+      "solutionMd": "The solubility of the solid, in g per 100 g of water is:\n\n- ($\\frac{10.5}{16.8}$) × 100;** [1 mark]**\n- 62.5 (grams of solid per 100 g of water); **[1 mark]**\n\n**[Total: 2 marks] **\n\n- *To calculate the solubility use:*\n\n  - $\\frac{\\mathrm{mass} \\mathrm{of} \\mathrm{solid} \\mathrm{obtained}}{\\mathrm{mass} \\mathrm{of} \\mathrm{water} \\mathrm{removed}}\\times100$"
+     },
+     {
+      "id": "qstnprt_sygGkxtQRbCZwRSb",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_5R2VFQ64Y93cs49q"
+      ],
+      "specPointCodes": [
+       "4CH1-1.7C"
+      ],
+      "problemMd": "If the evaporating basin is heated too strongly, some of the solid decomposes to form a gas.\n\nExplain how this strong heating would affect the value of the calculated solubility of the solid.",
+      "solutionMd": "Strong heating would affect the value of the calculated solubility of the solid:\n\n- The gas will escape; **[1 mark]**\n- The mass of solid remaining will be less (than it should be); **[1 mark]**\n- The value of the calculated solubility will be lower (than it should be); **[1 mark]**\n\n**[Total: 3 mark] **\n\n- *If the solid decomposes into a gas, the mass of solid remaining will be lower than it should be*\n\n  - *For example*\n  - *If 11.1 g of solid remained in 20 cm*<sup>*3*</sup>* of water rather than 11.7 g the value for solubility will be lower*\n  - $\\frac{11.1}{20}$* **x 100 = 55.5 g /100 cm*<sup>*3*</sup>\n  - $\\frac{11.7}{20}$* **x 100 = 58.5 g /100 cm*<sup>*3*</sup>"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "topicId": "top_pZrhCtyZ6YMsrCyC",
+  "slug": "1-3-atomic-structure",
+  "name": "Atomic Structure",
+  "section": "1. Principles of Chemistry",
+  "sectionSlug": "1-principles-of-chemistry",
+  "curriculum": {
+   "board": "Edexcel",
+   "level": "IGCSE",
+   "subject": "Chemistry",
+   "code": "4CH1",
+   "syllabusVersion": "2017"
+  },
+  "source": {
+   "provider": "Save My Exams",
+   "license": "operator-authorized; see repo LICENSE-DATA.md (SME attestation 2026-09-17)",
+   "pageUrl": "https://www.savemyexams.com/igcse/chemistry/edexcel/19/topic-questions/1-principles-of-chemistry/1-3-atomic-structure/exam-questions/"
+  },
+  "schema": "syllabai.sme-exam-questions/1.1",
+  "relatedRevisionNotesFolder": "Chemistry IGCSE Revision Notes/1. Principles of Chemistry/c. Atomic Structure",
+  "questions": [
+   {
+    "id": "qstn_5pqTzRd235SBPmsw",
+    "order": 11,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_J9g9GrK2pM8fp5tK",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16"
+      ],
+      "problemMd": "This question is about atomic structure.\n\ni) What is meant by the term isotopes?\n\n[1]\n\nThe table contains some information about elements, which can be atoms, isotopes, or ions.\n\n|   | V | W | X | Y | Z |\n|---|---|---|---|---|---|\n| protons | 6 | 15 | 6 | 4 | 9 |\n| neutrons | 6 | 16 | 7 | 5 | 10 |\n| electrons | 6 | 18 | 6 | 2 | 9 |\n\nChoose letters from the table to answer these questions.\n\nEach letter may be used once, more than once, or not at all.\n\nii) Which species are isotopes?\n\n[1]\n\niii) Which species is an element from Group 5 of the Periodic Table?\n\n[1]\n\niv) Which species are ions?\n\n[1]\n\nv) Which species is an element from Period 3 of the Periodic Table?\n\n[1]",
+      "solutionMd": "> **[mark-scheme]**\n> i) The term isotopes means:\n> \n> - Atoms with the same number of protons but a different number of neutrons\n> **OR** Atoms with the same atomic number, but different mass numbers **[1 mark]**\n> \n> ii) The species that are isotopes are:\n> \n> - **V AND X**** [1 mark]**\n> \n> iii) The species that is an element from Group 5 of the Periodic Table is:\n> \n> - **W**** [1 mark]**\n> \n> iv) The species that are ions:\n> \n> - **W AND Y**** [1 mark]**\n> \n> v) The species that is an element from Period 3 of the Periodic Table is:\n> \n> - **W**** [1 mark]**\n\n> **[exam-tip]**\n> Many students mix up **isotopes **and **ions**. Remember:\n> \n> - Isotopes have the same number of protons but different numbers of neutrons\n> - Ions have a different number of electrons\n> \n> Always use the number of protons to identify an element, not neutrons or electrons.\n> \n> When deciding Group or Period, think about the electronic configuration of the neutral atom. So, use the number of protons, not the number of electrons if it’s an ion.\n> \n> A quick check:\n> \n> - Same number of protons = same element\n> - Different number of neutrons = isotopes\n> - More or fewer electrons than protons = ions"
+     }
+    ]
+   },
+   {
+    "id": "qstn_RMpvJVq7gM6P8bgW",
+    "order": 17,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 10,
+    "parts": [
+     {
+      "id": "qstnprt_gYrmsJFCZJyMYP84",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "This question is about atomic structure.\n\nTable 1 shows some information about subatomic particles, but the headers are missing.\n\nComplete the missing headers in table 1.\n\n|   | _____________ | _____________ | _____________ |\n|---|---|---|---|\n| _____________ | 1 | 1 | 0.0005 |\n| Relative charge | +1 | 0 | -1 |\n\n**Table 1**",
+      "solutionMd": "The completed table is:\n\n|   | **Final answer:** **proton** | **Final answer:** **neutron** | **Final answer:** **electron** |\n|---|---|---|---|\n| **Final answer:** **Relative mass** | 1 | 1 | 0.0005 |\n| Relative charge | +1 | 0 | -1 |\n\n**[2 marks]**\n\n> **[mark-scheme]**\n> 1 mark for proton **AND **neutron** AND **electron\n> \n> 1 mark for relative mass"
+     },
+     {
+      "id": "qstnprt_kd7D3qVZvxdnYfTT",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Table 2 gives the number of protons, neutrons, and electrons in atoms and ions of some elements.\n\nThe letters are not the symbols of the elements.\n\n| Element | Protons | Neutrons | Electrons |\n|---|---|---|---|\n| K | 5 | 6 | 5 |\n| L | 5 | 5 | 5 |\n| M | 4 | 5 | 2 |\n| N | 11 | 12 | 10 |\n| O | 8 | 8 | 10 |\n| P | 13 | 14 | 13 |\n\n**Table 2**\n\ni) What is the atomic number of element K in table 2?\n\nA. 5\n\nB. 6\n\nC. 10\n\nD. 11\n\n[1]\n\nii) What is the mass number of element N in table 2?\n\nA. 10\n\nB. 11\n\nC. 12\n\nD. 23\n\n[1]\n\niii) State the element in table 2 that is in Group 2 of the Periodic Table.\n\n[1]\n\niv) Which element(s) in table 2 are ions?\n\n[2]",
+      "solutionMd": "> **[mark-scheme]**\n> (i) The atomic number of element K is:\n> \n> - A / 5** ****[1 mark]**\n> \n> (ii)** **The mass number of element N is:\n> \n> - D / 23** [1 mark]**\n> \n> (iii) The element in Group 2 is:\n> \n> - Element M **[1 mark]**\n> \n> (iv) The element(s) which are ions are:\n> \n> - M, N, and O** [2 marks]**\n> \n> One mark for two correct ions\n\n> **[exam-tip]**\n> Atomic number is the number of protons.\n> \n> Mass number is the number of protons and neutrons added together.\n> \n> To be in Group 2, an element must have two outer shell electrons.\n> \n> Element M has four electrons (as a neutral atom, to balance the four protons). Two will be in the first shell, and two in the outer shell.\n> \n> To be an ion, an element must have a different number of electrons compared to protons. M, N, and O all have more or fewer electrons than protons."
+     },
+     {
+      "id": "qstnprt_dw9y6h4XBH3FCGc6",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "The relative atomic mass (*A*<sub>*r*</sub>) of elements K and L is 10.8. Calculate the percentage abundance of element K.",
+      "solutionMd": "To calculate the percentage abundance of element K:\n\n- Use the formula for calculating the relative atomic mass:\n\n`A r space equals space fraction numerator open parentheses Mass space isotope space straight A cross times percent sign space abundance space straight A close parentheses plus open parentheses Mass space isotope space straight B cross times percent sign space abundance space straight B close parentheses over denominator 100 end fraction`\n\n- Substitute the known values:\n\n`10.8 space equals fraction numerator open parentheses 11 cross times straight K percent sign close parentheses plus open parentheses 10 cross times straight L percent sign close parentheses over denominator 100 end fraction`** [1 mark]**\n\n- Let the % abundance of element K = $x$\n\n1080 = (11*x*) + (10 x (100 *- x*) **[1 mark]**\n\n1080 = 11*x* - 1000-10*x*\n\n*x *= **80%** **[1 mark]**\n\n> **[mark-scheme]**\n> 1 mark for substitution into the relative atomic mass formula\n> \n> 1 mark for simplification of the substituted relative atomic mass formula\n> \n> 1 mark for the final answer\n> \n> A correct final answer scores all three marks, even without workings.\n\n> **[exam-tip]**\n> It is strongly advised that you show your workings! If you make a mistake, you may still pick up marks, even if you get the final answer wrong.\n> \n> This question is a variation on calculating relative atomic mass, given the percentage abundances. Instead of starting with the percentage abundances, you are given the relative atomic mass and have to work the problem backwards to get the percentage abundances.\n> \n> The trick here is to realise you need to substitute one of the percentage abundances using the other. They must both add up to 100, so if the percentage of one isotope is *x, *then the other is 100-*x*.\n> \n> If your final answer was 20% then you would score 2 marks as you have got the two isotopes mixed up."
+     }
+    ]
+   },
+   {
+    "id": "qstn_YMYvmN4pMSSmyYhY",
+    "order": 14,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_gqDMMcK2zGRcftmT",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "State the meaning of the term** atomic number**.",
+      "solutionMd": "The atomic number is:\n\n- The number of protons (in the nucleus / atom); **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *The atomic number is sometimes called the proton number*\n\n  - *This is often on the key of your Periodic Table*"
+     },
+     {
+      "id": "qstnprt_YMKV5Ms6xJkZPQX2",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [],
+      "specPointCodes": [],
+      "problemMd": "An atom of element X contains 14 protons, 14 electrons and 15 neutrons.\n\ni) Which of these is the mass number of this atom?\n\n(1)\n\n| ☐ | **A** | 14 |\n|---|---|---|\n| ☐ | **B** | 15 |\n| ☐ | **C** | 28 |\n| ☐ | **D** | 29 |\n\nii) Explain which group of the Periodic Table element X belongs to.\n\n(2)",
+      "solutionMd": "i) The mass number of the atom is:\n\n- D / 29; **[1 mark]**\n\nii) Element X belongs to:\n\n- Group 4; **[1 mark]**\n- (Because) it has 4 outer electrons / 4 electrons in its outer shell \n**OR **\n(Because) it has an electronic configuration of 2, 8, 4; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *Remember: **The mass number of an element is the number of protons + the number of neutrons*\n\n  - *In this case, 14 + 15 = 29*\n- *To deduce the group, you have to work out how many outer electrons an element has*\n\n  - *In this case, there are 14 electrons*\n  - *The first (innermost) shell can contain a maximum of 2 electrons 14 - 2 = 12*\n  - *The second shell can contain a maximum of 8 electrons 12 - 8 = 4*\n  - *The third shell can contain a maximum of 8 electrons This element has four remaining electrons, which will go into the third shell*\n  - *Therefore, the element is in group 4 as it has four outer electrons*"
+     },
+     {
+      "id": "qstnprt_JHpmKQC2Rp3j932M",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "The table shows the composition of a sample of a different element, Y, containing three isotopes.\n\n| **Mass number of isotope** | ** Percentage of isotope in sample** |\n|---|---|\n| 32 | 95.0 |\n| 33 | 0.75 |\n| 34 | 4.25 |\n\nUsing information from the table, calculate the relative atomic mass (*A*<sub>r</sub>) of this sample of element Y.\n\nGive your answer to one decimal place.\n\n* A*<sub>r</sub> = ..............................",
+      "solutionMd": "The *A*<sub>r</sub> of element Y is:\n\n- *A*<sub>r</sub> = `fraction numerator open parentheses 32 cross times 95.0 close parentheses plus open parentheses 33 cross times 0.75 close parentheses plus open parentheses 34 cross times 4.25 close parentheses over denominator 100 end fraction` \n**OR **\n*A*<sub>r</sub> = `begin mathsize 14px style fraction numerator open parentheses 3040 close parentheses plus open parentheses 24.75 close parentheses plus open parentheses 144.5 close parentheses over denominator 100 end fraction end style`; **[1 mark]**\n- *A*<sub>r</sub> = 32.0925; **[1 mark]**\n- *A*<sub>r</sub> = 32.1 (to 1 d.p.); **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *For this question:*\n\n  - *A final answer of 32.0925 with no working scores 2 marks*\n  - *A final answer of 32.1 with no working scores all 3 marks*\n  - *If the calculation for the first mark is incorrect, the second and third mark can still be scored by error carried forward*\n- *The calculation of **A*<sub>*r*</sub>* is basically a mean (average) calculation using the data given to you*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_wPv9m88Dfg6jcSnp",
+    "order": 12,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 8,
+    "parts": [
+     {
+      "id": "qstnprt_jpbBcS8xD9H2CjQ9",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_9rvG5n3RKRKBGT6r"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.37"
+      ],
+      "problemMd": "The diagram shows the electronic configuration of an atom of an element.\n\n*[001-2020-ja1c-q2a.png — asset omitted]*\n\nComplete the table by giving the missing information about this atom.\n\n| name of the part of this atom labelled Z |   |\n|---|---|\n| number of protons in this atom |   |\n| number of the group that contains this element |   |\n| number of the period that contains this element |   |\n| the charge on the ion formed from this atom |   |",
+      "solutionMd": "The completed table:\n\n| name of the part of this atom labelled Z | nucleus; **[1 mark]** |\n|---|---|\n| number of protons in this atom | 12; **[1 mark]** |\n| number of the group that contains this element | 2; **[1 mark]** |\n| number of the period that contains this element | 3; **[1 mark]** |\n| the charge on the ion formed from this atom | 2+ / +2 / Mg<sup>2+</sup>; **[1 mark]** |\n\n**[Total: 5 marks]**\n\n- *In an atom, the number of protons = the number of electrons*\n\n  - *In this atom, there are 12 electrons shown, therefore there must be 12 protons*\n- *The group number corresponds to the number of electrons in the outer shell = 2*\n- *The period corresponds to the number of electron shells that are occupied = 3*\n- *When this atom forms an ion, it will lose its 2 outer electrons, therefore there will be 2 more protons than electrons, making it have a 2+ charge*"
+     },
+     {
+      "id": "qstnprt_FRrtMdWMb7yNfNKz",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "This element has three isotopes. The table shows the mass number and percentage abundance of each isotope in a sample of this element.\n\n| **Mass number** | **Percentage abundance (%)** |\n|---|---|\n| 24 | 79.2 |\n| 25 | 10.0 |\n| 26 | 10.8 |\n\nCalculate the relative atomic mass (*A*<sub>r</sub>) of this element. Give your answer to one decimal place.",
+      "solutionMd": "The relative atomic mass (*A*<sub>r</sub>) of this element is:\n\n- **Calculate sum of mass numbers multiplied by percentage abundances**: \n(24 x 79.2) + (25 x 10.0) + (26 x 10.8) \n**OR **\n2431.6; **[1 mark]** \n*This mark cannot be awarded if the correct working is given but results in an incorrect answer*\n- **Divide answer by 100**: \n2431.6 ÷ 100 \n**OR **\n24.316; **[1 mark]** \n*This mark can be awarded using an incorrect value from the first marking point (by error carried forward)* *(24 x 0.792) + (25 x 0.100) + (26 x 0.108) OR 24.316 with or without working scores both the first and second marking point*\n- **Give answer to one decimal place**: \n24.3; **[1 mark]** \n*This mark can be awarded using an incorrect value from the second marking point (by error carried forward) if the calculated answer is to 2 dp*\n\n**[Total: 3 marks]**\n\n- *The relative atomic mass can be calculated by the following equation:*\n\n  - `A subscript straight r space equals fraction numerator space open parentheses percent sign space o f space i s o t o p e space straight A space straight x space m a s s space o f space i s o t o p e space straight A close parentheses space plus space space open parentheses percent sign space o f space i s o t o p e space straight B space straight x space m a s s space o f space i s o t o p e space straight B close parentheses space plus space stretchy left parenthesis percent sign space o f space i s o t o p e space straight C space straight x space m a s s space o f space i s o t o p e space straight C stretchy right parenthesis over denominator 100 end fraction space`\n  - `equation`\n- *Make sure your answer looks sensible as it is very easy to make a calculator error when performing these calculations:*\n\n  - *The mass must be somewhere between 24 and 26 as the masses of the three isotopes are 24, 25 and 26*\n  \n    - *Relative atomic mass calculations are basically the mean average of the isotopic masses*\n  - *It will be closer to 24 as the isotope with the mass number of 24 is the most abundant*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_W2pjTCjR7MqVXmcN",
+    "order": 4,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_TXSz7FGRF4BMwTJZ",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "label",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "The diagram shows the particles in an atom of an element.\n\n*[002-2c-q1.png — asset omitted]*\n\nThe box gives the names of some particles.\n\n*[003-2c-q1-1.png — asset omitted]*\n\nUse words from the box to label the diagram.",
+      "solutionMd": "The correct particle names in the boxes are:\n\n*[004-2c-q1-ans.png — asset omitted]*\n\n- Each correct name;** [1 mark]**\n\n**[Total: 3 marks]**"
+     },
+     {
+      "id": "qstnprt_jfWPw8YbFhW2VPx4",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Give the mass number of this atom.",
+      "solutionMd": "The mass number of this atom is:\n\n- 13; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *You need to count all the particles in the nucleus*\n- *There are 6 protons and 7 neutrons giving a mass number of 13*"
+     },
+     {
+      "id": "qstnprt_FBNbnCV4BdQNBxkx",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "Complete the sentence about isotopes.\n\nIsotopes are atoms that have the same number of ..............................................................\n\nbut have a different number of .............................................................. .",
+      "solutionMd": "The sentence about isotopes is:\n\n- Isotopes are atoms that have the same number of <u>*protons*</u>** [1 mark]** but have a different number of <u>*neutrons*</u> **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *You need to learn the definition of isotopes as it comes up frequently*\n- *Although they have the same number of electrons it is not part of the definition and mentioning electrons will be ignored in an exam answer*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_tnJV44GTjxh6VKtq",
+    "order": 7,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_mjtZ7C8h4RQhMjcY",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "The table shows information about the two isotopes of boron.\n\n| **Isotope** | **Number of protons** | **Number of neutrons** | **Percentage isotope in sample** |\n|---|---|---|---|\n| 1 | 5 | 5 | 19 |\n| 2 | 5 | 6 | 81 |\n\nThe relative atomic mass of this sample of boron is:",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The relative atomic mass of this sample of boron is 10.8\n- *A*<sub>*r*</sub>* *= `fraction numerator left parenthesis percent sign space of space isotope space 1 space cross times space mass space of space isotope space 1 right parenthesis plus left parenthesis percent sign space of space isotope space 2 space cross times mass space of space isotope space 2 right parenthesis over denominator 100 end fraction`\n- *A*<sub>*r*</sub>* *of boron = $\\frac{(19\\times10)+(81\\times11)}{100}=10.8$"
+     }
+    ]
+   },
+   {
+    "id": "qstn_QrsKXCkdVTGCB25v",
+    "order": 10,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 11,
+    "parts": [
+     {
+      "id": "qstnprt_TXdWF27Cdjzq2Q7v",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Table 1 gives some information about three subatomic particles.\n\ni) Complete Table 1 by giving the missing information.\n\n(3)\n\n| **Subatomic particle** | **Relative mass** | **Relative charge** |\n|---|---|---|\n| electron | 0.0005 |   |\n| proton |   | +1 |\n| neutron | 1 |   |\n\n**Table 1**\n\nii) Give the name of the part of the atom containing protons and neutrons.\n\n(1)",
+      "solutionMd": "i) Table 1 completed with the missing information is:\n\n| **Subatomic particle** | **Relative mass** | **Relative charge** |\n|---|---|---|\n| electron | 0.0005 | -1 / minus 1; **[1 mark]** |\n| proton | one / 1; **[1 mark]** | +1 |\n| neutron | 1 | zero / 0 / no charge; **[1 mark]** |\n\nii) The name of the part of the atom containing protons and neutrons is the:\n\n- Nucleus; **[1 mark]**\n\n**[Total: 4 marks]**\n\n- *The relative mass and charge of the sub-atomic particles are expected knowledge*\n- *Remember: **The nucleus contains protons and neutrons while the electrons orbit the nucleus in shells / orbitals*"
+     },
+     {
+      "id": "qstnprt_qTgnFmrVm3JjYyzq",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16"
+      ],
+      "problemMd": "Table 2 shows the numbers of protons, neutrons and electrons in the species U, V, W, X, Y and Z.\n\n| **Species** | **Number of protons** | **Number of neutrons** | **Number of electrons** |\n|---|---|---|---|\n| U | 8 | 10 | 8 |\n| V | 9 | 10 | 10 |\n| W | 11 | 12 | 10 |\n| X | 11 | 12 | 11 |\n| Y | 12 | 12 | 12 |\n| Z | 12 | 13 | 12 |\n\n**Table 2**\n\nUse the information in Table 2 to answer these questions.\n\nEach species may be used once, more than once or not at all.\n\ni) Give the letter of the species that has six electrons in its outer shell.\n\n(1)\n\nii) Give the mass number of Z.\n\n(1)\n\niii) Give the letter of the species that is a positive ion.\n\n(1)\n\niv) Give the letters of the two species that are isotopes of the same element.\n\n(1)",
+      "solutionMd": "i) The letter of the species that has six electrons in its outer shell is:\n\n- U; **[1 mark]**\n\nii) The mass number of Z is:\n\n- 25; **[1 mark]**\n\niii) The letter of the species that is a positive ion is:\n\n- W; **[1 mark]**\n\niv) The letters of the two species that are isotopes of the same element are:\n\n- Y **AND **Z; **[1 mark]**\n\n**[Total: 4 marks]**\n\n- *The first element that has 6 outer electrons is in the second period and has the electronic configuration of 2,6*\n\n  - *This means that it has 8 electrons and is, therefore, species U*\n- *The mass number is the number of protons + the number of neutrons*\n\n  - *For species Z, this is 12 + 13 = 25*\n- *A positive ion will have more positive protons than negative electrons*\n\n  - *The only species with more protons than electrons is species W*\n- *Isotopes of the same element will have the same number of protons but a different number of neutrons*\n\n  - *Species W and X have the same number of protons (11) but they are not isotopes as they have the same number of neutrons (12)*\n  - *Species Y and Z have the same number of protons (12) and different numbers of neutrons (Y = 12, Z = 13)*"
+     },
+     {
+      "id": "qstnprt_nQqsKhnMmndYNKkp",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "A sample of neon contains two isotopes, <sup>20</sup>Ne and <sup>22</sup>Ne\n\nThe relative abundances of the two isotopes in the sample are\n\n<sup>20</sup>Ne    91.2%           <sup>22</sup>Ne    8.80%\n\nCalculate the relative atomic mass of this sample of neon.\n\nGive your answer to one decimal place.\n\nrelative atomic mass = ..............................",
+      "solutionMd": "The relative atomic mass of this sample of neon is:\n\n- Calculating the sum of (mass x percentage) (20 x 91.2) + (22 x 8.80) **OR **2017.6; **[1 mark]**\n- Dividing by 100 $\\frac{2017.6}{100}$ **OR **20.176; **[1 mark]**\n- Answer to one decimal place 20.2;** [1 mark]**\n\n**[Total: 3 marks]**\n\n- *Treat questions calculating the relative atomic mass of an element from the relative isotopic masses as a mean average calculation*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_PXRVHgKrcFCdKJBz",
+    "order": 1,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_RSz5FcZf56QmXvrg",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_D3CvgSZXCYQNCmJb",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.19"
+      ],
+      "problemMd": "The diagram below shows two different atoms of hydrogen.\n\n*[005-1-3-q1-image.png — asset omitted]*\n\nWhich particle is furthest from the centre of each atom?",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The  particle is furthest from the centre of each atom is Electron.\n- Electrons are found in shells orbiting the nucleus so they are furthest from the centre of the atom"
+     }
+    ]
+   },
+   {
+    "id": "qstn_pMbfP74wzCxCvqnN",
+    "order": 15,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_xRfyxDrfm8xHF3M4",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_D3CvgSZXCYQNCmJb"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16",
+       "4CH1-1.18",
+       "4CH1-1.19"
+      ],
+      "problemMd": "The diagram represents an atom of boron.\n\n*[006-2019-ju2cr-q2a.png — asset omitted]*\n\nUse information from the diagram to complete the table. The first row has been done for you.\n\n| atomic number | 5 |\n|---|---|\n| mass number |   |\n| number of neutrons |   |\n| group in the Periodic Table that contains boron |   |\n| period in the Periodic Table that contains boron |   |\n| electronic configuration of an atom of boron |   |",
+      "solutionMd": "The completed table is:\n\n| atomic number | 5 |\n|---|---|\n| mass number | 11; **[1 mark]** |\n| number of neutrons | 6; **[1 mark]** |\n| group in the Periodic Table that contains boron | 3; **[1 mark]** |\n| period in the Periodic Table that contains boron | 2; **[1 mark]** |\n| electronic configuration of an atom of boron | 2,3; **[1 mark]** |\n\n**[Total: 5 marks]**\n\n- *The number of neutrons is calculated by mass number - atomic number = 11 - 5 = 6*\n- *The group number is the same as the number of electrons in the outer shell = 3*\n- *The period is the same as the number of occupied electron shells = 2*\n- *The electronic configuration shows that there are 2 electrons in the first shell and 3 electrons in the second shell*"
+     },
+     {
+      "id": "qstnprt_WwXp53hYysvN9BHZ",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "calculate",
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "Boron has two isotopes, boron-10 and boron-11.\n\nA sample of boron contains 18.7% of boron-10 and 81.3% of boron-11.\n\nCalculate the relative atomic mass of this sample of boron.",
+      "solutionMd": "The relative atomic mass of this sample of boron is:\n\n- (18.7 x 10) + (81.3 x 11) \n**OR **\n1081.3 / 1081 / 1080; **[1 mark]**\n- 10.813 / 10.81 / 10.8 \n**OR**\n** **Answer from first marking point divided by 100; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *For this question:*\n\n  - *A correct answer without working scores 2*\n  - *An answer of 11 without working scores 0*\n  - *An answer of 11 with correct working scores 1*\n- *The relative atomic mass can be calculated by the following equation:*\n\n  - `A subscript straight r space equals fraction numerator space open parentheses percent sign space o f space i s o t o p e space straight A space straight x space m a s s space o f space i s o t o p e space straight A close parentheses space plus space space open parentheses percent sign space o f space i s o t o p e space straight B space straight x space m a s s space o f space i s o t o p e space straight B close parentheses over denominator 100 end fraction space`\n  - $A_{r}=\\frac{(18.7x10)+(81.3x11)}{100}=10.813$\n- *Make sure your answer looks sensible as it is very easy to make a calculator error when performing these calculations:*\n\n  - *The mass must be somewhere between 10 and 11 as the masses of the two isotopes are 10 and 11*\n  - *It will be closer to 11 as boron-11 is the most abundant*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_PjvmFGss5bFQ7tRj",
+    "order": 3,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_Zpk8RzgNrZSDqWRt",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16"
+      ],
+      "problemMd": "The atomic structure of an unknown element is shown below.\n\n*[007-1-1-q1-edexcel-gcse-mcq.png — asset omitted]*\n\nWhat is the atomic number and mass number for the unknown element?",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The atomic number and mass number for the unknown element is: Atomic number=  5    Mass number= 11\n- The atomic number is the number of protons.\n\n  - These are the positively charged particles and there are five of these in the atom\n- The mass number is the number of protons and neutrons which are both located in the nucleus"
+     }
+    ]
+   },
+   {
+    "id": "qstn_jxrxrxX3BjH3MT4p",
+    "order": 16,
+    "difficulty": "hard",
+    "style": null,
+    "totalMarks": 11,
+    "parts": [
+     {
+      "id": "qstnprt_Nzdpvk92NR2DWRMt",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4",
+       "spcpt_9rvG5n3RKRKBGT6r"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16",
+       "4CH1-1.37"
+      ],
+      "problemMd": "This question is about atomic structure.\n\nA group of students looks at the diagram below showing the arrangement of electrons in a chemical substance.\n\n*[008-aqa-gcse-1-1h-sq-q2a-2-8-electron-co — asset omitted]*\n\nThe students make the following incorrect or incomplete conclusions:\n\n- Student 1 states that the substance is fluorine, neon or sodium\n- Student 2 states that it is not possible to determine which atom or ion the diagram represents\n- Student 3 states that the mass number is 10\n\nExplain how students 1 and 2 could combine their ideas to produce **one **possible correct conclusion with an appropriate justification.",
+      "solutionMd": "Students 1 and 2 could combine their ideas to produce one possible correct conclusion with an appropriate justification because:\n\n- Student 1 suggests three possible elements \n**AND **\nStudent 2 talks about atoms;** [1 mark]**\n- If the diagram represents an atom then it can only be neon; **[1 mark]**\n- (Because,) it contains 10 electrons \n**AND **\nNeon contains / has 10 electrons; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *This question focuses on a combination of the student's language and an application of the electronic structure of atoms*\n- *The key point hiding in this question is whether this diagram represents an atom or an ion (student 2)*\n\n  - *By stating the word **atom**, student 2 narrows the possible options of student 1 to a single answer*\n  \n    - *An atom with 10 electrons*\n    - *Therefore, they could make a correct combined statement that the diagram represents an atom of neon because it contains 10 electrons*\n  - *By stating the word **ion**, student 2 narrows the possible options of student 1 to two possible answers*\n  \n    - *An ion with 10 electrons*\n    - *Therefore, they could make a combined statement that the diagram represents an ion of fluorine or sodium because it contains 10 electrons*\n  - *Since the question asks for one possible conclusion / identity, you have to focus on the **atom** idea not the **ion** idea*"
+     },
+     {
+      "id": "qstnprt_JFmC6dhmPq9Mg8gF",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "evaluate",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4",
+       "spcpt_9rvG5n3RKRKBGT6r"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.37"
+      ],
+      "problemMd": "Evaluate student 1's suggestions of fluorine and sodium.",
+      "solutionMd": "To evaluate student 1's suggestions of fluorine and sodium:\n\n- Fluorine is incorrect \n**AND **\nFluorine only has nine electrons \n**OR** \nfluoride / the fluoride ion has 10 electrons;** [1 mark]**\n- Sodium could be correct \n**AND **\nThe sodium <u>ion</u> contains / has 10 electrons; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *For this question, the exam command word **evaluate** means to discuss the correctness of the suggestions*\n- *Fluorine cannot be correct because fluor**ine** is the atom with 9 electrons whereas fluor**ide** is the ion with 10 electrons*\n- *Sodium could be correct because they could be referring to the sodium ion*"
+     },
+     {
+      "id": "qstnprt_q7tG7QMTFzT5PNBJ",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Correct student 3's statement. Explain your reasoning.",
+      "solutionMd": "Student 3 could be corrected by:\n\n- Stating that the <u>proton</u> number is 10; **[1 mark]**\n- There is no charge shown in the diagram;** [1 mark]**\n- So, 10 electrons mean 10 protons \n**AND**\n(Because,) atoms are electronically neutral / have no overall charge; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *The student has made a common mistake by counting the number of electrons and associating it with the mass number*\n- *There is an argument that this diagram could have an atomic number of 10*\n\n  - *There is no charge showing*"
+     },
+     {
+      "id": "qstnprt_KZs3GRGFgbBY4xC3",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4",
+       "spcpt_9rvG5n3RKRKBGT6r"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.37"
+      ],
+      "problemMd": "The students are told that the diagram represents  `begin mathsize 14px style Mg presubscript 12 presuperscript 25 superscript 2 plus end superscript end style`.\n\nDescribe the additions that should be made to the diagram to show this.",
+      "solutionMd": "The additions that should be made to the diagram to show that it is  `begin mathsize 14px style Mg presubscript 12 presuperscript 25 superscript 2 plus end superscript end style` are:\n\n- 12 protons (in the nucleus); **[1 mark]**\n- 13 neutrons (in the nucleus); **[1 mark]**\n- A 2+ charge (added to the diagram); **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *The first part of this question is asking you to calculate the number of protons, neutrons and electrons in the isotope of magnesium-25*\n- *Then you have to apply the 2+ charge to compensate for only having 10 electrons in the diagram*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_JRm9S7QNt2TYy7WV",
+    "order": 9,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_nqRnHsrsKZWfjPVG",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "Thallium, Tl, is an element in Group 3 and Period 6 of the Periodic Table.\n\nThe atomic number of thallium is 81\n\nHow many electrons are there in the outer shell of an atom of thallium?",
+      "solutionMd": "**Final answer:** **The correct answer is A**\n\n- The number of electrons in the outer shell of an atom of thallium is 3.\n- B is incorrect as there are not 6 electrons in the outer shell of a thallium atom\n- C is incorrect as there are not 13 electrons in the outer shell of a thallium atom\n- D is incorrect as 81 is the total number of electrons in a thallium atom not the number in the outer shell"
+     },
+     {
+      "id": "qstnprt_xhhhmKtxz8wb2xd9",
+      "order": 1,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "A thallium ion has a charge of 3+\n\nHow many electrons are there in this thallium ion?",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The number of electrons in this thallium ion is 78.\n- A is incorrect as there are not 3 electrons in a thallium ion\n- C is incorrect as 81 is the number of electrons in a thallium atom, not a thallium ion\n- D is incorrect as there are not 84 electrons in a thallium ion\n\n  - This would suggest a 3– thallium ion Tl<sup>3–</sup>"
+     },
+     {
+      "id": "qstnprt_ZFhN8X3GGWCqfyQd",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.17"
+      ],
+      "problemMd": "A sample of thallium contains two isotopes.\n\nThe table shows the mass number and percentage abundance of each isotope in the sample.\n\n| **Isotope** | **Mass number** | **Percentage abundance (%)** |\n|---|---|---|\n| thallium-203 | 203 | 30.80 |\n| thallium-205 | 205 | 69.20 |\n\ni) Give the number of protons and the number of neutrons in one atom of the thallium-205 isotope.\n\n(2)\n\nnumber of protons: ......................................................................\n\nnumber of neutrons:  ...................................................................\n\nii) Calculate the relative atomic mass of this sample of thallium.\n\nGive your answer to one decimal place.\n\n(3)",
+      "solutionMd": "i) The number of protons and the number of neutrons in one atom of the thallium-205 isotope:\n\n- (Number of protons): 81; **[1 mark]**\n- (Number of neutrons): 124; **[1 mark]**\n\nii) Calculate the sum of mass numbers multiplied by percentage abundance:\n\n- (203 x 30.8) + (205 x 69.2) **OR** 20438.4; **[1 mark]**\n\nDivide answer by 100:\n\n- 20438.4 ÷ 100 OR 204.384; **[1 mark]**\n\nGive answer to one decimal place\n\n- 204.4; **[1 mark]**\n\n*(203 x 0.308) + (205 x 0.692) or 204.384 with or without working scores M1 and M2* \n*Correct answer to 1 d.p. with or without working scores 3 marks*\n\n**[Total: 5 marks]**\n\n- *The mass number of thallium-205 is 205*\n- *The proton number remains the same for all isotopes and can be found on the Periodic Table*\n\n  - *You are also told that thallium has an atomic number of 81 at the start of this question*\n- *The steps are the same for the calculation of any relative atomic mass from isotopic masses and abundances*\n\n  - *Make sure you follow the steps*\n  - *Check your answer at the end - it should be somewhere between the highest and lowest mass values*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_jQ8vPpMWpMdTNWN6",
+    "order": 5,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_6KsQ9YpZMBmGZsGT",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_3PjB3Jh2crhMBHpM"
+      ],
+      "specPointCodes": [
+       "4CH1-1.14"
+      ],
+      "problemMd": "Which box contains only atoms?",
+      "solutionMd": "**Final answer:** **The correct answer is B**\n\n- The box that contains only atoms is B.\n- Atoms are single particles, but molecules are two or more atoms joined together\n- Box B shows white and black atoms, not joined together\n- A shows an atom in black and two molecules in black and an atom in white\n- C shows one atom in white and a molecule in white and two atoms in black\n- D shows three molecules in white"
+     }
+    ]
+   },
+   {
+    "id": "qstn_HvCpmZV36rJnF5V5",
+    "order": 6,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_RCswr74T4J67rjcD",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16"
+      ],
+      "problemMd": "The diagram below shows two different atoms of hydrogen.\n\n*[005-1-3-q1-image.png — asset omitted]*\n\nWhich particle is missing from one of the diagrams?",
+      "solutionMd": "**Final answer:** **The correct answer is C**\n\n- The particle is missing from one of the diagrams is  Neutron.\n- Atoms of a particular element must have the same number of protons and electrons\n- The number of neutrons can change\n- Hydrogen has an atomic number of 1, so it has 1 proton and 1 electron\n- The atom on the left has no neutrons\n- Atoms with different numbers of neutrons are called isotopes"
+     }
+    ]
+   },
+   {
+    "id": "qstn_CRjBxMqCdQMyPDvc",
+    "order": 2,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_5FVVZBNMCXVkkvsy",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "The diagram shows the particles in the atom of an element.\n\n*[009-be-electronic-structure.png — asset omitted]*\n\nParticle Y is a proton.\n\nWhat is particle Z?",
+      "solutionMd": "**Final answer:** **The correct answer is C**\n\n- Particle Z is a neutron.\n- The only correct answer is C because the nucleus contains protons and neutrons. Protons are identified as the white dots\n\n  - A is not correct because electrons occur in the shells\n  - B is not correct because a molecule is not a particle found in the nucleus\n  - D is not correct because the nucleus contains protons and neutrons."
+     },
+     {
+      "id": "qstnprt_s2ShCXj98TmZCBJQ",
+      "order": 1,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Which of these has the smallest mass?",
+      "solutionMd": "**Final answer:** **The correct answer is A**\n\n- The smallest mass is that of an electron.\n- The only correct answer is A because electrons have a relative mass of 1/1836 compared to a proton or a neutron\n\n  - B is not correct because a neutron has a relative mass of 1\n  - C is not correct because the nucleus contains 4 protons and 5 neutrons\n  - D is not correct because a proton has a relative mass of 1"
+     },
+     {
+      "id": "qstnprt_QkksZZNfBDQ96byq",
+      "order": 2,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "What is the mass number of this atom?",
+      "solutionMd": "**The correct answer is C**\n\n- The mass number of this atom is 9.\n- The only correct answer is C because the mass number is the sum of the protons and neutrons\n\n  - A is not correct because the atomic number is 4\n  - B is not correct because 5 is the number of neutrons\n  - D is not correct because 13 is the total number of protons, neutrons and electrons"
+     },
+     {
+      "id": "qstnprt_vnrR8vnwdSmBtVDn",
+      "order": 3,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "What is the atomic number of the atom in part a)?",
+      "solutionMd": "**Final answer:** **The correct answer is A**\n\n- The atomic number is 4.\n- The only correct answer is A because the atomic number is equal to the number of protons which is 4\n\n  - B is not correct because 5 is the number of neutrons\n  - C is not correct because 9 is the total number of particles in the nucleus\n  - D is not correct because 13 is the total number of protons, neutrons and electrons"
+     },
+     {
+      "id": "qstnprt_QNFZ5b7JdsFwfHFg",
+      "order": 4,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "i) Identify the element that contains this atom.\n\n(1)\n\nii) State what is formed when this atom loses its outer shell electrons.\n\n(1)",
+      "solutionMd": "i) The element is:\n\n- Beryllium / Be; **[1 mark]**\n\nii) When the outer electrons are lost it forms a:\n\n- Ion; **[1 mark]**\n\n* Allow ecf from the element given in (e)(i)*\n*Ignore reference to charge and identity of ion in (e)(ii)*\n\n**[Total: 2 marks]**\n\n- *The original structure of 2,2 means that the element is in Group 2 and has 2 shells, so is in Period 2, so the Periodic Table can be used to locate the element as well as the mass and atomic numbers*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_bSYfSzgHXHrVt7Rz",
+    "order": 8,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_r74ZNt8pMP6S25nF",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "The diagram shows an atom of an element.\n\n*[010-2021-ja2c-q1a.png — asset omitted]*\n\ni) What is the name of the particle labelled Y?\n\n(1)\n\n| ☐ | **A** | electron |\n|---|---|---|\n| ☐ | **B** | ion |\n| ☐ | **C** | neutron |\n| ☐ | **D** | proton |\n\nii) Give the mass number of this atom.\n\n(1)\n\niii) Name this element. Use the Periodic Table to help you.\n\n(1)",
+      "solutionMd": "i) The name of the particle labelled Y is:\n\n- D / proton; **[1 mark]**\n\nii) The mass number of this atom is:\n\n- 7; **[1 mark]**\n\niii) The name of this element is:\n\n- Lithium; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *In part (i):*\n\n  - *D is the correct answer because protons occur in the nucleus and have a positive charge*\n  - *A is not the correct answer since electrons occur in the energy levels*\n  - *B is not the answer since ions do not occur in the nucleus*\n  - *C is not the correct answer since neutrons have no charge*\n- *Mass number = number of protons + number of neutrons (i.e. the total number of nucleons) = 7*\n- *The number of protons determines which element the atom is*\n\n  - *This element has 3 protons so will have an atomic (proton) number of 3, which means that the atom is one of lithium*\n  - *You would gain a mark if you had given the formal of lithium, Li*"
+     },
+     {
+      "id": "qstnprt_vnds4rhZ4kxXzB4g",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16"
+      ],
+      "problemMd": "There are two isotopes of this element.\n\nGive one way, in terms of sub-atomic particles, that these isotopes are the same and one way that they are different.\n\nsame ..........................................................................................................\n\n..........................................................................................................\n\ndifferent ....................................................................................................................................................................................................................",
+      "solutionMd": "One way, in terms of sub-atomic particles, that these isotopes are the same and one way that they are different are:\n\n- Same number of protons; **[1 mark]**\n- Different number of neutrons; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *This is a common question so make sure you learn this*\n- *In an atom, the number of electrons is equal to the number of protons so if you said they had the same number of electrons, this would be an acceptable answer, however, this is not the case for ions*\n- *When explaining the similarities and differences of isotopes, refer to the different sub-atomic particles as opposed to the mass number or atomic number*\n\n  - *This question specifically asks you for an explanation in terms of sub-atomic particles so no credit is given for references to mass / atomic number*\n- *Watch out for the common trap!*\n\n  - *Protons = the element's identity*\n  - *All isotopes of an element have the same protons*\n  - *If protons are different, they're different elements, not isotopes*\n- *Neutrons = what makes isotopes different*\n- *A common wrong answer is \"same electrons, different protons\", this scores 0/2*\n- *In a neutral atom, electrons = protons, so this combination is impossible, and the contradiction cancels out the correct half*\n- *Safe full-mark answer: *\n\n  - *Same number of protons; different number of neutrons*\n\n> **[exam-tip]**\n> Always include the comparative word 'same' or 'different' so the comparison is complete.\n> \n> Answer in terms of sub-atomic particles: references to mass number or atomic number earn no credit."
+     }
+    ]
+   },
+   {
+    "id": "qstn_9RXH9v8YFXgSVwGx",
+    "order": 0,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_gZgQzwVWWKpSGWDt",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "name",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "The diagram shows the structure of an atom.\n\n*[011-screen-shot-2022-10-10-at-10-27-37.p — asset omitted]*\n\nName the central part of an atom.",
+      "solutionMd": "The central part of the atom is:\n\n- The nucleus;** [1 mark] **\n\n**[Total: 1 mark] **\n\n- *Labelling an atom is a very common question so make sure you know the structure and can state the relative masses and charges of each subatomic particle*"
+     },
+     {
+      "id": "qstnprt_QN623N5jW26bZf2X",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "name",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Name the positively charged particles in an atom.",
+      "solutionMd": "The positively charged particles in an atom are:\n\n- Protons; **[1 mark]**\n\n**[Total: 1 mark] **\n\n- *You can remember **p**rotons are **p**ositive as both words begin with **p*"
+     },
+     {
+      "id": "qstnprt_GDvQSXDMjpx8SJxh",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "how",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "State how the diagram in part a) shows that this atom is neutral.",
+      "solutionMd": "The diagram shows the atom is neutral because:\n\n- Equal numbers of protons and electrons; **[1 mark]**  \n*Accept equal numbers of positive and negative particles / charges*\n\n**[Total: 1 mark] **\n\n- *Protons have a positive charge and electrons have a negative charge, therefore if there are equal numbers of both, then the overall charge is neutral - they cancel one another out*"
+     },
+     {
+      "id": "qstnprt_rfJ8tPCj23DtKdqq",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16"
+      ],
+      "problemMd": "Give the mass number of the atom in part a).",
+      "solutionMd": "The mass number is:\n\n- 5; **[1 mark] **\n\n**[Total: 1 mark] **\n\n- *The mass number is*\n\n  - *number of protons + number of neutrons (3 + 2 = 5)*\n- *Each subatomic particle has a relative mass of 1*"
+     },
+     {
+      "id": "qstnprt_YHNkmzFFV6SHkKhj",
+      "order": 4,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.16"
+      ],
+      "problemMd": "Give the name of the element containing this atom. Use the Periodic Table to help you.",
+      "solutionMd": "The element is:\n\n- Lithium; **[1 mark]**\n\n**[Total: 1 mark] **\n\n- *The elements in the Periodic Table are in order of atomic number*\n- *The number of protons is the same as the atomic number*\n- *Lithium has an atomic number of 3 *\n- *Always use the number of protons to identify an element as the mass number may vary due to different isotopes*\n\n  - *Isotopes have a different number of neutrons but the same number of protons*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_5Gq8C7JYCfhvSR8x",
+    "order": 13,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 11,
+    "parts": [
+     {
+      "id": "qstnprt_984g2Rwv2YgBnWzM",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15"
+      ],
+      "problemMd": "Complete the table to show the relative mass and relative charge of a proton and a neutron.\n\n|   | **Proton** | **Electron** | **Neutron** |\n|---|---|---|---|\n| **Relative mass** |   | 1/2000 |   |\n| **Relative charge** |   | –1 |   |",
+      "solutionMd": "The completed table to show the relative mass and relative charge of a proton and a neutron is:\n\n|   | **Proton** | **Electron** | **Neutron** |\n|---|---|---|---|\n| **Relative mass** | **Final answer:** **1** | 1/2000 | **Final answer:** **1** |\n| **Relative charge** | **Final answer:** **+1** | –1 | **Final answer:** **0** |\n\n- All four correct;** [2 marks]**\n- 2 or 3 correct; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Protons and neutrons both have a relative mass of 1*\n- *You should know the relative charges of protons from their names:*\n\n  - *P**ositive **P**rotons*\n  - *Neutr**al **Neutr**ons*"
+     },
+     {
+      "id": "qstnprt_6SV7pFJN9B9XSgdN",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 8,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_PfzKG3gYGbpXg9my",
+       "spcpt_hxKk9zVSYMcGqNkR"
+      ],
+      "specPointCodes": [
+       "4CH1-1.16",
+       "4CH1-1.17"
+      ],
+      "problemMd": "Magnesium has three isotopes.\n\ni) State the meaning of the term **isotopes**.\n\n(2)\n\nii) The symbol for an atom of one isotope of magnesium is\n\n`begin mathsize 14px style Mg presubscript 12 presuperscript 26 end style`\n\nGive the number of protons, neutrons and electrons in one atom of this isotope.\n\n(2)\n\nnumber of protons ..............................\n\nnumber of neutrons ..............................\n\nnumber of electrons ..............................\n\niii) A sample of magnesium contains these percentages of the three isotopes.\n\nMg‐24 = 79.00%   Mg‐25 = 10.00%   Mg‐26 = 11.00%\n\nUse this information to show that the relative atomic mass of magnesium is 24.32\n\n(2)\n\niv) One mole of magnesium has a mass of 24.32 g.\n\nThere are 6.022 × 10<sup>23</sup> atoms in one mole.\n\nCalculate the mass, in grams, of one atom of magnesium.\n\nGive your answer to 4 significant figures.\n\n(2)\n\nmass = .............................................................. g",
+      "solutionMd": "i) The term isotope means:\n\n- Atoms (of the same element) with the same number of protons \n**OR **\nAtoms (of the same element) with the same atomic number; **[1 mark]**\n- But different numbers of neutrons; **[1 mark]**\n\nii) The number of protons, neutrons and electrons in one atom of `begin mathsize 14px style Mg presubscript 12 presuperscript 26 end style` is:\n\n- Protons = 12 **AND **Electrons = 12; **[1 mark]**\n- Neutrons = 14; **[1 mark]**\n\niii) Showing that the relative atomic mass of magnesium is 24.32:\n\n`fraction numerator open parentheses 24 cross times 79 close parentheses plus open parentheses 25 cross times 10 close parentheses plus open parentheses 26 cross times 11 close parentheses over denominator 100 end fraction`\n\n- All masses multiplied by the percentage (top line of the calculation); **[1 mark]**\n- All added together and divided by 100;** [1 mark**]\n\niv) The mass, in grams, of one atom of magnesium is:\n\n- $\\frac{24.32}{6.022\\times10^{23}}$; **[1 mark]**\n- 4.039 x 10<sup>–23</sup>; **[1 mark]**\n\n**[Total: 8 marks]**\n\n- *You need to know the definition of an isotope and how to calculate the number of protons, electrons and neutrons in an atom *\n\n  - *The numbers of protons, neutrons and electrons can be used to demonstrate that certain atoms are isotopes of the same element*\n- *Calculating (or proving by calculation) the relative atomic mass of an element is just calculating the mean (average) using the information given to you*\n- *In part (iv), you are basically told that 6.022 x 10*<sup>*23*</sup>* atoms of magnesium have a mass of 24.32 g*\n\n  - *You can scale this down to determine the mass of one atom by dividing by 6.022 x 10*<sup>*23*</sup>"
+     },
+     {
+      "id": "qstnprt_SfSQRhMQZkPYzcdR",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "determine",
+      "specPointIds": [
+       "spcpt_KkqV99vZXp5CQjjQ"
+      ],
+      "specPointCodes": [
+       "4CH1-1.29"
+      ],
+      "problemMd": "The equation for the reaction between magnesium and oxygen is\n\n2Mg + O<sub>2</sub> → 2MgO\n\nDetermine the maximum amount, in moles, of magnesium oxide that can be produced from 0.50 mol of magnesium and 0.20 mol of oxygen.\n\namount = .............................................................. mol",
+      "solutionMd": "The maximum amount, in moles, of magnesium oxide that can be produced from 0.50 mol of magnesium and 0.20 mol of oxygen is:\n\n- 0.40; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *There is a clear 2 : 1 relationship between magnesium and oxygen *\n- *This means that 0.50 moles of magnesium would require 0.25 moles of oxygen to react completely*\n- *Since, there is only 0.20 moles of oxygen it must be the limiting reagent*\n- *One mole of oxygen is used to form 2 moles of magnesium oxide*\n- *Therefore, 0.20 moles of oxygen can be used to form 0.40 moles of magnesium oxide*"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "topicId": "top_zGcgyJmmtNNg9V3x",
+  "slug": "1-4-the-periodic-table",
+  "name": "The Periodic Table",
+  "section": "1. Principles of Chemistry",
+  "sectionSlug": "1-principles-of-chemistry",
+  "curriculum": {
+   "board": "Edexcel",
+   "level": "IGCSE",
+   "subject": "Chemistry",
+   "code": "4CH1",
+   "syllabusVersion": "2017"
+  },
+  "source": {
+   "provider": "Save My Exams",
+   "license": "operator-authorized; see repo LICENSE-DATA.md (SME attestation 2026-09-17)",
+   "pageUrl": "https://www.savemyexams.com/igcse/chemistry/edexcel/19/topic-questions/1-principles-of-chemistry/1-4-the-periodic-table/exam-questions/"
+  },
+  "schema": "syllabai.sme-exam-questions/1.1",
+  "relatedRevisionNotesFolder": "Chemistry IGCSE Revision Notes/1. Principles of Chemistry/d. The Periodic Table",
+  "questions": [
+   {
+    "id": "qstn_8Qxs4DySzpK48Tjr",
+    "order": 11,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 4,
+    "parts": [
+     {
+      "id": "qstnprt_vfvYysqnYckfP8hs",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "The table contains statements about elements in the Periodic Table.\n\nComplete the missing information.\n\n[4]\n\n| Statement |   |\n|---|---|\n| The name of the element with atomic number 18. |   |\n| The name of the element with relative atomic mass 7. |   |\n| The name of the element in Group 3, Period 4. |   |\n| The electronic configuration of the element phosphorus. |   |",
+      "solutionMd": "The completed table is:\n\n| Statement |   |\n|---|---|\n| The name of the element with atomic number 18. | **argon** **[1]** |\n| The name of the element with relative atomic mass 7. | **lithium ****[1]** |\n| The name of the element in Group 3, Period 4. | **gallium ****[1]** |\n| The electronic configuration of the element phosphorus. | **2.8.5** **[1]** |\n\n> **[exam-tip]**\n> Examiners sometimes comment that students don't read instructions, especially when asked for the symbol versus the name of an element.\n> \n> You will probably still receive credit for this question if you gave the symbol, but it's good practice to read the question carefully!\n> \n> To deduce the electronic configuration:\n> \n> 1. Find the atomic number from the Periodic Table\n> 2. A neutral phosphorus atom has 15 electrons\n> 3. Fill the shells:\n> \n>   - 2 electrons in the first shell\n>   - 8 electrons in the second shell\n>   - This leaves 5 electrons for the third shell\n>   - This gives the configuration **2.8.5**."
+     }
+    ]
+   },
+   {
+    "id": "qstn_wwqHyNk7ZTqkHsTh",
+    "order": 10,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_zKTp2JWycBSkZGVm",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_D3CvgSZXCYQNCmJb",
+       "spcpt_3BFPwSVNF8yHMMRY"
+      ],
+      "specPointCodes": [
+       "4CH1-1.19",
+       "4CH1-1.22"
+      ],
+      "problemMd": "Which element, T, Q, R, or M has the electronic configuration 2,8,3?\n\n*[001-1-4-q3-edexcel-igcse-chemistry.png — asset omitted]*",
+      "solutionMd": "**Final answer:** **The correct answer is D**\n\n- The element with the electronic configuration 2,8,3 is D.\n- The position of R corresponds to a group 3 element, which must have three outer electrons\n- It is also in the third period\n\n  - The first short period (H and He) is not shown on this table, but it should be obvious that R is in the third row of the periodic table"
+     }
+    ]
+   },
+   {
+    "id": "qstn_tqF4TmkC5SJTHrqF",
+    "order": 16,
+    "difficulty": "hard",
+    "style": null,
+    "totalMarks": 11,
+    "parts": [
+     {
+      "id": "qstnprt_hRDPB3Bvvd397YbP",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "identify",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_CwF4yxJjzh8NXQh4"
+      ],
+      "specPointCodes": [
+       "4CH1-1.15",
+       "4CH1-1.18"
+      ],
+      "problemMd": "This question is about chemical elements.\n\nUse the Periodic Table to help you answer this question.\n\ni) Identify the element whose atoms contain 10 neutrons and 9 protons.\n\n(1)\n\nii) Identify the element whose atoms have the electronic configuration 2.8.5\n\n(1)",
+      "solutionMd": "i) The element whose atoms contain 10 neutrons and 9 protons is:\n\n- Fluorine / F; **[1 mark]**\n\nii) The element whose atoms have the electronic configuration 2.8.5 is:\n\n- Phosphorous / P; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The element with 10 neutrons and 9 electrons has an atomic mass of 19, which corresponds to *`straight F presubscript 9 presuperscript 19`* *\n- *The element with the electronic configuration 2.8.5 has 15 electrons (2 + 8 + 5 = 15)*\n\n  - *You are not told any other information so you have to assume that it is electronically neutral and, therefore, has 15 protons*\n  - *15 protons means an atomic / proton number of 15, which corresponds to *`straight P presubscript 15 presuperscript 31`"
+     },
+     {
+      "id": "qstnprt_XH9nKBz547nmYK3j",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_D3CvgSZXCYQNCmJb"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.19"
+      ],
+      "problemMd": "Give the name of the compound formed between the element with an electronic configuration of 2.8.6 and the non-metallic element in Group 3.",
+      "solutionMd": "The name of the compound formed between the element with an electronic configuration of 2.8.6 and the non-metallic element in Group 3 is:\n\n- Boron sulfide; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *An electronic configuration of 2.8.6 means that the element has 16 electrons (2 + 8 + 6 = 16)*\n\n  - *You are not told any other information so you have to assume that it is electronically neutral and, therefore, has 16 protons*\n  - *16 protons means an atomic / proton number of 16, which corresponds to sulfur*\n- *The only non-metallic element in Group 3 is boron*\n- *Boron + sulfur → boron sulfide*\n\n  - *Remember:** When two elements form a compound, the products name will normally end in –IDE*"
+     },
+     {
+      "id": "qstnprt_xcfwfBHfQcc44Rfm",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_9rvG5n3RKRKBGT6r"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.37"
+      ],
+      "problemMd": "A white solid is formed from the reaction between the element with an atomic number of 7 and the element with an electronic configuration of 2.8.3\n\ni) State the type of bonding present in the white solid.\n\n(1)\n\nii) Describe the changes that occur to the atoms of both elements as they react to form the white .\n\n(3)\n\niii) Give the chemical formula of the white solid.\n\n(1)",
+      "solutionMd": "i) The type of bonding present in the white solid is:\n\n- Ionic; **[1 mark]**\n\nii) The changes that occur to the atoms of both elements as they react to form the white solid are:\n\n- Nitrogen correctly identified \n**AND **\nAluminium correctly identified; **[1 mark]**\n- Nitrogen gains <u>three</u> electrons **AND** aluminium loses / gives / donates <u>three</u> electrons \n**OR **\nAluminium transfers <u>three</u> electrons to nitrogen; **[1 mark]**\n- Nitrogen forms a 3– ion \n**AND **\nAluminium forms a 3+ ion; **[1 mark]**\n\niii) The chemical formula of the white solid is:\n\n- AlN; **[1 mark]**\n\n**[Total: 5 marks]**\n\n- *The element with an atomic number of 7 is nitrogen, which is a non-metal*\n- *The element with an electronic configuration of 2.8.3 is aluminium, which is a metal*\n- *The reaction of a metal and a non-metal forms an ionic compound*\n\n  - *Word equation: aluminium + nitrogen → aluminium nitride*\n- *In ionic bonding*\n\n  - *The metal aluminium will lose three electrons to form an Al*<sup>*3+*</sup>* ion*\n  - *The non-metal nitrogen will gain three electrons to form an N*<sup>*3–*</sup>* ion*\n  - *Chemical equation: Al + N → AlN*\n  \n    - *The reaction requires one Al*<sup>*3+*</sup>* ion and one N*<sup>*3–*</sup>* ion to form the compound since the charges cancel out*"
+     },
+     {
+      "id": "qstnprt_tWwcTS8g4nFVVPQG",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_dd2mv5dWRJYx4Z3q",
+       "spcpt_3Z8sv7nkJG3yvkWk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.26",
+       "4CH1-1.46"
+      ],
+      "problemMd": "The Group 6 element whose oxides are linked to acid rain can react with the element whose electronic configuration is 2.7 to form different compounds.\n\ni) Draw a dot-and-cross diagram to show the bonding in a molecule of the compound formed with a relative molecular mass (*M*<sub>r</sub>) of 70.\n\n(2)\n\nii) An alternative product with a relative molecular mass (*M*<sub>r</sub>) of 146 is formed under different conditions. Suggest the molecular formula of this product.\n\n(1)",
+      "solutionMd": "i) The dot-and-cross diagram to show the bonding in a molecule of the compound formed with a relative molecular mass (*M*<sub>r</sub>) of 70 is:\n\n*[002-sf2-dot-and-cross-diagram.png — asset omitted]*\n\n- 2 bonding pairs (between S and F / in the S F overlap); **[1 mark]**\n- Rest of the molecule fully correct; **[1 mark]**\n\nii) The molecular formula of the alternative product with a relative molecular mass (*M*<sub>r</sub>) of 146 is:\n\n- SF<sub>6</sub>; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *The Group 6 element whose oxides are linked to acid rain is sulfur*\n- *The element with an electronic configuration of 2.7 is fluorine*\n- *Under different conditions, they react to form various sulfur fluoride compounds*\n- *The sulfur fluoride compound with a relative molecular mass of 70 is SF*<sub>*2*</sub>* (32 + 19 + 19 = 70)*\n\n  - *This means that you are drawing the dot-and-cross diagram for SF*<sub>*2*</sub>\n  - *Each fluorine atom will form one covalent bond by sharing one electron with a central sulfur atom*\n  - *Make sure that each atom has a share of 8 electrons*\n- *The sulfur fluoride compound with a relative molecular mass of 146 is SF*<sub>*6*</sub>* (32 + (19 x 6) = 146)*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_TkG8SyzVqvkKtntM",
+    "order": 9,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_2yYC4WFKppTSzWqg",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_dXMR5RTqsxfttV2S",
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-1.24"
+      ],
+      "problemMd": "The following elements are found in group 0 of the periodic table.\n\n**He   Ne   Ar   Kr   Xe   Rn**\n\nWhat explains their similar chemical and physical properties?",
+      "solutionMd": "**Final answer:** **The correct answer is D**\n\n- The elements have similar chemical and physical properties because  They have full outer shells.\n- All these elements have a full outer shell of electrons\n- A full outer shell makes them unreactive, which is a property of these group members"
+     }
+    ]
+   },
+   {
+    "id": "qstn_R3qPsBgP2XdgZZYg",
+    "order": 6,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_smhtg5V3hV67yBhj",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_D3CvgSZXCYQNCmJb",
+       "spcpt_3BFPwSVNF8yHMMRY"
+      ],
+      "specPointCodes": [
+       "4CH1-1.19",
+       "4CH1-1.22"
+      ],
+      "problemMd": "Which diagram shows the electronic configuration of a nitrogen atom?",
+      "solutionMd": "**Final answer:** **The correct answer is D**\n\n- The electronic configuration of a nitrogen atom is D.\n- Nitrogen has atomic number 7, which means it has 7 electrons in the atom\n- The first shell holds only 2 electrons\n\n  - So, the configuration has 2 electrons in the first shell and 5 electrons in the second shell"
+     }
+    ]
+   },
+   {
+    "id": "qstn_Qw7DtBhnjPjj4X8P",
+    "order": 0,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_b4hwWTfdB5WTVYz2",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_D3CvgSZXCYQNCmJb"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.19"
+      ],
+      "problemMd": "This question is about chemical elements.\n\nUse the Periodic Table to help you answer this question.\n\ni) Identify the element with atomic number 5\n\n(1)\n\nii) Give the symbol of a metallic element in Period 3\n\n(1)\n\niii) Identify the element whose atoms contain 14 protons.\n\n(1)\n\niv) Identify the element whose atoms have the electronic configuration 2.5\n\n(1)\n\nv) Give the name of the compound formed between oxygen and the element with atomic number 13\n\n(1)",
+      "solutionMd": "i) The element with atomic number 5 is:\n\n- Boron / B; **[1 mark]**\n\nii) The symbol of a metallic element in Period 3 is:\n\n- Na / Mg / Al; **[1 mark]**\n\niii) The element whose atoms contain 14 protons is:\n\n- Silicon / Si; **[1 mark]**\n\niv) The element whose atoms have the electronic configuration 2.5 is:\n\n- Nitrogen / N; **[1 mark]**\n\nv) The name of the compound formed between oxygen and the element with atomic number 13 is:\n\n- Aluminium oxide / Al<sub>2</sub>O<sub>3</sub>; **[1 mark]**\n\n**[Total: 5 marks]**\n\n- *The atomic number is the smallest number on the chemical symbol*\n\n  - *This means that atomic number 5 is boron*\n- *Period 3 is the third row of the Periodic Table*\n\n  - *The metals in this period / row are sodium, magnesium and aluminium*\n- *The atomic number is sometimes known as the proton number*\n\n  - *This means that you are looking for the element with an atomic number of 14, which is silicon*\n- *An electron configuration of 2.5 means that there are 2 + 5 = 7 electrons *\n\n  - *Since you are looking for an element (not an ion) it will also have 7 protons*\n  - *Therefore, the element has an atomic number of 7 and is nitrogen*\n- *The element with atomic number 13 is aluminium*\n\n  - *Aluminium + oxygen → aluminium oxide*"
+     },
+     {
+      "id": "qstnprt_TWbvt9sdSw7Kw7sT",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_dXMR5RTqsxfttV2S",
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-1.24"
+      ],
+      "problemMd": "The position of an element in the Periodic Table can be used to predict its properties.\n\ni) Which group contains elements that are all unreactive?\n\n(1)\n\n| ☐ | **A** | Group 2 |\n|---|---|---|\n| ☐ | **B** | Group 5 |\n| ☐ | **C** | Group 6 |\n| ☐ | **D** | Group 0 |\n\nii) Which of these is the least reactive element in Group 1?\n\n(1)\n\n| ☐ | **A** | caesium |\n|---|---|---|\n| ☐ | **B** | lithium |\n| ☐ | **C** | potassium |\n| ☐ | **D** | sodium |",
+      "solutionMd": "i) The group that contains elements that are all unreactive is:\n\n- **D** / Group 0; **[1 mark]**\n\nii) The least reactive element in Group 1 is:\n\n- **B** / lithium; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Group 0 are the Noble gases which are known for being unreactive due to having a complete / full outer shell of valence electrons*\n- *In Group 1, the elements get more reactive as you move down the Group*\n\n  - *This means that you are looking for the element that is highest up / nearest to the top of the Group*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_p49Bm95Hf8jSwzTZ",
+    "order": 8,
+    "difficulty": "medium",
+    "style": "exam_whole",
+    "totalMarks": 6,
+    "parts": [
+     {
+      "id": "qstnprt_hcNg798QsmmjvbkG",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "name",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "Use the Periodic Table to help you answer this question.\n\ni) Name the element with atomic number 14\n\n(1)\n\nii) Name the element with a relative atomic mass of 11\n\n(1)\n\niii) Name the element in Group 2 and Period 3\n\n(1)",
+      "solutionMd": "i) The element with atomic number 14 is:\n\n- Silicon; **[1 mark]**\n\nii) The element with a relative atomic mass of 11 is:\n\n- Boron; **[1 mark]**\n\niii) The element in Group 2 and Period 3 is:\n\n- Magnesium; **[1 mark]**\n\n**[Total: 3 marks] **\n\n- *Elements are arranged on the Periodic Table in order of increasing atomic number *\n- *The Periodic Table groups are the columns and periods are the rows*"
+     },
+     {
+      "id": "qstnprt_J9nrfSWTwGkBrBSZ",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_D3CvgSZXCYQNCmJb"
+      ],
+      "specPointCodes": [
+       "4CH1-1.19"
+      ],
+      "problemMd": "i) Determine the number of neutrons in a phosphorus atom with mass number 31\n\n(1)\n\nii) State the electronic configuration of an aluminium atom.\n\n(1)\n\niii) State why neon is unreactive.\n\n(1)",
+      "solutionMd": "i) The number of neutrons in a phosphorus atom with mass number 31 is:\n\n- Sixteen / 16; **[1 mark]**\n\nii) The electronic configuration of an aluminium atom is:\n\n- 2.8.3 / 2,8,3; **[1 mark]**\n\niii) Neon is unreactive because:\n\n- It does not (easily) gain / lose / share electrons\nOR\nIt has a full outer shell / 8 outer electrons; **[1 mark]**\n\n**[Total: 3 marks] **\n\n- *Phosphorus has 15 protons as its atomic number is 15*\n\n  - *Number of neutrons = Mass number - Proton number*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_MvPFSYHcrXFVTsCF",
+    "order": 5,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_yChYJWH6K7zNs5gs",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_D3CvgSZXCYQNCmJb",
+       "spcpt_3BFPwSVNF8yHMMRY"
+      ],
+      "specPointCodes": [
+       "4CH1-1.19",
+       "4CH1-1.22"
+      ],
+      "problemMd": "What is the electronic configuration of silicon?\n\n*[003-1-4-q1-edexcel-igcse-chemistry.png — asset omitted]*",
+      "solutionMd": "**Final answer:** **The correct answer is D**\n\n- The electronic configuration of silicon is  2,8,4\n- The first shell, which is closest to the nucleus, contains 2 electrons\n- The second shell has 8 electrons\n- The third shell has 4 electrons\n- So, the electron configuration is 2,8,4"
+     }
+    ]
+   },
+   {
+    "id": "qstn_mBCNqy6dF57dzFv6",
+    "order": 1,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 7,
+    "parts": [
+     {
+      "id": "qstnprt_xNShbD5nhv478VbM",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 5,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_ZBgn3p7fV4pH9zGv",
+       "spcpt_5PgdB2hP9qMfzHr9",
+       "spcpt_2kMg7TBGBWYCzQQg"
+      ],
+      "specPointCodes": [
+       "4CH1-1.20",
+       "4CH1-2.38",
+       "4CH1-4.16"
+      ],
+      "problemMd": "The box shows the names of some substances.\n\n| bromine | carbon dioxide | copper | iodine |\n|---|---|---|---|\n| methane | nitrogen | sulfur dioxide | water |\n\nComplete the table by choosing substances from the box that match the description.\n\nEach substance may be used once, more than once or not at all.\n\n| **Description** | **Substance** |\n|---|---|\n| a good conductor of electricity |   |\n| an element that has a basic oxide |   |\n| a substance used as a fuel |   |\n| a major cause of acid rain |   |\n| a non‐metallic element that is a solid at room temperature |   |",
+      "solutionMd": "The completed table matching substances with descriptions is:\n\n| **Description** | **Substance** |\n|---|---|\n| a good conductor of electricity | copper / Cu; **[1 mark]** |\n| an element that has a basic oxide | copper / Cu; **[1 mark]** |\n| a substance used as a fuel | methane / CH<sub>4</sub>; **[1 mark]** |\n| a major cause of acid rain | sulfur dioxide / SO<sub>2</sub>; **[1 mark]** |\n| a non‐metallic element that is a solid at room temperature | iodine / I; **[1 mark]** |\n\n**[Total: 5 marks]**\n\n- *You are expected to know the properties of various elements and compounds, as shown in this question*\n- *The main tricky ones in this question are:*\n\n  - *The element that has a basic oxide - this is an element that can react with oxygen to form a basic oxide*\n  \n    - *Bromine, iodine and nitrogen will not form a  basic oxide - this leaves copper*\n  - *The non-metallic element that is a solid at room temperature*\n  \n    - *The non-metallic elements are bromine, iodine and nitrogen*\n    - *Bromine is a liquid, nitrogen is a gas - this leaves iodine which is solid at room temperature *"
+     },
+     {
+      "id": "qstnprt_gvHm466MjfzWGRRh",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "describe",
+      "specPointIds": [
+       "spcpt_3FKt47F9rGRtJttG"
+      ],
+      "specPointCodes": [
+       "4CH1-2.44"
+      ],
+      "problemMd": "Describe a test for carbon dioxide.",
+      "solutionMd": "The test for carbon dioxide is:\n\n- Bubble the gas / carbon dioxide through limewater / calcium hydroxide; **[1 mark]**\n- (The limewater / calcium hydroxide) turns cloudy / milky \n**OR **\n(The limewater / calcium hydroxide) forms a white precipitate; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The second mark can only be awarded if limewater / calcium hydroxide is mentioned in the answer*\n\n  - *You might see this shown as M2 Dep M1 on mark schemes*\n- *You need to know your gas tests as it is typical for at least one of them to be in the exams*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_K6Fy52bdvknX4cSV",
+    "order": 15,
+    "difficulty": "hard",
+    "style": null,
+    "totalMarks": 8,
+    "parts": [
+     {
+      "id": "qstnprt_98qHvqvWw6jyrZ6V",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "The table shows the electronic structures of five elements represented by letters,** **not the chemical symbols of the element.\n\n| **Element** | **Electronic structure** |\n|---|---|\n| **J** | 2,8,8 |\n| **K** | 2,8,1 |\n| **L** | 2,8,8,1 |\n| **M** | 2,7 |\n| **N** | 2,8,4 |\n\nGive the letters of two elements that belong to the same group in the Periodic Table and state the group that they belong to.",
+      "solutionMd": "The letter of the two** **elements that belong to the same group and the group they belong to are:\n\n- K / sodium **AND **L / potassium; **[1 mark]**\n- Group 1; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *K** is sodium as it has 11 electrons (2 + 8 + 1 = 11) therefore its atomic number is 11*\n- *L** is potassium as it has 19 electrons (2 + 8 + 8 + 1 = 19) therefore its atomic number is 19*\n- *Both of these have one electron in their outer shell so are in Group 1*"
+     },
+     {
+      "id": "qstnprt_RpZ4mTW9Bqc7cnxp",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_yj2wwzKVCmV2CDwk",
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.50"
+      ],
+      "problemMd": "One of the elements can form the giant covalent structure shown.\n\n*[004-1-4-4b-h-labelled-silicon-dioxide.pn — asset omitted]*\n\ni) Give the letter of the element that is represented by the atom labelled A.\n\n(1)\n\nii) State how the diagram shows that the atom labelled B is oxygen.\n\n(1)",
+      "solutionMd": "i) The letter of the element that is represented by the atom labelled A is:\n\n- N / silicon; **[1 mark]**\n\nii) The diagram shows that the atom labelled B is oxygen because:\n\nAny **one **of the following:\n\n- Oxygen is a smaller atom / particle than N / silicon; **[1 mark]**\n- Oxygen forms two bonds; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Careful:** The atom labelled A is pointing to a black coloured atom showing 2 covalent bonds, however the same coloured atom shows 4 covalent bonds elsewhere in the structure*\n\n  - *This means that atom A is capable of making four covalent bonds*\n  - *Therefore, it is sharing four outer electrons and comes from Group 4*\n  - *The only element in the table that can make four covalent bonds is element N with an electronic configuration of 2, 8, 4, which is silicon*\n- *Having determined that atom A is silicon, you can comment on the relative size of the atoms *\n\n  - *Oxygen is a smaller atom than silicon*\n- *Alternatively, oxygen forms two covalent bonds *\n\n  - *Throughout the structure given, atom B forms a maximum of two covalent bonds*"
+     },
+     {
+      "id": "qstnprt_d2BfVTt6WqcjCtDY",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.24"
+      ],
+      "problemMd": "Give the letter of the element that is monatomic.\n\nExplain your answer.",
+      "solutionMd": "The letter of the element that is monatomic is:\n\n- J / argon; **[1 mark]**\n- Its outer shell (of electrons) is full; **[1 mark]**\n- Does not need to lose / gain electrons (for a stable electron configuration) \n**OR** \nThey are unreactive; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *Group 0 elements are monatomic as they are unreactive*\n- *Element J is the only element with a full outer shell of electrons as it has 8 electrons in its outer shell*"
+     },
+     {
+      "id": "qstnprt_MnCFbh2y5NQSMFYy",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_mffF9yYFYn3MJXmb",
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.24",
+       "4CH1-2.5"
+      ],
+      "problemMd": "Give the letters of two elements that are gases at room temperature.",
+      "solutionMd": "The letters of two elements that are gases at room temperature are:\n\n- J \nM; **[1 mark]**\n*Both J and M are required for the mark*\n\n**[Total: 1 mark]**\n\n- *J** is argon as it has 18 electrons (2 + 8 + 8 = 18) therefore its atomic number is 18*\n\n  - *All the elements in Group 0 (the noble gases) are gases at room temperature*\n- *M** is fluorine as it has 9 electrons (2 + 7) therefore its atomic number is 9)*\n\n  - *Fluorine is a Group 7 element that is a gas at room temperature*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_JvybJHHRjvtkxsjm",
+    "order": 2,
+    "difficulty": "easy",
+    "style": "exam_whole",
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_kwgjGNxCGxWRnG57",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_byXckMGgBzRcKVF8"
+      ],
+      "specPointCodes": [
+       "4CH1-1.21"
+      ],
+      "problemMd": "The diagram shows the positions of some elements in the Periodic Table.\n\n*[005-screen-shot-2022-10-17-at-19-10-35.p — asset omitted]*\n\nUse symbols from this table to answer these questions.\n\nEach symbol may be used once, more than once or not at all.\n\ni) Give the symbol of a metal.\n\n(1)\n\nii) Give the symbol of a noble gas.\n\n(1)\n\niii) Give the symbol of a liquid at room temperature.\n\n(1)\n\niv) Give the symbols of the two elements in Period 3\n\n(1)\n\n......................................... and .........................................",
+      "solutionMd": "i) The symbol of a metal is:\n\n- Na / K; **[1 mark]**\n\nii) The symbol of a noble gas is:\n\n- He; **[1 mark]**\n\niii) The symbol of a liquid at room temperature is:\n\n- Br; **[1 mark]**\n\niv) The symbols of the two elements in Period 3 are:\n\n- Na  **AND** Cl; **[1 mark]**\n\n**[Total: 4 marks] **\n\n- *Metals are on the left-hand side of the periodic table so this should give you the answer to part i)*\n- *The noble gases are in Group 0 or Group 8 *\n- *The only element that is a liquid is bromine - you need to know the physical states of the halogens (Group 7)*\n- *Period 3 is the third row down, remember to include the row containing H and He, this is Period 1*"
+     },
+     {
+      "id": "qstnprt_4PZYymvbx4QwhVhV",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "deduce",
+      "specPointIds": [
+       "spcpt_D3CvgSZXCYQNCmJb"
+      ],
+      "specPointCodes": [
+       "4CH1-1.19"
+      ],
+      "problemMd": "Deduce the electronic configuration of Na.",
+      "solutionMd": "The electronic configuration of Na is:\n\n- 2.8.1; **[1 mark]**\n\n**[Total: 1 mark] **\n\n- *Sodium is in Period 3 and in Group 1*\n\n  - *The period number will give the number of shells*\n  - *The group number will give the number of electrons in the outermost shell*\n- *The maximum number of electrons in each shell you need to know is 2,8,8*\n- *You can also draw a diagram showing the arrangement of electrons in sodium to score the mark*\n- *You can use full stops or commas in the electronic configuration*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_gMftPFVtcYKHGJjs",
+    "order": 14,
+    "difficulty": "hard",
+    "style": null,
+    "totalMarks": 10,
+    "parts": [
+     {
+      "id": "qstnprt_rsksRDkhtxYfzTHW",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_QbsZy5rCB58GqtM9",
+       "spcpt_dXMR5RTqsxfttV2S"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-2.1"
+      ],
+      "problemMd": "Mendeleev's Periodic Table was published in 1869, classifying the elements that had been discovered at that time by their atomic weights. Part of his Periodic Table is shown.\n\nUse the information in this table and the Periodic Table to answer the questions.\n\n| **Group 1** | **Group 2** | **Group 3** | **Group 4** | **Group 5** | **Group 6** | **Group 7** |\n|---|---|---|---|---|---|---|\n| H |   |   |   |   |   |   |\n| Li | Be | B | C | N | O | F |\n| Na | Mg | Al | Si | P | S | Cl |\n\nHydrogen is an element from Mendeleev's table that is not in the same group of the modern Periodic Table.\n\nGive **two **reasons why it should not be in Group 1.",
+      "solutionMd": "Hydrogen should not be placed in Group 1 because:\n\nAny **two** from:\n\n- Hydrogen is a non-metal \n**OR **\nGroup 1 elements are metals; **[1 mark]**\n- Hydrogen does not react similarly to the other Group 1 elements \n**OR **\nHydrogen does not react with water \n**OR **\nGroup 1 elements react with water; **[1 mark]**\n- (At room temperature and pressure) hydrogen is a gas \n**OR **\n(At room temperature and pressure) Group 1 elements are solids; **[1 mark]**\n- Hydrogen can form a negative ion \n**OR **\nHydrogen can gain an electron \n**OR **\nGroup 1 elements form positive ions \n**OR **\nGroup 1 elements lose an electron; **[1 mark]**\n- Hydrogen can form covalent bonds \n**OR  **\nHydrogen can share electrons \n**OR **\nGroup 1 elements form metallic bonds \n**OR **\nGroup 1 elements transfer electrons; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *This question tests your knowledge of the Group 1 elements and then compares this to hydrogen*\n\n  - *Any differences can be used as an explanation as to why hydrogen should not be placed with the Group 1 elements*"
+     },
+     {
+      "id": "qstnprt_NsvFjPKRhVdsRdpZ",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_QbsZy5rCB58GqtM9",
+       "spcpt_dXMR5RTqsxfttV2S"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-2.1"
+      ],
+      "problemMd": "Give two reasons why hydrogen could be placed in Group 1.",
+      "solutionMd": "Hydrogen could be placed in Group 1 because:\n\n- It has one electron in its outer shell; **[1 mark]**\n- It can form ions with a 1+ charge; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *As with part (a), this question is asking you to compare Group 1 elements with hydrogen to find the similarities between them*"
+     },
+     {
+      "id": "qstnprt_rjV2CvhffYDBJK5Y",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_dXMR5RTqsxfttV2S",
+       "spcpt_3BddN2RdFDdrDQTH"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-2.6"
+      ],
+      "problemMd": "Give two reasons why hydrogen could be placed in Group 7.",
+      "solutionMd": "Hydrogen could be placed in Group 7 because:\n\nAny **two** from:\n\n- It has one electron missing from its outer shell; **[1 mark]**\n- It exists as a diatomic molecule; **[1 mark]**\n- It forms covalent bonds/compounds; **[1 mark]**\n- It is able to form H<sup>-</sup> ions; **[1 mark]**\n- It has a low melting / boiling point; **[1 mark]**\n- It is a non-metal; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *This involves a comparison between Group 7 elements and hydrogen to find the similarities*"
+     },
+     {
+      "id": "qstnprt_CH7hcgvhyCj5n8Qv",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 4,
+      "commandWord": "how",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "The modern Periodic Table arranges the elements in order of atomic number.\n\nWhat scientific discoveries allowed elements to be placed in their correct period and group?\n\nHow did this knowledge allow elements to be correctly placed?",
+      "solutionMd": "The scientific discoveries that led to elements being placed in the correct group and period are:\n\n- Electrons **AND** Protons; **[1 mark]**\n\nThe discovery of these enabled the elements to be placed in their correct places because:\n\nAny **three** from:\n\n- The number of protons gives the atomic number; **[1 mark]**\n- The number of protons equals the number of electrons; **[1 mark]**\n- Elements in the same group have the same number of <u>outer</u> electrons; **[1 mark]**\n- Reactivity / (chemical) properties depend on the number of (outer) electrons; **[1 mark]**\n- The number of (electron) shells gives the period; **[1 mark]**\n\n**[Total: 4 marks]**\n\n- *The columns in the Periodic Table are known as groups*\n- *The rows in the Periodic Table are known as periods*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_DjBTmSb4hbRkZWzj",
+    "order": 7,
+    "difficulty": "medium",
+    "style": null,
+    "totalMarks": 1,
+    "parts": [
+     {
+      "id": "qstnprt_2DGDF8r3ywhYTfpc",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [
+       "spcpt_byXckMGgBzRcKVF8",
+       "spcpt_5PgdB2hP9qMfzHr9"
+      ],
+      "specPointCodes": [
+       "4CH1-1.20",
+       "4CH1-1.21"
+      ],
+      "problemMd": "The diagram shows part of the periodic table, with elements represented by the letters M, Q, R and T. The letters in the diagram represent elements but are not their chemical symbols.\n\nUse the Periodic Table to help you answer this question.\n\n*[001-1-4-q3-edexcel-igcse-chemistry.png — asset omitted]*\n\nWhich of these statements is true?",
+      "solutionMd": "**Final answer:** **The correct answer is C**\n\n- The true statement is: M is a non-metal element.\n- M is on the right-hand side of the periodic table and is in group 7, so it must be a non-metal element\n- **A** is incorrect as the position of T and Q shows they are metals\n\n  - Metals form basic oxides\n- **B** is incorrect as the position of M shows it is a non-metal element and does not conduct electricity\n\n  - The only non-metal element which conducts electricity is carbon, but that is in group 4\n- **D** is incorrect as the position of R shows it is on the metal / non-metal dividing line\n\n  - It is actually aluminium which is not a gas or non-metal"
+     }
+    ]
+   },
+   {
+    "id": "qstn_CvGKBGXsJv482F9D",
+    "order": 3,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 9,
+    "parts": [
+     {
+      "id": "qstnprt_kVPbPdfZkDvjHKBW",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "The diagram shows part of the Periodic Table, with elements represented by the letters L, M, Q, R and T.\n\nThe letters in the diagram represent elements but are not their chemical symbols.\n\n*[006-alphabet-periodic-table.png — asset omitted]*\n\ni) Give the letter from the diagram that represents an element in period 3.\n\n(1)\n\nii) Give two letters from the diagram that represent elements that are in the same group\n\n(1)",
+      "solutionMd": "i) The letter from the diagram that represents an element in period 3 is:\n\n- Q / Si; **[1 mark]**\n\nii) Two letters from the diagram that represent elements that are in the same group are:\n\n- J and A / H and Li  \n**OR **\nE and G / V and Ta \n**OR **\nQ and R / Si and Sn \n**OR **\nX and Z / He and Ne; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *Although answers should be letters from the diagram, the chemical symbols for the elements are accepted as long as they correspond to the correct letter, e.g. J = hydrogen / H, X = helium / He*\n- *Periods are the horizontal rows in the Periodic Table*\n\n  - *Careful: **Don't forget the first period which contains J / hydrogen and X / helium*\n  - *Therefore, Period 3 is the third row of the Periodic Table*\n- *Group are the columns in the Periodic Table*\n\n  - *Hydrogen, represented by the letter J in the diagram, is a member of Group 1 (first column) although it is often shown \"floating\"*\n  \n    - *Therefore, J (hydrogen) and A (lithium) are in the same group*\n  - *Q (silicon) and R (tin) are in the same group*\n  - *X (helium) and Z (neon) are in the same group*\n  - *It is not common to talk about the transition metals as belonging to specific groups but E (vanadium) and G (tantalum) are in the same group*"
+     },
+     {
+      "id": "qstnprt_WZqKHzsg2c8XfGCw",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_D3CvgSZXCYQNCmJb",
+       "spcpt_3BFPwSVNF8yHMMRY"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.19",
+       "4CH1-1.22"
+      ],
+      "problemMd": "Use the diagram in part a) to answer this question.\n\ni) Give the letter from the diagram that represents the element with 5 protons.\n\n(1)\n\nii) State the electronic configuration of the element with 5 protons.\n\n(1)",
+      "solutionMd": "i) The letter from the diagram that represents the element with 5 protons is:\n\n- M / B; **[1 mark]**\n\nii) The electronic configuration of the element with 5 protons is:\n\n- 2.3; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The elements of the Periodic Table are arranged in increasing atomic / proton number*\n\n  - *You count from left to right*\n  - *Using the diagram in part (a) we have:*\n  \n    1. *J (hydrogen)*\n    2. *X (helium)*\n    3. *A (lithium)*\n    4. *A blank space*\n    5. *M (boron) and so on*\n- *Element M (boron) is in Period 2 and Group 3*\n\n  - *The period number will give the number of shells*\n  - *The group number will give the number of electrons in the outermost shell*\n- *The maximum number of electrons in the first shell is 2*\n\n  - *The maximum number of electrons in the second shell is 8*\n  - *This means that the electronic configuration of M is 2.3*\n- *You can draw a diagram showing the arrangement of electrons in element M / boron to score the mark*\n- *The electronic configuration can use full stops or commas*"
+     },
+     {
+      "id": "qstnprt_xvjfdpsPFSkkqpqZ",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_3BFPwSVNF8yHMMRY"
+      ],
+      "specPointCodes": [
+       "4CH1-1.22"
+      ],
+      "problemMd": "An element on the Periodic Table has the electronic configuration 2.8.6.\n\ni) State the number of the period to which this element belongs.\n\n(1)\n\nii) State the number of the group to which this element belongs.\n\n(1)\n\niii) Give the name of the element with the electronic configuration 2.8.6.\n\n(1)",
+      "solutionMd": "i) This element belongs to period number:\n\n- 3; **[1 mark]**\n\nii) This element belongs to group number:\n\n- 6; **[1 mark]**\n\niii) The name of the element with the electronic configuration 2.8.6 is:\n\n- Sulfur / S; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *These questions guide you through the points required to identify an element from its electronic configuration*\n\n  - *The number of individual digits in the electronic configuration tells you the period number*\n  \n    - *In this case, three digits means Period 3*\n  - *The final digit in the electronic configuration tells you the group number*\n  \n    - *In this case, a final digit of 6 means Group 6*\n- *Therefore, this element is in Period 3 and Group 6, i.e. 3 down and 6 across*\n\n  - *This means that the element is sulfur*"
+     },
+     {
+      "id": "qstnprt_rV52btS9QFrxFHmM",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_byXckMGgBzRcKVF8",
+       "spcpt_5PgdB2hP9qMfzHr9"
+      ],
+      "specPointCodes": [
+       "4CH1-1.20",
+       "4CH1-1.21"
+      ],
+      "problemMd": "i) Name of the element with the electronic configuration 2.8.1.\n\n(1)\n\nii) State whether the element in part i) is a metal or a non-metal.\n\n(1)",
+      "solutionMd": "i) The element with the electronic configuration 2.8.1 is:\n\n- Sodium / Na; **[1 mark]**\n\nii) The element in part (i) is a:\n\n- Metal; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The number of individual digits in the electronic configuration tells you the period number*\n\n  - *In this case, three digits means Period 3*\n- *The final digit in the electronic configuration tells you the group number*\n\n  - *In this case, a final digit of 1 means Group 1*\n- *Therefore, this element is in Period 3 and Group 1, i.e. 3 down and 1 across*\n\n  - *This means that the element is sodium*\n- *Sodium is on the left-hand side of the Periodic Table which means that it is a metal*\n\n  - *Remember:** As a rough guide, there is a staircase moving down and right starting with aluminium as the top step*\n  - *Everything to the left of this staircase is a metal *"
+     }
+    ]
+   },
+   {
+    "id": "qstn_cmFbGJ5BVd7d2VCz",
+    "order": 4,
+    "difficulty": "easy",
+    "style": null,
+    "totalMarks": 8,
+    "parts": [
+     {
+      "id": "qstnprt_Bfr5cTdmssd5R465",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "what",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "Mendeleev arranged the elements in the Periodic Table so that elements with similar properties fell into the same vertical columns. The physical property that he used was the atomic mass of the element and the chemical property was the behaviour of the oxide and hydride formed.\n\nWhat term is used to describe the vertical columns of the Periodic Table?",
+      "solutionMd": "The term used to describe the vertical columns of the Periodic Table is:\n\n- Group(s); **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *Remember:** The columns are the groups and the rows are the periods*"
+     },
+     {
+      "id": "qstnprt_yRKpJzTn9KS3VvKV",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_QbsZy5rCB58GqtM9",
+       "spcpt_nVCMXqX9pPTJH7ZN",
+       "spcpt_dXMR5RTqsxfttV2S"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-2.1",
+       "4CH1-2.2"
+      ],
+      "problemMd": "The Group 1 elements are often called the alkali metals because of their reaction with water to form metal hydroxides and hydrogen.\n\ni) Name two alkali metals.\n\n(1)\n\nii) Name the element that is in Group 1 but cannot be classed as an alkali metal.\n\n(1)\n\niii) State one observation when an alkali metal reacts with water.\n\n(1)",
+      "solutionMd": "i) Two alkali metals are:\n\n| Lithium | Sodium | Potassium |\n|---|---|---|\n| Rubidium | Caesium | Francium |\n\n- **Two** alkali metals from the table above; **[1 mark]**\n\nii) The element that is in Group 1 but cannot be classed as an alkali metal is:\n\n- Hydrogen / H; **[1 mark]**\n\niii) An observation when an alkali metal reacts with water are:\n\nAny **one **of the following:\n\n- The metal floats / moves across the water; **[1 mark]**\n- The metal disappears / gets smaller; **[1 mark]**\n- Effervescence / fizzing / bubbles / gas given off; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *The alkali metals are in the first column of the Periodic Table because they are Group 1*\n\n  - *You can use the Periodic Table to get the names of these elements*\n- *Group 1 elements have one electron in their outer shell*\n\n  - *This means that hydrogen is a Group 1 element *\n  - *Hydrogen cannot be classed as an alkali metal as it is not a metal and it does not react with water to produce an alkaline solution*\n- *You are expected to know the reactions of lithium, sodium and potassium with water and oxygen as well as being able to predict the reactions of other Group 1 elements with water and oxygen*"
+     },
+     {
+      "id": "qstnprt_T7VG3mXVRc2G5hfD",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 3,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_dXMR5RTqsxfttV2S",
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23",
+       "4CH1-1.24"
+      ],
+      "problemMd": "State the trends, if any, in the reactivity of elements in Groups 1, 7 and 0.",
+      "solutionMd": "The trends in the reactivity of elements in Groups 1, 7 and 0 are:\n\n- Group 1 becomes more reactive as you move down the group; **[1 mark]**\n- Group 7 elements become less reactive as you move down the group; **[1 mark]**\n- Group 0 elements show no pattern in reactivity / are unreactive; **[1 mark]**\n\n**[Total: 3 marks]**\n\n- *The reverse arguments for Groups 1 and 7 will score the marks*\n\n  - *e.g. Group 1 becomes less reactive as you move up the group*\n  - *e.g. Group 7 elements become more reactive as you move up the group*\n- *You need to know the trends in Groups 1 and 7*\n- *You also need to know that Group 0 is unreactive*"
+     },
+     {
+      "id": "qstnprt_FgzJ2Q2TfY7Rs47b",
+      "order": 3,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "complete",
+      "specPointIds": [
+       "spcpt_3BFPwSVNF8yHMMRY"
+      ],
+      "specPointCodes": [
+       "4CH1-1.22"
+      ],
+      "problemMd": "Argon is a Group 0 element that is found in Period 3 of the Periodic Table.\n\nComplete the diagram to show the electronic configuration of argon.\n\n*[007-6-1-2c-e-3-electron-shells.png — asset omitted]*",
+      "solutionMd": "The completed diagram to show the electronic configuration of argon is:\n\n*[008-argon-electronic-structure.png — asset omitted]*\n\n**[1 mark]**\n\n**[Total: 1 mark]**\n\n- *Remember:** The first shell can hold a maximum of 2 electrons, the second shell can hold a maximum of 8 electrons and the third shell can hold a maximum of electrons*\n- *You are told that argon is in Period 3 so it will have electrons in all three shells*\n- *You are told that argon is Group 0 so it will have a full outer shell*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_6HM4W4BNdz9czTy5",
+    "order": 13,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 5,
+    "parts": [
+     {
+      "id": "qstnprt_6zkwnfDh72wDRdZK",
+      "order": 0,
+      "questionType": "multiple_choice",
+      "marks": 1,
+      "commandWord": null,
+      "specPointIds": [],
+      "specPointCodes": [],
+      "problemMd": "In 1937, an airship full of hydrogen gas flew from Germany to America.\n\n*[009-hydrogen-airship.png — asset omitted]*\n\n(Source: © Michael Rosskothen/Shutterstock)\n\nWhich property of hydrogen makes it a suitable gas to use in an airship?",
+      "solutionMd": "**Final answer:** **The correct answer is C**\n\n- The correct answer is  low density.\n- For an airship to fly, it needs to be lightweight\n\n  - The only relevant property for this is that hydrogen is low density\n- Being colourless, insoluble in water and having no smell are not relevant properties for the use of hydrogen in an airship"
+     },
+     {
+      "id": "qstnprt_rmkYFDjBRjbNNCY4",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.24"
+      ],
+      "problemMd": "Explain why helium is now used in airships instead of hydrogen.",
+      "solutionMd": "Helium is now used in airships instead of hydrogen because:\n\n- Helium is inert / unreactive \n**OR **\nHelium does not react (with air / oxygen); **[1 mark]**\n- Hydrogen is flammable / explosive (in air / oxygen); **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *You should know that:*\n\n  - *Hydrogen is flammable (from the gas tests) and would therefore be an unsuitable gas to use in the large quantities required for an airship*\n  - *Helium, as a Noble gas, is inert / unreactive and therefore would be suitable*"
+     },
+     {
+      "id": "qstnprt_dTz5CRCfd5TMgPmg",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "multiple",
+      "specPointIds": [
+       "spcpt_yyYs65BrQr57gGSq",
+       "spcpt_ktpdc8vdzWzk7Mgj"
+      ],
+      "specPointCodes": [
+       "4CH1-1.25",
+       "4CH1-3.12"
+      ],
+      "problemMd": "Hydrogen is used to manufacture ammonia, NH<sub>3</sub>\n\nHydrogen is reacted with nitrogen using an iron catalyst.\n\ni) Give a chemical equation for this reaction.\n\n(1)\n\nii) State why a catalyst is used in this reaction.\n\n(1)",
+      "solutionMd": "i) The chemical equation for this reaction is:\n\n- N<sub>2</sub> + 3H<sub>2</sub> → 2NH<sub>3 </sub>**OR **N<sub>2</sub> + 3H<sub>2</sub> $\\rightleftharpoons$ 2NH<sub>3</sub>; **[1 mark]**\n\nii) A catalyst is used in this reaction because:\n\n- It increases the rate of reaction / speeds up the reaction \n**OR **\nIt produces / uses a reaction pathway with a lower activation energy \n**OR **\nIt lowers the activation energy \n**OR **\nIt makes it easier to break the (covalent) bonds; **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The Haber process uses nitrogen (from the air) and hydrogen (from methane) to manufacture ammonia*\n\n  - *Unbalanced equation N*<sub>*2*</sub>* + H*<sub>*2*</sub>* → NH*<sub>*3*</sub>\n  - *The equation needs balancing - 2 nitrogens on the left should guide you to 2 ammonia on the right N*<sub>*2*</sub>* + H*<sub>*2*</sub>* → **2**NH*<sub>*3*</sub>\n  - *This gives 6 hydrogens on the right, which can be balanced by tripling the amount of hydrogen on the left N*<sub>*2*</sub>* + **3**H*<sub>*2*</sub>* → 2NH*<sub>*3*</sub>\n- *The reason for using any catalyst is to speed up the rate of reaction*\n\n  - *The catalyst provides an alternative reaction pathway of lower activation energy - this definition can be quite a common exam question for 2 marks*"
+     }
+    ]
+   },
+   {
+    "id": "qstn_3DNCNgg5DVMRjxks",
+    "order": 12,
+    "difficulty": "hard",
+    "style": "exam_whole",
+    "totalMarks": 4,
+    "parts": [
+     {
+      "id": "qstnprt_8g43cXKBbQpMvDH2",
+      "order": 0,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "give",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG",
+       "spcpt_cPgXwvZ7N4czPckk"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18",
+       "4CH1-1.24"
+      ],
+      "problemMd": "The diagram shows part of the Periodic Table, with elements represented by the letters L, M, Q, R and T.\n\nThe letters in the diagram represent elements but are not their chemical symbols.\n\n*[010-1-2-the-periodic-table-3a.png — asset omitted]*\n\nGive the letter from the diagram that represents a noble gas.",
+      "solutionMd": "The letter from the diagram that represents a noble gas is:\n\n- T; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *You should know that certain groups (columns) of the Periodic Table can be known by other names:*\n\n  - *Group 1 - the Alkali metal*\n  - *Group 2 - the Alkali Earth metals*\n  - *Group 7 - the Halogens*\n  - *Group 8 - the Noble Gases*"
+     },
+     {
+      "id": "qstnprt_Sbg4KzsPvkvhNcrp",
+      "order": 1,
+      "questionType": "structured",
+      "marks": 1,
+      "commandWord": "state",
+      "specPointIds": [
+       "spcpt_dXMR5RTqsxfttV2S"
+      ],
+      "specPointCodes": [
+       "4CH1-1.23"
+      ],
+      "problemMd": "Elements L and M are in the same group.\n\nState why they have similar chemical reactions.",
+      "solutionMd": "Elements L and M have similar chemical reactions because:\n\n- They have the same number of (valence) electrons in their outer shell / level / orbital \n**OR** \nThey have one (valence) electron in the outer shell / level / orbital; **[1 mark]**\n\n**[Total: 1 mark]**\n\n- *Chemical reactions are based on the outer (valence) electrons of atoms*\n- *This means that two different elements with the same number of outer (valence) electrons will react in a similar manner and be placed in the same group *\n\n  - *The element will become more or less reactive as you move down the group*"
+     },
+     {
+      "id": "qstnprt_szsDhmgnfVF3wTPS",
+      "order": 2,
+      "questionType": "structured",
+      "marks": 2,
+      "commandWord": "explain",
+      "specPointIds": [
+       "spcpt_GxqCwvTBBrQR6kMG"
+      ],
+      "specPointCodes": [
+       "4CH1-1.18"
+      ],
+      "problemMd": "An atom of element Q has 31 protons.\n\nUse this information to explain how you can determine the number of protons in an atom of element R.",
+      "solutionMd": "The number of protons in an atom of element R is:\n\n- 33; **[1 mark]**\n- (Because,) the atomic number of R is two more (than Q) \n**OR** \n(Because,) R is two places to the right / two places further on / along (in the period); **[1 mark]**\n\n**[Total: 2 marks]**\n\n- *The proton number is also the atomic number (this is often included on the key of the Periodic Table)*\n- *The atoms are arranged by atomic / proton number*\n- *Therefore, if element Q is 31 then element R must be 33 as it is two places further along *"
+     }
+    ]
+   }
+  ]
+ }
+]
