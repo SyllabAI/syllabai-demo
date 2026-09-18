@@ -117,14 +117,16 @@ export default async function HubPage() {
       {/* corpus stats */}
       <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {[
-          { label: "Curriculum nodes", value: manifest.counts.curriculumNodes },
-          { label: "Graph nodes (T-C11)", value: manifest.counts.graphNodes },
+          // manifest counts keys are the corpus's own (sections/topics/specPoints/…);
+          // the graph node count comes from the already-fetched T-C11 graph
+          { label: "Spec points", value: manifest.counts.specPoints },
+          { label: "Graph nodes (T-C11)", value: graph.nodes.length },
           { label: "Revision notes", value: manifest.counts.notes },
           { label: "Exam questions", value: manifest.counts.questions },
         ].map((s) => (
           <Card key={s.label} className="py-4">
             <CardContent className="px-4">
-              <p className="text-2xl font-bold tabular-nums">{s.value}</p>
+              <p className="text-2xl font-bold tabular-nums">{s.value ?? 0}</p>
               <p className="text-xs text-muted-foreground">{s.label}</p>
             </CardContent>
           </Card>

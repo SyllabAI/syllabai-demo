@@ -13,12 +13,17 @@ export function CourseHeader({
   activeTab = "resources",
   title,
   description,
+  crumb,
   children,
 }: {
   meta: Pick<CourseMeta, "level" | "subject" | "label" | "code" | "slug">;
   activeTab?: "resources" | "strengths";
   title: string;
   description?: string;
+  /** Final breadcrumb label — the current page's name (SME trail, figure 14:
+   *  "IGCSE / Chemistry / Edexcel / Exam Questions / {topic}"). Defaults to
+   *  "Edexcel", matching the hub-root trail. */
+  crumb?: string;
   children?: React.ReactNode;
 }) {
   const base = `/courses/${meta.slug}`;
@@ -33,7 +38,7 @@ export function CourseHeader({
         items={[
           { label: meta.level, href: "/courses" },
           { label: meta.label, href: base },
-          { label: "Edexcel" },
+          { label: crumb ?? "Edexcel" },
         ]}
       />
       <div className="flex flex-wrap items-start justify-between gap-3">

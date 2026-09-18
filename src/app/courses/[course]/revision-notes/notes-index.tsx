@@ -119,7 +119,6 @@ export function NotesIndex({
                     <div className="flex flex-wrap items-center gap-2">
                       <ProgressRing course={course} subtopic={subtopic.code} counts={counts[subtopic.code] ?? ZERO} size={16} />
                       <h3 className="text-sm font-medium">{subtopic.title}</h3>
-                      <span className="font-mono text-[10.5px] text-muted-foreground">{subtopic.code}</span>
                     </div>
                     <div className="grid gap-1.5 sm:grid-cols-2">
                       {subNotes.map((n) => {

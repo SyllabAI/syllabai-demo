@@ -34,6 +34,7 @@ export default async function StrengthsPage({
         meta={meta}
         activeTab="strengths"
         title={`Edexcel ${meta.level} ${meta.label} Strengths & Weaknesses`}
+        crumb="Strengths & Weaknesses"
         description="Per-topic analytics over your answers — the demo prototype of the production analytics layer."
       />
       <StrengthsPanel course={meta.slug} data={data} />

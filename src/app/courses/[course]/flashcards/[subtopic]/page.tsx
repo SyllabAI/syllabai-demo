@@ -37,6 +37,7 @@ export default async function FlashcardDeckPage({
         <CourseHeader
           meta={meta}
           title={`${subtopic.title} (${meta.subject}): Flashcards`}
+          crumb={subtopic.title}
           description={
             topic
               ? `Deck ${topic.number}.${subtopic.label} — ${cards.length} card${cards.length === 1 ? "" : "s"} for “${subtopic.title}”, imported from the Save My Exams deck corpus.`

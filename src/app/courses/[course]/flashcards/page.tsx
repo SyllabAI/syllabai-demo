@@ -35,6 +35,7 @@ export default async function FlashcardsIndexPage({
       <CourseHeader
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Flashcards`}
+        crumb="Flashcards"
         description={`Per-sub-topic recall decks — ${stats.flashcards} cards imported from the Save My Exams corpus. Rating a card (Still learning / Know) feeds your sub-topic rings in the local overlay.`}
       />
 

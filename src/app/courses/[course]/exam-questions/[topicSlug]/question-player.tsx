@@ -46,6 +46,7 @@ import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { Markdown } from "@/components/markdown";
+import { PartProblem } from "@/components/part-problem";
 import { SpecChip } from "@/components/provenance";
 import {
   recordMcqAnswer,
@@ -446,14 +447,18 @@ function StructuredPart({
             {part.commandWord}
           </Badge>
         )}
-        <span>
-          {part.marks} mark{part.marks === 1 ? "" : "s"}
-        </span>
         {part.specPointCodes.map((c) => (
           <SpecChip key={c} code={c} />
         ))}
+        {/* SME (figure 16): per-part marks right-aligned. Single-part questions
+            dedupe — the header badge already carries the total (figure 24). */}
+        {showPartBadge && (
+          <span className="ml-auto">
+            {part.marks} mark{part.marks === 1 ? "" : "s"}
+          </span>
+        )}
       </div>
-      <Markdown>{part.problemMd}</Markdown>
+      <PartProblem md={part.problemMd} />
       {part.solutionMd && (
         <TypedAnswerWorkspace
           course={course}
@@ -775,9 +780,9 @@ function McqPart({
 
   return (
     <div className="space-y-3">
-      <Markdown>
-        {keyedText || letterOnly ? part.problemMd : stripOptionLines(part.problemMd)}
-      </Markdown>
+      <PartProblem
+        md={keyedText || letterOnly ? part.problemMd : stripOptionLines(part.problemMd)}
+      />
       {answerable ? (
         <>
           <p className="text-[13px] font-medium">Choose your answer</p>
@@ -910,9 +915,6 @@ function McqPart({
                 </Button>
               </>
             )}
-            <Button size="sm" variant="outline" className="ml-auto" onClick={onViewModel}>
-              View answer
-            </Button>
           </div>
           {submitted && part.solutionMd && (
             <div className="rounded-lg border bg-muted/20">
@@ -1018,7 +1020,8 @@ function MarkSchemeDialog({
                     <span className="rounded-md bg-muted px-2 py-0.5 text-[13px] font-semibold">
                       {question.parts.length > 1 ? `${p.order + 1}` : "Q"}
                     </span>
-                    <span className="text-[13px] text-muted-foreground">
+                    {/* SME (figure 16): part marks right-aligned in the scheme row */}
+                    <span className="ml-auto text-[13px] text-muted-foreground">
                       {p.marks} mark{p.marks === 1 ? "" : "s"}
                     </span>
                   </div>

@@ -19,6 +19,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Atom, CheckCircle2, ChevronRight } from "lucide-react";
 import type { ExamQuestionTopic } from "@/lib/contracts";
 import { Markdown } from "@/components/markdown";
+import { PartProblem } from "@/components/part-problem";
 import { SpecChip, SimulatedBanner } from "@/components/provenance";
 
 interface Props {
@@ -115,16 +116,17 @@ export function PracticeClient({ topics }: Props) {
                   {item.part.commandWord}
                 </Badge>
               )}
-              <span className="text-xs font-normal text-muted-foreground">
-                {item.part.marks} mark{item.part.marks === 1 ? "" : "s"}
-              </span>
               {item.part.specPointCodes.map((c) => (
                 <SpecChip key={c} code={c} />
               ))}
+              {/* SME (figures 15/16): part marks right-aligned */}
+              <span className="ml-auto text-xs font-normal text-muted-foreground">
+                {item.part.marks} mark{item.part.marks === 1 ? "" : "s"}
+              </span>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <Markdown>{item.part.problemMd}</Markdown>
+            <PartProblem md={item.part.problemMd} />
 
             <div className="space-y-2">
               <Label htmlFor="answer" className="text-sm">

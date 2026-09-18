@@ -35,6 +35,7 @@ export default async function CourseRevisionNotesPage({
       <CourseHeader
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Revision Notes`}
+        crumb="Revision Notes"
         description={`Revision notes mapped to the official ${meta.code} specification — ${stats.notes} note${stats.notes === 1 ? "" : "s"} across ${Object.keys(hub.counts).filter((c) => (hub.counts[c]?.notes ?? 0) > 0).length} sub-topics. Every note keeps its canonical id and spec-point anchors; progress rings reflect your local reading overlay.`}
       />
       <div className="mt-6">

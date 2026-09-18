@@ -43,6 +43,7 @@ export default async function SavedQuestionsPage({
       <CourseHeader
         meta={meta}
         title="Saved questions"
+        crumb="Saved questions"
         description="Questions you bookmarked with the Save control in the question player. Saved to your browser overlay — no account, no canonical writes."
       />
       <div className="mt-6">

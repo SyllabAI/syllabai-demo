@@ -62,6 +62,7 @@ export default async function ExamQuestionsIndexPage({
       <CourseHeader
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Exam Questions By Topic`}
+        crumb="Exam Questions"
         description={`Real exam-style questions organised by topic — ${stats.questions} questions across ${stats.questionSets} sets, with parts, command words, mark schemes and self-marking. Difficulty and timing metadata come straight from the corpus.`}
       />
 

@@ -62,7 +62,9 @@ export function AppShell({
   return (
     <div className="min-h-screen bg-background">
       {/* top bar */}
-      <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+      {/* solid header (SME parity): a translucent bar lets large H1 text bleed
+          through on scroll and reads as a rendering glitch (UX audit 2026-09-19) */}
+      <header className="sticky top-0 z-40 border-b bg-background">
         <div className="flex h-14 items-center gap-3 px-4">
           <button
             className="inline-flex size-9 items-center justify-center rounded-md border lg:hidden"
