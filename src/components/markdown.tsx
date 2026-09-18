@@ -8,6 +8,7 @@ import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { normalizeCorpusMath, sanitizeMathTex } from "@/lib/math-fix";
 
 /**
  * Markdown renderer for corpus content (SME notes, questions, solutions,
@@ -71,13 +72,69 @@ function blockquoteVariant(node: HastNode | undefined) {
   return null;
 }
 
+/** Minimal hast node shape used by the math-value fixer. */
+type HastLike = {
+  type?: string;
+  properties?: { className?: unknown };
+  value?: string;
+  children?: HastLike[];
+};
+
+function isMathElement(n: HastLike): boolean {
+  if (n.type !== "element") return false;
+  const cls = n.properties?.className;
+  const list = Array.isArray(cls) ? cls.map(String) : [];
+  return list.some(
+    (c) => c === "language-math" || c === "math-inline" || c === "math-display",
+  );
+}
+
+/**
+ * rehype plugin: repair the math source text right before rehype-katex reads it.
+ *
+ * NOTE: repairing at the remark (mdast) level does NOT work — remark-math
+ * pre-builds `node.data.hChildren` at parse time and remark-rehype renders
+ * from that embedded copy, silently ignoring transformer mutations of
+ * `node.value`. The hast text is the last stop before rehype-katex, so it is
+ * patched here: glued macros (`\capB` → `\cap B`), stray `$$` → `\quad`,
+ * bare `%` and `____` runs.
+ */
+function rehypeFixMathValues() {
+  const walk = (node: HastLike) => {
+    if (isMathElement(node) && node.children) {
+      const texts = node.children.filter(
+        (c) => c.type === "text" && typeof c.value === "string",
+      );
+      if (texts.length) {
+        const fixed = sanitizeMathTex(texts.map((t) => t.value as string).join("")).replace(
+          /\$\$/g,
+          "\\quad ",
+        );
+        texts.forEach((t, i) => {
+          t.value = i === 0 ? fixed : "";
+        });
+      }
+    }
+    (node.children ?? []).forEach(walk);
+  };
+  return (tree: HastLike) => walk(tree);
+}
+
 /** Markdown renderer for corpus content (SME notes, questions, solutions). */
 export function Markdown({ children, className }: { children: string; className?: string }) {
+  // SME-derived corpus needs glued-macro repair + \(…\) delimiter support
+  // before remark-math sees it (see src/lib/math-fix.ts header for the
+  // SME native-MathML vs our LaTeX research findings).
+  const src = normalizeCorpusMath(children);
   return (
     <div className={cn("prose-sm space-y-3 leading-relaxed", className)}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeRaw, [rehypeKatex, { throwOnError: false, errorColor: "#b91c1c", strict: false }]]}
+        rehypePlugins={[
+          rehypeRaw,
+          rehypeFixMathValues,
+          [rehypeKatex, { throwOnError: false, errorColor: "#b91c1c", strict: "ignore" }],
+        ]}
         components={{
           h1: ({ children }) => (
             <h2 className="mt-5 border-b pb-1 text-lg font-bold">{children}</h2>
@@ -171,7 +228,7 @@ export function Markdown({ children, className }: { children: string; className?
           ),
         }}
       >
-        {children}
+        {src}
       </ReactMarkdown>
     </div>
   );
