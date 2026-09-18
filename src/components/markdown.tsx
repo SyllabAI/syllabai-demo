@@ -9,6 +9,7 @@ import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { normalizeCorpusMath, sanitizeMathTex } from "@/lib/math-fix";
+import { normalizeCorpusEmphasis } from "@/lib/emphasis-fix";
 
 /**
  * Markdown renderer for corpus content (SME notes, questions, solutions,
@@ -121,11 +122,22 @@ function rehypeFixMathValues() {
 }
 
 /** Markdown renderer for corpus content (SME notes, questions, solutions). */
-export function Markdown({ children, className }: { children: string; className?: string }) {
-  // SME-derived corpus needs glued-macro repair + \(…\) delimiter support
-  // before remark-math sees it (see src/lib/math-fix.ts header for the
-  // SME native-MathML vs our LaTeX research findings).
-  const src = normalizeCorpusMath(children);
+export function Markdown({
+  children,
+  className,
+  pClassName,
+}: {
+  children: string;
+  className?: string;
+  /** Extra classes merged into rendered paragraphs (flashcard fronts use
+   *  this for text-lg font-medium instead of the prose default). */
+  pClassName?: string;
+}) {
+  // SME-derived corpus needs broken-bold repair ("**W **and" → "**W** and")
+  // + glued-macro repair + \(…\) delimiter support before remark sees it
+  // (see the math-fix.ts / emphasis-fix.ts headers for the corpus research
+  // findings).
+  const src = normalizeCorpusMath(normalizeCorpusEmphasis(children));
   return (
     <div className={cn("prose-sm space-y-3 leading-relaxed", className)}>
       <ReactMarkdown
@@ -148,7 +160,9 @@ export function Markdown({ children, className }: { children: string; className?
           h4: ({ children }) => (
             <h5 className="mt-2 text-[13px] font-semibold text-muted-foreground">{children}</h5>
           ),
-          p: ({ children }) => <p className="text-[13.5px] leading-relaxed">{children}</p>,
+          p: ({ children }) => (
+            <p className={cn("text-[13.5px] leading-relaxed", pClassName)}>{children}</p>
+          ),
           ul: ({ children }) => (
             <ul className="list-disc space-y-1 pl-5 text-[13.5px]">{children}</ul>
           ),

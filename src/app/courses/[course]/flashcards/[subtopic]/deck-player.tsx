@@ -153,7 +153,11 @@ export function DeckPlayer({
             {flipped ? (
               <Markdown className="text-center">{current.back}</Markdown>
             ) : (
-              <p className="text-center text-lg font-medium leading-relaxed">{current.front}</p>
+              // fronts carry **bold** key terms + $math$ too (13.7k cards) —
+              // render through the corpus Markdown, not plain text
+              <Markdown className="text-center" pClassName="text-lg font-medium leading-relaxed">
+                {current.front}
+              </Markdown>
             )}
           </div>
           <p className="text-center text-xs text-muted-foreground">

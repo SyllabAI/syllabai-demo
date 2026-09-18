@@ -15,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
+import { Markdown } from "@/components/markdown";
 import { Send, Sparkles, X } from "lucide-react";
 import type { TutorCitation } from "@/lib/contracts";
 import { SimulatedBanner } from "@/components/provenance";
@@ -206,7 +207,13 @@ export function TutorChat() {
                   refused — insufficient evidence
                 </Badge>
               )}
-              <p className="whitespace-pre-wrap leading-relaxed">{m.content || "…"}</p>
+              {m.role === "user" ? (
+                <p className="whitespace-pre-wrap leading-relaxed">{m.content || "…"}</p>
+              ) : (
+                // assistant replies quote corpus evidence — render the same
+                // markdown (bold, $math$, lists) the corpus surfaces use
+                <Markdown className="text-sm [&_p]:text-sm">{m.content || "…"}</Markdown>
+              )}
               {m.citations && m.citations.length > 0 && (
                 <div className="flex flex-wrap gap-1.5 border-t pt-2">
                   {m.citations.map((c) => (

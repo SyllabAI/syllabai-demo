@@ -28,6 +28,10 @@ export default async function SavedQuestionsPage({
           q.parts[0]?.problemMd
             .split("\n")
             .filter((l) => l.trim() && !l.startsWith("!["))[0]
+            // plain-text preview: drop bold markers / math dollars / blank runs
+            .replace(/\*{2,}/g, "")
+            .replace(/\$/g, "")
+            .replace(/_{2,}/g, "_")
             ?.slice(0, 140) ?? q.id,
         subtopicCode,
       };
