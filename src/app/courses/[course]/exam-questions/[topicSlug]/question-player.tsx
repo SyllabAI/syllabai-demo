@@ -4,10 +4,14 @@
  * Question set player — the SME practice loop (research §6.2–6.4), upgraded:
  *   - difficulty tabs + question-number grid above the question list;
  *   - per-question toolbar: Full screen, Save (bookmark), difficulty chip;
- *   - MCQs are ANSWERABLE: structured `choices` carried verbatim from the
- *     upstream corpus (label + attested correct flag + option text) render as
- *     "Choose your answer" rows → Submit answer → instant marking (green/red)
- *     → "Why this is the answer" explanation (mark scheme) → Try again;
+ *   - MCQs are ANSWERABLE (SME parity — live SME markup verified 2026-09-18):
+ *     the answer UI is always "Choose your answer" letter buttons → Submit
+ *     answer → instant marking (green/red) → "Why this is the answer"
+ *     explanation (mark scheme) → Try again. Option CONTENT varies exactly
+ *     as on SME: text rows (structured choices), or kept verbatim in the
+ *     stem as a composite image / option table; where the import captured no
+ *     artwork at all, an honest notice points to the past paper while the
+ *     attested answer key still marks instantly;
  *   - structured parts get the SME typed-answer workspace ("Your answer"),
  *     autosaved to the local SIMULATED overlay, plus AI "Mark my answer"
  *     against the mark scheme (server-side provider, AI_SUGGESTED, explicit
@@ -135,7 +139,7 @@ export function QuestionPlayer({
   );
 
   const isAttempted = (q: ExamQuestion) =>
-    !!progress.selfScores[q.id] || !!progress.mcqAnswers[q.id];
+    !!progress.selfScores[q.id] || q.parts.some((p) => !!progress.mcqAnswers[p.id]);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -316,24 +320,25 @@ function QuestionBody({
   )}${anchorSpec ? `&spec=${encodeURIComponent(anchorSpec)}` : ""}`;
   const recorded = progress.selfScores[question.id];
 
-  /** SME: MCQs are marked instantly — no manual "How did you do?" box. */
+  /** SME: MCQs are marked instantly — no manual "How did you do?" box.
+   * Mixed MCQ+structured questions keep the self-score box (their MCQ parts
+   * still record instant per-part marks). */
   const autoMarked =
-    question.parts.length === 1 &&
-    question.parts[0].questionType === "multiple_choice" &&
-    hasUsableChoices(question.parts[0]);
+    question.parts.length > 0 &&
+    question.parts.every((p) => p.questionType === "multiple_choice" && hasAnswerKey(p));
 
   return (
     <div className="space-y-4">
-      {question.parts.map((p) => {
+      {question.parts.map((p, idx) => {
         if (p.questionType === "multiple_choice") {
           return (
             <McqPart
               key={p.id}
               course={course}
               part={p}
-              questionId={question.id}
               topicSlug={topicSlug}
               subtopicCode={subtopicCode}
+              optionsVisible={mcqOptionsVisible(question, idx)}
               onViewModel={onViewModel}
             />
           );
@@ -684,28 +689,67 @@ function hasUsableChoices(part: ExamQuestion["parts"][number]): boolean {
   return !!c && c.length > 0 && c.some((o) => o.label && o.textMd.trim());
 }
 
+/**
+ * SME parity (live SME markup verified 2026-09-18): the answer UI is always
+ * the letter buttons; option CONTENT may be text rows, a composite image, or
+ * table rows kept verbatim in the stem. A part is answerable whenever the
+ * corpus carries an attested key — labeled choices with exactly one
+ * isCorrect flag — regardless of whether option text was captured.
+ */
+function hasAnswerKey(part: ExamQuestion["parts"][number]): boolean {
+  const c = part.choices;
+  if (!c || c.length < 2) return false;
+  return c.every((o) => !!o.label) && c.filter((o) => o.isCorrect).length === 1;
+}
+
+/**
+ * True when the option content for the MCQ part at `idx` is visible to the
+ * learner: own stem media (composite image / option table) or an earlier
+ * part's media (SME's "Which of the symbols in (a)…" pattern, where the
+ * stimulus diagram is a separate part of the same question).
+ */
+function mcqOptionsVisible(question: ExamQuestion, idx: number): boolean {
+  const IMG = /!\[[^\]]*\]\([^)]+\)|<img\b/;
+  const TABLE = /^\s*\|.+\|$/m;
+  for (let i = 0; i <= idx; i++) {
+    const md = question.parts[i]?.problemMd ?? "";
+    if (IMG.test(md) || TABLE.test(md)) return true;
+  }
+  return false;
+}
+
 function McqPart({
   course,
   part,
-  questionId,
   topicSlug,
   subtopicCode,
+  optionsVisible,
   onViewModel,
 }: {
   course: Course;
   part: ExamQuestion["parts"][number];
-  questionId: string;
   topicSlug: string;
   subtopicCode: string | null;
+  /** option content is visible somewhere (stem media or an earlier part) */
+  optionsVisible: boolean;
   onViewModel: () => void;
 }) {
   const progress = useCourseProgress(course);
-  const key = questionId; // MCQ questions carry a single choice part in the corpus
+  // 182 questions carry more than one MCQ part — key attempts by part id
+  const key = part.id;
   const answer = progress.mcqAnswers[key];
 
+  const keyedText = hasUsableChoices(part);
+  const letterOnly = !keyedText && hasAnswerKey(part);
+
   const options: McqChoice[] = useMemo(() => {
-    if (hasUsableChoices(part)) {
+    if (keyedText) {
       return part.choices!.map((c) => ({ label: c.label, isCorrect: c.isCorrect, textMd: c.textMd }));
+    }
+    if (letterOnly) {
+      // SME: option content may live in the stem (composite image / table);
+      // the answer UI is the letter buttons alone
+      return part.choices!.map((c) => ({ label: c.label, isCorrect: c.isCorrect, textMd: "" }));
     }
     // legacy fallback: options inline in the problem markdown (correct letter
     // parsed from the mark scheme) — still never invented
@@ -715,7 +759,7 @@ function McqPart({
       isCorrect: correct === o.letter,
       textMd: o.text,
     }));
-  }, [part]);
+  }, [part, keyedText, letterOnly]);
 
   const correctLabel = useMemo(() => options.find((o) => o.isCorrect)?.label ?? null, [options]);
   const [chosen, setChosen] = useState<string | null>(answer?.chosen ?? null);
@@ -725,18 +769,27 @@ function McqPart({
 
   const submit = () => {
     if (!chosen) return;
-    recordMcqAnswer(course, questionId, topicSlug, subtopicCode, chosen, chosen === correctLabel);
+    recordMcqAnswer(course, key, topicSlug, subtopicCode, chosen, chosen === correctLabel);
     setSubmitted(true);
   };
 
   return (
     <div className="space-y-3">
       <Markdown>
-        {hasUsableChoices(part) ? part.problemMd : stripOptionLines(part.problemMd)}
+        {keyedText || letterOnly ? part.problemMd : stripOptionLines(part.problemMd)}
       </Markdown>
       {answerable ? (
         <>
           <p className="text-[13px] font-medium">Choose your answer</p>
+          {letterOnly && !optionsVisible && (
+            <div className="rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+              The option artwork for this question (diagrams on the source site) was not captured
+              by the authorized import — the demo never fabricates content. Refer to your past
+              paper, or use <span className="font-medium">Question help</span> to work through it
+              with the tutor. The answer key is attested, so you can still commit an answer below.
+            </div>
+          )}
+          {keyedText ? (
           <div className="space-y-2" role="radiogroup" aria-label="MCQ options">
             {options.map((o) => {
               const isChosen = chosen === o.label;
@@ -794,6 +847,36 @@ function McqPart({
               );
             })}
           </div>
+          ) : (
+            <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="MCQ answer letters">
+              {options.map((o) => {
+                const isChosen = chosen === o.label;
+                const showCorrect = submitted && o.isCorrect;
+                const showWrong = submitted && isChosen && !o.isCorrect;
+                return (
+                  <button
+                    key={o.label}
+                    role="radio"
+                    aria-checked={isChosen}
+                    disabled={submitted}
+                    onClick={() => setChosen(o.label)}
+                    className={cn(
+                      "flex size-9 items-center justify-center rounded-full border text-sm font-semibold transition-colors",
+                      showWrong
+                        ? "border-rose-400 bg-rose-500/15 text-rose-700 dark:text-rose-400"
+                        : showCorrect
+                          ? "border-emerald-400 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                          : isChosen
+                            ? "border-primary bg-primary/10 text-primary"
+                            : "border-border text-primary hover:border-primary/60 hover:bg-primary/5",
+                    )}
+                  >
+                    {o.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
           <div className="flex flex-wrap items-center gap-3">
             {!submitted ? (
               <Button size="sm" disabled={!chosen} onClick={submit}>
@@ -851,8 +934,8 @@ function McqPart({
         </>
       ) : (
         <div className="rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
-          This is a multiple-choice question, but the option text (A–D) lives in the source image
-          and was not captured by the import — the demo never fabricates content. Use{" "}
+          This is a multiple-choice question, but its option content and answer key were not
+          captured by the authorized import — the demo never fabricates content. Use{" "}
           <button className="font-medium underline underline-offset-2" onClick={onViewModel}>
             View answer
           </button>{" "}
