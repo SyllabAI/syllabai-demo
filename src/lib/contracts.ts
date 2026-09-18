@@ -140,6 +140,23 @@ export const QuestionPart = z.object({
   specPointCodes: z.array(z.string()),
   problemMd: z.string(),
   solutionMd: z.string().nullable(),
+  /**
+   * Structured MCQ options carried verbatim from the upstream corpus
+   * (SME-ExamQuestion topic.json `choices`): label A–D, the attested correct
+   * flag, and the option text. Present on ~all multiple_choice parts; null
+   * on structured parts. Never inferred — if absent, the MCQ falls back to
+   * the honest "options not captured" notice.
+   */
+  choices: z
+    .array(
+      z.object({
+        label: z.string(),
+        isCorrect: z.boolean(),
+        textMd: z.string(),
+      }),
+    )
+    .nullable()
+    .optional(),
   /** real past-paper provenance from the corpus (e.g. Jan 2022 · WCH11/01) */
   sourcePaper: z
     .object({

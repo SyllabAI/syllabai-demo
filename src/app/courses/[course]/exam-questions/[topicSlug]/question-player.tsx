@@ -1,29 +1,52 @@
 "use client";
 
 /**
- * Question set player — the SME practice loop, ported (research §6.2–6.4):
+ * Question set player — the SME practice loop (research §6.2–6.4), upgraded:
  *   - difficulty tabs + question-number grid above the question list;
  *   - per-question toolbar: Full screen, Save (bookmark), difficulty chip;
+ *   - MCQs are ANSWERABLE: structured `choices` carried verbatim from the
+ *     upstream corpus (label + attested correct flag + option text) render as
+ *     "Choose your answer" rows → Submit answer → instant marking (green/red)
+ *     → "Why this is the answer" explanation (mark scheme) → Try again;
+ *   - structured parts get the SME typed-answer workspace ("Your answer"),
+ *     autosaved to the local SIMULATED overlay, plus AI "Mark my answer"
+ *     against the mark scheme (server-side provider, AI_SUGGESTED, explicit
+ *     apply);
  *   - structured questions: "How did you do?" self-score box (score / marks)
  *     → SIMULATED overlay → sidebar rings react;
  *   - "View answer" → full-screen mark-scheme modal (topic pill, question
- *     restated with Show more, AND-joined marking points with [N mark] tags);
- *   - "Question help" → the grounded tutor anchored to the question;
- *   - MCQ parts: A–D pills + Submit answer + instant marking when the corpus
- *     carries option text; otherwise an honest fallback (no fabricated options).
+ *     restated with Show more, AND-joined marking points with [N mark] tags,
+ *     your typed answers shown alongside for comparison);
+ *   - "Question help" → the grounded tutor anchored to the question.
  */
-import { useMemo, useRef, useState } from "react";
-import { Bookmark, BookmarkCheck, CheckCircle2, Maximize2, X, XCircle } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  Bookmark,
+  BookmarkCheck,
+  CheckCircle2,
+  ChevronDown,
+  ChevronUp,
+  Loader2,
+  Maximize2,
+  MinusCircle,
+  PenLine,
+  RotateCcw,
+  Sparkles,
+  X,
+  XCircle,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { Textarea } from "@/components/ui/textarea";
 import { Markdown } from "@/components/markdown";
 import { SpecChip } from "@/components/provenance";
 import {
   recordMcqAnswer,
   recordSelfScore,
+  saveTypedAnswer,
   toggleSavedQuestion,
   useCourseProgress,
   type Course,
@@ -33,6 +56,45 @@ import { cn } from "@/lib/utils";
 
 const DIFFICULTIES = ["all", "easy", "medium", "hard"] as const;
 type Difficulty = (typeof DIFFICULTIES)[number];
+
+interface McqChoice {
+  label: string;
+  isCorrect: boolean;
+  textMd: string;
+}
+
+interface MarkPoint {
+  point: string;
+  achieved: "yes" | "no" | "unclear";
+  comment: string;
+}
+
+// ── AI marking availability (module-level — one probe per session) ──────
+
+let aiMarkProbe: Promise<boolean> | null = null;
+
+function aiMarkAvailable(): Promise<boolean> {
+  if (!aiMarkProbe) {
+    aiMarkProbe = fetch("/api/ai/mark")
+      .then((r) => r.json())
+      .then((j: { available?: boolean }) => !!j.available)
+      .catch(() => false);
+  }
+  return aiMarkProbe;
+}
+
+type MarkState =
+  | { kind: "idle" }
+  | { kind: "loading" }
+  | { kind: "error"; message: string }
+  | {
+      kind: "done";
+      score: number;
+      max: number;
+      points: MarkPoint[];
+      overall: string;
+      provider: string;
+    };
 
 export function QuestionPlayer({
   course,
@@ -219,6 +281,7 @@ export function QuestionPlayer({
       </Dialog>
 
       <MarkSchemeDialog
+        course={course}
         question={schemeFor}
         topicName={topicName}
         subtopicTitle={subtopicTitle}
@@ -253,6 +316,12 @@ function QuestionBody({
   )}${anchorSpec ? `&spec=${encodeURIComponent(anchorSpec)}` : ""}`;
   const recorded = progress.selfScores[question.id];
 
+  /** SME: MCQs are marked instantly — no manual "How did you do?" box. */
+  const autoMarked =
+    question.parts.length === 1 &&
+    question.parts[0].questionType === "multiple_choice" &&
+    hasUsableChoices(question.parts[0]);
+
   return (
     <div className="space-y-4">
       {question.parts.map((p) => {
@@ -270,61 +339,54 @@ function QuestionBody({
           );
         }
         return (
-          <div key={p.id} className="space-y-2">
-            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-              {question.parts.length > 1 && (
-                <Badge variant="outline" className="font-mono text-[10px]">
-                  part {p.order + 1}
-                </Badge>
-              )}
-              {p.commandWord && (
-                <Badge variant="secondary" className="text-[10px] capitalize">
-                  {p.commandWord}
-                </Badge>
-              )}
-              <span>
-                {p.marks} mark{p.marks === 1 ? "" : "s"}
-              </span>
-              {p.specPointCodes.map((c) => (
-                <SpecChip key={c} code={c} />
-              ))}
-            </div>
-            <Markdown>{p.problemMd}</Markdown>
-          </div>
+          <StructuredPart
+            key={p.id}
+            course={course}
+            question={question}
+            part={p}
+            topicSlug={topicSlug}
+            subtopicCode={subtopicCode}
+            showPartBadge={question.parts.length > 1}
+          />
         );
       })}
 
-      {/* SME self-marking footer (research §6.3, figure 10) */}
+      {/* SME self-marking footer (research §6.3, figure 10) — structured only;
+          auto-marked MCQs already recorded their mark on submit */}
       <div className="flex flex-wrap items-center gap-3 border-t pt-3">
-        <label className="flex items-center gap-2 text-[13px]">
-          How did you do?
-          <span className="inline-flex items-center gap-1">
-            <Input
-              type="number"
-              inputMode="numeric"
-              min={0}
-              max={question.totalMarks}
-              value={scoreDraft}
-              onChange={(e) => setScoreDraft(e.target.value)}
-              placeholder="–"
-              aria-label={`Self score out of ${question.totalMarks}`}
-              className="h-9 w-16 text-center"
-            />
-            <span className="text-muted-foreground">/ {question.totalMarks}</span>
-          </span>
-        </label>
-        <Button
-          size="sm"
-          variant="outline"
-          disabled={scoreDraft === "" || Number.isNaN(Number(scoreDraft))}
-          onClick={() => {
-            const v = Math.max(0, Math.min(question.totalMarks, Number(scoreDraft)));
-            recordSelfScore(course, question.id, topicSlug, subtopicCode, v, question.totalMarks);
-            setScoreDraft(String(v));
-          }}
-        >
-          Save score
-        </Button>
+        {!autoMarked && (
+          <>
+            <label className="flex items-center gap-2 text-[13px]">
+              How did you do?
+              <span className="inline-flex items-center gap-1">
+                <Input
+                  type="number"
+                  inputMode="numeric"
+                  min={0}
+                  max={question.totalMarks}
+                  value={scoreDraft}
+                  onChange={(e) => setScoreDraft(e.target.value)}
+                  placeholder="–"
+                  aria-label={`Self score out of ${question.totalMarks}`}
+                  className="h-9 w-16 text-center"
+                />
+                <span className="text-muted-foreground">/ {question.totalMarks}</span>
+              </span>
+            </label>
+            <Button
+              size="sm"
+              variant="outline"
+              disabled={scoreDraft === "" || Number.isNaN(Number(scoreDraft))}
+              onClick={() => {
+                const v = Math.max(0, Math.min(question.totalMarks, Number(scoreDraft)));
+                recordSelfScore(course, question.id, topicSlug, subtopicCode, v, question.totalMarks);
+                setScoreDraft(String(v));
+              }}
+            >
+              Save score
+            </Button>
+          </>
+        )}
         {recorded && (
           <span className="inline-flex items-center gap-1 text-xs text-emerald-700 dark:text-emerald-400">
             <CheckCircle2 className="size-3.5" aria-hidden /> {recorded.score}/{recorded.max} recorded
@@ -342,29 +404,284 @@ function QuestionBody({
       {subtopicTitle && (
         <p className="text-[11px] text-muted-foreground">
           This question is anchored to <span className="font-medium">{subtopicTitle}</span>
-          {subtopicCode ? <> ({subtopicCode})</> : null} — your self-mark feeds that sub-topic ring.
+          {subtopicCode ? <> ({subtopicCode})</> : null} — your answer feeds that sub-topic ring.
         </p>
       )}
     </div>
   );
 }
 
-// ── MCQ part ────────────────────────────────────────────────────────────
+// ── structured part (statement + SME typed-answer workspace) ───────────
 
-function parseOptions(problemMd: string): { letter: string; text: string }[] {
-  const lines = problemMd.split("\n");
-  const opts: { letter: string; text: string }[] = [];
-  for (const line of lines) {
-    const m = line.match(/^\s*([A-D])[\.\)]\s+(.+)$/);
-    if (m) opts.push({ letter: m[1], text: m[2].trim() });
-  }
-  return opts;
+function StructuredPart({
+  course,
+  question,
+  part,
+  topicSlug,
+  subtopicCode,
+  showPartBadge,
+}: {
+  course: Course;
+  question: ExamQuestion;
+  part: ExamQuestion["parts"][number];
+  topicSlug: string;
+  subtopicCode: string | null;
+  showPartBadge: boolean;
+}) {
+  return (
+    <div className="space-y-2">
+      <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+        {showPartBadge && (
+          <Badge variant="outline" className="font-mono text-[10px]">
+            part {part.order + 1}
+          </Badge>
+        )}
+        {part.commandWord && (
+          <Badge variant="secondary" className="text-[10px] capitalize">
+            {part.commandWord}
+          </Badge>
+        )}
+        <span>
+          {part.marks} mark{part.marks === 1 ? "" : "s"}
+        </span>
+        {part.specPointCodes.map((c) => (
+          <SpecChip key={c} code={c} />
+        ))}
+      </div>
+      <Markdown>{part.problemMd}</Markdown>
+      {part.solutionMd && (
+        <TypedAnswerWorkspace
+          course={course}
+          question={question}
+          part={part}
+          topicSlug={topicSlug}
+          subtopicCode={subtopicCode}
+        />
+      )}
+    </div>
+  );
 }
 
-function parseCorrectOption(solutionMd: string | null): string | null {
-  if (!solutionMd) return null;
-  const m = solutionMd.match(/correct answer is\s*\**\s*([A-D])/i);
-  return m ? m[1].toUpperCase() : null;
+// ── typed-answer workspace (SME "type your answer" + "Mark my answer") ──
+
+function TypedAnswerWorkspace({
+  course,
+  question,
+  part,
+  topicSlug,
+  subtopicCode,
+}: {
+  course: Course;
+  question: ExamQuestion;
+  part: ExamQuestion["parts"][number];
+  topicSlug: string;
+  subtopicCode: string | null;
+}) {
+  const progress = useCourseProgress(course);
+  const savedText = progress.typedAnswers[part.id]?.text ?? "";
+  const [text, setText] = useState(savedText);
+  const [justSaved, setJustSaved] = useState(false);
+  const [aiAvailable, setAiAvailable] = useState<boolean | null>(null);
+  const [mark, setMark] = useState<MarkState>({ kind: "idle" });
+  const [applied, setApplied] = useState(false);
+  const debounce = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    let live = true;
+    aiMarkAvailable().then((v) => live && setAiAvailable(v));
+    return () => {
+      live = false;
+    };
+  }, []);
+
+  const persist = (value: string) => {
+    saveTypedAnswer(course, part.id, value);
+    setJustSaved(true);
+    setTimeout(() => setJustSaved(false), 1500);
+  };
+
+  const onType = (value: string) => {
+    setText(value);
+    if (debounce.current) clearTimeout(debounce.current);
+    debounce.current = setTimeout(() => persist(value), 700);
+  };
+
+  const flushNow = () => {
+    if (debounce.current) clearTimeout(debounce.current);
+    if (text !== savedText) persist(text);
+  };
+
+  const canMark = aiAvailable === true && text.trim().length > 0 && mark.kind !== "loading";
+
+  const runMark = async () => {
+    if (!canMark) return;
+    setMark({ kind: "loading" });
+    setApplied(false);
+    try {
+      const res = await fetch("/api/ai/mark", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          problemMd: part.problemMd.slice(0, 6000),
+          solutionMd: (part.solutionMd ?? "").slice(0, 6000),
+          marks: part.marks,
+          answer: text.slice(0, 4000),
+        }),
+      });
+      const j = (await res.json()) as {
+        ok?: boolean;
+        score?: number;
+        max?: number;
+        points?: MarkPoint[];
+        overall?: string;
+        provider?: string;
+        detail?: string;
+      };
+      if (!res.ok || !j.ok) {
+        setMark({
+          kind: "error",
+          message:
+            j.detail ??
+            "AI marking is unavailable right now — use “How did you do?” to self-mark instead.",
+        });
+        return;
+      }
+      setMark({
+        kind: "done",
+        score: j.score ?? 0,
+        max: j.max ?? part.marks,
+        points: j.points ?? [],
+        overall: j.overall ?? "",
+        provider: j.provider ?? "ai",
+      });
+    } catch {
+      setMark({
+        kind: "error",
+        message: "Network error while marking — use “How did you do?” to self-mark instead.",
+      });
+    }
+  };
+
+  const singlePart = question.parts.length === 1;
+
+  return (
+    <div className="mt-3 rounded-lg border bg-muted/20 p-3">
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        <PenLine className="size-3.5 text-primary" aria-hidden />
+        <span className="text-[13px] font-medium">Your answer</span>
+        <span className="text-[11px] text-muted-foreground">
+          stays in your browser (SIMULATED overlay)
+        </span>
+        {justSaved && (
+          <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 dark:text-emerald-400">
+            <CheckCircle2 className="size-3" aria-hidden /> saved
+          </span>
+        )}
+      </div>
+      <Textarea
+        value={text}
+        onChange={(e) => onType(e.target.value)}
+        onBlur={flushNow}
+        rows={4}
+        aria-label={`Your typed answer for part ${part.order + 1}`}
+        placeholder="Type your answer here, then compare it with the mark scheme (View answer) — or let AI mark it, like SaveMyExams' “Mark my answer”."
+        className="min-h-24 bg-background text-[13px]"
+      />
+      <div className="mt-2 flex flex-wrap items-center gap-2">
+        {aiAvailable !== false ? (
+          <Button size="sm" variant="outline" disabled={!canMark} onClick={runMark} className="gap-1.5 text-xs">
+            {mark.kind === "loading" ? (
+              <Loader2 className="size-3.5 animate-spin" aria-hidden />
+            ) : (
+              <Sparkles className="size-3.5 text-primary" aria-hidden />
+            )}
+            Mark my answer
+          </Button>
+        ) : (
+          <span className="text-[11px] text-muted-foreground">
+            AI marking needs a provider key on the server — self-mark via “How did you do?” below.
+          </span>
+        )}
+        {mark.kind !== "loading" && mark.kind !== "idle" && (
+          <Button asChild size="sm" variant="ghost" className="text-xs">
+            <a
+              href={`/tutor?q=${encodeURIComponent(
+                `I answered: "${text.slice(0, 300)}" — how could my answer to this question be improved? ${firstLine(question)}`,
+              )}`}
+            >
+              Ask the tutor how to improve
+            </a>
+          </Button>
+        )}
+      </div>
+
+      {mark.kind === "error" && (
+        <p className="mt-2 rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs text-amber-900 dark:text-amber-200">
+          {mark.message}
+        </p>
+      )}
+
+      {mark.kind === "done" && (
+        <div className="mt-3 space-y-2.5 rounded-lg border border-primary/30 bg-primary/5 p-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge className="gap-1 text-[11px]">
+              <Sparkles className="size-3" aria-hidden /> AI-suggested mark: {mark.score}/{mark.max}
+            </Badge>
+            <span className="text-[11px] text-muted-foreground">
+              via {mark.provider} · AI_SUGGESTED — check against the mark scheme
+            </span>
+            {singlePart && !applied && (
+              <Button
+                size="sm"
+                variant="outline"
+                className="ml-auto h-7 text-xs"
+                onClick={() => {
+                  recordSelfScore(course, question.id, topicSlug, subtopicCode, mark.score, mark.max);
+                  setApplied(true);
+                }}
+              >
+                Apply score
+              </Button>
+            )}
+            {applied && (
+              <span className="ml-auto inline-flex items-center gap-1 text-xs text-emerald-700 dark:text-emerald-400">
+                <CheckCircle2 className="size-3.5" aria-hidden /> applied
+              </span>
+            )}
+          </div>
+          <ul className="space-y-1.5">
+            {mark.points.map((pt, i) => (
+              <li key={i} className="flex items-start gap-2 text-[13px] leading-relaxed">
+                {pt.achieved === "yes" ? (
+                  <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden />
+                ) : pt.achieved === "no" ? (
+                  <XCircle className="mt-0.5 size-4 shrink-0 text-rose-600" aria-hidden />
+                ) : (
+                  <MinusCircle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden />
+                )}
+                <span>
+                  <span className="font-medium">{pt.point}</span>
+                  {pt.comment ? <span className="text-muted-foreground"> — {pt.comment}</span> : null}
+                </span>
+              </li>
+            ))}
+          </ul>
+          {mark.overall && (
+            <div className="border-t pt-2 text-[13px]">
+              <Markdown>{mark.overall}</Markdown>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── MCQ part — answerable, marked instantly (SME, research figure 24) ───
+
+function hasUsableChoices(part: ExamQuestion["parts"][number]): boolean {
+  const c = part.choices;
+  return !!c && c.length > 0 && c.some((o) => o.label && o.textMd.trim());
 }
 
 function McqPart({
@@ -385,70 +702,152 @@ function McqPart({
   const progress = useCourseProgress(course);
   const key = questionId; // MCQ questions carry a single choice part in the corpus
   const answer = progress.mcqAnswers[key];
-  const options = useMemo(() => parseOptions(part.problemMd), [part.problemMd]);
-  const correct = useMemo(() => parseCorrectOption(part.solutionMd), [part.solutionMd]);
+
+  const options: McqChoice[] = useMemo(() => {
+    if (hasUsableChoices(part)) {
+      return part.choices!.map((c) => ({ label: c.label, isCorrect: c.isCorrect, textMd: c.textMd }));
+    }
+    // legacy fallback: options inline in the problem markdown (correct letter
+    // parsed from the mark scheme) — still never invented
+    const correct = parseCorrectOption(part.solutionMd);
+    return parseOptions(part.problemMd).map((o) => ({
+      label: o.letter,
+      isCorrect: correct === o.letter,
+      textMd: o.text,
+    }));
+  }, [part]);
+
+  const correctLabel = useMemo(() => options.find((o) => o.isCorrect)?.label ?? null, [options]);
   const [chosen, setChosen] = useState<string | null>(answer?.chosen ?? null);
   const [submitted, setSubmitted] = useState<boolean>(!!answer);
+  const [showWhy, setShowWhy] = useState(true);
+  const answerable = options.length > 0 && correctLabel !== null;
+
+  const submit = () => {
+    if (!chosen) return;
+    recordMcqAnswer(course, questionId, topicSlug, subtopicCode, chosen, chosen === correctLabel);
+    setSubmitted(true);
+  };
 
   return (
     <div className="space-y-3">
-      <Markdown>{part.problemMd}</Markdown>
-      {options.length > 0 ? (
+      <Markdown>
+        {hasUsableChoices(part) ? part.problemMd : stripOptionLines(part.problemMd)}
+      </Markdown>
+      {answerable ? (
         <>
           <p className="text-[13px] font-medium">Choose your answer</p>
-          <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="MCQ options">
+          <div className="space-y-2" role="radiogroup" aria-label="MCQ options">
             {options.map((o) => {
-              const isChosen = chosen === o.letter;
-              const isCorrect = submitted && correct === o.letter;
-              const isWrongPick = submitted && isChosen && correct !== o.letter;
+              const isChosen = chosen === o.label;
+              const showCorrect = submitted && o.isCorrect;
+              const showWrong = submitted && isChosen && !o.isCorrect;
               return (
-                <button
-                  key={o.letter}
+                <div
+                  key={o.label}
                   role="radio"
                   aria-checked={isChosen}
-                  disabled={submitted}
-                  onClick={() => setChosen(o.letter)}
+                  tabIndex={submitted ? -1 : 0}
+                  onClick={() => !submitted && setChosen(o.label)}
+                  onKeyDown={(e) => {
+                    if (submitted) return;
+                    if (e.key === " " || e.key === "Enter") {
+                      e.preventDefault();
+                      setChosen(o.label);
+                    }
+                  }}
                   className={cn(
-                    "flex items-start gap-2 rounded-lg border px-3 py-2 text-left text-[13px] transition-colors",
-                    isWrongPick
+                    "flex cursor-pointer items-start gap-3 rounded-lg border px-3 py-2.5 transition-colors",
+                    submitted && "cursor-default",
+                    showWrong
                       ? "border-rose-400 bg-rose-500/10"
-                      : isCorrect
+                      : showCorrect
                         ? "border-emerald-400 bg-emerald-500/10"
                         : isChosen
                           ? "border-primary bg-primary/5"
                           : "hover:border-primary/50",
                   )}
                 >
-                  <span className="font-semibold text-primary">{o.letter}</span>
-                  <span>{o.text}</span>
-                  {isCorrect && <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden />}
-                  {isWrongPick && <XCircle className="mt-0.5 size-4 shrink-0 text-rose-600" aria-hidden />}
-                </button>
+                  <span
+                    className={cn(
+                      "flex size-7 shrink-0 items-center justify-center rounded-full border text-[13px] font-semibold",
+                      showWrong
+                        ? "border-rose-400 bg-rose-500/15 text-rose-700 dark:text-rose-400"
+                        : showCorrect
+                          ? "border-emerald-400 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                          : isChosen
+                            ? "border-primary bg-primary/10 text-primary"
+                            : "text-primary",
+                    )}
+                    aria-hidden
+                  >
+                    {o.label}
+                  </span>
+                  <span className="flex-1 text-[13px] leading-relaxed">
+                    <Markdown>{o.textMd}</Markdown>
+                  </span>
+                  {showCorrect && (
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden />
+                  )}
+                  {showWrong && <XCircle className="mt-0.5 size-4 shrink-0 text-rose-600" aria-hidden />}
+                </div>
               );
             })}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             {!submitted ? (
-              <Button
-                size="sm"
-                disabled={!chosen}
-                onClick={() => {
-                  if (!chosen) return;
-                  recordMcqAnswer(course, questionId, topicSlug, subtopicCode, chosen, correct === chosen);
-                  setSubmitted(true);
-                }}
-              >
+              <Button size="sm" disabled={!chosen} onClick={submit}>
                 Submit answer
               </Button>
             ) : (
-              <p className={cn("text-[13px] font-medium", correct === chosen ? "text-emerald-700 dark:text-emerald-400" : "text-rose-700 dark:text-rose-400")}>
-                {correct === chosen ? "Correct — marked instantly." : `Not quite. The correct answer is ${correct ?? "in the mark scheme"}.`}
-              </p>
+              <>
+                <p
+                  className={cn(
+                    "text-[13px] font-medium",
+                    chosen === correctLabel
+                      ? "text-emerald-700 dark:text-emerald-400"
+                      : "text-rose-700 dark:text-rose-400",
+                  )}
+                >
+                  {chosen === correctLabel
+                    ? "Correct — well done."
+                    : `Not quite. The correct answer is ${correctLabel}.`}
+                </p>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  className="h-8 gap-1.5 text-xs text-muted-foreground"
+                  onClick={() => {
+                    setChosen(null);
+                    setSubmitted(false);
+                    setShowWhy(true);
+                  }}
+                >
+                  <RotateCcw className="size-3.5" aria-hidden /> Try again
+                </Button>
+              </>
             )}
             <Button size="sm" variant="outline" className="ml-auto" onClick={onViewModel}>
               View answer
             </Button>
           </div>
+          {submitted && part.solutionMd && (
+            <div className="rounded-lg border bg-muted/20">
+              <button
+                className="flex w-full items-center gap-1.5 px-3 py-2 text-[13px] font-medium"
+                onClick={() => setShowWhy((v) => !v)}
+                aria-expanded={showWhy}
+              >
+                {showWhy ? <ChevronUp className="size-3.5" aria-hidden /> : <ChevronDown className="size-3.5" aria-hidden />}
+                Why this is the answer
+              </button>
+              {showWhy && (
+                <div className="border-t px-3 py-2">
+                  <Markdown>{part.solutionMd}</Markdown>
+                </div>
+              )}
+            </div>
+          )}
         </>
       ) : (
         <div className="rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
@@ -464,6 +863,32 @@ function McqPart({
   );
 }
 
+// ── option parsing helpers (legacy inline-options fallback) ─────────────
+
+function parseOptions(problemMd: string): { letter: string; text: string }[] {
+  const lines = problemMd.split("\n");
+  const opts: { letter: string; text: string }[] = [];
+  for (const line of lines) {
+    const m = line.match(/^\s*([A-D])[\.\)]\s+(.+)$/);
+    if (m) opts.push({ letter: m[1], text: m[2].trim() });
+  }
+  return opts;
+}
+
+/** Remove the A./B./C./D. lines so the statement doesn't render twice. */
+function stripOptionLines(problemMd: string): string {
+  return problemMd
+    .split("\n")
+    .filter((l) => !/^\s*[A-D][\.\)]\s+/.test(l))
+    .join("\n");
+}
+
+function parseCorrectOption(solutionMd: string | null): string | null {
+  if (!solutionMd) return null;
+  const m = solutionMd.match(/correct answer is\s*\**\s*([A-D])/i);
+  return m ? m[1].toUpperCase() : null;
+}
+
 // ── mark scheme modal (SME full-screen scheme, research §6.3, figure 9) ─
 
 function transformMarkTags(md: string): string {
@@ -472,17 +897,20 @@ function transformMarkTags(md: string): string {
 }
 
 function MarkSchemeDialog({
+  course,
   question,
   topicName,
   subtopicTitle,
   onClose,
 }: {
+  course: Course;
   question: ExamQuestion | null;
   topicName: string;
   subtopicTitle: string | null;
   onClose: () => void;
 }) {
   const [expanded, setExpanded] = useState(false);
+  const progress = useCourseProgress(course);
   const restated = question ? firstLine(question) : "";
   const longRestate = restated.length > 220;
 
@@ -499,37 +927,51 @@ function MarkSchemeDialog({
         </DialogHeader>
         {question && (
           <div className="space-y-4">
-            {question.parts.map((p) => (
-              <section key={p.id} className="space-y-2 rounded-lg border bg-card p-4">
-                <div className="flex items-center gap-2">
-                  <span className="rounded-md bg-muted px-2 py-0.5 text-[13px] font-semibold">
-                    {question.parts.length > 1 ? `${p.order + 1}` : "Q"}
-                  </span>
-                  <span className="text-[13px] text-muted-foreground">
-                    {p.marks} mark{p.marks === 1 ? "" : "s"}
-                  </span>
-                </div>
-                <div className={cn(!expanded && longRestate && "relative max-h-24 overflow-hidden")}>
-                  <Markdown>{p.problemMd}</Markdown>
-                  {!expanded && longRestate && (
-                    <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-card to-transparent" aria-hidden />
-                  )}
-                </div>
-                {longRestate && (
-                  <Button size="sm" variant="ghost" className="h-7 text-xs text-primary" onClick={() => setExpanded((v) => !v)}>
-                    {expanded ? "Show less" : "Show more"}
-                  </Button>
-                )}
-                {p.solutionMd && (
-                  <div className="border-t pt-3">
-                    <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
-                      The completed answer should show:
-                    </p>
-                    <Markdown>{transformMarkTags(p.solutionMd)}</Markdown>
+            {question.parts.map((p) => {
+              const typed = progress.typedAnswers[p.id]?.text ?? null;
+              return (
+                <section key={p.id} className="space-y-2 rounded-lg border bg-card p-4">
+                  <div className="flex items-center gap-2">
+                    <span className="rounded-md bg-muted px-2 py-0.5 text-[13px] font-semibold">
+                      {question.parts.length > 1 ? `${p.order + 1}` : "Q"}
+                    </span>
+                    <span className="text-[13px] text-muted-foreground">
+                      {p.marks} mark{p.marks === 1 ? "" : "s"}
+                    </span>
                   </div>
-                )}
-              </section>
-            ))}
+                  <div className={cn(!expanded && longRestate && "relative max-h-24 overflow-hidden")}>
+                    <Markdown>{p.problemMd}</Markdown>
+                    {!expanded && longRestate && (
+                      <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-card to-transparent" aria-hidden />
+                    )}
+                  </div>
+                  {longRestate && (
+                    <Button size="sm" variant="ghost" className="h-7 text-xs text-primary" onClick={() => setExpanded((v) => !v)}>
+                      {expanded ? "Show less" : "Show more"}
+                    </Button>
+                  )}
+                  {typed && (
+                    <div className="rounded-md border border-dashed border-primary/40 bg-primary/5 p-3">
+                      <p className="mb-1 flex items-center gap-1.5 text-[11px] font-medium uppercase tracking-wide text-primary">
+                        <PenLine className="size-3" aria-hidden /> Your typed answer
+                      </p>
+                      <p className="whitespace-pre-wrap text-[13px] leading-relaxed">{typed}</p>
+                      <p className="mt-1.5 text-[11px] text-muted-foreground">
+                        Compare it with the marking points below — award yourself the marks you clearly earned.
+                      </p>
+                    </div>
+                  )}
+                  {p.solutionMd && (
+                    <div className="border-t pt-3">
+                      <p className="mb-1.5 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+                        The completed answer should show:
+                      </p>
+                      <Markdown>{transformMarkTags(p.solutionMd)}</Markdown>
+                    </div>
+                  )}
+                </section>
+              );
+            })}
             <p className="text-xs text-muted-foreground">
               Marking points are AND-joined in the corpus (all required for the mark). Self-mark
               honestly — your score writes to the SIMULATED overlay only.

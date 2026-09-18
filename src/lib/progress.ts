@@ -27,6 +27,12 @@ export interface CourseProgress {
   mcqAnswers: Record<string, { subtopic: string | null; topicSlug: string | null; chosen: string | null; correct: boolean; at: number }>;
   flashcards: Record<string, { subtopic: string | null; rating: FlashcardRating; at: number }>;
   saved: Record<string, { subtopic: string | null; topicSlug: string | null; at: number }>;
+  /**
+   * Typed answer workspace (SME "type your answer" for structured questions),
+   * keyed by part id. Draft text only — it never feeds rings or mastery until
+   * the learner self-scores (or applies an AI-suggested score).
+   */
+  typedAnswers: Record<string, { text: string; at: number }>;
 }
 
 export const emptyProgress = (): CourseProgress => ({
@@ -35,6 +41,7 @@ export const emptyProgress = (): CourseProgress => ({
   mcqAnswers: {},
   flashcards: {},
   saved: {},
+  typedAnswers: {},
 });
 
 const keyFor = (course: string) => `syllabai-demo:progress:${course}`;
@@ -155,6 +162,16 @@ export function recordMcqAnswer(
       [questionId]: { subtopic, topicSlug, chosen, correct, at: Date.now() },
     },
   }));
+}
+
+/** Persist the typed answer draft for one question part (SME answer workspace). */
+export function saveTypedAnswer(course: string, partId: string, text: string) {
+  mutate(course, (p) => {
+    const typedAnswers = { ...p.typedAnswers };
+    if (text.trim() === "") delete typedAnswers[partId];
+    else typedAnswers[partId] = { text, at: Date.now() };
+    return { ...p, typedAnswers };
+  });
 }
 
 export function rateFlashcard(
