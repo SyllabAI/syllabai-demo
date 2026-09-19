@@ -24,6 +24,10 @@ export interface SidebarData {
   };
   /** noteId → sub-topic code (so the reader page can highlight its row) */
   noteSubtopic: Record<string, string | null>;
+  /** sub-topic code → the individual notes anchored there, corpus order (tree expander) */
+  notesBySubtopic: Record<string, { noteId: string; title: string; guidedStudy: boolean }[]>;
+  /** sub-topic code → the individual question sets anchored there, corpus order (tree expander) */
+  setsBySubtopic: Record<string, { slug: string; title: string; count: number }[]>;
 }
 
 const CourseDataContext = createContext<SidebarData | null>(null);

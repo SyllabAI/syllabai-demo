@@ -166,6 +166,10 @@ export interface HubCourse {
   noteSubtopic: Record<string, string | null>;
   /** sub-topic code → question-set slugs anchored there */
   setsBySubtopic: Record<string, string[]>;
+  /** sub-topic code → the notes anchored there, corpus order (tree expander) */
+  notesBySubtopic: Record<string, { noteId: string; title: string; guidedStudy: boolean }[]>;
+  /** sub-topic code → the question sets anchored there, corpus order (tree expander) */
+  setListsBySubtopic: Record<string, { slug: string; title: string; count: number }[]>;
   /** sub-topic code → flashcards */
   cardsBySubtopic: Record<string, string[]>;
   notes: RevisionNoteT[];
@@ -216,6 +220,8 @@ export async function loadHubCourse(slug: string): Promise<HubCourse | null> {
       hrefs: { notes: {}, questions: {}, flashcards: {} },
       noteSubtopic: {},
       setsBySubtopic: {},
+      notesBySubtopic: {},
+      setListsBySubtopic: {},
       cardsBySubtopic: {},
       notes: [],
       questionTopics: [],
@@ -232,21 +238,34 @@ export async function loadHubCourse(slug: string): Promise<HubCourse | null> {
   const base = `/courses/${slug}`;
   const hrefs: HubCourse["hrefs"] = { notes: {}, questions: {}, flashcards: {} };
   const setsBySubtopic: Record<string, string[]> = {};
+  const notesBySubtopic: HubCourse["notesBySubtopic"] = {};
+  const setListsBySubtopic: HubCourse["setListsBySubtopic"] = {};
   const cardsBySubtopic: Record<string, string[]> = {};
   const noteSubtopic: Record<string, string | null> = {};
 
   for (const t of questionTopics) {
     const s = subtopicOfQuestionSet(t, index);
     if (s) {
-      hrefs.questions[s] = `${base}/exam-questions/${t.slug}`;
+      // first-write wins: the row's default target is the first set in corpus
+      // order (e.g. Multiple-Choice before Structured); the tree expander
+      // lists every set anchored to the sub-topic
+      hrefs.questions[s] ??= `${base}/exam-questions/${t.slug}`;
       (setsBySubtopic[s] ??= []).push(t.slug);
+      (setListsBySubtopic[s] ??= []).push({
+        slug: t.slug,
+        title: t.setName ?? t.name,
+        count: t.questions.length,
+      });
     }
   }
   for (const n of notes) {
     const s = subtopicOfNote(n, index);
     noteSubtopic[n.noteId] = s;
     if (s) {
-      hrefs.notes[s] = `${base}/revision-notes/${n.noteId}`;
+      // first-write wins (corpus order = curated section order); the tree
+      // expander lists every note so none is unreachable from navigation
+      hrefs.notes[s] ??= `${base}/revision-notes/${n.noteId}`;
+      (notesBySubtopic[s] ??= []).push({ noteId: n.noteId, title: n.title, guidedStudy: n.guidedStudy });
       (cardsBySubtopic[s] ??= []);
     }
   }
@@ -267,6 +286,8 @@ export async function loadHubCourse(slug: string): Promise<HubCourse | null> {
     hrefs,
     noteSubtopic,
     setsBySubtopic,
+    notesBySubtopic,
+    setListsBySubtopic,
     cardsBySubtopic,
     notes,
     questionTopics,

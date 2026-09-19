@@ -34,6 +34,8 @@ export default async function CourseLayout({
     counts: hub.counts,
     hrefs: hub.hrefs,
     noteSubtopic: hub.noteSubtopic,
+    notesBySubtopic: hub.notesBySubtopic,
+    setsBySubtopic: hub.setListsBySubtopic,
   };
 
   return (

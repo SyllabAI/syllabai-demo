@@ -31,6 +31,7 @@ export function useActiveSubtopic(variant: SidebarVariant): string | null {
   const params = useSearchParams();
 
   return useMemo(() => {
+    const base = `/courses/${data.course.slug}`;
     const q = params.get("subtopic");
     if (q) return q;
     if (variant === "notes") {
@@ -41,7 +42,15 @@ export function useActiveSubtopic(variant: SidebarVariant): string | null {
     if (variant === "questions" || variant === "flashcards") {
       const map = data.hrefs[variant];
       const hit = Object.entries(map).find(([, href]) => href === pathname);
-      return hit?.[0] ?? null;
+      if (hit) return hit[0];
+      // 2nd+ set pages: the sub-topic row's canonical href is the FIRST set,
+      // so resolve later sets through the per-sub-topic set lists instead
+      if (variant === "questions") {
+        for (const [code, sets] of Object.entries(data.setsBySubtopic)) {
+          if (sets.some((st) => pathname === `${base}/exam-questions/${st.slug}`)) return code;
+        }
+      }
+      return null;
     }
     return null;
   }, [params, pathname, data, variant]);
@@ -58,6 +67,7 @@ export function TopicTree({
 }) {
   const course = data.course.slug as Course;
   const progress = useCourseProgress(course);
+  const pathname = usePathname();
 
   // active topic auto-expansion (render-phase adjustment, React-endorsed)
   const activeTopic = useMemo(() => {
@@ -85,6 +95,27 @@ export function TopicTree({
       return next;
     });
   }
+
+  // per-sub-topic expander: sub-topics holding >1 note / question set list
+  // every item under their row (single-resource rows stay direct links)
+  const [openSubs, setOpenSubs] = useState<Set<string>>(new Set());
+  const [lastAutoSub, setLastAutoSub] = useState<string | null | undefined>(undefined);
+  if (lastAutoSub !== activeSubtopic) {
+    setLastAutoSub(activeSubtopic);
+    setOpenSubs((prev) => {
+      if (!activeSubtopic || prev.has(activeSubtopic)) return prev;
+      const next = new Set(prev);
+      next.add(activeSubtopic);
+      return next;
+    });
+  }
+  const toggleSub = (code: string) =>
+    setOpenSubs((prev) => {
+      const next = new Set(prev);
+      if (next.has(code)) next.delete(code);
+      else next.add(code);
+      return next;
+    });
 
   const toggle = (code: string) =>
     setExpanded((prev) => {
@@ -153,15 +184,118 @@ export function TopicTree({
                       <ProgressRing course={course} subtopic={sub.code} counts={k} size={16} />
                       <span className="min-w-0 flex-1 truncate">{sub.title}</span>
                       {hasAny && (
-                        <span className="shrink-0 text-[10.5px] tabular-nums text-muted-foreground">
+                        <span className="shrink-0 whitespace-nowrap text-[10.5px] tabular-nums text-muted-foreground">
                           {countLabel}
                         </span>
                       )}
                     </>
                   );
+
+                  // nested items: every note / question set anchored to this
+                  // sub-topic, corpus order — so multi-resource sub-topics
+                  // keep all of them reachable from the tree
+                  const nestedBase = `/courses/${data.course.slug}`;
+                  const nestedItems: {
+                    key: string;
+                    href: string;
+                    title: string;
+                    read?: boolean;
+                    count?: number;
+                    active: boolean;
+                  }[] =
+                    variant === "notes"
+                      ? (data.notesBySubtopic[sub.code] ?? []).map((n) => ({
+                          key: n.noteId,
+                          href: `${nestedBase}/revision-notes/${n.noteId}`,
+                          title: n.title,
+                          read: !!progress.notesRead[n.noteId],
+                          active: pathname === `${nestedBase}/revision-notes/${n.noteId}`,
+                        }))
+                      : variant === "questions"
+                        ? (data.setsBySubtopic[sub.code] ?? []).map((st) => ({
+                            key: st.slug,
+                            href: `${nestedBase}/exam-questions/${st.slug}`,
+                            title: st.title,
+                            count: st.count,
+                            active: pathname === `${nestedBase}/exam-questions/${st.slug}`,
+                          }))
+                        : [];
+                  const subOpen = openSubs.has(sub.code);
+                  const isActive = activeSubtopic === sub.code;
+
                   return (
                     <li key={sub.code}>
-                      {href ? (
+                      {nestedItems.length > 1 && href ? (
+                        <>
+                          <div
+                            className={cn(
+                              "flex items-center gap-0.5 rounded-md transition-colors",
+                              isActive && "bg-primary/10",
+                            )}
+                          >
+                            <Link
+                              href={href}
+                              aria-current={isActive ? "true" : undefined}
+                              className={cn(
+                                "min-w-0 flex-1 rounded-md px-2 py-1.5 text-[13px] transition-colors",
+                                isActive
+                                  ? "font-medium text-primary"
+                                  : "text-foreground/75 hover:bg-muted hover:text-foreground",
+                              )}
+                            >
+                              {row}
+                            </Link>
+                            <button
+                              type="button"
+                              onClick={() => toggleSub(sub.code)}
+                              aria-expanded={subOpen}
+                              aria-label={`${subOpen ? "Hide" : "Show"} the ${nestedItems.length} ${
+                                variant === "notes" ? "notes" : "question sets"
+                              } in ${sub.title}`}
+                              className="mr-1 shrink-0 rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                            >
+                              <ChevronGlyph open={subOpen} />
+                            </button>
+                          </div>
+                          {subOpen && (
+                            <ul
+                              className="ml-[15px] mt-0.5 space-y-0.5 border-l pl-3"
+                              aria-label={`${sub.title} ${variant === "notes" ? "notes" : "question sets"}`}
+                            >
+                              {nestedItems.map((it) => (
+                                <li key={it.key}>
+                                  <Link
+                                    href={it.href}
+                                    aria-current={it.active ? "true" : undefined}
+                                    className={cn(
+                                      "flex items-center gap-2 rounded-md px-2 py-1 text-[12.5px] transition-colors",
+                                      it.active
+                                        ? "bg-primary/10 font-medium text-primary"
+                                        : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                                    )}
+                                  >
+                                    {it.read !== undefined && (
+                                      <span
+                                        aria-hidden
+                                        className={cn(
+                                          "size-1.5 shrink-0 rounded-full",
+                                          it.read ? "bg-primary" : "bg-muted-foreground/30",
+                                        )}
+                                      />
+                                    )}
+                                    <span className="min-w-0 flex-1 truncate">{it.title}</span>
+                                    {it.count !== undefined && it.count > 0 && (
+                                      <span className="shrink-0 text-[10.5px] tabular-nums text-muted-foreground">
+                                        {it.count}
+                                      </span>
+                                    )}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </>
+                      ) : href ? (
                         <Link
                           href={href}
                           aria-current={activeSubtopic === sub.code ? "true" : undefined}
