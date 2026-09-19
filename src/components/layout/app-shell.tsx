@@ -22,6 +22,7 @@ import {
   FlaskConical,
   GraduationCap,
   Layers,
+  LayoutDashboard,
   Network,
   Sparkles,
   User,
@@ -40,6 +41,7 @@ import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
 const TOOLS = [
+  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard, desc: "My subjects" },
   { href: "/courses", label: "Courses", icon: GraduationCap, desc: "All Learning Hubs" },
   { href: "/revision-notes", label: "Revision Notes", icon: BookOpen },
   { href: "/exam-questions", label: "Exam Questions", icon: FileQuestion },
