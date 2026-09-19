@@ -1,22 +1,31 @@
 "use client";
 
 /**
- * Dashboard — the student's SME-style home (research §3-4 flow):
- *   1. My Subjects (added courses, one card each with resource counts)
- *   2. Add Subject (catalogue picker over the 39-course registry)
+ * Dashboard — the student's SME-style home (Task 21 + 21-b fidelity pass,
+ * matched against the real savemyexams.com /members/ reference page):
  *
- * The roster persists client-side (no auth in the demo); resource counts
- * come from /api/course-stats, which reads the committed bundles.
+ *   1. Greeting header ("Hi there 👋" — no auth in the demo, so no name)
+ *   2. My courses — one card per added subject:
+ *        eyebrow "Edexcel · {level}" · subject name · Last viewed badge ·
+ *        "Continue revising" · per-resource rows with counts (SME shows
+ *        progress %; we show honest corpus counts until tracking lands)
+ *   3. "Got another course?" slot card (SME's trailing grid cell)
+ *   4. "Jump back in" — resume card from the last-opened store
+ *   5. Add course — searchable catalogue over the 39-course registry
+ *
+ * The roster + last-opened persist client-side (no auth in the demo);
+ * resource counts come from /api/course-stats (committed bundles).
  */
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   BookOpen,
+  ChevronRight,
   CircleHelp,
   FileQuestion,
   GraduationCap,
-  ListTree,
   Plus,
+  RotateCcw,
   Sparkles,
   X,
 } from "lucide-react";
@@ -26,6 +35,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useMySubjects } from "@/lib/my-subjects";
+import { useLastOpened, resourceLabel } from "@/lib/last-opened";
 import type { CourseMeta } from "@/lib/courses";
 
 interface CourseStat {
@@ -40,32 +50,79 @@ interface CourseStat {
 
 const QUICK_ADD = ["igcse-chemistry-19", "igcse-physics-19", "igcse-biology-19", "ial-maths-20-pure-1"];
 
-function StatChip({ icon: Icon, value, label }: { icon: typeof BookOpen; value: number | null; label: string }) {
+function rowValue(value: number | undefined, unit: string) {
+  if (value === undefined) return <Skeleton className="h-3 w-10" />;
   return (
-    <span className="inline-flex items-center gap-1 text-xs text-muted-foreground" title={label}>
-      <Icon className="size-3.5" aria-hidden />
-      {value === null ? <Skeleton className="h-3 w-6" /> : <span className="font-medium text-foreground">{value}</span>}
-      <span className="sr-only">{label}</span>
+    <span className="text-xs font-medium tabular-nums text-foreground">
+      {value} {unit}
+      {value === 1 ? "" : "s"}
     </span>
+  );
+}
+
+function ResourceRow({
+  href,
+  icon: Icon,
+  label,
+  value,
+  disabled,
+}: {
+  href: string;
+  icon: typeof BookOpen;
+  label: string;
+  value: React.ReactNode;
+  disabled?: boolean;
+}) {
+  const inner = (
+    <>
+      <Icon className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+      <span className="flex-1 truncate text-sm">{label}</span>
+      {value}
+      <ChevronRight
+        className={`size-4 shrink-0 transition-opacity ${disabled ? "text-muted-foreground/30" : "text-muted-foreground/60"}`}
+        aria-hidden
+      />
+    </>
+  );
+  const cls =
+    "flex items-center gap-2.5 rounded-md px-2 py-2 transition-colors " +
+    (disabled
+      ? "cursor-not-allowed text-muted-foreground/60"
+      : "hover:bg-muted hover:text-foreground");
+  return (
+    <li>
+      {disabled ? (
+        <span aria-disabled className={cls} title="Import pending">
+          {inner}
+        </span>
+      ) : (
+        <Link href={href} className={cls}>
+          {inner}
+        </Link>
+      )}
+    </li>
   );
 }
 
 function SubjectCard({
   meta,
   stat,
+  isLastViewed,
   onRemove,
 }: {
   meta: CourseMeta;
   stat: CourseStat | undefined;
+  isLastViewed: boolean;
   onRemove: (slug: string) => void;
 }) {
   const base = `/courses/${meta.slug}`;
-  const counts = stat?.hasBundle
-    ? { topics: stat.topics, notes: stat.notes, sets: stat.questionSets, cards: stat.flashcards }
-    : null;
+  const counts =
+    stat?.hasBundle
+      ? { notes: stat.notes, questions: stat.questions, sets: stat.questionSets, cards: stat.flashcards }
+      : null;
 
   return (
-    <Card className="relative h-full border-primary/30 transition-colors hover:border-primary/60">
+    <Card className="relative h-full border-primary/25 transition-colors hover:border-primary/60">
       <Button
         variant="ghost"
         size="icon"
@@ -75,51 +132,77 @@ function SubjectCard({
       >
         <X className="size-4" aria-hidden />
       </Button>
-      <CardContent className="flex h-full flex-col gap-3 p-4 pr-9">
-        <div className="min-w-0">
-          <Link href={base} className="group">
-            <p className="truncate text-sm font-semibold group-hover:text-primary">{meta.label}</p>
-          </Link>
-          <p className="mt-0.5 font-mono text-xs text-muted-foreground">
-            {meta.code || "code pending"} · {meta.level}
-          </p>
-        </div>
+      <CardContent className="flex h-full flex-col gap-1 p-4 pr-9">
+        {/* eyebrow: board · level (SME: "IGCSE · Edexcel") */}
+        <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+          Edexcel · {meta.level}
+        </p>
 
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          {counts ? (
-            <>
-              <StatChip icon={ListTree} value={counts.topics} label="topics" />
-              <StatChip icon={BookOpen} value={counts.notes} label="revision notes" />
-              <StatChip icon={FileQuestion} value={counts.sets} label="question sets" />
-              <StatChip icon={CircleHelp} value={counts.cards} label="flashcards" />
-            </>
-          ) : (
-            <>
-              <StatChip icon={ListTree} value={null} label="topics" />
-              <StatChip icon={BookOpen} value={null} label="revision notes" />
-              <StatChip icon={FileQuestion} value={null} label="question sets" />
-              <StatChip icon={CircleHelp} value={null} label="flashcards" />
-            </>
+        {/* subject name + Last viewed badge */}
+        <div className="flex flex-wrap items-center gap-2">
+          <Link href={base} className="group min-w-0">
+            <span className="block truncate text-base font-bold group-hover:text-primary">
+              {meta.subject}
+            </span>
+          </Link>
+          {isLastViewed && (
+            <Badge variant="secondary" className="px-1.5 py-0 text-[10px] font-medium">
+              Last viewed
+            </Badge>
           )}
         </div>
+        <p className="font-mono text-xs text-muted-foreground">{meta.code || "code pending"}</p>
 
-        {meta.hasBundle ? (
-          <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-1">
-            <Button asChild size="sm" className="h-7 text-xs">
-              <Link href={base}>Open hub</Link>
-            </Button>
-            <Button asChild size="sm" variant="outline" className="h-7 text-xs">
-              <Link href={`${base}/revision-notes`}>Notes</Link>
-            </Button>
-            <Button asChild size="sm" variant="outline" className="h-7 text-xs">
-              <Link href={`${base}/exam-questions`}>Questions</Link>
-            </Button>
-            <Button asChild size="sm" variant="outline" className="h-7 text-xs">
-              <Link href={`${base}/flashcards`}>Flashcards</Link>
-            </Button>
-          </div>
+        <Link
+          href={base}
+          className="mt-1 inline-flex w-fit items-center gap-1 text-xs font-semibold text-primary hover:underline"
+        >
+          Continue revising
+          <ChevronRight className="size-3.5" aria-hidden />
+        </Link>
+
+        {/* per-resource rows (SME shows %; we show honest counts) */}
+        {counts ? (
+          <ul className="mt-1 space-y-0.5 border-t pt-1">
+            <ResourceRow
+              href={`${base}/revision-notes`}
+              icon={BookOpen}
+              label="Revision Notes"
+              value={rowValue(counts.notes, "note")}
+            />
+            <ResourceRow
+              href={`${base}/exam-questions`}
+              icon={FileQuestion}
+              label="Exam Questions"
+              value={rowValue(counts.questions, "question")}
+            />
+            <ResourceRow
+              href={`${base}/flashcards`}
+              icon={CircleHelp}
+              label="Flashcards"
+              value={rowValue(counts.cards, "card")}
+            />
+          </ul>
         ) : (
-          <p className="mt-auto pt-1 text-xs text-muted-foreground">Content import pending — hub not available yet.</p>
+          <div className="mt-1 space-y-2 border-t pt-3">
+            <div className="flex items-center gap-2">
+              <Skeleton className="h-3 w-28" />
+              <Skeleton className="h-3 w-10" />
+            </div>
+            <div className="flex items-center gap-2">
+              <Skeleton className="h-3 w-24" />
+              <Skeleton className="h-3 w-10" />
+            </div>
+            <div className="flex items-center gap-2">
+              <Skeleton className="h-3 w-20" />
+              <Skeleton className="h-3 w-10" />
+            </div>
+            {!meta.hasBundle && (
+              <p className="text-xs text-muted-foreground">
+                Content import pending — hub not available yet.
+              </p>
+            )}
+          </div>
         )}
       </CardContent>
     </Card>
@@ -128,6 +211,7 @@ function SubjectCard({
 
 export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
   const { slugs, has, add, remove } = useMySubjects();
+  const lastOpened = useLastOpened();
   const [q, setQ] = useState("");
   const [stats, setStats] = useState<Record<string, CourseStat>>({});
 
@@ -179,23 +263,38 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
     return [...g.entries()].sort((a, b) => b[1].length - a[1].length);
   }, [available]);
 
+  // "Jump back in" — only if the recorded course still resolves in the registry
+  const jumpBack =
+    lastOpened && bySlug.has(lastOpened.slug)
+      ? { course: bySlug.get(lastOpened.slug) as CourseMeta, resource: lastOpened.resource }
+      : null;
+
   return (
     <div className="space-y-8">
-      <header className="space-y-2">
-        <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
+      {/* greeting (SME: "Hi, {name} 👋" — the demo has no accounts) */}
+      <header className="space-y-1.5">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Hi there 👋</h1>
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Your subjects, one hub each. Add the courses you are studying to unlock their
-          spec-anchored revision notes, exam questions and flashcards — the same flow as the
-          reference product, backed by the SyllabAI corpus.
+          Welcome to your SyllabAI dashboard — your launchpad for stress-free, spec-anchored
+          study. Add the courses you are taking, then revise each one from notes, exam questions
+          and flashcards mapped to its syllabus.
         </p>
       </header>
 
-      {/* ---- My subjects ---- */}
+      {/* ---- My courses ---- */}
       <section aria-label="My subjects" className="space-y-3">
-        <div className="flex items-baseline justify-between gap-3">
+        <div className="flex items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">
             My subjects <span className="text-sm font-normal text-muted-foreground">· {mySubjects.length}</span>
           </h2>
+          {mySubjects.length > 0 && (
+            <Button asChild size="sm" variant="outline" className="gap-1.5">
+              <a href="#add-subject">
+                <Plus className="size-3.5" aria-hidden />
+                Add course
+              </a>
+            </Button>
+          )}
         </div>
 
         {mySubjects.length === 0 ? (
@@ -224,14 +323,65 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
         ) : (
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {mySubjects.map((c) => (
-              <SubjectCard key={c.slug} meta={c} stat={stats[c.slug]} onRemove={remove} />
+              <SubjectCard
+                key={c.slug}
+                meta={c}
+                stat={stats[c.slug]}
+                isLastViewed={lastOpened?.slug === c.slug}
+                onRemove={remove}
+              />
             ))}
+            {/* SME's trailing slot cell: "Got another course?" */}
+            <a
+              href="#add-subject"
+              className="flex min-h-[10rem] flex-col items-start justify-center gap-2 rounded-xl border border-dashed border-muted-foreground/40 p-4 text-left transition-colors hover:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <p className="text-sm font-semibold">Got another course?</p>
+              <p className="text-xs text-muted-foreground">
+                Save your courses for easy access.
+              </p>
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary">
+                <Plus className="size-3.5" aria-hidden />
+                Add course
+              </span>
+            </a>
           </div>
         )}
       </section>
 
-      {/* ---- Add subject ---- */}
-      <section aria-label="Add subject" className="space-y-3">
+      {/* ---- Jump back in (SME resume card, backed by real navigation) ---- */}
+      {jumpBack && (
+        <section aria-label="Jump back in" className="space-y-2">
+          <h2 className="flex items-center gap-2 text-lg font-semibold">
+            <RotateCcw className="size-4 text-primary" aria-hidden />
+            Jump back in
+          </h2>
+          <Link
+            href={
+              jumpBack.resource === "hub"
+                ? `/courses/${jumpBack.course.slug}`
+                : `/courses/${jumpBack.course.slug}/${jumpBack.resource}`
+            }
+            className="group block focus-visible:outline-none"
+          >
+            <Card className="transition-colors group-hover:border-primary/50">
+              <CardContent className="flex flex-wrap items-center gap-x-3 gap-y-1 p-4">
+                <Badge variant="secondary" className="font-medium">
+                  {resourceLabel(jumpBack.resource)}
+                </Badge>
+                <span className="text-sm font-semibold">{jumpBack.course.subject}</span>
+                <span className="text-sm text-muted-foreground">
+                  Edexcel · {jumpBack.course.level} · {jumpBack.course.code}
+                </span>
+                <ChevronRight className="ml-auto size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden />
+              </CardContent>
+            </Card>
+          </Link>
+        </section>
+      )}
+
+      {/* ---- Add subject (catalogue picker) ---- */}
+      <section aria-label="Add subject" className="space-y-3 scroll-mt-20" id="add-subject">
         <h2 className="flex items-center gap-2 text-lg font-semibold">
           <Sparkles className="size-4 text-primary" aria-hidden />
           Add a subject

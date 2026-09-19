@@ -37,6 +37,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
@@ -78,7 +79,7 @@ export function AppShell({
             <span className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <Atom className="size-4" aria-hidden />
             </span>
-            <span className="font-semibold tracking-tight">
+            <span className="font-display font-semibold tracking-tight">
               syllabai<span className="text-muted-foreground">-demo</span>
             </span>
           </Link>
@@ -124,6 +125,14 @@ export function AppShell({
           <span className="ml-1 hidden text-xs text-muted-foreground xl:inline">
             experimental playground · 4CH1 pilot corpus
           </span>
+
+          {/* SME header parity: persistent primary CTA (Task 21-b) */}
+          <Button asChild size="sm" className="ml-auto hidden gap-1.5 sm:inline-flex">
+            <Link href="/dashboard">
+              <Zap className="size-3.5" aria-hidden />
+              Start studying
+            </Link>
+          </Button>
         </div>
       </header>
 

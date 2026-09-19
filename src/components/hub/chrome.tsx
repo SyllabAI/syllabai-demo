@@ -74,6 +74,24 @@ export function FrameworkTags({ tags }: { tags: string[] }) {
   );
 }
 
+/**
+ * Framework tag chip — SME's Study / Practice / Diagnose pills (Task 21-b,
+ * dissected from the reference course page). Colors live in globals.css
+ * (chip-study / chip-practice / chip-diagnose).
+ */
+export function TagChip({ tag }: { tag: "Study" | "Practice" | "Diagnose" }) {
+  return (
+    <span
+      className={cn(
+        "inline-flex items-center rounded-full px-2 py-0.5 text-[10.5px] font-semibold leading-none",
+        `chip-${tag.toLowerCase()}`,
+      )}
+    >
+      {tag}
+    </span>
+  );
+}
+
 /** Numbered syllabus label, e.g. topic "1. Principles of chemistry". */
 export function NumberedLabel({ number, title }: { number: number; title: string }) {
   return (

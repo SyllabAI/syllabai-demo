@@ -6,8 +6,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-jakarta);
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --font-display: var(--font-kodchasan), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -51,7 +52,7 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.505 0.232 263.8);
+  --primary: oklch(0.541 0.238 264.7); /* SME brand blue #265bf6 */
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -62,9 +63,9 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.505 0.232 263.8);
+  --ring: oklch(0.541 0.238 264.7);
   --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-2: oklch(0.678 0.152 150.1); /* SME green #42b163 */
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
@@ -85,8 +86,8 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.72 0.145 264.4); /* lighter SME blue for dark surfaces */
+  --primary-foreground: oklch(0.145 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -119,4 +120,37 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    /* @theme inline does not emit tokens as runtime vars — inline the chain */
+    font-family: var(--font-kodchasan), var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* ---- SME-style framework tag chips (Study / Practice / Diagnose) ----
+   Palette from the SaveMyExams reference pages (Task 21-b dissection):
+   Study = green #42b163, Practice = brand blue #265bf6, Diagnose = amber. */
+.chip-study {
+  background: oklch(0.678 0.152 150.1 / 0.12);
+  color: oklch(0.51 0.115 150.1);
+}
+.chip-practice {
+  background: oklch(0.541 0.238 264.7 / 0.1);
+  color: oklch(0.47 0.19 264.7);
+}
+.chip-diagnose {
+  background: oklch(0.75 0.14 70 / 0.16);
+  color: oklch(0.5 0.115 60);
+}
+
+.dark .chip-study {
+  background: oklch(0.678 0.152 150.1 / 0.2);
+  color: oklch(0.82 0.13 150.1);
+}
+.dark .chip-practice {
+  background: oklch(0.541 0.238 264.7 / 0.25);
+  color: oklch(0.78 0.13 264.7);
+}
+.dark .chip-diagnose {
+  background: oklch(0.75 0.14 70 / 0.22);
+  color: oklch(0.83 0.12 75);
 }

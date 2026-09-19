@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
 import { CourseShell, type SidebarData } from "@/components/hub/course-shell";
+import { LastOpenedTracker } from "@/components/hub/last-opened-tracker";
 
 export const dynamic = "force-dynamic";
 
@@ -40,7 +41,11 @@ export default async function CourseLayout({
 
   return (
     <Suspense fallback={<div className="p-8 text-sm text-muted-foreground">Loading course…</div>}>
-      <CourseShell data={data}>{children}</CourseShell>
+      <CourseShell data={data}>
+        {/* records real navigation for the dashboard's Last viewed / Jump back in */}
+        <LastOpenedTracker />
+        {children}
+      </CourseShell>
     </Suspense>
   );
 }
