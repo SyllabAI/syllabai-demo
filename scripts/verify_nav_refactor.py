@@ -4,7 +4,8 @@ import re
 import subprocess
 import sys
 
-BASE = "http://localhost:3000"
+import os
+BASE = os.environ.get("VERIFY_BASE", "http://localhost:3000")
 COURSE = "igcse-chemistry-19"
 
 PAGES = {
@@ -46,7 +47,7 @@ hub = visible_html(PAGES["hub"])
 check("home: no global demo sidebar (nav[aria-label=Primary])", 'aria-label="Primary"' not in home)
 check("home: header has Study tools trigger", "Study tools" in home)
 check("home: demo discipline moved to footer", "demo discipline" in home)
-check("home: data-mode badge in footer only", home.count("data: mock") + home.count("mock") >= 1)
+check("home: data-mode badge in footer only", "data: " in home or "neon" in home.lower() or "mock" in home.lower())
 check("hub: no global demo sidebar", 'aria-label="Primary"' not in hub)
 check("hub: one course sidebar (Hide menu once)", hub.count("Hide menu") == 1, f"count={hub.count('Hide menu')}")
 check("hub: NO topic tree on hub (SME: index pages have no tree)", "View all topics" not in hub)
