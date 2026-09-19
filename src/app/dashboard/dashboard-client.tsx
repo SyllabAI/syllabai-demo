@@ -7,8 +7,10 @@
  *   1. Greeting header ("Hi there 👋" — no auth in the demo, so no name)
  *   2. My courses — one card per added subject:
  *        eyebrow "Edexcel · {level}" · subject name · Last viewed badge ·
- *        "Continue revising" · per-resource rows with counts (SME shows
- *        progress %; we show honest corpus counts until tracking lands)
+ *        "Continue revising" · per-resource rows with corpus counts AND
+ *        live progress % (SME ProgressBarGroup parity) computed from the
+ *        browser-local activity overlay (notes read, questions attempted,
+ *        flashcards rated) — real activity, honestly 0% before you start
  *   3. "Got another course?" slot card (SME's trailing grid cell)
  *   4. "Jump back in" — resume card from the last-opened store
  *   5. Add course — searchable catalogue over the 39-course registry
@@ -36,6 +38,7 @@ import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useMySubjects } from "@/lib/my-subjects";
 import { useLastOpened, resourceLabel } from "@/lib/last-opened";
+import { useCourseProgress } from "@/lib/progress";
 import type { CourseMeta } from "@/lib/courses";
 
 interface CourseStat {
@@ -60,32 +63,80 @@ function rowValue(value: number | undefined, unit: string) {
   );
 }
 
+function percentOf(done: number, total: number | undefined): number | undefined {
+  if (total === undefined || total <= 0) return undefined;
+  // precise value — tiny fractions (<1%) still move the needle and are
+  // formatted with a decimal at display time, so the first answered
+  // question is visible immediately instead of rounding to 0%
+  return Math.min(100, (done / total) * 100);
+}
+
+function formatPercent(percent: number): string {
+  if (percent <= 0) return "0%";
+  return percent >= 1 ? `${Math.round(percent)}%` : `${percent.toFixed(1)}%`;
+}
+
+/** SME ProgressBarGroup parity: title row + percent, thin rounded bar underneath. */
+function ProgressBar({ percent }: { percent: number | undefined }) {
+  if (percent === undefined) return null;
+  return (
+    <div
+      className="mt-1 h-2 w-full overflow-hidden rounded-full bg-muted"
+      role="progressbar"
+      aria-valuenow={Math.round(percent)}
+      aria-valuemin={0}
+      aria-valuemax={100}
+    >
+      <div
+        className={`h-full rounded-full transition-[width] duration-500 ${
+          percent >= 100 ? "bg-chart-2" : "bg-primary"
+        }`}
+        style={{ width: `${percent}%` }}
+      />
+    </div>
+  );
+}
+
 function ResourceRow({
   href,
   icon: Icon,
   label,
   value,
+  percent,
   disabled,
 }: {
   href: string;
   icon: typeof BookOpen;
   label: string;
   value: React.ReactNode;
+  percent?: number | undefined;
   disabled?: boolean;
 }) {
   const inner = (
     <>
-      <Icon className="size-4 shrink-0 text-muted-foreground" aria-hidden />
-      <span className="flex-1 truncate text-sm">{label}</span>
-      {value}
-      <ChevronRight
-        className={`size-4 shrink-0 transition-opacity ${disabled ? "text-muted-foreground/30" : "text-muted-foreground/60"}`}
-        aria-hidden
-      />
+      <span className="flex w-full items-center gap-2.5">
+        <Icon className="size-4 shrink-0 text-muted-foreground" aria-hidden />
+        <span className="flex-1 truncate text-sm">{label}</span>
+        {value}
+        {percent !== undefined && (
+          <span
+            className={`w-9 shrink-0 text-right text-xs font-semibold tabular-nums ${
+              percent > 0 ? "text-foreground" : "text-muted-foreground"
+            }`}
+          >
+            {formatPercent(percent)}
+          </span>
+        )}
+        <ChevronRight
+          className={`size-4 shrink-0 transition-opacity ${disabled ? "text-muted-foreground/30" : "text-muted-foreground/60"}`}
+          aria-hidden
+        />
+      </span>
+      <ProgressBar percent={percent} />
     </>
   );
   const cls =
-    "flex items-center gap-2.5 rounded-md px-2 py-2 transition-colors " +
+    "flex flex-col gap-0 rounded-md px-2 py-2 transition-colors " +
     (disabled
       ? "cursor-not-allowed text-muted-foreground/60"
       : "hover:bg-muted hover:text-foreground");
@@ -120,6 +171,23 @@ function SubjectCard({
     stat?.hasBundle
       ? { notes: stat.notes, questions: stat.questions, sets: stat.questionSets, cards: stat.flashcards }
       : null;
+
+  // Live progress % — the student's own browser-local activity overlay
+  // (notes read · distinct questions attempted · flashcards rated), shown
+  // against real corpus totals. Honestly 0% before any activity.
+  const progress = useCourseProgress(meta.slug);
+  const questionsTouched = useMemo(
+    () =>
+      new Set([...Object.keys(progress.selfScores), ...Object.keys(progress.mcqAnswers)]).size,
+    [progress],
+  );
+  const percents = counts
+    ? {
+        notes: percentOf(Object.keys(progress.notesRead).length, counts.notes),
+        questions: percentOf(questionsTouched, counts.questions),
+        cards: percentOf(Object.keys(progress.flashcards).length, counts.cards),
+      }
+    : null;
 
   return (
     <Card className="relative h-full border-primary/25 transition-colors hover:border-primary/60">
@@ -161,26 +229,29 @@ function SubjectCard({
           <ChevronRight className="size-3.5" aria-hidden />
         </Link>
 
-        {/* per-resource rows (SME shows %; we show honest counts) */}
-        {counts ? (
+        {/* per-resource rows: corpus counts + live progress % (SME parity) */}
+        {counts && percents ? (
           <ul className="mt-1 space-y-0.5 border-t pt-1">
             <ResourceRow
               href={`${base}/revision-notes`}
               icon={BookOpen}
               label="Revision Notes"
               value={rowValue(counts.notes, "note")}
+              percent={percents.notes}
             />
             <ResourceRow
               href={`${base}/exam-questions`}
               icon={FileQuestion}
               label="Exam Questions"
               value={rowValue(counts.questions, "question")}
+              percent={percents.questions}
             />
             <ResourceRow
               href={`${base}/flashcards`}
               icon={CircleHelp}
               label="Flashcards"
               value={rowValue(counts.cards, "card")}
+              percent={percents.cards}
             />
           </ul>
         ) : (
@@ -277,7 +348,7 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Welcome to your SyllabAI dashboard — your launchpad for stress-free, spec-anchored
           study. Add the courses you are taking, then revise each one from notes, exam questions
-          and flashcards mapped to its syllabus.
+          and flashcards mapped to its syllabus. Your progress is saved on this device.
         </p>
       </header>
 

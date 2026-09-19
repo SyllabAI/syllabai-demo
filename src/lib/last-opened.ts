@@ -17,7 +17,14 @@ import { useSyncExternalStore } from "react";
 const KEY = "syllabai.lastOpened.v1";
 const EVENT = "syllabai:last-opened-changed";
 
-export type ResourceKind = "hub" | "revision-notes" | "exam-questions" | "flashcards" | "strengths";
+export type ResourceKind =
+  | "hub"
+  | "revision-notes"
+  | "exam-questions"
+  | "flashcards"
+  | "strengths"
+  | "past-papers"
+  | "practice-papers";
 
 const RESOURCE_KINDS: readonly ResourceKind[] = [
   "hub",
@@ -25,6 +32,8 @@ const RESOURCE_KINDS: readonly ResourceKind[] = [
   "exam-questions",
   "flashcards",
   "strengths",
+  "past-papers",
+  "practice-papers",
 ];
 
 export interface LastOpened {
@@ -127,6 +136,10 @@ export function resourceLabel(resource: ResourceKind): string {
       return "Flashcards";
     case "strengths":
       return "Strengths & Weaknesses";
+    case "past-papers":
+      return "Past Papers";
+    case "practice-papers":
+      return "Practice Papers";
     default:
       return "Course Hub";
   }

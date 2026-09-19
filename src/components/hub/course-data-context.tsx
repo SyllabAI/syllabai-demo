@@ -28,6 +28,8 @@ export interface SidebarData {
   notesBySubtopic: Record<string, { noteId: string; title: string; guidedStudy: boolean }[]>;
   /** sub-topic code → the individual question sets anchored there, corpus order (tree expander) */
   setsBySubtopic: Record<string, { slug: string; title: string; count: number }[]>;
+  /** does the bundle carry real past-paper provenance (sourcePaper on parts)? */
+  hasPastPapers?: boolean;
 }
 
 const CourseDataContext = createContext<SidebarData | null>(null);

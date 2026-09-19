@@ -15,6 +15,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { listCourses, loadHubCourse, pilotCourseSlug } from "@/lib/courses";
 import { publicConfig } from "@/lib/config";
+import { collectPastPapers } from "@/lib/past-papers";
+import { buildPracticePapers } from "@/lib/practice-papers";
 import { CourseHeader } from "@/components/hub/course-header";
 import { CourseSwitcher } from "@/components/hub/course-switcher";
 import { TagChip } from "@/components/hub/chrome";
@@ -57,6 +59,12 @@ export default async function CourseHubPage({
   const { meta, stats } = hub;
   const base = `/courses/${meta.slug}`;
   const qual = `Edexcel ${meta.level} ${meta.subject}`;
+  // Task 22: real past-paper archive (sourcePaper provenance) + deterministic
+  // practice papers assembled from the same banks
+  const pastPapers = collectPastPapers(hub.questionTopics);
+  const heldQuestions = pastPapers.reduce((a, p) => a + p.questions.length, 0);
+  const practicePapers =
+    stats.questionSets > 0 ? buildPracticePapers(meta.slug, hub.questionTopics) : [];
   // the 4CH1 pilot runs on the official Pearson tree; every other course runs
   // on the corpus's own (SME) tree until the official mapping lands upstream
   const officialTree = hub.treeKind !== "sme-native";
@@ -86,9 +94,26 @@ export default async function CourseHubPage({
         {
           icon: ScrollText,
           title: "Past Papers",
-          desc: "All the past papers from this course, all in one place — not part of the pilot corpus yet.",
-          tags: ["Practice"],
-          ready: false,
+          desc: "The questions we hold from real Edexcel past papers, grouped by session and played back in paper order — partial reconstructions, not the full official papers.",
+          tags: ["Practice", "Diagnose"],
+          ready: pastPapers.length > 0,
+          href: pastPapers.length > 0 ? `${base}/past-papers` : undefined,
+          countLabel:
+            pastPapers.length > 0
+              ? `${pastPapers.length} paper${pastPapers.length === 1 ? "" : "s"} · ${heldQuestions} question${heldQuestions === 1 ? "" : "s"} held`
+              : undefined,
+        },
+        {
+          icon: Files,
+          title: "Practice Papers",
+          desc: "Full-length mixed papers assembled from this course's question bank — our stand-in for official papers that can't be redistributed. Same questions, same mark schemes.",
+          tags: ["Practice", "Diagnose"],
+          ready: practicePapers.length > 0,
+          href: practicePapers.length > 0 ? `${base}/practice-papers` : undefined,
+          countLabel:
+            practicePapers.length > 0
+              ? `${practicePapers.length} papers · ${stats.questions} questions`
+              : undefined,
         },
         {
           icon: Files,

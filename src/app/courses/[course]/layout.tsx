@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
+import { hasPastPapers } from "@/lib/past-papers";
 import { CourseShell, type SidebarData } from "@/components/hub/course-shell";
 import { LastOpenedTracker } from "@/components/hub/last-opened-tracker";
 
@@ -37,6 +38,7 @@ export default async function CourseLayout({
     noteSubtopic: hub.noteSubtopic,
     notesBySubtopic: hub.notesBySubtopic,
     setsBySubtopic: hub.setListsBySubtopic,
+    hasPastPapers: hasPastPapers(hub.questionTopics),
   };
 
   return (

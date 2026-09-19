@@ -19,6 +19,7 @@ import {
   CircleHelp,
   Compass,
   FileQuestion,
+  Files,
   LayoutDashboard,
   Menu,
   PanelLeftClose,
@@ -53,6 +54,7 @@ export function CourseShell({
   const variant: SidebarVariant = useMemo(() => {
     if (pathname.includes("/revision-notes")) return "notes";
     if (pathname.includes("/exam-questions")) return "questions";
+    if (pathname.includes("/past-papers") || pathname.includes("/practice-papers")) return "questions";
     if (pathname.includes("/flashcards")) return "flashcards";
     return "hub";
   }, [pathname]);
@@ -82,8 +84,9 @@ export function CourseShell({
       items: [
         { href: `${base}/exam-questions`, label: "Exam Questions", icon: FileQuestion },
         { href: `${base}/exam-questions/saved`, label: "Saved questions", icon: Bookmark, exact: pathname.endsWith("/saved") },
+        { href: `${base}/past-papers`, label: "Past Papers", icon: ScrollText, disabled: !data.hasPastPapers, badge: data.hasPastPapers ? undefined : "roadmap" },
+        { href: `${base}/practice-papers`, label: "Practice Papers", icon: Files },
         { href: "#", label: "Target Test", icon: Target, disabled: true, badge: "roadmap" },
-        { href: "#", label: "Past Papers", icon: ScrollText, disabled: true, badge: "roadmap" },
       ],
     },
   ];
