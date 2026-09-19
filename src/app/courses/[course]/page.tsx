@@ -96,6 +96,7 @@ export default async function CourseHubPage({
       <CourseHeader
         meta={meta}
         activeTab="resources"
+        showTabs
         title={`${qual} Revision`}
         description={`Tools designed specifically for the ${qual} syllabus (${meta.code}): revision notes, exam-style questions and flashcards organised around the ${officialTree ? "official specification tree" : "corpus specification tree"} — with provenance kept visible on every item.`}
       />

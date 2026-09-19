@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
 import { CourseHeader } from "@/components/hub/course-header";
+import { ResourcePanel } from "@/components/hub/resource-panel";
 import { SavedQuestionsList, type SavedQuestionMeta } from "./saved-list";
 
 export const dynamic = "force-dynamic";
@@ -39,15 +40,18 @@ export default async function SavedQuestionsPage({
   );
 
   return (
-    <div className="px-4 py-6 sm:px-6 lg:px-8">
-      <CourseHeader
-        meta={meta}
-        title="Saved questions"
-        crumb="Saved questions"
-        description="Questions you bookmarked with the Save control in the question player. Saved to your browser overlay — no account, no canonical writes."
-      />
-      <div className="mt-6">
-        <SavedQuestionsList course={meta.slug} all={all} />
+    <div className="flex w-full">
+      <ResourcePanel variant="questions" />
+      <div className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-8">
+        <CourseHeader
+          meta={meta}
+          title="Saved questions"
+          crumb="Saved questions"
+          description="Questions you bookmarked with the Save control in the question player. Saved to your browser — no account, no canonical writes."
+        />
+        <div className="mt-6">
+          <SavedQuestionsList course={meta.slug} all={all} />
+        </div>
       </div>
     </div>
   );

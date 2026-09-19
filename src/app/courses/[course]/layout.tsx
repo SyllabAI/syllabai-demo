@@ -6,9 +6,10 @@ import { CourseShell, type SidebarData } from "@/components/hub/course-shell";
 export const dynamic = "force-dynamic";
 
 /**
- * Per-course layout — mounts the persistent Learning Hub chrome (sidebar +
- * resource topic tree) around every course surface, the SaveMyExams model
- * (research §4): one course, one sidebar, one canonical topic tree.
+ * Per-course layout — mounts the persistent course sidebar (the ONE sidebar,
+ * SaveMyExams model, research §4 + flow crawl 2026-09-19). Resource detail
+ * pages additionally mount the topic panel (resource-panel.tsx) as SME's
+ * second column; hub/index pages have sidebar-only chrome.
  */
 export default async function CourseLayout({
   children,

@@ -47,7 +47,6 @@ import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { Markdown } from "@/components/markdown";
 import { PartProblem } from "@/components/part-problem";
-import { SpecChip } from "@/components/provenance";
 import {
   recordMcqAnswer,
   recordSelfScore,
@@ -407,12 +406,6 @@ function QuestionBody({
           </Button>
         </div>
       </div>
-      {subtopicTitle && (
-        <p className="text-[11px] text-muted-foreground">
-          This question is anchored to <span className="font-medium">{subtopicTitle}</span>
-          {subtopicCode ? <> ({subtopicCode})</> : null} — your answer feeds that sub-topic ring.
-        </p>
-      )}
     </div>
   );
 }
@@ -436,28 +429,16 @@ function StructuredPart({
 }) {
   return (
     <div className="space-y-2">
-      <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-        {showPartBadge && (
-          <Badge variant="outline" className="font-mono text-[10px]">
-            part {part.order + 1}
-          </Badge>
-        )}
-        {part.commandWord && (
-          <Badge variant="secondary" className="text-[10px] capitalize">
-            {part.commandWord}
-          </Badge>
-        )}
-        {part.specPointCodes.map((c) => (
-          <SpecChip key={c} code={c} />
-        ))}
-        {/* SME (figure 16): per-part marks right-aligned. Single-part questions
-            dedupe — the header badge already carries the total (figure 24). */}
-        {showPartBadge && (
-          <span className="ml-auto">
+      {/* SME (figure 16): per-part marks right-aligned, no chips/spec codes on
+          the learner face. Single-part questions dedupe — the header badge
+          already carries the total (figure 24). */}
+      {showPartBadge && (
+        <div className="flex items-center">
+          <span className="ml-auto text-xs text-muted-foreground">
             {part.marks} mark{part.marks === 1 ? "" : "s"}
           </span>
-        )}
-      </div>
+        </div>
+      )}
       <PartProblem md={part.problemMd} />
       {part.solutionMd && (
         <TypedAnswerWorkspace
@@ -579,9 +560,10 @@ function TypedAnswerWorkspace({
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <PenLine className="size-3.5 text-primary" aria-hidden />
         <span className="text-[13px] font-medium">Your answer</span>
-        <span className="text-[11px] text-muted-foreground">
-          stays in your browser (SIMULATED overlay)
-        </span>
+        <Badge variant="outline" className="px-1 text-[9px] uppercase text-muted-foreground">
+          simulated
+        </Badge>
+        <span className="text-[11px] text-muted-foreground">saved in this browser</span>
         {justSaved && (
           <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 dark:text-emerald-400">
             <CheckCircle2 className="size-3" aria-hidden /> saved
@@ -594,7 +576,7 @@ function TypedAnswerWorkspace({
         onBlur={flushNow}
         rows={4}
         aria-label={`Your typed answer for part ${part.order + 1}`}
-        placeholder="Type your answer here, then compare it with the mark scheme (View answer) — or let AI mark it, like SaveMyExams' “Mark my answer”."
+        placeholder="Type your answer here…"
         className="min-h-24 bg-background text-[13px]"
       />
       <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -1060,7 +1042,7 @@ function MarkSchemeDialog({
             })}
             <p className="text-xs text-muted-foreground">
               Marking points are AND-joined in the corpus (all required for the mark). Self-mark
-              honestly — your score writes to the SIMULATED overlay only.
+              honestly — your score stays in this browser only.
             </p>
           </div>
         )}

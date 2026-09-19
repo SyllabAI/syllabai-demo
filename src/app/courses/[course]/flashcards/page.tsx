@@ -36,7 +36,7 @@ export default async function FlashcardsIndexPage({
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Flashcards`}
         crumb="Flashcards"
-        description={`Per-sub-topic recall decks — ${stats.flashcards} cards imported from the Save My Exams corpus. Rating a card (Still learning / Know) feeds your sub-topic rings in the local overlay.`}
+        description={`Per-sub-topic recall decks — ${stats.flashcards} cards. Rating a card (Still learning / Know) feeds your sub-topic rings in the local overlay.`}
       />
 
       <div className="mt-6 space-y-2">
@@ -44,8 +44,8 @@ export default async function FlashcardsIndexPage({
           RULE_DERIVED corpus content
         </Badge>
         <p className="max-w-3xl text-xs leading-relaxed text-muted-foreground">
-          Cards are imported verbatim from the operator-authorized Save My Exams deck corpus
-          (front/back markdown, card types preserved). Their SME spec-point anchors are kept on
+          Cards are imported verbatim from the operator-licensed pilot deck corpus
+          (front/back markdown, card types preserved). Their spec-point anchors are kept on
           every card and drive the sub-topic placement — nothing here is fabricated. Courses the
           upstream corpus has no decks for show honestly empty.
         </p>

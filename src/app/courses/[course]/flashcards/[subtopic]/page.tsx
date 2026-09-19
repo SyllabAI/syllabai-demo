@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
 import { CourseHeader } from "@/components/hub/course-header";
+import { ResourcePanel } from "@/components/hub/resource-panel";
 import { DeckPlayer, type DeckCard } from "./deck-player";
 
 export const dynamic = "force-dynamic";
@@ -32,20 +33,23 @@ export default async function FlashcardDeckPage({
   const { meta } = hub;
 
   return (
-    <div className="px-4 py-6 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-3xl">
-        <CourseHeader
-          meta={meta}
-          title={`${subtopic.title} (${meta.subject}): Flashcards`}
-          crumb={subtopic.title}
-          description={
-            topic
-              ? `Deck ${topic.number}.${subtopic.label} — ${cards.length} card${cards.length === 1 ? "" : "s"} for “${subtopic.title}”, imported from the Save My Exams deck corpus.`
-              : `${cards.length} cards for “${subtopic.title}”, imported from the Save My Exams deck corpus.`
-          }
-        />
-        <div className="mt-6">
-          <DeckPlayer course={meta.slug} subtopicCode={subtopicCode} cards={cards} />
+    <div className="flex w-full">
+      <ResourcePanel variant="flashcards" />
+      <div className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
+          <CourseHeader
+            meta={meta}
+            title={`${subtopic.title} (${meta.subject}): Flashcards`}
+            crumb={subtopic.title}
+            description={
+              topic
+                ? `Deck ${topic.number}.${subtopic.label} — ${cards.length} card${cards.length === 1 ? "" : "s"} for “${subtopic.title}”.`
+                : `${cards.length} cards for “${subtopic.title}”.`
+            }
+          />
+          <div className="mt-6">
+            <DeckPlayer course={meta.slug} subtopicCode={subtopicCode} cards={cards} />
+          </div>
         </div>
       </div>
     </div>

@@ -52,18 +52,13 @@ export default async function ExamQuestionsIndexPage({
     (set) => !groups.some((g) => g.sets.some((s) => s.slug === set.slug)),
   );
 
-  const totalMarks = hub.questionTopics.reduce(
-    (a, t) => a + t.questions.reduce((b, q) => b + q.totalMarks, 0),
-    0,
-  );
-
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
       <CourseHeader
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Exam Questions By Topic`}
         crumb="Exam Questions"
-        description={`Real exam-style questions organised by topic — ${stats.questions} questions across ${stats.questionSets} sets, with parts, command words, mark schemes and self-marking. Difficulty and timing metadata come straight from the corpus.`}
+        description={`Exam-style questions organised by topic — ${stats.questions} questions across ${stats.questionSets} sets, with parts, command words, mark schemes and self-marking.`}
       />
 
       <div className="mt-6 space-y-5">
@@ -107,9 +102,6 @@ export default async function ExamQuestionsIndexPage({
                         <Badge variant="outline" className="text-[10px]">
                           {marks} marks
                         </Badge>
-                        <Badge variant="outline" className="text-[10px]">
-                          ≈ {marks} min
-                        </Badge>
                         {(["easy", "medium", "hard"] as const)
                           .filter((d) => diffs[d] > 0)
                           .map((d) => (
@@ -117,9 +109,6 @@ export default async function ExamQuestionsIndexPage({
                               {diffs[d]} {d}
                             </Badge>
                           ))}
-                      </span>
-                      <span className="mt-1 block font-mono text-[10px] text-muted-foreground/70">
-                        {set.topicId}
                       </span>
                     </span>
                     <ArrowRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden />
@@ -155,13 +144,6 @@ export default async function ExamQuestionsIndexPage({
               No question sets imported for this course yet.
             </CardContent>
           </Card>
-        )}
-
-        {groups.length > 0 && (
-          <p className="text-xs text-muted-foreground">
-            ≈ {totalMarks} marks in total across the bank — the demo estimates ≈1 min per mark,
-            a study heuristic, not exam board timing guidance.
-          </p>
         )}
       </div>
     </div>

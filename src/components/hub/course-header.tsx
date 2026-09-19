@@ -14,6 +14,7 @@ export function CourseHeader({
   title,
   description,
   crumb,
+  showTabs = false,
   children,
 }: {
   meta: Pick<CourseMeta, "level" | "subject" | "label" | "code" | "slug">;
@@ -24,6 +25,10 @@ export function CourseHeader({
    *  "IGCSE / Chemistry / Edexcel / Exam Questions / {topic}"). Defaults to
    *  "Edexcel", matching the hub-root trail. */
   crumb?: string;
+  /** SME anatomy: the Course Resources / Strengths & Weaknesses tab pair
+   *  belongs to the course hub root only — resource pages render breadcrumb +
+   *  title without hub tabs (flow crawl 2026-09-19). */
+  showTabs?: boolean;
   children?: React.ReactNode;
 }) {
   const base = `/courses/${meta.slug}`;
@@ -53,23 +58,25 @@ export function CourseHeader({
         </p>
       )}
       {children}
-      <nav aria-label="Hub tabs" className="flex gap-6 border-b">
-        {tabs.map((t) => (
-          <Link
-            key={t.id}
-            href={t.href}
-            aria-current={activeTab === t.id ? "page" : undefined}
-            className={cn(
-              "-mb-px border-b-2 px-1 pb-2.5 text-sm font-medium transition-colors",
-              activeTab === t.id
-                ? "border-primary text-primary"
-                : "border-transparent text-muted-foreground hover:text-foreground",
-            )}
-          >
-            {t.label}
-          </Link>
-        ))}
-      </nav>
+      {showTabs && (
+        <nav aria-label="Hub tabs" className="flex gap-6 border-b">
+          {tabs.map((t) => (
+            <Link
+              key={t.id}
+              href={t.href}
+              aria-current={activeTab === t.id ? "page" : undefined}
+              className={cn(
+                "-mb-px border-b-2 px-1 pb-2.5 text-sm font-medium transition-colors",
+                activeTab === t.id
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground hover:text-foreground",
+              )}
+            >
+              {t.label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   );
 }
