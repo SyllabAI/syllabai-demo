@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CircleHelp, ExternalLink, FileQuestion, Sparkles
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { loadHubCourse } from "@/lib/courses";
+import { sanitizeNoteBody } from "@/lib/note-body-fix";
 import { Markdown } from "@/components/markdown";
 import { Breadcrumbs } from "@/components/hub/chrome";
 import { ResourcePanel } from "@/components/hub/resource-panel";
@@ -47,16 +48,11 @@ export default async function NoteReaderPage({
 
   // the corpus bodies often repeat the page title as a leading H1 (+ H2) —
   // drop those duplicates so the reader sees one title, like SME (one H1 +
-  // content headings). Also strip raw spec-point IDs (spcpt_…) from the
-  // visible body: anchor codes stay in the data layer, not the learner face.
-  const title = note.title.trim().toLowerCase();
-  let bodyMd = note.bodyMd.replace(/^\s*#\s+([^\n]+)\n?/, (m, t: string) =>
-    t.trim().toLowerCase() === title ? "" : m,
-  );
-  bodyMd = bodyMd.replace(/^\s*##\s+([^\n]+)\n+/, (m, t: string) =>
-    t.trim().toLowerCase() === title ? "" : m,
-  );
-  bodyMd = bodyMd.replace(/\s*`?spcpt_[A-Za-z0-9_-]+`?\s*·\s*/g, " ");
+  // content headings). sanitizeNoteBody also removes raw spec-point anchor
+  // ids (spcpt_…) from the visible body — id-only chips go entirely, "id ·
+  // text" chips keep their readable text — and collapses the duplicated
+  // section headings the importer left around anchor chips (Task 19 audit).
+  const bodyMd = sanitizeNoteBody(note.bodyMd, note.title);
 
   return (
     <div className="flex w-full">

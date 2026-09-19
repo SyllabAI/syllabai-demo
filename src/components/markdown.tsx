@@ -171,11 +171,28 @@ export function Markdown({
           ),
           li: ({ children }) => <li className="leading-relaxed">{children}</li>,
           strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
-          a: ({ children, href }) => (
-            <a href={href} className="text-primary underline underline-offset-2">
-              {children}
-            </a>
-          ),
+          a: ({ children, href }) => {
+            const h = typeof href === "string" ? href : "";
+            // Upstream cross-references ("[condensation reactions](savemyexams…)",
+            // 788 links corpus-wide) used to hop learners off-site to the
+            // source site — keep the label text, drop the off-site hop.
+            if (/^https?:\/\/([^/]+\.)?savemyexams\.(com|co\.uk)(\/|$)/i.test(h)) {
+              return <span>{children}</span>;
+            }
+            if (h.startsWith("http")) {
+              // rare legitimate citations (World Bank, Wikimedia, gov.uk…)
+              return (
+                <a href={h} target="_blank" rel="noreferrer" className="text-primary underline underline-offset-2">
+                  {children}
+                </a>
+              );
+            }
+            return (
+              <a href={h} className="text-primary underline underline-offset-2">
+                {children}
+              </a>
+            );
+          },
           img: ({ src, alt }) => {
             const s = typeof src === "string" ? src : "";
             if (s.startsWith("/content-assets/")) {
