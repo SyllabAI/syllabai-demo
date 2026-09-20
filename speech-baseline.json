@@ -1,7 +1,8 @@
 {
-  "span": 47,
+  "span": 0,
   "dollar": 0,
-  "textwrap": 6,
-  "multiline": 4,
-  "frozenAt": "2026-09-20T18:53:06.619Z"
+  "textwrap": 0,
+  "multiline": 0,
+  "baretext": 0,
+  "frozenAt": "2026-09-21T00:00:00.000Z"
 }

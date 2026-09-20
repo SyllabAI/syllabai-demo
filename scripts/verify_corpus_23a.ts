@@ -1,12 +1,12 @@
 /**
- * T-SME-23a CORPUS GATE — blocks MathML speech-text pollution from ever
+ * T-SME-23b CORPUS GATE — blocks MathML speech-text pollution from ever
  * reaching production again.
  *
  * Walks PARSED corpus strings (raw-JSON scans false-positive across fields)
  * and fails when pollution exceeds the frozen baseline:
- *   - work/speech_baseline.json freezes the residue of the 2026-09-21
- *     repair (16 stubborn nuclear/probability spans + 8 pre-existing
- *     \text{} recon artifacts from the original scrape).
+ *   - speech-baseline.json refrozen to ZERO after the 2026-09-21 23b
+ *     residue repair (menclose family, isotopes, physics MCQ pages,
+ *     recon word-artifacts: intersection/union/apostrophe/ordinals).
  *   - Any future SME import that skips the aria-label→MathML→LaTeX
  *     extraction blows past the baseline and FAILS the build.
  * Run: bun scripts/verify_corpus_23a.ts   (wired as `prebuild`)
@@ -27,7 +27,10 @@ const MARK = new RegExp(
     "presubscript|presuperscript|stack sum|sum from|sum for|begin mathsize|" +
     "rightwards arrow|left parenthesis|right parenthesis|left bracket|" +
     "right bracket|vertical line|vertical strike|horizontal strike|" +
-    "identical to|cross times|plus-or-minus|end strike|asterisk times)\\b",
+    "identical to|cross times|plus-or-minus|end strike|asterisk times|" +
+    "enclose|up diagonal strike|down diagonal strike|intersection|union|" +
+    "empty set|proportional to|almost equal to|less or equal than|" +
+    "greater or equal than|apostrophe)\\b",
   "i",
 );
 const CODE1 = /`([^`\n]+)`/g;
@@ -36,11 +39,16 @@ const DOLLAR = /(?<!\\)\$(?!\$)((?:[^$\n\\]|\\.)+?)(?<!\\)\$(?!\$)/g;
 const BAD_TEXT_CONTENT =
   /^\s*(end|open|close|left|right|fraction|numerator|denominator|strike|enclose|bracket|parenthesis|table|row|cell|root|of|the)\s*[.,]?\s*$/i;
 
-const counts = { span: 0, dollar: 0, textwrap: 0, multiline: 0 };
+const counts = { span: 0, dollar: 0, textwrap: 0, multiline: 0, baretext: 0 };
 const offenders: { kind: string; snippet: string }[] = [];
 const rec = (kind: string, snippet: string) => {
   if (offenders.length < 24) offenders.push({ kind, snippet: snippet.slice(0, 90) });
 };
+
+// structural markers only — prose lines ("take the square root of both sides")
+// never contain these, so bare-text scanning is false-positive-safe
+const MARK_STRONG =
+  /\b(end enclose|end table|end cell|end row|end stack|end attributes|end style|begin mathsize|presubscript|presuperscript|end strike|fraction numerator|over denominator|end fraction|end exponent|stack sum)\b/i;
 
 function scanString(s: string) {
   for (const m of s.matchAll(CODE1)) {
@@ -74,6 +82,17 @@ function scanString(s: string) {
       }
     }
   }
+  // bare speech text outside any math delimiters (scrape lost formatting)
+  if (MARK_STRONG.test(s)) {
+    const stripped = s
+      .replace(/```[\s\S]*?(?:```|$)/g, "")
+      .replace(/`[^`\n]*`/g, "")
+      .replace(/(?<!\\)\$(?!\$)((?:[^$\n\\]|\\.)+?)(?<!\\)\$(?!\$)/g, "");
+    if (MARK_STRONG.test(stripped)) {
+      counts.baretext++;
+      rec("baretext", stripped.trim().slice(0, 80));
+    }
+  }
 }
 
 function walk(o: any, file: string) {
@@ -100,6 +119,7 @@ console.log(`  code spans polluted    : ${counts.span}`);
 console.log(`  $…$ polluted segments  : ${counts.dollar}`);
 console.log(`  \\text{} garbage        : ${counts.textwrap}`);
 console.log(`  multi-line broken spans: ${counts.multiline}`);
+console.log(`  bare speech text       : ${counts.baretext}`);
 
 let fail = false;
 if (!baseline) {
@@ -109,7 +129,7 @@ if (!baseline) {
   );
   console.log(`baseline frozen -> ${BASELINE_FILE}`);
 } else {
-  for (const k of ["span", "dollar", "textwrap", "multiline"] as const) {
+  for (const k of ["span", "dollar", "textwrap", "multiline", "baretext"] as const) {
     if (counts[k] > (baseline[k] ?? 0)) {
       fail = true;
       console.error(`  REGRESSION: ${k} ${counts[k]} > baseline ${baseline[k]}`);
