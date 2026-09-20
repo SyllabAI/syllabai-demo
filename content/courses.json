@@ -1,6 +1,6 @@
 {
   "schema": "syllabai-demo.course-registry/1.1",
-  "note": "Operator-maintained registry mirroring the 39 Edexcel IAL/IGCSE course variants scraped in SyllabAI/syllabai-resources (authoritative source). Every course has a content bundle under content/<slug>/ imported from the corpus: 'pilot' = official-tree course with the 4CH1 concept graph and learner overlay; 'full' = complete SME-native corpus import (notes, exam questions, flashcards; official-spec mapping pending upstream for all non-4CH1 courses). Slugs, levels, subjects and exam codes come from the upstream manifests — never invented.",
+  "note": "Operator-maintained registry mirroring the 49 Edexcel IAL/IGCSE course variants scraped in SyllabAI/syllabai-resources (authoritative source). Every course has a content bundle under content/<slug>/ imported from the corpus: 'pilot' = official-tree course with the 4CH1 concept graph and learner overlay; 'full' = complete SME-native corpus import (notes, exam questions, flashcards; official-spec mapping pending upstream for all non-4CH1 courses). Slugs, levels, subjects and exam codes come from the upstream manifests — never invented. T-SME-11 (2026-09-20) added the 10 missing-subject lanes: English Language A 4EA1 (3 paper lanes), Maths B 4MB1, Science Double Award Modular 2024 4XSD1 (6 unit lanes); 8 of them carry no SME topic questions (honest upstream census), all have revision notes and spec indexes.",
   "courses": [
     {
       "slug": "ial-biology-18",
@@ -312,6 +312,86 @@
       "subject": "Science",
       "label": "Science (Double Award) — Physics",
       "code": "4SD0",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing",
+      "level": "IGCSE",
+      "subject": "English Language",
+      "label": "English Language A — Paper 1",
+      "code": "4EA1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-english-language-a-16-paper-2-poetry-and-prose-texts-and-imaginative-writing",
+      "level": "IGCSE",
+      "subject": "English Language",
+      "label": "English Language A — Paper 2",
+      "code": "4EA1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-english-language-a-16-paper-3-coursework",
+      "level": "IGCSE",
+      "subject": "English Language",
+      "label": "English Language A — Paper 3 (Coursework)",
+      "code": "4EA1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-maths-b-16",
+      "level": "IGCSE",
+      "subject": "Maths",
+      "label": "Maths B",
+      "code": "4MB1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-science-double-award-modular-24-biology-unit-1",
+      "level": "IGCSE",
+      "subject": "Science",
+      "label": "Science (Double Award) — Modular 2024, Biology Unit 1",
+      "code": "4XSD1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-science-double-award-modular-24-biology-unit-2",
+      "level": "IGCSE",
+      "subject": "Science",
+      "label": "Science (Double Award) — Modular 2024, Biology Unit 2",
+      "code": "4XSD1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-science-double-award-modular-24-chemistry-unit-1",
+      "level": "IGCSE",
+      "subject": "Science",
+      "label": "Science (Double Award) — Modular 2024, Chemistry Unit 1",
+      "code": "4XSD1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-science-double-award-modular-24-chemistry-unit-2",
+      "level": "IGCSE",
+      "subject": "Science",
+      "label": "Science (Double Award) — Modular 2024, Chemistry Unit 2",
+      "code": "4XSD1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-science-double-award-modular-24-physics-unit-1",
+      "level": "IGCSE",
+      "subject": "Science",
+      "label": "Science (Double Award) — Modular 2024, Physics Unit 1",
+      "code": "4XSD1",
+      "status": "full"
+    },
+    {
+      "slug": "igcse-science-double-award-modular-24-physics-unit-2",
+      "level": "IGCSE",
+      "subject": "Science",
+      "label": "Science (Double Award) — Modular 2024, Physics Unit 2",
+      "code": "4XSD1",
       "status": "full"
     }
   ]

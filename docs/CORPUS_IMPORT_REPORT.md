@@ -88,3 +88,39 @@ Known upstream gaps (honestly inherited, never fabricated):
   inventing options;
 - 5 of 39 courses have no SME flashcard decks (further-pure, both
   accounting variants, maths-a modular foundation units).
+
+## T-SME-11 addition — missing-subjects round (2026-09-20)
+
+Upstream round `sme: T-SME-11 missing-subjects round` (`9e6b2cd`, repair
+`c2fcd88`) closed the live-SME catalog gap: 49 Edexcel course roots vs the
+39 previously mirrored. The 10 missing lanes across 3 families were ingested
+upstream through the same pipeline and are imported here from
+`main` (`c2fcd88`, 2026-09-20T06:48:02Z):
+
+- **English Language A 4EA1** — 3 paper lanes (Paper 1, Paper 2,
+  Paper 3 coursework). Papers 1–2 carry real SME topic questions
+  (100 q / 1,980 marks and 65 q / 1,950 marks, 0 missing).
+- **Maths B 4MB1** — 199 notes, 62 decks / 1,082 cards; no topic questions
+  published on SME (honest upstream census, `status_note` recorded).
+- **Science (Double Award) Modular 2024 4XSD1** — 6 unit lanes
+  (biology / chemistry / physics × unit 1 / 2), notes-only; SME publishes
+  neither topic questions nor flashcards for the new modular spec yet.
+
+Official specifications for the three quals were parsed upstream from the
+Pearson PDFs and PDF-vs-parse re-audited verbatim (4EA1 26/26, 4MB1 97/98,
+4XSD1 397/411 — residuals are PDF text-layer glyph-order artifacts, the same
+class as the established quals).
+
+| course | tree | secs | tops | spec pts | notes | notes anchored | notes placed | sets | qs | parts | parts anchored | parts resolved | decks | cards | cards linked | cards placed |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+
+| igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing | sme-native | 1 | 3 | 150 | 40 | 40 | 40 | 29 | 100 | 100 | 100 | 100 | 3 | 166 | 166 | 166 |
+| igcse-english-language-a-16-paper-2-poetry-and-prose-texts-and-imaginative-writing | sme-native | 1 | 3 | 97 | 20 | 20 | 20 | 33 | 65 | 65 | 65 | 65 | 3 | 132 | 132 | 132 |
+| igcse-english-language-a-16-paper-3-coursework | sme-native | 1 | 3 | 24 | 7 | 7 | 7 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| igcse-maths-b-16 | sme-native | 10 | 62 | 215 | 199 | 199 | 199 | 0 | 0 | 0 | 0 | 0 | 62 | 1082 | 268 | 1082 |
+| igcse-science-double-award-modular-24-biology-unit-1 | sme-native | 2 | 8 | 59 | 32 | 32 | 32 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| igcse-science-double-award-modular-24-biology-unit-2 | sme-native | 4 | 12 | 99 | 75 | 75 | 75 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| igcse-science-double-award-modular-24-chemistry-unit-1 | sme-native | 4 | 13 | 77 | 51 | 51 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| igcse-science-double-award-modular-24-chemistry-unit-2 | sme-native | 4 | 9 | 43 | 29 | 29 | 29 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| igcse-science-double-award-modular-24-physics-unit-1 | sme-native | 4 | 8 | 64 | 44 | 44 | 44 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| igcse-science-double-award-modular-24-physics-unit-2 | sme-native | 5 | 10 | 76 | 51 | 51 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

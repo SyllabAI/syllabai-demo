@@ -38,10 +38,36 @@ CONTENT = os.path.join(PROJECT, "content")
 DOCS = os.path.join(PROJECT, "docs")
 
 RAW_BASE = "https://raw.githubusercontent.com/SyllabAI/syllabai-resources/main"
-RESOURCES_SHA = "75755855f9e24391edb244f03993cc649bdf4e7a"
-RESOURCES_DATE = "2026-09-17T18:19:23Z"
+RESOURCES_SHA = "c2fcd88aea3620b9190950930d0861890d4ee524"
+RESOURCES_DATE = "2026-09-20T06:48:02Z"
 
 PILOT_SLUG = "igcse-chemistry-19"  # official 4CH1 tree + KG port
+
+# T-SME-11 lanes with no topic.json (0 topic questions on SME) cannot source
+# their exam code / syllabus version from topic.json curriculum blocks. The
+# fallbacks below are taken from the official-spec registrations in
+# Official-Specifications/{slug}/spec.json (Pearson PDFs, registered upstream
+# 2026-09-19): Maths B 4MB1 (iss 1), ELA 4EA1 (iss 6/7), SDA Modular 4XSD1 (iss 2).
+COURSE_CODE_FALLBACK = {
+    "igcse-maths-b-16": "4MB1",
+    "igcse-english-language-a-16-paper-3-coursework": "4EA1",
+    "igcse-science-double-award-modular-24-biology-unit-1": "4XSD1",
+    "igcse-science-double-award-modular-24-biology-unit-2": "4XSD1",
+    "igcse-science-double-award-modular-24-chemistry-unit-1": "4XSD1",
+    "igcse-science-double-award-modular-24-chemistry-unit-2": "4XSD1",
+    "igcse-science-double-award-modular-24-physics-unit-1": "4XSD1",
+    "igcse-science-double-award-modular-24-physics-unit-2": "4XSD1",
+}
+SYLLABUS_FALLBACK = {
+    "igcse-maths-b-16": "2016",
+    "igcse-english-language-a-16-paper-3-coursework": "2016",
+    "igcse-science-double-award-modular-24-biology-unit-1": "2024",
+    "igcse-science-double-award-modular-24-biology-unit-2": "2024",
+    "igcse-science-double-award-modular-24-chemistry-unit-1": "2024",
+    "igcse-science-double-award-modular-24-chemistry-unit-2": "2024",
+    "igcse-science-double-award-modular-24-physics-unit-1": "2024",
+    "igcse-science-double-award-modular-24-physics-unit-2": "2024",
+}
 
 UPSTREAM_SCHEMAS = [
     "syllabai.sme-revision-note/1.0",
@@ -463,13 +489,14 @@ def main():
                 misconceptionStates=[],
             )
 
-        # ── manifest + write ─────────────────────────────────────────────
+        # ── manifest + write ─────────────────────────────────────────
         course_code = ""
         for t in topics_raw:
             cur = t.get("curriculum", {})
             course_code = cur.get("code") or cur.get("exam_code") or ""
             if course_code:
                 break
+        course_code = course_code or COURSE_CODE_FALLBACK.get(slug, "")
         spec_points = [n for n in curriculum["nodes"] if n["family"] == "SPEC_POINT"]
 
         manifest = OrderedDict(
@@ -488,7 +515,7 @@ def main():
                 syllabusVersion=next(
                 iter(sorted({str(t.get("curriculum", {}).get("syllabus_version", "") or "") for t in topics_raw} - {""})),
                 "",
-            ),
+            ) or SYLLABUS_FALLBACK.get(slug, ""),
             ),
             license="Operator-authorized SME corpus — see LICENSE-DATA.md in syllabai-resources (Amendment 2026-09-17). Demo re-use only.",
             counts=OrderedDict(
@@ -594,6 +621,9 @@ def main():
         (re.compile(r"-foundation-unit-(\d+)$"), lambda m: f" — Foundation, Unit {m.group(1)}"),
         (re.compile(r"-higher-unit-(\d+)$"), lambda m: f" — Higher, Unit {m.group(1)}"),
     ]
+    # T-SME-11 additions (ELA paper lanes, Maths B, SDA Modular 2024)
+    ELA_PAPER = {"1": "Paper 1", "2": "Paper 2", "3": "Paper 3 (Coursework)"}
+    SDA_MOD = re.compile(r"igcse-science-double-award-modular-24-(biology|chemistry|physics)-unit-(\d)$")
     MATHS_UNIT = {
         "pure-1": "Pure Mathematics 1", "pure-2": "Pure Mathematics 2",
         "pure-3": "Pure Mathematics 3", "pure-4": "Pure Mathematics 4",
@@ -622,6 +652,18 @@ def main():
                 if mm:
                     label = f"{subject}{fn(mm)}"
                     break
+        if label is None:
+            m = re.match(r"igcse-english-language-a-16-paper-(\d)", slug)
+            if m and m.group(1) in ELA_PAPER:
+                label = f"English Language A — {ELA_PAPER[m.group(1)]}"
+        if label is None:
+            m = re.match(r"igcse-maths-b-\d+$", slug)
+            if m:
+                label = "Maths B"
+        if label is None:
+            m = SDA_MOD.search(slug)
+            if m:
+                label = f"Science (Double Award) — Modular 2024, {m.group(1).capitalize()} Unit {m.group(2)}"
         if label is None:
             m = re.match(r"igcse-science-double-award-17-(biology|chemistry|physics)$", slug)
             if m:
