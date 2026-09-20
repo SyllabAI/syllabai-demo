@@ -13,8 +13,9 @@
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "fs";
 
-const CONTENT = "/home/z/my-project/content";
-const BASELINE_FILE = "/home/z/my-project/speech-baseline.json";
+// relative paths — this runs on Vercel via prebuild too
+const CONTENT = process.cwd() + "/content";
+const BASELINE_FILE = process.cwd() + "/speech-baseline.json";
 
 const MARK = new RegExp(
   "\\b(open parentheses|close parentheses|open bracket|close bracket|" +
