@@ -78,6 +78,18 @@ const MACRO_NAMES = [
   "mathsf", "mathtt", "boldsymbol", "pmb",
   // structure
   "sqrt", "frac", "dfrac", "tfrac", "binom", "dbinom", "tbinom", "over",
+  // TeX primitives / delimiters emitted by MathML→LaTeX converters — these
+  // MUST be known, else fixGluedMacros splits them ("\left" → "\le ft"!)
+  "left", "right", "begin", "end", "middle", "open", "close",
+  "cancel", "bcancel", "xcancel", "sout", "overbrace", "underbrace",
+  "xrightarrow", "xleftarrow", "xleftrightarrow", "substack",
+  "displaystyle", "textstyle", "scriptstyle", "scriptscriptstyle",
+  "limits", "nolimits", "big", "Big", "bigg", "Bigg",
+  "bigl", "bigr", "Bigl", "Bigr", "biggl", "biggr", "bigm", "Bigm",
+  "mathopen", "mathclose", "mathop", "mathbin", "mathrel", "mathord",
+  "lvert", "rvert", "lVert", "rVert", "vert", "Vert", "lbrace", "rbrace",
+  "operatorname", "hspace", "kern", "mkern", "phantom", "hphantom",
+  "vphantom", "llap", "rlap", "not", "pmb", "middle", "tag",
   // misc symbols
   "langle", "rangle", "angle", "perp", "parallel", "mid", "nmid",
   "therefore", "because", "forall", "exists", "neg", "wp", "Re", "Im",
