@@ -28,6 +28,7 @@
  */
 
 import katex from "katex";
+import { looksLikeSpeechText, speechToTexSafe } from "./speech-math";
 
 /** KaTeX control words that appear (or plausibly appear) glued to variables
  * in the corpus. Matched longest-first, so e.g. `\leq` wins over `\le`,
@@ -116,6 +117,12 @@ export function fixGluedMacros(tex: string): string {
  *     escaped literal underscores — a bare `_` is a broken subscript.
  */
 export function sanitizeMathTex(tex: string): string {
+  // MathML speech text that slipped through as $…$ (remark-math saw it as
+  // math, so the code-span path never touched it) — convert or fall through
+  if (looksLikeSpeechText(tex)) {
+    const converted = speechToTexSafe(tex);
+    if (converted !== null) return converted;
+  }
   return fixGluedMacros(tex)
     .replace(/(?<!\\)%/g, "\\%")
     .replace(/_{2,}/g, (run) => run.replace(/_/g, "\\_"));
@@ -148,17 +155,49 @@ function looksLikeProse(tex: string): boolean {
 }
 
 /**
+ * Inline code spans carrying MathML speech text ("fraction numerator … end
+ * fraction") are rendered today as long literal code runs — convert them to
+ * proper KaTeX math. Strictly gated: only spans that look like speech AND
+ * convert to parseable LaTeX become math; everything else stays untouched.
+ * Fenced code blocks (``` … ```) are never modified.
+ */
+const INLINE_CODE_RE = /`([^`\n]+)`/g;
+const FENCE_SPLIT_RE = /(```[\s\S]*?(?:```|$))/g;
+
+function convertSpeechCodeSpans(src: string): string {
+  if (!src.includes("`")) return src;
+  return src
+    .split(FENCE_SPLIT_RE)
+    .map((part, i) => {
+      if (i % 2 === 1) return part; // captured fence segment — untouched
+      return part.replace(INLINE_CODE_RE, (m, inner: string) => {
+        if (!looksLikeSpeechText(inner)) return m;
+        const tex = speechToTexSafe(inner);
+        return tex === null ? m : `$${tex}$`;
+      });
+    })
+    .join("");
+}
+
+/**
  * Normalize one markdown string's math content in place.
  * Cheap no-op for strings without `$` / `\(` (the vast majority of prose).
  */
 export function normalizeCorpusMath(src: string): string {
-  if (!src.includes("$") && !src.includes("\\(")) return src;
+  const hasBacktick = src.includes("`");
+  const hasDollar = src.includes("$");
+  const hasParen = src.includes("\\(");
+  if (!hasBacktick && !hasDollar && !hasParen) return src;
 
-  let out = src.replace(DISPLAY_RE, (_m, inner: string) => `$$${fixGluedMacros(inner)}$$`);
-  out = out.replace(
-    INLINE_RE,
-    (_m, inner: string) => `$${fixGluedMacros(inner)}$`,
-  );
+  let out = hasBacktick ? convertSpeechCodeSpans(src) : src;
+
+  const fixInner = (x: string): string => {
+    if (!looksLikeSpeechText(x)) return fixGluedMacros(x);
+    // speech text inside $…$ (694 corpus segments) — convert or keep
+    return speechToTexSafe(x) ?? fixGluedMacros(x);
+  };
+  out = out.replace(DISPLAY_RE, (_m, x: string) => `$$${fixInner(x)}$$`);
+  out = out.replace(INLINE_RE, (_m, x: string) => `$${fixInner(x)}$`);
   // \(…) → $…$ only when the content is genuine (KaTeX-parseable) math;
   // remark-math has no \( delimiter, so these currently render as literal text.
   if (out.includes("\\(")) {
