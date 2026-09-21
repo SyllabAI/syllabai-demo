@@ -23,6 +23,7 @@ import {
   LayoutDashboard,
   Menu,
   PanelLeftClose,
+  PanelLeftOpen,
   ScrollText,
   Target,
   X,
@@ -91,33 +92,36 @@ export function CourseShell({
     },
   ];
 
+  // NOTE: the collapsed state renders a dedicated 44px rail (same pattern as
+  // resource-panel.tsx) — the "Show menu" affordance must live OUTSIDE the
+  // collapsed column; the previous w-0/overflow-hidden collapse swallowed its
+  // own re-open button, so the sidebar could never be toggled back open.
+  const rail = (
+    <aside
+      className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-11 shrink-0 flex-col items-center border-r bg-background pt-3 lg:flex"
+      aria-label="Course navigation"
+    >
+      <Button variant="ghost" size="icon" className="size-8" onClick={() => setHidden(false)} aria-label="Show menu">
+        <PanelLeftOpen className="size-4" aria-hidden />
+      </Button>
+    </aside>
+  );
+
   const sidebar = (
     <div className="flex h-full flex-col">
       <div className="flex items-center justify-between px-4 py-3">
-        {hidden ? (
-          <Button variant="ghost" size="icon" className="size-8" onClick={() => setHidden(false)} aria-label="Show menu">
-            <Menu className="size-4" aria-hidden />
-          </Button>
-        ) : (
-          <>
-            <span className="text-sm font-semibold tracking-tight">{data.course.label ?? data.course.subject}</span>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hidden h-8 gap-1.5 px-2 text-xs text-muted-foreground lg:inline-flex"
-              onClick={() => setHidden(true)}
-            >
-              <PanelLeftClose className="size-4" aria-hidden /> Hide menu
-            </Button>
-            <Button variant="ghost" size="icon" className="size-8 lg:hidden" onClick={() => setOpen(false)} aria-label="Close menu">
-              <X className="size-4" aria-hidden />
-            </Button>
-          </>
-        )}
+        <span className="text-sm font-semibold tracking-tight">{data.course.label ?? data.course.subject}</span>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-8 gap-1.5 px-2 text-xs text-muted-foreground"
+          onClick={() => setHidden(true)}
+        >
+          <PanelLeftClose className="size-4" aria-hidden /> Hide menu
+        </Button>
       </div>
 
-      {!hidden && (
-        <div className="min-h-0 flex-1 overflow-y-auto px-3 pb-6">
+      <div className="min-h-0 flex-1 overflow-y-auto px-3 pb-6">
           <nav aria-label="Course sections" className="space-y-4">
             {navGroups.map((g) => (
               <div key={g.label}>
@@ -174,8 +178,7 @@ export function CourseShell({
               </div>
             ))}
           </nav>
-        </div>
-      )}
+      </div>
     </div>
   );
 
@@ -198,16 +201,18 @@ export function CourseShell({
           </div>
         )}
 
-        {/* desktop sidebar — the one and only course sidebar */}
-        <aside
-          className={cn(
-            "sticky top-14 hidden h-[calc(100vh-3.5rem)] shrink-0 border-r bg-background transition-all lg:block",
-            hidden ? "w-0 overflow-hidden border-r-0" : "w-64",
-          )}
-          aria-label="Course navigation"
-        >
-          {sidebar}
-        </aside>
+        {/* desktop sidebar — the one and only course sidebar; collapses to a
+            slim rail whose "Show menu" button stays reachable */}
+        {hidden ? (
+          rail
+        ) : (
+          <aside
+            className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 border-r bg-background lg:block"
+            aria-label="Course navigation"
+          >
+            {sidebar}
+          </aside>
+        )}
 
         {/* content column */}
         <div className="min-w-0 flex-1">
