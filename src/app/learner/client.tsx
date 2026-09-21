@@ -17,9 +17,9 @@ import type { SimLearnerState } from "@/lib/contracts";
 import { SimulatedBanner } from "@/components/provenance";
 
 const bandClass: Record<string, string> = {
-  SECURE: "bg-emerald-500",
-  DEVELOPING: "bg-amber-500",
-  LOW: "bg-rose-500",
+  SECURE: "bg-success",
+  DEVELOPING: "bg-warn",
+  LOW: "bg-destructive",
 };
 
 export function LearnerClient({ state }: { state: SimLearnerState }) {
@@ -130,7 +130,7 @@ export function LearnerClient({ state }: { state: SimLearnerState }) {
               <div className="flex items-center justify-between gap-2">
                 <span className="font-medium leading-snug">{m.title}</span>
                 {m.active && (
-                  <Badge variant="outline" className="shrink-0 border-rose-300 text-[10px] text-rose-700 dark:text-rose-400">
+                  <Badge variant="outline" className="shrink-0 border-destructive/30 text-[10px] text-destructive">
                     active
                   </Badge>
                 )}

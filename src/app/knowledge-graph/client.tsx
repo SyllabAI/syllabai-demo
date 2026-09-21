@@ -146,7 +146,7 @@ export function KnowledgeGraphClient({ courses }: { courses: CourseLite[] }) {
         {counts && (
           <Badge
             variant="outline"
-            className="hidden font-mono text-[10px] text-emerald-700 xl:inline"
+            className="hidden font-mono text-[10px] text-success xl:inline"
           >
             {counts.nodes} nodes · {counts.edges} edges · {counts.specPoints} spec points
           </Badge>

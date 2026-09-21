@@ -39,6 +39,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
@@ -131,13 +132,16 @@ export function AppShell({
             experimental playground · 4CH1 pilot corpus
           </span>
 
-          {/* SME header parity: persistent primary CTA (Task 21-b) */}
-          <Button asChild size="sm" className="ml-auto hidden gap-1.5 sm:inline-flex">
-            <Link href="/dashboard">
-              <Zap className="size-3.5" aria-hidden />
-              Start studying
-            </Link>
-          </Button>
+          {/* SME header parity: persistent primary CTA (Task 21-b) + dual-theme toggle */}
+          <div className="ml-auto flex items-center gap-1.5">
+            <ThemeToggle />
+            <Button asChild size="sm" className="hidden gap-1.5 sm:inline-flex">
+              <Link href="/dashboard">
+                <Zap className="size-3.5" aria-hidden />
+                Start studying
+              </Link>
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -149,6 +153,7 @@ export function AppShell({
       {/* footer — provenance + demo discipline live here, not in the learner path */}
       <footer className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center gap-1.5 border-t pt-4">
+          <ThemeToggle variant="row" />
           <Badge variant="outline" className="gap-1 text-[10px] font-normal">
             <Database className="size-3" aria-hidden />
             {config.dataMode}

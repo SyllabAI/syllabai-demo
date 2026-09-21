@@ -203,7 +203,7 @@ export function TutorChat() {
               }
             >
               {m.role === "assistant" && m.refused && (
-                <Badge variant="outline" className="border-amber-300 text-[10px] text-amber-700 dark:text-amber-400">
+                <Badge variant="outline" className="border-warn/30 text-[10px] text-warn">
                   refused — insufficient evidence
                 </Badge>
               )}

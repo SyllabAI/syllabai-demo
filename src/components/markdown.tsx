@@ -40,22 +40,22 @@ const CALLOUT_STYLES: { match: RegExp; label: string; className: string }[] = [
   {
     match: /exam hint/i,
     label: "Exam hint",
-    className: "border-l-amber-500 bg-amber-500/10",
+    className: "border-l-warn bg-warn/10",
   },
   {
     match: /worked example/i,
     label: "Worked example",
-    className: "border-l-emerald-600 bg-emerald-600/10",
+    className: "border-l-success bg-success/10",
   },
   {
     match: /case study/i,
     label: "Case study",
-    className: "border-l-violet-500 bg-violet-500/10",
+    className: "border-l-cat bg-cat/10",
   },
   {
     match: /top tip|top tips/i,
     label: "Top tip",
-    className: "border-l-sky-500 bg-sky-500/10",
+    className: "border-l-info bg-info/10",
   },
 ];
 

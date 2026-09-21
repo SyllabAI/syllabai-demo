@@ -40,7 +40,7 @@ export default async function FlashcardsIndexPage({
       />
 
       <div className="mt-6 space-y-2">
-        <Badge variant="outline" className="border-violet-300 text-[10px] text-violet-700 dark:text-violet-300">
+        <Badge variant="outline" className="border-info/30 text-[10px] text-info">
           RULE_DERIVED corpus content
         </Badge>
         <p className="max-w-3xl text-xs leading-relaxed text-muted-foreground">
@@ -56,16 +56,16 @@ export default async function FlashcardsIndexPage({
           <Link
             key={d.subtopic.code}
             href={`${base}/flashcards/${d.subtopic.code}`}
-            className="group rounded-lg border bg-card px-4 py-3 transition-colors hover:border-primary/40"
+            className="group min-w-0 rounded-lg border bg-card px-4 py-3 transition-colors hover:border-primary/40"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex min-w-0 items-center gap-2">
               <CircleHelp className="size-4 shrink-0 text-primary" aria-hidden />
               <p className="min-w-0 flex-1 truncate text-sm font-semibold group-hover:text-primary">
                 {d.subtopic.title}
               </p>
               <ArrowRight className="size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" aria-hidden />
             </div>
-            <p className="mt-1 text-xs text-muted-foreground">
+            <p className="mt-1 truncate text-xs text-muted-foreground">
               <NumberedLabel number={d.topic.number} title={d.topic.title} /> · {d.count} card
               {d.count === 1 ? "" : "s"}
             </p>

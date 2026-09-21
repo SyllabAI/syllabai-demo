@@ -208,7 +208,7 @@ export function QuestionPlayer({
                 </Badge>
               )}
               {isAttempted(q) && (
-                <Badge variant="outline" className="border-emerald-300 text-[10px] text-emerald-700 dark:text-emerald-400">
+                <Badge variant="outline" className="border-success/30 text-[10px] text-success">
                   <CheckCircle2 className="mr-0.5 size-3" aria-hidden /> attempted
                 </Badge>
               )}
@@ -393,7 +393,7 @@ function QuestionBody({
           </>
         )}
         {recorded && (
-          <span className="inline-flex items-center gap-1 text-xs text-emerald-700 dark:text-emerald-400">
+          <span className="inline-flex items-center gap-1 text-xs text-success">
             <CheckCircle2 className="size-3.5" aria-hidden /> {recorded.score}/{recorded.max} recorded
           </span>
         )}
@@ -565,7 +565,7 @@ function TypedAnswerWorkspace({
         </Badge>
         <span className="text-[11px] text-muted-foreground">saved in this browser</span>
         {justSaved && (
-          <span className="inline-flex items-center gap-1 text-[11px] text-emerald-700 dark:text-emerald-400">
+          <span className="inline-flex items-center gap-1 text-[11px] text-success">
             <CheckCircle2 className="size-3" aria-hidden /> saved
           </span>
         )}
@@ -608,7 +608,7 @@ function TypedAnswerWorkspace({
       </div>
 
       {mark.kind === "error" && (
-        <p className="mt-2 rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs text-amber-900 dark:text-amber-200">
+        <p className="mt-2 rounded-md border border-warn/30 bg-warn/10 px-3 py-2 text-xs text-warn-ink">
           {mark.message}
         </p>
       )}
@@ -636,7 +636,7 @@ function TypedAnswerWorkspace({
               </Button>
             )}
             {applied && (
-              <span className="ml-auto inline-flex items-center gap-1 text-xs text-emerald-700 dark:text-emerald-400">
+              <span className="ml-auto inline-flex items-center gap-1 text-xs text-success">
                 <CheckCircle2 className="size-3.5" aria-hidden /> applied
               </span>
             )}
@@ -645,11 +645,11 @@ function TypedAnswerWorkspace({
             {mark.points.map((pt, i) => (
               <li key={i} className="flex items-start gap-2 text-[13px] leading-relaxed">
                 {pt.achieved === "yes" ? (
-                  <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden />
+                  <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden />
                 ) : pt.achieved === "no" ? (
-                  <XCircle className="mt-0.5 size-4 shrink-0 text-rose-600" aria-hidden />
+                  <XCircle className="mt-0.5 size-4 shrink-0 text-destructive" aria-hidden />
                 ) : (
-                  <MinusCircle className="mt-0.5 size-4 shrink-0 text-amber-600" aria-hidden />
+                  <MinusCircle className="mt-0.5 size-4 shrink-0 text-warn" aria-hidden />
                 )}
                 <span>
                   <span className="font-medium">{pt.point}</span>
@@ -769,7 +769,7 @@ function McqPart({
         <>
           <p className="text-[13px] font-medium">Choose your answer</p>
           {letterOnly && !optionsVisible && (
-            <div className="rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+            <div className="rounded-md border border-warn/30 bg-warn/10 px-3 py-2 text-xs leading-relaxed text-warn-ink">
               The option artwork for this question (diagrams on the source site) was not captured
               by the authorized import — the demo never fabricates content. Refer to your past
               paper, or use <span className="font-medium">Question help</span> to work through it
@@ -800,9 +800,9 @@ function McqPart({
                     "flex cursor-pointer items-start gap-3 rounded-lg border px-3 py-2.5 transition-colors",
                     submitted && "cursor-default",
                     showWrong
-                      ? "border-rose-400 bg-rose-500/10"
+                      ? "border-destructive/40 bg-destructive/10"
                       : showCorrect
-                        ? "border-emerald-400 bg-emerald-500/10"
+                        ? "border-success/40 bg-success/10"
                         : isChosen
                           ? "border-primary bg-primary/5"
                           : "hover:border-primary/50",
@@ -812,9 +812,9 @@ function McqPart({
                     className={cn(
                       "flex size-7 shrink-0 items-center justify-center rounded-full border text-[13px] font-semibold",
                       showWrong
-                        ? "border-rose-400 bg-rose-500/15 text-rose-700 dark:text-rose-400"
+                        ? "border-destructive/40 bg-destructive/15 text-destructive"
                         : showCorrect
-                          ? "border-emerald-400 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                          ? "border-success/40 bg-success/15 text-success"
                           : isChosen
                             ? "border-primary bg-primary/10 text-primary"
                             : "text-primary",
@@ -827,9 +827,9 @@ function McqPart({
                     <Markdown>{o.textMd}</Markdown>
                   </span>
                   {showCorrect && (
-                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" aria-hidden />
+                    <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden />
                   )}
-                  {showWrong && <XCircle className="mt-0.5 size-4 shrink-0 text-rose-600" aria-hidden />}
+                  {showWrong && <XCircle className="mt-0.5 size-4 shrink-0 text-destructive" aria-hidden />}
                 </div>
               );
             })}
@@ -850,9 +850,9 @@ function McqPart({
                     className={cn(
                       "flex size-9 items-center justify-center rounded-full border text-sm font-semibold transition-colors",
                       showWrong
-                        ? "border-rose-400 bg-rose-500/15 text-rose-700 dark:text-rose-400"
+                        ? "border-destructive/40 bg-destructive/15 text-destructive"
                         : showCorrect
-                          ? "border-emerald-400 bg-emerald-500/15 text-emerald-700 dark:text-emerald-400"
+                          ? "border-success/40 bg-success/15 text-success"
                           : isChosen
                             ? "border-primary bg-primary/10 text-primary"
                             : "border-border text-primary hover:border-primary/60 hover:bg-primary/5",
@@ -875,8 +875,8 @@ function McqPart({
                   className={cn(
                     "text-[13px] font-medium",
                     chosen === correctLabel
-                      ? "text-emerald-700 dark:text-emerald-400"
-                      : "text-rose-700 dark:text-rose-400",
+                      ? "text-success"
+                      : "text-destructive",
                   )}
                 >
                   {chosen === correctLabel
@@ -917,7 +917,7 @@ function McqPart({
           )}
         </>
       ) : (
-        <div className="rounded-md border border-amber-300 bg-amber-500/10 px-3 py-2 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+        <div className="rounded-md border border-warn/30 bg-warn/10 px-3 py-2 text-xs leading-relaxed text-warn-ink">
           This is a multiple-choice question, but its option content and answer key were not
           captured by the authorized import — the demo never fabricates content. Use{" "}
           <button className="font-medium underline underline-offset-2" onClick={onViewModel}>

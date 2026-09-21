@@ -89,10 +89,10 @@ export function DeckPlayer({
           {pos + 1}/{order.length}
         </span>
         <div className="ml-auto flex flex-wrap items-center gap-2">
-          <Badge variant="outline" className="border-rose-200 text-[10px] text-rose-700 dark:text-rose-300">
+          <Badge variant="outline" className="border-destructive/30 text-[10px] text-destructive">
             {stillLearning} still learning
           </Badge>
-          <Badge variant="outline" className="border-emerald-200 text-[10px] text-emerald-700 dark:text-emerald-300">
+          <Badge variant="outline" className="border-success/30 text-[10px] text-success">
             {know} know
           </Badge>
           <Button size="sm" variant="ghost" className="gap-1.5 text-xs" onClick={shuffle}>
@@ -171,17 +171,17 @@ export function DeckPlayer({
         <Button
           size="lg"
           variant="outline"
-          className={cn("border-rose-200 text-rose-700 hover:bg-rose-500/10 dark:text-rose-300")}
+          className={cn("border-destructive/30 text-destructive hover:bg-destructive/10")}
           disabled={!flipped}
           onClick={() => advance("still-learning")}
         >
           Still learning
         </Button>
-        {/* emerald-600 on white measured 3.67:1 — below AA for 14px text
-            (P1-4); emerald-700 is 5.5:1 */}
+        {/* Know button: bg-success resolves to the theme's action-green
+            (SME emerald-700 5.5:1 / QG fern) — WCAG AA on white (P1-4 fix) */}
         <Button
           size="lg"
-          className="bg-emerald-700 text-white hover:bg-emerald-800"
+          className="bg-success text-white hover:bg-success/90"
           disabled={!flipped}
           onClick={() => advance("know")}
         >

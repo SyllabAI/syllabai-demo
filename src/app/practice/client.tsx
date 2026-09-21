@@ -231,7 +231,7 @@ export function PracticeClient({ topics }: Props) {
                     <span className="font-mono text-[10px] text-muted-foreground">
                       {l.partId.slice(0, 14)}…
                     </span>
-                    <span className={l.marks / Math.max(l.possible, 1) >= 0.5 ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}>
+                    <span className={l.marks / Math.max(l.possible, 1) >= 0.5 ? "text-success" : "text-destructive"}>
                       {l.marks}/{l.possible}
                     </span>
                   </div>

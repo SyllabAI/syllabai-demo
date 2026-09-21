@@ -156,7 +156,9 @@ export function CourseShell({
                             onClick={() => setOpen(false)}
                             aria-current={active ? "page" : undefined}
                             className={cn(
-                              "flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors",
+                              // course-nav-item: QG theme hooks its fern-spine
+                              // active treatment on this class (globals.css)
+                              "course-nav-item flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors",
                               active
                                 ? "bg-primary/10 font-medium text-primary"
                                 : "text-foreground/80 hover:bg-muted hover:text-foreground",
@@ -286,7 +288,7 @@ function MobileDrawerInner({
                           onClick={onNavigate}
                           aria-current={active ? "page" : undefined}
                           className={cn(
-                            "flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors",
+                            "course-nav-item flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors",
                             active
                               ? "bg-primary/10 font-medium text-primary"
                               : "text-foreground/80 hover:bg-muted hover:text-foreground",

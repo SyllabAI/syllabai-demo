@@ -5,10 +5,10 @@ import { cn } from "@/lib/utils";
 export function ValidationBadge({ status }: { status: string | null | undefined }) {
   if (!status) return null;
   const map: Record<string, string> = {
-    VALIDATED: "border-emerald-300 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
-    SUGGESTED: "border-amber-300 bg-amber-500/10 text-amber-700 dark:text-amber-400",
-    FLAGGED: "border-rose-300 bg-rose-500/10 text-rose-700 dark:text-rose-400",
-    REJECTED: "border-rose-300 bg-rose-500/10 text-rose-700 dark:text-rose-400",
+    VALIDATED: "border-success/30 bg-success/10 text-success",
+    SUGGESTED: "border-warn/30 bg-warn/10 text-warn",
+    FLAGGED: "border-destructive/30 bg-destructive/10 text-destructive",
+    REJECTED: "border-destructive/30 bg-destructive/10 text-destructive",
   };
   return (
     <Badge variant="outline" className={cn("text-[10px]", map[status])}>
@@ -21,11 +21,11 @@ export function ValidationBadge({ status }: { status: string | null | undefined 
 export function ProvenanceBadge({ tier }: { tier: string | null | undefined }) {
   if (!tier) return null;
   const map: Record<string, string> = {
-    RULE_DERIVED: "border-sky-300 bg-sky-500/10 text-sky-700 dark:text-sky-400",
-    AI_SUGGESTED: "border-amber-300 bg-amber-500/10 text-amber-700 dark:text-amber-400",
-    HUMAN_VALIDATED: "border-emerald-300 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
-    DEMO_DERIVED: "border-violet-300 bg-violet-500/10 text-violet-700 dark:text-violet-400",
-    SIMULATED: "border-fuchsia-300 bg-fuchsia-500/10 text-fuchsia-700 dark:text-fuchsia-400",
+    RULE_DERIVED: "border-info/30 bg-info/10 text-info",
+    AI_SUGGESTED: "border-warn/30 bg-warn/10 text-warn",
+    HUMAN_VALIDATED: "border-success/30 bg-success/10 text-success",
+    DEMO_DERIVED: "border-cat/30 bg-cat/10 text-cat",
+    SIMULATED: "border-sim/30 bg-sim/10 text-sim",
   };
   return (
     <Badge variant="outline" className={cn("text-[10px]", map[tier])}>
@@ -46,8 +46,8 @@ export function SpecChip({ code }: { code: string }) {
 /** Persistent banner for simulated (non-governed) surfaces. */
 export function SimulatedBanner({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-4 flex items-start gap-2 rounded-md border border-fuchsia-300 bg-fuchsia-500/10 px-3 py-2 text-xs text-fuchsia-900 dark:text-fuchsia-200">
-      <Badge variant="outline" className="shrink-0 border-fuchsia-400 text-[10px] text-fuchsia-700 dark:text-fuchsia-300">
+    <div className="mb-4 flex items-start gap-2 rounded-md border border-sim/30 bg-sim/10 px-3 py-2 text-xs text-sim">
+      <Badge variant="outline" className="shrink-0 border-sim/40 text-[10px] text-sim">
         SIMULATED
       </Badge>
       <p className="leading-relaxed">{children}</p>

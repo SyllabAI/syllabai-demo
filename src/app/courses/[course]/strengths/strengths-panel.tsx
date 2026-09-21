@@ -98,7 +98,7 @@ export function StrengthsPanel({ course, data }: { course: Course; data: Strengt
       <div className="flex items-center gap-2">
         <Compass className="size-4 text-primary" aria-hidden />
         <h2 className="text-base font-semibold">Strengths &amp; weaknesses by sub-topic</h2>
-        <Badge variant="outline" className="border-fuchsia-300 text-[10px] text-fuchsia-700 dark:text-fuchsia-300">
+        <Badge variant="outline" className="border-sim/30 text-[10px] text-sim">
           SIMULATED overlay
         </Badge>
       </div>
@@ -125,9 +125,9 @@ export function StrengthsPanel({ course, data }: { course: Course; data: Strengt
                   variant="outline"
                   className={cn(
                     "text-[10px]",
-                    band === "strength" && "border-emerald-300 text-emerald-700 dark:text-emerald-400",
-                    band === "developing" && "border-amber-300 text-amber-700 dark:text-amber-400",
-                    band === "weakness" && "border-rose-300 text-rose-700 dark:text-rose-400",
+                    band === "strength" && "border-success/30 text-success",
+                    band === "developing" && "border-warn/30 text-warn",
+                    band === "weakness" && "border-destructive/30 text-destructive",
                   )}
                 >
                   {band === "strength" ? "strength" : band === "developing" ? "developing" : "weak spot"}
@@ -141,7 +141,7 @@ export function StrengthsPanel({ course, data }: { course: Course; data: Strengt
                 <div
                   className={cn(
                     "h-full rounded-full transition-all duration-500",
-                    band === "strength" ? "bg-emerald-500" : band === "developing" ? "bg-amber-500" : "bg-rose-500",
+                    band === "strength" ? "bg-success" : band === "developing" ? "bg-warn" : "bg-destructive",
                   )}
                   style={{ width: `${Math.max(value, 4)}%` }}
                 />
