@@ -9,6 +9,11 @@
  *     recon word-artifacts: intersection/union/apostrophe/ordinals).
  *   - Any future SME import that skips the aria-label→MathML→LaTeX
  *     extraction blows past the baseline and FAILS the build.
+ *
+ * T-SME-23c adds a 6th dimension: `danglingRefs` — every qset
+ * relatedNoteIds entry must resolve within the SAME package's notes.json
+ * (baseline threshold 0 via `?? 0`; hard referential-integrity gate).
+ *
  * Run: bun scripts/verify_corpus_23a.ts   (wired as `prebuild`)
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "fs";
@@ -39,7 +44,7 @@ const DOLLAR = /(?<!\\)\$(?!\$)((?:[^$\n\\]|\\.)+?)(?<!\\)\$(?!\$)/g;
 const BAD_TEXT_CONTENT =
   /^\s*(end|open|close|left|right|fraction|numerator|denominator|strike|enclose|bracket|parenthesis|table|row|cell|root|of|the)\s*[.,]?\s*$/i;
 
-const counts = { span: 0, dollar: 0, textwrap: 0, multiline: 0, baretext: 0 };
+const counts = { span: 0, dollar: 0, textwrap: 0, multiline: 0, baretext: 0, danglingRefs: 0 };
 const offenders: { kind: string; snippet: string }[] = [];
 const rec = (kind: string, snippet: string) => {
   if (offenders.length < 24) offenders.push({ kind, snippet: snippet.slice(0, 90) });
@@ -110,6 +115,31 @@ for (const pkg of readdirSync(CONTENT)) {
 }
 for (const f of files) walk(JSON.parse(readFileSync(f, "utf-8")), f);
 
+// ── 23c: relatedNoteIds referential integrity (same-package resolution) ──
+const danglingSamples: string[] = [];
+for (const pkg of readdirSync(CONTENT)) {
+  const qPath = `${CONTENT}/${pkg}/questions.json`;
+  const nPath = `${CONTENT}/${pkg}/notes.json`;
+  if (!existsSync(qPath) || !existsSync(nPath)) continue;
+  const noteIds = new Set(
+    (JSON.parse(readFileSync(nPath, "utf-8")) as Array<{ noteId?: string }>)
+      .map((n) => n.noteId)
+      .filter((v): v is string => typeof v === "string"),
+  );
+  const qsets = JSON.parse(readFileSync(qPath, "utf-8")) as Array<{
+    slug?: string; relatedNoteIds?: string[];
+  }>;
+  for (const s of qsets) {
+    for (const rid of s.relatedNoteIds ?? []) {
+      if (!noteIds.has(rid)) {
+        counts.danglingRefs++;
+        if (danglingSamples.length < 12)
+          danglingSamples.push(`${pkg} :: ${s.slug ?? "?"} → ${rid}`);
+      }
+    }
+  }
+}
+
 const baseline = existsSync(BASELINE_FILE)
   ? JSON.parse(readFileSync(BASELINE_FILE, "utf-8"))
   : null;
@@ -120,6 +150,7 @@ console.log(`  $…$ polluted segments  : ${counts.dollar}`);
 console.log(`  \\text{} garbage        : ${counts.textwrap}`);
 console.log(`  multi-line broken spans: ${counts.multiline}`);
 console.log(`  bare speech text       : ${counts.baretext}`);
+console.log(`  dangling relatedNoteIds: ${counts.danglingRefs}`);
 
 let fail = false;
 if (!baseline) {
@@ -129,10 +160,10 @@ if (!baseline) {
   );
   console.log(`baseline frozen -> ${BASELINE_FILE}`);
 } else {
-  for (const k of ["span", "dollar", "textwrap", "multiline", "baretext"] as const) {
+  for (const k of ["span", "dollar", "textwrap", "multiline", "baretext", "danglingRefs"] as const) {
     if (counts[k] > (baseline[k] ?? 0)) {
       fail = true;
-      console.error(`  REGRESSION: ${k} ${counts[k]} > baseline ${baseline[k]}`);
+      console.error(`  REGRESSION: ${k} ${counts[k]} > baseline ${baseline[k] ?? 0}`);
     }
   }
 }
@@ -140,6 +171,7 @@ if (!baseline) {
 if (fail) {
   console.error("\nGATE FAILED — pollution above baseline:");
   for (const o of offenders) console.error(`  [${o.kind}] ${o.snippet}`);
+  for (const d of danglingSamples) console.error(`  [danglingRefs] ${d}`);
   process.exit(1);
 }
 console.log("\nCORPUS GATE PASSED");
