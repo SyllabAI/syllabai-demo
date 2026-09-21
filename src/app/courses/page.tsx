@@ -10,11 +10,11 @@ export default async function CoursesIndexPage() {
       <header className="space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">Courses</h1>
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          Every Edexcel IAL and IGCSE course variant in the SyllabAI corpus registry — 39 Learning
-          Hubs (revision notes, exam questions and flashcards organised around each
-          course&apos;s corpus specification tree). All 39 bundles are imported from the
-          operator-authorized Save My Exams corpus; the 4CH1 Chemistry pilot additionally runs on
-          the official Pearson specification tree with its concept graph.
+          Every Edexcel IAL and IGCSE course variant in the SyllabAI corpus registry —{" "}
+          {courses.length} Learning Hubs (revision notes, exam questions and flashcards organised
+          around each course&apos;s corpus specification tree). All {courses.length} bundles are
+          imported from the operator-authorized Save My Exams corpus; the 4CH1 Chemistry pilot
+          additionally runs on the official Pearson specification tree with its concept graph.
         </p>
       </header>
       <CourseDirectory courses={courses} />

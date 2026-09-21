@@ -6,9 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import type { CourseMeta } from "@/lib/courses";
+import { duplicateVariants } from "@/lib/course-variant";
 
 export function CourseDirectory({ courses }: { courses: CourseMeta[] }) {
   const [q, setQ] = useState("");
+  // same subject+code lanes (e.g. Accounting 4AC1 ×2) — show the lane
+  // qualifier from the slug so the cards are tellable apart (UX audit P2-7)
+  const subtitles = useMemo(() => duplicateVariants(courses), [courses]);
 
   const filtered = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -33,7 +37,7 @@ export function CourseDirectory({ courses }: { courses: CourseMeta[] }) {
       <Input
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="Search 39 courses by subject or exam code…"
+        placeholder={`Search ${courses.length} courses by subject or exam code…`}
         aria-label="Search courses"
         className="max-w-md"
       />
@@ -44,7 +48,7 @@ export function CourseDirectory({ courses }: { courses: CourseMeta[] }) {
           </h2>
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {list.map((c) => (
-              <Link key={c.slug} href={`/courses/${c.slug}`} className="group focus-visible:outline-none">
+              <Link key={c.slug} href={`/courses/${c.slug}`} className="group min-w-0 focus-visible:outline-none">
                 <Card
                   className={
                     c.hasBundle
@@ -55,18 +59,21 @@ export function CourseDirectory({ courses }: { courses: CourseMeta[] }) {
                   <CardContent className="flex items-start gap-3 p-4">
                     <div className="min-w-0 flex-1">
                       <p className="truncate text-sm font-semibold group-hover:text-primary">{c.label}</p>
+                      {subtitles.get(c.slug) && (
+                        <p className="mt-0.5 truncate text-xs text-muted-foreground">{subtitles.get(c.slug)}</p>
+                      )}
                       <p className="mt-0.5 font-mono text-xs text-muted-foreground">
                         {c.code ? c.code : <span className="not-italic">code pending</span>}
                       </p>
                       <div className="mt-2 flex flex-wrap gap-1.5">
                         {c.status === "pilot" ? (
-                          <Badge className="text-[9px] uppercase">pilot corpus · official spec tree</Badge>
+                          <Badge className="text-[10.5px] uppercase">pilot corpus · official spec tree</Badge>
                         ) : c.status === "full" ? (
-                          <Badge variant="outline" className="text-[9px] uppercase">
+                          <Badge variant="outline" className="text-[10.5px] uppercase">
                             full corpus
                           </Badge>
                         ) : (
-                          <Badge variant="outline" className="text-[9px] uppercase text-muted-foreground">
+                          <Badge variant="outline" className="text-[10.5px] uppercase text-muted-foreground">
                             import pending
                           </Badge>
                         )}

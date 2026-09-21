@@ -560,7 +560,7 @@ function TypedAnswerWorkspace({
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <PenLine className="size-3.5 text-primary" aria-hidden />
         <span className="text-[13px] font-medium">Your answer</span>
-        <Badge variant="outline" className="px-1 text-[9px] uppercase text-muted-foreground">
+        <Badge variant="outline" className="px-1 text-[10.5px] uppercase text-muted-foreground">
           simulated
         </Badge>
         <span className="text-[11px] text-muted-foreground">saved in this browser</span>

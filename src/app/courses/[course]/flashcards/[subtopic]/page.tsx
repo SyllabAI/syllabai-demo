@@ -37,9 +37,11 @@ export default async function FlashcardDeckPage({
       <ResourcePanel variant="flashcards" />
       <div className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
+          {/* "(Chemistry)" was redundant with breadcrumb + sidebar and wrapped
+              the h1 to two lines at 390px (UX audit P3-16) */}
           <CourseHeader
             meta={meta}
-            title={`${subtopic.title} (${meta.subject}): Flashcards`}
+            title={`${subtopic.title}: Flashcards`}
             crumb={subtopic.title}
             description={
               topic

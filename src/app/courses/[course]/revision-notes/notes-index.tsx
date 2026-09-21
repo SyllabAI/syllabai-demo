@@ -118,7 +118,7 @@ export function NotesIndex({
                   <div key={subtopic.code} className="space-y-1.5">
                     <div className="flex flex-wrap items-center gap-2">
                       <ProgressRing course={course} subtopic={subtopic.code} counts={counts[subtopic.code] ?? ZERO} size={16} />
-                      <h3 className="text-sm font-medium">{subtopic.title}</h3>
+                      <h2 className="text-sm font-medium">{subtopic.title}</h2>
                     </div>
                     <div className="grid gap-1.5 sm:grid-cols-2">
                       {subNotes.map((n) => {
@@ -150,7 +150,7 @@ export function NotesIndex({
                                   </code>
                                 ))}
                                 {n.guidedStudy && (
-                                  <Badge variant="secondary" className="text-[9px]">
+                                  <Badge variant="secondary" className="text-[10.5px]">
                                     guided study
                                   </Badge>
                                 )}

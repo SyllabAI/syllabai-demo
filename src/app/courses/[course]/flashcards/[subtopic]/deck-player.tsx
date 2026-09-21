@@ -177,9 +177,11 @@ export function DeckPlayer({
         >
           Still learning
         </Button>
+        {/* emerald-600 on white measured 3.67:1 — below AA for 14px text
+            (P1-4); emerald-700 is 5.5:1 */}
         <Button
           size="lg"
-          className="bg-emerald-600 text-white hover:bg-emerald-700"
+          className="bg-emerald-700 text-white hover:bg-emerald-800"
           disabled={!flipped}
           onClick={() => advance("know")}
         >

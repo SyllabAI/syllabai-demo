@@ -223,9 +223,9 @@ export function TutorChat() {
                       className="inline-flex items-center gap-1 rounded border bg-background px-1.5 py-0.5 text-[10px] text-muted-foreground transition-colors hover:text-foreground"
                       title={c.label}
                     >
-                      <span className="font-mono text-[9px]">[{c.index}]</span>
+                      <span className="font-mono text-[10.5px]">[{c.index}]</span>
                       {c.label.slice(0, 44)}
-                      <span className="font-mono text-[9px] opacity-60">{c.kind.slice(0, 4)}</span>
+                      <span className="font-mono text-[10.5px]">{c.kind.slice(0, 4)}</span>
                     </a>
                   ))}
                 </div>

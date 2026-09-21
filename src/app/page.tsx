@@ -18,7 +18,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getDataProvider } from "@/lib/data";
-import { pilotCourseSlug } from "@/lib/courses";
+import { listCourses, pilotCourseSlug } from "@/lib/courses";
 import { publicConfig } from "@/lib/config";
 import { ProvenanceBadge } from "@/components/provenance";
 
@@ -28,6 +28,9 @@ export default async function HubPage() {
   const provider = getDataProvider();
   const cfg = publicConfig();
   const pilotSlug = await pilotCourseSlug();
+  const courses = await listCourses();
+  const courseCount = courses.length;
+  const courseLevels = [...new Set(courses.map((c) => c.level))].sort().join(" + ");
   const [manifest, graph, notes, topics] = await Promise.all([
     provider.manifest(),
     provider.conceptGraph(),
@@ -36,11 +39,20 @@ export default async function HubPage() {
   ]);
   const questionCount = topics.reduce((a, t) => a + t.questions.length, 0);
 
+  // importSource.ref is "branch@<40-hex>" — the 40-char hash cannot wrap and
+  // blew out the mobile viewport by +106px (UX audit P1-2). Display a short
+  // hash; the full ref stays in the manifest.
+  const at = manifest.importSource.ref.lastIndexOf("@");
+  const importRef =
+    at > 0
+      ? `${manifest.importSource.ref.slice(0, at)}@${manifest.importSource.ref.slice(at + 1, at + 11)}`
+      : manifest.importSource.ref;
+
   const surfaces = [
     {
       href: "/courses",
       icon: GraduationCap,
-      title: "Courses — 39 Learning Hubs",
+      title: `Courses — ${courseCount} Learning Hubs`,
       desc: "SaveMyExams-style per-subject hubs (pilot: Edexcel IGCSE Chemistry 4CH1): sidebar topic tree, notes reader, question player, flashcards.",
     },
     {
@@ -109,8 +121,8 @@ export default async function HubPage() {
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
           Add the subjects you are studying, then revise from spec-anchored notes, drill real exam
           questions by topic and drill flashcards — all in one place, all mapped to your
-          syllabus. {manifest.curriculum.board} {manifest.curriculum.level} registry ·{" "}
-          <span className="font-medium text-foreground">39 subjects</span> ready to add.
+          syllabus. {manifest.curriculum.board} {courseLevels} registry ·{" "}
+          <span className="font-medium text-foreground">{courseCount} subjects</span> ready to add.
         </p>
         <div className="flex flex-wrap items-center gap-3 pt-1">
           <Button asChild size="lg" className="gap-2">
@@ -172,8 +184,13 @@ export default async function HubPage() {
         ))}
       </section>
 
-      {/* corpus stats */}
-      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      {/* corpus stats — scoped honestly: these are the 4CH1 pilot's numbers
+          (UX audit P2-6: they were presented as global totals) */}
+      <section aria-label="Pilot corpus stats" className="space-y-2">
+        <h2 className="text-sm font-medium text-muted-foreground">
+          Inside the {manifest.curriculum.code} {manifest.curriculum.subject} pilot
+        </h2>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         {[
           // manifest counts keys are the corpus's own (sections/topics/specPoints/…);
           // the graph node count comes from the already-fetched T-C11 graph
@@ -189,6 +206,7 @@ export default async function HubPage() {
             </CardContent>
           </Card>
         ))}
+        </div>
       </section>
 
       {/* surfaces */}
@@ -229,8 +247,8 @@ export default async function HubPage() {
               <ShieldCheck className="size-4 text-primary" aria-hidden />
               What is real in this demo
             </CardTitle>
-            <CardDescription>
-              Bundle: {manifest.importSource.repo}@{manifest.importSource.ref} ·{" "}
+            <CardDescription className="break-all">
+              Bundle: {manifest.importSource.repo}@{importRef} ·{" "}
               {manifest.curriculum.board} {manifest.curriculum.level} {manifest.curriculum.subject}{" "}
               ({manifest.curriculum.code}, {manifest.curriculum.syllabusVersion})
             </CardDescription>

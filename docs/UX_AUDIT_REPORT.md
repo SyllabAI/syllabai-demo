@@ -90,4 +90,30 @@ Visible on every note-reader page (`15-note-reader.png`). Root cause: nested sub
 
 ---
 
+## Fix status — batch implemented 2026-09-21
+
+| # | Finding | Status |
+|---|---------|--------|
+| P1-1 | `/courses` mobile overflow (+52px) | **FIXED** — `min-w-0` on card anchor (course-directory.tsx) |
+| P1-2 | Home mobile overflow (+106px) | **FIXED** — short hash `main@75755855f9` + `break-all` on Bundle line (page.tsx) |
+| P1-3 | Sidebar contrast 1.96–2.71:1 | **FIXED** — section labels `/70`→full (4.74:1), disabled nav `/60`→full, empty placeholders `/55`→full (course-shell.tsx, topic-tree.tsx) |
+| P1-4 | "Know" button 3.67:1 | **FIXED** — `bg-emerald-700` #007956 = 5.43:1, hover emerald-800 (deck-player.tsx) |
+| P2-5 | Hardcoded "39" vs 49 lanes | **FIXED** — count derived from registry in home hero/surfaces, courses copy, directory placeholder, dashboard ×2 (5 spots) |
+| P2-6 | Home stats unscoped | **FIXED** — scoped under "Inside the 4CH1 Chemistry pilot" h2 |
+| P2-7 | Duplicate Accounting cards | **FIXED** — `src/lib/course-variant.ts` derives lane subtitles for all 33 duplicate-group lanes (e.g. "Financial Statements", "Pure 1", "Foundation Unit 1"); shown on /courses + dashboard add-list |
+| P2-8 | "States of matter5 notes" count jam | **FIXED** — nested sub-topic Link gains `flex items-center gap-2` (topic-tree.tsx) |
+| P2-9 | 9px micro-text | **FIXED (partial)** — all `text-[9px]` → `text-[10.5px]` (7 spots); tutor kind chip lost `opacity-60`; full-contrast 10px chips left per tolerance |
+| P2-10 | Graph label collisions / search placement | **DEFERRED** — OpenHuman canvas internals; needs label-culling pass in the fork |
+| P2-11 | `/knowledge-graph` vs `/graph-explorer` IA | **DEFERRED** — product decision (redirect target) |
+| P3-13 | Breadcrumb separator 1.96:1, 19.5px targets | **FIXED** — separator `/50`→`/80`, links `py-1` (chrome.tsx) |
+| P3-14 | h1→h3 skip (revision-notes index) | **FIXED** — sub-topic h3→h2 (notes-index.tsx); note-reader content outline is corpus markdown, left as-is |
+| P3-16 | Deck h1 "(Chemistry)" noise | **FIXED** — `"{title}: Flashcards"` |
+| P3-12 / P3-15 / P3-17 | Dark-theme dead code · "(1 mark)" wrap · Target Test a11y | **NOT CHANGED** — P3-17 was a false positive (span already carries `aria-disabled` + title); dark theme = keep-or-wire decision; "(1 mark)" wrap needs question-player layout work |
+
+Verified against the production build (`next build` + standalone server probes): all fixed
+classes/text confirmed in rendered HTML; no stale "39" on any audited surface; contrast
+ratios recomputed from compiled CSS tokens.
+
+---
+
 *Audit scripts: `scripts/ux_audit_inject.js`, `scripts/ux_semantics_inject.js`, `scripts/ux_audit_walk.sh`, `scripts/ux_audit_summarize.py`. Evidence: `work/ux_audit/*.png` + `*.audit.json` / `*.sem.json` (28 screenshots, 17 route audits).*

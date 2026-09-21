@@ -17,18 +17,19 @@ export function Breadcrumbs({ items, className }: { items: Crumb[]; className?: 
     <nav aria-label="Breadcrumb" className={cn("flex flex-wrap items-center gap-1 text-[13px]", className)}>
       <Link
         href="/"
-        className="inline-flex items-center gap-1 text-muted-foreground transition-colors hover:text-foreground"
+        className="inline-flex items-center gap-1 py-1 text-muted-foreground transition-colors hover:text-foreground"
       >
         <Home className="size-3.5" aria-hidden />
         <span className="sr-only sm:not-sr-only">Home</span>
       </Link>
       {items.map((c, i) => (
         <span key={`${c.label}-${i}`} className="inline-flex items-center gap-1">
-          <span aria-hidden className="text-muted-foreground/50">/</span>
+          {/* /80: /50 measured 1.96:1 (P3-13) — decorative but needlessly faint */}
+          <span aria-hidden className="text-muted-foreground/80">/</span>
           {c.href && i < items.length - 1 ? (
             <Link
               href={c.href}
-              className="text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
+              className="py-1 text-muted-foreground underline-offset-2 transition-colors hover:text-foreground hover:underline"
             >
               {c.label}
             </Link>

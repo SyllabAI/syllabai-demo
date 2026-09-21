@@ -13,7 +13,7 @@
  *        flashcards rated) — real activity, honestly 0% before you start
  *   3. "Got another course?" slot card (SME's trailing grid cell)
  *   4. "Jump back in" — resume card from the last-opened store
- *   5. Add course — searchable catalogue over the 39-course registry
+ *   5. Add course — searchable catalogue over the course registry
  *
  * The roster + last-opened persist client-side (no auth in the demo);
  * resource counts come from /api/course-stats (committed bundles).
@@ -37,6 +37,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useMySubjects } from "@/lib/my-subjects";
+import { duplicateVariants } from "@/lib/course-variant";
 import { useLastOpened, resourceLabel } from "@/lib/last-opened";
 import { useCourseProgress } from "@/lib/progress";
 import type { CourseMeta } from "@/lib/courses";
@@ -282,6 +283,9 @@ function SubjectCard({
 
 export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
   const { slugs, has, add, remove } = useMySubjects();
+  // same subject+code lanes (Accounting 4AC1 ×2 etc.) — show the lane
+  // qualifier so identical-looking cards are tellable apart (UX audit P2-7)
+  const subtitles = useMemo(() => duplicateVariants(courses), [courses]);
   const lastOpened = useLastOpened();
   const [q, setQ] = useState("");
   const [stats, setStats] = useState<Record<string, CourseStat>>({});
@@ -376,7 +380,7 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
                 No subjects yet — add your first one below.
               </p>
               <p className="text-sm text-muted-foreground">
-                Pick from the 39-course Edexcel registry, or start with a popular one:
+                Pick from the {courses.length}-course Edexcel registry, or start with a popular one:
               </p>
               <div className="flex flex-wrap gap-2">
                 {QUICK_ADD.filter((s) => bySlug.has(s)).map((slug) => {
@@ -460,7 +464,7 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
         <Input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Search the 39-course registry by subject or exam code…"
+          placeholder={`Search the ${courses.length}-course registry by subject or exam code…`}
           aria-label="Search courses to add"
           className="max-w-md"
         />
@@ -480,6 +484,9 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
                     <CardContent className="flex items-center gap-3 p-4">
                       <div className="min-w-0 flex-1">
                         <p className="truncate text-sm font-semibold">{c.label}</p>
+                        {subtitles.get(c.slug) && (
+                          <p className="mt-0.5 truncate text-xs text-muted-foreground">{subtitles.get(c.slug)}</p>
+                        )}
                         <p className="mt-0.5 font-mono text-xs text-muted-foreground">{c.code || "code pending"}</p>
                       </div>
                       <Button

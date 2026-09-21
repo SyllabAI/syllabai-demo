@@ -121,7 +121,7 @@ export function CourseShell({
           <nav aria-label="Course sections" className="space-y-4">
             {navGroups.map((g) => (
               <div key={g.label}>
-                <p className="px-2 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground/70">
+                <p className="px-2 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
                   {g.label}
                 </p>
                 <ul className="space-y-0.5">
@@ -134,7 +134,7 @@ export function CourseShell({
                         <item.icon className="size-4 shrink-0" aria-hidden />
                         <span className="truncate">{item.label}</span>
                         {item.badge && (
-                          <Badge variant="outline" className="ml-auto shrink-0 px-1 text-[9px] uppercase text-muted-foreground">
+                          <Badge variant="outline" className="ml-auto shrink-0 px-1 text-[10.5px] uppercase text-muted-foreground">
                             {item.badge}
                           </Badge>
                         )}
@@ -146,7 +146,7 @@ export function CourseShell({
                           <span
                             aria-disabled
                             title="Not part of the demo corpus yet"
-                            className="flex cursor-not-allowed items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground/60"
+                            className="flex cursor-not-allowed items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground"
                           >
                             {inner}
                           </span>
@@ -253,7 +253,7 @@ function MobileDrawerInner({
         <nav aria-label="Course sections" className="space-y-4">
           {navGroups.map((g) => (
             <div key={g.label}>
-              <p className="px-2 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground/70">
+              <p className="px-2 pb-1 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
                 {g.label}
               </p>
               <ul className="space-y-0.5">
@@ -264,7 +264,7 @@ function MobileDrawerInner({
                       <item.icon className="size-4 shrink-0" aria-hidden />
                       <span className="truncate">{item.label}</span>
                       {item.badge && (
-                        <Badge variant="outline" className="ml-auto shrink-0 px-1 text-[9px] uppercase text-muted-foreground">
+                        <Badge variant="outline" className="ml-auto shrink-0 px-1 text-[10.5px] uppercase text-muted-foreground">
                           {item.badge}
                         </Badge>
                       )}
@@ -276,7 +276,7 @@ function MobileDrawerInner({
                         <span
                           aria-disabled
                           title="Not part of the demo corpus yet"
-                          className="flex cursor-not-allowed items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground/60"
+                          className="flex cursor-not-allowed items-center gap-2.5 rounded-md px-3 py-2 text-sm text-muted-foreground"
                         >
                           {inner}
                         </span>
