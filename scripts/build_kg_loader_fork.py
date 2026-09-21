@@ -3,11 +3,19 @@
 
 The fork is a copy of the byte-faithful v77 build with:
   1. eight `const` -> `var` patches on the module data tables (so the loader
-     can swap them at runtime), and
+     can swap them at runtime),
   2. one hook line in makeBase()'s tail + one appended loader block that
      reads ?course=<slug>, fetches /kg/data/<slug>.json, validates it against
      GRAPH_CONTRACT v1.0, swaps the tables and rebuilds through the
-     renderer's own makeBase() -> fitInitial() -> bootSimulation() pipeline.
+     renderer's own makeBase() -> fitInitial() -> bootSimulation() pipeline,
+     and
+  3. per-subject node icon packs (T-KG-3): KG_ICON_EXTRA paths + packs + a
+     topicIconKey dispatcher. With no pack active the original chemistry
+     table runs unchanged; the loader activates the course's pack before the
+     first draw. Chemistry pack == original table (golden-gated).
+
+Gates: node --check (syntax) + kg_icon_gate.js (typo guard, chemistry
+snapshot, subject->family coverage).
 
 Without ?course= the build behaves exactly like v77 (inline 4CH1 dataset).
 
@@ -17,13 +25,21 @@ Run from the repo root:  python3 scripts/build_kg_loader_fork.py
 from __future__ import annotations
 
 import hashlib
+import json
 import re
 import sys
+import tempfile
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from kg_icon_packs import BEGIN, END, FAMILY_MAP, PACKS, emit_js  # noqa: E402
 
 REPO = Path(__file__).resolve().parent.parent
 SRC = REPO / "public" / "kg" / "v77-regression-fixes.html"
 DST = REPO / "public" / "kg" / "openhuman-course-explorer.html"
+GATE = REPO / "scripts" / "kg_icon_gate.js"
+DATA = REPO / "public" / "kg" / "data"
+CANONICAL = DATA / "canonicalKG.edexcel-chemistry-4ch1.json"
 
 # (old, new, expected count) — every patch must hit exactly once
 PATCHES = [
@@ -40,6 +56,17 @@ PATCHES = [
      "document.querySelector('#hud .subtitle').textContent=window.__KG_SUBTITLE||'Pearson Edexcel International GCSE'", 1),
     (" state.edges.push(...semanticEdges);\n syncCanonicalKG();\n}",
      " state.edges.push(...semanticEdges);\n if(window.__KG_APPLY)window.__KG_APPLY();\n syncCanonicalKG();\n}", 1),
+    # --- per-subject icon packs (T-KG-3) -------------------------------------
+    # P1: rename the original resolver + inject packs/resolver before it
+    ("function topicIconKey(n){",
+     emit_js() + "\nfunction chemIconKey(n){", 1),
+    # P2: dispatcher — original body stays as chemIconKey, public name routes
+    (" return n.type==='SubTopic'?'topic':'atom';\n}",
+     " return n.type==='SubTopic'?'topic':'atom';\n}"
+     "\nfunction topicIconKey(n){return (__kgPackState&&__kgPackState.pack)?kgPackIconKey(n):chemIconKey(n);}", 1),
+    # P3: icon() falls back to the extra per-subject path library
+    (" g.innerHTML=paths[kind]||paths.topic;return g;",
+     " g.innerHTML=paths[kind]||KG_ICON_EXTRA[kind]||paths.topic;return g;", 1),
 ]
 
 LOADER = """
@@ -114,6 +141,9 @@ LOADER = """
         if(!have.has(['subject','sec'+s,'hier'].join('|')))state.edges.push(['subject','sec'+s,'hier']);
       });
     };
+    // 2.5 subject icon pack: resolve the family (strand-aware for Science)
+    //     and activate BEFORE the first draw so node icons render per subject
+    if(window.kgSetIconPack)kgSetIconPack(kgIconFamily((kg.meta||{}).subject,slug));
     // 3. rebuild through the renderer's own pipeline
     makeBase();
     // 4. reset view state makeBase does not clear (mirrors the reset button)
@@ -188,11 +218,60 @@ def main() -> int:
     if probe.returncode != 0:
         print(f"SYNTAX GATE FAILED:\n{probe.stderr[:800]}", file=sys.stderr)
         return 1
+    # gate 2: semantic icon gate (typo guard, chemistry golden snapshot,
+    # subject->family coverage) — the fork must not change icon behaviour for
+    # chemistry and must resolve every exported subject to a pack
+    subjects = build_subject_cases()
     DST.write_text(html, encoding="utf-8")
+    with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False,
+                                     encoding="utf-8") as tf:
+        json.dump(subjects, tf)
+        subj_tmp = tf.name
+    gate = subprocess.run(["node", str(GATE), str(DST), str(CANONICAL),
+                           subj_tmp], capture_output=True, text=True)
+    pathlib.Path(subj_tmp).unlink(missing_ok=True)
+    sys.stdout.write(gate.stdout)
+    if gate.returncode != 0:
+        sys.stdout.flush()
+        print(f"ICON GATE FAILED:\n{gate.stderr[:1200]}", file=sys.stderr)
+        return 1
     print(f"source v77 sha256[:8]={src_sha}  ->  {DST.name} "
           f"({len(html)} bytes, sha256[:8]={hashlib.sha256(html.encode()).hexdigest()[:8]}) "
-          f"[syntax gate ok]")
+          f"[syntax + icon gates ok]")
     return 0
+
+
+def build_subject_cases() -> list:
+    """[subject, slug, expected_family] for every exported course + probes."""
+    cases = []
+    for f in sorted(DATA.glob("*.json")):
+        if f.name == "index.json" or "canonicalKG" in f.name:
+            continue
+        d = json.loads(f.read_text(encoding="utf-8"))
+        meta = d.get("meta", {})
+        subj = str(meta.get("subject"))
+        slug = str(meta.get("course") or f.stem)
+        cases.append([subj, slug, expected_family(subj, slug)])
+    # probes: science strand resolution + unknown-subject degradation
+    cases += [
+        ["Science", "igcse-science-double-award-17-biology", "biology"],
+        ["Science", "igcse-science-double-award-17-chemistry", "chemistry"],
+        ["Science", "igcse-science-double-award-17-physics", "physics"],
+        ["Science", "igcse-science-double-award-17", "science"],
+        ["Science", "igcse-science-double-award-modular-24-biology-unit-1", "biology"],
+        ["Science", "igcse-science-double-award-modular-24-physics-unit-2", "physics"],
+        ["History", "future-history-1", "neutral"],
+        ["", "no-meta", "neutral"],
+    ]
+    return cases
+
+
+def expected_family(subject: str, slug: str) -> str:
+    s = (subject or "").strip().lower()
+    if s == "science":
+        m = re.search(r"(biology|chemistry|physics)", slug or "")
+        return m.group(1) if m else "science"
+    return FAMILY_MAP.get(s, "neutral")
 
 
 if __name__ == "__main__":
