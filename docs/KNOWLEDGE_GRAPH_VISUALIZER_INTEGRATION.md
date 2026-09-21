@@ -70,6 +70,37 @@ questions are answered first; the renderer is touched exactly once — when it b
   README surfaces table.
 - **Exit criteria (met):** every v75 feature works from the deployed URL; switching builds is
   lossless; no build file is modified.
+- *Retired in the per-course phase:* the original `/knowledge-graph` spec-canvas + T-C11
+  concept-web surface was replaced by the OpenHuman explorer (see Phase 1.5); the old
+  components (`spec-graph-canvas`, `concept-web`, `graph/layout`) are removed.
+
+### Phase 1.5 — per-course knowledge graphs (SHIPPED 2026-09-21)
+
+**Every course gets its own knowledge graph, and the OpenHuman visualizer becomes THE
+knowledge-graph surface** — `/knowledge-graph` now renders it, replacing the old two-layer
+canvas.
+
+- **Exporter** (`scripts/kg_export.py`): `content/<slug>/curriculum.json` →
+  `public/kg/data/<slug>.json` for all **49 registered courses** (+ `index.json` for the
+  switcher). Families map 1:1 onto the contract — SUBJECT→Subject, TOPIC→Section,
+  SUBTOPIC→SubTopic, SPEC_POINT→SpecificationPoint — in the build's own id conventions
+  (`subject`, `sec1`, `1a`, `p:1.1`). Gates: contract types, unique ids, referential
+  integrity, exactly one subtopic parent per point, strict numeric ordering. **Cross-check:
+  the 4CH1 export reproduces the prototype's hand-curated hierarchy exactly (215 nodes /
+  214 hier edges = 217−2 papers / 257−30 pre−5 rel−8 assess).**
+- **Loader fork** (`public/kg/openhuman-course-explorer.html`, built by
+  `scripts/build_kg_loader_fork.py` from the pinned v77): eight `const→var` patches on the
+  module data tables + one `window.__KG_APPLY` hook in `makeBase()` + an appended loader
+  block. `?course=<slug>` → fetch JSON → re-validate the contract in-build → swap tables →
+  rebuild through the renderer's own `makeBase() → fitInitial() → bootSimulation()`
+  pipeline. No param → inline 4CH1, byte-compatible. v75/v76/v77 remain byte-faithful.
+- **Host** (`/knowledge-graph`): course switcher (49 courses grouped by subject),
+  deep-linkable `?course=`, live counts chip from the loader's `postMessage` handshake,
+  loading/error states, fullscreen/new-tab, cross-link to the `/graph-explorer` prototype
+  lab.
+- **Honest v1 data:** `hier` edges only — curriculum bundles carry no prerequisite, relation
+  or paper metadata and none are invented. `pre`/`rel`/`assess` join when the data does
+  (Phase 2 exporter reconciliation + practice-paper metadata).
 
 ### Phase 2 — data decoupling (syllabai-resources + this repo)
 
@@ -148,17 +179,21 @@ Invariants: renderer consumes the projected view model only; runtime fields
 (`x/y/vx/vy/homeX/homeY/rx`) never enter canonical data; every view-model build re-validates
 types and edge endpoints.
 
-## 5. Files in this repo (Phase 1)
+## 5. Files in this repo
 
 | Path | What |
 |---|---|
-| `src/app/graph-explorer/page.tsx` + `client.tsx` | host route: toolbar (build switcher, live stats, About, fullscreen/new-tab) + byte-faithful iframe canvas |
-| `src/components/layout/app-shell.tsx` | nav entry (Demo prototypes) + full-bleed layout branch for `/graph-explorer` |
-| `src/app/knowledge-graph/client.tsx` | cross-link button to the explorer |
+| `src/app/knowledge-graph/page.tsx` + `client.tsx` | per-course host: course switcher (49 courses), `?course=` deep link, live counts via loader handshake, fullscreen/new-tab |
+| `src/app/graph-explorer/page.tsx` + `client.tsx` | prototype build lab: toolbar (build switcher, live stats, About, fullscreen/new-tab) + byte-faithful iframe canvas |
+| `src/components/layout/app-shell.tsx` | nav entries (Knowledge Graph + Demo prototypes) + full-bleed layout branch for both graph surfaces |
+| `public/kg/openhuman-course-explorer.html` | data-decoupled loader fork of v77 (`?course=<slug>` → swap tables → rebuild); built by `scripts/build_kg_loader_fork.py` |
 | `public/kg/v75-explainer-lasso-minimap.html` | default build (sha256 `65cc973e…`) |
 | `public/kg/v76-audit-fixes.html` | audit-fix build (sha256 `2636ddc0…`) |
 | `public/kg/v77-regression-fixes.html` | latest build (sha256 `d485753b…`) |
-| `public/kg/data/canonicalKG.edexcel-chemistry-4ch1.json` | decoupled artifact: provenance + contract + 217 nodes / 257 edges |
+| `public/kg/data/<slug>.json` | per-course canonicalKG exports (49 courses, `scripts/kg_export.py` from curriculum bundles) |
+| `public/kg/data/canonicalKG.edexcel-chemistry-4ch1.json` | decoupled golden-sample artifact: provenance + contract + 217 nodes / 257 edges |
+| `scripts/kg_export.py` | per-course exporter + validation gates |
+| `scripts/build_kg_loader_fork.py` | fork builder (patches + loader block, refuses to build on any patch mismatch) |
 | `docs/KNOWLEDGE_GRAPH_VISUALIZER_INTEGRATION.md` | this plan |
 
 ## 6. Open decisions (owner: Nawaf)

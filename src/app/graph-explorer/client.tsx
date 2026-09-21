@@ -71,6 +71,18 @@ export function GraphExplorerClient() {
   const [loaded, setLoaded] = useState(false);
   const [counts, setCounts] = useState<KgCounts | null>(null);
   const shellRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+
+  // a warm-cached build can finish loading before React attaches onLoad —
+  // reconcile once after paint so the loading overlay can never stick
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      if (frameRef.current?.contentWindow?.document?.readyState === "complete") {
+        setLoaded(true);
+      }
+    });
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -174,7 +186,12 @@ export function GraphExplorerClient() {
               <a href={DATA_URL} target="_blank" rel="noreferrer" className="underline underline-offset-2">
                 canonicalKG artifact
               </a>
-              .
+              . This page is the prototype build lab — the product surface is the{" "}
+              <Link href="/knowledge-graph" className="underline underline-offset-2">
+                per-course Knowledge Graph
+              </Link>
+              , where every course explores its own exported graph in a data-decoupled fork of
+              v77.
             </p>
             <p className="mb-1 text-sm font-semibold">Try</p>
             <ul className="mb-2 list-disc space-y-0.5 pl-4 text-muted-foreground">
@@ -245,6 +262,7 @@ export function GraphExplorerClient() {
         )}
         <iframe
           key={build}
+          ref={frameRef}
           src={BUILDS[build].file}
           title={`Knowledge Graph Explorer — Edexcel International GCSE Chemistry (${BUILDS[build].label})`}
           onLoad={() => setLoaded(true)}
@@ -260,9 +278,9 @@ export function GraphExplorerClient() {
       <div className="flex items-center gap-1.5 border-t px-4 py-1.5 text-[10px] text-muted-foreground">
         <Download className="size-3" aria-hidden />
         <span>
-          Phase 1 — byte-faithful host. Graph data inside the builds is the prototype&apos;s own
-          dataset; the decoupled artifact lives at{" "}
-          <span className="font-mono">/kg/data/</span>. Integration plan:{" "}
+          Prototype build lab — byte-faithful v75/v76/v77 with the operator&apos;s hand-curated
+          4CH1 dataset. Per-course graphs (all 49 courses, exported curriculum truth) live at{" "}
+          <span className="font-mono">/knowledge-graph</span>. Integration plan:{" "}
           <span className="font-mono">docs/KNOWLEDGE_GRAPH_VISUALIZER_INTEGRATION.md</span>.
         </span>
       </div>

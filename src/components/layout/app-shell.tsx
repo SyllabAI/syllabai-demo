@@ -68,10 +68,11 @@ export function AppShell({
 }) {
   const pathname = usePathname();
   // course pages manage their own horizontal rhythm (course shell + resource
-  // panel); the graph explorer is full-bleed (the visualizer canvas wants the
-  // whole viewport); every other page gets the centred content column
+  // panel); the graph surfaces are full-bleed (the visualizer canvas wants
+  // the whole viewport); every other page gets the centred content column
   const inCourse = pathname.startsWith("/courses/");
-  const inExplorer = pathname.startsWith("/graph-explorer");
+  const inExplorer =
+    pathname.startsWith("/graph-explorer") || pathname.startsWith("/knowledge-graph");
 
   return (
     <div className="min-h-screen bg-background">
