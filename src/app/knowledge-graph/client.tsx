@@ -21,7 +21,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
-import { BookOpen, HelpCircle, Network, ScrollText } from "lucide-react";
+import { BookOpen, HelpCircle, Network, ScrollText, Waypoints } from "lucide-react";
 import type { ConceptGraph, Curriculum, SimLearnerState } from "@/lib/contracts";
 import { SpecGraphCanvas } from "@/components/graph/spec-graph-canvas";
 import { ConceptWeb } from "@/components/graph/concept-web";
@@ -159,11 +159,22 @@ export function KnowledgeGraphClient({ curriculum, graph, overlay }: Props) {
             not establish educational truth.
           </p>
         </div>
-        <div className="flex items-center gap-2 rounded-md border px-3 py-2">
-          <Switch id="overlay" checked={overlayOn} onCheckedChange={setOverlayOn} aria-label="Toggle simulated mastery overlay" />
-          <Label htmlFor="overlay" className="text-xs">
-            mastery overlay <span className="font-mono text-[10px] text-fuchsia-600 dark:text-fuchsia-400">SIMULATED</span>
-          </Label>
+        <div className="flex flex-wrap items-center gap-2">
+          <div className="flex items-center gap-2 rounded-md border px-3 py-2">
+            <Switch id="overlay" checked={overlayOn} onCheckedChange={setOverlayOn} aria-label="Toggle simulated mastery overlay" />
+            <Label htmlFor="overlay" className="text-xs">
+              mastery overlay <span className="font-mono text-[10px] text-fuchsia-600 dark:text-fuchsia-400">SIMULATED</span>
+            </Label>
+          </div>
+          <Button asChild variant="outline" size="sm" className="gap-1.5">
+            <Link href="/graph-explorer">
+              <Waypoints className="size-3.5" aria-hidden />
+              OpenHuman explorer
+              <Badge variant="secondary" className="px-1 py-0 font-mono text-[9px]">
+                v75
+              </Badge>
+            </Link>
+          </Button>
         </div>
       </div>
 

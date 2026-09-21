@@ -17,6 +17,7 @@ supports it. Failed experiments should be deletable in minutes.
 | Exam Questions (hub) | `/courses/igcse-chemistry/exam-questions` | Bank index → set page with difficulty tabs + question grid → player with Save, full screen, self-score "How did you do?", full-screen mark-scheme modal (`[N mark]` AND-joined points), MCQ instant marking where option text exists |
 | Flashcards (hub) | `/courses/igcse-chemistry/flashcards` | Per-sub-topic decks with the flip / Still learning / Know loop |
 | Knowledge Graph | `/knowledge-graph` | Official curriculum anchor (layered SVG, ported from `syllabai-web`) + T-C11 concept web with provenance |
+| Graph Explorer (OpenHuman) | `/graph-explorer` | The operator's OpenHuman interaction-grammar visualizer hosted **byte-faithful** (v75 default: edge explainer, lasso selection, minimap; v76/v77 switcher) + decoupled `canonicalKG` data artifact — Phase 1 of `docs/KNOWLEDGE_GRAPH_VISUALIZER_INTEGRATION.md` |
 | Practice | `/practice` | Part-level player with confidence/self-doubt telemetry (production attempt shape) |
 | Tutor | `/tutor?q=…&spec=4CH1-1.1` | Grounded AI tutor: retrieval → sufficiency gate → cited answer / honest refusal; **anchored** entry points from notes ("Ask about this") and questions ("Question help") |
 | Learner Overlay | `/learner` | **SIMULATED** BKT-style state over curriculum truth |
