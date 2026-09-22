@@ -23,6 +23,8 @@ import {
   GraduationCap,
   Layers,
   LayoutDashboard,
+  LogIn,
+  LogOut,
   Network,
   Sparkles,
   User,
@@ -40,6 +42,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { clearIdentity, useIdentity } from "@/lib/identity";
 import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
@@ -68,6 +71,7 @@ export function AppShell({
   config: PublicConfig;
 }) {
   const pathname = usePathname();
+  const identity = useIdentity();
   // course pages manage their own horizontal rhythm (course shell + resource
   // panel); the graph surfaces are full-bleed (the visualizer canvas wants
   // the whole viewport); every other page gets the centred content column
@@ -132,9 +136,28 @@ export function AppShell({
             experimental playground · 4CH1 pilot corpus
           </span>
 
-          {/* SME header parity: persistent primary CTA (Task 21-b) + dual-theme toggle */}
+          {/* SME header parity: persistent primary CTA (Task 21-b) + mock
+              identity (TEACHER-1) + dual-theme toggle */}
           <div className="ml-auto flex items-center gap-1.5">
             <ThemeToggle />
+            {identity ? (
+              <Button
+                variant="outline"
+                size="sm"
+                className="hidden gap-1.5 sm:inline-flex"
+                onClick={() => clearIdentity()}
+              >
+                <LogOut className="size-3.5" aria-hidden />
+                Sign out
+              </Button>
+            ) : (
+              <Button asChild variant="outline" size="sm" className="hidden gap-1.5 sm:inline-flex">
+                <Link href="/login">
+                  <LogIn className="size-3.5" aria-hidden />
+                  Sign in
+                </Link>
+              </Button>
+            )}
             <Button asChild size="sm" className="hidden gap-1.5 sm:inline-flex">
               <Link href="/dashboard">
                 <Zap className="size-3.5" aria-hidden />

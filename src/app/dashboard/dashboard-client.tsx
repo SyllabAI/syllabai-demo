@@ -4,7 +4,7 @@
  * Dashboard — the student's SME-style home (Task 21 + 21-b fidelity pass,
  * matched against the real savemyexams.com /members/ reference page):
  *
- *   1. Greeting header ("Hi there 👋" — no auth in the demo, so no name)
+ *   1. Greeting header ("Hi {name} 👋" — mock identity from /login when present)
  *   2. My courses — one card per added subject:
  *        eyebrow "Edexcel · {level}" · subject name · Last viewed badge ·
  *        "Continue revising" · per-resource rows with corpus counts AND
@@ -37,6 +37,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useMySubjects } from "@/lib/my-subjects";
+import { useIdentity } from "@/lib/identity";
 import { duplicateVariants } from "@/lib/course-variant";
 import { useLastOpened, resourceLabel } from "@/lib/last-opened";
 import { useCourseProgress } from "@/lib/progress";
@@ -283,6 +284,7 @@ function SubjectCard({
 
 export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
   const { slugs, has, add, remove } = useMySubjects();
+  const identity = useIdentity();
   // same subject+code lanes (Accounting 4AC1 ×2 etc.) — show the lane
   // qualifier so identical-looking cards are tellable apart (UX audit P2-7)
   const subtitles = useMemo(() => duplicateVariants(courses), [courses]);
@@ -346,9 +348,12 @@ export function DashboardClient({ courses }: { courses: CourseMeta[] }) {
 
   return (
     <div className="space-y-8">
-      {/* greeting (SME: "Hi, {name} 👋" — the demo has no accounts) */}
+      {/* greeting (SME: "Hi, {name} 👋" — mock identity from the login
+          page when present, otherwise the original generic greeting) */}
       <header className="space-y-1.5">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Hi there 👋</h1>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          Hi {identity?.name ?? "there"} 👋
+        </h1>
         <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground">
           Welcome to your SyllabAI dashboard — your launchpad for stress-free, spec-anchored
           study. Add the courses you are taking, then revise each one from notes, exam questions
