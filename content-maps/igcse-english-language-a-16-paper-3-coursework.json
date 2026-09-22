@@ -1,0 +1,229 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 1,
+   "total": 7,
+   "unmapped": 6,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 1
+  },
+  "questionParts": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  }
+ },
+ "course": "igcse-english-language-a-16-paper-3-coursework",
+ "generatedUtc": "2026-09-19T19:16:08Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-english-language-a-16-paper-3-coursework/spec_point_map.json": {
+   "sha256": "383c78cfe3ae57cde16db61ba44a482f3977b9c8000813611cce093878640a54"
+  },
+  "SME-ExamQuestion/igcse-english-language-a-16-paper-3-coursework/spec_point_resolution.json": {
+   "sha256": "c1fad162c08eeff64bf07ee694cfcd820dbb556e722def7d627266ae21c625c8"
+  },
+  "spec-links/igcse-english-language-a-16-paper-3-coursework.json": {
+   "sha256": "a7b367c9c71c8fe8ae1dfe635064bcc19689415f68298f1c4d4c49365f644cab"
+  }
+ },
+ "items": {
+  "rn_KQqCT2prwKgZ8JmP": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Vj3dnSt565dzH9d3",
+    "spcpt_m8FZs2WQgKFsRKhC",
+    "spcpt_pyqJ32sV3hckSQVp"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_WKTXBgtHNC2DdQr8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DrtD7yD64jm84zcj",
+    "spcpt_QNB3cg55mtdHFyRf",
+    "spcpt_v2dm3q2MnTVwcsvv",
+    "spcpt_vVrJgrvyhDpSqNDj"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_bNNy5PSvVtFCJt2Y": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_3Zd3hx7zRV9xt4mn",
+    "spcpt_7Z2BxJf9F7xSKQz3",
+    "spcpt_SR8jm5Fv4VjKWNBg"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_h6dTzdtrtv8BD5nj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C3AB",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C3AB",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_6C82nHjTQdVVx4Sh",
+    "spcpt_DgnzB4NcMTq5xMrp",
+    "spcpt_TTp4J2PgM8wmd6rD"
+   ],
+   "kind": "note"
+  },
+  "rn_nxngKRwx5FjKtP8V": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9jVMRRPnJTh5hvQz",
+    "spcpt_N5ZYgTx5hqJ89sSD",
+    "spcpt_vcYwVQnWMZTx9ZJ8"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_s7PWGHnB9ZNW2VZm": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7pvgfvx75RNj6fSh",
+    "spcpt_8M9wf56RHmmg7mS5",
+    "spcpt_c2nKnxkFZHqYrbjm",
+    "spcpt_vF4FGTy4snMq5G8g"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_zZGtjGrxCW69cvBg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_RQq2MsBfNxfJhQSj",
+    "spcpt_dhrS35ptkcRm2j6C",
+    "spcpt_sN6dqXzR2QRqCf7d"
+   ],
+   "kind": "note",
+   "unmapped": true
+  }
+ },
+ "notesInlineRefs": {
+  "total": 24,
+  "unmappedToMap": [
+   "spcpt_3Zd3hx7zRV9xt4mn",
+   "spcpt_6C82nHjTQdVVx4Sh",
+   "spcpt_7Z2BxJf9F7xSKQz3",
+   "spcpt_7pvgfvx75RNj6fSh",
+   "spcpt_8M9wf56RHmmg7mS5",
+   "spcpt_9jVMRRPnJTh5hvQz",
+   "spcpt_DgnzB4NcMTq5xMrp",
+   "spcpt_DrtD7yD64jm84zcj",
+   "spcpt_N5ZYgTx5hqJ89sSD",
+   "spcpt_QNB3cg55mtdHFyRf",
+   "spcpt_RQq2MsBfNxfJhQSj",
+   "spcpt_SR8jm5Fv4VjKWNBg",
+   "spcpt_TTp4J2PgM8wmd6rD",
+   "spcpt_Vj3dnSt565dzH9d3",
+   "spcpt_c2nKnxkFZHqYrbjm",
+   "spcpt_dhrS35ptkcRm2j6C",
+   "spcpt_m8FZs2WQgKFsRKhC",
+   "spcpt_pyqJ32sV3hckSQVp",
+   "spcpt_sN6dqXzR2QRqCf7d",
+   "spcpt_v2dm3q2MnTVwcsvv",
+   "spcpt_vF4FGTy4snMq5G8g",
+   "spcpt_vVrJgrvyhDpSqNDj",
+   "spcpt_vcYwVQnWMZTx9ZJ8"
+  ]
+ },
+ "qual": "igcse-english-language-a",
+ "reconciliation": {
+  "codesOutsideSpine": [],
+  "distinctCodesAttached": 1,
+  "itemsOutsideSpine": 0,
+  "spineHitCodes": 1,
+  "spineSpecPoints": 2,
+  "uncoveredSpineCodeList": [
+   "IGCSE_ENGLISH_LANGUAGE_A:C3AA"
+  ],
+  "uncoveredSpineCodes": 1
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 24,
+    "resolved": 1,
+    "unresolved": 23
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SME-11 initial tiered auto-join from the harvested SME index against the canonical parsed registry; ambiguous and weak joins left unresolved by design)"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 7,
+    "question_parts": 0
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 1,
+    "question_parts": 0
+   },
+   "items": 7,
+   "items_with_codes": 1
+  },
+  "specPointMap": {
+   "regime": "B",
+   "smeEntries": 24,
+   "unitScope": null
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_5zbmW3vMyqfRjRdx": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C3AB",
+   "score": 0.6616,
+   "tier": "S1_name_match",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"Analysing a poem\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_dhrS35ptkcRm2j6C\"}",
+  "{\"name\": \"Analysing prose\", \"reason\": \"weak name similarity (0.39)\", \"spcpt_id\": \"spcpt_sN6dqXzR2QRqCf7d\"}",
+  "{\"name\": \"Assignment A Skills: Language and Structure Analysis\", \"reason\": \"weak name similarity (0.35)\", \"spcpt_id\": \"spcpt_RQq2MsBfNxfJhQSj\"}",
+  "{\"name\": \"Assignment A example\", \"reason\": \"weak name similarity (0.44)\", \"spcpt_id\": \"spcpt_3Zd3hx7zRV9xt4mn\"}",
+  "{\"name\": \"Assignment A model answer\", \"reason\": \"weak name similarity (0.34)\", \"spcpt_id\": \"spcpt_7Z2BxJf9F7xSKQz3\"}",
+  "{\"name\": \"Assignment A: Model Answer\", \"reason\": \"weak name similarity (0.34)\", \"spcpt_id\": \"spcpt_SR8jm5Fv4VjKWNBg\"}",
+  "{\"name\": \"Assignment B: Model Answer\", \"reason\": \"weak name similarity (0.35)\", \"spcpt_id\": \"spcpt_7pvgfvx75RNj6fSh\"}",
+  "{\"name\": \"Assignment tips\", \"reason\": \"weak name similarity (0.42)\", \"spcpt_id\": \"spcpt_9jVMRRPnJTh5hvQz\"}",
+  "{\"name\": \"Assignment tips\", \"reason\": \"weak name similarity (0.42)\", \"spcpt_id\": \"spcpt_pyqJ32sV3hckSQVp\"}",
+  "{\"name\": \"Breaking down the question\", \"reason\": \"weak name similarity (0.28)\", \"spcpt_id\": \"spcpt_Vj3dnSt565dzH9d3\"}",
+  "{\"name\": \"Breaking down the question\", \"reason\": \"weak name similarity (0.28)\", \"spcpt_id\": \"spcpt_vcYwVQnWMZTx9ZJ8\"}",
+  "{\"name\": \"Component 3 in a nutshell\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_DrtD7yD64jm84zcj\"}",
+  "{\"name\": \"Coursework Overview\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_v2dm3q2MnTVwcsvv\"}",
+  "{\"name\": \"How to Answer Assignment A\", \"reason\": \"weak name similarity (0.29)\", \"spcpt_id\": \"spcpt_m8FZs2WQgKFsRKhC\"}",
+  "{\"name\": \"How to Answer Assignment B\", \"reason\": \"weak name similarity (0.29)\", \"spcpt_id\": \"spcpt_N5ZYgTx5hqJ89sSD\"}",
+  "{\"name\": \"How to structure your imaginative writing\", \"reason\": \"weak name similarity (0.40)\", \"spcpt_id\": \"spcpt_DgnzB4NcMTq5xMrp\"}",
+  "{\"name\": \"Imaginative writing techniques\", \"reason\": \"weak name similarity (0.58)\", \"spcpt_id\": \"spcpt_TTp4J2PgM8wmd6rD\"}",
+  "{\"name\": \"Narrative writing model answer\", \"reason\": \"weak name similarity (0.31)\", \"spcpt_id\": \"spcpt_vF4FGTy4snMq5G8g\"}",
+  "{\"name\": \"Planning your narrative writing\", \"reason\": \"weak name similarity (0.28)\", \"spcpt_id\": \"spcpt_8M9wf56RHmmg7mS5\"}",
+  "{\"name\": \"Suggested titles\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_vVrJgrvyhDpSqNDj\"}",
+  "{\"name\": \"Top tips for narrative writing\", \"reason\": \"weak name similarity (0.25)\", \"spcpt_id\": \"spcpt_c2nKnxkFZHqYrbjm\"}",
+  "{\"name\": \"What is imaginative writing?\", \"reason\": \"weak name similarity (0.57)\", \"spcpt_id\": \"spcpt_6C82nHjTQdVVx4Sh\"}",
+  "{\"name\": \"What skills are being assessed?\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_QNB3cg55mtdHFyRf\"}"
+ ]
+}

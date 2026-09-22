@@ -1,0 +1,1428 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 41,
+   "total": 44,
+   "unmapped": 3,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 41
+  },
+  "questionParts": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  }
+ },
+ "course": "igcse-science-double-award-modular-24-physics-unit-1",
+ "generatedUtc": "2026-09-19T19:16:09Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-science-double-award-modular-24-physics-unit-1/spec_point_map.json": {
+   "sha256": "a412b3ae3343ed0a6b745af45bdf21ac0dcb8a4727aa5a6c49e94cca9ba04db5"
+  },
+  "SME-ExamQuestion/igcse-science-double-award-modular-24-physics-unit-1/spec_point_resolution.json": {
+   "sha256": "7b838c8cc8034146c34e4a605d57c19261acf54c11403ea05470d4774da86844"
+  },
+  "spec-links/igcse-science-double-award-modular-24-physics-unit-1.json": {
+   "sha256": "05ab3f0a2c4d24ff570ae76471b840adc0b64525b88bfc2afc9c4a923ca8bb6e"
+  }
+ },
+ "items": {
+  "rn_24s78Sp9xpX7xSfm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.13",
+     "score": null,
+     "spineCode": "1.13",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.14",
+     "score": null,
+     "spineCode": "1.14",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_2qBm7D6F3Z7QrrDN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.5",
+     "score": null,
+     "spineCode": "4.5",
+     "tier": "T4_fuzzy",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_3JJyj3QN6hbVFkDC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.16",
+     "score": null,
+     "spineCode": "3.16",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.17",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.17",
+     "score": null,
+     "spineCode": "3.17",
+     "tier": "T4_fuzzy",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_3tVh9PSWTV3GGJdM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.17",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.17",
+     "score": null,
+     "spineCode": "1.17",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_4fNpjw8zBj6WTF58": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.13",
+     "score": null,
+     "spineCode": "2.13",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_4gkrcDThFGpMhVH7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.21",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.21",
+     "score": null,
+     "spineCode": "1.21",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6CD7WMtzSNqvPP9Y": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.11",
+     "score": null,
+     "spineCode": "1.11",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.12",
+     "score": null,
+     "spineCode": "1.12",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6gWpcKQF6n6h8X2Y": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "T4_fuzzy",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6vj4Bmmz6ykMZKG8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.2",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_74FXkhC4D9SyJPKw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.13",
+     "score": null,
+     "spineCode": "3.13",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_9JCsSxTwQjfB8tpP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.18",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.18",
+     "score": null,
+     "spineCode": "2.18",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.7",
+     "score": null,
+     "spineCode": "2.7",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_9M3NfYGTGvXk8s7B": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.6",
+     "score": null,
+     "spineCode": "3.6",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.7",
+     "score": null,
+     "spineCode": "3.7",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.8",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.8",
+     "score": null,
+     "spineCode": "3.8",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_9TtgyW8FPffPtVYx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.15",
+     "score": null,
+     "spineCode": "1.15",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.16",
+     "score": null,
+     "spineCode": "1.16",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_9sFTV9pqb3zjGvk5": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NxtHvFj2d74PDs7T"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_C3WbXvbCZ9NRm8bj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.11",
+     "score": null,
+     "spineCode": "2.11",
+     "tier": "T2_near",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.12",
+     "score": null,
+     "spineCode": "2.12",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_C625pTD9V5jm9XZt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.17",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.17",
+     "score": null,
+     "spineCode": "2.17",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.8",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.8",
+     "score": null,
+     "spineCode": "2.8",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_CXc2SMhNYfnbZV42": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.5",
+     "score": null,
+     "spineCode": "1.5",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_FZNXrfz6Xf9q74PZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.19",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.19",
+     "score": null,
+     "spineCode": "1.19",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.20",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.20",
+     "score": null,
+     "spineCode": "1.20",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_HhK4yjC9F9g4WKh3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.15",
+     "score": null,
+     "spineCode": "3.15",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KD3nKhzYSHxwHMPJ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KhMWG3ThJFNfpg7s",
+    "spcpt_bznP9nrpwX78yPZ7"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_MQM3wYRMVJjwCRqn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.3",
+     "score": null,
+     "spineCode": "3.3",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_MhyjjZbrpX9g6V9Q": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_k2Mt2ksQ5m4nb6nZ"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_SDSFcnwr2R6BdRhF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.6",
+     "score": null,
+     "spineCode": "4.6",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.7",
+     "score": null,
+     "spineCode": "4.7",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_SWdGJjZhFWWntQfX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.4",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.4",
+     "score": null,
+     "spineCode": "1.4",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_W7wGGppmDcCztyMq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.6",
+     "score": null,
+     "spineCode": "2.6",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Z5W9w7CCPW2Srrgz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.23",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.23",
+     "score": null,
+     "spineCode": "1.23",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.24",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.24",
+     "score": null,
+     "spineCode": "1.24",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_bNZMwQSbpX6ws973": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.4",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.4",
+     "score": null,
+     "spineCode": "3.4",
+     "tier": "T4_fuzzy",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.5",
+     "score": null,
+     "spineCode": "3.5",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_bSXnYHxWq2KQMNNh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_dDFsxnVSCjVxQzTn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.9",
+     "score": null,
+     "spineCode": "1.9",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_fWy7gwSBDTxCngDj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.7",
+     "score": null,
+     "spineCode": "1.7",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.8",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.8",
+     "score": null,
+     "spineCode": "1.8",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_k7kkfQnj2nm5mZrD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.19",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.19",
+     "score": null,
+     "spineCode": "2.19",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nf928FV85hGdVpSh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.14",
+     "score": null,
+     "spineCode": "2.14",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.15",
+     "score": null,
+     "spineCode": "2.15",
+     "tier": "T2_near",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.16",
+     "score": null,
+     "spineCode": "2.16",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_pc4nMcZwhj8rv9BC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.18",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.18",
+     "score": null,
+     "spineCode": "1.18",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_q9wvcpD24GDVjypY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.14",
+     "score": null,
+     "spineCode": "3.14",
+     "tier": "T4_fuzzy",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_qCmDSfB9VFjp3pYm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.22",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.22",
+     "score": null,
+     "spineCode": "1.22",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_rYnG2VP8PCVm2gdH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.10",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.10",
+     "score": null,
+     "spineCode": "2.10",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.9",
+     "score": null,
+     "spineCode": "2.9",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_rhMfdfDDStMXdkzY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "1.10",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.10",
+     "score": null,
+     "spineCode": "1.10",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_shgcVMjW8dj3tzmG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.9",
+     "score": null,
+     "spineCode": "3.9",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_vtMSRYfhG6QKp3W9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.11",
+     "score": null,
+     "spineCode": "3.11",
+     "tier": "T2_near",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.12",
+     "score": null,
+     "spineCode": "3.12",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wGRGtCn4tbqNwCym": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.4",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wSNnk7JNQrnDwWtC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.10",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.10",
+     "score": null,
+     "spineCode": "3.10",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wnKfhjK44PZw7WZh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.5",
+     "score": null,
+     "spineCode": "2.5",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_xY53gYkFRf7DRYFb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_zhBzmgs8mYccMk4z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "2.21",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.21",
+     "score": null,
+     "spineCode": "2.21",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_jPbg72gVMtfx7Ygb"
+   ],
+   "kind": "note"
+  }
+ },
+ "notesInlineRefs": {
+  "total": 64,
+  "unmappedToMap": [
+   "spcpt_KhMWG3ThJFNfpg7s",
+   "spcpt_NxtHvFj2d74PDs7T",
+   "spcpt_bznP9nrpwX78yPZ7",
+   "spcpt_jPbg72gVMtfx7Ygb",
+   "spcpt_k2Mt2ksQ5m4nb6nZ"
+  ]
+ },
+ "qual": "igcse-science-double-award-modular",
+ "reconciliation": {
+  "codesOutsideSpine": [],
+  "distinctCodesAttached": 59,
+  "itemsOutsideSpine": 0,
+  "spineHitCodes": 59,
+  "spineSpecPoints": 90,
+  "uncoveredSpineCodeList": [
+   "1.1",
+   "1.6",
+   "2.1",
+   "2.20",
+   "2.4",
+   "3.1",
+   "3.2",
+   "4.1",
+   "5.1",
+   "5.10",
+   "5.11",
+   "5.12",
+   "5.13",
+   "5.14",
+   "5.15",
+   "5.16",
+   "5.17",
+   "5.18",
+   "5.19",
+   "5.2",
+   "5.20",
+   "5.21",
+   "5.22",
+   "5.23",
+   "5.3",
+   "5.4",
+   "5.5",
+   "5.6",
+   "5.7",
+   "5.8",
+   "5.9"
+  ],
+  "uncoveredSpineCodes": 31
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 64,
+    "resolved": 54,
+    "unresolved": 10
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SME-11 initial tiered auto-join from the harvested SME index against the canonical parsed registry; ambiguous and weak joins left unresolved by design)"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 44,
+    "question_parts": 0
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 41,
+    "question_parts": 0
+   },
+   "items": 44,
+   "items_with_codes": 41
+  },
+  "specPointMap": {
+   "regime": "A",
+   "smeEntries": 64,
+   "unitScope": null
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_2FZqBvW7jNw49VVm": {
+   "method": "definition_text_join",
+   "officialCode": "2.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_2wrxgQ83bwt3GDFP": {
+   "method": "definition_text_join",
+   "officialCode": "2.21",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.21",
+   "score": 0.9836,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_4rxjthyppJFv6SyN": {
+   "method": "definition_text_join",
+   "officialCode": "2.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.14",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_4wrkxXHVjBtXdQsN": {
+   "method": "definition_text_join",
+   "officialCode": "1.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.13",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_4xQJSF4z4bs56N8B": {
+   "method": "definition_text_join",
+   "officialCode": "3.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.13",
+   "score": 0.9682,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_74kRKrgP9zgvGhqj": {
+   "method": "definition_text_join",
+   "officialCode": "4.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.3",
+   "score": 0.9111,
+   "tier": "T4_fuzzy",
+   "unit": null
+  },
+  "spcpt_84p5GsNyyxcK3XT7": {
+   "method": "definition_text_join",
+   "officialCode": "3.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.14",
+   "score": 0.8659,
+   "tier": "T4_fuzzy",
+   "unit": null
+  },
+  "spcpt_8CPTRrf54RrjrXHK": {
+   "method": "definition_text_join",
+   "officialCode": "1.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.11",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_8jdSsBdmfprFFPkK": {
+   "method": "definition_text_join",
+   "officialCode": "1.24",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.24",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_9SkCRhsPjTJCM4g2": {
+   "method": "definition_text_join",
+   "officialCode": "1.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.9",
+   "score": 0.9894,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_9ww95GSXHxdpFrmN": {
+   "method": "definition_text_join",
+   "officialCode": "2.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.11",
+   "score": 0.989,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_CVpKJQK5qDsyH6ph": {
+   "method": "definition_text_join",
+   "officialCode": "4.4",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.4",
+   "score": 0.9548,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_CcxfdQ3ZWJ9JkWCC": {
+   "method": "definition_text_join",
+   "officialCode": "2.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.13",
+   "score": 0.9907,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_DD7SwFQWQ6h2b6fY": {
+   "method": "definition_text_join",
+   "officialCode": "3.4",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.4",
+   "score": 0.8795,
+   "tier": "T4_fuzzy",
+   "unit": null
+  },
+  "spcpt_Dvm4b2wghdgCX6yT": {
+   "method": "definition_text_join",
+   "officialCode": "1.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.14",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_FvFVqJdfG9xkhg45": {
+   "method": "definition_text_join",
+   "officialCode": "3.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Gbc5XFr3bYrPWmX5": {
+   "method": "definition_text_join",
+   "officialCode": "1.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.8",
+   "score": 0.9846,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_GpJ8vYTBGGgDtPmH": {
+   "method": "definition_text_join",
+   "officialCode": "3.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.16",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Gs69k2SsjnX45dKx": {
+   "method": "definition_text_join",
+   "officialCode": "2.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Kb64JYfhX6pGV3kk": {
+   "method": "definition_text_join",
+   "officialCode": "2.19",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.19",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_MGKrQ3gmCDmGcxSc": {
+   "method": "definition_text_join",
+   "officialCode": "1.20",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.20",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_N9h3qKrFKxwdWQCb": {
+   "method": "definition_text_join",
+   "officialCode": "2.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.16",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_NmZ3b222DvXmjxW5": {
+   "method": "definition_text_join",
+   "officialCode": "1.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.15",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_PHhGBcx5sybJVMTP": {
+   "method": "definition_text_join",
+   "officialCode": "1.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_QZsmkDbDxTcjyZVS": {
+   "method": "definition_text_join",
+   "officialCode": "1.10",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.10",
+   "score": 0.9538,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_QjMNxMd9G8rM4tKM": {
+   "method": "definition_text_join",
+   "officialCode": "1.19",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.19",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_V7rPTrCs3kCn3vbp": {
+   "method": "definition_text_join",
+   "officialCode": "2.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.6",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_X59Yh6drzYJwNP69": {
+   "method": "definition_text_join",
+   "officialCode": "2.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.8",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_XGW4XZFv89QRJQ5Z": {
+   "method": "definition_text_join",
+   "officialCode": "3.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.3",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_XwyHFqFnWKj7Gf5B": {
+   "method": "definition_text_join",
+   "officialCode": "3.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.15",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_YxD3c7xGxFJ2ftNN": {
+   "method": "definition_text_join",
+   "officialCode": "3.10",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.10",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Z3XywRTWmC9GRXMM": {
+   "method": "definition_text_join",
+   "officialCode": "1.17",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.17",
+   "score": 0.9823,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_bDTSFDFjrzxSxZ99": {
+   "method": "definition_text_join",
+   "officialCode": "1.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.3",
+   "score": 0.973,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_bfY7Z7FCwWdtMSsy": {
+   "method": "definition_text_join",
+   "officialCode": "3.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.8",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_crH34MgdKYTft4Jz": {
+   "method": "definition_text_join",
+   "officialCode": "1.18",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.18",
+   "score": 0.9889,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_cxWskbqkqX7pfPgr": {
+   "method": "definition_text_join",
+   "officialCode": "4.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.6",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_d6CKw7BRGwdyXYHj": {
+   "method": "definition_text_join",
+   "officialCode": "2.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.9",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_gJQ4vcdt87wKzRkY": {
+   "method": "definition_text_join",
+   "officialCode": "3.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.9",
+   "score": 0.96,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_hThsvKWDDmDvTbfg": {
+   "method": "definition_text_join",
+   "officialCode": "4.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.5",
+   "score": 0.9239,
+   "tier": "T4_fuzzy",
+   "unit": null
+  },
+  "spcpt_j86qcYjfCKzzdP8h": {
+   "method": "definition_text_join",
+   "officialCode": "2.17",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.17",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_jcF42grJp6hJrcNn": {
+   "method": "definition_text_join",
+   "officialCode": "2.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.15",
+   "score": 0.984,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_kq4RHqNBbxPz7YzD": {
+   "method": "definition_text_join",
+   "officialCode": "1.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.5",
+   "score": 0.9605,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_mdx5cRjpSyjxCmxw": {
+   "method": "definition_text_join",
+   "officialCode": "3.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.5",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_mwWRBK6zCj3WnhdH": {
+   "method": "definition_text_join",
+   "officialCode": "3.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.6",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_p982kmpfmBDxyxbv": {
+   "method": "definition_text_join",
+   "officialCode": "3.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.11",
+   "score": 0.9932,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_q4GnZdwwWmhK4XVC": {
+   "method": "definition_text_join",
+   "officialCode": "1.23",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.23",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_rQf7dtb3NXS6Z9SG": {
+   "method": "definition_text_join",
+   "officialCode": "2.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.5",
+   "score": 0.9846,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_s7B7MvZWHzQc9Pfx": {
+   "method": "definition_text_join",
+   "officialCode": "3.17",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.17",
+   "score": 0.8559,
+   "tier": "T4_fuzzy",
+   "unit": null
+  },
+  "spcpt_t2SWmHD6dP9BQH7p": {
+   "method": "definition_text_join",
+   "officialCode": "1.22",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.22",
+   "score": 0.9692,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_t7kTtXb6fz2FD5fQ": {
+   "method": "definition_text_join",
+   "officialCode": "1.4",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.4",
+   "score": 0.9878,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_v2vbptjYNjGw2JrZ": {
+   "method": "definition_text_join",
+   "officialCode": "1.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.16",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_vn3KzQ4mktt3rSJF": {
+   "method": "definition_text_join",
+   "officialCode": "3.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-3.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_wBrStYbjwXnF726n": {
+   "method": "definition_text_join",
+   "officialCode": "2.10",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.10",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_xmNTDbh9JQRWHPTc": {
+   "method": "definition_text_join",
+   "officialCode": "2.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.2",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_xsXFBb3KKWT8QJ7J": {
+   "method": "definition_text_join",
+   "officialCode": "1.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_y2d9H62gwSzDG7rb": {
+   "method": "definition_text_join",
+   "officialCode": "2.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.3",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_yWkXybXTmVb7WkJr": {
+   "method": "definition_text_join",
+   "officialCode": "2.18",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-2.18",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_z7Yj4f3Kb2rqmGYQ": {
+   "method": "definition_text_join",
+   "officialCode": "4.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-4.7",
+   "score": 0.9734,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_zFNq8GggMKDRx8CD": {
+   "method": "definition_text_join",
+   "officialCode": "1.21",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Physics-1.21",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"Acceleration\", \"reason\": \"merged/paraphrased beyond safe threshold (best 0.81)\", \"spcpt_id\": \"spcpt_k2Mt2ksQ5m4nb6nZ\"}",
+  "{\"name\": \"Electrical power\", \"reason\": \"merged/paraphrased beyond safe threshold (best 0.80)\", \"spcpt_id\": \"spcpt_bznP9nrpwX78yPZ7\"}",
+  "{\"name\": \"Energy stores & transfers\", \"reason\": \"merged/paraphrased beyond safe threshold (best 0.37)\", \"spcpt_id\": \"spcpt_NxtHvFj2d74PDs7T\"}",
+  "{\"name\": \"Selecting fuses\", \"reason\": \"merged/paraphrased beyond safe threshold (best 0.66)\", \"spcpt_id\": \"spcpt_KhMWG3ThJFNfpg7s\"}",
+  "{\"name\": \"Voltage\", \"reason\": \"merged/paraphrased beyond safe threshold (best 0.50)\", \"spcpt_id\": \"spcpt_jPbg72gVMtfx7Ygb\"}"
+ ]
+}

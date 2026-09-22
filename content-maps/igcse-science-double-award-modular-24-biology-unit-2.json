@@ -1,0 +1,2136 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 74,
+   "total": 75,
+   "unmapped": 1,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 74
+  },
+  "questionParts": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  }
+ },
+ "course": "igcse-science-double-award-modular-24-biology-unit-2",
+ "generatedUtc": "2026-09-19T19:16:09Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-science-double-award-modular-24-biology-unit-2/spec_point_map.json": {
+   "sha256": "0867fcde46a7d13454690b6ebec6769199dfc632ae74195f469b4acaea10d5d4"
+  },
+  "SME-ExamQuestion/igcse-science-double-award-modular-24-biology-unit-2/spec_point_resolution.json": {
+   "sha256": "5834e94c43e4b7e56fe44451d3a7bcc363d29f9d99bf40669f841755cdfb70d5"
+  },
+  "spec-links/igcse-science-double-award-modular-24-biology-unit-2.json": {
+   "sha256": "4908a9e873ecb5240605734c3da8033ca17e1228f39708b8ade46bb627a7f9e5"
+  }
+ },
+ "items": {
+  "rn_2dRQSWp7xJJJ7MBj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.36",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.36",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_3nYJFgzYtmbYtXVK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.26",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.26",
+     "score": null,
+     "spineCode": "4.26",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.27",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.27",
+     "score": null,
+     "spineCode": "4.27",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_53R93WRgQZvbj4Xj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.39",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.39",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6mmXMQzgwqHvN6yg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.31",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.31",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_8YpgYmYch2YMr7t6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.13",
+     "score": null,
+     "spineCode": "5.13",
+     "tier": "T4_fuzzy",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.14",
+     "score": null,
+     "spineCode": "5.14",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_9CszY5r8T7qwNjVn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.8",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.8",
+     "score": null,
+     "spineCode": "6.8",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_BNypNmmFWkMYRSHP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.32",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.32",
+     "score": null,
+     "spineCode": "4.32",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_DBsDkKGpnWQP66Rh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.15",
+     "score": null,
+     "spineCode": "5.15",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_DF5N8HknMC9NC39t": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.2",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.2",
+     "score": null,
+     "spineCode": "5.2",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_F5NPqjwnFSn7wFPz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.23",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.23",
+     "score": null,
+     "spineCode": "4.23",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.25",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.25",
+     "score": null,
+     "spineCode": "4.25",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_F8CxrfT8ybNrpbQf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.20",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.20",
+     "score": null,
+     "spineCode": "4.20",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_GmFw4FzxDVFWMC7B": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.12",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_HHDYJFzpqCC4FGKs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.8",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.8",
+     "score": null,
+     "spineCode": "5.8",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.9",
+     "score": null,
+     "spineCode": "5.9",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_HYXczh6D6WKTwtPr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.39",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.39",
+     "score": null,
+     "spineCode": "4.39",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Hy9CCn3FFsxHWdp3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.43",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.43",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_J39MHH5rzVnNYtds": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.10",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.10",
+     "score": null,
+     "spineCode": "5.10",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KTq9xPjyv7KRwYP5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.19",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.19",
+     "score": null,
+     "spineCode": "4.19",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Kd3bmcrPmPPJFKMK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.16",
+     "score": null,
+     "spineCode": "5.16",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.17",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.17",
+     "score": null,
+     "spineCode": "5.17",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KfsgJqg7w3KtcnxT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.15",
+     "score": null,
+     "spineCode": "6.15",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KkDxt5MdsR784JdW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.1",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.1",
+     "score": null,
+     "spineCode": "5.1",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KvSjXtRFZ3JYmVDd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.1",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.1",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.2",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.2",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_M6cpyCGJ4dKFpmzC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.7",
+     "score": null,
+     "spineCode": "5.7",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_MhjqBYqSPhvcDJHg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.33",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.33",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.34",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.34",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.35",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.35",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Mvr5nGS8JNkJn3FW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.2",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.2",
+     "score": null,
+     "spineCode": "4.2",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_N2VFzZptQZMnYvDp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.44",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.44",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_NJ7VW76BjTN3QR9Q": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.7",
+     "score": null,
+     "spineCode": "4.7",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_NbbPtXXMvwKXWWpw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_NnjRzJHkjch3d3jv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.6",
+     "score": null,
+     "spineCode": "6.6",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_PJm6gGXDSFg2j4DJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.42",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.42",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_PN8mKxRDH8y6kkt8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.21",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.21",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Q5gx58vjynmNVbQn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.14",
+     "score": null,
+     "spineCode": "6.14",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_QVjTShYMrsXphfDK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.11",
+     "score": null,
+     "spineCode": "4.11",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_QVqKbTJ93BsK3GPJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.6",
+     "score": null,
+     "spineCode": "4.6",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Qs8YQ8vswb6kNN8v": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.38",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.38",
+     "score": null,
+     "spineCode": "4.38",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_RhF48MHzPjsWspQW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.24",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.24",
+     "score": null,
+     "spineCode": "4.24",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_TVrDRvjxyjYhtMKC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.5",
+     "score": null,
+     "spineCode": "4.5",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_TgyH9XMP5JrzxyS7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Tqvcd4tJz4M7PDDW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.28",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.28",
+     "score": null,
+     "spineCode": "4.28",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.29",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.29",
+     "score": null,
+     "spineCode": "4.29",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_VQ22xc5QKWXJhxnJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.15",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_VfQ8n2fPzmqSpCKC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_YKpJHS4ZTM4qnrV7"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_WNTzgxm68GHhf5fd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_WWp5PCZWwdbfgqkG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.6",
+     "score": null,
+     "spineCode": "5.6",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_WdvQ6JPnSgNGJBwk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.1",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.1",
+     "score": null,
+     "spineCode": "6.1",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_X2HfCtrVWbH5SC6G": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.12",
+     "score": null,
+     "spineCode": "4.12",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_YdgCWbjXJr4kMds6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.16",
+     "score": null,
+     "spineCode": "6.16",
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_ZpkRF2B94q6dBpfN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.30",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.30",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_bpPz7T4R4PpS3vnZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.12",
+     "score": null,
+     "spineCode": "6.12",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.13",
+     "score": null,
+     "spineCode": "6.13",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_bzbGWtNXj7kCppWG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.19",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.19",
+     "score": null,
+     "spineCode": null,
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_cTtxtMxGFySmQMxf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.9",
+     "score": null,
+     "spineCode": "4.9",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_crVHckMJcJw7d56s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.41",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.41",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_f7zgq5kpGx3HMnHs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.30",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.30",
+     "score": null,
+     "spineCode": "4.30",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_nNMTzc3PZPpMmSx9"
+   ],
+   "kind": "note"
+  },
+  "rn_fc4RtMw8kkGWFTrq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.32",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.32",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_hHHCZGHfSGvGmtfQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.2",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_hybmmF3JNk7kxzJZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.10",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.10",
+     "score": null,
+     "spineCode": "6.10",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_jWPtwQ4Fn6XtCcZb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.8",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.8",
+     "score": null,
+     "spineCode": "4.8",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_jZDbHzNm4JXs5f7G": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.18",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.18",
+     "score": null,
+     "spineCode": null,
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_kcw9zMzvbxp2yVBp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.17",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.17",
+     "score": null,
+     "spineCode": null,
+     "tier": "T2_near",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nCfYr3DshbnxMxsy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.10",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.10",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.11",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.9",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_pGqhcQyWtMTyNk3s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.13",
+     "score": null,
+     "spineCode": "4.13",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_q7VWTgBZpxbjJvm5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.33",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.33",
+     "score": null,
+     "spineCode": "4.33",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_qnHfMCqJR5qgzS3S": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.14",
+     "score": null,
+     "spineCode": "4.14",
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.15",
+     "score": null,
+     "spineCode": "4.15",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_rVtsJtvXSX4GpjdY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.7",
+     "score": null,
+     "spineCode": "6.7",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_st3Pp5BHpBbP5gBY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.5",
+     "score": null,
+     "spineCode": "6.5",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_t7Fd2kvHYDqjpQqq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.20",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.20",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_t97SvhC3tnW3cj9q": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.34",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.34",
+     "score": null,
+     "spineCode": "4.34",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_tMK26k8XqxNmPrk7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "5.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.12",
+     "score": null,
+     "spineCode": "5.12",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_tfrgTts3zDHkQBzn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.4",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_v2NtR874bcg2qYVD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.16",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_vYqQNBfpz2XvPSXM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.4",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_vcw2vSP7cN64VBQd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.1",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_xBYWN9JGPSnmJVY7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "6.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.11",
+     "score": null,
+     "spineCode": "6.11",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_xyy6KxPcBNZs8fYX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.37",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.37",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.38",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.38",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_zC7QWr77fGFWbhNS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.22",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.22",
+     "score": null,
+     "spineCode": "4.22",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_zFt2dHy9krWbkSKb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "3.40",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.40",
+     "score": null,
+     "spineCode": null,
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_zsnc6nvCQKHcFZrP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "definition_text_join",
+     "officialCode": "4.31",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.31",
+     "score": null,
+     "spineCode": "4.31",
+     "tier": "T1_verbatim",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  }
+ },
+ "notesInlineRefs": {
+  "total": 99,
+  "unmappedToMap": [
+   "spcpt_YKpJHS4ZTM4qnrV7",
+   "spcpt_nNMTzc3PZPpMmSx9"
+  ]
+ },
+ "qual": "igcse-science-double-award-modular",
+ "reconciliation": {
+  "codesOutsideSpine": [
+   {
+    "items": 28,
+    "note": "attachments whose upstream code has no verbatim/alias match in this course's spine (cross-unit or text-level ids) \u2014 kept, not dropped"
+   }
+  ],
+  "distinctCodesAttached": 60,
+  "itemsOutsideSpine": 28,
+  "spineHitCodes": 60,
+  "spineSpecPoints": 60,
+  "uncoveredSpineCodeList": [],
+  "uncoveredSpineCodes": 0
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 99,
+    "resolved": 96,
+    "unresolved": 3
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SME-11 initial tiered auto-join from the harvested SME index against the canonical parsed registry; ambiguous and weak joins left unresolved by design)"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 75,
+    "question_parts": 0
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 74,
+    "question_parts": 0
+   },
+   "items": 75,
+   "items_with_codes": 74
+  },
+  "specPointMap": {
+   "regime": "A",
+   "smeEntries": 99,
+   "unitScope": null
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_2VtjW9mZbtd3X8xQ": {
+   "method": "definition_text_join",
+   "officialCode": "3.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.9",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_2zpdcztP3yXd72R4": {
+   "method": "definition_text_join",
+   "officialCode": "4.23",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.23",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_36P8TTMv4np6sC47": {
+   "method": "definition_text_join",
+   "officialCode": "5.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.8",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_3Mt9dr9qmC88Ddvr": {
+   "method": "definition_text_join",
+   "officialCode": "4.27",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.27",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_3pT6kJ9mqQVw6cpJ": {
+   "method": "definition_text_join",
+   "officialCode": "3.37",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.37",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_44zH3NhVsVr68S9M": {
+   "method": "definition_text_join",
+   "officialCode": "3.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.16",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_4hcp4nbDvWxFp4MR": {
+   "method": "definition_text_join",
+   "officialCode": "3.38",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.38",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_4msqx3nb8mWrDpPN": {
+   "method": "definition_text_join",
+   "officialCode": "5.1",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.1",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_5McgWtPb3ZjMjh4p": {
+   "method": "definition_text_join",
+   "officialCode": "3.17",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.17",
+   "score": 0.9474,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_6Rw8hVSTqfPSWw9j": {
+   "method": "definition_text_join",
+   "officialCode": "4.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.13",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_6kfNB5G2D22mDSMq": {
+   "method": "definition_text_join",
+   "officialCode": "6.10",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.10",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_7JgzcsxZ3VW8Xqjf": {
+   "method": "definition_text_join",
+   "officialCode": "3.42",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.42",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_7rCPTs42HTrQmBzG": {
+   "method": "definition_text_join",
+   "officialCode": "3.33",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.33",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_7s6MrrHv654c36M6": {
+   "method": "definition_text_join",
+   "officialCode": "3.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_9KjSMxvKcHrDkNNz": {
+   "method": "definition_text_join",
+   "officialCode": "5.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.5",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_9V2VXDc8V3vSBsrN": {
+   "method": "definition_text_join",
+   "officialCode": "5.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.2",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_9cwqy4qJDDMft6yF": {
+   "method": "definition_text_join",
+   "officialCode": "4.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_9qf4FgFhJKzt96T5": {
+   "method": "definition_text_join",
+   "officialCode": "3.21",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.21",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_B7XJ44KTPvsrhT3q": {
+   "method": "definition_text_join",
+   "officialCode": "4.24",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.24",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_BvXwgJxd6xmRWqdF": {
+   "method": "definition_text_join",
+   "officialCode": "3.19",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.19",
+   "score": 0.9577,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_CkHqXRj2MgVMR6xZ": {
+   "method": "definition_text_join",
+   "officialCode": "4.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.14",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Ckph7WsWPYtcv3GS": {
+   "method": "definition_text_join",
+   "officialCode": "4.30",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.30",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_D4rwBJ86NkJGCdSQ": {
+   "method": "definition_text_join",
+   "officialCode": "4.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.3",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_DXBrMq43jJZVS4x3": {
+   "method": "definition_text_join",
+   "officialCode": "6.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.5",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_F6Yd4q6DxdtZP2qr": {
+   "method": "definition_text_join",
+   "officialCode": "5.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.16",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_FCvQmSRt8rb5dm45": {
+   "method": "definition_text_join",
+   "officialCode": "3.31",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.31",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_GgKHgwqcJ7wyZvGJ": {
+   "method": "definition_text_join",
+   "officialCode": "3.18",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.18",
+   "score": 0.9943,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_Gwc6PDhdC6dzwQpN": {
+   "method": "definition_text_join",
+   "officialCode": "5.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Hnbn2WcPmSXKHgdT": {
+   "method": "definition_text_join",
+   "officialCode": "6.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_HvfdJtbtpdwMz9PX": {
+   "method": "definition_text_join",
+   "officialCode": "4.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.15",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_HzwP4DPPzRtrSQWK": {
+   "method": "definition_text_join",
+   "officialCode": "5.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.15",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_J9RDCvWjC4ccCbNg": {
+   "method": "definition_text_join",
+   "officialCode": "4.26",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.26",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_JT7x333mqB58NfGS": {
+   "method": "definition_text_join",
+   "officialCode": "5.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.9",
+   "score": 0.9514,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_JW2s3mPGZpNW226k": {
+   "method": "definition_text_join",
+   "officialCode": "4.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.3",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_JqD2wsj65gmFCwVR": {
+   "method": "definition_text_join",
+   "officialCode": "4.20",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.20",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_JwhDBtdrN2pQG6Px": {
+   "method": "definition_text_join",
+   "officialCode": "4.1",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.1",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_JzqXDyF2DZCZwSfg": {
+   "method": "definition_text_join",
+   "officialCode": "3.1",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.1",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_K7TqVXS3scZ3GfDh": {
+   "method": "definition_text_join",
+   "officialCode": "6.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.16",
+   "score": 0.9913,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_KFTwYPxY8s55rMMN": {
+   "method": "definition_text_join",
+   "officialCode": "6.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.6",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_KZDxQfqVTprMMHvz": {
+   "method": "definition_text_join",
+   "officialCode": "4.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.9",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_KkjCyjMTzDBMgsvR": {
+   "method": "definition_text_join",
+   "officialCode": "4.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.11",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_MgwgXv7sHgxnqN2H": {
+   "method": "definition_text_join",
+   "officialCode": "6.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.13",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_P42W84zbhXGyH2fN": {
+   "method": "definition_text_join",
+   "officialCode": "5.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.13",
+   "score": 0.8962,
+   "tier": "T4_fuzzy",
+   "unit": null
+  },
+  "spcpt_QJfdBxNppVvfqRm3": {
+   "method": "definition_text_join",
+   "officialCode": "4.32",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.32",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_QdHcY2Z2FgBHjGsn": {
+   "method": "definition_text_join",
+   "officialCode": "3.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_R4P6qKqJ6jr57fYt": {
+   "method": "definition_text_join",
+   "officialCode": "4.34",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.34",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_RCkvMQDTfpRDwScs": {
+   "method": "definition_text_join",
+   "officialCode": "4.25",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.25",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_RKMBHQjqkBFr7rXn": {
+   "method": "definition_text_join",
+   "officialCode": "4.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_SNQY2DKhmgHhf96k": {
+   "method": "definition_text_join",
+   "officialCode": "5.17",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.17",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_T3DSBV3rJxnZ6xVv": {
+   "method": "definition_text_join",
+   "officialCode": "3.44",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.44",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_TmcmGB2nyYjxbFtr": {
+   "method": "definition_text_join",
+   "officialCode": "4.33",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.33",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_WHd43yvp9f8dvP3t": {
+   "method": "definition_text_join",
+   "officialCode": "5.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.6",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_WPyjx3V9yNgkwK2t": {
+   "method": "definition_text_join",
+   "officialCode": "5.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.12",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_WbRgWh8N7sGBb8yC": {
+   "method": "definition_text_join",
+   "officialCode": "3.39",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.39",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_WfGzf8t2H7fTgnWJ": {
+   "method": "definition_text_join",
+   "officialCode": "3.32",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.32",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_X29Pxch4Q8zYbKtk": {
+   "method": "definition_text_join",
+   "officialCode": "6.1",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.1",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_XbThyPj2rwQKyW7t": {
+   "method": "definition_text_join",
+   "officialCode": "4.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.5",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_YjqqHz4bsrg7bGzN": {
+   "method": "definition_text_join",
+   "officialCode": "4.31",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.31",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_YsYd3fX99KjhYSyr": {
+   "method": "definition_text_join",
+   "officialCode": "4.39",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.39",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_YzqSzzmWhQmMP3py": {
+   "method": "definition_text_join",
+   "officialCode": "3.34",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.34",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_ZjFNs7YZ6TKnXg4b": {
+   "method": "definition_text_join",
+   "officialCode": "3.30",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.30",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_Ztd9qWfyHPnZpRD9": {
+   "method": "definition_text_join",
+   "officialCode": "6.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.11",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_bD2GJFkg664kHF64": {
+   "method": "definition_text_join",
+   "officialCode": "5.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_c9jcmsYjSm5MJFYc": {
+   "method": "definition_text_join",
+   "officialCode": "3.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.2",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_ccBpb9S7DPTjWJY7": {
+   "method": "definition_text_join",
+   "officialCode": "6.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.15",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_dHGK6QNFy7BwGGy9": {
+   "method": "definition_text_join",
+   "officialCode": "3.40",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.40",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_fDzzXZ3ThppGVySz": {
+   "method": "definition_text_join",
+   "officialCode": "5.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_fwfsdF4xR4ynMSVc": {
+   "method": "definition_text_join",
+   "officialCode": "3.20",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.20",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_g8VqfC5rgJnzyTjg": {
+   "method": "definition_text_join",
+   "officialCode": "3.43",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.43",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_gV7Fq3ZDjWX5638m": {
+   "method": "definition_text_join",
+   "officialCode": "4.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.8",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_gV8ZjCcfSzQVhQfw": {
+   "method": "definition_text_join",
+   "officialCode": "4.29",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.29",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_j3XQQVY5QNFzp8MY": {
+   "method": "definition_text_join",
+   "officialCode": "3.35",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.35",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_jmfGBCYqT6DSrZTC": {
+   "method": "definition_text_join",
+   "officialCode": "4.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.6",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_kkvrpJ2MMwqkTvbH": {
+   "method": "definition_text_join",
+   "officialCode": "4.38",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.38",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_mK85xGkGQKkfcg3Y": {
+   "method": "definition_text_join",
+   "officialCode": "3.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.15",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_mY6DGHFW3xBXY97M": {
+   "method": "definition_text_join",
+   "officialCode": "5.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.14",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_pFdV48sCFZkZyxmG": {
+   "method": "definition_text_join",
+   "officialCode": "6.4",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.4",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_pgnmNVPVjvsf46y3": {
+   "method": "definition_text_join",
+   "officialCode": "6.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.2",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_qHKrwgYsGyy8kJRz": {
+   "method": "definition_text_join",
+   "officialCode": "6.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.14",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_qdZNwRgBrV38dQq9": {
+   "method": "definition_text_join",
+   "officialCode": "4.1",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.1",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_qf8PnY6CkxBw2sTB": {
+   "method": "definition_text_join",
+   "officialCode": "3.10",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.10",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_r9PPGPbHfDm8d4CJ": {
+   "method": "definition_text_join",
+   "officialCode": "4.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.2",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_sdtC7S4J6pyxQrfp": {
+   "method": "definition_text_join",
+   "officialCode": "4.1",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.1",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_sf4JmgpSB3ZJ2cKg": {
+   "method": "definition_text_join",
+   "officialCode": "6.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.7",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_t5XvM8YQwcfbmt9B": {
+   "method": "definition_text_join",
+   "officialCode": "3.21",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.21",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_tTrzJ7y32nRkFKdw": {
+   "method": "definition_text_join",
+   "officialCode": "3.41",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.41",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_tXs46zcyvygYhcHS": {
+   "method": "definition_text_join",
+   "officialCode": "4.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.2",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_vDqqYZxjM5YZQJfN": {
+   "method": "definition_text_join",
+   "officialCode": "5.10",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-5.10",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_wD7Bmwrstq4hgPqk": {
+   "method": "definition_text_join",
+   "officialCode": "3.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.11",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_wPvwQQhTjXZ8zgPS": {
+   "method": "definition_text_join",
+   "officialCode": "3.36",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-3.36",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_wtgjw2nr4hPJJ6tR": {
+   "method": "definition_text_join",
+   "officialCode": "4.19",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.19",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_wv3gZTtXny5BbJQv": {
+   "method": "definition_text_join",
+   "officialCode": "4.4",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.4",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_xvdbfZ8MY92bTxPV": {
+   "method": "definition_text_join",
+   "officialCode": "4.22",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.22",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_y4DQpnTWsHc4YGDv": {
+   "method": "definition_text_join",
+   "officialCode": "4.28",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.28",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_ygHSD2zT3mp3qPHk": {
+   "method": "definition_text_join",
+   "officialCode": "4.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-4.8",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  },
+  "spcpt_z26s5H9gtK7vyZ7R": {
+   "method": "definition_text_join",
+   "officialCode": "6.8",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.8",
+   "score": 0.9585,
+   "tier": "T2_near",
+   "unit": null
+  },
+  "spcpt_zPrQKKwcM4H7kJWP": {
+   "method": "definition_text_join",
+   "officialCode": "6.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Biology-6.3",
+   "score": 1.0,
+   "tier": "T1_verbatim",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"Xylem & Phloem\", \"reason\": \"merged/paraphrased beyond safe threshold (best 0.68)\", \"spcpt_id\": \"spcpt_YKpJHS4ZTM4qnrV7\"}"
+ ]
+}

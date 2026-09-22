@@ -1,0 +1,995 @@
+{
+ "courses": {
+  "ial-biology-18": {
+   "codesOutsideSpine": 0,
+   "course": "ial-biology-18",
+   "items": {
+    "flashcards": 1847,
+    "notes": 170,
+    "questionParts": 603
+   },
+   "qual": "ial-biology",
+   "spcptMapped": 223,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 168,
+   "totals": {
+    "flashcards": 1847,
+    "notes": 170,
+    "questionParts": 611
+   },
+   "uncoveredSpineCodes": 2
+  },
+  "ial-chemistry-17": {
+   "codesOutsideSpine": 0,
+   "course": "ial-chemistry-17",
+   "items": {
+    "flashcards": 1723,
+    "notes": 196,
+    "questionParts": 939
+   },
+   "qual": "ial-chemistry",
+   "spcptMapped": 262,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 240,
+   "totals": {
+    "flashcards": 1723,
+    "notes": 196,
+    "questionParts": 957
+   },
+   "uncoveredSpineCodes": 79
+  },
+  "ial-further-maths-18-further-pure-1": {
+   "codesOutsideSpine": 0,
+   "course": "ial-further-maths-18-further-pure-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 25,
+    "questionParts": 280
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 44,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 21,
+   "totals": {
+    "flashcards": 0,
+    "notes": 25,
+    "questionParts": 280
+   },
+   "uncoveredSpineCodes": 4
+  },
+  "ial-maths-20-decision-1": {
+   "codesOutsideSpine": 0,
+   "course": "ial-maths-20-decision-1",
+   "items": {
+    "flashcards": 212,
+    "notes": 25,
+    "questionParts": 373
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 50,
+   "spcptUnmapped": 3,
+   "specPointMap": true,
+   "spineHitCodes": 13,
+   "totals": {
+    "flashcards": 223,
+    "notes": 26,
+    "questionParts": 375
+   },
+   "uncoveredSpineCodes": 2
+  },
+  "ial-maths-20-mechanics-1": {
+   "codesOutsideSpine": 1,
+   "course": "ial-maths-20-mechanics-1",
+   "items": {
+    "flashcards": 205,
+    "notes": 33,
+    "questionParts": 473
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 39,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 12,
+   "totals": {
+    "flashcards": 211,
+    "notes": 34,
+    "questionParts": 539
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "ial-maths-20-mechanics-2": {
+   "codesOutsideSpine": 64,
+   "course": "ial-maths-20-mechanics-2",
+   "items": {
+    "flashcards": 133,
+    "notes": 20,
+    "questionParts": 470
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 46,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 13,
+   "totals": {
+    "flashcards": 140,
+    "notes": 21,
+    "questionParts": 554
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "ial-maths-20-pure-1": {
+   "codesOutsideSpine": 2,
+   "course": "ial-maths-20-pure-1",
+   "items": {
+    "flashcards": 261,
+    "notes": 41,
+    "questionParts": 707
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 45,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 21,
+   "totals": {
+    "flashcards": 267,
+    "notes": 42,
+    "questionParts": 712
+   },
+   "uncoveredSpineCodes": 1
+  },
+  "ial-maths-20-pure-2": {
+   "codesOutsideSpine": 91,
+   "course": "ial-maths-20-pure-2",
+   "items": {
+    "flashcards": 239,
+    "notes": 38,
+    "questionParts": 568
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 67,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 19,
+   "totals": {
+    "flashcards": 239,
+    "notes": 38,
+    "questionParts": 591
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "ial-maths-20-pure-3": {
+   "codesOutsideSpine": 159,
+   "course": "ial-maths-20-pure-3",
+   "items": {
+    "flashcards": 200,
+    "notes": 35,
+    "questionParts": 726
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 69,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 17,
+   "totals": {
+    "flashcards": 200,
+    "notes": 35,
+    "questionParts": 790
+   },
+   "uncoveredSpineCodes": 1
+  },
+  "ial-maths-20-pure-4": {
+   "codesOutsideSpine": 105,
+   "course": "ial-maths-20-pure-4",
+   "items": {
+    "flashcards": 219,
+    "notes": 38,
+    "questionParts": 590
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 64,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 17,
+   "totals": {
+    "flashcards": 224,
+    "notes": 39,
+    "questionParts": 660
+   },
+   "uncoveredSpineCodes": 1
+  },
+  "ial-maths-20-statistics-1": {
+   "codesOutsideSpine": 0,
+   "course": "ial-maths-20-statistics-1",
+   "items": {
+    "flashcards": 205,
+    "notes": 30,
+    "questionParts": 564
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 44,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 15,
+   "totals": {
+    "flashcards": 205,
+    "notes": 30,
+    "questionParts": 574
+   },
+   "uncoveredSpineCodes": 1
+  },
+  "ial-maths-20-statistics-2": {
+   "codesOutsideSpine": 67,
+   "course": "ial-maths-20-statistics-2",
+   "items": {
+    "flashcards": 126,
+    "notes": 15,
+    "questionParts": 503
+   },
+   "qual": "ial-maths",
+   "spcptMapped": 35,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 11,
+   "totals": {
+    "flashcards": 126,
+    "notes": 15,
+    "questionParts": 591
+   },
+   "uncoveredSpineCodes": 5
+  },
+  "ial-physics-19": {
+   "codesOutsideSpine": 0,
+   "course": "ial-physics-19",
+   "items": {
+    "flashcards": 1107,
+    "notes": 174,
+    "questionParts": 534
+   },
+   "qual": "ial-physics",
+   "spcptMapped": 209,
+   "spcptUnmapped": 56,
+   "specPointMap": true,
+   "spineHitCodes": 152,
+   "totals": {
+    "flashcards": 1412,
+    "notes": 222,
+    "questionParts": 546
+   },
+   "uncoveredSpineCodes": 19
+  },
+  "igcse-accounting-17-financial-statements": {
+   "codesOutsideSpine": 4,
+   "course": "igcse-accounting-17-financial-statements",
+   "items": {
+    "flashcards": 0,
+    "notes": 19,
+    "questionParts": 71
+   },
+   "qual": "igcse-accounting",
+   "spcptMapped": 31,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 19,
+   "totals": {
+    "flashcards": 0,
+    "notes": 20,
+    "questionParts": 73
+   },
+   "uncoveredSpineCodes": 67
+  },
+  "igcse-accounting-17-introduction-to-bookkeeping-and-accounting": {
+   "codesOutsideSpine": 29,
+   "course": "igcse-accounting-17-introduction-to-bookkeeping-and-accounting",
+   "items": {
+    "flashcards": 0,
+    "notes": 41,
+    "questionParts": 313
+   },
+   "qual": "igcse-accounting",
+   "spcptMapped": 105,
+   "spcptUnmapped": 5,
+   "specPointMap": true,
+   "spineHitCodes": 49,
+   "totals": {
+    "flashcards": 0,
+    "notes": 43,
+    "questionParts": 328
+   },
+   "uncoveredSpineCodes": 33
+  },
+  "igcse-biology-19": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-biology-19",
+   "items": {
+    "flashcards": 6,
+    "notes": 142,
+    "questionParts": 970
+   },
+   "qual": "igcse-biology",
+   "spcptMapped": 209,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 176,
+   "totals": {
+    "flashcards": 1205,
+    "notes": 142,
+    "questionParts": 976
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "igcse-biology-modular-24-unit-1": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-biology-modular-24-unit-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 43,
+    "questionParts": 365
+   },
+   "qual": "igcse-biology-modular",
+   "spcptMapped": 78,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 54,
+   "totals": {
+    "flashcards": 434,
+    "notes": 43,
+    "questionParts": 366
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "igcse-biology-modular-24-unit-2": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-biology-modular-24-unit-2",
+   "items": {
+    "flashcards": 6,
+    "notes": 99,
+    "questionParts": 514
+   },
+   "qual": "igcse-biology-modular",
+   "spcptMapped": 131,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 122,
+   "totals": {
+    "flashcards": 771,
+    "notes": 99,
+    "questionParts": 549
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "igcse-business-19": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-business-19",
+   "items": {
+    "flashcards": 1008,
+    "notes": 80,
+    "questionParts": 607
+   },
+   "qual": "igcse-business",
+   "spcptMapped": 192,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 59,
+   "totals": {
+    "flashcards": 1008,
+    "notes": 89,
+    "questionParts": 612
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "igcse-chemistry-19": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-chemistry-19",
+   "items": {
+    "flashcards": 0,
+    "notes": 112,
+    "questionParts": 1358
+   },
+   "qual": "igcse-chemistry",
+   "spcptMapped": 162,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 155,
+   "totals": {
+    "flashcards": 909,
+    "notes": 112,
+    "questionParts": 1404
+   },
+   "uncoveredSpineCodes": 27
+  },
+  "igcse-chemistry-modular-24-unit-1": {
+   "codesOutsideSpine": 103,
+   "course": "igcse-chemistry-modular-24-unit-1",
+   "items": {
+    "flashcards": 453,
+    "notes": 65,
+    "questionParts": 681
+   },
+   "qual": "igcse-chemistry-modular",
+   "spcptMapped": 94,
+   "spcptUnmapped": 43,
+   "specPointMap": true,
+   "spineHitCodes": 71,
+   "totals": {
+    "flashcards": 542,
+    "notes": 65,
+    "questionParts": 704
+   },
+   "uncoveredSpineCodes": 29
+  },
+  "igcse-chemistry-modular-24-unit-2": {
+   "codesOutsideSpine": 166,
+   "course": "igcse-chemistry-modular-24-unit-2",
+   "items": {
+    "flashcards": 276,
+    "notes": 47,
+    "questionParts": 622
+   },
+   "qual": "igcse-chemistry-modular",
+   "spcptMapped": 80,
+   "spcptUnmapped": 40,
+   "specPointMap": true,
+   "spineHitCodes": 59,
+   "totals": {
+    "flashcards": 387,
+    "notes": 47,
+    "questionParts": 651
+   },
+   "uncoveredSpineCodes": 22
+  },
+  "igcse-economics-17": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-economics-17",
+   "items": {
+    "flashcards": 980,
+    "notes": 79,
+    "questionParts": 617
+   },
+   "qual": "igcse-economics",
+   "spcptMapped": 202,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 85,
+   "totals": {
+    "flashcards": 980,
+    "notes": 80,
+    "questionParts": 623
+   },
+   "uncoveredSpineCodes": 23
+  },
+  "igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing",
+   "items": {
+    "flashcards": 0,
+    "notes": 9,
+    "questionParts": 0
+   },
+   "qual": "igcse-english-language-a",
+   "spcptMapped": 26,
+   "spcptUnmapped": 124,
+   "specPointMap": true,
+   "spineHitCodes": 9,
+   "totals": {
+    "flashcards": 166,
+    "notes": 40,
+    "questionParts": 100
+   },
+   "uncoveredSpineCodes": 3
+  },
+  "igcse-english-language-a-16-paper-2-poetry-and-prose-texts-and-imaginative-writing": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-english-language-a-16-paper-2-poetry-and-prose-texts-and-imaginative-writing",
+   "items": {
+    "flashcards": 0,
+    "notes": 5,
+    "questionParts": 8
+   },
+   "qual": "igcse-english-language-a",
+   "spcptMapped": 12,
+   "spcptUnmapped": 85,
+   "specPointMap": true,
+   "spineHitCodes": 5,
+   "totals": {
+    "flashcards": 132,
+    "notes": 20,
+    "questionParts": 65
+   },
+   "uncoveredSpineCodes": 7
+  },
+  "igcse-english-language-a-16-paper-3-coursework": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-english-language-a-16-paper-3-coursework",
+   "items": {
+    "flashcards": 0,
+    "notes": 1,
+    "questionParts": 0
+   },
+   "qual": "igcse-english-language-a",
+   "spcptMapped": 1,
+   "spcptUnmapped": 23,
+   "specPointMap": true,
+   "spineHitCodes": 1,
+   "totals": {
+    "flashcards": 0,
+    "notes": 7,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 1
+  },
+  "igcse-english-literature-16": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-english-literature-16",
+   "items": {
+    "flashcards": 233,
+    "notes": 122,
+    "questionParts": 115
+   },
+   "qual": "igcse-english-literature",
+   "spcptMapped": 569,
+   "spcptUnmapped": 77,
+   "specPointMap": true,
+   "spineHitCodes": 32,
+   "totals": {
+    "flashcards": 298,
+    "notes": 136,
+    "questionParts": 115
+   },
+   "uncoveredSpineCodes": 33
+  },
+  "igcse-further-maths-19": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-further-maths-19",
+   "items": {
+    "flashcards": 427,
+    "notes": 58,
+    "questionParts": 461
+   },
+   "qual": "igcse-further-maths",
+   "spcptMapped": 98,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 39,
+   "totals": {
+    "flashcards": 430,
+    "notes": 58,
+    "questionParts": 464
+   },
+   "uncoveredSpineCodes": 4
+  },
+  "igcse-geography-19": {
+   "codesOutsideSpine": 22,
+   "course": "igcse-geography-19",
+   "items": {
+    "flashcards": 1168,
+    "notes": 99,
+    "questionParts": 852
+   },
+   "qual": "igcse-geography",
+   "spcptMapped": 259,
+   "spcptUnmapped": 3,
+   "specPointMap": true,
+   "spineHitCodes": 17,
+   "totals": {
+    "flashcards": 1168,
+    "notes": 102,
+    "questionParts": 883
+   },
+   "uncoveredSpineCodes": 187
+  },
+  "igcse-ict-17": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-ict-17",
+   "items": {
+    "flashcards": 730,
+    "notes": 69,
+    "questionParts": 128
+   },
+   "qual": "igcse-ict",
+   "spcptMapped": 147,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 91,
+   "totals": {
+    "flashcards": 730,
+    "notes": 69,
+    "questionParts": 134
+   },
+   "uncoveredSpineCodes": 47
+  },
+  "igcse-maths-a-18-foundation": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-maths-a-18-foundation",
+   "items": {
+    "flashcards": 0,
+    "notes": 131,
+    "questionParts": 428
+   },
+   "qual": "igcse-maths-a",
+   "spcptMapped": 155,
+   "spcptUnmapped": 7,
+   "specPointMap": true,
+   "spineHitCodes": 104,
+   "totals": {
+    "flashcards": 330,
+    "notes": 139,
+    "questionParts": 431
+   },
+   "uncoveredSpineCodes": 58
+  },
+  "igcse-maths-a-18-higher": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-maths-a-18-higher",
+   "items": {
+    "flashcards": 0,
+    "notes": 190,
+    "questionParts": 3533
+   },
+   "qual": "igcse-maths-a",
+   "spcptMapped": 218,
+   "spcptUnmapped": 4,
+   "specPointMap": true,
+   "spineHitCodes": 114,
+   "totals": {
+    "flashcards": 999,
+    "notes": 191,
+    "questionParts": 3550
+   },
+   "uncoveredSpineCodes": 74
+  },
+  "igcse-maths-a-modular-24-foundation-unit-1": {
+   "codesOutsideSpine": 1,
+   "course": "igcse-maths-a-modular-24-foundation-unit-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 76,
+    "questionParts": 196
+   },
+   "qual": "igcse-maths-a-modular",
+   "spcptMapped": 85,
+   "spcptUnmapped": 3,
+   "specPointMap": true,
+   "spineHitCodes": 60,
+   "totals": {
+    "flashcards": 0,
+    "notes": 79,
+    "questionParts": 200
+   },
+   "uncoveredSpineCodes": 33
+  },
+  "igcse-maths-a-modular-24-foundation-unit-2": {
+   "codesOutsideSpine": 8,
+   "course": "igcse-maths-a-modular-24-foundation-unit-2",
+   "items": {
+    "flashcards": 0,
+    "notes": 55,
+    "questionParts": 126
+   },
+   "qual": "igcse-maths-a-modular",
+   "spcptMapped": 62,
+   "spcptUnmapped": 5,
+   "specPointMap": true,
+   "spineHitCodes": 42,
+   "totals": {
+    "flashcards": 0,
+    "notes": 59,
+    "questionParts": 132
+   },
+   "uncoveredSpineCodes": 26
+  },
+  "igcse-maths-a-modular-24-higher-unit-1": {
+   "codesOutsideSpine": 27,
+   "course": "igcse-maths-a-modular-24-higher-unit-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 98,
+    "questionParts": 1653
+   },
+   "qual": "igcse-maths-a-modular",
+   "spcptMapped": 105,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 59,
+   "totals": {
+    "flashcards": 514,
+    "notes": 98,
+    "questionParts": 1665
+   },
+   "uncoveredSpineCodes": 40
+  },
+  "igcse-maths-a-modular-24-higher-unit-2": {
+   "codesOutsideSpine": 74,
+   "course": "igcse-maths-a-modular-24-higher-unit-2",
+   "items": {
+    "flashcards": 0,
+    "notes": 90,
+    "questionParts": 1637
+   },
+   "qual": "igcse-maths-a-modular",
+   "spcptMapped": 95,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 54,
+   "totals": {
+    "flashcards": 485,
+    "notes": 92,
+    "questionParts": 1696
+   },
+   "uncoveredSpineCodes": 43
+  },
+  "igcse-maths-b-16": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-maths-b-16",
+   "items": {
+    "flashcards": 61,
+    "notes": 33,
+    "questionParts": 0
+   },
+   "qual": "igcse-maths-b",
+   "spcptMapped": 34,
+   "spcptUnmapped": 181,
+   "specPointMap": true,
+   "spineHitCodes": 31,
+   "totals": {
+    "flashcards": 1082,
+    "notes": 199,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 67
+  },
+  "igcse-physics-19": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-physics-19",
+   "items": {
+    "flashcards": 1,
+    "notes": 127,
+    "questionParts": 1134
+   },
+   "qual": "igcse-physics",
+   "spcptMapped": 186,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 184,
+   "totals": {
+    "flashcards": 922,
+    "notes": 127,
+    "questionParts": 1135
+   },
+   "uncoveredSpineCodes": 11
+  },
+  "igcse-physics-modular-24-unit-1": {
+   "codesOutsideSpine": 1,
+   "course": "igcse-physics-modular-24-unit-1",
+   "items": {
+    "flashcards": 434,
+    "notes": 62,
+    "questionParts": 557
+   },
+   "qual": "igcse-physics-modular",
+   "spcptMapped": 98,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 88,
+   "totals": {
+    "flashcards": 438,
+    "notes": 62,
+    "questionParts": 559
+   },
+   "uncoveredSpineCodes": 6
+  },
+  "igcse-physics-modular-24-unit-2": {
+   "codesOutsideSpine": 8,
+   "course": "igcse-physics-modular-24-unit-2",
+   "items": {
+    "flashcards": 456,
+    "notes": 65,
+    "questionParts": 562
+   },
+   "qual": "igcse-physics-modular",
+   "spcptMapped": 104,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 96,
+   "totals": {
+    "flashcards": 459,
+    "notes": 65,
+    "questionParts": 569
+   },
+   "uncoveredSpineCodes": 5
+  },
+  "igcse-science-double-award-17-biology": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-science-double-award-17-biology",
+   "items": {
+    "flashcards": 1529,
+    "notes": 110,
+    "questionParts": 682
+   },
+   "qual": "igcse-science-double-award",
+   "spcptMapped": 166,
+   "spcptUnmapped": 0,
+   "specPointMap": true,
+   "spineHitCodes": 134,
+   "totals": {
+    "flashcards": 1529,
+    "notes": 110,
+    "questionParts": 688
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "igcse-science-double-award-17-chemistry": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-science-double-award-17-chemistry",
+   "items": {
+    "flashcards": 705,
+    "notes": 80,
+    "questionParts": 592
+   },
+   "qual": "igcse-science-double-award",
+   "spcptMapped": 119,
+   "spcptUnmapped": 2,
+   "specPointMap": true,
+   "spineHitCodes": 115,
+   "totals": {
+    "flashcards": 705,
+    "notes": 80,
+    "questionParts": 624
+   },
+   "uncoveredSpineCodes": 16
+  },
+  "igcse-science-double-award-17-physics": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-science-double-award-17-physics",
+   "items": {
+    "flashcards": 0,
+    "notes": 90,
+    "questionParts": 763
+   },
+   "qual": "igcse-science-double-award",
+   "spcptMapped": 154,
+   "spcptUnmapped": 14,
+   "specPointMap": true,
+   "spineHitCodes": 134,
+   "totals": {
+    "flashcards": 688,
+    "notes": 95,
+    "questionParts": 789
+   },
+   "uncoveredSpineCodes": 13
+  },
+  "igcse-science-double-award-modular-24-biology-unit-1": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-science-double-award-modular-24-biology-unit-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 31,
+    "questionParts": 0
+   },
+   "qual": "igcse-science-double-award-modular",
+   "spcptMapped": 50,
+   "spcptUnmapped": 9,
+   "specPointMap": true,
+   "spineHitCodes": 40,
+   "totals": {
+    "flashcards": 0,
+    "notes": 32,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 34
+  },
+  "igcse-science-double-award-modular-24-biology-unit-2": {
+   "codesOutsideSpine": 28,
+   "course": "igcse-science-double-award-modular-24-biology-unit-2",
+   "items": {
+    "flashcards": 0,
+    "notes": 74,
+    "questionParts": 0
+   },
+   "qual": "igcse-science-double-award-modular",
+   "spcptMapped": 97,
+   "spcptUnmapped": 1,
+   "specPointMap": true,
+   "spineHitCodes": 60,
+   "totals": {
+    "flashcards": 0,
+    "notes": 75,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 0
+  },
+  "igcse-science-double-award-modular-24-chemistry-unit-1": {
+   "codesOutsideSpine": 1,
+   "course": "igcse-science-double-award-modular-24-chemistry-unit-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 38,
+    "questionParts": 0
+   },
+   "qual": "igcse-science-double-award-modular",
+   "spcptMapped": 47,
+   "spcptUnmapped": 30,
+   "specPointMap": true,
+   "spineHitCodes": 39,
+   "totals": {
+    "flashcards": 0,
+    "notes": 51,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 44
+  },
+  "igcse-science-double-award-modular-24-chemistry-unit-2": {
+   "codesOutsideSpine": 1,
+   "course": "igcse-science-double-award-modular-24-chemistry-unit-2",
+   "items": {
+    "flashcards": 0,
+    "notes": 18,
+    "questionParts": 0
+   },
+   "qual": "igcse-science-double-award-modular",
+   "spcptMapped": 20,
+   "spcptUnmapped": 23,
+   "specPointMap": true,
+   "spineHitCodes": 18,
+   "totals": {
+    "flashcards": 0,
+    "notes": 29,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 29
+  },
+  "igcse-science-double-award-modular-24-physics-unit-1": {
+   "codesOutsideSpine": 0,
+   "course": "igcse-science-double-award-modular-24-physics-unit-1",
+   "items": {
+    "flashcards": 0,
+    "notes": 41,
+    "questionParts": 0
+   },
+   "qual": "igcse-science-double-award-modular",
+   "spcptMapped": 59,
+   "spcptUnmapped": 5,
+   "specPointMap": true,
+   "spineHitCodes": 59,
+   "totals": {
+    "flashcards": 0,
+    "notes": 44,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 31
+  },
+  "igcse-science-double-award-modular-24-physics-unit-2": {
+   "codesOutsideSpine": 20,
+   "course": "igcse-science-double-award-modular-24-physics-unit-2",
+   "items": {
+    "flashcards": 0,
+    "notes": 43,
+    "questionParts": 0
+   },
+   "qual": "igcse-science-double-award-modular",
+   "spcptMapped": 67,
+   "spcptUnmapped": 9,
+   "specPointMap": true,
+   "spineHitCodes": 47,
+   "totals": {
+    "flashcards": 0,
+    "notes": 51,
+    "questionParts": 0
+   },
+   "uncoveredSpineCodes": 10
+  }
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment-report/1.0",
+ "totals": {
+  "courses": 49,
+  "flashcardsCoded": 14950,
+  "flashcardsTotal": 24128,
+  "notesCoded": 3382,
+  "notesTotal": 3743,
+  "questionPartsCoded": 26875,
+  "questionPartsTotal": 27865
+ }
+}
