@@ -96,9 +96,6 @@ export function CourseShell({
   // resource-panel.tsx) — the "Show menu" affordance must live OUTSIDE the
   // collapsed column; the previous w-0/overflow-hidden collapse swallowed its
   // own re-open button, so the sidebar could never be toggled back open.
-  // The rail icon alone proved too subtle in practice (users could not find
-  // it), so the collapsed state ALSO raises a full-width sticky "Show menu"
-  // bar above the content column — impossible to miss.
   const rail = (
     <aside
       className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-11 shrink-0 flex-col items-center border-r bg-background pt-3 lg:flex"
@@ -226,33 +223,12 @@ export function CourseShell({
 
         {/* content column */}
         <div className="min-w-0 flex-1">
-          {/* Mobile: always-on drawer trigger bar. Desktop: hidden while the
-              sidebar is open, but rises as a labelled "Show menu" bar when
-              collapsed so the re-open affordance is unmissable. */}
-          <div
-            className={cn(
-              "sticky top-14 z-30 flex items-center gap-2 border-b bg-background px-3 py-2",
-              hidden ? "flex" : "lg:hidden",
-            )}
-          >
-            <Button
-              variant="outline"
-              size="sm"
-              className="h-8 gap-1.5 px-2.5 lg:hidden"
-              onClick={() => setOpen(true)}
-            >
+          {/* mobile-only drawer trigger bar; the desktop sidebar is toggled
+              by the rail icon when collapsed */}
+          <div className="sticky top-14 z-30 flex items-center gap-2 border-b bg-background px-3 py-2 lg:hidden">
+            <Button variant="outline" size="sm" className="h-8 gap-1.5 px-2.5" onClick={() => setOpen(true)}>
               <Menu className="size-4" aria-hidden /> Menu
             </Button>
-            {hidden && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="hidden h-8 gap-1.5 px-2.5 lg:inline-flex"
-                onClick={() => setHidden(false)}
-              >
-                <PanelLeftOpen className="size-4" aria-hidden /> Show menu
-              </Button>
-            )}
             <span className="truncate text-sm font-medium">{data.course.label ?? data.course.subject}</span>
           </div>
           {children}
