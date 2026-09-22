@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { loadHubCourse } from "@/lib/courses";
 import { CourseHeader } from "@/components/hub/course-header";
 import { NumberedLabel } from "@/components/hub/chrome";
+import { AddToTestLink } from "@/components/teacher/add-to-test-link";
 
 export const dynamic = "force-dynamic";
 
@@ -74,6 +75,10 @@ export default async function ExamQuestionsIndexPage({
                 {topic.subtopics.reduce((a, s) => a + (hub.counts[s.code]?.questions ?? 0), 0)}{" "}
                 questions
               </span>
+              <AddToTestLink
+                courseSlug={meta.slug}
+                codes={topic.subtopics.map((s) => s.code)}
+              />
             </div>
             <div className="ml-4 grid gap-2 border-l pl-3 sm:grid-cols-2">
               {sets.map((set) => {

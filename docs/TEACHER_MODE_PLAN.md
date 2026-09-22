@@ -102,6 +102,18 @@ the same BKT simulation currently visualised in `/learner`, fed with real data.
   teacher-validation step).
 - **Exit criteria:** a teacher can run one full assignment cycle end-to-end.
 
+**Status update (TEACHER-2, 2026-09-23):** the demo now implements the
+canonical teacher surfaces from `syllabai/syllabai` TEACHER_ARCHITECTURE.md:
+§5 resource access (subject-scoped links into the existing hub + "add topic
+to Test Builder" affordances on the exam-questions index), §6 Test Builder
+(`/teacher/test-builder` — marks-aware deterministic assembly from the
+committed question bank, class-weakness lane with transparent reasons,
+answer key, print export, locally saved tests), and §13 the class knowledge
+graph (`/teacher/class-graph` — teaching-coverage overlay × understanding
+bands, distributions not averages, misconceptions, remediation deep-link).
+All class evidence is a deterministic SAMPLE cohort (labelled), anchored
+where the corpus learner-sim has measured spec points.
+
 ### Phase 3 — operations
 - Reports & exports (per student, per class, term view).
 - Roster & settings: invites, multiple classes, RBAC hardening.

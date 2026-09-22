@@ -83,7 +83,7 @@ export function AppShell({
     <div className="min-h-screen bg-background">
       {/* solid header (SME parity): a translucent bar lets large H1 text bleed
           through on scroll and reads as a rendering glitch (UX audit 2026-09-19) */}
-      <header className="sticky top-0 z-40 border-b bg-background">
+      <header className="sticky top-0 z-40 border-b bg-background print:hidden">
         <div className="flex h-14 items-center gap-3 px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2">
             <span className="flex size-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
@@ -174,7 +174,7 @@ export function AppShell({
       </main>
 
       {/* footer — provenance + demo discipline live here, not in the learner path */}
-      <footer className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8">
+      <footer className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 print:hidden">
         <div className="flex flex-wrap items-center gap-1.5 border-t pt-4">
           <ThemeToggle variant="row" />
           <Badge variant="outline" className="gap-1 text-[10px] font-normal">

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { listCourses, pilotCourseSlug } from "@/lib/courses";
-import { TeacherClient } from "./teacher-client";
+import { ClassGraphClient } from "./class-graph-client";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Teacher workspace — syllabai-demo",
+  title: "Class knowledge graph — syllabai-demo teacher workspace",
   description:
-    "The teacher mode of SyllabAI: subject-scoped access to the same course resources students use, plus the Test Builder and the class knowledge graph. Mockup with honest SAMPLE evidence.",
+    "Teacher lens over the same subject graph (TEACHER_ARCHITECTURE §13): teaching-coverage overlay × class understanding bands, distributions instead of averages, drill-down to resources and a remediation test.",
 };
 
-export default async function TeacherPage({
+export default async function ClassGraphPage({
   searchParams,
 }: {
   searchParams: Promise<{ course?: string }>;
@@ -23,5 +23,5 @@ export default async function TeacherPage({
   const initialCourse =
     courses.find((c) => c.slug === params.course)?.slug ?? pilot ?? courses[0]?.slug ?? null;
 
-  return <TeacherClient courses={courses} initialCourse={initialCourse} />;
+  return <ClassGraphClient courses={courses} initialCourse={initialCourse} />;
 }
