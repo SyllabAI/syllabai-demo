@@ -1,0 +1,5320 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 76,
+   "total": 79,
+   "unmapped": 3,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 76
+  },
+  "questionParts": {
+   "coded": 196,
+   "total": 200,
+   "unmapped": 4,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 196
+  }
+ },
+ "course": "igcse-maths-a-modular-24-foundation-unit-1",
+ "generatedUtc": "2026-09-19T19:16:08Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-maths-a-modular-24-foundation-unit-1/spec_point_map.json": {
+   "sha256": "eca8186557537df0b36979c9ca13eb4d81fe237043d6beaf413a61c3f2ae736b"
+  },
+  "SME-ExamQuestion/igcse-maths-a-modular-24-foundation-unit-1/spec_point_resolution.json": {
+   "sha256": "362414e83c2e88da2890549fd3964f9c330c433822f147286ff6eda7fab24414"
+  },
+  "spec-links/igcse-maths-a-modular-24-foundation-unit-1.json": {
+   "sha256": "cab5a9165625884d5e7f957c11ce1d06e1436623cddb03402ff73dc973568c0e"
+  }
+ },
+ "items": {
+  "qstnprt_2KFyHk2tGV9fqRfd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_2b6xkm6mkk2FgQC6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+     "score": null,
+     "spineCode": "1.10B",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_35HRncmcfSkpxXTz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9B",
+     "score": null,
+     "spineCode": "4.9B",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3Nr35gZdRt7DJZvP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3VMTGF6mnFhdG45w": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9E",
+     "score": null,
+     "spineCode": "4.9E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3YQ4v6X8qHstpP99": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.10A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.10A",
+     "score": null,
+     "spineCode": "4.10A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3f79gCQ3qrx8hwrS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2A",
+     "score": null,
+     "spineCode": "2.2A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3gmxs6NxBPcJk2SC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3wjpKzzbJkwjGkqq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4Ps3MFBpGsyrYtHK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1H",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1H",
+     "score": null,
+     "spineCode": "1.1H",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4WfkCNVfGnftdNz8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4jhhrzCg72ygBNcr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4rqB9mjzhKKpfbJD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5CSjxQs6K2v8X5B6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+     "score": null,
+     "spineCode": "1.10B",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.4G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+     "score": null,
+     "spineCode": "4.4G",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5RBynCkXwmF27sSY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5h5sXyQx3TtWwRVF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5zbWfVcvHjPMSDJs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_63c6JKbbc4tSWBvr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_63zymJZPrvVP9Bgm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8D",
+     "score": null,
+     "spineCode": "1.8D",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_65232Fmv3vfqvghz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+     "score": null,
+     "spineCode": "1.10B",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_66VgWx3rGj2wCsHd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6KRddk9bWVPM8sgW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8A",
+     "score": null,
+     "spineCode": "4.8A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6QWGgsnqNfrwjb5M": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+     "score": null,
+     "spineCode": "3.3B",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_74RkZWHpQns39RvM": {
+   "codes": [],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_7kbf2FcWy5B4RjM5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_7tQ5BZ2QcVB6Qk98": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_88j246GHs5xZ8P7x": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8fFSgjHftmSY2Kjy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8gM2VpGrj7Xfk5X3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8tvxWnjNbqtMHqmP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_924RpsB5bDMrFM5k": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_93ZFMc27bmjxGggS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2A",
+     "score": null,
+     "spineCode": "2.2A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+     "score": null,
+     "spineCode": "3.3I",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_952j6cmmR6hzv6cn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9GvZCqB4KFDzSQpY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9B",
+     "score": null,
+     "spineCode": "4.9B",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9JxpHJ632HNVtK4X": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9QHvDXJSf6RHw95Y": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9czF3FFcGmBDYRpP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1G",
+     "score": null,
+     "spineCode": "1.1G",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9hV23v366bJ9zT8k": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9pmHs43BfjqWXPH9": {
+   "codes": [],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_BSQ9W9CJyyV32smk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3J",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3J",
+     "score": null,
+     "spineCode": "6.3J",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_BhdhskctKvBJbk3Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_BxnTfB7dQsvsfNzm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+     "score": null,
+     "spineCode": "4.4F",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_C6CJd5XrkjHjSTX6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+     "score": null,
+     "spineCode": "4.4G",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CP2wFGvzX4yYbPfP": {
+   "codes": [],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_CbhPSGZNbv3jBXpf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CwpjVMYWn5NCVYn8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+     "score": null,
+     "spineCode": "3.3I",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_D6h47rHrmhr5zgyF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DBqqNXz5MzNkBtWG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2B",
+     "score": null,
+     "spineCode": "1.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Dq7DnyhNMbNQHYYV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_F7D5Pd6RwhXfQrGZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9D",
+     "score": null,
+     "spineCode": "4.9D",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FJfrKCK9wHK6xhdC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FTtvN6H5VP9ydmjk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Fpy93DqwBsW43fKz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9D",
+     "score": null,
+     "spineCode": "4.9D",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Fqp9kdTqCHRSCKf8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3E",
+     "score": null,
+     "spineCode": "6.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_G2SDhxv9KMFZFhCJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_G4VjB25bXcppShsW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3J",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3J",
+     "score": null,
+     "spineCode": "6.3J",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_G6cMyK3FBQpQTwKc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+     "score": null,
+     "spineCode": "1.4A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_G6mhkK7z9YgFK8Dm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GBDSTkgc4mF8QCjc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2C",
+     "score": null,
+     "spineCode": "2.2C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GYkcmMTWPwsRzZRY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1H",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1H",
+     "score": null,
+     "spineCode": "1.1H",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GjCyTcvg83Bj5k9B": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.10A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.10A",
+     "score": null,
+     "spineCode": "4.10A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GzvqSbTt5fx63hDX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3E",
+     "score": null,
+     "spineCode": "6.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_HHTfSj3JcpjsbWGK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_HbnSXcsqmWq5xfZz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JDp22b22fNzccyvC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JKx4FGPh8JNXWNJW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JSzJNvFbtbshKQcs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8D",
+     "score": null,
+     "spineCode": "1.8D",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JjptpHmHV2by8qNX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Jxb2vzbpTmvr8hCP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1G",
+     "score": null,
+     "spineCode": "1.1G",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_M3Y4sBqyN8bGdgW3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9E",
+     "score": null,
+     "spineCode": "4.9E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MKshRX8XBVTd2dtj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MPVZvKfCkKKyFy75": {
+   "codes": [],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_MVJTCGT4mHSjtBPF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.1C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1C",
+     "score": null,
+     "spineCode": "4.1C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MXdBk8zvyDNVnmHT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NQVdjh3JMGGjwm5b": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NSHsMq5HHMftdGrW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9E",
+     "score": null,
+     "spineCode": "4.9E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NYvPbFg3pMSSJjPV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NpXRQFv5cTsXXbJk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NrDxcBvCgVTJ5rZf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NvFSTP4xGbdvVCZz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NzV3grJGsw2qTF6X": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_PDYtPcYyMHKWggpW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_PZRnkmsFdyJZfCcH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Pj2bTRsXxJwhRHtH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Q6Cs7hYTjSPmF4S7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QBw8s8N5YCS6FnT6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2F",
+     "score": null,
+     "spineCode": "1.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QH4pYmcSrWghRS7X": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QcjzFpcT4nnXPvJR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Qt6MDKnsh2dNvxVj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3A",
+     "score": null,
+     "spineCode": "1.3A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Qyth32D2N7cZk6h6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QzDtBF7NnH26HW2s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8B",
+     "score": null,
+     "spineCode": "4.8B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_R3m2wwg7g2JnFfx5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_R6mfdMk7wSj7TKYy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+     "score": null,
+     "spineCode": "1.4A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_R6yNdRc44kgPpWwZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+     "score": null,
+     "spineCode": "4.4F",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RGgk3Dhqdx6v9vh6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5B",
+     "score": null,
+     "spineCode": "1.5B",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RJcBW85QH9qfFBPy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RKSTKVp3bwkbx4YY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RPHgtJfDTFmW5nrf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2C",
+     "score": null,
+     "spineCode": "2.2C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RzbvyDzZdyBTnVgC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_S4gbWbCVB9xqYdnB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SJGcQpdBntk2Ts3x": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+     "score": null,
+     "spineCode": "1.4A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SN2Tsm2xqXZGxVpW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SNbNfdvvnNq69f3R": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_STfCTtGsK2STYWkv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SXJytBwR4ZVwfmSr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+     "score": null,
+     "spineCode": "4.4F",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Ss7cRwsQ6Sf257CZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_T54VdsQyD3QSHBY2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.1C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1C",
+     "score": null,
+     "spineCode": "4.1C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TCz2XzSW6TnjMzBs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TFv995hGH6TBn7rY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TNYhvncYQgGKB3Bv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.3C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3C",
+     "score": null,
+     "spineCode": "1.3C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TzCWzYWsxhJG3Vgv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_V3VymyH33mdDYSrb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1F",
+     "score": null,
+     "spineCode": "1.1F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_V977VVMk7qw8P77R": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1F",
+     "score": null,
+     "spineCode": "1.1F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2A",
+     "score": null,
+     "spineCode": "2.2A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_VJzN84TqHybnKdCj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_VNH2DqN5GfPzPFf2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+     "score": null,
+     "spineCode": "3.3B",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_VnhGj7DWKpnjQ2TY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+     "score": null,
+     "spineCode": "4.4F",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_W4ghBffFJ5MbGF2w": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2A",
+     "score": null,
+     "spineCode": "1.2A",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3J",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3J",
+     "score": null,
+     "spineCode": "6.3J",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WVBvk7QZyqhrPjKh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WW9tdxKf4TFZDjjk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WjrPj5yH4FqG6xHy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WyzM3sVjY6VqqMVv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3H",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3H",
+     "score": null,
+     "spineCode": "3.3H",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_X2Nv4spZghRw5b6N": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XH26V7xk3Fm2N7zw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XcRnxTV8xQyPRTDw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XhgZgdrRfkqFGj6Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Xqb84nNBVM3rdTmD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2A",
+     "score": null,
+     "spineCode": "2.2A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Y8k6MhVDGswFGqqw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YCm6qSTFKTbbGMHb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YD9GB96zZB2x7JDm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8A",
+     "score": null,
+     "spineCode": "4.8A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YPQGjd5TcmQzDyg9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1F",
+     "score": null,
+     "spineCode": "1.1F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YYN2W7NFPGkdSHkG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5B",
+     "score": null,
+     "spineCode": "1.5B",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Yc5cWTybYsScHYvx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+     "score": null,
+     "spineCode": "3.3B",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Z2kyjyfvqxmzzgr2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Z9nP2DhNnSZzPM2y": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZSqdNWmS3j6XgV9j": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2F",
+     "score": null,
+     "spineCode": "1.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZVDy9Tr7HxcMnPmt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Zw8nPR6zkNDbt2GB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Zzx3QpBQytNk5jMs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3A",
+     "score": null,
+     "spineCode": "1.3A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_bW6pgVKSftGs4qvv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3F",
+     "score": null,
+     "spineCode": "6.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_cQGc5fSmYzNCGZb9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_cc2B8rjY4wNxwTJx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3E",
+     "score": null,
+     "spineCode": "3.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_dCk3MPFZN7G6VDvh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.10A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10A",
+     "score": null,
+     "spineCode": "1.10A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_dJ8kTFZRPxcspjyS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_dQWHm2xnPqTBxYjJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_dtWbDC6G3RRVz4Yx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_f3DpvKZKFySbj6mf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fH2FSryfYvx3JNVJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fNfPDVZq8vwcjZdJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+     "score": null,
+     "spineCode": "3.3B",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fYHDfDmRKyFYQ9Bn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fn5HYq9WXkDgBP8Y": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_g2MV7cqyrHG2QXS6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gj4VhQKzBb3cnn8h": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_htJ2ryXFvkBrqBk3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2A",
+     "score": null,
+     "spineCode": "1.2A",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hvJ8VXwTKxJWxFZW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hvTbmyQwZy8thWtb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jGXnThwd44rvzYz8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9E",
+     "score": null,
+     "spineCode": "4.9E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jQzmPgns6GVg2jpt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jjjWNmzPwfWB9yFB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jxZ5x6npyqZZPc6J": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jz2xhRxbBQYpwWn9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2F",
+     "score": null,
+     "spineCode": "1.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_k98qWMgbwDGjP4KV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kKgJtx43Z9dzXWCZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+     "score": null,
+     "spineCode": "1.4A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kYh9zSGGTyfyQr2c": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.3C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3C",
+     "score": null,
+     "spineCode": "1.3C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kgbbkkFXH2GVbyMz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kkMWZMVYRz5YF4qM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_m397jvnmvnDtdyKs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_m7Fzv2v6J2BdPptq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mKq8scvbMyHtgTWd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mVcrnz27WTmnG2Ms": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mxTGyqFXYk2PcMRc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2A",
+     "score": null,
+     "spineCode": "1.2A",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_n6vyk2fBg5zVK2fy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_nKmMTt3kJ6g6v6mh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_np9QzcwMQYfYDtMp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_pSyfyMn4dMMXDWrp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_pk6Q4gqpwBg4XhWw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8A",
+     "score": null,
+     "spineCode": "4.8A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qGVNJsN28BrJHyxK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qJtGZKNxzF4f6B9M": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qTrdgkZr4rGBPBXx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qdpWPyJYvJXVvJ9j": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qpptZP9R9nGgd6WC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.10B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+     "score": null,
+     "spineCode": "1.10B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+     "score": null,
+     "spineCode": "4.4G",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rGk2NtNKYsvvjGx4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rMMktsnHQRVdMWrj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3E",
+     "score": null,
+     "spineCode": "3.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rvrgs68x444WswmH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_sdwbXBThQ4RwfFjG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vP5ncDsC8mbvfv2c": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3E",
+     "score": null,
+     "spineCode": "6.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vycJ3qskscJXJHMF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_w2FTTqN6xTgKHDBN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1F",
+     "score": null,
+     "spineCode": "1.1F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wscrYB6798rmc4qh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wwvFGxtcKNBzsHfJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wzKdDQmCBpnwxyVx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9B",
+     "score": null,
+     "spineCode": "4.9B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_x94y473xCbbnjZMJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_x9FrxKfZ4JjqXnzD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xMD9tztpWjVHBRFc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+     "score": null,
+     "spineCode": "4.4F",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xX6ZXMBcSWKqPMND": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8B",
+     "score": null,
+     "spineCode": "4.8B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_y9c85ckh5ngRhQ9s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_z7phJMrRnybsb4Q9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+     "score": null,
+     "spineCode": "3.3B",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_z9Jz9WFWCzGnZZNQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_zGy23jXNFXn6B76Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_zMXrCfpXXmPsPqCb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2E",
+     "score": null,
+     "spineCode": "2.2E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_zq97bJ9Zyvt82xx9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "rn_2xnRzvcSVq4bgd9j": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2E",
+     "score": null,
+     "spineCode": "2.2E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_3F57PJnqJGbmwvjt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.1A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.1A",
+     "score": null,
+     "spineCode": "2.1A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_4Xxq65hgJNzRDyKZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_4r4bz3JtWjSzQ6KK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_4wbVKBQQxj5kWNwh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+     "score": null,
+     "spineCode": "3.3I",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_57F55mFpWXqbCG5s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+     "score": null,
+     "spineCode": "1.2G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_5gk5rZJGCchFsW5G": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3F",
+     "score": null,
+     "spineCode": "6.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6JnXFS2Dxgs42PMt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+     "score": null,
+     "spineCode": "2.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6VSvVs4px6XscNms": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_75kF7pHkDPyxHjXV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2C",
+     "score": null,
+     "spineCode": "2.2C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_7MqFyfS6dmbZjmWJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.2C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+     "score": null,
+     "spineCode": "4.2C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_7yK6fjpPTX7rNT6Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.10A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.10A",
+     "score": null,
+     "spineCode": "4.10A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_8546H7SJDTQBKYJt": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_27Znm3wFFhCxBD52"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_9bSwBfXszKJ8869f": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+     "score": null,
+     "spineCode": "2.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_BDvfSVjp3yBFzPGR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_BcGbycJZ9jCyYm8s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+     "score": null,
+     "spineCode": "2.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_D7XYgjDM6NsWV4kz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_DgZbkDxjnXNP87NN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.4B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+     "score": null,
+     "spineCode": "1.4B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Ds9vD6jn2yK8NyfF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+     "score": null,
+     "spineCode": "3.3I",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_FKRrjYF72Zhwt32h": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_FZ43cs6fQgvgdVwH": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_3fMGfNtg3hXMg6gC"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_FpTq9tbTGsvQk3wk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8C",
+     "score": null,
+     "spineCode": "1.8C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_HMfYBYqSMSkCmzyX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_HvHf76msbbFdYBtS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.10B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+     "score": null,
+     "spineCode": "1.10B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_J8TKyNvHcd8pST5W": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_JCPpjF72B8xc8sjq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_JMqFzQJ4JR8RnxF4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9E",
+     "score": null,
+     "spineCode": "4.9E",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KkCTMQdPyk4dKg9D": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+     "score": null,
+     "spineCode": "1.10C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KzfNd9VKs58DrP85": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dvX7WnB2FSdky4jW"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_MBCCCWFzdf6Ghsss": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+     "score": null,
+     "spineCode": "1.4A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Mx5HhDfcCJvS8DsR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8B",
+     "score": null,
+     "spineCode": "4.8B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Nvvp5chxKQyX3kbv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8B",
+     "score": null,
+     "spineCode": "4.8B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Pj6fCtx5JdPVxhYd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.6A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.6A",
+     "score": null,
+     "spineCode": "1.6A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_QHvpQdFrr7pGgHdh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.9C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+     "score": null,
+     "spineCode": "4.9C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9D",
+     "score": null,
+     "spineCode": "4.9D",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_QMWRWFxHgJCgtPFN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3E",
+     "score": null,
+     "spineCode": "6.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_QwwWPbQrmcpjWVvM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+     "score": null,
+     "spineCode": "4.4F",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_RQBWzHZCg3Fpt3RC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3H",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3H",
+     "score": null,
+     "spineCode": "3.3H",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_RSXJqMk9WN2RHNF7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1H",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1H",
+     "score": null,
+     "spineCode": "1.1H",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_RXnBh2fTYWs5fxjM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2F",
+     "score": null,
+     "spineCode": "1.2F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Rp6bdvGS4YFMYr3Y": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+     "score": null,
+     "spineCode": "1.2I",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_SSvGSF9kjwYMBR6F": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3E",
+     "score": null,
+     "spineCode": "3.3E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Scr3bTbgdbbtgsxX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "4.4G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+     "score": null,
+     "spineCode": "4.4G",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Sh9dKWHr3tWzYkJ9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+     "score": null,
+     "spineCode": "1.4C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_TWbnDdF5fDgzjvVg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1F",
+     "score": null,
+     "spineCode": "1.1F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_TZ3XSzYP9FNYfvX4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+     "score": null,
+     "spineCode": "6.3A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_VZBrzNbVQ56zDXJw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.1C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1C",
+     "score": null,
+     "spineCode": "4.1C",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Vb7kGw3Qw5kY3Ngr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+     "score": null,
+     "spineCode": "2.4A",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_VqtqHdvGT9pgNrbP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.7A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.7A",
+     "score": null,
+     "spineCode": "4.7A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_WY625wtNh6XWmF95": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2B",
+     "score": null,
+     "spineCode": "4.2B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Wdrpnks89Ffdd3xq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.10A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10A",
+     "score": null,
+     "spineCode": "1.10A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_XKZsFftHMMKgfPMc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+     "score": null,
+     "spineCode": "3.3B",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Z4Hqmzjxk499cm2w": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2A",
+     "score": null,
+     "spineCode": "1.2A",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_cJS4DFPDKB6Yp8Rb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.5C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5C",
+     "score": null,
+     "spineCode": "1.5C",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_cRgHN33G2Yb9d3Sj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.4G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+     "score": null,
+     "spineCode": "4.4G",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_dGtXYQXDqVKSRS9g": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3G",
+     "score": null,
+     "spineCode": "6.3G",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "6.3J",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3J",
+     "score": null,
+     "spineCode": "6.3J",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_dTNSfrWgTx5BYxtz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+     "score": null,
+     "spineCode": "1.8B",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_drwfMH2bJXKcKw8V": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.2B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2B",
+     "score": null,
+     "spineCode": "1.2B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_g3CCR3tHjCSB4nfg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-10 operator reasoning round (no upstream; PMT excluded as source)",
+     "officialCode": "6.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U2F-6.1B",
+     "score": null,
+     "spineCode": null,
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_hw3CPVJsHVwJj8nr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_jgXZgzjW37c26gKZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.11A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+     "score": null,
+     "spineCode": "1.11A",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_kx72HTj7S6wB7Ytg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5B",
+     "score": null,
+     "spineCode": "1.5B",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.5E",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+     "score": null,
+     "spineCode": "1.5E",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nCPkKkwRGxSt4sSG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.8D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8D",
+     "score": null,
+     "spineCode": "1.8D",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nYwTMH2sFt6Q9qg7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.1B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+     "score": null,
+     "spineCode": "4.1B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nyf8NH8PP9RP42nK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.8D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8D",
+     "score": null,
+     "spineCode": "1.8D",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_p4HC7Dv534dkfgv5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.1G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1G",
+     "score": null,
+     "spineCode": "1.1G",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_pcWj6rQ6B9rTjdSx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.4A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+     "score": null,
+     "spineCode": "1.4A",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_qVHzkpsw9qRwcBmq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.10B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+     "score": null,
+     "spineCode": "1.10B",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_qw2ZWx79ywHtxYHs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.9B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9B",
+     "score": null,
+     "spineCode": "4.9B",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_sKM27qbzgvsvWm9D": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+     "score": null,
+     "spineCode": "2.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_sRfSMKGB4rZkZKXH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_sRv9yQyzWPnx56cD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "4.8A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8A",
+     "score": null,
+     "spineCode": "4.8A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_sgBdcX2qJKy8NtkT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3A",
+     "score": null,
+     "spineCode": "1.3A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_tDSfZHFrXn2y7zsk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "2.2A",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2A",
+     "score": null,
+     "spineCode": "2.2A",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_v7Dp2Ht2ykn2c67X": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.2D",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+     "score": null,
+     "spineCode": "1.2D",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_w6zzBmfYWQ3nFzJr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "1.3C",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3C",
+     "score": null,
+     "spineCode": "1.3C",
+     "tier": "P2_operator_content_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_xjY2WZs8Q3jSjQBV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "1.3B",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+     "score": null,
+     "spineCode": "1.3B",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_ypGXTn5Dg25FHVt3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3G",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3G",
+     "score": null,
+     "spineCode": "3.3G",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_z9Zg6kZsRWZtgpYP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "3.3I",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+     "score": null,
+     "spineCode": "3.3I",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_zh9r7QJbfQc9y5gg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "3.3F",
+     "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+     "score": null,
+     "spineCode": "3.3F",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  }
+ },
+ "notesInlineRefs": {
+  "total": 87,
+  "unmappedToMap": [
+   "spcpt_27Znm3wFFhCxBD52",
+   "spcpt_3fMGfNtg3hXMg6gC",
+   "spcpt_dvX7WnB2FSdky4jW"
+  ]
+ },
+ "qual": "igcse-maths-a-modular",
+ "reconciliation": {
+  "codesOutsideSpine": [
+   {
+    "items": 1,
+    "note": "attachments whose upstream code has no verbatim/alias match in this course's spine (cross-unit or text-level ids) \u2014 kept, not dropped"
+   }
+  ],
+  "distinctCodesAttached": 60,
+  "itemsOutsideSpine": 1,
+  "spineHitCodes": 60,
+  "spineSpecPoints": 93,
+  "uncoveredSpineCodeList": [
+   "1.1A",
+   "1.1B",
+   "1.1C",
+   "1.1D",
+   "1.1E",
+   "1.2C",
+   "1.2E",
+   "1.2H",
+   "1.3D",
+   "1.3E",
+   "1.5A",
+   "1.5D",
+   "1.6B",
+   "1.6C",
+   "1.8A",
+   "2.1B",
+   "2.1C",
+   "2.1D",
+   "2.4B",
+   "3.3A",
+   "3.3C",
+   "3.3D",
+   "4.10B",
+   "4.1A",
+   "4.1D",
+   "4.2A",
+   "4.8C",
+   "4.9A",
+   "6.3B",
+   "6.3C",
+   "6.3D",
+   "6.3H",
+   "6.3I"
+  ],
+  "uncoveredSpineCodes": 33
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 88,
+    "resolved": 85,
+    "unresolved": 3
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SPEC-10 operator reasoning round per operator instruction 2026-09-19 - mappings reasoned directly against the committed registries and the official Pearson PDFs, no scripted matching, no upstream tickets, PMT excluded as source); HUMAN_VALIDATED via operator review"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 79,
+    "question_parts": 196
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 76,
+    "question_parts": 196
+   },
+   "items": 275,
+   "items_with_codes": 272
+  },
+  "specPointMap": {
+   "regime": "B",
+   "smeEntries": 87,
+   "unitScope": "Unit 1 Foundation"
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_2D9sp6d4f6jCmRMx": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "3.3H",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3H",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_2DcsBcGRQhpvfDPS": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "6.3F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3F",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_2NQRqtzTGgzNksfC": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.9C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_3TW56tDvq59B8KvH": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "3.3I",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_3j5gdzBVv3Bt8Vg2": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.1B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_3n2jHMX7vMBh95jq": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.4A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_3sptc2fDMgGnNYqg": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.2I",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_4ZdHtGPdDjYdR6rK": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "4.4G",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_52rnZKb5kXDzHpdR": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.4A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_5PKsSqbXq5fF9Z67": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.4B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4B",
+   "score": 0.8171,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_6XysCMWvYY936jw8": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.2B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2B",
+   "score": 0.6853,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_6tmCTQJYPsTdKKZ6": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_7JDJGb5jbwdfKXMG": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "3.3I",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_7pTpRYh7tsCnGspT": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_84hZy4pDd8nBGN3r": {
+   "method": "name_to_statement_join",
+   "officialCode": "3.3E",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3E",
+   "score": 0.719,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_8GsFXwdQTJymxXw8": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "6.3J",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3J",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_8MpvS5pnYkf9QswF": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.2G",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2G",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_8Wtthy9gt8B5xsVW": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.5C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5C",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_9H9wr9X3bDtBMrhY": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.8C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8C",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_9T88gcsX6z4FqbXN": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "3.3F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_CBHJZtkzvkpJJPwX": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "4.2C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2C",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_CG8ZcZX8Ny5yGBch": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.5B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5B",
+   "score": 0.84,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_CTJ7Gt64Pr6WSFZK": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.8D",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8D",
+   "score": 0.7039,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_FBH2bdb7K2GH7KxZ": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.9C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9C",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_FVX7YRftjhnwYHQF": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "6.3A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3A",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_Fbm5V3ByzktDQbh5": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.2I",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_GD9CRysqknb6VPhr": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.2F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2F",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_GxFTQhXnrStBCmr5": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.1B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+   "score": 0.773,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_Jw35TTKhvXxmGGfP": {
+   "method": "name_to_statement_join",
+   "officialCode": "3.3B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3B",
+   "score": 0.7268,
+   "tier": "S2_name_ambiguous",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_K8Fq9F3GXSkCRN75": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.1B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1B",
+   "score": 0.7841,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_KHyJQphnVvh4cdZF": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "2.4A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_KNXbNby67zKvX8SX": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "1.3C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3C",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_MTZDMgNSvV3FdVVR": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "3.3F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_Mq2w9qKSCyF5mvvs": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.9E",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9E",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_Mqy7bXbYyFBwKTsV": {
+   "method": "T-SPEC-10 operator reasoning round (no upstream; PMT excluded as source)",
+   "officialCode": "6.1B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U2F-6.1B",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_Nh8WWWGQxmJGVvvf": {
+   "method": "name_to_statement_join",
+   "officialCode": "3.3F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3F",
+   "score": 0.803,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_PfHj6M333W3nyzJJ": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.1C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.1C",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_PzyS22R9jMg3y3sZ": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2C",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_QTbSSjMfdVzY3kb3": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.2B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.2B",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_RJbgRvXq2VrGpP5g": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2F",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_Rv3DcsGBkxSkb8Ms": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.5E",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_TMZ9PCbwcPC9S63s": {
+   "method": "name_to_statement_join",
+   "officialCode": "2.2D",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+   "score": 0.7867,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_TSZQv8mHNWZd6Vc6": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.6A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.6A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_TTFJ97RqJV2GKWjC": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.1G",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1G",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_ThDMC2g5h5NqSMWR": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2E",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2E",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_TmcCZP3ftSVyZfNN": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.3E",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3E",
+   "score": 0.6632,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_W2yYk784rNVZBxPh": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.9B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9B",
+   "score": 0.7,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_W5bHgsHCyJ4jpkYz": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_XC6PSG6CcXnNDb3Q": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "1.10C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_XT9QGzbhpThbfcB6": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.5E",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.5E",
+   "score": 0.8415,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_XWwgtKhQDRhyY5m4": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.8A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_XhXhg6sRyMQ88chp": {
+   "method": "name_to_statement_join",
+   "officialCode": "3.3G",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3G",
+   "score": 0.8667,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_YJXJpK2M5xGWQmkZ": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.4C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_ZW8qXZ2qmyqKD5Kn": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.4C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4C",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_bMYrxtVc2SZgt8mX": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.10C",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10C",
+   "score": 0.6772,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_bPTTmJSGkKv2PDc5": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "6.3G",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-6.3G",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_c25SPBnps9dhX2Dk": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.1F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1F",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_cDnTk2242hfSCjVh": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.4A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.4A",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_cWybMsd7STKjVBhx": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.9D",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.9D",
+   "score": 0.6667,
+   "tier": "S2_name_ambiguous",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_crKbmb6wVjM4yPJh": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.8D",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8D",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_fDJc5vx3rHjF7mqC": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.2I",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2I",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_gzQvnKpxPvTqzzBp": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.3A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_h2p7nv6zkR4xFJ3P": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.4F",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4F",
+   "score": 0.6405,
+   "tier": "S2_name_ambiguous",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_hF46XXMHpkhMNDvX": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.8B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+   "score": 0.6358,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_hNRSmsqZhPrpPDWz": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.7A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.7A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_hd6mC5SC7tP26krr": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.2A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2A",
+   "score": 0.75,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_jGBT5R5zFmrC5yjW": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.2D",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2D",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_jJPhXSKYBg6x4d2Q": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.4G",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.4G",
+   "score": 0.8286,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_jTrpYhtMdhpPhwxb": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.1A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.1A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_jz65jxQN2CdJsYT5": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.10A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.10A",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_m3VmsyK57Gh3TZwj": {
+   "method": "name_to_statement_join",
+   "officialCode": "3.3I",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-3.3I",
+   "score": 0.6967,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_n8dbknTqNp88nyfk": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.1H",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.1H",
+   "score": 0.7075,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_p3HzpnZtqBjfgzdq": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.8B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8B",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_pFVDbZgQGCHHRDtc": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "1.10B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_q9cr84Qbz53vBPYc": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.8B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.8B",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_qRytkYVHXTQBJdSq": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.10A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10A",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_qX5rMkysQfN7SK2M": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "2.2D",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2D",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_r5q5BK8C6NHJGV5f": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.8B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.8B",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_rsCdKqXKjhfmkyqT": {
+   "method": "name_to_statement_join",
+   "officialCode": "2.2B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.2B",
+   "score": 0.7692,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_sdkycXb6bn33Jnz8": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.2A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.2A",
+   "score": 0.7441,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_trxtpbq9c342p3qw": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.10B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.10B",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_vMWk9CHp637Rv3dd": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "4.7A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-4.7A",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_xSHrBDTctTzBqWvQ": {
+   "method": "name_to_statement_join",
+   "officialCode": "2.4A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-2.4A",
+   "score": 0.6977,
+   "tier": "S1_name_match",
+   "unit": "Unit 1 Foundation"
+  },
+  "spcpt_xf7Y5cxcQG3T6g65": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "1.11A",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.11A",
+   "score": null,
+   "tier": "P2_operator_content_join",
+   "unit": null
+  },
+  "spcpt_xw9z6fM2cqDvqCt9": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "1.3B",
+   "officialId": "IGCSE_MATHS_A_MODULAR:U1F-1.3B",
+   "score": null,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"Arc Lengths & Sector Areas\", \"reason\": \"no-guess pending: statement 4.9A is printed only in the Higher Tier content walk; the Foundation lane pool excludes Higher-only statements\", \"spcpt_id\": \"spcpt_dvX7WnB2FSdky4jW\"}",
+  "{\"name\": \"Problem Solving with Areas\", \"reason\": \"no-guess pending for this lane: the tag resolves to a statement outside this lane's published tier/unit pool (Foundation lanes exclude Higher-only statements; modular unit lanes code only their own unit scope); the tag's evidence-based resolution applies on the lanes whose pool carries the statement\", \"spcpt_id\": \"spcpt_3fMGfNtg3hXMg6gC\"}",
+  "{\"name\": \"Speed-Time Graphs\", \"reason\": \"no-guess pending for this lane: the tag resolves to a statement outside this lane's published tier/unit pool (Foundation lanes exclude Higher-only statements; modular unit lanes code only their own unit scope); the tag's evidence-based resolution applies on the lanes whose pool carries the statement\", \"spcpt_id\": \"spcpt_27Znm3wFFhCxBD52\"}"
+ ]
+}

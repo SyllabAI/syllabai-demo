@@ -411,7 +411,8 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
         nodes.append({"code": t_code, "family": "TOPIC", "title": t_title,
                       "description": None, "parents": [subject_code],
                       "provenanceTier": "RULE_DERIVED", "order": t_idx})
-        edges.append([subject_code, t_code])
+        edges.append({"source": subject_code, "relation": "PART_OF",
+                      "target": t_code, "provenanceTier": "RULE_DERIVED"})
 
         # subtopics from inline subsection dicts
         subs: dict[str, dict] = {}
@@ -475,7 +476,8 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
             nodes.append({"code": s_code, "family": "SUBTOPIC", "title": label,
                           "description": None, "parents": [t_code],
                           "provenanceTier": "RULE_DERIVED", "order": s_idx})
-            edges.append([t_code, s_code])
+            edges.append({"source": t_code, "relation": "PART_OF",
+                          "target": s_code, "provenanceTier": "RULE_DERIVED"})
             n_sub += 1
             for r in st["rows"]:
                 pid = str(r.get("official_code") or r.get("id"))
@@ -483,7 +485,8 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
                               "title": r.get("text") or "", "description": None,
                               "parents": [s_code], "provenanceTier": "RULE_DERIVED",
                               "order": n_pts + 1})
-                edges.append([s_code, pid])
+                edges.append({"source": s_code, "relation": "PART_OF",
+                              "target": pid, "provenanceTier": "RULE_DERIVED"})
                 n_pts += 1
 
     curriculum = {

@@ -1,0 +1,6081 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 25,
+   "total": 25,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 25
+  },
+  "questionParts": {
+   "coded": 280,
+   "total": 280,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 280
+  }
+ },
+ "course": "ial-further-maths-18-further-pure-1",
+ "generatedUtc": "2026-09-19T19:16:07Z",
+ "inputs": {
+  "SME-ExamQuestion/ial-further-maths-18-further-pure-1/spec_point_map.json": {
+   "sha256": "8b8ae048f53936e77cb9d90404e4cc06c4948dc53091aa7d53ca845c9725096f"
+  },
+  "SME-ExamQuestion/ial-further-maths-18-further-pure-1/spec_point_resolution.json": {
+   "sha256": "a57f3c779a2074223a05cb87965bf413d65ee40832d91e16c62b3dd4bf347d76"
+  },
+  "spec-links/ial-further-maths-18-further-pure-1.json": {
+   "sha256": "3a752e97a512b7c2652ecabd9aa277526b9741f35b58a1aeb1cbc2e0b945eadd"
+  }
+ },
+ "items": {
+  "qstnprt_2C6r8SDs6VmpyzS7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_2N73NC62SX6KZTN7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_2RYVtgNmv6p3ypp6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_2YWVxSZQCYsvZwYM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_2gnw6DNzh72d8C3C": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_2mv2Cf8M4Fx5dP5v": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_36GNSy6DXNXzmzg2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_39KHJjS8vxq4S4Yf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3C8kQBk3K3jgjWhH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3CTYsTqr2sfKRcrD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3Rb66R4XgZKxp5hG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3RjBZ4MttnrtGB8r": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3cKkFnphVnm9CdsW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3fKXsX6vYJDmqvWt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3kfVzQS8jY9Q5gWX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3tDmNjgrpNsJmkrf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_3wScwPNhtvb39GrR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_449frgjpXp7DVzSm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_45TCVKStKZsDqtZD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_46BJt2wPvq47pkbQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_47F4fvpyWQJzRYVS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4CXkFPR6SQV3B26m": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4RcM5TDnFbMvJcBQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4gdh7bkZwK8fkTkJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4qD28rXyCf6TdZfR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4v5qssg88gnsJQXG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4zd72yq97kpBzbvh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4zx4qXqxpK9Nwvxx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_53HNtKvxSdPFsbBM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_57Z4qf2J2kP6s5Df": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_57j9TQfhKw3jYNKr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_57ktMMjyYx6qxpdr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5GMJrWkGzJ4vtm4c": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5PspnGWbmrPx9ZzX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5WkzNQqtGbQGhGtd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6PVwdZ5vjc48H4Z8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6Sj38Y5XfMJYfn5X": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6hRb6HnCCB94sGz9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6vVBD5qKx8Qnhfsz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_75qJMy4H5BKpTnZH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_78byGSJtyXmcHcXM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_79J4HRF85cJGpdxZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_7Ss3db9TCw2PX7xs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_82CTTNsW64HqKgnD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8XsvHcJWHxpPkrFS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8pJTsq6CqvhYzWrg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8qKVzDdpg3nDDdjz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9KjFXjJgG6PRYR78": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9MxmBStwy2NRytCp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9YdyNYgmSrSTSg9J": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9fhbcQnHjVgD539C": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9qmMGbdvPB7pb5SD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_9tm3wXfZn958ZbHT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_B78NNnHc94TznRTm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_BBYvk6wnF59y5PDR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_BbTBTBrKKnvTR46J": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_BsK4QY9DdDpTMYRj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ByM2R4HXn6jPqhpf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_C5jCb5XSnXJxZH86": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_C6x6tJQvtMCXmQqx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_C8vqJP7Qd5bq8h3P": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CCY2Zzj2sBtrcdFN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CHRr5BQMmJzDXRw5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CVWDS9KY2MjnGzTh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CWNgxqswwKZ7vnMB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CZwjFHDJpbCDvbwd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Cdcwvg3XPjqqVkfV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_CgrF28dzcxQzVvWV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DC7WMR5gCBKMBdHP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DFKNcn6QStGRhMRm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DFtVKqpngNJgmxzW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DNhR7thhx7963Wkr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DkGtzhYqPHDrRtJQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Dsj5bYGCVTtQJN36": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Dv9Gr6CfhzMwHqGc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FNmtgf2HxvwXZ8CR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FjVBGnZYWJFBWXPW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FrH8nxw3qwfCgwX6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GJDPXZ7kjJnsjSfK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GQPrV6MhPB73mpcT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_H3kVkgM8zkW4FWzM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_H49xczH9nXj9cqX2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_H974zVVbZJhkjHXW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_HH8JhcKVmmRXYSWq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_HRnYrcR7MJx3kb9M": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Hw8ZN4HXRypHrvjW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JMJ8q34qkjCmKwmV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JNQRZhcBp8yZs3Kk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JWCBWMbsgQKgdRc9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JXJZC588wgRDzbnf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JnQ5TP9fnmV3ySMN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JpTkmG9ttsQtdHPk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_K4WZYZs7dKt4kCPt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_K6C5DYd44v2TKt5C": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_KC9qTWwqzdCfHC3g": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_KcJMK9TQpMs3CV7f": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_KkxrXBvdj7gfXhDs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_M2dKZM48hYrCqrDf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MGfBz2qYdgQzGvF8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MKYXKB7xtRNx3tFC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MXFv6PyqBmWgw8Qh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MXXfxZsZBQJpbsKk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MZn6q2fgPdygtWTp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MgQ8TQctGsHJYyzN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MjtgY9Rc2j6K5grJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MmXFWjqBXrCPYw4r": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MxHSYp72fGHQxM6M": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MyVht2rpMRKM7JcH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_N4m2QkMmjqrfT7pX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_N7TSbPHtfnnQ75DW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_N8vWBJWvd6tq9Sch": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ND5PHMCMFW2MsCdF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NnpzHSsb73prMgQG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_PCC7RNfDdMDr4vDT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_PKnbqwhsWnK5QvGG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_PPkRCnQ4GmzsJpKv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Pv8zgbdtwTb2vWh2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Q6m33NJmpf9sjx5f": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Q7GvzF5bmwmNT44G": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Q7JWkSZXzj4CQFPW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QRkvrSSKcG5sHCd8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QSps2v5ZJpYVrwzJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QYcGkk5zZkGCFzCY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QfXzR9N5PJv9XP9R": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QppKQSJzpQrWS84V": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Qx7sfxyPVBCqGGqt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_R6mpwK7rcfBjC64f": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_R854gbGZrgBkPyMt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RMbG7G7HHG6gPGcb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RMprgZyvkskJbDBd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RMzJWc2JSh4NbrV8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Rdy4dCTrvW99bSKs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RmS5WNp4bkxNHw4b": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RsdHzPRmCRPXrCbD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RtjYSrr2tBGx3cf4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RwXqjrSrbktDxKFh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_S5Y9Wh4BBT5sMfYV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SW275jtsNn2qxRRh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SfjrjHBzCtwx7W7r": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_SjwmJWpn67fjQtJb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_StjP7z9XNDwmdvHH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Sz6n3gWkrCTF9cFb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TZXm7rpRxtfH8chY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TgSdZFT379YNc3s5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ThCGTnDJk3v2Wx9r": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ThrHMNX8dkcfyt8p": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TzS9pX39yxfPjNrK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_V2sxCRXjSQxQ2Zw4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_V9CqDpKbR59zgBG3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_VWbkpy3GjbB5gRwV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Vc38RcqQvcKh4yp4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Vq8t4RtHC8C3JxcR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WBfgzzbdyQvg4NJH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WTT68Cy3brMtGfMh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WVvbrHkrnk2qvPCN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WXKXnhHrRsnfQsTG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WYy9Dn25mpYqRJ69": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Wc2n6WkdyjhvWDQD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_X5nkHgsnvj3Cf7pf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_X8Qjnm88N48nsRwY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XBhqN4y4W3smPFhc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XGKYGMCgMK82NVbQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XX66jqDSN25rgDyq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XZW7CcRjMRskjpdG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XrMNWjQyhyfx3MXy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_XzX4VyXdFxCF3ktg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Y3Bf8rdDbK3CHYSV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Y8xqyMrJkQZ28MFr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YCFMwFncRsMqs3fZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YCnJ2WzJYq6FsmVG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YFgKtGm8wKfSCc6Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YG8r3tn5S7pdQm37": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YQC8JTJMK5Sz9PwG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YWcyX7RsbC7mfB2q": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Z23dfJrM4km9ZW36": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Z2rRdcBqm8JK6Ybw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Z8vb8Wtcgkv3ntRP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZMKJ7rSyY5pPWWjX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZSDHTXm5F9bTgMVB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZYqN39bSYkMWxVRb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZvZ55hhXRN5mRSxs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_bTgyn5JQ3ytNgGg8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_bqX8BCv5fSbSfPkb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_bqmm9jfJZFqTXMKy": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_csDMrFGqxYGTDjYH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_cwWz8zKv2jxwq6v4": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_dZfKCY87Hc72vgJd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_f5PRcgrKbqvMqt92": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fJXP9RQzvkByMbMZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fPhVVvJTGMzwSDnP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fQyBGbBjWD9XnkRT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fXchvs7FM9GxPpgm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fYK48f6HzBccG57z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fftD5pTfbwMHyHCH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fvj8nTSvrNnSYGRx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_g696YbKYFk3rdNCC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gV62J6PhJfChVHf5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gYpFt7NTm2y6kxhC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gZ9FDFJkhdfFJcMZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gdhh4fxJWxypvwxx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gzKGPfQVDNsnw5GJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_h8H2cmmfWZxTPm9c": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hDVgnkYPWsyCkWYC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hRx9Tq795f6MmbGZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hSfyR6gpR9MP6Mxn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hWbd6VPy4YcNKdFW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hjKJBpwvgMsQQ7sv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_j3x58zJyG779B4M5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_j4QfPD9fBdnWkwXg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jnS8X8TmBrTbRZzw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kFqd8KB4BN28c8RS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kWpptj9qYZ8FJ2wK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_m5sNch99JWJsysdj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mBzwr8DvQmJRg6Jn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mQ8FpVhfBrgyDXXn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mQtys3hW6NrfQM6w": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mbyTZHs6dyrxBmkR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mgckqBPPQb2g5Jm7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mhvRHhQ2cVH9X7YK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mnHFVgCwQjWjtRjX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mvTN9S76JKqGwqzG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_mxjPM2pYrjkCrHGS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_n6tJ4FHqTBWpTPwK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_nCft6xvh6cjXpXs7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_nKgfbsvNqnqDz92w": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_nZc6dCfMjgqWNRqk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ndCptxpcyWKq5VKQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_p29B96sHs52prcHQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_p8j8yqw7f9tdhrf3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_pP6mRFGY6B3HNzsc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_pbfgRwnfj3szMZ8x": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_prX6rXBJqdVxGKT6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qMDQ6WkQyTgDw9q5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qcJscQ3dYcsM4rPf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qxGP99rNYRr9PTQR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rRxj2sM6c8Z9mpKM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rV8qbWkGknrPRBGF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rdkmQCVQFtr7WT2q": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rfKX6KfMbx8SVt33": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_sWMJjyZ7QWx8jqgN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_shrphvGnsrZvfkkd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_sxgZy5MwTqwNnTjK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_tP2HqJnS3Vdks4Np": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_tZbfBGnKkKGr6Kxq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_tvrrJwmvmRxGw7dx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_twQfpq3GFNDk3Y75": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_tzfsM7PxsMVTPgYz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_v57K4cddVS8hhFzn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_v6kQHjzk7tdbZdtW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vBNG2xXgw2bY3kgg": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vGZdf728RDQj5bcs": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vd5zGYsCq59tyM2N": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vvmb75DjSxyj4pMJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_vypXtDywT8qK9mWH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_w58fMt28nqrPcJfN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_w7pSZn7DphPgWWRf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wF3RBHJQGHPZvCFK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wGXSv2g296GvbWZD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wHPBByTCHTZHqzKx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wRPWJX4z6nvGgvn9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wVJQwhxnfNwy5ZGr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wg4H3dG533JBgSJZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wjjhMTbwkDcZzrWq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wmsGccqPKs9WctSV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_wyYKkBqyyYgNKTFD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_x3HVSRFBnZS8fQs3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xBHz7D9z2mcTbcDG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xbZwzgnd23NfBsrC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xmrrWr7vJC32HjjR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xnFcPsbfX2WbnZcF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xtwfWP7G3BzvnYCW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_y2MDsFSZcVPC8x5V": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_yW6RJ5t4B6PQxcPc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_yWkZx2ywYtB6nPWw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_yfKdKpdDsZg7GcjD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ynxC6gWh293rjDXC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ypBxTmTyMnXWwbcK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_yqnXMDsnkNdCKFJS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ywGpCfDTQZJq6hhp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_zp753hsMg5sPD6DV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "rn_2nBj2FwhckVKnxfY": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_4p2Z4pDwxgDD9QQ5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_626vYvr7zQgShCv3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.3",
+     "officialId": "IAL_MATHS:FP1-2.3",
+     "score": null,
+     "spineCode": "2.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_88fcM9xfPsmxVjcp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_8krmy8tRfYbXRGNM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_GKTrTFNBqN7R4CMF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.5",
+     "officialId": "IAL_MATHS:FP1-1.5",
+     "score": null,
+     "spineCode": "1.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.6",
+     "officialId": "IAL_MATHS:FP1-1.6",
+     "score": null,
+     "spineCode": "1.6",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KnR42njGpmYbrQbP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_QgchJ42HYg9HdZ2Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.3",
+     "officialId": "IAL_MATHS:FP1-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_R2xX85Wf2ywFM8hq": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_SqCkPhNkGWS5Sf8n": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.2",
+     "officialId": "IAL_MATHS:FP1-6.2",
+     "score": null,
+     "spineCode": "6.2",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_TCf54CMjTMyCHpPj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_TtsWRYB83PPGwDXW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.3",
+     "officialId": "IAL_MATHS:FP1-1.3",
+     "score": null,
+     "spineCode": "1.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_Z5XZXvjTYy7HSzjQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.2",
+     "officialId": "IAL_MATHS:FP1-1.2",
+     "score": null,
+     "spineCode": "1.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_ZHbHKcJHGNhPdqzh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_bMf2GZb3JfjBRYPD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "1.1",
+     "officialId": "IAL_MATHS:FP1-1.1",
+     "score": null,
+     "spineCode": "1.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_cVxMCGzqwMdvXpTx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "7.1",
+     "officialId": "IAL_MATHS:FP1-7.1",
+     "score": null,
+     "spineCode": "7.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_fKGy7ns686KpchbB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.4",
+     "officialId": "IAL_MATHS:FP1-5.4",
+     "score": null,
+     "spineCode": "5.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.5",
+     "officialId": "IAL_MATHS:FP1-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_gH9QdjSjz7djfn8Z": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.1",
+     "officialId": "IAL_MATHS:FP1-2.1",
+     "score": null,
+     "spineCode": "2.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "2.2",
+     "officialId": "IAL_MATHS:FP1-2.2",
+     "score": null,
+     "spineCode": "2.2",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_m9N8zpSqc7gFZcR3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "8.1",
+     "officialId": "IAL_MATHS:FP1-8.1",
+     "score": null,
+     "spineCode": "8.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nnBDSgNV7PRX4wQF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_pKMRNJjcmHjzFdRG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+     "officialCode": "4.1",
+     "officialId": "IAL_MATHS:FP1-4.1",
+     "score": null,
+     "spineCode": "4.1",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "4.3",
+     "officialId": "IAL_MATHS:FP1-4.3",
+     "score": null,
+     "spineCode": "4.3",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_qrkKrVGt8HxcNpds": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "4.4",
+     "officialId": "IAL_MATHS:FP1-4.4",
+     "score": null,
+     "spineCode": "4.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_rMr3xRvgJH727Dcv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "3.1",
+     "officialId": "IAL_MATHS:FP1-3.1",
+     "score": null,
+     "spineCode": "3.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wSCqmqgVJsDYbCc8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.1",
+     "officialId": "IAL_MATHS:FP1-5.1",
+     "score": null,
+     "spineCode": "5.1",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "5.3",
+     "officialId": "IAL_MATHS:FP1-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wksmS3fjsg4qqx3r": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+     "officialCode": "6.4",
+     "officialId": "IAL_MATHS:FP1-6.4",
+     "score": null,
+     "spineCode": "6.4",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  }
+ },
+ "notesInlineRefs": {
+  "total": 44,
+  "unmappedToMap": []
+ },
+ "qual": "ial-maths",
+ "reconciliation": {
+  "codesOutsideSpine": [],
+  "distinctCodesAttached": 21,
+  "itemsOutsideSpine": 0,
+  "spineHitCodes": 21,
+  "spineSpecPoints": 25,
+  "uncoveredSpineCodeList": [
+   "1.4",
+   "4.2",
+   "5.2",
+   "6.1"
+  ],
+  "uncoveredSpineCodes": 4
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 44,
+    "resolved": 44,
+    "unresolved": 0
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; page-context joins per T-SPEC-6 \u2014 SME IAL pages publish no definition text, ticket #13; cross-unit resolves documented per verdict; PMT excluded as source); HUMAN_VALIDATED reserved for human review"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 25,
+    "question_parts": 280
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 25,
+    "question_parts": 280
+   },
+   "items": 305,
+   "items_with_codes": 305
+  },
+  "specPointMap": {
+   "regime": "B",
+   "smeEntries": 44,
+   "unitScope": "FP1"
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_2F78GfSS8pMd4M7S": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "4.1",
+   "officialId": "IAL_MATHS:FP1-4.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_2kCMJxYFHMRBzPZX": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "2.1",
+   "officialId": "IAL_MATHS:FP1-2.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_43RTm6JtZxvK7VS3": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "7.1",
+   "officialId": "IAL_MATHS:FP1-7.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_6HsdhDNTjd52t99f": {
+   "method": "operator-verdict page-context join (T-SPEC-6 re-verdict; corrects stage-1 name-only match; PMT excluded as source)",
+   "officialCode": "4.1",
+   "officialId": "IAL_MATHS:FP1-4.1",
+   "score": null,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_6NkRppSFKD89hB3j": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "8.1",
+   "officialId": "IAL_MATHS:FP1-8.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_7B4b9yCcrc9JWHbc": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.5",
+   "officialId": "IAL_MATHS:FP1-5.5",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_BhD7jyg3SMt38vvJ": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.5",
+   "officialId": "IAL_MATHS:FP1-5.5",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_CRFsjrVKdnBVB9Qg": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.1",
+   "officialId": "IAL_MATHS:FP1-5.1",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_DDB9HJsj2Jgg4NGY": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "2.2",
+   "officialId": "IAL_MATHS:FP1-2.2",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_DFnsnvP295B5FmbK": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.3",
+   "officialId": "IAL_MATHS:FP1-5.3",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_DdchQvsnwcKxhX8Q": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.2",
+   "officialId": "IAL_MATHS:FP1-6.2",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_Dwkpk276tdPzYYpF": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "7.1",
+   "officialId": "IAL_MATHS:FP1-7.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_FKPjqDV43mRmSbdk": {
+   "method": "name_to_statement_join",
+   "officialCode": "1.1",
+   "officialId": "IAL_MATHS:FP1-1.1",
+   "score": 0.6643,
+   "tier": "S1_name_match",
+   "unit": "FP1"
+  },
+  "spcpt_Hs74d7x8s4dhjc6n": {
+   "method": "name_to_statement_join",
+   "officialCode": "4.3",
+   "officialId": "IAL_MATHS:FP1-4.3",
+   "score": 0.7189,
+   "tier": "S1_name_match",
+   "unit": "FP1"
+  },
+  "spcpt_JDWV8bD7tNcdGzCF": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.3",
+   "officialId": "IAL_MATHS:FP1-5.3",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_JHZkQZRBZM76WjSK": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.3",
+   "officialId": "IAL_MATHS:FP1-1.3",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_JYbZRnDqxyS2R2qp": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.2",
+   "officialId": "IAL_MATHS:FP1-1.2",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_M75m468rddysY3Wn": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.1",
+   "officialId": "IAL_MATHS:FP1-1.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_N7DZpzv4CQWjn2zk": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.4",
+   "officialId": "IAL_MATHS:FP1-6.4",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_NfbRPQ3SV5hfMXG5": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "4.4",
+   "officialId": "IAL_MATHS:FP1-4.4",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_P6PMYkhvyYkCXM2d": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "8.1",
+   "officialId": "IAL_MATHS:FP1-8.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_QmPxGf23JSYwB2VW": {
+   "method": "name_to_statement_join",
+   "officialCode": "2.3",
+   "officialId": "IAL_MATHS:FP1-2.3",
+   "score": 0.6929,
+   "tier": "S1_name_match",
+   "unit": "FP1"
+  },
+  "spcpt_QxWTPpG7ytN8DXtk": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.4",
+   "officialId": "IAL_MATHS:FP1-5.4",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_SMzk6CSSYWkfQPd8": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "8.1",
+   "officialId": "IAL_MATHS:FP1-8.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_VBt5CyWqhyvcvTwD": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "7.1",
+   "officialId": "IAL_MATHS:FP1-7.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_Vj2kxp9s4PfSKScf": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.6",
+   "officialId": "IAL_MATHS:FP1-1.6",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_Zdhf85vx7x4Jdd54": {
+   "method": "name_to_statement_join",
+   "officialCode": "8.1",
+   "officialId": "IAL_MATHS:FP1-8.1",
+   "score": 0.6432,
+   "tier": "S1_name_match",
+   "unit": "FP1"
+  },
+  "spcpt_b54Tg8rD74DyCckg": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "8.1",
+   "officialId": "IAL_MATHS:FP1-8.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_cB4gPQXjPVyXhqv2": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "3.1",
+   "officialId": "IAL_MATHS:FP1-3.1",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_fk4V4Cvw8BX5hfwZ": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.2",
+   "officialId": "IAL_MATHS:FP1-6.2",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_fm8GnX9jBsbsyZFJ": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "3.1",
+   "officialId": "IAL_MATHS:FP1-3.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_jHbjfY6F8Vh77FP9": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.4",
+   "officialId": "IAL_MATHS:FP1-6.4",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_jbZvcfGZ7qTzhXZh": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "4.4",
+   "officialId": "IAL_MATHS:FP1-4.4",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_kZwP597VC4kn3npw": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.3",
+   "officialId": "IAL_MATHS:FP1-6.3",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_qnKVvs82Wxy4pD6P": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "7.1",
+   "officialId": "IAL_MATHS:FP1-7.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_rS66jWdV6BtkFBXm": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "3.1",
+   "officialId": "IAL_MATHS:FP1-3.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_sHXRjK4zv3YvQgFM": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.2",
+   "officialId": "IAL_MATHS:FP1-1.2",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_t53s6pXwMkTNqYjz": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.1",
+   "officialId": "IAL_MATHS:FP1-1.1",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_vywmYvX3FQXf7n75": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "3.1",
+   "officialId": "IAL_MATHS:FP1-3.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_yxSc5c64XG4yf5Rj": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.1",
+   "officialId": "IAL_MATHS:FP1-1.1",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  },
+  "spcpt_yzsdTrmn8KXkYjYM": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.2",
+   "officialId": "IAL_MATHS:FP1-6.2",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_zBy7BQ9swFbWk3ZJ": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "5.3",
+   "officialId": "IAL_MATHS:FP1-5.3",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_zNkvbSrS3xysKQyQ": {
+   "method": "operator-verdict page-context join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "6.2",
+   "officialId": "IAL_MATHS:FP1-6.2",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": "FP1"
+  },
+  "spcpt_zsSv929BKZ5RjrwZ": {
+   "method": "operator-verdict name-fragment join (T-SPEC-6; SME IAL pages publish no definition text, ticket #13; PMT excluded as source)",
+   "officialCode": "1.5",
+   "officialId": "IAL_MATHS:FP1-1.5",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": "FP1"
+  }
+ },
+ "spcptUnmapped": []
+}

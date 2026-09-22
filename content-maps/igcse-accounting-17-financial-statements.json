@@ -1,0 +1,2261 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 19,
+   "total": 20,
+   "unmapped": 1,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 19
+  },
+  "questionParts": {
+   "coded": 71,
+   "total": 73,
+   "unmapped": 2,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 71
+  }
+ },
+ "course": "igcse-accounting-17-financial-statements",
+ "generatedUtc": "2026-09-19T19:16:07Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-accounting-17-financial-statements/spec_point_map.json": {
+   "sha256": "b57cfddd18f3a88782e6973f9ce6c3d8dc056a096d5144320a788b8be8644465"
+  },
+  "SME-ExamQuestion/igcse-accounting-17-financial-statements/spec_point_resolution.json": {
+   "sha256": "e6b30ab424e45fa3364d2b2f5c23c1960fab05fb3c793f914ed63b96d2fd5cd0"
+  },
+  "spec-links/igcse-accounting-17-financial-statements.json": {
+   "sha256": "f8b97b8d39f97f122a54a2a440851abd859207fcd8f4ecc81cdb282e5c19d6eb"
+  }
+ },
+ "items": {
+  "qstnprt_3nbPydNCmbB29RYn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.169",
+     "officialId": "IGCSE_ACCOUNTING:S4.169",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.169",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_4zvTV53RF8JWbSnG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5jXqMGjpBh384QVf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_5t4jBMFcGpBVwJ75": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6KWhY26yMxf97hjh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.171",
+     "officialId": "IGCSE_ACCOUNTING:S4.171",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.171",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6SG6JGTKdSBHMQ32": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.072",
+     "officialId": "IGCSE_ACCOUNTING:S4.072",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.072",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_6cHstxY43n5PHwT5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8Bc7jtVQ8pZHbGs5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8KNJX7Tkfv3j67xM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_8PrsMYyydTjR9KsH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.072",
+     "officialId": "IGCSE_ACCOUNTING:S4.072",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.072",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_96cBkdwJms7NbXFP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_985dnMSbnj7c4dDM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.167",
+     "officialId": "IGCSE_ACCOUNTING:S4.167",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.167",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_D48KkC6hMW7Shfqk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S4.159",
+     "officialId": "IGCSE_ACCOUNTING:S4.159",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.159",
+     "tier": "S0_operator_override",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_DyGGy5SNRs6wKWFk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FYyQr6GkGFyqg8BB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S2.134",
+     "officialId": "IGCSE_ACCOUNTING:S2.134",
+     "score": null,
+     "spineCode": null,
+     "tier": "S0_operator_override",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.184",
+     "officialId": "IGCSE_ACCOUNTING:S5.184",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.184",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FZf8FHcpSvG78Z8d": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.167",
+     "officialId": "IGCSE_ACCOUNTING:S4.167",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.167",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FsTpG5pt6Z6hFH9S": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_FyqP5c3cN7d7zvzx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.164",
+     "officialId": "IGCSE_ACCOUNTING:S4.164",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.164",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GKDRJtzj2RMhKB48": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GMbFpsrKcJnHRqyS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_GPnW7g7VfwFxXYMk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S2.134",
+     "officialId": "IGCSE_ACCOUNTING:S2.134",
+     "score": null,
+     "spineCode": null,
+     "tier": "S0_operator_override",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.184",
+     "officialId": "IGCSE_ACCOUNTING:S5.184",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.184",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_HRSVhfZQyqBqnpVc": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Jj6B6JTBbzPKVkKm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_JzpDJbj8ZJVRmdCX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.169",
+     "officialId": "IGCSE_ACCOUNTING:S4.169",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.169",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Km3sVMZ2WS9XFzGR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_M4rj5jtCykk7gJPb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.164",
+     "officialId": "IGCSE_ACCOUNTING:S4.164",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.164",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_MwdXjstmfKBZnrBQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Nf3ffRFYgcNJwvfZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.167",
+     "officialId": "IGCSE_ACCOUNTING:S4.167",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.167",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_NzXWWVtPcdstrPS3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_PDpvpQYbfbvSGVKZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S2.134",
+     "officialId": "IGCSE_ACCOUNTING:S2.134",
+     "score": null,
+     "spineCode": null,
+     "tier": "S0_operator_override",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_QbPqRbTTTRBwKJfr": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.166",
+     "officialId": "IGCSE_ACCOUNTING:S4.166",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.166",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.184",
+     "officialId": "IGCSE_ACCOUNTING:S5.184",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.184",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RTnnvPN36Z9Qh4KT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_RvDMpPDgtgmz8vsD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.168",
+     "officialId": "IGCSE_ACCOUNTING:S4.168",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.168",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_S7Bs8FfX6FMwhXyG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.072",
+     "officialId": "IGCSE_ACCOUNTING:S4.072",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.072",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TgQmFfNqYY9Sm9q8": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.167",
+     "officialId": "IGCSE_ACCOUNTING:S4.167",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.167",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_TwYF7sGSYJ2FShM7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_V5TyQwDnCdBGzCdM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_VKJz3SH3k4XkpK6P": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.167",
+     "officialId": "IGCSE_ACCOUNTING:S4.167",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.167",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_VhnzvC838vcfsfXz": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_W9sgNjjxQX7nwNrf": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_WdF46WFV2c8QbJNb": {
+   "codes": [],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_XGFHWs3NCpnWMtFt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.184",
+     "officialId": "IGCSE_ACCOUNTING:S5.184",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.184",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_Y4Pj6xXNg2WKH3Yp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_YxG5jmtb8jzsBMKq": {
+   "codes": [],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_ZBtSBVgPxmcSnjs7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ZQyp4VrwndmF2QYX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_bxjTTKn3t5VZYqCG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_cmjJCxsPDbTSZrks": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_d8Pndgr3CqmVpFVM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_f3k5ywPHGjGvVBfZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_fQPygW8XnrjyDbch": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S4.159",
+     "officialId": "IGCSE_ACCOUNTING:S4.159",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.159",
+     "tier": "S0_operator_override",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_g293QjWN8yFZV53m": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.169",
+     "officialId": "IGCSE_ACCOUNTING:S4.169",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.169",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_gj64v8VKhkZQQZSF": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hVqcwFTwqHchsgG3": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hnkrbjNH5sVQ5jFx": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.166",
+     "officialId": "IGCSE_ACCOUNTING:S4.166",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.166",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.184",
+     "officialId": "IGCSE_ACCOUNTING:S5.184",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.184",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_hvm5kYztv4JyFrVk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.168",
+     "officialId": "IGCSE_ACCOUNTING:S4.168",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.168",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.169",
+     "officialId": "IGCSE_ACCOUNTING:S4.169",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.169",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jC55SRhP3K77XHxP": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.171",
+     "officialId": "IGCSE_ACCOUNTING:S4.171",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.171",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jVpvr6Gtj9trJ7Fk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.164",
+     "officialId": "IGCSE_ACCOUNTING:S4.164",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.164",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_jkj8rxCWycbsYq4C": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.168",
+     "officialId": "IGCSE_ACCOUNTING:S4.168",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.168",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_k5TPRMfMCQYBm4KD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_kb35gjMJc4fpTNSj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.069",
+     "officialId": "IGCSE_ACCOUNTING:S4.069",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.069",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.171",
+     "officialId": "IGCSE_ACCOUNTING:S4.171",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.171",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_ntXB7xphgdxsq3DM": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_pHwCZfv7RH3Mbxbb": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_pRG39prmdHjmDCT5": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_phTmkM6v9PxjWyFt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.072",
+     "officialId": "IGCSE_ACCOUNTING:S4.072",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.072",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_qSps8NhK2CrxZtvh": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.072",
+     "officialId": "IGCSE_ACCOUNTING:S4.072",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.072",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_r9Y5VgGHn2bkKpFW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S4.159",
+     "officialId": "IGCSE_ACCOUNTING:S4.159",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.159",
+     "tier": "S0_operator_override",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_rykyzWTBwXdrySpS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_s3qYvhhZX5cP9vRX": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_v3cyt687BBS3zRkm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_whGCVvZ3VWdghGy9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_xS4jdZXSKNDz4X6w": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "qstnprt_yZ87sxWRWkXdnNkZ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S4.159",
+     "officialId": "IGCSE_ACCOUNTING:S4.159",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.159",
+     "tier": "S0_operator_override",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.169",
+     "officialId": "IGCSE_ACCOUNTING:S4.169",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.169",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "question_part"
+  },
+  "rn_6jxrxj4BdDYbxKvj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.069",
+     "officialId": "IGCSE_ACCOUNTING:S4.069",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.069",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.171",
+     "officialId": "IGCSE_ACCOUNTING:S4.171",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.171",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_cdXKKWTrNP4djDZW"
+   ],
+   "kind": "note"
+  },
+  "rn_7yGBgkC98RN2Jy6N": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.168",
+     "officialId": "IGCSE_ACCOUNTING:S4.168",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.168",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_H8MNFPNP6XCP5Mq6": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.169",
+     "officialId": "IGCSE_ACCOUNTING:S4.169",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.169",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_K2CbZPhN5MBB4QVV": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.162",
+     "officialId": "IGCSE_ACCOUNTING:S4.162",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.162",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_K2KpWnXkFv3S7Sz2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.165",
+     "officialId": "IGCSE_ACCOUNTING:S4.165",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.165",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_NYBsvHtBsxpfBKGR": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.070",
+     "officialId": "IGCSE_ACCOUNTING:S4.070",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.070",
+     "tier": "P2_page_context_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.071",
+     "officialId": "IGCSE_ACCOUNTING:S4.071",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.071",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+     "officialCode": "S4.072",
+     "officialId": "IGCSE_ACCOUNTING:S4.072",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.072",
+     "tier": "P1_name_fragment_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_XCtqwWWNKyG5qGCv": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S2.134",
+     "officialId": "IGCSE_ACCOUNTING:S2.134",
+     "score": null,
+     "spineCode": null,
+     "tier": "S0_operator_override",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_yQnNfCWc3d9BrwrQ"
+   ],
+   "kind": "note"
+  },
+  "rn_ZPxwCMqrxHx4HrHk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.164",
+     "officialId": "IGCSE_ACCOUNTING:S4.164",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.164",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_c7vy3xbcBCFmcwPm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.166",
+     "officialId": "IGCSE_ACCOUNTING:S4.166",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.166",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_cgJ3SPZjXdrPNxxD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.167",
+     "officialId": "IGCSE_ACCOUNTING:S4.167",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.167",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_dqJgVsy5XzNhmzzd": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.178",
+     "officialId": "IGCSE_ACCOUNTING:S5.178",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.178",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_mvxwHDyD29XNb8VH": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+     "officialCode": "S4.159",
+     "officialId": "IGCSE_ACCOUNTING:S4.159",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.159",
+     "tier": "S0_operator_override",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_nSmDVG9QSSWwhfXS": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.173",
+     "officialId": "IGCSE_ACCOUNTING:S4.173",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.173",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_pT7cTMdCRQvRQH27": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.163",
+     "officialId": "IGCSE_ACCOUNTING:S4.163",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.163",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_tPtbbXVgXQgkyKhj": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.182",
+     "officialId": "IGCSE_ACCOUNTING:S5.182",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.182",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_vQRgzNpmp7kNh582": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S5.184",
+     "officialId": "IGCSE_ACCOUNTING:S5.184",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S5.184",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wqdHF5CqxwzCfTxW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_wrMdCRfn389C3Wr9": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.174",
+     "officialId": "IGCSE_ACCOUNTING:S4.174",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.174",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_xP7rccyy5NGGRwDN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_HHc2rF66RySy4NMx"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_zPKMJSyNjXj7srRp": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+     "officialCode": "S4.171",
+     "officialId": "IGCSE_ACCOUNTING:S4.171",
+     "score": null,
+     "spineCode": "IGCSE_ACCOUNTING:S4.171",
+     "tier": "R1_parse_repair_statement_join",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  }
+ },
+ "notesInlineRefs": {
+  "total": 34,
+  "unmappedToMap": [
+   "spcpt_HHc2rF66RySy4NMx",
+   "spcpt_cdXKKWTrNP4djDZW",
+   "spcpt_yQnNfCWc3d9BrwrQ"
+  ]
+ },
+ "qual": "igcse-accounting",
+ "reconciliation": {
+  "codesOutsideSpine": [
+   {
+    "items": 4,
+    "note": "attachments whose upstream code has no verbatim/alias match in this course's spine (cross-unit or text-level ids) \u2014 kept, not dropped"
+   }
+  ],
+  "distinctCodesAttached": 19,
+  "itemsOutsideSpine": 4,
+  "spineHitCodes": 19,
+  "spineSpecPoints": 86,
+  "uncoveredSpineCodeList": [
+   "IGCSE_ACCOUNTING:S4.158",
+   "IGCSE_ACCOUNTING:S4.160",
+   "IGCSE_ACCOUNTING:S4.161",
+   "IGCSE_ACCOUNTING:S4.170",
+   "IGCSE_ACCOUNTING:S4.172",
+   "IGCSE_ACCOUNTING:S5.027",
+   "IGCSE_ACCOUNTING:S5.028",
+   "IGCSE_ACCOUNTING:S5.029",
+   "IGCSE_ACCOUNTING:S5.030",
+   "IGCSE_ACCOUNTING:S5.031",
+   "IGCSE_ACCOUNTING:S5.032",
+   "IGCSE_ACCOUNTING:S5.033",
+   "IGCSE_ACCOUNTING:S5.034",
+   "IGCSE_ACCOUNTING:S5.073",
+   "IGCSE_ACCOUNTING:S5.074",
+   "IGCSE_ACCOUNTING:S5.075",
+   "IGCSE_ACCOUNTING:S5.076",
+   "IGCSE_ACCOUNTING:S5.077",
+   "IGCSE_ACCOUNTING:S5.078",
+   "IGCSE_ACCOUNTING:S5.079",
+   "IGCSE_ACCOUNTING:S5.080",
+   "IGCSE_ACCOUNTING:S5.081",
+   "IGCSE_ACCOUNTING:S5.082",
+   "IGCSE_ACCOUNTING:S5.083",
+   "IGCSE_ACCOUNTING:S5.084",
+   "IGCSE_ACCOUNTING:S5.085",
+   "IGCSE_ACCOUNTING:S5.086",
+   "IGCSE_ACCOUNTING:S5.087",
+   "IGCSE_ACCOUNTING:S5.088",
+   "IGCSE_ACCOUNTING:S5.089",
+   "IGCSE_ACCOUNTING:S5.090",
+   "IGCSE_ACCOUNTING:S5.091",
+   "IGCSE_ACCOUNTING:S5.092",
+   "IGCSE_ACCOUNTING:S5.093",
+   "IGCSE_ACCOUNTING:S5.094",
+   "IGCSE_ACCOUNTING:S5.095",
+   "IGCSE_ACCOUNTING:S5.096",
+   "IGCSE_ACCOUNTING:S5.097",
+   "IGCSE_ACCOUNTING:S5.098",
+   "IGCSE_ACCOUNTING:S5.099",
+   "IGCSE_ACCOUNTING:S5.100",
+   "IGCSE_ACCOUNTING:S5.101",
+   "IGCSE_ACCOUNTING:S5.102",
+   "IGCSE_ACCOUNTING:S5.103",
+   "IGCSE_ACCOUNTING:S5.104",
+   "IGCSE_ACCOUNTING:S5.105",
+   "IGCSE_ACCOUNTING:S5.106",
+   "IGCSE_ACCOUNTING:S5.107",
+   "IGCSE_ACCOUNTING:S5.108",
+   "IGCSE_ACCOUNTING:S5.109",
+   "IGCSE_ACCOUNTING:S5.110",
+   "IGCSE_ACCOUNTING:S5.111",
+   "IGCSE_ACCOUNTING:S5.112",
+   "IGCSE_ACCOUNTING:S5.113",
+   "IGCSE_ACCOUNTING:S5.114",
+   "IGCSE_ACCOUNTING:S5.115",
+   "IGCSE_ACCOUNTING:S5.116",
+   "IGCSE_ACCOUNTING:S5.117",
+   "IGCSE_ACCOUNTING:S5.118",
+   "IGCSE_ACCOUNTING:S5.175",
+   "IGCSE_ACCOUNTING:S5.176",
+   "IGCSE_ACCOUNTING:S5.177",
+   "IGCSE_ACCOUNTING:S5.179",
+   "IGCSE_ACCOUNTING:S5.180",
+   "IGCSE_ACCOUNTING:S5.181",
+   "IGCSE_ACCOUNTING:S5.183",
+   "IGCSE_ACCOUNTING:S5.185"
+  ],
+  "uncoveredSpineCodes": 67
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 33,
+    "resolved": 31,
+    "unresolved": 2
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SPEC-10 operator reasoning round per operator instruction 2026-09-19 - mappings reasoned directly against the committed registries and the official Pearson PDFs, no scripted matching, no upstream tickets, PMT excluded as source); HUMAN_VALIDATED via operator review"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 20,
+    "question_parts": 71
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 19,
+    "question_parts": 71
+   },
+   "items": 91,
+   "items_with_codes": 90
+  },
+  "specPointMap": {
+   "regime": "B",
+   "smeEntries": 31,
+   "unitScope": null
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_4HQKDs8RmbXshqGx": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.166",
+   "officialId": "IGCSE_ACCOUNTING:S4.166",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_4djxV6TB2XSms9JM": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.171",
+   "officialId": "IGCSE_ACCOUNTING:S4.171",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_5Db8dD2XYQxyzDst": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S5.184",
+   "officialId": "IGCSE_ACCOUNTING:S5.184",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_6C5dG6s8r4RXv9Nw": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "S4.069",
+   "officialId": "IGCSE_ACCOUNTING:S4.069",
+   "score": null,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_6t22NHTFjYvszgvN": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S5.184",
+   "officialId": "IGCSE_ACCOUNTING:S5.184",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_C9T5mbbCqsRGFH5Q": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.171",
+   "officialId": "IGCSE_ACCOUNTING:S4.171",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_H5H8SmwXGsJG2NCz": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "S4.071",
+   "officialId": "IGCSE_ACCOUNTING:S4.071",
+   "score": null,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_J59n78cxm4ccfGh2": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S5.182",
+   "officialId": "IGCSE_ACCOUNTING:S5.182",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_KZxSQjSxmQxdfKZQ": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.164",
+   "officialId": "IGCSE_ACCOUNTING:S4.164",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_KmTMwXdrGN9Bnb7D": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.163",
+   "officialId": "IGCSE_ACCOUNTING:S4.163",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_MBGt3XMp8vDc2m4q": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.169",
+   "officialId": "IGCSE_ACCOUNTING:S4.169",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_RHvgvC98zGzgvMFP": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.171",
+   "officialId": "IGCSE_ACCOUNTING:S4.171",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_TsBng38r82dkC8Rc": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.162",
+   "officialId": "IGCSE_ACCOUNTING:S4.162",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_TvyfYwBdrjBRvq25": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "S2.134",
+   "officialId": "IGCSE_ACCOUNTING:S2.134",
+   "score": null,
+   "tier": "S0_operator_override",
+   "unit": null
+  },
+  "spcpt_YN2pPHH3PrYx7nQg": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.171",
+   "officialId": "IGCSE_ACCOUNTING:S4.171",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_YtMsp2PByQdzKRKd": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S5.178",
+   "officialId": "IGCSE_ACCOUNTING:S5.178",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_b663TCrP8tWxhjvq": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "S4.070",
+   "officialId": "IGCSE_ACCOUNTING:S4.070",
+   "score": 1.0,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_b73GQrfrvh6TZkh9": {
+   "method": "operator-verdict page-context join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "S4.070",
+   "officialId": "IGCSE_ACCOUNTING:S4.070",
+   "score": null,
+   "tier": "P2_page_context_join",
+   "unit": null
+  },
+  "spcpt_bwwMxxBtnK5W2gBX": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "S4.072",
+   "officialId": "IGCSE_ACCOUNTING:S4.072",
+   "score": null,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_f5VyXvKYFPPkwZpG": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.174",
+   "officialId": "IGCSE_ACCOUNTING:S4.174",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_hWqjGV3s2h47GC8h": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.165",
+   "officialId": "IGCSE_ACCOUNTING:S4.165",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_hgPTWKkgpZhmkzjh": {
+   "method": "T-SPEC-10 operator reasoning round (no upstream; PMT excluded as source)",
+   "officialCode": "S4.174",
+   "officialId": "IGCSE_ACCOUNTING:S4.174",
+   "score": null,
+   "tier": "S0_operator_override",
+   "unit": null
+  },
+  "spcpt_kDPYZNNZvFT6scVb": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.165",
+   "officialId": "IGCSE_ACCOUNTING:S4.165",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_pxtv3ZCkSN4CzZqX": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.167",
+   "officialId": "IGCSE_ACCOUNTING:S4.167",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_qPf9kGZPB83sXXSY": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.168",
+   "officialId": "IGCSE_ACCOUNTING:S4.168",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_rfq9PNb7rtqJqdCW": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.173",
+   "officialId": "IGCSE_ACCOUNTING:S4.173",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_wPpvXGQ2cKGwr4rT": {
+   "method": "operator-verdict name-fragment join (T-SPEC-7; PMT excluded as source)",
+   "officialCode": "S4.070",
+   "officialId": "IGCSE_ACCOUNTING:S4.070",
+   "score": 1.0,
+   "tier": "P1_name_fragment_join",
+   "unit": null
+  },
+  "spcpt_x29yvZNwgRsCxxxQ": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.174",
+   "officialId": "IGCSE_ACCOUNTING:S4.174",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_xRq6SYJ37s5g3xYz": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.174",
+   "officialId": "IGCSE_ACCOUNTING:S4.174",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_yVTkRB8hrfWM95Xw": {
+   "method": "operator-verdict statement join after T-SPEC-8 parse repair (PMT excluded as source)",
+   "officialCode": "S4.174",
+   "officialId": "IGCSE_ACCOUNTING:S4.174",
+   "score": null,
+   "tier": "R1_parse_repair_statement_join",
+   "unit": null
+  },
+  "spcpt_ywTCzRPPpWBHX4JQ": {
+   "method": "T-SPEC-9 operator verdict (no upstream; PMT excluded as source)",
+   "officialCode": "S4.159",
+   "officialId": "IGCSE_ACCOUNTING:S4.159",
+   "score": null,
+   "tier": "S0_operator_override",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"Mark-up\", \"reason\": \"no-guess pending: the published 4AC1 spec carries no mark-up statement (Topic 4.4 lists gross profit percentage, profit for the year as a percentage of revenue, and return on capital employed only \\u2014 PDF p27)\", \"spcpt_id\": \"spcpt_cdXKKWTrNP4djDZW\"}",
+  "{\"name\": \"Summary of Adjustments\", \"reason\": \"no-guess pending: aggregation tag \\u2014 SME's Summary of Adjustments spans the whole Topic 5 adjustment walk (5.1-5.4); no single statement anchors a summary page\", \"spcpt_id\": \"spcpt_HHc2rF66RySy4NMx\"}"
+ ]
+}

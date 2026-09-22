@@ -1,0 +1,736 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 18,
+   "total": 29,
+   "unmapped": 11,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 18
+  },
+  "questionParts": {
+   "coded": 0,
+   "total": 0,
+   "unmapped": 0,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  }
+ },
+ "course": "igcse-science-double-award-modular-24-chemistry-unit-2",
+ "generatedUtc": "2026-09-19T19:16:09Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-science-double-award-modular-24-chemistry-unit-2/spec_point_map.json": {
+   "sha256": "e09feccdb3096b6ca4c970d0a08ee84f6c2ece15bd7b6f1510ac509a25acbcaf"
+  },
+  "SME-ExamQuestion/igcse-science-double-award-modular-24-chemistry-unit-2/spec_point_resolution.json": {
+   "sha256": "c3a8f9cb90640e66fa0f0b8b98f355e7df80e3d261abfc56d91c727e1d8b51f1"
+  },
+  "spec-links/igcse-science-double-award-modular-24-chemistry-unit-2.json": {
+   "sha256": "f13702d3f1339ed7cf6dc5c8b14caf3c171f0d5bbf338aa97ba2f60039db2377"
+  }
+ },
+ "items": {
+  "rn_3gWX9FNCSK76X3nJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "7.9",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-7.9",
+     "score": null,
+     "spineCode": "7.9",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6T2JD5hK9b9TcvyW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "7.7",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-7.7",
+     "score": null,
+     "spineCode": "7.7",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_6YFv3cgxbQ49ZBxN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.15",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.15",
+     "score": null,
+     "spineCode": "6.15",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_8njnj6bS54fxRGdB": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "5.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.3",
+     "score": null,
+     "spineCode": "5.3",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_9vVrFwQf9nzj5x9s": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.16",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-8.16",
+     "score": null,
+     "spineCode": "8.16",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_7jg5zgWzPQsFCy2g",
+    "spcpt_Vj2fjb7dCn6cBJFY"
+   ],
+   "kind": "note"
+  },
+  "rn_C7k6zFMxm9fSfczm": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "2.2",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-2.2",
+     "score": null,
+     "spineCode": null,
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.5",
+     "score": null,
+     "spineCode": "6.5",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_6MDHMySrg98kKbZM"
+   ],
+   "kind": "note"
+  },
+  "rn_Ch2CCzPWQwWKR4DC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "5.13",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.13",
+     "score": null,
+     "spineCode": "5.13",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_WM5xQ8VmWgXSZsH4"
+   ],
+   "kind": "note"
+  },
+  "rn_FSf8bv2Hb6Pzh8SJ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.11",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.11",
+     "score": null,
+     "spineCode": "6.11",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_KSQCsTpCsGkqtgVh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hfQCph6gYyht3yPr"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_MNYkMcMM3vJkPCzN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.18",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.18",
+     "score": null,
+     "spineCode": "6.18",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_N4r7rmD4ctqsTRWy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Bkz2pSbQCdrF75dF",
+    "spcpt_tt9J38w3QzyqM9YB"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_QP4MvsxHkBZRD6cD": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "5.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_vZDw44xgVR5wmrFG"
+   ],
+   "kind": "note"
+  },
+  "rn_RBvmz6Nf3tNWq9wk": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.19",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.19",
+     "score": null,
+     "spineCode": "6.19",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_XvZYrTFzXTYrJt4h": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_YwtwZ9gmdxhRKSQy"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_bhFJBmRbxvjQBMJr": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_XNyFmvmKmpCXPC6k"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_bxdkktftKWnJwjCn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.17",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.17",
+     "score": null,
+     "spineCode": "6.17",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_c9jRV3kxqRRwSFvw": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.14",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.14",
+     "score": null,
+     "spineCode": "6.14",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_dhCyzNkVH47KPpNW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "5.5",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.5",
+     "score": null,
+     "spineCode": "5.5",
+     "tier": "S1_name_match",
+     "unit": null
+    },
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "5.6",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.6",
+     "score": null,
+     "spineCode": "5.6",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_yjv7ynM9xnXXFtSp"
+   ],
+   "kind": "note"
+  },
+  "rn_hmcgJNPXxnCrxs4j": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_54rFt6VnHDjnKPGp"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_jWzRxYfx9kpFpQzM": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NND4RkbhRNkxfzSv"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_jXCqkrHpvS7xxpdZ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_B3by6xCJpGJ8b7tw",
+    "spcpt_G284gXq5gFVc9djK"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_k68wPYCr7hG39FtC": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.3",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.3",
+     "score": null,
+     "spineCode": "6.3",
+     "tier": "S2_name_ambiguous",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_TZdYyX2dCBYKczXj",
+    "spcpt_cfGb4JXVXgz4CcMZ"
+   ],
+   "kind": "note"
+  },
+  "rn_mhfQcdj75PDvyC7j": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_YMhbzkT2NJJP32NN"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_r2JYqRSyYmPHwC2f": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KCQsXKzVr4ST4m6r"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_sNGwXzq8S3Ctbcqn": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "8.19",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-8.19",
+     "score": null,
+     "spineCode": "8.19",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_tDF9kWZp4XDV6sq8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7hrnS95ZYZC77gkQ"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_tx4nDtRxmkJ26K4k": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "6.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.12",
+     "score": null,
+     "spineCode": "6.12",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "kind": "note"
+  },
+  "rn_vNdrbxY3CxGnNcXG": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": "5.12",
+     "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.12",
+     "score": null,
+     "spineCode": "5.12",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_KVx4rdfs8MJ58hVT",
+    "spcpt_Kg7DWhpnXcgMFb4p"
+   ],
+   "kind": "note"
+  },
+  "rn_xZ2dZXNZDpDs5MyP": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_vYBc4zSfhYbYV2QD"
+   ],
+   "kind": "note",
+   "unmapped": true
+  }
+ },
+ "notesInlineRefs": {
+  "total": 43,
+  "unmappedToMap": [
+   "spcpt_54rFt6VnHDjnKPGp",
+   "spcpt_6MDHMySrg98kKbZM",
+   "spcpt_7hrnS95ZYZC77gkQ",
+   "spcpt_7jg5zgWzPQsFCy2g",
+   "spcpt_B3by6xCJpGJ8b7tw",
+   "spcpt_Bkz2pSbQCdrF75dF",
+   "spcpt_G284gXq5gFVc9djK",
+   "spcpt_KCQsXKzVr4ST4m6r",
+   "spcpt_KVx4rdfs8MJ58hVT",
+   "spcpt_Kg7DWhpnXcgMFb4p",
+   "spcpt_NND4RkbhRNkxfzSv",
+   "spcpt_TZdYyX2dCBYKczXj",
+   "spcpt_Vj2fjb7dCn6cBJFY",
+   "spcpt_WM5xQ8VmWgXSZsH4",
+   "spcpt_XNyFmvmKmpCXPC6k",
+   "spcpt_YMhbzkT2NJJP32NN",
+   "spcpt_YwtwZ9gmdxhRKSQy",
+   "spcpt_cfGb4JXVXgz4CcMZ",
+   "spcpt_hfQCph6gYyht3yPr",
+   "spcpt_tt9J38w3QzyqM9YB",
+   "spcpt_vYBc4zSfhYbYV2QD",
+   "spcpt_vZDw44xgVR5wmrFG",
+   "spcpt_yjv7ynM9xnXXFtSp"
+  ]
+ },
+ "qual": "igcse-science-double-award-modular",
+ "reconciliation": {
+  "codesOutsideSpine": [
+   {
+    "items": 1,
+    "note": "attachments whose upstream code has no verbatim/alias match in this course's spine (cross-unit or text-level ids) \u2014 kept, not dropped"
+   }
+  ],
+  "distinctCodesAttached": 18,
+  "itemsOutsideSpine": 1,
+  "spineHitCodes": 18,
+  "spineSpecPoints": 47,
+  "uncoveredSpineCodeList": [
+   "5.1",
+   "5.10",
+   "5.11",
+   "5.14",
+   "5.15",
+   "5.2",
+   "5.4",
+   "5.7",
+   "5.8",
+   "5.9",
+   "6.1",
+   "6.10",
+   "6.13",
+   "6.16",
+   "6.2",
+   "6.20",
+   "6.21",
+   "6.6",
+   "6.7",
+   "6.9",
+   "7.1",
+   "7.10",
+   "7.2",
+   "7.3",
+   "7.4",
+   "7.5",
+   "7.8",
+   "8.17",
+   "8.18"
+  ],
+  "uncoveredSpineCodes": 29
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": null,
+  "resolution": {
+   "counts": {
+    "ids": 43,
+    "resolved": 13,
+    "unresolved": 30
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SME-11 initial tiered auto-join from the harvested SME index against the canonical parsed registry; ambiguous and weak joins left unresolved by design)"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 0,
+    "notes": 29,
+    "question_parts": 0
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 18,
+    "question_parts": 0
+   },
+   "items": 29,
+   "items_with_codes": 18
+  },
+  "specPointMap": {
+   "regime": "B",
+   "smeEntries": 43,
+   "unitScope": null
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_2jYvXKSG4T8PFQKd": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.15",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.15",
+   "score": 0.8667,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_G8rXmWWm8nzZKJb5": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.5",
+   "score": 0.7216,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_HPHxhYGrqHBpG2Jh": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.18",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.18",
+   "score": 0.8776,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_KKWbzrW5g58N3X7K": {
+   "method": "name_to_statement_join",
+   "officialCode": "5.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.3",
+   "score": 0.6392,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_TYHtv8DTDMCHB2Ct": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.19",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.19",
+   "score": 0.8723,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_fjRfsM8SMQNhYQMh": {
+   "method": "name_to_statement_join",
+   "officialCode": "8.19",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-8.19",
+   "score": 0.8522,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_fpT2QMCCQNPXshh3": {
+   "method": "name_to_statement_join",
+   "officialCode": "2.2",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-2.2",
+   "score": 0.7375,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_fyzvScTsKB6BdJyZ": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.11",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.11",
+   "score": 0.6842,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_jnwGvkbjjvrcqcYX": {
+   "method": "name_to_statement_join",
+   "officialCode": "5.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.5",
+   "score": 0.7387,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_jvSWSJRnRhVz74W8": {
+   "method": "name_to_statement_join",
+   "officialCode": "7.7",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-7.7",
+   "score": 0.6775,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_m5vwsvKwW69qwxzC": {
+   "method": "name_to_statement_join",
+   "officialCode": "5.13",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.13",
+   "score": 0.7587,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_mzh6RzjSBdh6PpDW": {
+   "method": "name_to_statement_join",
+   "officialCode": "7.9",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-7.9",
+   "score": 0.7274,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_nbJ5bgZDGN55Wgwx": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.17",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.17",
+   "score": 0.7313,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_nn8zcW5wgWM42PfN": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.12",
+   "score": 0.8012,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_qMtxM62wZDtxJKjD": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.14",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.14",
+   "score": 0.8667,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_rZ77Qk4PgzMPGpMB": {
+   "method": "name_to_statement_join",
+   "officialCode": "5.5",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.5",
+   "score": 0.8299,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_rvKZy6fFRQ6hbscs": {
+   "method": "name_to_statement_join",
+   "officialCode": "5.12",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.12",
+   "score": 0.7227,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_tDY3WYgtfprPmHsQ": {
+   "method": "name_to_statement_join",
+   "officialCode": "6.3",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-6.3",
+   "score": 0.736,
+   "tier": "S2_name_ambiguous",
+   "unit": null
+  },
+  "spcpt_wYZXN5GRzhTm4fZw": {
+   "method": "name_to_statement_join",
+   "officialCode": "5.6",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-5.6",
+   "score": 0.7495,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_zrWCBRRbwDMBbqrY": {
+   "method": "name_to_statement_join",
+   "officialCode": "8.16",
+   "officialId": "IGCSE_SCIENCE_DOUBLE_AWARD_MODULAR:Chemistry-8.16",
+   "score": 0.6653,
+   "tier": "S1_name_match",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"Catalysts & Rates\", \"reason\": \"weak name similarity (0.42)\", \"spcpt_id\": \"spcpt_KCQsXKzVr4ST4m6r\"}",
+  "{\"name\": \"Common Ions\", \"reason\": \"weak name similarity (0.44)\", \"spcpt_id\": \"spcpt_XNyFmvmKmpCXPC6k\"}",
+  "{\"name\": \"Composition of Air\", \"reason\": \"weak name similarity (0.44)\", \"spcpt_id\": \"spcpt_B3by6xCJpGJ8b7tw\"}",
+  "{\"name\": \"Conductivity & Covalent Compounds\", \"reason\": \"weak name similarity (0.59)\", \"spcpt_id\": \"spcpt_KVx4rdfs8MJ58hVT\"}",
+  "{\"name\": \"Conductivity & Ionic Compounds\", \"reason\": \"weak name similarity (0.59)\", \"spcpt_id\": \"spcpt_yjv7ynM9xnXXFtSp\"}",
+  "{\"name\": \"Covalent Bonds: Dot & Cross Diagrams\", \"reason\": \"weak name similarity (0.48)\", \"spcpt_id\": \"spcpt_54rFt6VnHDjnKPGp\"}",
+  "{\"name\": \"Deducing Monomers & Repeat Units\", \"reason\": \"weak name similarity (0.30)\", \"spcpt_id\": \"spcpt_Vj2fjb7dCn6cBJFY\"}",
+  "{\"name\": \"Diamond, Graphite & C60 Fullerene\", \"reason\": \"weak name similarity (0.43)\", \"spcpt_id\": \"spcpt_WM5xQ8VmWgXSZsH4\"}",
+  "{\"name\": \"Drawing Polymers\", \"reason\": \"weak name similarity (0.42)\", \"spcpt_id\": \"spcpt_7jg5zgWzPQsFCy2g\"}",
+  "{\"name\": \"Explaining Rates\", \"reason\": \"weak name similarity (0.36)\", \"spcpt_id\": \"spcpt_YMhbzkT2NJJP32NN\"}",
+  "{\"name\": \"Factors Affecting Rates\", \"reason\": \"weak name similarity (0.53)\", \"spcpt_id\": \"spcpt_tt9J38w3QzyqM9YB\"}",
+  "{\"name\": \"Finding the Percentage of Oxygen\", \"reason\": \"weak name similarity (0.61)\", \"spcpt_id\": \"spcpt_G284gXq5gFVc9djK\"}",
+  "{\"name\": \"Formation of Covalent Bonds\", \"reason\": \"weak name similarity (0.56)\", \"spcpt_id\": \"spcpt_vZDw44xgVR5wmrFG\"}",
+  "{\"name\": \"Formation of Ions\", \"reason\": \"weak name similarity (0.47)\", \"spcpt_id\": \"spcpt_7hrnS95ZYZC77gkQ\"}",
+  "{\"name\": \"How Alkali Metals React with Water\", \"reason\": \"weak name similarity (0.44)\", \"spcpt_id\": \"spcpt_TZdYyX2dCBYKczXj\"}",
+  "{\"name\": \"Ionic Bonds: Dot & Cross Diagrams\", \"reason\": \"weak name similarity (0.40)\", \"spcpt_id\": \"spcpt_NND4RkbhRNkxfzSv\"}",
+  "{\"name\": \"Measuring Rates\", \"reason\": \"weak name similarity (0.11)\", \"spcpt_id\": \"spcpt_Bkz2pSbQCdrF75dF\"}",
+  "{\"name\": \"Melting & Boiling Point Patterns\", \"reason\": \"weak name similarity (0.59)\", \"spcpt_id\": \"spcpt_Kg7DWhpnXcgMFb4p\"}",
+  "{\"name\": \"Practical: Effect of Catalysts on Rate of Reaction\", \"reason\": \"weak name similarity (0.51)\", \"spcpt_id\": \"spcpt_vYBc4zSfhYbYV2QD\"}",
+  "{\"name\": \"Predicting Properties in Group 1\", \"reason\": \"weak name similarity (0.55)\", \"spcpt_id\": \"spcpt_cfGb4JXVXgz4CcMZ\"}",
+  "{\"name\": \"Predicting Properties in Group 7\", \"reason\": \"weak name similarity (0.55)\", \"spcpt_id\": \"spcpt_6MDHMySrg98kKbZM\"}",
+  "{\"name\": \"Tests for Water\", \"reason\": \"weak name similarity (0.61)\", \"spcpt_id\": \"spcpt_YwtwZ9gmdxhRKSQy\"}",
+  "{\"name\": \"The Greenhouse Effect\", \"reason\": \"weak name similarity (0.51)\", \"spcpt_id\": \"spcpt_hfQCph6gYyht3yPr\"}"
+ ]
+}

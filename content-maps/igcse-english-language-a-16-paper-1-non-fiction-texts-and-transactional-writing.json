@@ -1,0 +1,3187 @@
+{
+ "contentCoverage": {
+  "flashcards": {
+   "coded": 0,
+   "total": 166,
+   "unmapped": 166,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  },
+  "notes": {
+   "coded": 9,
+   "total": 40,
+   "unmapped": 31,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 9
+  },
+  "questionParts": {
+   "coded": 0,
+   "total": 100,
+   "unmapped": 100,
+   "viaDeclaredLink": 0,
+   "viaUpstreamJoin": 0
+  }
+ },
+ "course": "igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing",
+ "generatedUtc": "2026-09-19T19:16:08Z",
+ "inputs": {
+  "SME-ExamQuestion/igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing/spec_point_map.json": {
+   "sha256": "9eda2e217b1dd0e31209eacf4dd4dd6982447ec968064de1a683811c2bf65e02"
+  },
+  "SME-ExamQuestion/igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing/spec_point_resolution.json": {
+   "sha256": "29109ae4479282afb38d75efc4b9e33e2ad20b98eb3c0dcfd2388fdd558bd9d8"
+  },
+  "SME-Flashcards/igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing/flashcard_spec_map.json": {
+   "sha256": "38da2392f3b6d57bafbcc8cf83de65bdfeb18d7cac0b5e6871fe02aeb178e5c0"
+  },
+  "spec-links/igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing.json": {
+   "sha256": "29f7b11131622f6ab033b10eb49674c04c67975b1449b734346be572cfff0b58"
+  }
+ },
+ "items": {
+  "fl_2JwmVBDG7x2P6frF": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ngzjBvRDtKgTZ2yz"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_2YBVgbBSG4bWvG85": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_3RmW562wqBnvcYmx": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_3Wb9NndVk8XcGmcN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_3zHSP8q3p5kHQNM6": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_4d6ZKGqmqYnYymy6": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_4vdrK4mRrvgf2C4B": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_BPMkYd6Xm6pZzhPj"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_4vjPMTGkjSwfRW47": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_65F78sZ3qhjD4Pvt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_53nGD8yCCBHTzSz3": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_6HCYyXX7qPYkMJww": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_SZBQkVrt7BQvb9P3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_6fhSkpDMZHfRjGby": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_6yRKzwRqFtg5fxcR": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_7N4fV4JZzTSsD49h": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_7NW3MKXVsbwbr5KR": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_7TFtMrgCSJXZBWKp": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_8KGgP46bHQ6xNMhr": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_8XGXG7gZPg4WvTdV": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_8b5Q6VgPmGWgyWN8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_G6ycGD4mhSHc4VD7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_8phvGY3M22rHSwMR": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_8wkSytYqcR9TF4G8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_9rvy3b3C6BCTFvm9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_9sXFddSNK7N4PQ3f": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_9zmf4QTvNcQqTsQF": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_BD9MBtjBfxzTQVNp": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_BXFckFt2t9Bk7JfS": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_BZWwSpVTKKFQrxpq": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_C4NQyzNTkstgKtY3": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_CDw7d7GCZCdXKjsP": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_CRQ853XbybVYZTpk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_CrH3n5K2ZjJhvpXj"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_D4GFBChVc3Bjydsg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_D8spsngCRCwz64CK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_FbpWFtChXwMDsnwt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_DHwDXkQpH3ypy9C4": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_HPkDNBghyzThKcRV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_DTDwyXsMZWwH8ZnZ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_FCnBgq77hg6fgVmK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_HPkDNBghyzThKcRV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_FMjcYXt3vJnDtkym": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ngzjBvRDtKgTZ2yz"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_GDtHqJHHGpNZwZkt": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_S7wwBPWPPsjDkFN3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_GMH4zXTRKnjfZqq8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_GjXjZtbHcbJxfT4g": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NrY7W4kCPHBpPfKy"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_GnCzfzBkNXhn4ksx": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GvFkpFXrvbrh8BjV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_GpkcN5yMjSBbZvKt": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_H2JBZmbDV6j8xkQN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_S7wwBPWPPsjDkFN3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_HNcQxBshYMCbcc79": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_HPBpyygK9V3QQxPt": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_HmvgRPJPG29MYTZS": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_CrH3n5K2ZjJhvpXj"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_JD6bKpt3HQtyKmht": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_SZBQkVrt7BQvb9P3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_JQTGnhHd8f77ydj8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Gj9PFbrMtW3XkT9c"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_JRDsF5qdVcBjmb3R": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_JVkkNRQ9pJ7cB7CP": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_JsM7v3H2v4Z4yf7X": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_cTxtf6gZcZqpff9K"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_KB2njggm7x75ZnKh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_wd7gdP5wVbPsjMV7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Kc9GQ9wKzSgsZH8W": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_MFftYt7qk8GG4fW5": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_MNCknsTgdHyxcMGX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Mn9dbVsKSBdQCfhX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Mq5trmtmhmwHRzk8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_PPXtWYSqw2txbxwq"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_NYS2qSRYttt7qKzy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_NzsJ5vBR2mcmvq9s": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_PDYkR8HGHRDZgdqB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_S7wwBPWPPsjDkFN3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_PTSvfCXXt4HBKKJQ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_FbpWFtChXwMDsnwt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_PWk622Fdk4YCP5MN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_PZFxDB2TP8GCKtTZ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_PtWjV6RQHdZGPR2m": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_FbpWFtChXwMDsnwt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_QFw7qvWjGr3NvGbG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_RD5GZHvd3YbB5PzY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_RH2RTSdfZgDCG9kG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Rj3JdB5VwmnRsHXz": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_HPkDNBghyzThKcRV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_RzY5ytRmQ5MjbxfM": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_SJgbTfKPwX8QH5S2": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_SzDN3ZPfY35Dv7hB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_T4vdv59PVgsJHb3V": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_SZBQkVrt7BQvb9P3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_TDtFn3JQt8CBvK4n": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_TR3hzWyTVW6Hw9Mn": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_65F78sZ3qhjD4Pvt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_TWTjwMWkmjvYK5BQ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Tbv8pHgwDYGQrxNB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Q4XGs5VGRsdBQBdp"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_TdKNqtz24MYzNTff": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_V8SpB89mpW3Qm3TT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_VyHBpYyPxRBZ7Xhm": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_CrH3n5K2ZjJhvpXj"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_WDbRnKwQD75Rn6QD": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_WMDZ7yHQ2F9JqFxy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_WkkGtqJNXWGxk5Qc": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_WsRKXvzCkmvQHt2V": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_XjnFHCQnzWj64Y72": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_XkVVJhFZ4jdDhn24": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Xmj6DS8K39Tb5vSM": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_XrQRd5rrknS35kcX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Y9h5n6c6w7JXJFND": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_YBSCc5gGK2FDFppp": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_65F78sZ3qhjD4Pvt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_YKV6MNVgXvjkWMPT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NNgnb9hcrPpZ4mKh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_YNZMJXfr973RrWvJ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Gj9PFbrMtW3XkT9c"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_YzBnpSk7Bhdg4hzy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Q4XGs5VGRsdBQBdp"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Z3PS3JrHrQQC77QK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_ZFB8svtBT9bf9Bx3": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_ZjbyYPvkQP8ccRcJ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_ZpHfGZbPRQXbqqsK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gqbzfdXSDHDz9XDM"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_ZynwZtHwSd2XN43z": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_Zz5NgGmkkJqP4Z97": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_S7wwBPWPPsjDkFN3"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_b5TPfpTd7v3y7t3m": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_bXjQGRVMmM3XSqDY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_bYFY2S235zYHjDws": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_FbpWFtChXwMDsnwt"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_bj5tQHkpDtFjV3GD": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_bnS5xkdxW9vHtMH2": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_wd7gdP5wVbPsjMV7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_cmc54chX9yMcyS6B": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d2YtWY3477SKN38H"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_cwtQXy9ZvmF8jQqR": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_cy8B4xtWd7dvdWnT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_d4PpGJSnpNH6KDmn": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_d66yZBHck7QBYCmy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gqbzfdXSDHDz9XDM"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_dK8k3gJ6xVryvCDB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_dS7ksYcVmHNJRBZs": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_CrH3n5K2ZjJhvpXj"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_dZ4cKwqSgXmKW4cc": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_dfmSr6NDtP2xkMsY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_dgS4n9VbfcqsnJG6": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_fX2g9C7M5xz9h7qW": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_fpPYXGQnrzrX9Q2Z": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_fvG4ZFZTyH6hX6GX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NNgnb9hcrPpZ4mKh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_fxH47FhfnSj9JjnB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_gHD8qSYx9chTc8gZ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_gHcXP9b4KnHRYg4F": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_gKfrDdKgz49xcsZS": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_gQJVFWBVYsJnZYmC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_gS2WgRSgPTtzjhzy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ngzjBvRDtKgTZ2yz"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_gYrD6WP8jGVQvW4s": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_h2crDDnBRVkQJb5D": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_hkc9wYtZSS4RVtwS": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gqbzfdXSDHDz9XDM"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_j5X6yjnPcMC6QKm4": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_j6yVsMSTGh8QPKKC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gqbzfdXSDHDz9XDM"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_jPdxQBhkG8BK7S3k": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_jfxR3xnCbKxKztyN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_jnJHRCMb4pFT9jhk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_jyFShsC24z49VYvG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_k9tSPGjRs4x9MP8d": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_kBgbrbgpDbg4FqyT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_khZdwPj4yKFZYfkg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_kqZHjHHR2yD6zGd6": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_m7ZZ3dCbYbTk5krK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_n9Ch6VjChW54nZrY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_nNMpZc9dz65gJttp": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_wd7gdP5wVbPsjMV7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_nzKvsH2ym2JdsHRz": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_pJHtSQKbbDVMK4bv": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_pWGPKCb9GyjbVzMk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_d2YtWY3477SKN38H"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_pb7wKH46rt3YHTr8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_qJ52wgbqZFZ9WrVh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_qJzKvYTPW2WZGChV": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_qcxF3XRXvk5P2Tz8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_rdwf9TM7TcW8WZz5": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_rm6vjF2HpdNysVc9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_63rV2BsPBRxDncxc"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_rqMF9Yp2wXqFXWQp": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_CrH3n5K2ZjJhvpXj"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_s64NNPstt6hYrBww": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Q4XGs5VGRsdBQBdp"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_sQ3ncqmB36DssnHN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_sZgnP2Zv5FkgWZDJ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_t6VrNRT9zDXD7qyk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_tGjWfzbgKgDbp9k2": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_thB6prb3HrbZvzvv": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_txqckffY9rRffkCh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_gqbzfdXSDHDz9XDM"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_vNkM6z523B5hhd7Z": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_9j9MxYKtHPRRxb4R"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_vSH7T9Tcy37s8KmC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_SGDR9HfT8FWZfBvY"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_vmFKqNhC4zDF2VTG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NrY7W4kCPHBpPfKy"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_wJgx68jT7YPDBmBB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_wnMf2ScHJkxyypFM": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_xBgp6Crkb5dws7bj": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_63rV2BsPBRxDncxc"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_xxCzfsbJSvwSnQQm": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_y9wDdbPBNNynt47f": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_yBsbq2H95j68QxCn": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_SGDR9HfT8FWZfBvY"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_yHKfxRscTyFXpkRG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_ybf3jY4VH96GX9tr": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_yvPnCkqvsdSnzGRX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "fl_zMHKbMw32qPTGpZT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_N9367VDF7Ns2Pr9b"
+   ],
+   "kind": "flashcard",
+   "unmapped": true
+  },
+  "qstnprt_2TsbvhVhwNCgMQW7": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_2VP9zzvmmwkcqgPY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_3zkMRzm5qwMdYhG5": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZG3352Q3BH6pjbR3"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_4JVFYXxK4zt5YJv3": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_4gZHRzZ4DxnPbxgY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_zHWWXWPvRm8qpWGw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_57F4RRx5NfX7ry2s": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_5YKkrbRGrnjbbH3D": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_5bSJdkJ55xSBgHbY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_6756MhKjRgnFcRTv": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_6VYJf5vW2ZvWrkGr": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_6z4cNkCSQy5sNzvd": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_7G94QNWwx96V7Yrc": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dGK2m6fYPm3VWYKw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_7t5Z7sbwF2ZfXFcT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_8DJXTBX5FNMjSkkX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_8YyNbtkNJsTJr8fx": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_9fHvDvZ6S7GqF7tG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_9z8K3BsFZN7KStgS": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_B2qVPRq4GtHfZCFN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_BSG6Bn2sc42QQr56": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_BTdhFqbqX4gKc92d": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_CFXgKBX3mfpTwwzd": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_D2DdnVyjShszBkYb": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_DS3K2z8dstBjHJY2": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZG3352Q3BH6pjbR3"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_F3dDC8hcfBRJhPgy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_F5Z7kMDRQYRvJjXB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_FtNC9sW5qpczRTSV": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Fx3cyH8n9qdF8Gyf": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_HgQXtQ6dYtkB49wh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Jk2sGcznp5GDbkdm": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Jw63VkDZZYdkJRxC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_MDqTx2pDxkGvM4Q4": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_MWs4kNsGbJz978kx": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_N7mjTWZMpHMg5zQ9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_NhPdC395MrQwXqqy": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Q2THhMpDc8qKVPXh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_QHM9yGR6bBdrWHCf": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_RP74wwkwsJ4k2GrB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Rs3NzCZ3htrHfqRB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_RtpFMk2YjkzcZh7B": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZG3352Q3BH6pjbR3"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_RwwRQxbM8ZkMRThC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_RxtFNF7xbcXcbXn7": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_SMvN3C9Sqpq5Ckmh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_TGfjnfHHkMC9xyjB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_TTCwfxPXt5MgKwTN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dGK2m6fYPm3VWYKw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_V4MyWptky8pvrBXB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_VTy42b5PypJT8qkJ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_VgxQcKmKwTQJsT5W": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_W5npGy2MdT2Sv6GK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_WT5bnQpKrHJK37Tj": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZG3352Q3BH6pjbR3"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Wkfbb2z2d3cVy5vk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_XXwtp8hdthKwZkRs": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Y2F9TmRT7frh3wCY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Y5cWSXbGtH3Wmqk7": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Y9db42C9dS7smpYX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_zHWWXWPvRm8qpWGw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_YBC29Yw3JqZXcyTm": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Zhg6XWYs9Qk2kpwZ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_Zy9QPKvtZqgZrwcT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_bTTHt63BsrhDxwg9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_bwnZrC6Xp8xfptvq": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_csQDngYKGzyZsbGx": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_cy5bn7gGfkjpNwgK": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_dRTQ8F6P4Zrvm6RY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_drspsCKtNhF6Mpsr": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_f3DWpXd4M3bxPSkk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_f3cJFbNvrW8tkgvQ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_f8ZhX6nGzmD27PDg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_gBsQXqcVKxY24JNV": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_gMwJyRrW2Wr7qd7q": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_gkdh7j2crNFYKGQh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_h7Qj3VrQVkKsw8BB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_hVcYW7x6d4bZvxCd": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZG3352Q3BH6pjbR3"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_hd59VTgf6Dbw66C8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_hmGzmJ542gQXmG7z": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_hwJJnVxzcjkCJpJm": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_j23HDryHs4H67Cn8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_jRnGJ8R7gN5hVqf4": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_mG2vbbfZHjMPnmZq": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_mKbsrRmhmRznQ9MG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_nCC5R9CF3xhYPydk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_nbkzTwnSwVchtkZV": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_pcVtvhRSn76dPfhT": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_qCk6M8jfB2VCctDG": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_qqVwSgJPb48d65ym": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_rBVMghhB6K7pqNpX": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_rRrP6pS6vc8jmchj": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_rS8YTbDw7Qfyx6tB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_7X98pbhvGtMzXnvQ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_sHWQJSYRJnc2kpnY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_zHWWXWPvRm8qpWGw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_t24k9qg6MjWZWQjZ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_t3jwf44h42gP3z47": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dGK2m6fYPm3VWYKw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_tQwpdnMgP9HFp6D9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_ZrC26vYpZWGyKqHV"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_tmXKQPrngDqs7QRb": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dGK2m6fYPm3VWYKw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_v5gDzZ4R7zCHd9Xj": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_wDmyJ3d9BDVv93Nk": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_wxvTNGZCjxM22x22": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_xMf6hmsgsdgc27z9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_xyKrtzsTc4NF9ZnW": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_y2hrvvG6vTJ6Pscz": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnZDzcw5Gdv48rNZ"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_yPdzTHhzFyK9nrYz": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_dGK2m6fYPm3VWYKw"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_yn3QdgRgmBFNQ4wB": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "qstnprt_zMKBbPjdVz9gs8tY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_WnXhbxZdtbQyG5Vt"
+   ],
+   "kind": "question_part",
+   "unmapped": true
+  },
+  "rn_2mGbSZRQR4xmF63Q": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_57bdtHb4d52prrbz",
+    "spcpt_9j9MxYKtHPRRxb4R",
+    "spcpt_KY4KvTfQdXvymWYs",
+    "spcpt_kS4SRchvbsnSX538",
+    "spcpt_qrmv8MQr3wKh8TRS"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_3tMnChTmv3Dx2RVw": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_NdHf8GqQ6rY5d3gR",
+    "spcpt_jDYqXVBwDVZKJKQg",
+    "spcpt_sqYRTDyT3KZpyHwB"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_6HSX2dXDbVfbMrsb": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_66WrsHFM8vGT7NF4",
+    "spcpt_VwBvcTYRz3t8zTX8",
+    "spcpt_xn5QxZ4H425TVRdy"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_6RgwmMFWC7VWj2bg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_2Xq9TB5D6fr2339T",
+    "spcpt_CkW5WJdF9Xr7zhc9",
+    "spcpt_YcBGrnQGVW2QGwRp",
+    "spcpt_cJ5xJPNZBSJr7wcm"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_7K5SPrn2F7Nqcpd7": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T07",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T07",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_QVktGCSRvrTfb5x2"
+   ],
+   "kind": "note"
+  },
+  "rn_8pKQ4GrCZZP7s2q2": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T08",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T08",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_kbKW8fFWCsnMK7p7",
+    "spcpt_tBpG4DgNWmVDHM85"
+   ],
+   "kind": "note"
+  },
+  "rn_9Tj85mMfPpQKk75m": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T02",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T02",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_DMYjDBRQYR57D2DH"
+   ],
+   "kind": "note"
+  },
+  "rn_CTmCBRBj3DdWMy9D": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_C8RTjJYR2FftmVpv",
+    "spcpt_WnZDzcw5Gdv48rNZ",
+    "spcpt_dGYngf6VTRQS4zCf"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_Cn6Q5PKBVRNw72pT": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T01",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T01",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_KjVBJYpjV2cJbp7C"
+   ],
+   "kind": "note"
+  },
+  "rn_DJPfCp7mxS34CckY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_KkKtCJXykw9vVfVj",
+    "spcpt_QNzV2z8qRdMRkRGb"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_DZBr8mv8Cxh9TBq6": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_65F78sZ3qhjD4Pvt",
+    "spcpt_6hXHZSwPZzf5dTTg",
+    "spcpt_GvFkpFXrvbrh8BjV",
+    "spcpt_NrY7W4kCPHBpPfKy",
+    "spcpt_PPXtWYSqw2txbxwq",
+    "spcpt_SZBQkVrt7BQvb9P3",
+    "spcpt_WGTFVQghZd7pH9S6",
+    "spcpt_Z6pKwhDbV6ZQTCGs"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_DmcmFmTJgGPybbs6": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_CrH3n5K2ZjJhvpXj",
+    "spcpt_gqbzfdXSDHDz9XDM"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_Dv56TDwSbX8zW8Wd": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_BMvnHZXKG6CjCW2W",
+    "spcpt_CmkryJNjN7gZKPwP",
+    "spcpt_kqXD95SGBf2Qmjyw"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_FtZJ9tGrCKrdPBgY": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_GRxJ5THPp6vBJcqv",
+    "spcpt_ZG3352Q3BH6pjbR3",
+    "spcpt_rRXmf34DffdktSMh"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_JrKBWWdkmSSfDYWz": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_5GwZ5M3JvTkX6CwD",
+    "spcpt_7X98pbhvGtMzXnvQ",
+    "spcpt_wGzDbzxKsVgqJRqb"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_KQ9bpXGqkK3Pjgh5": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Tbhf6QKFcyKMfyyD",
+    "spcpt_sKW5Q5SCRtTNZVRJ",
+    "spcpt_zHWWXWPvRm8qpWGw"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_M6V3C7Xgdj6fnF9r": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_4M2zqjdpYgwpX9k3",
+    "spcpt_Ms8B3kdQBjdCkP9D",
+    "spcpt_hJhyTjbDRGS5NNVh"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_MZyynCGVKRSMSDP4": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_c8yWYTD8zdKPbw76",
+    "spcpt_rxr5T33sDqMxPP8r",
+    "spcpt_xQRK5B2Fwwr3SbRk"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_P459XkVdFymypGdC": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_6mYH9Q6hMzVf7tbb",
+    "spcpt_TQK5MVykpTdmfjnn",
+    "spcpt_bQsTp2q65CVGWzD8"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_QNJRqNFVSsMjSrVW": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T05",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T05",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_d7PpdD8RP5KkNGrg",
+    "spcpt_jRn3gNk3Bk4kY3tC",
+    "spcpt_jmfXpvhqwysb9J68",
+    "spcpt_qYmpM8nsrmn2Y6tB"
+   ],
+   "kind": "note"
+  },
+  "rn_SCKQy3M5628CX5y8": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_76879Xk8W2PPszcW",
+    "spcpt_Fh7vhKsQfhzQ43v7",
+    "spcpt_hjPQQnm2d46gR5Yf"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_WG3XwdDvVPXCHdWg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_JTbF6fNWMTRBf4sr",
+    "spcpt_fh8KHwbwnxtj87hs",
+    "spcpt_nm3fzCxFWFW6zHgV"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_WJy6J467kytGpWqn": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_G6ycGD4mhSHc4VD7",
+    "spcpt_NNgnb9hcrPpZ4mKh",
+    "spcpt_Q4XGs5VGRsdBQBdp",
+    "spcpt_SGDR9HfT8FWZfBvY",
+    "spcpt_d2YtWY3477SKN38H"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_XCcwQMhzwCvXdcnK": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T06",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T06",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_GmtTRc6VRM9YjxYk",
+    "spcpt_WPNRBNsmgYNQ2q3p"
+   ],
+   "kind": "note"
+  },
+  "rn_YkgnYb7KR5fj8xyP": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_24f3VcFBKxBYNkcw",
+    "spcpt_7TnKtGwnqwFMTgPv",
+    "spcpt_XTdQ7VxBmkNCfVbk"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_dgfTQSgZZMPtM9NN": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T03",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T03",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_VPcrYwWVbf9kbqtY",
+    "spcpt_gvcDX9TyVrddGXyf"
+   ],
+   "kind": "note"
+  },
+  "rn_fW4CXD6WpNbdj7wt": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T09",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T09",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_8FdBVqSFX6qzv57C",
+    "spcpt_8WvdDFWHGG3wFhXp",
+    "spcpt_qN9GqsYgPzpvhdrN"
+   ],
+   "kind": "note"
+  },
+  "rn_hPnm2CpRGdp6dp79": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_HPkDNBghyzThKcRV",
+    "spcpt_cTxtf6gZcZqpff9K",
+    "spcpt_dByvxt5nYw3Wyyh7"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_hpJN44F9RnCsKcWg": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Pf4yZbnkh4fyd8Vz",
+    "spcpt_ZrC26vYpZWGyKqHV",
+    "spcpt_nd34yRg7qrSWf6cG"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_kWtksTFNR2GScp3Y": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Mpp5scGnz8DskV94",
+    "spcpt_QJVDjrH9K4mbBR2B",
+    "spcpt_YkDddYzRM79XWvny",
+    "spcpt_mpvHbsdM6RFs7StY"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_khkGsbP4v67zpQrQ": {
+   "codes": [
+    {
+     "lineage": "upstream_item_join",
+     "method": "name_to_statement_join",
+     "officialCode": null,
+     "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T10",
+     "score": null,
+     "spineCode": "IGCSE_ENGLISH_LANGUAGE_A:C1T10",
+     "tier": "S1_name_match",
+     "unit": null
+    }
+   ],
+   "declaredUnresolved": [
+    "spcpt_QSwHckcKp7jqpdhV",
+    "spcpt_S2w3fYGXSFy9sNtC"
+   ],
+   "kind": "note"
+  },
+  "rn_nCCdbWBn9Ptm6hQN": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_3XxGBpYFT59FFbHv",
+    "spcpt_NZ9gSdZMHq35mP6n",
+    "spcpt_j5rPdf8f5TMwdjWD"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_pMnbNHcymPGZPS3b": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_5jXzKrsVdwSRX8M8",
+    "spcpt_dGK2m6fYPm3VWYKw",
+    "spcpt_gzgV6qNWnrFtMbTs",
+    "spcpt_ntWRKFbCfjb6jwpM"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_pR8RvpnhW5yybmG9": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_YzszTMzSNcYn7Mnb",
+    "spcpt_nKgssTvfcCXhRKT7",
+    "spcpt_pMdcK4zt6n8RD8Zh"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_pXxNMZpjHbctZdfz": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_2BqZtjrQnfwnDkt6",
+    "spcpt_sXDr2CJQJnD89xDZ",
+    "spcpt_vVSJkrmKtbk74Yy3"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_sMC5nxZtRwmY5YjH": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_Gj9PFbrMtW3XkT9c",
+    "spcpt_N9367VDF7Ns2Pr9b",
+    "spcpt_S7wwBPWPPsjDkFN3",
+    "spcpt_ngzjBvRDtKgTZ2yz"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_vBGY5dbfZP6mmYwQ": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_86H4bwxFKXydvKsx",
+    "spcpt_WnXhbxZdtbQyG5Vt",
+    "spcpt_w8sr47sNRgSJ3Yv7"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_xRQ6TNfPvZ6rx4Py": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_63rV2BsPBRxDncxc",
+    "spcpt_BPMkYd6Xm6pZzhPj",
+    "spcpt_FbpWFtChXwMDsnwt",
+    "spcpt_kFcVB3Xw3TKFyHVw",
+    "spcpt_wd7gdP5wVbPsjMV7"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_zBMhNS54p9xxX7rh": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_H79ztJpxxh32bhdV",
+    "spcpt_Qyx3MpypBDrW56jT",
+    "spcpt_jXR4sVg8KWXZYqMN"
+   ],
+   "kind": "note",
+   "unmapped": true
+  },
+  "rn_zBqmqntXd4QSs3Mq": {
+   "codes": [],
+   "declaredUnresolved": [
+    "spcpt_D9gXMxHGgbkjP6kc",
+    "spcpt_hhVfKnV269BnZngd",
+    "spcpt_ydr43RVKGFZswKyJ"
+   ],
+   "kind": "note",
+   "unmapped": true
+  }
+ },
+ "notesInlineRefs": {
+  "total": 150,
+  "unmappedToMap": [
+   "spcpt_24f3VcFBKxBYNkcw",
+   "spcpt_2BqZtjrQnfwnDkt6",
+   "spcpt_2Xq9TB5D6fr2339T",
+   "spcpt_3XxGBpYFT59FFbHv",
+   "spcpt_4M2zqjdpYgwpX9k3",
+   "spcpt_57bdtHb4d52prrbz",
+   "spcpt_5GwZ5M3JvTkX6CwD",
+   "spcpt_5jXzKrsVdwSRX8M8",
+   "spcpt_63rV2BsPBRxDncxc",
+   "spcpt_65F78sZ3qhjD4Pvt",
+   "spcpt_66WrsHFM8vGT7NF4",
+   "spcpt_6hXHZSwPZzf5dTTg",
+   "spcpt_6mYH9Q6hMzVf7tbb",
+   "spcpt_76879Xk8W2PPszcW",
+   "spcpt_7TnKtGwnqwFMTgPv",
+   "spcpt_7X98pbhvGtMzXnvQ",
+   "spcpt_86H4bwxFKXydvKsx",
+   "spcpt_8FdBVqSFX6qzv57C",
+   "spcpt_8WvdDFWHGG3wFhXp",
+   "spcpt_9j9MxYKtHPRRxb4R",
+   "spcpt_BMvnHZXKG6CjCW2W",
+   "spcpt_BPMkYd6Xm6pZzhPj",
+   "spcpt_C8RTjJYR2FftmVpv",
+   "spcpt_CkW5WJdF9Xr7zhc9",
+   "spcpt_CmkryJNjN7gZKPwP",
+   "spcpt_CrH3n5K2ZjJhvpXj",
+   "spcpt_D9gXMxHGgbkjP6kc",
+   "spcpt_DMYjDBRQYR57D2DH",
+   "spcpt_FbpWFtChXwMDsnwt",
+   "spcpt_Fh7vhKsQfhzQ43v7",
+   "spcpt_G6ycGD4mhSHc4VD7",
+   "spcpt_GRxJ5THPp6vBJcqv",
+   "spcpt_Gj9PFbrMtW3XkT9c",
+   "spcpt_GmtTRc6VRM9YjxYk",
+   "spcpt_GvFkpFXrvbrh8BjV",
+   "spcpt_H79ztJpxxh32bhdV",
+   "spcpt_HPkDNBghyzThKcRV",
+   "spcpt_JTbF6fNWMTRBf4sr",
+   "spcpt_KY4KvTfQdXvymWYs",
+   "spcpt_KjVBJYpjV2cJbp7C",
+   "spcpt_KkKtCJXykw9vVfVj",
+   "spcpt_Mpp5scGnz8DskV94",
+   "spcpt_Ms8B3kdQBjdCkP9D",
+   "spcpt_N9367VDF7Ns2Pr9b",
+   "spcpt_NNgnb9hcrPpZ4mKh",
+   "spcpt_NZ9gSdZMHq35mP6n",
+   "spcpt_NdHf8GqQ6rY5d3gR",
+   "spcpt_NrY7W4kCPHBpPfKy",
+   "spcpt_PPXtWYSqw2txbxwq",
+   "spcpt_Pf4yZbnkh4fyd8Vz",
+   "spcpt_Q4XGs5VGRsdBQBdp",
+   "spcpt_QJVDjrH9K4mbBR2B",
+   "spcpt_QNzV2z8qRdMRkRGb",
+   "spcpt_QSwHckcKp7jqpdhV",
+   "spcpt_QVktGCSRvrTfb5x2",
+   "spcpt_Qyx3MpypBDrW56jT",
+   "spcpt_S2w3fYGXSFy9sNtC",
+   "spcpt_S7wwBPWPPsjDkFN3",
+   "spcpt_SGDR9HfT8FWZfBvY",
+   "spcpt_SZBQkVrt7BQvb9P3",
+   "spcpt_TQK5MVykpTdmfjnn",
+   "spcpt_Tbhf6QKFcyKMfyyD",
+   "spcpt_VPcrYwWVbf9kbqtY",
+   "spcpt_VwBvcTYRz3t8zTX8",
+   "spcpt_WGTFVQghZd7pH9S6",
+   "spcpt_WPNRBNsmgYNQ2q3p",
+   "spcpt_WnXhbxZdtbQyG5Vt",
+   "spcpt_WnZDzcw5Gdv48rNZ",
+   "spcpt_XTdQ7VxBmkNCfVbk",
+   "spcpt_YcBGrnQGVW2QGwRp",
+   "spcpt_YkDddYzRM79XWvny",
+   "spcpt_YzszTMzSNcYn7Mnb",
+   "spcpt_Z6pKwhDbV6ZQTCGs",
+   "spcpt_ZG3352Q3BH6pjbR3",
+   "spcpt_ZrC26vYpZWGyKqHV",
+   "spcpt_bQsTp2q65CVGWzD8",
+   "spcpt_c8yWYTD8zdKPbw76",
+   "spcpt_cJ5xJPNZBSJr7wcm",
+   "spcpt_cTxtf6gZcZqpff9K",
+   "spcpt_d2YtWY3477SKN38H",
+   "spcpt_d7PpdD8RP5KkNGrg",
+   "spcpt_dByvxt5nYw3Wyyh7",
+   "spcpt_dGK2m6fYPm3VWYKw",
+   "spcpt_dGYngf6VTRQS4zCf",
+   "spcpt_fh8KHwbwnxtj87hs",
+   "spcpt_gqbzfdXSDHDz9XDM",
+   "spcpt_gvcDX9TyVrddGXyf",
+   "spcpt_gzgV6qNWnrFtMbTs",
+   "spcpt_hJhyTjbDRGS5NNVh",
+   "spcpt_hhVfKnV269BnZngd",
+   "spcpt_hjPQQnm2d46gR5Yf",
+   "spcpt_j5rPdf8f5TMwdjWD",
+   "spcpt_jDYqXVBwDVZKJKQg",
+   "spcpt_jRn3gNk3Bk4kY3tC",
+   "spcpt_jXR4sVg8KWXZYqMN",
+   "spcpt_jmfXpvhqwysb9J68",
+   "spcpt_kFcVB3Xw3TKFyHVw",
+   "spcpt_kS4SRchvbsnSX538",
+   "spcpt_kbKW8fFWCsnMK7p7",
+   "spcpt_kqXD95SGBf2Qmjyw",
+   "spcpt_mpvHbsdM6RFs7StY",
+   "spcpt_nKgssTvfcCXhRKT7",
+   "spcpt_nd34yRg7qrSWf6cG",
+   "spcpt_ngzjBvRDtKgTZ2yz",
+   "spcpt_nm3fzCxFWFW6zHgV",
+   "spcpt_ntWRKFbCfjb6jwpM",
+   "spcpt_pMdcK4zt6n8RD8Zh",
+   "spcpt_qN9GqsYgPzpvhdrN",
+   "spcpt_qYmpM8nsrmn2Y6tB",
+   "spcpt_qrmv8MQr3wKh8TRS",
+   "spcpt_rRXmf34DffdktSMh",
+   "spcpt_rxr5T33sDqMxPP8r",
+   "spcpt_sKW5Q5SCRtTNZVRJ",
+   "spcpt_sXDr2CJQJnD89xDZ",
+   "spcpt_sqYRTDyT3KZpyHwB",
+   "spcpt_tBpG4DgNWmVDHM85",
+   "spcpt_vVSJkrmKtbk74Yy3",
+   "spcpt_w8sr47sNRgSJ3Yv7",
+   "spcpt_wGzDbzxKsVgqJRqb",
+   "spcpt_wd7gdP5wVbPsjMV7",
+   "spcpt_xQRK5B2Fwwr3SbRk",
+   "spcpt_xn5QxZ4H425TVRdy",
+   "spcpt_ydr43RVKGFZswKyJ",
+   "spcpt_zHWWXWPvRm8qpWGw"
+  ]
+ },
+ "qual": "igcse-english-language-a",
+ "reconciliation": {
+  "codesOutsideSpine": [],
+  "distinctCodesAttached": 9,
+  "itemsOutsideSpine": 0,
+  "spineHitCodes": 9,
+  "spineSpecPoints": 12,
+  "uncoveredSpineCodeList": [
+   "IGCSE_ENGLISH_LANGUAGE_A:C1AA",
+   "IGCSE_ENGLISH_LANGUAGE_A:C1AB",
+   "IGCSE_ENGLISH_LANGUAGE_A:C1T04"
+  ],
+  "uncoveredSpineCodes": 3
+ },
+ "resourcesSha": "2e17aab05c200bf48d8bb89538c7b7c316cc0651",
+ "schema": "syllabai.official-attachment/1.0",
+ "sources": {
+  "flashcardMap": {
+   "totals": {
+    "cards": 166,
+    "cards_blocked": 0,
+    "cards_unmapped": 166,
+    "cards_with_codes": 0,
+    "containment_joined": 0,
+    "content_joined": 0,
+    "spec_link_inherited": 0
+   },
+   "unresolvedSpcpt": 1
+  },
+  "resolution": {
+   "counts": {
+    "ids": 150,
+    "resolved": 26,
+    "unresolved": 124
+   },
+   "validation": "AI_VALIDATED (operator-delegated chain; T-SME-11 initial tiered auto-join from the harvested SME index against the canonical parsed registry; ambiguous and weak joins left unresolved by design)"
+  },
+  "specLinks": {
+   "by_kind": {
+    "flashcards": 166,
+    "notes": 40,
+    "question_parts": 100
+   },
+   "coded_by_kind": {
+    "flashcards": 0,
+    "notes": 9,
+    "question_parts": 0
+   },
+   "items": 306,
+   "items_with_codes": 9
+  },
+  "specPointMap": {
+   "regime": "B",
+   "smeEntries": 150,
+   "unitScope": null
+  }
+ },
+ "spcptToOfficial": {
+  "spcpt_26Xqt5mxDXr2yZdB": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T03",
+   "score": 0.7311,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_3HhsdJzQbQb6ZpHn": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T02",
+   "score": 0.6667,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_5q5kzDvz462bmvc9": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T02",
+   "score": 0.6783,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_9dVVZxm5bNh9NVGB": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T03",
+   "score": 0.7273,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_9hFnHkxJf5GGwgVX": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T07",
+   "score": 0.8265,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_HfGxQdDQvjXHc3jV": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T06",
+   "score": 0.65,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_MfhKMwf89vrNdbMP": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T10",
+   "score": 0.6588,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_PfN5fMqQFNdPrGJN": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T08",
+   "score": 0.8495,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_PvM7V9tbFBdmTVxg": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T01",
+   "score": 0.7522,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_QX9KfTKnKpttYnbd": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T06",
+   "score": 0.6657,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_S3Y9kJzCTRPckRKb": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T10",
+   "score": 0.6588,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_SFzqTg76vHCHTdVG": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T07",
+   "score": 0.8216,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_Z6pncHpsypSzPmrJ": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T01",
+   "score": 0.7604,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_gYwzbzj33Knwyv5p": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T08",
+   "score": 0.7275,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_jd83gMDtCP92h8Hf": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T08",
+   "score": 0.7218,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_kpTKp9pwmMnYM8wF": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T03",
+   "score": 0.738,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_m7fz9hpbb9PJrH7Y": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T01",
+   "score": 0.7383,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_p5NphhwRxhDvGVTH": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T02",
+   "score": 0.6471,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_pK7gWF4hngjSBSxN": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T05",
+   "score": 0.8637,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_pqC6XWkgFnPbFnw7": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T09",
+   "score": 0.6246,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_qwNjRfDKHvjSbXDz": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T07",
+   "score": 0.8102,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_rMxsqgQNstSkTPbW": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T02",
+   "score": 0.6667,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_vKTxJTzXY4TD765x": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T06",
+   "score": 0.8357,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_x8q2nyRDJGPDrZ9W": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T09",
+   "score": 0.6483,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_xYcHhrffkTykqTpq": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T01",
+   "score": 0.7439,
+   "tier": "S1_name_match",
+   "unit": null
+  },
+  "spcpt_ySrTq5JzgbK4NzGQ": {
+   "method": "name_to_statement_join",
+   "officialCode": null,
+   "officialId": "IGCSE_ENGLISH_LANGUAGE_A:C1T10",
+   "score": 0.6507,
+   "tier": "S1_name_match",
+   "unit": null
+  }
+ },
+ "spcptUnmapped": [
+  "{\"name\": \"127 Hours overview\", \"reason\": \"weak name similarity (0.53)\", \"spcpt_id\": \"spcpt_jmfXpvhqwysb9J68\"}",
+  "{\"name\": \"127 Hours summary\", \"reason\": \"weak name similarity (0.52)\", \"spcpt_id\": \"spcpt_qYmpM8nsrmn2Y6tB\"}",
+  "{\"name\": \"Accurate spelling and ambitious vocabulary\", \"reason\": \"weak name similarity (0.25)\", \"spcpt_id\": \"spcpt_G6ycGD4mhSHc4VD7\"}",
+  "{\"name\": \"Analysing explicit and implicit meanings\", \"reason\": \"weak name similarity (0.29)\", \"spcpt_id\": \"spcpt_gqbzfdXSDHDz9XDM\"}",
+  "{\"name\": \"Article model answer with annotations\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_c8yWYTD8zdKPbw76\"}",
+  "{\"name\": \"Article structure\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_VwBvcTYRz3t8zTX8\"}",
+  "{\"name\": \"Audience\", \"reason\": \"weak name similarity (0.12)\", \"spcpt_id\": \"spcpt_63rV2BsPBRxDncxc\"}",
+  "{\"name\": \"Breaking down the question\", \"reason\": \"weak name similarity (0.28)\", \"spcpt_id\": \"spcpt_YkDddYzRM79XWvny\"}",
+  "{\"name\": \"Comparing Texts\", \"reason\": \"weak name similarity (0.38)\", \"spcpt_id\": \"spcpt_Gj9PFbrMtW3XkT9c\"}",
+  "{\"name\": \"Comparison of ideas, perspectives and methods\", \"reason\": \"weak name similarity (0.24)\", \"spcpt_id\": \"spcpt_S7wwBPWPPsjDkFN3\"}",
+  "{\"name\": \"Embedding quotations\", \"reason\": \"weak name similarity (0.11)\", \"spcpt_id\": \"spcpt_CkW5WJdF9Xr7zhc9\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_5GwZ5M3JvTkX6CwD\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_86H4bwxFKXydvKsx\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_C8RTjJYR2FftmVpv\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_TQK5MVykpTdmfjnn\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_hhVfKnV269BnZngd\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_kFcVB3Xw3TKFyHVw\"}",
+  "{\"name\": \"Exam tips\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_mpvHbsdM6RFs7StY\"}",
+  "{\"name\": \"Example question and text\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_3XxGBpYFT59FFbHv\"}",
+  "{\"name\": \"Example question and text\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_BMvnHZXKG6CjCW2W\"}",
+  "{\"name\": \"Example question and text\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_YcBGrnQGVW2QGwRp\"}",
+  "{\"name\": \"Example question and text\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_sqYRTDyT3KZpyHwB\"}",
+  "{\"name\": \"Explicit and implicit meanings\", \"reason\": \"weak name similarity (0.29)\", \"spcpt_id\": \"spcpt_CrH3n5K2ZjJhvpXj\"}",
+  "{\"name\": \"Explorers or boys messing about overview\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_kS4SRchvbsnSX538\"}",
+  "{\"name\": \"Explorers or boys messing about summary\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_KY4KvTfQdXvymWYs\"}",
+  "{\"name\": \"Explorers or boys messing about? Either way, taxpayer gets rescue bill Analysis\", \"reason\": \"weak name similarity (0.31)\", \"spcpt_id\": \"spcpt_57bdtHb4d52prrbz\"}",
+  "{\"name\": \"Exploring words and phrases\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_65F78sZ3qhjD4Pvt\"}",
+  "{\"name\": \"Form\", \"reason\": \"weak name similarity (0.08)\", \"spcpt_id\": \"spcpt_wd7gdP5wVbPsjMV7\"}",
+  "{\"name\": \"Formal letter\", \"reason\": \"weak name similarity (0.10)\", \"spcpt_id\": \"spcpt_ntWRKFbCfjb6jwpM\"}",
+  "{\"name\": \"Guide model answer with annotations\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_vVSJkrmKtbk74Yy3\"}",
+  "{\"name\": \"Guide structure\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_sKW5Q5SCRtTNZVRJ\"}",
+  "{\"name\": \"H is for Hawk overview\", \"reason\": \"weak name similarity (0.61)\", \"spcpt_id\": \"spcpt_8FdBVqSFX6qzv57C\"}",
+  "{\"name\": \"How does Herbert present her ideas and perspectives?\", \"reason\": \"weak name similarity (0.23)\", \"spcpt_id\": \"spcpt_VPcrYwWVbf9kbqtY\"}",
+  "{\"name\": \"How does Macdonald present her ideas and perspectives?\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_8WvdDFWHGG3wFhXp\"}",
+  "{\"name\": \"How does Morris present his ideas and perspectives?\", \"reason\": \"weak name similarity (0.21)\", \"spcpt_id\": \"spcpt_qrmv8MQr3wKh8TRS\"}",
+  "{\"name\": \"How does Ralston present his ideas and perspectives?\", \"reason\": \"weak name similarity (0.20)\", \"spcpt_id\": \"spcpt_jRn3gNk3Bk4kY3tC\"}",
+  "{\"name\": \"How does Yen Mah present her ideas and opinions?\", \"reason\": \"weak name similarity (0.21)\", \"spcpt_id\": \"spcpt_S2w3fYGXSFy9sNtC\"}",
+  "{\"name\": \"How does Zephaniah present his ideas and perspectives?\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_WPNRBNsmgYNQ2q3p\"}",
+  "{\"name\": \"How does Zeppa present her ideas and perspectives?\", \"reason\": \"weak name similarity (0.21)\", \"spcpt_id\": \"spcpt_tBpG4DgNWmVDHM85\"}",
+  "{\"name\": \"How to Answer Question 1: Breaking down the question\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_D9gXMxHGgbkjP6kc\"}",
+  "{\"name\": \"How to Answer Question 2: Breaking down the question\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_WnZDzcw5Gdv48rNZ\"}",
+  "{\"name\": \"How to Answer Question 3: Breaking down the question\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_bQsTp2q65CVGWzD8\"}",
+  "{\"name\": \"How to Answer Question 4: Breaking down the question\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_WnXhbxZdtbQyG5Vt\"}",
+  "{\"name\": \"How to Answer Question 5: Breaking down the question\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_7X98pbhvGtMzXnvQ\"}",
+  "{\"name\": \"How to answer Section B (writing)\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_Mpp5scGnz8DskV94\"}",
+  "{\"name\": \"How to compare in the exam\", \"reason\": \"weak name similarity (0.28)\", \"spcpt_id\": \"spcpt_ngzjBvRDtKgTZ2yz\"}",
+  "{\"name\": \"How to summarise in the exam\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_HPkDNBghyzThKcRV\"}",
+  "{\"name\": \"How to write a guide\", \"reason\": \"weak name similarity (0.17)\", \"spcpt_id\": \"spcpt_zHWWXWPvRm8qpWGw\"}",
+  "{\"name\": \"How to write a leaflet\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_ZG3352Q3BH6pjbR3\"}",
+  "{\"name\": \"How to write a letter\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_dGK2m6fYPm3VWYKw\"}",
+  "{\"name\": \"How to write a review\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_Fh7vhKsQfhzQ43v7\"}",
+  "{\"name\": \"How to write a speech\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_ZrC26vYpZWGyKqHV\"}",
+  "{\"name\": \"How to write an article\", \"reason\": \"weak name similarity (0.17)\", \"spcpt_id\": \"spcpt_66WrsHFM8vGT7NF4\"}",
+  "{\"name\": \"Incorporating language analysis into your answer\", \"reason\": \"weak name similarity (0.23)\", \"spcpt_id\": \"spcpt_GvFkpFXrvbrh8BjV\"}",
+  "{\"name\": \"Informal letter\", \"reason\": \"weak name similarity (0.12)\", \"spcpt_id\": \"spcpt_gzgV6qNWnrFtMbTs\"}",
+  "{\"name\": \"Key features of a guide\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_Tbhf6QKFcyKMfyyD\"}",
+  "{\"name\": \"Key features of a leaflet\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_GRxJ5THPp6vBJcqv\"}",
+  "{\"name\": \"Key features of a review\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_hjPQQnm2d46gR5Yf\"}",
+  "{\"name\": \"Key features of a speech\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_nd34yRg7qrSWf6cG\"}",
+  "{\"name\": \"Key features of an article\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_xn5QxZ4H425TVRdy\"}",
+  "{\"name\": \"Key questions for analysing structure\", \"reason\": \"weak name similarity (0.25)\", \"spcpt_id\": \"spcpt_Z6pKwhDbV6ZQTCGs\"}",
+  "{\"name\": \"Language features and techniques\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_6hXHZSwPZzf5dTTg\"}",
+  "{\"name\": \"Leaflet model answer with annotations\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_nKgssTvfcCXhRKT7\"}",
+  "{\"name\": \"Leaflet structure\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_rRXmf34DffdktSMh\"}",
+  "{\"name\": \"Letter model answer with annotations\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_7TnKtGwnqwFMTgPv\"}",
+  "{\"name\": \"Overview of comparing texts\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_N9367VDF7Ns2Pr9b\"}",
+  "{\"name\": \"Overview of language analysis\", \"reason\": \"weak name similarity (0.17)\", \"spcpt_id\": \"spcpt_SZBQkVrt7BQvb9P3\"}",
+  "{\"name\": \"Overview of structure analysis\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_NrY7W4kCPHBpPfKy\"}",
+  "{\"name\": \"Paper 1 breakdown\", \"reason\": \"weak name similarity (0.18)\", \"spcpt_id\": \"spcpt_hJhyTjbDRGS5NNVh\"}",
+  "{\"name\": \"Paper 1 in a nutshell\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_Ms8B3kdQBjdCkP9D\"}",
+  "{\"name\": \"Persuasive language techniques\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_FbpWFtChXwMDsnwt\"}",
+  "{\"name\": \"Persuasive writing\", \"reason\": \"weak name similarity (0.41)\", \"spcpt_id\": \"spcpt_Pf4yZbnkh4fyd8Vz\"}",
+  "{\"name\": \"Planning  your response\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_fh8KHwbwnxtj87hs\"}",
+  "{\"name\": \"Planning your response\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_24f3VcFBKxBYNkcw\"}",
+  "{\"name\": \"Planning your response\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_YzszTMzSNcYn7Mnb\"}",
+  "{\"name\": \"Planning your response\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_jXR4sVg8KWXZYqMN\"}",
+  "{\"name\": \"Planning your response\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_sXDr2CJQJnD89xDZ\"}",
+  "{\"name\": \"Planning your response\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_xQRK5B2Fwwr3SbRk\"}",
+  "{\"name\": \"Purpose\", \"reason\": \"weak name similarity (0.11)\", \"spcpt_id\": \"spcpt_BPMkYd6Xm6pZzhPj\"}",
+  "{\"name\": \"Question 1 example\", \"reason\": \"weak name similarity (0.14)\", \"spcpt_id\": \"spcpt_KkKtCJXykw9vVfVj\"}",
+  "{\"name\": \"Question 1 suggested answers\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_QNzV2z8qRdMRkRGb\"}",
+  "{\"name\": \"Question 2 model answer with annotations\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_CmkryJNjN7gZKPwP\"}",
+  "{\"name\": \"Question 3 model answer with annotations\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_cJ5xJPNZBSJr7wcm\"}",
+  "{\"name\": \"Question 4 model answer with annotations\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_j5rPdf8f5TMwdjWD\"}",
+  "{\"name\": \"Question 5 model answer with annotations\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_NdHf8GqQ6rY5d3gR\"}",
+  "{\"name\": \"Question breakdown\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_2BqZtjrQnfwnDkt6\"}",
+  "{\"name\": \"Question breakdown\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_JTbF6fNWMTRBf4sr\"}",
+  "{\"name\": \"Question breakdown\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_Qyx3MpypBDrW56jT\"}",
+  "{\"name\": \"Question breakdown\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_XTdQ7VxBmkNCfVbk\"}",
+  "{\"name\": \"Question breakdown\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_pMdcK4zt6n8RD8Zh\"}",
+  "{\"name\": \"Question breakdown\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_rxr5T33sDqMxPP8r\"}",
+  "{\"name\": \"Range of punctuation\", \"reason\": \"weak name similarity (0.41)\", \"spcpt_id\": \"spcpt_NNgnb9hcrPpZ4mKh\"}",
+  "{\"name\": \"Range of sentence forms\", \"reason\": \"weak name similarity (0.29)\", \"spcpt_id\": \"spcpt_SGDR9HfT8FWZfBvY\"}",
+  "{\"name\": \"Review model answer with annotations\", \"reason\": \"weak name similarity (0.27)\", \"spcpt_id\": \"spcpt_nm3fzCxFWFW6zHgV\"}",
+  "{\"name\": \"Review structure\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_76879Xk8W2PPszcW\"}",
+  "{\"name\": \"Sentence demarcation\", \"reason\": \"weak name similarity (0.18)\", \"spcpt_id\": \"spcpt_Q4XGs5VGRsdBQBdp\"}",
+  "{\"name\": \"Sentence forms\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_WGTFVQghZd7pH9S6\"}",
+  "{\"name\": \"Speech model answer with annotations\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_H79ztJpxxh32bhdV\"}",
+  "{\"name\": \"Standard English and secure grammar\", \"reason\": \"weak name similarity (0.26)\", \"spcpt_id\": \"spcpt_d2YtWY3477SKN38H\"}",
+  "{\"name\": \"Steps to success\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_6mYH9Q6hMzVf7tbb\"}",
+  "{\"name\": \"Steps to success\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_QJVDjrH9K4mbBR2B\"}",
+  "{\"name\": \"Steps to success\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_dGYngf6VTRQS4zCf\"}",
+  "{\"name\": \"Steps to success\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_w8sr47sNRgSJ3Yv7\"}",
+  "{\"name\": \"Steps to success\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_wGzDbzxKsVgqJRqb\"}",
+  "{\"name\": \"Steps to success\", \"reason\": \"weak name similarity (0.13)\", \"spcpt_id\": \"spcpt_ydr43RVKGFZswKyJ\"}",
+  "{\"name\": \"Structural techniques\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_PPXtWYSqw2txbxwq\"}",
+  "{\"name\": \"Structuring your letter\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_5jXzKrsVdwSRX8M8\"}",
+  "{\"name\": \"Summarising in continuous form\", \"reason\": \"weak name similarity (0.12)\", \"spcpt_id\": \"spcpt_cTxtf6gZcZqpff9K\"}",
+  "{\"name\": \"Summary\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_2Xq9TB5D6fr2339T\"}",
+  "{\"name\": \"Summary\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_NZ9gSdZMHq35mP6n\"}",
+  "{\"name\": \"Summary\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_jDYqXVBwDVZKJKQg\"}",
+  "{\"name\": \"Summary\", \"reason\": \"weak name similarity (0.09)\", \"spcpt_id\": \"spcpt_kqXD95SGBf2Qmjyw\"}",
+  "{\"name\": \"Themes, ideas and perspectives in 127 Hours\", \"reason\": \"weak name similarity (0.39)\", \"spcpt_id\": \"spcpt_d7PpdD8RP5KkNGrg\"}",
+  "{\"name\": \"Themes, ideas and perspectives in A Game of Polo with a Headless Goat\", \"reason\": \"weak name similarity (0.58)\", \"spcpt_id\": \"spcpt_QVktGCSRvrTfb5x2\"}",
+  "{\"name\": \"Themes, ideas and perspectives in A Passage to Africa\", \"reason\": \"weak name similarity (0.38)\", \"spcpt_id\": \"spcpt_DMYjDBRQYR57D2DH\"}",
+  "{\"name\": \"Themes, ideas and perspectives in Beyond the Sky and the Earth\", \"reason\": \"weak name similarity (0.54)\", \"spcpt_id\": \"spcpt_kbKW8fFWCsnMK7p7\"}",
+  "{\"name\": \"Themes, ideas and perspectives in Chinese Cinderella\", \"reason\": \"weak name similarity (0.37)\", \"spcpt_id\": \"spcpt_QSwHckcKp7jqpdhV\"}",
+  "{\"name\": \"Themes, ideas and perspectives in Explorers or boys messing about\", \"reason\": \"weak name similarity (0.22)\", \"spcpt_id\": \"spcpt_9j9MxYKtHPRRxb4R\"}",
+  "{\"name\": \"Themes, ideas and perspectives in H is for Hawk\", \"reason\": \"weak name similarity (0.35)\", \"spcpt_id\": \"spcpt_qN9GqsYgPzpvhdrN\"}",
+  "{\"name\": \"Themes, ideas and perspectives in The Danger of a Single Story\", \"reason\": \"weak name similarity (0.50)\", \"spcpt_id\": \"spcpt_KjVBJYpjV2cJbp7C\"}",
+  "{\"name\": \"Themes, ideas and perspectives in The Explorer\\u2019s Daughter\", \"reason\": \"weak name similarity (0.46)\", \"spcpt_id\": \"spcpt_gvcDX9TyVrddGXyf\"}",
+  "{\"name\": \"Themes, ideas and perspectives in Young and dyslexic\", \"reason\": \"weak name similarity (0.43)\", \"spcpt_id\": \"spcpt_GmtTRc6VRM9YjxYk\"}",
+  "{\"name\": \"What is summarising?\", \"reason\": \"weak name similarity (0.16)\", \"spcpt_id\": \"spcpt_dByvxt5nYw3Wyyh7\"}",
+  "{\"name\": \"What skills are being assessed?\", \"reason\": \"weak name similarity (0.15)\", \"spcpt_id\": \"spcpt_4M2zqjdpYgwpX9k3\"}"
+ ]
+}
