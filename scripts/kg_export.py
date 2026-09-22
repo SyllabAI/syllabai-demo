@@ -170,14 +170,36 @@ def export_course(slug: str, registry: dict[str, dict]) -> dict:
         point_subs[sub_id_of[sub_codes[0]]].append(pid)
 
     # numeric ids must order strictly within a section (port of pointOrd gate)
+    # ord key = tuple of numeric components + trailing letter, so multi-level
+    # codes (economics '1.1.1a') and letter suffixes ('1.5C', '1.3A' vs '1.3B')
+    # order naturally; plain '1.5' sorts before '1.5C'
+    def _ord_key(pid: str):
+        head = pid.split(".", 1)[0] if "." in pid else pid
+        parts = pid.split(".")
+        nums = []
+        letter = ""
+        for i, comp in enumerate(parts):
+            if i == 0 and comp == head and len(parts) > 1:
+                nums.append(float(comp))
+                continue
+            m = re.match(r"^(\d+)([A-Za-z]*)$", comp)
+            if m:
+                nums.append(float(m.group(1)))
+                letter = m.group(2) or letter
+            else:
+                try:
+                    nums.append(float(comp.rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")))
+                except ValueError:
+                    nums.append(0.0)
+        return tuple(nums) + (letter,)
+
     for key, defs in subtopics_tbl.items():
         secs = {sid[0] for sid, _ in defs}
         if len(secs) != 1:
             raise ExportError(f"{slug}: section {key} subtopic ids span {secs}")
         numeric = [pt["id"] for pt in points_list
                    if "." in pt["id"] and pt["id"].split(".")[0] == key]
-        ords = [float(numeric_id.split(".")[1].rstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ"))
-                for numeric_id in numeric]
+        ords = [_ord_key(numeric_id) for numeric_id in numeric]
         if ords != sorted(ords) or len(set(ords)) != len(ords):
             raise ExportError(f"{slug}: point ordering invalid in section {key}")
 

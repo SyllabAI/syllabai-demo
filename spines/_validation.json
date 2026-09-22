@@ -1,0 +1,50 @@
+{
+ "fails": [],
+ "chemistryGolden": {
+  "code_set_equal": true,
+  "codes_only_in_live": [],
+  "codes_only_in_spine": [],
+  "sections_live": [
+   "Principles of chemistry",
+   "Inorganic chemistry",
+   "Physical chemistry",
+   "Organic chemistry"
+  ],
+  "sections_spine": [
+   "Principles of chemistry",
+   "Inorganic chemistry",
+   "Physical chemistry",
+   "Organic chemistry"
+  ],
+  "statement_diff_count": 71,
+  "statement_diffs_sample": [
+   {
+    "code": "1.10",
+    "live": "describe these experimental techniques for the separation of mixtures:",
+    "spine": "describe these experimental techniques for the separation of mixtures:"
+   },
+   {
+    "code": "1.12",
+    "live": "understand how to use the calculation of $ R_{f} $ values to identify ",
+    "spine": "understand how to use the calculation of R f values to identify the co"
+   },
+   {
+    "code": "1.16",
+    "live": "know what is meant by the terms atomic number, mass number, isotopes a",
+    "spine": " know what is meant by the terms atomic number, mass number, isotopes "
+   },
+   {
+    "code": "1.17",
+    "live": "be able to calculate the relative atomic mass of an element $ A_{r} $ ",
+    "spine": " be able to calculate the relative atomic mass of an element (Ar) from"
+   },
+   {
+    "code": "1.18",
+    "live": "understand how elements are arranged in the Periodic Table： •in order ",
+    "spine": "understand how elements are arranged in the Periodic Table:"
+   }
+  ]
+ },
+ "totalSpecPoints": 4378,
+ "nSpines": 49
+}

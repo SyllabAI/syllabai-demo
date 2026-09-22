@@ -1,0 +1,952 @@
+{
+ "resourcesSha": "ae6a5e40c63013bed69d7af1583fbb4a4d19b205",
+ "generatedUtc": "2026-09-22T07:11:49Z",
+ "courses": {
+  "ial-biology-18": {
+   "qual": "ial-biology",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 8,
+    "subtopics": 10,
+    "specPoints": 170,
+    "parsePool": 170,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-chemistry-17": {
+   "qual": "ial-chemistry",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 20,
+    "subtopics": 20,
+    "specPoints": 319,
+    "parsePool": 319,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-further-maths-18-further-pure-1": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "FP1"
+   },
+   "counts": {
+    "topics": 8,
+    "subtopics": 8,
+    "specPoints": 25,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-decision-1": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "D1"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 5,
+    "specPoints": 15,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-mechanics-1": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "M1"
+   },
+   "counts": {
+    "topics": 6,
+    "subtopics": 6,
+    "specPoints": 12,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-mechanics-2": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "M2"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 5,
+    "specPoints": 13,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-pure-1": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "P1"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 5,
+    "specPoints": 22,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-pure-2": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "P2"
+   },
+   "counts": {
+    "topics": 8,
+    "subtopics": 8,
+    "specPoints": 19,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-pure-3": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "P3"
+   },
+   "counts": {
+    "topics": 6,
+    "subtopics": 6,
+    "specPoints": 18,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-pure-4": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "P4"
+   },
+   "counts": {
+    "topics": 7,
+    "subtopics": 7,
+    "specPoints": 18,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-maths-20-statistics-1": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "S1"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 5,
+    "specPoints": 16,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": [
+    "1 row(s) re-parented by official code prefix: 5.1 6->5"
+   ]
+  },
+  "ial-maths-20-statistics-2": {
+   "qual": "ial-maths",
+   "rule": {
+    "kind": "unit",
+    "field": "scope",
+    "value": "S2"
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 4,
+    "specPoints": 16,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "ial-physics-19": {
+   "qual": "ial-physics",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 11,
+    "subtopics": 11,
+    "specPoints": 171,
+    "parsePool": 171,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-accounting-17-financial-statements": {
+   "qual": "igcse-accounting",
+   "rule": {
+    "kind": "topic_numbers",
+    "values": [
+     "4",
+     "5"
+    ]
+   },
+   "counts": {
+    "topics": 2,
+    "subtopics": 11,
+    "specPoints": 86,
+    "parsePool": 185,
+    "orphans": 17
+   },
+   "warnings": [
+    "duplicate subtopic title 'Financial' in section 'The preparation of financial statements' (official key 2) — suffixed with key",
+    "duplicate subtopic title 'Financial' in section 'The preparation of financial statements' (official key 5) — suffixed with key"
+   ]
+  },
+  "igcse-accounting-17-introduction-to-bookkeeping-and-accounting": {
+   "qual": "igcse-accounting",
+   "rule": {
+    "kind": "topic_numbers",
+    "values": [
+     "1",
+     "2",
+     "3"
+    ]
+   },
+   "counts": {
+    "topics": 3,
+    "subtopics": 18,
+    "specPoints": 82,
+    "parsePool": 185,
+    "orphans": 17
+   },
+   "warnings": []
+  },
+  "igcse-biology-19": {
+   "qual": "igcse-biology",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 22,
+    "specPoints": 176,
+    "parsePool": 176,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-biology-modular-24-unit-1": {
+   "qual": "igcse-biology-modular",
+   "rule": {
+    "kind": "unit_range",
+    "unit_range": [
+     1,
+     2
+    ],
+    "unit": 1
+   },
+   "counts": {
+    "topics": 2,
+    "subtopics": 9,
+    "specPoints": 54,
+    "parsePool": 176,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-biology-modular-24-unit-2": {
+   "qual": "igcse-biology-modular",
+   "rule": {
+    "kind": "unit_range",
+    "unit_range": [
+     3,
+     99
+    ],
+    "unit": 2
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 13,
+    "specPoints": 122,
+    "parsePool": 176,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-business-19": {
+   "qual": "igcse-business",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 25,
+    "subtopics": 25,
+    "specPoints": 59,
+    "parsePool": 59,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-chemistry-19": {
+   "qual": "igcse-chemistry",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 28,
+    "specPoints": 182,
+    "parsePool": 182,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-chemistry-modular-24-unit-1": {
+   "qual": "igcse-chemistry-modular",
+   "rule": {
+    "kind": "unit_range",
+    "unit_range": [
+     1,
+     4
+    ],
+    "unit": 1
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 14,
+    "specPoints": 100,
+    "parsePool": 181,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-chemistry-modular-24-unit-2": {
+   "qual": "igcse-chemistry-modular",
+   "rule": {
+    "kind": "unit_range",
+    "unit_range": [
+     5,
+     99
+    ],
+    "unit": 2
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 14,
+    "specPoints": 81,
+    "parsePool": 181,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-economics-17": {
+   "qual": "igcse-economics",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 18,
+    "specPoints": 108,
+    "parsePool": 108,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing": {
+   "qual": "igcse-english-language-a",
+   "rule": {
+    "kind": "topic_numbers",
+    "values": [
+     "1"
+    ]
+   },
+   "counts": {
+    "topics": 1,
+    "subtopics": 2,
+    "specPoints": 12,
+    "parsePool": 26,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-english-language-a-16-paper-2-poetry-and-prose-texts-and-imaginative-writing": {
+   "qual": "igcse-english-language-a",
+   "rule": {
+    "kind": "topic_numbers",
+    "values": [
+     "2"
+    ]
+   },
+   "counts": {
+    "topics": 1,
+    "subtopics": 2,
+    "specPoints": 12,
+    "parsePool": 26,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-english-language-a-16-paper-3-coursework": {
+   "qual": "igcse-english-language-a",
+   "rule": {
+    "kind": "topic_numbers",
+    "values": [
+     "3"
+    ]
+   },
+   "counts": {
+    "topics": 1,
+    "subtopics": 1,
+    "specPoints": 2,
+    "parsePool": 26,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-english-literature-16": {
+   "qual": "igcse-english-literature",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 3,
+    "subtopics": 12,
+    "specPoints": 65,
+    "parsePool": 65,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-further-maths-19": {
+   "qual": "igcse-further-maths",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 10,
+    "subtopics": 10,
+    "specPoints": 43,
+    "parsePool": 43,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-geography-19": {
+   "qual": "igcse-geography",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 9,
+    "subtopics": 31,
+    "specPoints": 204,
+    "parsePool": 242,
+    "orphans": 38
+   },
+   "warnings": [
+    "duplicate subtopic title 'Rural environments' in section 'Rural environments' (official key 5.2) — suffixed with key",
+    "duplicate subtopic title 'Rural environments' in section 'Rural environments' (official key 5.3) — suffixed with key"
+   ]
+  },
+  "igcse-ict-17": {
+   "qual": "igcse-ict",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 36,
+    "subtopics": 36,
+    "specPoints": 138,
+    "parsePool": 138,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-maths-a-18-foundation": {
+   "qual": "igcse-maths-a",
+   "rule": {
+    "kind": "scope_not",
+    "value": "H"
+   },
+   "counts": {
+    "topics": 6,
+    "subtopics": 35,
+    "specPoints": 162,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": [
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.2) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.3) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.4) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.5) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.6) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.7) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.8) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.9) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.10) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.11) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.2) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.3) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.4) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.6) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.7) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.8) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.3) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.2) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.3) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.5) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.6) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.7) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.8) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.9) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.10) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.11) — suffixed with key",
+    "duplicate subtopic title 'Statistics and probability' in section 'Statistics and probability' (official key 6.2) — suffixed with key",
+    "duplicate subtopic title 'Statistics and probability' in section 'Statistics and probability' (official key 6.3) — suffixed with key"
+   ]
+  },
+  "igcse-maths-a-18-higher": {
+   "qual": "igcse-maths-a",
+   "rule": {
+    "kind": "higher_merge"
+   },
+   "counts": {
+    "topics": 6,
+    "subtopics": 39,
+    "specPoints": 188,
+    "parsePool": 242,
+    "orphans": 0
+   },
+   "warnings": [
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.2) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.3) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.4) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.5) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.6) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.7) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.8) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.9) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.10) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.11) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.2) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.3) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.4) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.5) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.6) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.7) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.8) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.2) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.3) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.2) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.3) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.5) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.6) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.7) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.8) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.9) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.10) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.11) — suffixed with key",
+    "duplicate subtopic title 'Vectors and transformation geometry' in section 'Vectors and transformation geometry' (official key 5.2) — suffixed with key",
+    "duplicate subtopic title 'Statistics and probability' in section 'Statistics and probability' (official key 6.2) — suffixed with key",
+    "duplicate subtopic title 'Statistics and probability' in section 'Statistics and probability' (official key 6.3) — suffixed with key"
+   ]
+  },
+  "igcse-maths-a-modular-24-foundation-unit-1": {
+   "qual": "igcse-maths-a-modular",
+   "rule": {
+    "kind": "applicability_unit",
+    "value": "U1F"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 22,
+    "specPoints": 93,
+    "parsePool": 241,
+    "orphans": 0
+   },
+   "warnings": [
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.2) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.3) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.4) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.5) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.6) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.8) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.10) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.11) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.2) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.4) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.7) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.2) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.7) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.8) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.9) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.10) — suffixed with key"
+   ]
+  },
+  "igcse-maths-a-modular-24-foundation-unit-2": {
+   "qual": "igcse-maths-a-modular",
+   "rule": {
+    "kind": "applicability_unit",
+    "value": "U2F"
+   },
+   "counts": {
+    "topics": 6,
+    "subtopics": 18,
+    "specPoints": 68,
+    "parsePool": 241,
+    "orphans": 0
+   },
+   "warnings": [
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.6) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.7) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.9) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.6) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.8) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.3) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.5) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.6) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.10) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.11) — suffixed with key"
+   ]
+  },
+  "igcse-maths-a-modular-24-higher-unit-1": {
+   "qual": "igcse-maths-a-modular",
+   "rule": {
+    "kind": "applicability_unit_in",
+    "values": [
+     "U1F",
+     "U1H"
+    ]
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 23,
+    "specPoints": 99,
+    "parsePool": 241,
+    "orphans": 0
+   },
+   "warnings": [
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.2) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.3) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.4) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.5) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.6) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.8) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.10) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.11) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.2) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.4) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.7) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.2) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.7) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.8) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.9) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.10) — suffixed with key",
+    "duplicate subtopic title 'Statistics and probability' in section 'Statistics and probability' (official key 6.3) — suffixed with key"
+   ]
+  },
+  "igcse-maths-a-modular-24-higher-unit-2": {
+   "qual": "igcse-maths-a-modular",
+   "rule": {
+    "kind": "applicability_unit_in",
+    "values": [
+     "U2F",
+     "U2H"
+    ]
+   },
+   "counts": {
+    "topics": 6,
+    "subtopics": 25,
+    "specPoints": 97,
+    "parsePool": 241,
+    "orphans": 0
+   },
+   "warnings": [
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.6) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.7) — suffixed with key",
+    "duplicate subtopic title 'Numbers and the number system' in section 'Numbers and the number system' (official key 1.9) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.3) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.5) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.6) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.7) — suffixed with key",
+    "duplicate subtopic title 'Equations, formulae and identities' in section 'Equations, formulae and identities' (official key 2.8) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.2) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.3) — suffixed with key",
+    "duplicate subtopic title 'Sequences, functions and graphs' in section 'Sequences, functions and graphs' (official key 3.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.3) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.4) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.5) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.6) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.10) — suffixed with key",
+    "duplicate subtopic title 'Geometry' in section 'Geometry' (official key 4.11) — suffixed with key",
+    "duplicate subtopic title 'Vectors and transformation geometry' in section 'Vectors and transformation geometry' (official key 5.2) — suffixed with key",
+    "duplicate subtopic title 'Statistics and probability' in section 'Statistics and probability' (official key 6.2) — suffixed with key"
+   ]
+  },
+  "igcse-maths-b-16": {
+   "qual": "igcse-maths-b",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 10,
+    "subtopics": 10,
+    "specPoints": 98,
+    "parsePool": 98,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-physics-19": {
+   "qual": "igcse-physics",
+   "rule": {
+    "kind": "all"
+   },
+   "counts": {
+    "topics": 8,
+    "subtopics": 30,
+    "specPoints": 195,
+    "parsePool": 195,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-physics-modular-24-unit-1": {
+   "qual": "igcse-physics-modular",
+   "rule": {
+    "kind": "unit_range",
+    "unit_range": [
+     1,
+     5
+    ],
+    "unit": 1
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 14,
+    "specPoints": 94,
+    "parsePool": 195,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-physics-modular-24-unit-2": {
+   "qual": "igcse-physics-modular",
+   "rule": {
+    "kind": "unit_range",
+    "unit_range": [
+     6,
+     99
+    ],
+    "unit": 2
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 16,
+    "specPoints": 101,
+    "parsePool": 195,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-17-biology": {
+   "qual": "igcse-science-double-award",
+   "rule": {
+    "kind": "scope_eq",
+    "value": "Biology"
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 21,
+    "specPoints": 134,
+    "parsePool": 412,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-17-chemistry": {
+   "qual": "igcse-science-double-award",
+   "rule": {
+    "kind": "scope_eq",
+    "value": "Chemistry"
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 21,
+    "specPoints": 131,
+    "parsePool": 412,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-17-physics": {
+   "qual": "igcse-science-double-award",
+   "rule": {
+    "kind": "scope_eq",
+    "value": "Physics"
+   },
+   "counts": {
+    "topics": 8,
+    "subtopics": 26,
+    "specPoints": 147,
+    "parsePool": 412,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-modular-24-biology-unit-1": {
+   "qual": "igcse-science-double-award-modular",
+   "rule": {
+    "kind": "strand_and_unit",
+    "strand": "Biology",
+    "unit_range": [
+     1,
+     3
+    ],
+    "unit": 1
+   },
+   "counts": {
+    "topics": 3,
+    "subtopics": 12,
+    "specPoints": 74,
+    "parsePool": 411,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-modular-24-biology-unit-2": {
+   "qual": "igcse-science-double-award-modular",
+   "rule": {
+    "kind": "strand_and_unit",
+    "strand": "Biology",
+    "unit_range": [
+     4,
+     99
+    ],
+    "unit": 2
+   },
+   "counts": {
+    "topics": 3,
+    "subtopics": 9,
+    "specPoints": 60,
+    "parsePool": 411,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-modular-24-chemistry-unit-1": {
+   "qual": "igcse-science-double-award-modular",
+   "rule": {
+    "kind": "strand_and_unit",
+    "strand": "Chemistry",
+    "unit_range": [
+     1,
+     4
+    ],
+    "unit": 1
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 13,
+    "specPoints": 83,
+    "parsePool": 411,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-modular-24-chemistry-unit-2": {
+   "qual": "igcse-science-double-award-modular",
+   "rule": {
+    "kind": "strand_and_unit",
+    "strand": "Chemistry",
+    "unit_range": [
+     5,
+     99
+    ],
+    "unit": 2
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 9,
+    "specPoints": 47,
+    "parsePool": 411,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-modular-24-physics-unit-1": {
+   "qual": "igcse-science-double-award-modular",
+   "rule": {
+    "kind": "strand_and_unit",
+    "strand": "Physics",
+    "unit_range": [
+     1,
+     5
+    ],
+    "unit": 1
+   },
+   "counts": {
+    "topics": 5,
+    "subtopics": 15,
+    "specPoints": 90,
+    "parsePool": 411,
+    "orphans": 0
+   },
+   "warnings": []
+  },
+  "igcse-science-double-award-modular-24-physics-unit-2": {
+   "qual": "igcse-science-double-award-modular",
+   "rule": {
+    "kind": "strand_and_unit",
+    "strand": "Physics",
+    "unit_range": [
+     6,
+     99
+    ],
+    "unit": 2
+   },
+   "counts": {
+    "topics": 4,
+    "subtopics": 11,
+    "specPoints": 57,
+    "parsePool": 411,
+    "orphans": 0
+   },
+   "warnings": []
+  }
+ },
+ "failures": []
+}
