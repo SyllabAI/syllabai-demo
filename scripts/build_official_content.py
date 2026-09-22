@@ -47,14 +47,23 @@ def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def item_codes(entry: dict) -> list[str]:
+def item_codes(entry: dict, spine_codes: set[str] | None = None) -> list[str]:
     """Ordered, de-duplicated attachment codes for one item (spine-resolved
-    preferred; unresolved rows fall back to their verbatim officialCode)."""
+    preferred; unresolved rows fall back to their verbatim officialCode).
+
+    When spine_codes is given (Stage 3 flip), the fallback is spine-gated:
+    a verbatim officialCode that does not resolve inside THIS course's spine
+    never lands in linkage ("a P1-tagged row never lands on the P2 spine —
+    it stays honestly outside"). Full upstream lineage remains in
+    content-maps/<slug>.json; the item simply counts as unmapped."""
     out: list[str] = []
     for c in entry.get("codes", []):
         code = c.get("spineCode") or c.get("officialCode")
-        if code and code not in out:
-            out.append(code)
+        if not code or code in out:
+            continue
+        if spine_codes is not None and code not in spine_codes:
+            continue
+        out.append(code)
     return out
 
 
@@ -63,9 +72,11 @@ def rekey_course(slug: str) -> dict:
     spine = load_json(REPO / "spines" / f"{slug}.json")
     att = load_json(REPO / "content-maps" / f"{slug}.json")
     cdir = REPO / "content" / slug
+    src_manifest = load_json(cdir / "manifest.json")
 
     spine_codes = {n["code"] for n in spine["curriculum"]["nodes"] if n["family"] == "SPEC_POINT"}
     items = att["items"]
+    _ic = lambda e: item_codes(e, spine_codes)  # noqa: E731  spine-gated flip
     spcpt_map_raw = att["spcptToOfficial"]
     ctx = AOM.course_ctx(spine["meta"].get("scopeRule") or {}, spine_codes)
     # spcpt -> display code: spine-resolved when possible, verbatim otherwise
@@ -80,14 +91,19 @@ def rekey_course(slug: str) -> dict:
     }
 
     # ---- curriculum: official spine verbatim -----------------------------
-    curriculum = spine["curriculum"]
+    # (syllabusVersion overlaid from the corpus manifest — the spine does not
+    # assert a syllabus year, the corpus import does; strict string schema)
+    curriculum = dict(spine["curriculum"])
+    _syll = (src_manifest.get("curriculum") or {}).get("syllabusVersion")
+    if _syll:
+        curriculum["syllabusVersion"] = _syll
 
     # ---- notes -------------------------------------------------------------
     src_notes = load_json(cdir / "notes.json")
     notes, notes_resid, notes_unmapped_items = [], 0, 0
     for n in src_notes:
         entry = items.get(n["noteId"], {})
-        codes = item_codes(entry)
+        codes = _ic(entry)
         if not codes:
             notes_unmapped_items += 1
         body = n.get("bodyMd") or ""
@@ -118,7 +134,7 @@ def rekey_course(slug: str) -> dict:
     cards, cards_unmapped_items = [], 0
     for f in src_cards:
         entry = items.get(f["id"], {})
-        codes = item_codes(entry)
+        codes = _ic(entry)
         if not codes:
             cards_unmapped_items += 1
         cards.append({
@@ -138,7 +154,7 @@ def rekey_course(slug: str) -> dict:
             for p in q.get("parts", []):
                 part_count += 1
                 entry = items.get(p["id"], {})
-                codes = item_codes(entry)
+                codes = _ic(entry)
                 if not codes:
                     parts_unmapped_items += 1
                 q2["parts"].append({
@@ -151,7 +167,6 @@ def rekey_course(slug: str) -> dict:
         qsets.append(s2)
 
     # ---- manifest --------------------------------------------------------------
-    src_manifest = load_json(cdir / "manifest.json")
     sections = {n["code"] for n in curriculum["nodes"] if n["family"] == "TOPIC"}
     topics = {n["code"] for n in curriculum["nodes"] if n["family"] == "SUBTOPIC"}
     spec_points = len(spine_codes)
@@ -217,6 +232,22 @@ def check_course(slug: str, bundle: dict) -> list[str]:
     src_parts = sum(len(q.get("parts", [])) for s in src_sets for q in s.get("questions", []))
     if src_parts != stats["questionParts"]:
         problems.append(f"parts count drift {src_parts} -> {stats['questionParts']}")
+
+    # 2b. every rekeyed linkage code resolves inside the spine (G4)
+    for n in bundle["notes.json"]:
+        for c in n["specPointIds"]:
+            if c not in spine_codes:
+                problems.append(f"note {n['noteId']}: linkage code {c} outside spine")
+    for f in bundle["flashcards.json"]:
+        for c in f["specPointIds"] + ([f["specPointCode"]] if f["specPointCode"] else []):
+            if c not in spine_codes:
+                problems.append(f"flashcard {f['id']}: linkage code {c} outside spine")
+    for s in bundle["questions.json"]:
+        for q in s["questions"]:
+            for p in q["parts"]:
+                for c in p["specPointIds"]:
+                    if c not in spine_codes:
+                        problems.append(f"part {p['id']}: linkage code {c} outside spine")
 
     # 3. no spcpt token survives in rekeyed linkage fields
     for n in bundle["notes.json"]:
