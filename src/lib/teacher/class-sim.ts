@@ -55,6 +55,13 @@ export interface SubtopicAggregate {
   misconceptions: SubtopicMisconception[];
   /** True when the corpus learner-sim anchors this subtopic (not just the seeded cohort). */
   hasSimEvidence: boolean;
+  /**
+   * Anchor mean (mean of the corpus sim spec-point masteries) when anchored,
+   * else null. Exposed so client-side sims can replicate the per-student
+   * draws EXACTLY (roster.ts) — the RNG sequence per subtopic is: drift,
+   * then base (only drawn when unanchored).
+   */
+  anchorMean: number | null;
   questionCount: number;
   totalMarks: number;
 }
@@ -85,8 +92,10 @@ export interface ClassOverview {
 }
 
 // ── deterministic PRNG (mulberry32) + string hash ─────────────────────────
+// Exported so client-side sims (roster.ts) replicate the exact same draws —
+// one PRNG truth for every SAMPLE surface.
 
-function hashString(input: string): number {
+export function hashString(input: string): number {
   let h = 2166136261;
   for (let i = 0; i < input.length; i++) {
     h ^= input.charCodeAt(i);
@@ -95,7 +104,7 @@ function hashString(input: string): number {
   return h >>> 0;
 }
 
-function mulberry32(seed: number): () => number {
+export function mulberry32(seed: number): () => number {
   let a = seed;
   return () => {
     a |= 0;
@@ -219,6 +228,7 @@ export function buildClassOverview(bundle: CourseBundle): ClassOverview {
         band: bandOf(mean),
         misconceptions: subMis,
         hasSimEvidence,
+        anchorMean,
         questionCount,
         totalMarks,
       };

@@ -101,6 +101,28 @@ the same BKT simulation currently visualised in `/learner`, fed with real data.
   AI-generated notes before they count (corpus pipeline already anticipates a
   teacher-validation step).
 - **Exit criteria:** a teacher can run one full assignment cycle end-to-end.
+- **Shipped (TEACHER-3, demo-truth, 2026-09-24):** both modules exist with the
+  exit criteria satisfied *on the demo substrate* — build → assign → collect →
+  review is runnable end-to-end:
+  - `/teacher/assignments`: builder assembles against the REAL bank via the
+    Test Builder API (counts on the assignment are actual numbers); assign to
+    the SAMPLE class with a due date; completion + scores from the
+    deterministic roster sim (`src/lib/teacher/roster.ts`) that replicates the
+    class-sim per-student draws EXACTLY (one PRNG truth — a student weak in
+    the class lens is weak here); roster table, close/reopen, "Build
+    remediation test" deep-link (§16 loop), "Assign this test" from the Test
+    Builder selection; assignments persist in `syllabai.assignments.v1`,
+    completion is computed (never stored, cannot drift).
+  - `/teacher/validation`: queue of REAL AI-authored model solutions from the
+    bank (`GET /api/teacher/validation-queue`, round-robin across subtopics);
+    approve / edit & approve / reject + comment → `ContentReview` records in
+    `syllabai.contentReviews.v1` (local until the write path exists).
+  - **Still Phase-1-gated:** completion/tracking numbers remain SAMPLE until
+    real accounts + AttemptEvents exist; assignment distribution to real
+    student inboxes and verdict enforcement in the pipeline need the write
+    path. Auth-later plan: data shapes match plan §4, all writes behind
+    versioned stores, `identity.ts` is the only role source — the Phase 1
+    swap (NextAuth session + server stores) is mechanical.
 
 **Status update (TEACHER-2, 2026-09-23):** the demo now implements the
 canonical teacher surfaces from `syllabai/syllabai` TEACHER_ARCHITECTURE.md:

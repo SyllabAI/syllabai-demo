@@ -15,6 +15,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import Link from "next/link";
 import {
   ChevronDown,
   ClipboardList,
@@ -473,6 +474,15 @@ export function TestBuilderClient({
                 >
                   Save test
                 </Button>
+                {selected.size > 0 && course && (
+                  <Button asChild variant="outline" size="sm" className="h-8 text-xs">
+                    <Link
+                      href={`/teacher/assignments?course=${course}&subtopics=${[...selected].join(",")}`}
+                    >
+                      Assign this test
+                    </Link>
+                  </Button>
+                )}
                 {tests.length > 0 && (
                   <div className="relative">
                     <select

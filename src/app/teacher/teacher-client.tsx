@@ -25,9 +25,11 @@ import {
   CircleHelp,
   ClipboardList,
   Database,
+  FileCheck2,
   FileQuestion,
   GraduationCap,
   LibraryBig,
+  ListChecks,
   Network,
   ShieldCheck,
   Sparkles,
@@ -42,8 +44,6 @@ import type { SwitchableCourse } from "@/lib/teacher/types";
 import { cn } from "@/lib/utils";
 
 const ROADMAP = [
-  { title: "Assignments & submission portal", phase: "Phase 2" },
-  { title: "AI content validation queue", phase: "Phase 2" },
   { title: "Announcements", phase: "Phase 2" },
   { title: "At-Risk students (evidence-first)", phase: "Phase 3" },
   { title: "Reports & exports", phase: "Phase 3" },
@@ -314,6 +314,53 @@ export function TeacherClient({
               <Button asChild size="sm" variant="outline" className="mt-3 gap-1.5">
                 <Link href={course ? `/teacher/class-graph?course=${course}` : "/teacher/class-graph"}>
                   Open the class lens
+                  <ArrowRight className="size-3.5" aria-hidden />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+          <Card className="py-0 transition-shadow hover:shadow-md">
+            <CardContent className="p-5">
+              <div className="flex items-center justify-between gap-2">
+                <span className="flex size-9 items-center justify-center rounded-md bg-primary/10">
+                  <ListChecks className="size-4 text-primary" aria-hidden />
+                </span>
+                <Badge variant="outline" className="text-[10px] font-normal">
+                  Phase 2
+                </Badge>
+              </div>
+              <h3 className="mt-3 text-sm font-semibold">Assignments</h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                The full cycle: build from the bank (same assembly rules as the Test Builder),
+                assign with a due date, track completion on the SAMPLE roster, remediate in one
+                click.
+              </p>
+              <Button asChild size="sm" variant="outline" className="mt-3 gap-1.5">
+                <Link href={course ? `/teacher/assignments?course=${course}` : "/teacher/assignments"}>
+                  Open assignments
+                  <ArrowRight className="size-3.5" aria-hidden />
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+          <Card className="py-0 transition-shadow hover:shadow-md">
+            <CardContent className="p-5">
+              <div className="flex items-center justify-between gap-2">
+                <span className="flex size-9 items-center justify-center rounded-md bg-primary/10">
+                  <FileCheck2 className="size-4 text-primary" aria-hidden />
+                </span>
+                <Badge variant="outline" className="text-[10px] font-normal">
+                  Phase 2
+                </Badge>
+              </div>
+              <h3 className="mt-3 text-sm font-semibold">AI content validation</h3>
+              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
+                The teacher gate in the content loop: review real AI-authored model solutions from
+                the bank and record approve / edit / reject verdicts before they count.
+              </p>
+              <Button asChild size="sm" variant="outline" className="mt-3 gap-1.5">
+                <Link href={course ? `/teacher/validation?course=${course}` : "/teacher/validation"}>
+                  Open the validation queue
                   <ArrowRight className="size-3.5" aria-hidden />
                 </Link>
               </Button>

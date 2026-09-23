@@ -182,3 +182,211 @@ export function useSavedTests() {
 
   return { tests, save, remove };
 }
+
+// ── assignments (Phase 2, demo-truth) ─────────────────────────────────────
+//
+// syllabai.assignments.v1 — teacher assignments (TEACHER_MODE_PLAN §4
+// Assignment shape, demo-sized): build from the question bank (Test Builder
+// assembly rules), assign to the SAMPLE class, track completion. The
+// completion feed itself is the deterministic roster sim (roster.ts) —
+// real AttemptEvents are the Phase 1 data foundation.
+
+export interface Assignment {
+  id: string;
+  courseId: string;
+  courseCode: string;
+  courseLabel: string;
+  title: string;
+  className: string;
+  /** Spec refs — subtopic codes the assignment targets. */
+  subtopics: { code: string; title: string }[];
+  targetMarks: number | null;
+  maxQuestions: number | null;
+  /** Filled by the assemble API at creation time (real bank numbers). */
+  marksTotal: number;
+  questionCount: number;
+  dueAt: string;
+  createdAt: string;
+  status: "open" | "closed";
+}
+
+const ASSIGNMENTS_KEY = "syllabai.assignments.v1";
+const ASSIGNMENTS_EVENT = "syllabai:assignments-changed";
+const ASSIGNMENTS_EMPTY: Assignment[] = [];
+
+function readAssignments(): Assignment[] {
+  try {
+    const raw = window.localStorage.getItem(ASSIGNMENTS_KEY);
+    if (!raw) return ASSIGNMENTS_EMPTY;
+    const parsed = JSON.parse(raw) as Assignment[];
+    if (!Array.isArray(parsed)) return ASSIGNMENTS_EMPTY;
+    return parsed.filter(
+      (a) =>
+        a &&
+        typeof a.id === "string" &&
+        Array.isArray(a.subtopics) &&
+        typeof a.marksTotal === "number" &&
+        (a.status === "open" || a.status === "closed"),
+    );
+  } catch {
+    return ASSIGNMENTS_EMPTY;
+  }
+}
+
+let assignmentsSnapshot: Assignment[] = ASSIGNMENTS_EMPTY;
+
+function assignmentsSnapshotGet(): Assignment[] {
+  const next = readAssignments();
+  if (
+    next.length !== assignmentsSnapshot.length ||
+    next.some((a, i) => a.id !== assignmentsSnapshot[i]?.id)
+  ) {
+    assignmentsSnapshot = next;
+  }
+  return assignmentsSnapshot;
+}
+
+function writeAssignments(list: Assignment[]) {
+  try {
+    window.localStorage.setItem(ASSIGNMENTS_KEY, JSON.stringify(list));
+  } catch {
+    // ignore
+  }
+  window.dispatchEvent(new CustomEvent(ASSIGNMENTS_EVENT));
+}
+
+export function useAssignments() {
+  const subscribe = useCallback((onChange: () => void) => {
+    window.addEventListener(ASSIGNMENTS_EVENT, onChange);
+    window.addEventListener("storage", onChange);
+    return () => {
+      window.removeEventListener(ASSIGNMENTS_EVENT, onChange);
+      window.removeEventListener("storage", onChange);
+    };
+  }, []);
+  const assignments = useSyncExternalStore(
+    subscribe,
+    assignmentsSnapshotGet,
+    () => ASSIGNMENTS_EMPTY,
+  );
+
+  const create = useCallback(
+    (input: Omit<Assignment, "id" | "createdAt">): Assignment => {
+      const assignment: Assignment = {
+        ...input,
+        id: `a_${Date.now().toString(36)}`,
+        createdAt: new Date().toISOString(),
+      };
+      writeAssignments([assignment, ...assignmentsSnapshotGet()].slice(0, 50));
+      return assignment;
+    },
+    [],
+  );
+
+  const setStatus = useCallback((id: string, status: Assignment["status"]) => {
+    writeAssignments(
+      assignmentsSnapshotGet().map((a) => (a.id === id ? { ...a, status } : a)),
+    );
+  }, []);
+
+  const remove = useCallback((id: string) => {
+    writeAssignments(assignmentsSnapshotGet().filter((a) => a.id !== id));
+  }, []);
+
+  return { assignments, create, setStatus, remove };
+}
+
+// ── content reviews (Phase 2 validation queue, demo-truth) ────────────────
+//
+// syllabai.contentReviews.v1 — teacher verdicts on AI-authored content
+// (TEACHER_MODE_PLAN §4 ContentReview: resourceId, reviewer, verdict,
+// comment, createdAt). The pilot pipeline marks AI-authored model solutions
+// for teacher validation before they count; the queue demonstrates that step
+// on REAL corpus items, verdicts persist locally until the write path exists.
+
+export type ReviewVerdict = "approved" | "edited" | "rejected";
+
+export interface ContentReview {
+  resourceId: string;
+  courseId: string;
+  courseCode: string;
+  kind: "solution" | "note" | "flashcard";
+  verdict: ReviewVerdict;
+  comment: string;
+  reviewer: string;
+  createdAt: string;
+}
+
+const REVIEWS_KEY = "syllabai.contentReviews.v1";
+const REVIEWS_EVENT = "syllabai:content-reviews-changed";
+const REVIEWS_EMPTY: ContentReview[] = [];
+
+function readReviews(): ContentReview[] {
+  try {
+    const raw = window.localStorage.getItem(REVIEWS_KEY);
+    if (!raw) return REVIEWS_EMPTY;
+    const parsed = JSON.parse(raw) as ContentReview[];
+    if (!Array.isArray(parsed)) return REVIEWS_EMPTY;
+    return parsed.filter(
+      (r) =>
+        r &&
+        typeof r.resourceId === "string" &&
+        (r.verdict === "approved" || r.verdict === "edited" || r.verdict === "rejected"),
+    );
+  } catch {
+    return REVIEWS_EMPTY;
+  }
+}
+
+let reviewsSnapshot: ContentReview[] = REVIEWS_EMPTY;
+
+function reviewsSnapshotGet(): ContentReview[] {
+  const next = readReviews();
+  if (
+    next.length !== reviewsSnapshot.length ||
+    next.some((r, i) => r.resourceId !== reviewsSnapshot[i]?.resourceId)
+  ) {
+    reviewsSnapshot = next;
+  }
+  return reviewsSnapshot;
+}
+
+function writeReviews(list: ContentReview[]) {
+  try {
+    window.localStorage.setItem(REVIEWS_KEY, JSON.stringify(list));
+  } catch {
+    // ignore
+  }
+  window.dispatchEvent(new CustomEvent(REVIEWS_EVENT));
+}
+
+export function useContentReviews() {
+  const subscribe = useCallback((onChange: () => void) => {
+    window.addEventListener(REVIEWS_EVENT, onChange);
+    window.addEventListener("storage", onChange);
+    return () => {
+      window.removeEventListener(REVIEWS_EVENT, onChange);
+      window.removeEventListener("storage", onChange);
+    };
+  }, []);
+  const reviews = useSyncExternalStore(subscribe, reviewsSnapshotGet, () => REVIEWS_EMPTY);
+
+  const add = useCallback(
+    (input: Omit<ContentReview, "createdAt">): ContentReview => {
+      // one verdict per resource — a re-review supersedes the previous one
+      const review: ContentReview = { ...input, createdAt: new Date().toISOString() };
+      writeReviews([
+        review,
+        ...reviewsSnapshotGet().filter((r) => r.resourceId !== review.resourceId),
+      ].slice(0, 200));
+      return review;
+    },
+    [],
+  );
+
+  const remove = useCallback((resourceId: string) => {
+    writeReviews(reviewsSnapshotGet().filter((r) => r.resourceId !== resourceId));
+  }, []);
+
+  return { reviews, add, remove };
+}
