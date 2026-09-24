@@ -9,7 +9,9 @@ kg_export.py consumes the output unchanged and the /knowledge-graph files
 become official-spec-backed end to end.
 
 Provenance discipline:
-  - every SPEC_POINT: verbatim statement text + official_code from the parse
+  - every SPEC_POINT: verbatim statement text + official_code from the parse,
+    with the parse's structured sub_items inlined after the lead-in (bullet
+    lists were previously DROPPED here — recovered 2026-09-24, T-KG-11)
   - every TOPIC/SUBTOPIC: canonical title from the parse (topics.json or the
     row's inline subsection dict) — nothing invented
   - scoping (which parts of a shared qualification spec belong to which
@@ -402,7 +404,7 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
                   "title": reg.get("subject") or qual, "description": None,
                   "parents": [], "provenanceTier": "RULE_DERIVED", "order": 0})
 
-    n_sub, n_pts = 0, 0
+    n_sub, n_pts, n_recovered = 0, 0, 0
     ordered = sorted(topics, key=topic_sort_key)   # after re-parent pruning
     for t_idx, num in enumerate(ordered, start=1):
         t = topics[num]
@@ -481,8 +483,19 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
             n_sub += 1
             for r in st["rows"]:
                 pid = str(r.get("official_code") or r.get("id"))
+                # statement text + structured sub_items: the parse stores bullet
+                # lists separately (sub_items); inline them so the spine/KG carry
+                # the COMPLETE statement (rule identical to T-KG-10 chemistry
+                # definitive merge — verified byte-equal there)
+                title = r.get("text") or ""
+                items = [str(s).strip() for s in (r.get("sub_items") or [])
+                         if str(s).strip()]
+                if items:
+                    lead = title if title.endswith(":") else title + ":"
+                    title = lead + " \u2022 " + " \u2022 ".join(items)
+                    n_recovered += 1
                 nodes.append({"code": pid, "family": "SPEC_POINT",
-                              "title": r.get("text") or "", "description": None,
+                              "title": title, "description": None,
                               "parents": [s_code], "provenanceTier": "RULE_DERIVED",
                               "order": n_pts + 1})
                 edges.append({"source": s_code, "relation": "PART_OF",
@@ -514,6 +527,9 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
         # no per-spine timestamp: rebuilds are byte-deterministic at a fixed
         # RESOURCES_SHA (the report carries the single build time)
     }
+    if n_recovered:
+        meta["subItemRecovery"] = {"specPoints": n_recovered,
+                                   "rule": "text (+':') + ' • ' + sub_items inline"}
     return {"meta": meta, "curriculum": curriculum}
 
 
