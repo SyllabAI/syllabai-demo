@@ -30,12 +30,36 @@
  *   - provenance on every part (subtopic, spec points, source paper);
  *   - saved tests persist the EXPLICIT question list (fixes the old
  *     controls-only save semantics); legacy saves fall back to controls;
- *   - corpus choice-text repair at render (camel-boundary space).
+ *   - corpus choice-text repair at render (camel-boundary space);
+ *   - drag-to-reorder in the paper (@dnd-kit, grip handle + keyboard
+ *     sensor) alongside ↑/↓ arrows and a type-the-position "move to
+ *     position" input for long papers;
+ *   - the WHOLE builder state (course, filters, auto-build controls,
+ *     name, paper, pdf settings, hand-added ids) persists as a versioned
+ *     localStorage draft and survives a refresh; the landing offers
+ *     Resume / Discard, an explicit save commits (clears) the draft.
  * Export = browser print (print CSS hides the app chrome).
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import {
+  DndContext,
+  KeyboardSensor,
+  PointerSensor,
+  closestCenter,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+} from "@dnd-kit/core";
+import {
+  SortableContext,
+  arrayMove,
+  sortableKeyboardCoordinates,
+  useSortable,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import {
   ArrowDown,
   ArrowLeft,
@@ -45,6 +69,7 @@ import {
   Download,
   Eye,
   FileText,
+  GripVertical,
   Loader2,
   Minus,
   Plus,
@@ -85,6 +110,57 @@ const REASON_LABELS: Record<string, string> = {
 
 const WEAK_LANE_CAP = 6;
 const BANK_PAGE = 40;
+
+/** Builder draft (whole builder state across refreshes) — same versioned
+ *  localStorage family as stores.ts. An explicit Save commits the work and
+ *  clears the draft; Discard on the landing clears it too. */
+const DRAFT_KEY = "syllabai.testBuilderDraft.v1";
+
+interface BuilderDraft {
+  v: 1;
+  course: string;
+  view: "tests" | "builder";
+  selected: string[];
+  mode: "marks" | "count";
+  targetMarks: string;
+  maxQuestions: string;
+  difficulty: DifficultyFilter;
+  testName: string;
+  stale: boolean;
+  pdf: PdfSettings;
+  /** hand-added/restored question ids — survive auto-build rebuilds */
+  manualIds: string[];
+  test: AssembledTest | null;
+  savedAt: string;
+}
+
+/** Shallow-shape guard for a restored draft: course must still exist in the
+ *  course list (bank lookups would 404 otherwise) and a persisted paper must
+ *  belong to the same course. Anything else degrades to "no draft". */
+function readBuilderDraft(courses: SwitchableCourse[]): BuilderDraft | null {
+  try {
+    const raw = window.localStorage.getItem(DRAFT_KEY);
+    if (!raw) return null;
+    const d = JSON.parse(raw) as BuilderDraft;
+    if (
+      !d ||
+      d.v !== 1 ||
+      typeof d.course !== "string" ||
+      !courses.some((c) => c.slug === d.course) ||
+      !Array.isArray(d.selected) ||
+      !Array.isArray(d.manualIds)
+    )
+      return null;
+    if (
+      d.test !== null &&
+      (!d.test || !Array.isArray(d.test.questions) || d.test.course?.slug !== d.course)
+    )
+      return null;
+    return d;
+  } catch {
+    return null;
+  }
+}
 
 type DifficultyFilter = "all" | "easy" | "medium" | "hard";
 
@@ -369,6 +445,11 @@ export function TestBuilderClient({
   const undoTimerRef = useRef<number | null>(null);
   // floating test summary while browsing the bank
   const [showFloat, setShowFloat] = useState(false);
+  // ── draft persistence (whole builder state across refresh) ──────────────
+  // hasDraft: a draft was actually restored from localStorage this session —
+  // drives the landing "resume / discard" affordance
+  const [hasDraft, setHasDraft] = useState(false);
+  const hydratedRef = useRef(false);
 
   function goBuilder() {
     setView("builder");
@@ -390,6 +471,74 @@ export function TestBuilderClient({
   useEffect(() => () => {
     if (undoTimerRef.current) window.clearTimeout(undoTimerRef.current);
   }, []);
+
+  // ── restore the draft once on mount (before other effects so the
+  // course/bank fetches re-run against the restored course) ────────────────
+  useEffect(() => {
+    const d = readBuilderDraft(courses);
+    if (d) {
+      setCourse(d.course);
+      setSelected(new Set(d.selected));
+      setMode(d.mode === "count" ? "count" : "marks");
+      setTargetMarks(typeof d.targetMarks === "string" && d.targetMarks ? d.targetMarks : "40");
+      setMaxQuestions(typeof d.maxQuestions === "string" && d.maxQuestions ? d.maxQuestions : "20");
+      setDifficulty(
+        d.difficulty === "easy" || d.difficulty === "medium" || d.difficulty === "hard"
+          ? d.difficulty
+          : "all",
+      );
+      setTestName(typeof d.testName === "string" ? d.testName : "");
+      setTest(d.test ?? null);
+      setStale(Boolean(d.stale));
+      if (d.pdf) {
+        setPdf((p) => ({
+          ...p,
+          copy: d.pdf!.copy === "student" ? "student" : "teacher",
+          coverPage: Boolean(d.pdf!.coverPage),
+          answerSpace: Boolean(d.pdf!.answerSpace),
+          answerLines:
+            typeof d.pdf!.answerLines === "number"
+              ? Math.min(8, Math.max(1, Math.round(d.pdf!.answerLines)))
+              : 3,
+          noSplit: Boolean(d.pdf!.noSplit),
+        }));
+      }
+      manualIdsRef.current = new Set(d.manualIds);
+      setHasDraft(true);
+    }
+    hydratedRef.current = true;
+  }, [courses]);
+
+  // ── persist the whole builder state as a draft (debounced); manual ids
+  // are only ever mutated alongside a persisted dep, so the ref read at
+  // write time is safe ───────────────────────────────────────────────────
+  useEffect(() => {
+    if (!hydratedRef.current || !course) return;
+    const timer = window.setTimeout(() => {
+      try {
+        const draft: BuilderDraft = {
+          v: 1,
+          course,
+          view,
+          selected: [...selected],
+          mode,
+          targetMarks,
+          maxQuestions,
+          difficulty,
+          testName,
+          stale,
+          pdf,
+          manualIds: [...manualIdsRef.current],
+          test,
+          savedAt: new Date().toISOString(),
+        };
+        window.localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+      } catch {
+        // private mode / quota — the draft just won't persist
+      }
+    }, 250);
+    return () => window.clearTimeout(timer);
+  }, [course, view, selected, mode, targetMarks, maxQuestions, difficulty, testName, stale, pdf, test]);
 
   // load the course payload (bank stats + class evidence) per course switch;
   // state updates happen only in async callbacks, never synchronously
@@ -664,6 +813,35 @@ export function TestBuilderClient({
     });
   }
 
+  /** jump a question to an explicit position (0-based target) — the
+   *  long-paper alternative to repeated ↑/↓ presses. Manual paper edits
+   *  never touch the stale flag. */
+  function moveQuestionTo(i: number, pos: number) {
+    setTest((prev) => {
+      if (!prev) return prev;
+      const j = Math.max(0, Math.min(prev.questions.length - 1, pos));
+      if (j === i) return prev;
+      return { ...prev, questions: arrayMove(prev.questions, i, j) };
+    });
+  }
+
+  // drag-to-reorder sensors (grip handle: pointer + keyboard)
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
+  );
+
+  function handleDragEnd({ active, over }: DragEndEvent) {
+    if (!over || active.id === over.id) return;
+    setTest((prev) => {
+      if (!prev) return prev;
+      const from = prev.questions.findIndex((q) => q.id === active.id);
+      const to = prev.questions.findIndex((q) => q.id === over.id);
+      if (from === -1 || to === -1) return prev;
+      return { ...prev, questions: arrayMove(prev.questions, from, to) };
+    });
+  }
+
   /** remove with undo — the question (and its position) is recoverable for
    *  8 s via the floating "Undo remove" affordance. */
   function removeQuestion(i: number) {
@@ -719,6 +897,33 @@ export function TestBuilderClient({
     setBuildError(null);
     setUndoState(null);
     manualIdsRef.current = new Set();
+  }
+
+  /** landing affordance: throw the draft away and reset the builder. */
+  function discardDraft() {
+    setTest(null);
+    setTestName("");
+    setSelected(new Set());
+    setStale(false);
+    setBuildError(null);
+    setUndoState(null);
+    manualIdsRef.current = new Set();
+    setHasDraft(false);
+    try {
+      window.localStorage.removeItem(DRAFT_KEY);
+    } catch {
+      // ignore
+    }
+  }
+
+  /** explicit Save commits the work — the draft is no longer needed. */
+  function clearDraftAfterSave() {
+    setHasDraft(false);
+    try {
+      window.localStorage.removeItem(DRAFT_KEY);
+    } catch {
+      // ignore
+    }
   }
 
   /** auto-build (marks-aware deterministic fill over the selection). */
@@ -805,6 +1010,7 @@ export function TestBuilderClient({
     });
     setSavedFlash(true);
     window.setTimeout(() => setSavedFlash(false), 2200);
+    clearDraftAfterSave();
   }
 
   function onLoadSaved(id: string) {
