@@ -1,0 +1,3565 @@
+Chemistry — class test
+Chemistry (4CH1) · IGCSE · total 304 marks · name: ______________
+
+Question 1 (1 mark)
+(a)
+
+[1]
+
+Propanoic acid reacts with ethanol in an esterification reaction.
+What is the displayed formula of the ester that is formed during this reaction?
+
+Question 2 (1 mark)
+(a)
+
+The reaction profile for making nitrogen monoxide, NO, is shown below:
+
+What is the activation energy for this reaction?
+A) +140 kJ
+B) +180 kJ
+C) +320 kJ
+D) -330 kJ
+
+[1]
+
+Question 3 (1 mark)
+(a)
+
+[1]
+
+A student uses the apparatus to electrolyse an aqueous solution of copper(II) sulfate.
+
+Which substances are formed at the negative electrode (cathode) and the positive electrode
+(anode)?
+A) Negative electrode: hydrogen Positive electrode: sulfur
+B) Negative electrode: copper Positive electrode: oxygen
+C) Negative electrode: sulfur Positive electrode: hydrogen
+D) Negative electrode: oxygen Positive electrode: copper
+
+Question 4 (1 mark)
+(a)
+
+A company produces tin from an ore called cassiterite, which is mainly tin oxide.
+What is the relative formula mass (Mr) of tin oxide, SnO2?
+[A*r *of Sn= 119; O= 16 ]
+A) 135
+B) 151
+C) 270
+D) 1904
+
+[1]
+
+Question 5 (1 mark)
+(a)
+
+[1]
+
+A student is carrying out a titration using phenolphthalein indicator.
+What is the correct colour of this indicator in an acid and alkali?
+A) Colour in acid: pink Colour in alkali: colourless
+B) Colour in acid: colourless Colour in alkali: pink
+C) Colour in acid: red Colour in alkali: yellow
+D) Colour in acid: orange Colour in alkali: red
+
+Question 6 (1 mark)
+(a)
+
+[1]
+
+Which element in Group 7 is a solid at room temperature?
+A) fluorine
+B) chlorine
+C) bromine
+D) iodine
+
+Question 7 (1 mark)
+(a)
+
+[1]
+
+A compound is suspected of containing copper ions, Cu2+ and bromide ions, Br-.
+Which test would not help to positively identify copper ions or bromide ions?
+A) Test: flame test Result: blue-green flame
+B) Test: add sodium hydroxide solution Result: blue precipitate forms
+C) Test: add acidified silver nitrate solution Result: cream precipitate forms
+D) Test: add sodium hydroxide solution Result: green precipitate forms
+
+Question 8 (1 mark)
+(a)
+
+What numbers will balance the following equation?
+_Fe (s) + _O2 (g) → _Fe2O3 (g)
+A) 2,3,4
+B) 4,3,2
+C) 2,3,1
+D) 1,2,3
+
+[1]
+
+Question 9 (1 mark)
+(a)
+
+[1]
+
+A student obtained the following chromatogram for substance A.
+
+Determine the Rf value of substance A.
+A) 0.66
+B) 0.26
+C) 0.35
+D) 0.43
+
+Question 10 (1 mark)
+(a)
+
+What type of reaction occurs when iron rusts?
+A) Oxidation
+B) Neutralisation
+C) Combustion
+D) Displacement
+
+[1]
+
+Question 11 (1 mark)
+(a)
+
+[1]
+
+The diagram shows the electronic configurations of an atom of lithium and an atom of oxygen.
+
+Which statement is not correct about the changes in electronic configuration that occur when
+lithium and oxygen react to form lithium oxide, Li2O?
+A) Two lithium atoms each lose one electron
+B) One oxygen atom gains 2 electrons
+C) A lithium ion has an electronic configuration of 2
+D) An oxide ion has an electronic configuration of 2.6
+
+Question 12 (1 mark)
+(a)
+
+[1]
+
+Carbonic acid is found in fizzy drinks and has the formula, H2CO3.
+Which ion causes the drink to be acidic?
+A) OH<sup>-</sup>
+B) CO<sub>3</sub><sup>2-</sup>
+C) H<sup>+</sup>
+D) O<sup>2-</sup>
+
+Question 13 (1 mark)
+(a)
+
+Carbon dioxide contains covalent bonds.
+The covalent bonds in a molecule of carbon dioxide can be represented by a dot-and-cross
+diagram.
+Which is the correct dot-and-cross diagram for carbon dioxide?
+
+[1]
+
+Question 14 (1 mark)
+(a)
+
+[1]
+
+Which of the following reactions is an example of an addition reaction?
+A) CH<sub>4</sub> + ½O<sub>2</sub> → CO + 2H<sub>2</sub>O
+B) C<sub>2</sub>H<sub>4</sub> + Br<sub>2</sub> →
+C<sub>2</sub>H<sub>4</sub>Br<sub>2</sub>
+C) CH<sub>4</sub> + 2O<sub>2</sub> → CO<sub>2</sub> + 2H<sub>2</sub>O
+D) CH<sub>4</sub> + Br<sub>2</sub> → CH<sub>3</sub>Br + HBr
+
+Question 15 (1 mark)
+(a)
+
+[1]
+
+Hydrogen gas and chlorine gas can be prepared in a laboratory by electrolysis of a concentrated
+solution of sodium chloride.
+
+Which is the ionic half-equation that represents the formation of chlorine gas at the positive
+electrode?
+A) Cl<sup>-</sup> → Cl + e<sup>-</sup>
+B) 2Cl<sup>-</sup> → Cl<sub>2</sub> + 2e<sup>-</sup>
+C) Cl<sub>2</sub> + 2e<sup>-</sup> → 2Cl<sup>-</sup>
+D) 2Cl<sup>-</sup> + 2e<sup>-</sup> → Cl<sub>2</sub>
+
+Question 16 (1 mark)
+(a)
+
+[1]
+
+Electrolysis can be used to separate molten lead bromide.
+Which statement is true for what happens at the negative electrode?
+☐
+
+A
+
+Lead atoms are oxidised
+
+☐
+
+B
+
+Lead atoms are reduced
+
+☐
+
+C
+
+Lead ions are oxidised
+
+☐
+
+D
+
+Lead ions are reduced
+
+A) Lead atoms are oxidized
+B) Lead atoms are reduced
+C) Lead ions are oxidized
+D) Lead ions are reduced
+
+Question 17 (1 mark)
+(a)
+
+[1]
+
+Which of the following reactions does not involve the oxidation of ethanol?
+A) Production of ethanol from the fermentation of glucose
+B) Heating ethanol with potassium dichromate(VI) in dilute sulfuric acid
+C) Reaction of ethanol with oxygen in the air
+D) Formation of carbon dioxide and water from the complete combustion of ethanol
+
+Question 18 (1 mark)
+(a)
+
+[1]
+
+Which equation does not show the correct reaction of an acid?
+A) copper oxide + hydrochloric acid → copper chloride + water
+B) calcium carbonate + nitric acid → calcium nitrate + carbon dioxide
+C) potassium hydroxide + sulfuric acid → potassium sulfate + water
+D) zinc + sulfuric acid → zinc sulfate + hydrogen
+
+Question 19 (1 mark)
+(a)
+
+Fractional distillation is the process by which crude oil is separated into simpler, more useful
+fractions.
+Which of the following statements about the process of fractional distillation is correct?
+A) The fractionating column is cooler at the bottom than at the top
+B) The fractions collected at the top of the fractionating column have a high boiling point
+C) The molecules in each fraction have a similar boiling point and carbon chain length
+D) The fractions collected at the bottom of the fractionating column have a low viscosity
+
+[1]
+
+Question 20 (1 mark)
+(a)
+
+[1]
+
+Ethanoic acid is a member of the homologous series of carboxylic acids.
+Which is the functional group of carboxylic acids?
+
+Question 21 (1 mark)
+(a)
+
+[1]
+
+Which of the statements describes ionic bonding?
+A) Electrostatic attraction between atoms
+B) Electrostatic attraction between positively charged particles and delocalized electrons
+C) Electrostatic attraction between oppositely charged ions
+D) Electrostatic attraction between the nuclei of two atoms and a shared pair of electrons
+
+Question 22 (1 mark)
+(a)
+
+A student added some sulfuric acid gradually to a solution of ammonia until it was in excess.
+What happens to the pH during this reaction?
+A) pH of ammonia at start: 11 pH after excess sulfuric acid: 7
+B) pH of ammonia at start: 7 pH after excess sulfuric acid: 13
+C) pH of ammonia at start: 11 pH after excess sulfuric acid: 2
+D) pH of ammonia at start: 3 pH after excess sulfuric acid: 8
+
+[1]
+
+Question 23 (1 mark)
+(a)
+
+A student investigates the rate of reaction between an excess of hydrochloric acid and a limiting
+mass of magnesium using the apparatus shown:
+
+Which of the graphs could represent her results?
+
+[1]
+
+Question 24 (1 mark)
+(a)
+
+[1]
+
+When copper(II) sulfate undergoes electrolysis, it produces oxygen gas at the positive electrode.
+The unbalanced half equation below represents the reaction that occurs at the positive electrode.
+Which numbers will correctly balance the half equation?
+___ H2O → O2 + ___ H+ + ___ e☐
+
+A
+
+2,2,2
+
+☐
+
+B
+
+2,4,2
+
+☐
+
+C
+
+2,4,4
+
+☐
+
+D
+
+4,4,2
+
+A) 2,2,2
+B) 2,4,2
+C) 2,4,4
+D) 4,4,2
+
+Question 25 (1 mark)
+(a)
+
+[1]
+
+Sodium oxide reacts with water to form sodium hydroxide.
+A scientist plans to measure the temperature change of the reaction using calorimetry in a lab.
+This is the scientist's basic method:
+use 50 g of water
+record the temperature of the water
+add sodium hydroxide
+stir
+record the maximum temperature reached
+Which apparatus list is the most appropriate for this experiment?
+A) Electronic balance, measuring cylinder, glass beaker, thermometer
+B) Measuring cylinder, glass beaker, polystyrene cup, thermometer
+C) Electronic balance, glass beaker, polystyrene cup, thermometer
+D) Measuring cylinder, glass beaker, glass rod, thermometer
+
+Question 26 (1 mark)
+(a)
+
+Another student carries out the experiment to find the heat energy released in the reaction of
+sodium oxide with water:
+Na2O (s) + H2O (l) → 2NaOH (aq)
+They found that 10,800 J of heat energy was released when 0.060 mol of sodium oxide reacts.
+What is the value of ΔH, in kJ/mol, for the reaction of sodium oxide with water?
+A) 0.0056 kJ/mol
+B) 180 kJ/mol
+C) 1,800 kJ/mol
+D) 8,000 kJ/mol
+
+[1]
+
+Question 27 (1 mark)
+(a)
+
+[1]
+
+The diagram shows part of the periodic table, with elements represented by the letters M, Q, R and
+T. The letters in the diagram represent elements but are not their chemical symbols.
+Use the Periodic Table to help you answer this question.
+
+Which of these statements is true?
+A) T and Q form acidic oxides
+B) M conducts electricity
+C) M is a non-metal element
+D) R is a gaseous non-metal element
+
+Question 28 (1 mark)
+(a)
+
+[1]
+
+Chlorine reacts with methane in sunlight.
+CH4 + Cl2 → CH3Cl + HCl
+The diagram below shows the displayed formulae for the reaction of chlorine with methane.
+
+The table below shows the bond energies and the overall energy change in the reaction.
+
+Energy in kJ/mol
+
+What is the value of X?
+A) 67
+B) 134
+C) 346
+D) 542
+
+C-H
+
+Cl-Cl
+
+C-Cl
+
+H-Cl
+
+Overall energy change
+
+413
+
+243
+
+X
+
+432
+
+-122
+
+Question 29 (1 mark)
+(a)
+
+[1]
+
+Bromine water is an aqueous solution of bromine which is orange in colour.
+What would be seen if bromine water was added to the test tubes in the diagram?
+
+Test tube 1
+
+Test tube 2
+
+Test tube 3
+
+☐
+
+A
+
+solution stays orange
+
+solution turns brown
+
+solution turns brown
+
+☐
+
+B
+
+solution turns pale green
+
+solution stays orange
+
+solution turns colourless
+
+☐
+
+C
+
+solution stays orange
+
+solution stays orange
+
+solution turns brown
+
+☐
+
+D
+
+solution turns colourless
+
+solution turns colourless
+
+solution turns brown
+
+Question 30 (1 mark)
+(a)
+
+[1]
+
+Scientists test a solution of compound X. The table shows their results.
+Test
+
+Result
+
+Acidified silver nitrate solution
+
+White precipitate
+
+Add sodium hydroxide solution
+
+Green precipitate
+
+Which two ions are present in compound X?
+☐
+
+A
+
+Fe3+ and Cl-
+
+☐
+
+B
+
+Fe3+ and SO42-
+
+☐
+
+C
+
+Fe2+ and Cl-
+
+☐
+
+D
+
+Fe2+ and SO42-
+
+A) Fe<sup>3+</sup> and Cl<sup>-</sup>
+B) Fe<sup>3+</sup> and SO<sub>4</sub><sup>2-</sup>
+C) Fe<sup>2+</sup> and Cl<sup>-</sup>
+D) Fe<sup>2+</sup> and SO<sub>4</sub><sup>2-</sup>
+
+Question 31 (1 mark)
+(a)
+
+The ionic equation for the reaction between chlorine and sodium bromide is:
+Cl2 (g) + 2Br– (aq) → 2Cl– (aq) + Br2 (aq)
+This reaction occurs because chlorine is more reactive than bromine.
+Which of the statements explaining why chlorine is more reactive than bromine is not true?
+A) chlorine has smaller atoms than bromine
+B) chlorine atoms gain electrons more easily
+C) chlorine atoms lose electrons more easily
+D) chlorine atoms have fewer electron shells than bromine atoms
+
+[1]
+
+Question 32 (1 mark)
+(a)
+
+A student making copper sulfate crystals used the method below.
+
+Unreacted copper carbonate was left over as it had been added in excess.
+What is the reason for adding it in excess and what would step 3 be of this method?
+A) Reason: to produce a greater amount of salt crystals Step 3: filtration
+B) Reason: to improve the colour intensity of the crystals Step 3: crystallisation
+C) Reason: to ensure all the acid reacts Step 3: filtration
+D) Reason: to increase the rate of reaction Step 3: evaporation
+
+[1]
+
+Question 33 (1 mark)
+(a)
+
+[1]
+
+A pure sample of molten lead(II) chloride was electrolysed.
+
+Which is the correct statement about this electrolysis?
+A) The lamp would stop working soon after the heat was removed
+B) A silvery liquid would be seen at the positive electrode
+C) Chlorine is formed at the negative electrode
+D) Hydrogen gas is formed at the negative electrode
+
+Question 34 (1 mark)
+(a)
+
+[1]
+
+The actual molar enthalpy change, ΔH, for the reaction of sodium oxide with water, is -238 kJ/mol.
+Experimental results from calorimetry in labs give less exothermic results.
+Which of the following does not explain this difference?
+A) The reaction may have been incomplete
+B) Heat energy also transfers to the surroundings
+C) The calorimetry equipment also has a specific heat capacity, and so affects the final temperature
+reading
+D) The student measured the initial temperature of the water as lower than the actual value.
+
+Question 35 (1 mark)
+(a)
+
+[1]
+
+Butanol is a member of the homologous series of alcohols.
+Which of the following is not a formula of butanol?
+A) C<sub>4</sub>H<sub>10</sub>O
+B) C<sub>4</sub>H<sub>10</sub>OH
+C) C<sub>4</sub>H<sub>9</sub>OH
+D) CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>OH
+
+Question 36 (1 mark)
+(a)
+
+[1]
+
+A neutralisation reaction occurs between ammonia and sulfuric acid.
+How does the ammonia act in this reaction?
+A) As a proton donor
+B) As an electron acceptor
+C) As a proton acceptor
+D) As a neutron donor
+
+Question 37 (1 mark)
+(a)
+
+[1]
+
+Which statement describes metallic bonding?
+A) Electrostatic attraction between atoms
+B) Electrostatic attraction between positively charged particles and delocalised electrons
+C) Electrostatic attraction between oppositely charged ions
+D) Electrostatic attraction between the nuclei of two atoms and a shared pair of electrons
+
+Question 38 (1 mark)
+(a)
+
+[1]
+
+Magnesium metal reacts with an excess of hydrochloric acid solution to form magnesium chloride
+and hydrogen:
+Mg (s) + 2HCl (aq) → MgCl2 (aq) + H2 (g)
+Which of the following will not increase the rate of this reaction?
+A) Increase the temperature of the acid
+B) Increase the surface area of the pieces of magnesium
+C) Increase the concentration of the hydrochloric acid
+D) Increase the volume of hydrochloric acid solution used
+
+Question 39 (1 mark)
+(a)
+
+[1]
+
+Which of these statements about catalysts is not correct?
+A) The mass of the catalyst at the start of the reaction is the same at the end of the reaction
+B) Catalysts increase the rate of reaction but do not increase the yield
+C) Catalysts are not chemically changed during the course of the reaction
+D) Catalysts provide an alternative reaction pathway which has a lower activation energy
+
+Question 40 (1 mark)
+(a)
+
+[1]
+
+What is the relative formula mass of hydrated magnesium carbonate, MgCO3.2H2O?
+[A*r *of Mg= 24; H= 1; O=16; C=12]
+A) 84
+B) 102
+C) 112
+D) 120
+
+Question 41 (1 mark)
+(a)
+
+Methane and bromine react to form bromomethane and hydrogen bromide.
+What does this reaction occur in the presence of?
+A) Infrared radiation
+B) Visible light
+C) Ultraviolet radiation
+D) Ozone
+
+[1]
+
+Question 42 (1 mark)
+(a) what
+
+[1]
+
+The formula for ethanoic acid can be written in different ways:
+
+What are the correct names for the different ways to represent formulae?
+Formula 1
+
+Formula 2
+
+Formula 3
+
+☐
+
+A
+
+molecular formula
+
+structural formula
+
+displayed formula
+
+☐
+
+B
+
+structural formula
+
+molecular formula
+
+displayed formula
+
+☐
+
+C
+
+molecular formula
+
+empirical formula
+
+structural formula
+
+☐
+
+D
+
+empirical formula
+
+structural formula
+
+molecular formula
+
+Question 43 (1 mark)
+(a)
+
+[1]
+
+Which statement is incorrect about testing a sample of suspected pure water?
+A) Anhydrous copper(II) sulfate would turn blue when the solution was added
+B) The resulting hydrated copper(II) sulfate would have the chemical formula
+CuSO<sub>4</sub>.H<sub>2</sub>O
+C) The boiling point should be 100 <sup>o</sup>C
+D) The boiling point should be sharp, not gradual
+
+Question 44 (1 mark)
+(a)
+
+What is the maximum volume, in dm3, of chlorine gas at rtp that can be obtained from 17.6 tonnes
+of molten potassium chloride?
+[1 tonne = 106 g]
+[M*r *of KCl = 74.5]
+[Assume that the molar volume of chlorine at rtp is 24 dm3/mol]
+A) 2.83
+B) 5.67
+C) 2.83 x 10<sup>6</sup>
+D) 5.67 x 10<sup>6</sup>
+
+[1]
+
+Question 45 (1 mark)
+(a)
+
+[1]
+
+The diagram shows the arrangement of ions in copper metal.
+
+Which statement explains a physical property of copper?
+A) Copper can conduct electricity as its ions are able to carry charge around its structure
+B) Copper has a high melting point as the metal ions are strongly attracted to each other
+C) Copper is malleable as the layers of ions can slide over each other
+D) Copper is malleable as the metallic bonds between the layers of ions break easily
+
+Question 46 (1 mark)
+(a)
+
+[1]
+
+How much energy is needed to break all the bonds in 0.025 g of nitrogen gas?
+The relative atomic mass, Ar, of N is 14.
+Bond
+
+Bond energy in kJ/mol
+
+N ≡N
+
+945
+
+A) 1701 J
+B) 1701 kJ
+C) 844 J
+D) 844 kJ
+
+Question 47 (1 mark)
+(a)
+
+What is the pH of a weak acid?
+A) 2
+B) 6
+C) 7
+D) 11
+
+[1]
+
+Question 48 (1 mark)
+(a)
+
+A metallic lattice structure is shown in the diagram.
+
+What are the missing labels, X & Y?
+A) X:positively charged metal ionsY:negatively charged ions
+B) X:positively charged protonsY:negatively charged non-metal ions
+C) X:positively charged metal ionsY:delocalised electrons
+D) X:positively charged protonsY:negatively charged electrons
+
+[1]
+
+Question 49 (1 mark)
+(a)
+
+[1]
+
+Some students investigate the rate of reaction between marble chips and hydrochloric acid.
+The diagram shows the apparatus they use.
+
+What is the purpose of the cotton wool?
+A) To prevent carbon dioxide gas from escaping
+B) To ensure the mass stays constant throughout the experiment
+C) To prevent the acid from leaving the conical flask
+D) To prevent oxygen entering the conical flask
+
+Question 50 (1 mark)
+(a)
+
+Calcium carbonate reacts with hydrochloric acid to produce calcium chloride, water and carbon
+dioxide:
+CaCO3 (s) + 2HCl (aq) → CaCl2 (aq) + H2O (l) + CO2 (g)
+Which statement is not true if the temperature of the reaction decreases?
+A) The frequency of the collisions between particles decreases
+B) The collisions are less energetic
+C) The activation energy increases
+D) There are fewer particles with the minimum energy to react
+
+[1]
+
+Question 51 (1 mark)
+(a)
+
+[1]
+
+Which is true about chemical energy changes?
+Reaction type
+
+Energy flows
+
+Temperature of surroundings
+
+A
+
+exothermic
+
+to the surroundings
+
+increases
+
+B
+
+exothermic
+
+from the surroundings
+
+decreases
+
+C
+
+endothermic
+
+to the surroundings
+
+decreases
+
+D
+
+endothermic
+
+from the surroundings
+
+increases
+
+Question 52 (1 mark)
+(a)
+
+The graph below shows a reaction profile for the reaction between methane and oxygen.
+
+What does the label X represent?
+A) Activation Energy
+B) Overall energy change
+C) Reactants
+D) Progress of the reaction
+
+[1]
+
+Question 53 (1 mark)
+(a)
+
+[1]
+
+A student carried out a titration to investigate the volume of sulfuric acid needed to neutralise
+25.0 cm3 of potassium hydroxide.
+The diagram shows the equipment they used.
+
+Which piece of apparatus would the student use to measure out 25.0 cm3 of potassium
+hydroxide?
+A) Pipette
+B) Measuring cylinder
+C) Beaker
+D) Conical flask
+
+Question 54 (1 mark)
+(a)
+
+What is the formula of potassium sulfate?
+A) K<sub>2</sub>(SO<sub>4</sub>)<sub>2</sub>
+B) K(SO<sub>4</sub>)<sub>2</sub>
+C) K<sub>2</sub>SO<sub>4</sub>
+D) KSO<sub>4</sub>
+
+[1]
+
+Question 55 (1 mark)
+(a)
+
+[1]
+
+Methyl orange is used as an indicator.
+What is the colour of it in an alkaline solution?
+A) Yellow
+B) Orange
+C) Red
+D) Blue
+
+Question 56 (1 mark)
+(a)
+
+[1]
+
+The steps below briefly describe how to carry out a titration with sodium hydroxide and
+hydrochloric acid.
+1. Add a few drops of a suitable indicator to the solution
+2. Record the final volume of HCl and repeat to obtain concordant results
+3. Fill the burette with HCl and record the volume
+4. Measure 25 cm3 sodium hydroxide solution into a conical flask using a pipette
+5. Add the HCl to sodium hydroxide until the end point is reached
+What is the correct order of steps?
+A) 1, 3, 4, 5, 2
+B) 4, 1,3, 5, 2
+C) 4, 2, 5, 1, 3
+D) 3, 1, 5, 2, 4
+
+Question 57 (1 mark)
+(a)
+
+Which metal is most suitable for galvanizing iron?
+A) Lead
+B) Copper
+C) Sodium
+D) Zinc
+
+[1]
+
+Question 58 (1 mark)
+(a)
+
+[1]
+
+What is the electronic configuration of silicon?
+
+A) 2,4
+B) 2,2,4
+C) 2,2,8
+D) 2,8,4
+
+Question 59 (1 mark)
+(a)
+
+[1]
+
+Cars running on fossil fuels contribute a high amount of pollutants into the atmosphere, one of
+which is carbon dioxide.
+Which other gas is produced by the internal combustion engine in a car?
+A) Ammonia
+B) Argon
+C) Oxides of nitrogen
+D) Nitrogen
+
+Question 60 (1 mark)
+(a)
+
+Which of the following is not a feature of a homologous series?
+A) Compounds have the same functional group
+B) Compounds have the same physical properties
+C) Compounds have the same general formula
+D) Compounds have similar chemical properties
+
+[1]
+
+Question 61 (1 mark)
+(a)
+
+[1]
+
+In a laboratory, ethyl ethanoate can be prepared by heating ethanol, ethanoic acid and sulfuric
+acid.
+The following reaction occurs:
+ethanoic acid + ethanol⇌ethyl ethanoate + water
+Which of the following terms cannot be used to describe the reaction that takes place?
+A) Esterification
+B) Condensation
+C) Reversible
+D) Thermal decomposition
+
+Question 62 (1 mark)
+(a)
+
+[1]
+
+Calculate the concentration, in mol / dm3, of a solution produced when 6.9 g of potassium
+carbonate, K2CO3, dissolves in 200 cm3 of water.
+[M*r *of K2CO3 = 138 ]
+A) 0.05 mol / dm<sup>3</sup>
+B) 0.20 mol / dm<sup>3</sup>
+C) 0.25 mol / dm<sup>3</sup>
+D) 0.50 mol / dm<sup>3</sup>
+
+Question 63 (1 mark)
+(a)
+
+Which of these formulae is that of an alkane?
+A) C<sub>6</sub>H<sub>11</sub>
+B) C<sub>8</sub>H<sub>16</sub>
+C) C<sub>10</sub>H<sub>22</sub>
+D) C<sub>12</sub>H<sub>28</sub>
+
+[1]
+
+Question 64 (1 mark)
+(a)
+
+[1]
+
+The diagram shows some processes involved in the oil industry.
+
+Which process represents cracking?
+
+Question 65 (1 mark)
+(a)
+
+[1]
+
+Ammonia, NH3, is a small covalent molecule.
+How many non-bonding, outer-shell electrons are present in one molecule of ammonia?
+A) 0
+B) 2
+C) 5
+D) 6
+
+Question 66 (1 mark)
+(a)
+
+A displacement reaction occurs between zinc and copper chloride.
+Which half equation correctly shows the change that zinc undergoes?
+A) Zn<sup>2+</sup>(aq) + 2e<sup>- </sup>→ Zn (s)
+B) Zn (s) + 2e<sup>- </sup>→ Zn<sup>2+</sup> (aq)
+C) Zn<sup>2+ </sup>(aq) → Zn (s) + 2e<sup>-</sup>
+D) Zn<sup> </sup>(s) <sup> </sup>→ Zn<sup>2+</sup> (aq) + 2e<sup>-</sup>
+
+[1]
+
+Question 67 (1 mark)
+(a)
+
+[1]
+
+A student draws the reaction profiles shown below for a reaction both with and without a catalyst.
+
+Which statement is correct about the reaction profile?
+A) **X** shows the activation energy of the catalysed reaction
+B) **Z** shows Δ*H*
+C) The activation energy of the uncatalysed reaction pathway is less than that of the catalysed
+reaction pathway
+D) The reaction is endothermic
+
+Question 68 (1 mark)
+(a)
+
+Which statement is true about exothermic and endothermic reactions?
+A) The products have more energy than the reactants in an exothermic reaction
+B) The products have more energy than the reactants in an endothermic reaction
+C) The activation energy for an exothermic reaction is always larger than the activation energy for an
+endothermic reaction
+D) Most reactions are endothermic
+
+[1]
+
+Question 69 (1 mark)
+(a)
+
+[1]
+
+The diagram shows the structures of three substances that have giant covalent structures.
+
+Which does not provide the correct explanation of the property of a substance?
+Substance
+
+Property
+
+Explanation
+
+A
+
+graphite
+
+conducts
+electricity
+
+its ions are free to move through the layers
+
+B
+
+diamond
+
+hard
+
+each carbon atom is covalently bonded to four other carbon
+atoms
+
+C
+
+silicon
+dioxide
+
+high melting
+point
+
+it has many strong covalent bonds which require a large amount
+of energy to break
+
+D
+
+graphite
+
+soft
+
+its layers can slide over each other
+
+Question 70 (1 mark)
+(a)
+
+[1]
+
+A reactivity series can be deduced by observing the reactions of metals with water and sulfuric
+acid.
+Four metals were added to water and sulfuric acid and the results recorded below.
+Metal
+
+Reaction with water
+
+Reaction with dilute sulfuric acid
+
+W
+
+no reaction
+
+no reaction
+
+X
+
+very slow reaction
+
+reacts quickly
+
+Y
+
+no reaction
+
+reacts slowly
+
+Z
+
+reacts quickly
+
+reacts violently
+
+What is the order of reactivity starting with the least reactive?
+A) W, Y, X, Z
+B) Y, W, X, Z
+C) W, Y, Z, X
+D) Z, X, Y, W
+
+Question 71 (1 mark)
+(a)
+
+The diagram below represents a sample of air:
+
+What correctly describes this sample of air?
+A) an element
+B) a compound
+C) a mixture of elements
+D) a mixture of compounds
+
+[1]
+
+Question 72 (1 mark)
+(a)
+
+The diagram shows the displayed formula of succinic acid.
+
+What is the empirical formula for this compound?
+A) C<sub>4</sub>H<sub>6</sub>O<sub>4</sub>
+B) CH<sub>2</sub>O
+C) C<sub>2</sub>H<sub>3</sub>O<sub>2</sub>
+D) CHO
+
+[1]
+
+Question 73 (1 mark)
+(a)
+
+When solid sodium oxide is added to water, an exothermic reaction occurs:
+Na2O (s) + H2O (l)→2NaOH (aq)
+A student uses the apparatus below to measure the temperature change of the reaction:
+
+The student records the following results for the reaction:
+mass of sodium oxide used = 3.0 g
+volume of water used = 50 cm3
+starting temperature of mixture = 19.5 oC
+maximum temperature of mixture = 30.5 oC
+What is the heat energy, Q, released in this experiment, in J?
+c = 4.2 J/g/ oC
+mass of 1 cm3 of water = 1 g
+A) Q = 2,310 J
+B) Q = 2,450 J
+C) Q = 139 J
+D) Q = 126 J
+
+[1]
+
+Question 74 (1 mark)
+(a)
+
+[1]
+
+The chemical equation for the preparation of lead(II) sulfate is written below.
+Pb(NO3)2 () + Na2SO4 () → PbSO4 () + 2NaNO3 ()
+What are the state symbols for each substance in this reaction?
+A) aq, aq, s, aq
+B) aq, aq, s, s
+C) s, aq, aq, s
+D) s, aq, s, aq
+
+Question 75 (1 mark)
+(a)
+
+[1]
+
+How many moles are present in 9 kg of glucose, C6H12O6?
+[M*r *of C6H12O6 = 180 ]
+A) 0.02 mol
+B) 0.05 mol
+C) 20 mol
+D) 50 mol
+
+Question 76 (1 mark)
+(a)
+
+[1]
+
+Ammonium ions, NH4+, in a solution can be identified by a chemical test.
+Which statement is incorrect about the test for the ammonium ion, NH4+?
+A) Add sodium hydroxide solution
+B) A positive test produces a pungent-smelling gas
+C) Use dry red litmus paper to test the gas produced
+D) The litmus paper should turn blue if NH<sub>4</sub><sup>+</sup> ions were present
+
+Question 77 (1 mark)
+(a)
+
+Astatine is found below iodine in Group 7 of the Periodic Table.
+What is its formula and state at room temperature?
+A) Formula: At State at room temperature: gas
+B) Formula: At State at room temperature: solid
+C) Formula: At<sub>2</sub>State at room temperature: liquid
+D) Formula: At<sub>2</sub>State at room temperature: solid
+
+[1]
+
+Question 78 (1 mark)
+(a)
+
+[1]
+
+Which diagram shows the electronic configuration of a nitrogen atom?
+
+Question 79 (1 mark)
+(a)
+
+The diagram shows four pieces of apparatus for separating mixtures:
+
+Which one would be most suitable for separating a mixture of alcohol and water?
+
+[1]
+
+Question 80 (1 mark)
+(a)
+
+[1]
+
+Ethanol is produced by fermentation.
+Which of the following conditions is not required to produce ethanol by fermentation?
+A) A temperature of between 15 <sup>o</sup>C and 35 <sup>o</sup>C
+B) The addition of yeast
+C) The presence of oxygen
+D) Sugar or starch dissolved in water
+
+Question 81 (1 mark)
+(a)
+
+Metals exists in giant metallic structures which have many strong metallic bonds.
+Which of these properties of metals can be explained by this feature of their structure?
+A) Good conductors of electricity
+B) Malleable and ductile
+C) High melting point
+D) High density
+
+[1]
+
+Question 82 (1 mark)
+(a)
+
+[1]
+
+Solutions of carboxylic acids react with magnesium to form a salt and hydrogen gas.
+Using the apparatus and method below, a student investigates how the time to collect 20 cm3 of
+hydrogen gas varies with different carboxylic acid solutions.
+
+Method:
+pour the carboxylic acid solution into a conical flask
+add some magnesium into the carboxylic acid solution
+immediately connect the gas syringe and start a timer
+record the time taken to collect 20 cm3 of hydrogen gas
+repeat for different carboxylic acid solutions
+Which of the following is not a variable that should be controlled?
+A) The mass of magnesium
+B) The volume of acid
+C) The type of acid
+D) The concentration of acid
+
+Question 83 (1 mark)
+(a)
+
+[1]
+
+The displayed formulae of an organic compound is shown below.
+
+What is the empirical formula of this compound?
+A) CHBr
+B) CH<sub>2</sub>Br
+C) C<sub>2</sub>H<sub>4</sub>Br<sub>2</sub>
+D) CH<sub>4</sub>Br
+
+Question 84 (1 mark)
+(a)
+
+[1]
+
+A student was preparing the insoluble salt lead(II) sulfate from solutions of lead(II) nitrate and
+potassium sulfate.
+Why could the student not use lead(II) carbonate to prepare this salt?
+A) It has a high melting point
+B) It is insoluble in water
+C) it is toxic
+D) It is flammable
+
+Question 85 (1 mark)
+(a)
+
+[1]
+
+What is the correct chemical formula of butane?
+A) C<sub>3</sub>H<sub>6</sub>
+B) C<sub>3</sub>H<sub>8</sub>
+C) C<sub>4</sub>H<sub>8</sub>
+D) C<sub>4</sub>H<sub>10</sub>
+
+Question 86 (1 mark)
+(a)
+
+A student wants to investigate the effect of surface area on the rate of reaction between marble
+chips and dilute acid.
+What pieces of apparatus could be used for this investigation?
+A) Burette, beaker, pipette
+B) Ruler, thermometer, test tube
+C) Measuring cylinder, delivery tube, stopwatch
+D) Filter funnel, evaporating basin, Bunsen burner
+
+[1]
+
+Question 87 (1 mark)
+(a)
+
+[1]
+
+Methanoic acid and ethanol react in the presence of an acid to form an ester.
+Name the ester that will be formed.
+A) Methyl methanoate
+B) Methyl ethanoate
+C) Ethyl methanoate
+D) Ethyl ethanoate
+
+Question 88 (1 mark)
+(a)
+
+[1]
+
+When ethanol is heated with potassium dichromate(VI) and one other reagent, a reaction occurs.
+Which statement about the reaction is correct?
+A) The colour change that occurs during the reaction is from green to orange
+B) The other reagent is sulfuric acid
+C) The product of the reaction is ethene
+D) This is an example of a displacement reaction
+
+Question 89 (1 mark)
+(a)
+
+The structures of four organic compounds are shown.
+
+Which one does not show the displayed formula of the compound?
+
+[1]
+
+Question 90 (1 mark)
+(a)
+
+[1]
+
+Ethane and bromine can react in the following reaction:
+
+What name is given to this type of reaction?
+A) Substitution
+B) Addition
+C) Dehydration
+D) Thermal decomposition
+
+Question 91 (1 mark)
+(a)
+
+The structures of six organic compounds are shown.
+
+Which two compounds are isomers of one another?
+A) B and D
+B) A and C
+C) C and F
+D) C and E
+
+[1]
+
+Question 92 (1 mark)
+(a)
+
+[1]
+
+The following elements are found in group 0 of the periodic table.
+He Ne Ar Kr Xe Rn
+What explains their similar chemical and physical properties?
+A) They have the same number of valence electrons
+B) They are all gases
+C) They have the same number of protons and electrons
+D) They have full outer shells
+
+Question 93 (1 mark)
+(a)
+
+[1]
+
+Kerosene, bitumen and diesel oil are fractions obtained through the fractional distillation of crude
+oil.
+Which of the following shows the correct use of each fraction?
+kerosene
+
+bitumen
+
+fuel oil
+
+☐
+
+A
+
+fuel for aircraft
+
+surfacing roads
+
+in power stations
+
+☐
+
+B
+
+fuel for trains
+
+in power stations
+
+fuel for aircraft
+
+☐
+
+C
+
+in domestic heating
+
+surfacing roads
+
+in power stations
+
+☐
+
+D
+
+fuel for aircraft
+
+in domestic cooking
+
+in domestic cooking
+
+Question 94 (1 mark)
+(a)
+
+[1]
+
+The table below shows the properties of four substances, W,X, Y and Z.
+Substance
+
+Melting point
+
+Boiling point
+
+/o C
+
+/o C
+
+Conducts electricity when
+
+solid
+
+liquid
+
+W
+
+3410
+
+5930
+
+yes
+
+yes
+
+X
+
+801
+
+1413
+
+no
+
+yes
+
+Y
+
+3550
+
+4830
+
+no
+
+no
+
+Z
+
+-91
+
+98
+
+no
+
+no
+
+Use the information in the table to identify the substance that is an ionic compound.
+A) substance **W**
+B) substance **X**
+C) substance **Y**
+D) substance **Z**
+
+Question 95 (1 mark)
+(a)
+
+[1]
+
+When zinc oxide reacts with dilute nitric acid, zinc nitrate is produced. The equation for the
+reaction is:
+ZnO + 2HNO3 → Zn(NO3)2 + H2O
+0.200 mol of nitric acid reacts with excess zinc oxide. A mass of 15.3 g of zinc nitrate is produced.
+Calculate the percentage yield of zinc nitrate. [Mr of zinc nitrate = 189]
+A) 26%
+B) 37%
+C) 81%
+D) 65%
+
+Question 96 (1 mark)
+(a)
+
+[1]
+
+A student wanted to make 15.0 g of zinc chloride. The equation for the reaction is:
+ZnCO3 + 2HCl → ZnCl2 + CO2 + H2O
+What mass of zinc carbonate should the student add to the hydrochloric acid to make 15.0 g of
+zinc chloride?
+[A*r *of C = 12; Zn = 65; O = 16; Cl = 35.5; H = 1]
+A) 11.0 g
+B) 13.8 g
+C) 15.0 g
+D) 22.0 g
+
+Question 97 (1 mark)
+(a)
+
+[1]
+
+This table gives information about some of the halogens.
+Halogen
+
+Physical state at room temperature
+
+fluorine
+
+gas
+
+chlorine
+bromine
+
+Colour
+pale green
+
+liquid
+
+red-brown
+
+What is the correct missing physical state and colour?
+A) Physical state at room temperature: gas Colour: colourless
+B) Physical state at room temperature: liquid Colour: colourless
+C) Physical state at room temperature: gas Colour: pale yellow
+D) Physical state at room temperature: liquid Colour: pale yellow
+
+Question 98 (1 mark)
+(a)
+
+A solution containing carbonate ions, CO32-, can be reacted with hydrochloric acid, HCl, and a
+gaseous product collected and tested.
+Which is a correct positive test result for a product of this reaction?
+A) A gas is produced which causes cloudiness in limewater
+B) A gas is produced which makes a squeaky pop sound when a lit splint is introduced
+C) A gas is produced which bleaches damp litmus paper
+D) A gas is produced which re-ignites a glowing splint
+
+[1]
+
+Question 99 (1 mark)
+(a)
+
+[1]
+
+Ethyl ethanoate can be prepared by heating a mixture of ethanoic acid, ethanol and concentrated
+sulfuric acid.
+Which statement about this reaction is not correct?
+A) Concentrated sulfuric acid acts as catalyst
+B) The ester distills first due to its low boiling point
+C) The mixture is heated using a water bath not a Bunsen burner
+D) The ethyl ethanoate collected is pure
+
+Question 100 (1 mark)
+(a)
+
+[1]
+
+Halon 1301 is a compound used in some fire extinguishers.
+Halon 1301 has the percentage composition by mass of 8.05% C, 53.69% Br and 38.26% F.
+Calculate the empirical formula of Halon 1301.
+[Ar of C = 12; Br = 80; F = 19]
+A) CBrF
+B) CBrF<sub>3</sub>
+C) CBr<sub>3</sub>F
+D) CBr<sub>2</sub>F<sub>2</sub>
+
+Question 101 (1 mark)
+(a)
+
+[1]
+
+A student adds a few drops of dilute nitric acid followed by a few drops of silver nitrate solution to
+a test tube containing an unknown colourless solution. A white precipitate is seen.
+What ions could be present in the solution?
+A) Ammonium ions
+B) Chloride ions
+C) Sulfate ions
+D) Magnesium ions
+
+Question 102 (1 mark)
+(a)
+
+[1]
+
+The reaction between aqueous chlorine and aqueous potassium bromide results in the formation
+of an orange solution.
+Which is the correct statement about this reaction?
+A) Bromine is more reactive than chlorine
+B) Potassium chloride is responsible for the orange colour
+C) Chlorine displaces bromine from potassium bromide
+D) Bromide ions gain electrons from chlorine
+
+Question 103 (1 mark)
+(a)
+
+[1]
+
+Which is of these is true about the manufacture of ethanol?
+A) Fermentation has a 100% atom economy
+B) The hydration of ethene has a 100% atom economy
+C) Fermentation produces pure ethanol
+D) Alkenes are reactive so the hydration of ethene occurs readily at room temperature
+
+Question 104 (1 mark)
+(a)
+
+[1]
+
+Butanoic acid behaves like other acids.
+Which is the correct statement about the reactions of butanoic acid?
+A) It reacts with sodium hydroxide in a neutralisation reaction to form a salt and hydrogen gas
+B) In a reaction with calcium carbonate, a salt and water are formed
+C) It reacts with calcium to form a salt and oxygen gas
+D) When it reacts with magnesium carbonate, fizzing is observed
+
+Question 105 (1 mark)
+(a)
+
+Which element, T, Q, R, or M has the electronic configuration 2,8,3?
+
+A) element M
+B) element Q
+C) element T
+D) element R
+
+[1]
+
+Question 106 (1 mark)
+(a)
+
+A student was investigating the electrolysis of zinc chloride.
+
+What is the correct reason for electrolysis not working?
+A) Solid zinc chloride has been used
+B) The electrodes don't conduct electricity
+C) The power supply is not connected properly
+D) The crucible is too small to allow ions to flow
+
+[1]
+
+Question 107 (1 mark)
+(a)
+
+[1]
+
+The table below shows the properties of four substances, W,X, Y and Z.
+Substance
+
+Melting point
+
+Boiling point
+
+Conducts electricity when
+
+/o C
+
+/o C
+
+solid
+
+liquid
+
+W
+
+3410
+
+5930
+
+yes
+
+yes
+
+X
+
+801
+
+1413
+
+no
+
+yes
+
+Y
+
+3550
+
+4830
+
+no
+
+no
+
+Z
+
+-91
+
+98
+
+no
+
+no
+
+Use the information in the table to identify the substance that is a metal.
+A) Substance W
+B) Substance X
+C) Substance Y
+D) Substance Z
+
+Question 108 (1 mark)
+(a)
+
+[1]
+
+Incomplete combustion occurs when there is insufficient oxygen for a reaction.
+Which are the two main substances formed during incomplete combustion, aside from water?
+A) Particulates and carbon monoxide
+B) Soot and sulfur dioxide
+C) Carbon dioxide and carbon monoxide
+D) Oxides of nitrogen and sulfur dioxide
+
+Question 109 (1 mark)
+(a)
+
+[1]
+
+What is the empirical formula of butanoic acid?
+A) C<sub>3</sub>H<sub>7</sub>COOH
+B) C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>
+C) C<sub>2</sub>H<sub>4</sub>O
+D) C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>
+
+Question 110 (1 mark)
+(a)
+
+Which of the following dot-and-cross diagrams shows the correct arrangement of electrons in
+lithium sulfide?
+
+[1]
+
+Question 111 (1 mark)
+(a)
+
+[1]
+
+Hydrogen peroxide, H2O2, quickly decomposes to produce water and oxygen when a catalyst is
+added to the solution:
+2H2O2 (aq) → 2H2O (l) + O2 (g)
+The volume of gas produced was measured and is shown in the graph below:
+
+Which statement is not true for this reaction?
+A) The reaction finishes after 30 seconds
+B) The rate of reaction speeds up during the reaction
+C) The final volume of gas produced is 60 cm<sup>3</sup>
+D) The concentration of the hydrogen peroxide decreases during the reaction
+
+Question 112 (1 mark)
+(a)
+
+What is the mass of 0.25 moles of hydrated copper(II) sulfate, CuSO4.5H2O?
+Relative formula mass (Mr): H2O = 18 CuSO4 = 160
+A) 40.0 g
+B) 44.5 g
+C) 62.5 g
+D) 1000 g
+
+[1]
+
+Question 113 (1 mark)
+(a)
+
+[1]
+
+Silicon dioxide, SiO2, and silicon(IV) chloride, SiCl4, are both covalently bonded compounds.
+The table below shows the melting point and boiling point of these compounds.
+Compound
+
+Melting point / o C
+
+Boiling point / o C
+
+Silicon dioxide
+
+1710
+
+2230
+
+Silicon(IV) chloride
+
+-69
+
+58
+
+Which statement is not correct about the two compounds?
+A) at room temperature silicon dioxide is a solid and silicon(IV) chloride is a liquid
+B) silicon dioxide has a giant covalent structure
+C) silicon(IV) chloride has a lower melting point as it has fewer covalent bonds to overcome
+D) silicon(IV) chloride has a simple molecular structure
+
+Question 114 (1 mark)
+(a)
+
+[1]
+
+Why can esters be used as food flavourings?
+A) They are volatile
+B) They have distinctive colours
+C) They have fragrant odours
+D) They are insoluble in water
+
+Question 115 (1 mark)
+(a)
+
+A reaction took place between iron sulfate and magnesium.
+iron(II) sulfate + magnesium → magnesium sulfate + iron
+Which species has been oxidised?
+A) Iron
+B) Magnesium
+C) Sulfur
+D) None of the above
+
+[1]
+
+Question 116 (1 mark)
+(a)
+
+A student set up the following apparatus to investigate the colours in three different food
+colourings.
+
+What are the stationary and mobile phases for this experiment?
+A) stationary: chromatography papermobile: water
+B) stationary: beakermobile: start line
+C) stationary: watermobile: food colourings
+D) stationary: start linemobile: chromatography paper
+
+[1]
+
+Question 117 (1 mark)
+(a)
+
+[1]
+
+The table shows the displayed formulae of some organic compounds.
+
+Which two are not classed as alkanes?
+A) R and S
+B) S and T
+C) P and Q
+D) R and T
+
+Question 118 (3 marks)
+(a) suggest
+
+[3]
+
+Refractory bricks are special bricks used in lining furnaces, kilns, and fireplaces.
+Magnesium oxide can be used to make refractory bricks.
+Suggest why magnesium oxide is suitable for refractory bricks.
+Give a reason, referring to the structure and bonding.
+
+Question 119 (3 marks)
+(a) explain
+
+Explain, in terms of electron configuration, why fluorine is more reactive than chlorine.
+
+[3]
+
+Question 120 (4 marks)
+(a) give
+
+[1]
+
+The diagram shows part of the Periodic Table, with elements represented by the letters L, M, Q, R
+and T.
+The letters in the diagram represent elements but are not their chemical symbols.
+
+Give the letter from the diagram that represents a noble gas.
+
+(b) state
+
+[1]
+
+Elements L and M are in the same group.
+State why they have similar chemical reactions.
+
+(c) explain
+
+An atom of element Q has 31 protons.
+Use this information to explain how you can determine the number of protons in an atom of
+element R.
+
+[2]
+
+Question 121 (4 marks)
+(a) multiple
+
+[3]
+
+An ester is formed in the following dynamic equilibrium reaction between ethanol and propanoic
+acid:
+CH3CH2OH + CH3CH2COOH ⇌ CH3CH2COOCH2CH3 + H2O
+i) Name the ester produced.
+[1]
+ii) State two characteristics of a dynamic equilibrium.
+[2]
+
+(b)
+
+[1]
+
+Which structure represents part of an ester molecule but not part of a carboxylic acid molecule?
+
+Question 122 (4 marks)
+(a) complete
+
+The table contains statements about elements in the Periodic Table.
+Complete the missing information.
+[4]
+Statement
+The name of the element with atomic number 18.
+The name of the element with relative atomic mass 7.
+The name of the element in Group 3, Period 4.
+The electronic configuration of the element phosphorus.
+
+[4]
+
+Question 123 (4 marks)
+(a)
+
+[1]
+
+The table shows some properties of four substances, P, Q, R and S.
+Substance
+
+Melting Point /oC
+
+Boiling Point /oC
+
+Conducts electricity when
+
+solid
+
+liquid
+
+P
+
+3410
+
+5930
+
+yes
+
+yes
+
+Q
+
+734
+
+1435
+
+no
+
+yes
+
+R
+
+-95
+
+69
+
+no
+
+no
+
+S
+
+2507
+
+3900
+
+no
+
+no
+
+Use the information in the table to answer the following questions. You may use each letter once,
+more than once or not at all.
+Choose a substance that is a solid at 3000 °C.
+A) substance **P**
+B) substance **Q**
+C) substance **R**
+D) substance **S**
+(b)
+
+[1]
+
+Choose a substance that is a liquid at 25 °C.
+A) substance **P**
+B) substance **Q**
+C) substance **R**
+D) substance **S**
+(c)
+
+[1]
+
+Choose a substance that is an ionic compound.
+A) substance **P**
+B) substance **Q**
+C) substance **R**
+D) substance **S**
+(d)
+
+Choose a substance that is a metal.
+A) substance **P**
+B) substance **Q**
+C) substance **R**
+D) substance **S**
+
+[1]
+
+Question 124 (4 marks)
+(a)
+
+[1]
+
+Sulfuric acid can be used to make a soluble salt when reacted with a base.
+All acids contain the same ion. What is the formula of this ion?
+A) H<sup>+</sup>
+B) OH<sup>-</sup>
+C) S<sup>2-</sup>
+D) Na<sup>+</sup>
+(b)
+
+[1]
+
+Sulfuric acid reacts with copper(II) oxide to form a salt. What is the name of the salt formed?
+A) Copper(II) chloride
+B) Copper(II) nitrate
+C) Copper(II) sulfate
+D) Copper(II) citrate
+(c) write
+
+[1]
+
+The steps below show the method the student carried out to make the salt using the reactants in
+part b).
+The steps shown are not in the correct order.
+step J
+
+Leave the solution to cool
+
+step K
+
+Filter the mixture and transfer the filtrate to an evaporating basin
+
+step L
+
+Add copper(II) oxide in excess
+
+step M
+
+Heat the acid
+
+step N
+
+Evaporate the water until crystals appear
+
+Write the steps in the correct order.
+Some have been completed for you.
+first step
+
+last step
+
+M
+
+J
+
+(d) explain
+
+Explain why the copper(II) oxide was added in excess to the sulfuric acid.
+
+[1]
+
+Question 125 (4 marks)
+(a)
+
+[1]
+
+Which best describes a covalent bond?
+A) Sea of delocalised electrons and positive metal ions
+B) Attraction between positive and negative ions
+C) Shared pair of electrons between two non-metal atoms
+D) Weak intermolecular forces
+(b)
+
+[1]
+
+Which of the following substances will bond covalently?
+A) Sodium oxide
+B) Sodium
+C) Sodium bromide
+D) Oxygen
+(c) complete
+
+[1]
+
+Hydrogen is an atom which has one electron in the outermost shell. Complete the dot-and-cross
+diagram to show the bonding in a hydrogen molecule.
+
+(d) why
+
+Hydrogen is a gas at room temperature.
+Why is hydrogen a gas at room temperature?
+Tick ( ) one box
+The intermolecular forces are strong
+The bonding in hydrogen is weak
+The intermolecular forces are weak
+
+[1]
+
+Question 126 (4 marks)
+(a) complete
+
+[1]
+
+Butanoic acid belongs to the homologous series carboxylic acids.
+Complete the structure of butanoic showing all bonds.
+
+(b) explain
+
+[1]
+
+Explain why butanoic acid is a saturated compound.
+
+(c)
+
+[1]
+
+Butanoic acid can react with magnesium carbonate to form a salt, carbon dioxide and water. What
+type of reaction is this?
+A) thermal decomposition
+B) neutralisation
+C) combustion
+D) endothermic
+(d) complete
+
+Butanoic acid can also react with a metal.
+Complete the word equation for this reaction.
+__________ + butanoic acid → sodium butanoate + ____________
+
+[1]
+
+Question 127 (5 marks)
+(a) what
+
+[1]
+
+The reactions of metals with water and with dilute sulfuric acid can be used to determine the order
+of reactivity of the metals.
+The table shows the reactions of four metals, W, X, Y and Z, with water and with dilute sulfuric acid.
+Metal
+
+Reaction with water
+
+Reaction with dilute sulfuric acid
+
+W
+
+no reaction
+
+no reaction
+
+X
+
+very slow reaction
+
+reacts quickly
+
+Y
+
+no reaction
+
+reacts slowly
+
+Z
+
+reacts quickly
+
+reacts violently
+
+What is the order of reactivity of these metals?
+most reactive
+
+least reactive
+
+A
+
+W
+
+X
+
+Y
+
+Z
+
+B
+
+Z
+
+X
+
+Y
+
+W
+
+C
+
+W
+
+Y
+
+X
+
+Z
+
+D
+
+Z
+
+Y
+
+X
+
+W
+
+(b) state
+
+[2]
+
+i) State which metal, W, X, Y or Z, could be copper.
+(1)
+ii) State which metal, W, X, Y or Z, could be magnesium.
+(1)
+
+(c) state
+
+A displacement reaction can also be used to decide the order of reactivity of two metals.
+State two observations made when an excess of magnesium powder is added to an aqueous
+solution of copper(ll) sulfate.
+
+[2]
+
+Question 128 (5 marks)
+(a)
+
+[1]
+
+Ethyl ethanoate can be prepared in the laboratory using the equipment shown in the diagram
+below.
+
+Which row in the table correctly identifies X and Y.
+X
+
+Y
+
+☐
+
+A
+
+ethanoic acid and ethanol
+
+ethyl ethanoate
+
+☐
+
+B
+
+ethyl ethanoate
+
+ethanoic acid and ethanol
+
+☐
+
+C
+
+ethanoic acid, ethanol and sulfuric acid
+
+ethyl ethanoate
+
+☐
+
+D
+
+ethyl ethanoate
+
+ethanoic acid, ethanol and sulfuric acid
+
+(b) tick
+
+[1]
+
+A student carried out a practical to produce ethyl ethanoate using the apparatus shown in part a).
+Place a tick (✔) in the box that shows the most suitable method to heat the reaction mixture.
+Bunsen burner
+spirit burner
+
+Bunsen burner
+water bath
+
+(c) give
+
+[1]
+
+The mixture containing ethyl ethanoate may also contain some acid impurities which can be
+removed by adding sodium carbonate solution to the mixture.
+Give one observation the student would make when sodium carbonate was added to the mixture
+if acid impurities were present.
+
+(d) give
+
+[2]
+
+Propyl butanoate is another ester that has a fruity smell is another ester.
+Give the name of the carboxylic acid and alcohol that would be required to produce propyl
+butanoate.
+Carboxylic acid
+
+.............................................................................
+
+Alcohol
+
+.............................................................................
+
+Question 129 (5 marks)
+(a) name
+
+[2]
+
+Two substances are needed to cause iron to rust. Name these two substances.
+1.......................................................................................................................................
+2.......................................................................................................................................
+
+(b) give
+
+[3]
+
+The box gives the names of some substances.
+calcium
+
+copper
+
+gold
+
+iodine
+
+methane
+
+zinc
+
+Use words from the box to answer these questions.
+i) Give the name of a non-metallic element.
+(1)
+ii) Give the name of a compound.
+(1)
+iii) Give the name of the metal that is lowest in the reactivity series.
+(1)
+
+Question 130 (5 marks)
+(a) name
+
+[1]
+
+This question is about the reactions of organic compounds A - E shown in Figure 1.
+Figure 1
+
+Name compound C.
+
+(b) name
+
+[2]
+
+Name the two products formed when E reacts with sodium.
+
+(c) which
+
+[1]
+
+Which compound reacts with compound A to produce compound C?
+
+(d) which
+
+Which compound dissolves in water to produce a neutral solution?
+
+[1]
+
+Question 131 (5 marks)
+(a)
+
+[1]
+
+In 1937, an airship full of hydrogen gas flew from Germany to America.
+
+(Source: © Michael Rosskothen/Shutterstock)
+Which property of hydrogen makes it a suitable gas to use in an airship?
+A) colourless
+B) insoluble in water
+C) low density
+D) no smell
+(b) explain
+
+[2]
+
+Explain why helium is now used in airships instead of hydrogen.
+
+(c) multiple
+
+Hydrogen is used to manufacture ammonia, NH3
+Hydrogen is reacted with nitrogen using an iron catalyst.
+i) Give a chemical equation for this reaction.
+(1)
+ii) State why a catalyst is used in this reaction.
+(1)
+
+[2]
+
+Question 132 (5 marks)
+(a) calculate
+
+[3]
+
+Compound X is a hydrocarbon with an Mr of 70 that contains 85.7% by mass of carbon. When
+bromine water is added to compound X it remains orange.
+Calculate the molecular formula of compound X
+
+(b) determine
+
+[1]
+
+Using the information in part a), determine the structure of compound X.
+
+(c) write
+
+Compound X reacts with chlorine in the presence of ultra-violet light. Write the equation for this
+reaction.
+
+[1]
+
+Question 133 (5 marks)
+(a)
+
+[1]
+
+A student is given a mixture of salt solution and sand. She wants to obtain pure water from the
+mixture.
+Which method should the student use to separate the sand from the salt solution?
+A) crystallisation
+B) filtration
+C) fractional distillation
+D) simple distillation
+(b) multiple
+
+The student then uses this apparatus to obtain pure water from the salt solution.
+
+i) Name the pieces of apparatus labelled X, Y and Z.
+(3)
+X ..........................................................................................................
+Y ..........................................................................................................
+
+[4]
+
+Z ..........................................................................................................
+ii) State what remains in the flask when the separation is complete.
+(1)
+
+Question 134 (5 marks)
+(a)
+
+[1]
+
+Aluminium is an element found in Group 3 of the Periodic Table.
+Use your Periodic Table to deduce the number of protons, neutrons and electrons found in an
+atom of aluminium.
+protons
+
+neutrons
+
+electrons
+
+☐
+
+A
+
+13
+
+27
+
+13
+
+☐
+
+B
+
+13
+
+27
+
+14
+
+☐
+
+C
+
+27
+
+14
+
+14
+
+☐
+
+D
+
+13
+
+14
+
+13
+
+(b) give
+
+[2]
+
+Give two physical properties of aluminium.
+
+(c)
+
+[1]
+
+Duralumin is an alloy of aluminium and copper. What type of substance is an alloy?
+A) Atom
+B) Element
+C) Compound
+D) Mixture
+(d) calculate
+
+Aluminium is extracted from bauxite, a mixture containing aluminium oxide.
+One sample of bauxite contains 17% aluminium. Calculate the percentage of substances other
+than aluminium found in bauxite.
+
+[1]
+
+Question 135 (5 marks)
+(a) give
+
+[4]
+
+The diagram shows the positions of some elements in the Periodic Table.
+
+Use symbols from this table to answer these questions.
+Each symbol may be used once, more than once or not at all.
+i) Give the symbol of a metal.
+(1)
+ii) Give the symbol of a noble gas.
+(1)
+iii) Give the symbol of a liquid at room temperature.
+(1)
+iv) Give the symbols of the two elements in Period 3
+(1)
+......................................... and .........................................
+
+(b) deduce
+
+Deduce the electronic configuration of Na.
+
+[1]
+
+Question 136 (5 marks)
+(a) complete
+
+[4]
+
+The diagram shows some pieces of apparatus.
+
+Complete the table by giving the name of each piece of apparatus.
+Letter
+
+Name
+
+A
+B
+C
+D
+
+(b)
+
+Which piece of apparatus can be used to measure the volume of a liquid?
+
+[1]
+
+Question 137 (5 marks)
+(a) name
+
+[1]
+
+This question is about elements, compounds and mixtures.
+Name the element that burns with a lilac flame.
+
+(b) name
+
+[1]
+
+Name the technique used to separate the mixture of colours in black ink.
+
+(c) identify
+
+[3]
+
+Indented content here. The box gives the names of some substances.
+air
+
+bromine
+
+magnesium
+
+neon
+
+sodium chloride
+
+i) Choose substances from the box to answer these questions. Identify the compound.
+(1)
+ii) Identify the mixture.
+(1)
+iii) Identify the non‐metal element that is a solid at room temperature.
+(1)
+
+sulfur
+
+Question 138 (5 marks)
+(a)
+
+[1]
+
+The structures of two carboxylic acids are shown below.
+
+What is the name of carboxylic acid B?
+A) butanoic acid
+B) propanoic acid
+C) ethanoic acid
+D) methanoic acid
+(b)
+
+[1]
+
+Give one use of carboxylic acid A.
+A) vinegar
+B) fuel
+C) smelling salts
+D) polymer
+(c) name
+
+[2]
+
+Both carboxylic acids A and B can react with metal carbonates to produce a salt and two other
+products. Name the two other products formed.
+
+(d)
+
+[1]
+
+Carboxylic Acids A and B will also react with metals to form hydrogen gas. Which row in the table
+correctly shows the test and result for this gas?
+Test
+
+Result
+
+A
+
+glowing splint
+
+relights
+
+B
+
+burning splint
+
+squeaky pop sound
+
+C
+
+glowing splint
+
+squeaky pop sound
+
+D
+
+burning splint
+
+flame extinguished
+
+Question 139 (5 marks)
+(a) describe
+
+[3]
+
+Describe how long-chain alkanes are converted into short-chain alkanes and alkenes.
+
+(b) explain
+
+Explain why it is necessary to convert long-chain alkanes into short-chain alkanes and alkenes.
+
+[2]
+
+Question 140 (5 marks)
+(a) state
+
+[1]
+
+The copper(II) carbonate in the mineral, malachite, reacts with hydrochloric acid according to this
+equation.
+CuCO3 (s) + 2HCl (aq) → CuCl2 (aq) + H2O (l) + CO2 (g)
+Some students investigate the effect of changing the concentration of acid on the rate of this
+reaction. The diagram shows the apparatus they use.
+
+This is the method they use:
+set the balance to zero
+add an excess of malachite lumps to the conical flask and replace the cotton wool
+start a timer and record the balance reading after one minute
+The experiment is repeated using different concentrations of hydrochloric acid. The mass and
+number of malachite lumps are kept the same in each experiment.
+The table shows the results obtained in one series of experiments.
+Concentration of hydrochloric acid / mol/dm3
+
+0.6
+
+0.8
+
+1.0
+
+1.6
+
+1.8
+
+2.0
+
+balance reading/ g
+
+-0.20
+
+-0.27
+
+-0.44
+
+-0.54
+
+-0.60
+
+-0.67
+
+State why the balance readings have negative values.
+
+(b) multiple
+
+The graph shows the results of this series of experiments.
+
+[2]
+
+The circled point indicates an anomalous result.
+i) Suggest one mistake the students could have made to produce this result.
+(1)
+ii) State the relationship shown by the graph.
+(1)
+
+(c) explain
+
+Explain why an increase in the concentration of the acid causes an increase in the rate of the
+reaction. You should use the particle collision theory in your answer.
+
+[2]
+
+Question 141 (5 marks)
+(a) give
+
+[2]
+
+Welding involves joining two pieces of metal together.
+Copper and iron are two metals that this can occur with.
+Give two properties typical of these metals.
+
+(b)
+
+[1]
+
+Metals have a lattice structure? What does this lattice consist of?
+A) anions and cations
+B) anions
+C) cations in a sea of delocalised electrons
+D) molecules in a sea of electrons
+(c) state
+
+[1]
+
+To join two pieces of metal by welding, they must be melted together.
+State why a high temperature has to be used.
+
+(d)
+
+An atmosphere of argon is used when the pieces of metal are welded together. Why is an
+atmosphere of argon used?
+A) to speed up the process of welding
+B) to prevent the metal reacting with oxygen
+C) to increase the melting point of the materials
+D) to save energy
+
+[1]
+
+Question 142 (6 marks)
+(a) give
+
+[1]
+
+The structures of six organic compounds are shown.
+
+Give the name of F.
+
+(b) identify
+
+[1]
+
+Identify two compounds that are members of the same homologous series.
+
+(c) state
+
+[2]
+
+Compounds E and F are isomers of each other.
+State what is meant by the term isomers.
+
+(d) explain
+
+Explain why B is an unsaturated hydrocarbon.
+
+[2]
+
+Question 143 (6 marks)
+(a) multiple
+
+[2]
+
+A student investigates the rusting of iron.
+She places an iron nail in a test tube of water and leaves it for several days.
+
+i) Predict the appearance of the iron nail after several days.
+(1)
+ii) Name the main compound in rust.
+(1)
+
+(b) explain
+
+The student then sets up two more test tubes containing iron nails.
+
+Explain why the iron nail in tube 1 and the iron nail in tube 2 do not rust.
+tube 1
+tube 2
+
+[4]
+
+Question 144 (6 marks)
+(a) what
+
+[1]
+
+This question is about covalent bonding.
+What is a covalent bond?
+
+(b) complete
+
+[1]
+
+Complete the dot and cross diagram in to show the bonding in propane.
+
+(1)
+
+(c) explain
+
+[2]
+
+Explain why propane cannot conduct electricity.
+
+(d) complete
+
+Carbon dioxide, CO2, bonds in a similar way to propane. Complete the diagram to show the
+bonding.
+
+[2]
+
+Question 145 (6 marks)
+(a) multiple
+
+A student performs a titration to determine the concentration of an unknown solution of sodium
+hydroxide.
+The student's method is
+25.0 cm3 of alkali is added to a clean conical flask
+A few drops of indicator are added, and the conical flask is placed on a white tile so that the
+colour change can be seen more easily
+The burette is filled with acid, and the starting volume is recorded
+The acid is slowly added from the burette to the alkali in the conical flask while the mixture is
+swirled
+The addition of acid is stopped when the end-point is reached (when the indicator changes
+colour), and the final volume is recorded
+The steps are repeated until concordant results are obtained
+i) Which letter represents the apparatus the student should use to measure exactly 25.0 cm³ of
+the sodium hydroxide solution?
+[1]
+
+ii) Which is the best indicator to use?
+[1]
+A. litmus
+
+[2]
+
+B. methyl orange
+C. universal indicator
+D. iodine solution
+
+(b) multiple
+
+[4]
+
+The student obtains the following results:
+Volume of sodium hydroxide solution used in cm3
+
+25.0
+
+Concentration of sodium hydroxide solution in mol/dm3
+
+0.80
+
+Mean volume of sulfuric acid solution used in cm3
+
+13.50
+
+i) Write a balanced equation for the reaction between sulfuric acid, H2SO4, and sodium hydroxide,
+NaOH.
+[1]
+ii) Calculate the amount, in moles, of sodium hydroxide in 25.0 cm3.
+[1]
+iii) Calculate the amount, in moles, of sulfuric acid in 13.50cm3.
+[1]
+iv) Calculate the concentration of the sulfuric acid in mol/dm3.
+[1]
+
+Question 146 (6 marks)
+(a) give
+
+[1]
+
+A student does these two tests on a solution made from a white solid.
+flame test
+add acidified silver nitrate solution
+The table shows his results.
+Test
+
+Result
+
+flame test
+
+red flame
+
+add acidified silver nitrate solution
+
+cream precipitate
+
+Give the formula of the ion that produces the red flame.
+
+(b) name
+
+[1]
+
+Name the cream precipitate.
+
+(c) identify
+
+[1]
+
+Identify the white solid.
+
+(d) multiple
+
+The student uses a clean metal wire in the flame test.
+i) State why the wire should be clean when used in the flame test.
+(1)
+ii) The table lists properties of some metals.
+Add ticks (✔) to the table to show the two properties needed in a metal wire used in a flame test.
+(2)
+Property
+good conductor of electricity
+high density
+high melting point
+unreactive
+
+[3]
+
+Question 147 (6 marks)
+(a) complete
+
+[1]
+
+Ethene (C2H4) can be converted into chloroethene (C2H3Cl) in a two-stage process.
+The first stage is to convert ethene into 1,2-dichloroethane, C2H4Cl2
+Ethene is reacted with hydrogen chloride and oxygen.
+Complete the chemical equation for this reaction.
+.......... C2H4 + .......... HCl + .......... O2 → .......... C2H4Cl2 + .......... H2O
+
+(b) state
+
+[1]
+
+In the second stage, 1,2-dichloroethane is converted into chloroethene.
+C2H4Cl2 → C2H3Cl + HCl
+This is a thermal decomposition reaction.
+State what is meant by the term thermal decomposition.
+
+(c) multiple
+
+[3]
+
+The diagram shows the displayed formula of chloroethene.
+
+i) State why chloroethene is described as an unsaturated compound.
+(1)
+ii) Describe a test to show that chloroethene is unsaturated.
+(2)
+
+(d) name
+
+Name the polymer formed from chloroethene.
+
+[1]
+
+Question 148 (6 marks)
+(a) how
+
+[1]
+
+This question is about reactions of iron.
+Iron can form iron(III) oxide with a chemical formula of Fe2O3.
+How many atoms are shown in the formula Fe2O3?
+
+(b) calculate
+
+[1]
+
+Calculate the relative formula mass iron(II) hydroxide, Fe(OH)2
+(Ar: Fe = 56, O = 16, H = 1)
+
+(c) calculate
+
+[1]
+
+Calculate the percentage by mass of iron in iron(II) hydroxide, Fe(OH)2.
+
+(d) draw
+
+[3]
+
+Recent discoveries in the fields of Geology and Seismology have established the potential
+existence of a previously undiscovered iron oxide compound, FeO2.
+This iron oxide requires very high pressures and temperatures to form.
+In theory, FeO2 could be formed by the reaction of iron and oxygen, under suitable conditions, as
+follows.
+Fe + O2 → FeO2
+How does this reaction demonstrate the law of conservation of mass?
+Draw a ring around the correct answers to complete the sentences.
+There is/are one two three atom(s) of iron on both sides of the equation
+There is/are one two three atom(s) of oxygen on both sides of the equation
+The total number of atoms increases staysthesame decreases
+
+Question 149 (6 marks)
+(a) name
+
+[1]
+
+The box lists some substances. Choose substances from the box to answer these questions.
+Each substance may be used once, more than once or not at all.
+air
+
+bromine
+
+carbon
+
+copper
+
+glucose
+
+nitrogen
+
+oxygen
+
+sulfur
+
+water
+
+Name a metallic element.
+
+(b) name
+
+[1]
+
+Name a compound.
+
+(c) name
+
+[1]
+
+Name a mixture.
+
+(d) name
+
+[1]
+
+Name an element that is a gas at room temperature.
+
+(e) name
+
+[1]
+
+Name an element that forms a basic oxide.
+
+(f) name
+
+Name two elements that are in the same group of the Periodic Table.
+
+[1]
+
+Question 150 (6 marks)
+(a)
+
+[1]
+
+Methanol and ethanol are both members of the same homologous series.
+Which of the following is the functional group of this homologous series?
+A) C=C
+B) –COOH
+C) –OH
+D) C–C
+(b)
+
+[1]
+
+Which of the following is not a feature of a homologous series?
+A) the compounds differ by CH<sub>2 </sub>in molecular formula from neighbouring compounds
+B) they have similar chemical properties
+C) they have the same general formula
+D) they have the same physical properties
+(c) complete
+
+[2]
+
+Ethanoic acid can be produced from ethanol.
+Use words from the box to complete the sentences about ethanol and ethanoic acid.
+–OH
+
+oxidised
+
+–COOH
+
+displaced
+
+reduced
+
+C=C
+
+neutralised
+
+decomposed
+
+Ethanol can be ............................... to form ethanoic acid.
+The functional group of ethanoic acid is ....................................... .
+
+(d) draw
+
+[2]
+
+Like methanol and ethanol, butanol is an alcohol. Draw the structure of butanol. You should show
+all of the bonds in the structure.
+
+Question 151 (6 marks)
+(a) give
+
+[1]
+
+The alcohols form a homologous series.
+Give the name of the third member of this series.
+
+(b) calculate
+
+[2]
+
+Calculate the relative formula mass of hexanol, C6H13OH.
+(Ar: C = 12, H = 1, O = 16)
+relative formula mass = ........................................
+
+(c) place
+
+[2]
+
+Alcohols can be oxidised to form organic compounds from a different homologous series.
+Place ticks (✔) in boxes by the two statements that are correct
+Alkenes are formed when alcohols are oxidised
+Ethanol oxidises to form ethanoic acid
+Alcohols can be oxidised by heating with potassium dichromate(VI) in dilute sulfuric acid
+Alcohols are oxidised by fermenting at 30 °C with the absence of oxygen
+When ethanol oxidises in air, carbon dioxide is produced
+
+(d)
+
+[1]
+
+The structural formula of the first four alcohols in the homologous series are shown below, in order.
+CH3OH
+C2H5OH
+C3H7OH
+C4H9OH
+Which of the following structural formulae is the correct formula for the fifth member of the series?
+A) C<sub>5</sub>H<sub>10</sub>OH
+B) C<sub>5</sub>H<sub>11</sub>COOH
+C) C<sub>5</sub>H<sub>11</sub>OH
+D) C<sub>5</sub>H<sub>13</sub>OH
+
+Question 152 (6 marks)
+(a) multiple
+
+[2]
+
+Ethyl ethanoate has a distinctive smell which is similar to pear drops.
+It is made by the reaction between ethanol and ethanoic acid in the presence of a sulfuric acid
+catalyst.
+i) State the name that is given to this process.
+(1)
+ii) Which of the following is the other product formed during this reaction?
+(1)
+A
+
+water
+
+B
+
+hydrogen chloride
+
+C
+
+hydroxide
+
+D
+
+hydrogen
+
+(b) calculate
+
+[2]
+
+The displayed formula of ethyl ethanoate is shown below.
+
+Calculate the relative molecular mass of ethyl ethanoate.
+(Ar: C = 12, H = 1, O = 16)
+
+(c) give
+
+[1]
+
+The reaction between ethanoic acid and ethanol to form ethyl ethanoate and another product is a
+reversible reaction.
+Give the sign that is used in reactions to show that a reaction is reversible.
+
+(d)
+
+The reaction between ethanoic acid and ethanol will reach dynamic equilibrium.
+
+[1]
+
+Which statement about the dynamic equilibrium of this reaction is correct?
+A) the concentration of the reactants equals the concentration of the products
+B) equilibrium is established in an open container to allow the gases to escape
+C) the reaction has stopped
+D) the rate of the forward reaction is equal to the rate of the reverse reaction
+
+Question 153 (6 marks)
+(a) multiple
+
+[4]
+
+Substances can be classified as elements, mixtures or compounds.
+Each box represents an element, a mixture or a compound.
+
+i) Which box represents a mixture?
+☐
+
+A
+
+1
+
+☐
+
+B
+
+2
+
+☐
+
+C
+
+3
+
+☐
+
+D
+
+4
+
+(1)
+ii) Which two boxes represent elements?
+☐
+
+A
+
+1 and 2
+
+☐
+
+B
+
+2 and 3
+
+☐
+
+C
+
+1 and 3
+
+☐
+
+D
+
+3 and 4
+
+(1)
+iii) Explain why Box 5 represents a compound.
+(2)
+
+(b) multiple
+
+[2]
+
+The Periodic Table contains all the known elements.
+i) How are the elements arranged in the Periodic Table?
+☐
+
+A
+
+increasing mass number
+
+☐
+
+B
+
+Increasing number of neutrons
+
+☐
+
+C
+
+increasing number of protons
+
+☐
+
+D
+
+increasing reactivity
+
+(1)
+ii) Elements in the same group have the same number of
+☐
+
+A
+
+electrons in outer shell
+
+☐
+
+B
+
+electron shells
+
+☐
+
+C
+
+neutrons
+
+☐
+
+D
+
+protons
+
+(1)
+
+Question 154 (6 marks)
+(a)
+
+[1]
+
+The alkanes are a family of hydrocarbons with the general formula CnH2n+2. Ethane, C2H6, and
+butane, C4H10, are examples of alkanes.
+Ethane has a boiling point of -89 °C and butane has a higher boiling point of -1 °C.
+Why is the boiling point of butane higher than ethane?
+A) Butane is ionically bonded
+B) Butane has a higher *M*<sub>r </sub>than ethane
+C) Butane has stronger bonds between the carbon and hydrogen atoms
+D) Ethane has a higher *M*<sub>r </sub>than butane
+(b) complete
+
+[3]
+
+Complete the sentences below using words from the box.
+conduct atoms free shells
+fixed insulate ions electrons
+
+Ethane and butane do not ________________ electricity because there are no
+________________ ions / _______________ that are able to move and carry charge.
+
+(c) what
+
+[1]
+
+What is the type of bonding in ethane and butane?
+
+(d) multiple
+
+Ethane and butane only contains single bonds. Double bonds can also form between a different
+family of hydrocarbons called alkenes. Which of the following statements is correct?
+Tick () one box.
+A double bond contains two electrons
+A double bond contains two pairs of electrons
+
+[1]
+
+
