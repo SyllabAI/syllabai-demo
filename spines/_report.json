@@ -1,6 +1,6 @@
 {
- "resourcesSha": "19a5b4d0f68721adf43467e8c7f494636da71b34",
- "generatedUtc": "2026-09-24T16:52:48Z",
+ "resourcesSha": "2dd126f12264a8d5645f6776203f8b20bd39054b",
+ "generatedUtc": "2026-09-24T17:19:46Z",
  "courses": {
   "ial-biology-18": {
    "qual": "ial-biology",
@@ -462,8 +462,8 @@
    "counts": {
     "topics": 9,
     "subtopics": 31,
-    "specPoints": 200,
-    "parsePool": 238,
+    "specPoints": 202,
+    "parsePool": 240,
     "orphans": 38
    },
    "warnings": [
