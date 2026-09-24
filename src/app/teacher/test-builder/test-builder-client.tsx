@@ -38,16 +38,20 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowDown,
+  ArrowLeft,
   ArrowUp,
   ChevronDown,
   ClipboardList,
   Download,
+  Eye,
   FileText,
   Loader2,
   Minus,
   Plus,
   Printer,
+  RotateCcw,
   Save,
+  Search,
   Sparkles,
   Target,
   Trash2,
@@ -67,7 +71,6 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Markdown } from "@/components/markdown";
 import { TeacherNav } from "@/components/teacher/teacher-nav";
 import { useSavedTests } from "@/lib/teacher/stores";
@@ -116,6 +119,66 @@ interface PdfSettings {
  *  conservative repair (choices only; prose is untouched). */
 function normalizeChoiceText(s: string): string {
   return s.replace(/([a-z])([A-Z][a-z])/g, "$1 $2");
+}
+
+const INLINE_TAG_RE = /<(\/?)(sub|sup)>/gi;
+
+/** Corpus choices carry light inline markup — chemical formulae like
+ *  "C<sub>4</sub>H<sub>6</sub>O<sub>4</sub>" and "10<sup>6</sup>" are the ONLY
+ *  tags present (195 sub + 56 sup occurrences bank-wide). Choices render as
+ *  plain list text (unlike problemMd, which goes through rehype-raw), so the
+ *  tags must be converted HERE or they print literally on the paper.
+ *  Stray/unclosed tags degrade to literal text. */
+function RichChoiceText({ text }: { text: string }) {
+  const src = normalizeChoiceText(text);
+  const out: React.ReactNode[] = [];
+  const frames: { tag: "sub" | "sup"; items: React.ReactNode[] }[] = [];
+  let key = 0;
+  const emit = (node: React.ReactNode) => {
+    (frames.length > 0 ? frames[frames.length - 1].items : out).push(node);
+  };
+  let last = 0;
+  for (const m of src.matchAll(INLINE_TAG_RE)) {
+    if (m.index > last) emit(<span key={key++}>{src.slice(last, m.index)}</span>);
+    last = m.index + m[0].length;
+    const tag = m[2].toLowerCase() as "sub" | "sup";
+    if (m[1]) {
+      const openIdx = frames.map((f) => f.tag).lastIndexOf(tag);
+      if (openIdx === -1) emit(<span key={key++}>{m[0]}</span>);
+      else {
+        const frame = frames.splice(openIdx)[0];
+        emit(
+          tag === "sub" ? (
+            <sub key={key++}>{frame.items}</sub>
+          ) : (
+            <sup key={key++}>{frame.items}</sup>
+          ),
+        );
+      }
+    } else {
+      frames.push({ tag, items: [] });
+    }
+  }
+  if (last < src.length) emit(<span key={key++}>{src.slice(last)}</span>);
+  while (frames.length > 0) {
+    const frame = frames.pop()!;
+    emit(<span key={key++}>{frame.items}</span>);
+  }
+  return <>{out}</>;
+}
+
+/** A/B/C/D choice list — shared by the paper, the view modal (and print). */
+function ChoiceList({ choices }: { choices: { label: string; textMd: string }[] }) {
+  return (
+    <ul className="mt-1.5 list-none space-y-1 pl-1">
+      {choices.map((choice) => (
+        <li key={choice.label} className="text-[13px] [overflow-wrap:anywhere]">
+          <span className="font-medium">{choice.label})</span>{" "}
+          <RichChoiceText text={choice.textMd} />
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 function capDifficulty(d: string | null): string | null {
@@ -237,10 +300,12 @@ export function TestBuilderClient({
   courses,
   initialCourse,
   initialSubtopics,
+  initialView,
 }: {
   courses: SwitchableCourse[];
   initialCourse: string | null;
   initialSubtopics: string[];
+  initialView: "tests" | "builder";
 }) {
   const [course, setCourse] = useState<string | null>(initialCourse);
   // course payload lives in ONE course-tagged state; loading/error derive from
@@ -286,9 +351,45 @@ export function TestBuilderClient({
   });
 
   const [savedFlash, setSavedFlash] = useState(false);
-  const [savedTestName, setSavedTestName] = useState("");
   const { tests, save, remove } = useSavedTests();
   const resultRef = useRef<HTMLElement | null>(null);
+
+  // ── tests-first landing / builder view ──────────────────────────────────
+  // landing lists saved tests; "+ Create test" opens the builder
+  const [view, setView] = useState<"tests" | "builder">(initialView);
+  // bank keyword search (server-side via question-bank?q=…) + in-test filter
+  const [search, setSearch] = useState("");
+  const [hideInTest, setHideInTest] = useState(false);
+  // full question view modal (SME: View — all parts + key before adding)
+  const [viewing, setViewing] = useState<BankQuestion | null>(null);
+  // hand-added (or restored) questions survive auto-build rebuilds
+  const manualIdsRef = useRef<Set<string>>(new Set());
+  // undo for removing a question from the paper (8 s window)
+  const [undoState, setUndoState] = useState<{ q: AssembledQuestion; index: number } | null>(null);
+  const undoTimerRef = useRef<number | null>(null);
+  // floating test summary while browsing the bank
+  const [showFloat, setShowFloat] = useState(false);
+
+  function goBuilder() {
+    setView("builder");
+    window.history.replaceState(null, "", "/teacher/test-builder?view=builder");
+  }
+  function goTests() {
+    setView("tests");
+    window.history.replaceState(null, "", "/teacher/test-builder");
+  }
+
+  // floating bar visibility while scrolling the (long) bank
+  useEffect(() => {
+    const onScroll = () => setShowFloat(window.scrollY > 600);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => () => {
+    if (undoTimerRef.current) window.clearTimeout(undoTimerRef.current);
+  }, []);
 
   // load the course payload (bank stats + class evidence) per course switch;
   // state updates happen only in async callbacks, never synchronously
@@ -328,8 +429,8 @@ export function TestBuilderClient({
 
   // ── bank listing (debounced filter → fetch page 0; loadMore appends) ────
   const bankKey = useMemo(
-    () => `${course ?? ""}|${[...selected].sort().join(",")}|${difficulty}`,
-    [course, selected, difficulty],
+    () => `${course ?? ""}|${[...selected].sort().join(",")}|${difficulty}|${search.trim().toLowerCase()}`,
+    [course, selected, difficulty, search],
   );
   useEffect(() => {
     if (!course) return;
@@ -338,6 +439,7 @@ export function TestBuilderClient({
       const params = new URLSearchParams({ slug: course, limit: String(BANK_PAGE) });
       if (selected.size > 0) params.set("subtopics", [...selected].join(","));
       if (difficulty !== "all") params.set("difficulty", difficulty);
+      if (search.trim()) params.set("q", search.trim());
       fetch(`/api/teacher/question-bank?${params.toString()}`)
         .then(async (res) => {
           if (!res.ok) throw new Error(`question bank unavailable (${res.status})`);
@@ -371,6 +473,7 @@ export function TestBuilderClient({
     });
     if (selected.size > 0) params.set("subtopics", [...selected].join(","));
     if (difficulty !== "all") params.set("difficulty", difficulty);
+    if (search.trim()) params.set("q", search.trim());
     fetch(`/api/teacher/question-bank?${params.toString()}`)
       .then(async (res) => {
         if (!res.ok) throw new Error(`question bank unavailable (${res.status})`);
@@ -438,6 +541,15 @@ export function TestBuilderClient({
     [test],
   );
 
+  // "hide questions already in the test" — client-side over the loaded pages
+  const visibleBank = useMemo(
+    () =>
+      hideInTest && bank
+        ? bank.questions.filter((x) => !inTestIds.has(x.id))
+        : (bank?.questions ?? []),
+    [bank, hideInTest, inTestIds],
+  );
+
   // selected subtopics the current fill left unrepresented (marks mode)
   const unrepresented = useMemo(() => {
     if (!test) return [];
@@ -474,6 +586,9 @@ export function TestBuilderClient({
 
   const current = courses.find((c) => c.slug === course);
   const paperTitle = testName.trim() || `${test?.course.subject ?? current?.label ?? ""} — class test`;
+  // progress-ring target: the current marks input, clamped to the API range
+  const ringMax =
+    mode === "marks" ? Math.min(300, Math.max(1, Number(targetMarks) || 0)) || null : null;
 
   // ── actions ─────────────────────────────────────────────────────────────
 
@@ -508,8 +623,10 @@ export function TestBuilderClient({
   }
 
   /** explicit question add (SME: "Add question to test") — edits the paper
-   *  directly, no stale flag involved. */
+   *  directly, no stale flag involved. Hand-added questions are remembered
+   *  so an auto-build rebuild keeps them (banner promise). */
   function addQuestion(q: BankQuestion) {
+    manualIdsRef.current.add(q.id);
     setTest((prev) => {
       if (!prev) {
         if (!bank) return prev;
@@ -547,19 +664,61 @@ export function TestBuilderClient({
     });
   }
 
+  /** remove with undo — the question (and its position) is recoverable for
+   *  8 s via the floating "Undo remove" affordance. */
   function removeQuestion(i: number) {
-    setTest((prev) => {
-      if (!prev) return prev;
-      const qs = prev.questions.filter((_, k) => k !== i);
-      return {
-        ...prev,
-        questions: qs,
-        totalMarks: qs.reduce((a, q) => a + q.marks, 0),
-        subtopics: [...new Map(qs.map((x) => [x.subtopic.code, x.subtopic])).values()].sort(
-          (a, b) => a.code.localeCompare(b.code),
-        ),
-      };
+    const prev = test;
+    if (!prev) return;
+    const removed = prev.questions[i];
+    if (!removed) return;
+    manualIdsRef.current.delete(removed.id);
+    setUndoState({ q: removed, index: i });
+    if (undoTimerRef.current) window.clearTimeout(undoTimerRef.current);
+    undoTimerRef.current = window.setTimeout(() => setUndoState(null), 8000);
+    const qs = prev.questions.filter((_, k) => k !== i);
+    setTest({
+      ...prev,
+      questions: qs,
+      totalMarks: qs.reduce((a, q) => a + q.marks, 0),
+      subtopics: [...new Map(qs.map((x) => [x.subtopic.code, x.subtopic])).values()].sort(
+        (a, b) => a.code.localeCompare(b.code),
+      ),
     });
+  }
+
+  function undoRemove() {
+    const u = undoState;
+    const prev = test;
+    if (!u) return;
+    if (undoTimerRef.current) window.clearTimeout(undoTimerRef.current);
+    setUndoState(null);
+    if (!prev || prev.questions.some((x) => x.id === u.q.id)) return;
+    manualIdsRef.current.add(u.q.id);
+    const qs = [...prev.questions];
+    qs.splice(Math.min(u.index, qs.length), 0, u.q);
+    setTest({
+      ...prev,
+      questions: qs,
+      totalMarks: qs.reduce((a, q) => a + q.marks, 0),
+      subtopics: [...new Map(qs.map((x) => [x.subtopic.code, x.subtopic])).values()].sort(
+        (a, b) => a.code.localeCompare(b.code),
+      ),
+    });
+  }
+
+  /** clear the whole paper — explicit, confirmed (destructive). */
+  function clearTest() {
+    if (
+      test &&
+      test.questions.length > 0 &&
+      !window.confirm("Clear the whole test? This can't be undone.")
+    )
+      return;
+    setTest(null);
+    setStale(false);
+    setBuildError(null);
+    setUndoState(null);
+    manualIdsRef.current = new Set();
   }
 
   /** auto-build (marks-aware deterministic fill over the selection). */
@@ -586,9 +745,30 @@ export function TestBuilderClient({
       });
       const payload = (await res.json()) as { test?: AssembledTest; error?: string };
       if (!res.ok || !payload.test) throw new Error(payload.error ?? "assembly failed");
-      setTest(payload.test);
+      const built = payload.test;
+      // rebuild semantics the banner promises: the fresh auto fill replaces
+      // the previous fill, but questions added BY HAND (or restored from a
+      // save) are KEPT — deduped against the new fill, appended after it.
+      setTest((prev) => {
+        if (!prev) return built;
+        const keep = prev.questions.filter(
+          (x) =>
+            manualIdsRef.current.has(x.id) && !built.questions.some((bq) => bq.id === x.id),
+        );
+        if (keep.length === 0) return built;
+        const questions = [...built.questions, ...keep];
+        return {
+          ...built,
+          questions,
+          totalMarks: questions.reduce((a, x) => a + x.marks, 0),
+          subtopics: [...new Map(questions.map((x) => [x.subtopic.code, x.subtopic])).values()].sort(
+            (a, b) => a.code.localeCompare(b.code),
+          ),
+        };
+      });
       setStale(false);
       setTab("questions");
+      setUndoState(null);
       requestAnimationFrame(() => {
         resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
@@ -612,7 +792,6 @@ export function TestBuilderClient({
     const meta = courses.find((c) => c.slug === course);
     save({
       name:
-        savedTestName.trim() ||
         testName.trim() ||
         (test
           ? `${test.course.label} — ${test.questions.length}q · ${test.totalMarks} marks`
@@ -624,7 +803,6 @@ export function TestBuilderClient({
       maxQuestions: mode === "count" ? Number(maxQuestions) || null : null,
       questionIds: test ? test.questions.map((q) => q.id) : undefined,
     });
-    setSavedTestName("");
     setSavedFlash(true);
     window.setTimeout(() => setSavedFlash(false), 2200);
   }
@@ -632,13 +810,26 @@ export function TestBuilderClient({
   function onLoadSaved(id: string) {
     const t = tests.find((x) => x.id === id);
     if (!t) return;
+    if (
+      test &&
+      test.questions.length > 0 &&
+      !window.confirm("Open this saved test? Your current test will be replaced.")
+    )
+      return;
     setCourse(t.course);
     setSelected(new Set(t.subtopics));
     setMode(t.targetMarks !== null ? "marks" : "count");
     setTargetMarks(t.targetMarks !== null ? String(t.targetMarks) : "40");
     setMaxQuestions(t.maxQuestions !== null ? String(t.maxQuestions) : "20");
+    // the saved name is the paper title (single-name semantics)
+    setTestName(t.name);
+    setBuildError(null);
+    setUndoState(null);
+    goBuilder();
     if (t.questionIds && t.questionIds.length > 0) {
-      // builder-era save — restore the explicit paper (order preserved)
+      // builder-era save — restore the explicit paper (order preserved);
+      // restored questions count as hand-placed for rebuild keeps
+      manualIdsRef.current = new Set(t.questionIds);
       setBuilding(true);
       setBuildError(null);
       fetch(`/api/teacher/question-bank?slug=${encodeURIComponent(t.course)}&ids=${t.questionIds.join(",")}`)
@@ -679,6 +870,7 @@ export function TestBuilderClient({
         .finally(() => setBuilding(false));
     } else {
       // legacy save — controls only; the teacher re-runs the build
+      manualIdsRef.current = new Set();
       setTest(null);
       setStale(false);
     }
@@ -689,6 +881,16 @@ export function TestBuilderClient({
       <TeacherNav />
 
       <header className="space-y-1.5 print:hidden">
+        {view === "builder" && (
+          <button
+            type="button"
+            onClick={goTests}
+            className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <ArrowLeft className="size-3" aria-hidden />
+            All tests
+          </button>
+        )}
         <div className="flex items-center gap-2">
           <Badge variant="outline" className="gap-1 text-[10px] font-normal">
             <ClipboardList className="size-3" aria-hidden />
@@ -706,7 +908,77 @@ export function TestBuilderClient({
         </p>
       </header>
 
-      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] print:block">
+      {view === "tests" ? (
+        /* ══ landing · your saved tests (empty until one is created) ══ */
+        <section aria-label="Your tests" className="mx-auto max-w-3xl space-y-4">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 className="font-display text-xl font-semibold">Your tests</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Everything you&apos;ve built and saved — open one to rearrange, print or assign it.
+              </p>
+            </div>
+            <Button onClick={goBuilder}>
+              <Plus className="size-4" aria-hidden />
+              Create test
+            </Button>
+          </div>
+          {tests.length === 0 ? (
+            <div className="rounded-lg border border-dashed p-10 text-center">
+              <ClipboardList className="mx-auto size-8 text-muted-foreground/60" aria-hidden />
+              <p className="mt-3 font-medium">No tests yet</p>
+              <p className="mx-auto mt-1 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                Create your first test — pick questions from the bank yourself or auto-build from
+                the class&apos;s weakest areas, then save it here to reuse, print or assign.
+              </p>
+              <Button className="mt-4" onClick={goBuilder}>
+                <Plus className="size-4" aria-hidden />
+                Create test
+              </Button>
+            </div>
+          ) : (
+            <ul className="space-y-2">
+              {tests.map((t) => (
+                <li
+                  key={t.id}
+                  className="flex items-center gap-3 rounded-lg border bg-card p-3 shadow-sm"
+                >
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-medium">{t.name}</p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
+                      {t.courseCode} ·{" "}
+                      {t.questionIds
+                        ? `${t.questionIds.length} question${t.questionIds.length === 1 ? "" : "s"} saved`
+                        : t.targetMarks !== null
+                          ? `target ${t.targetMarks} marks`
+                          : `max ${t.maxQuestions ?? 20} questions`}
+                      {t.createdAt ? ` · saved ${new Date(t.createdAt).toLocaleDateString()}` : ""}
+                    </p>
+                  </div>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="h-8 text-xs"
+                    onClick={() => onLoadSaved(t.id)}
+                  >
+                    Open
+                  </Button>
+                  <Button
+                    size="icon"
+                    variant="ghost"
+                    className="size-8 shrink-0 text-muted-foreground hover:text-destructive"
+                    aria-label={`Delete saved test ${t.name}`}
+                    onClick={() => remove(t.id)}
+                  >
+                    <Trash2 className="size-3.5" aria-hidden />
+                  </Button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ) : (
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] print:block">
         {/* ════ LEFT · question bank ══════════════════════════════════════ */}
         <section aria-label="Question bank" className="min-w-0 space-y-4 print:hidden">
           <Card className="py-0">
@@ -730,13 +1002,27 @@ export function TestBuilderClient({
                       id="tb-course"
                       value={course ?? ""}
                       onChange={(e) => {
-                        setCourse(e.target.value || null);
+                        const next = e.target.value || null;
+                        if (
+                          next !== course &&
+                          test &&
+                          test.questions.length > 0 &&
+                          !window.confirm(
+                            "Switch subject? The test you're building will be cleared unless it's saved.",
+                          )
+                        ) {
+                          e.currentTarget.value = course ?? ""; // revert the select
+                          return;
+                        }
+                        setCourse(next);
                         setSelected(new Set());
                         setTest(null);
                         setStale(false);
                         setBank(null);
                         setBankError(null);
                         setDifficulty("all");
+                        manualIdsRef.current = new Set();
+                        setUndoState(null);
                       }}
                       className="h-9 w-full appearance-none rounded-md border bg-background pr-8 pl-3 text-sm"
                     >
@@ -956,15 +1242,42 @@ export function TestBuilderClient({
 
           {/* bank question cards */}
           <div className="space-y-2">
-            <p className="flex items-center justify-between text-sm font-medium">
-              Question bank
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <p className="text-sm font-medium">Question bank</p>
               {bank && (
-                <span className="font-normal text-muted-foreground">
+                <span className="text-xs text-muted-foreground">
                   {bank.total} question{bank.total === 1 ? "" : "s"}
                   {selected.size > 0 ? " in filtered topics" : " in course"}
                 </span>
               )}
-            </p>
+            </div>
+            <div className="flex gap-2">
+              <div className="relative min-w-0 flex-1">
+                <Search
+                  className="pointer-events-none absolute top-1/2 left-2.5 size-3.5 -translate-y-1/2 text-muted-foreground"
+                  aria-hidden
+                />
+                <Input
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  placeholder="Search this bank…"
+                  aria-label="Search the question bank"
+                  className="h-8 pl-8 text-xs"
+                />
+              </div>
+              <button
+                type="button"
+                aria-pressed={hideInTest}
+                onClick={() => setHideInTest((v) => !v)}
+                className={`h-8 shrink-0 rounded-md border px-2.5 text-xs font-medium transition-colors ${
+                  hideInTest
+                    ? "border-primary/40 bg-primary/10 text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Hide in test
+              </button>
+            </div>
             {bankError && (
               <Alert variant="destructive">
                 <AlertTitle>Question bank unavailable</AlertTitle>
@@ -978,10 +1291,17 @@ export function TestBuilderClient({
             )}
             {bank?.questions.length === 0 && (
               <p className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
-                No questions match this filter — widen the topic selection or difficulty.
+                No questions match this filter or search — widen the topic selection, difficulty,
+                or try a different keyword.
               </p>
             )}
-            {bank?.questions.map((q) => {
+            {hideInTest && bank && bank.questions.length > 0 && visibleBank.length === 0 && (
+              <p className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
+                Every question on this page is already in the test — load more, clear the filter,
+                or search for something else.
+              </p>
+            )}
+            {visibleBank.map((q) => {
               const inTest = inTestIds.has(q.id);
               const expanded = expandedBank.has(q.id);
               return (
@@ -1007,24 +1327,35 @@ export function TestBuilderClient({
                         {q.subtopic.code} · {q.subtopic.title}
                       </span>
                     </div>
-                    <Button
-                      size="sm"
-                      variant={inTest ? "secondary" : "default"}
-                      className="h-7 shrink-0 gap-1 text-xs"
-                      disabled={inTest}
-                      onClick={() => addQuestion(q)}
-                      aria-label={
-                        inTest ? `Question already in test (${pluralMarks(q.marks)})` : `Add question to test (${pluralMarks(q.marks)})`
-                      }
-                    >
-                      {inTest ? (
-                        "In test"
-                      ) : (
-                        <>
-                          <Plus className="size-3" aria-hidden /> Add
-                        </>
-                      )}
-                    </Button>
+                    <div className="flex shrink-0 items-center gap-1">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="size-7 text-muted-foreground hover:text-foreground"
+                        aria-label={`View full question (${pluralMarks(q.marks)})`}
+                        onClick={() => setViewing(q)}
+                      >
+                        <Eye className="size-3.5" aria-hidden />
+                      </Button>
+                      <Button
+                        size="sm"
+                        variant={inTest ? "secondary" : "default"}
+                        className="h-7 gap-1 text-xs"
+                        disabled={inTest}
+                        onClick={() => addQuestion(q)}
+                        aria-label={
+                          inTest ? `Question already in test (${pluralMarks(q.marks)})` : `Add question to test (${pluralMarks(q.marks)})`
+                        }
+                      >
+                        {inTest ? (
+                          "In test"
+                        ) : (
+                          <>
+                            <Plus className="size-3" aria-hidden /> Add
+                          </>
+                        )}
+                      </Button>
+                    </div>
                   </div>
                   <div className={expanded ? "mt-2" : "mt-2 line-clamp-3"}>
                     <Markdown className="text-[13px] [overflow-wrap:anywhere] [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
@@ -1087,13 +1418,13 @@ export function TestBuilderClient({
             <Input
               value={testName}
               onChange={(e) => setTestName(e.target.value)}
-              placeholder="Untitled test"
+              placeholder="Test name"
               aria-label="Test name (printed on the paper)"
               className="h-9 w-48 font-medium"
             />
             {test && (
               <span className="flex items-center gap-2 text-sm">
-                <ProgressRing value={test.totalMarks} max={mode === "marks" ? Math.min(300, Math.max(1, Number(targetMarks) || 0)) || null : null} />
+                <ProgressRing value={test.totalMarks} max={ringMax} />
                 <span className="text-sm font-medium">
                   {test.questions.length} question{test.questions.length === 1 ? "" : "s"} ·{" "}
                   {test.totalMarks} marks
@@ -1102,13 +1433,6 @@ export function TestBuilderClient({
             )}
             <span className="flex-1" />
             <div className="flex flex-wrap items-center gap-2">
-              <Input
-                value={savedTestName}
-                onChange={(e) => setSavedTestName(e.target.value)}
-                placeholder="Name to reuse…"
-                aria-label="Name for saving this test"
-                className="hidden h-8 w-36 text-xs xl:block"
-              />
               <Button
                 variant="outline"
                 size="sm"
@@ -1124,55 +1448,17 @@ export function TestBuilderClient({
                   Saved
                 </span>
               )}
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button variant="outline" size="sm" className="h-8 text-xs">
-                    Your tests ({tests.length})
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent align="end" className="w-80 p-1.5">
-                  {tests.length === 0 ? (
-                    <p className="p-2 text-xs text-muted-foreground">
-                      Nothing saved yet — press “Save” to keep the current test (questions
-                      included) for reuse.
-                    </p>
-                  ) : (
-                    <ul className="max-h-72 space-y-0.5 overflow-y-auto">
-                      {tests.map((t) => (
-                        <li
-                          key={t.id}
-                          className="group flex items-center gap-1 rounded-md px-1 hover:bg-muted/60"
-                        >
-                          <button
-                            type="button"
-                            onClick={() => onLoadSaved(t.id)}
-                            className="min-w-0 flex-1 py-1.5 text-left"
-                          >
-                            <span className="block truncate text-xs font-medium">{t.name}</span>
-                            <span className="block text-[10px] text-muted-foreground">
-                              {t.courseCode} ·{" "}
-                              {t.questionIds
-                                ? `${t.questionIds.length} question${t.questionIds.length === 1 ? "" : "s"} saved`
-                                : t.targetMarks !== null
-                                  ? `target ${t.targetMarks} marks`
-                                  : `max ${t.maxQuestions ?? 20} questions`}
-                            </span>
-                          </button>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="size-7 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100 focus-visible:opacity-100"
-                            onClick={() => remove(t.id)}
-                            aria-label={`Delete saved test ${t.name}`}
-                          >
-                            <Trash2 className="size-3.5" aria-hidden />
-                          </Button>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </PopoverContent>
-              </Popover>
+              {test && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="h-8 text-xs text-muted-foreground hover:text-destructive"
+                  onClick={clearTest}
+                >
+                  <Trash2 className="size-3.5" aria-hidden />
+                  Clear
+                </Button>
+              )}
               <Button
                 size="sm"
                 className="h-8 gap-1.5 text-xs"
@@ -1201,7 +1487,8 @@ export function TestBuilderClient({
               <AlertTitle>Preview is out of date</AlertTitle>
               <AlertDescription>
                 The weak-area selection or target changed since this test was auto-built — press
-                “Update preview” to rebuild. Questions you added by hand are kept in the paper.
+                “Update preview” to rebuild from the current settings. Questions you added by hand
+                are kept and appended after the rebuilt set.
               </AlertDescription>
             </Alert>
           )}
@@ -1222,34 +1509,68 @@ export function TestBuilderClient({
             </p>
           )}
 
-          {/* Questions | Mark scheme tabs (SME parity; print always prints the paper) */}
-          <div role="tablist" aria-label="Test views" className="flex h-9 w-fit items-center gap-0.5 rounded-md border bg-muted/40 p-0.5 print:hidden">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={tab === "questions"}
-              onClick={() => setTab("questions")}
-              className={`h-8 rounded-[5px] px-3 text-xs font-medium transition-colors ${
-                tab === "questions"
-                  ? "bg-background shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Questions
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={tab === "scheme"}
-              onClick={() => setTab("scheme")}
-              className={`h-8 rounded-[5px] px-3 text-xs font-medium transition-colors ${
-                tab === "scheme"
-                  ? "bg-background shadow-sm"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              Mark scheme
-            </button>
+          {/* Questions | Mark scheme tabs + copy switch (SME parity; print always prints the paper) */}
+          <div className="flex flex-wrap items-center gap-2 print:hidden">
+            <div role="tablist" aria-label="Test views" className="flex h-9 w-fit items-center gap-0.5 rounded-md border bg-muted/40 p-0.5">
+              <button
+                type="button"
+                role="tab"
+                aria-selected={tab === "questions"}
+                onClick={() => setTab("questions")}
+                className={`h-8 rounded-[5px] px-3 text-xs font-medium transition-colors ${
+                  tab === "questions"
+                    ? "bg-background shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Questions
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={tab === "scheme"}
+                onClick={() => setTab("scheme")}
+                className={`h-8 rounded-[5px] px-3 text-xs font-medium transition-colors ${
+                  tab === "scheme"
+                    ? "bg-background shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                Mark scheme
+              </button>
+            </div>
+            {test && (
+              <div
+                role="group"
+                aria-label="Paper copy"
+                className="flex h-9 items-center gap-0.5 rounded-md border bg-muted/40 p-0.5"
+              >
+                <button
+                  type="button"
+                  aria-pressed={pdf.copy === "student"}
+                  onClick={() => setPdf((p) => ({ ...p, copy: "student" }))}
+                  className={`h-8 rounded-[5px] px-2.5 text-xs font-medium transition-colors ${
+                    pdf.copy === "student"
+                      ? "bg-background shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Student copy
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={pdf.copy === "teacher"}
+                  onClick={() => setPdf((p) => ({ ...p, copy: "teacher" }))}
+                  className={`h-8 rounded-[5px] px-2.5 text-xs font-medium transition-colors ${
+                    pdf.copy === "teacher"
+                      ? "bg-background shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  Teacher copy
+                </button>
+              </div>
+            )}
           </div>
 
           {/* ── the paper (screen preview + print sheet) ── */}
@@ -1371,7 +1692,141 @@ export function TestBuilderClient({
             )}
           </div>
         </section>
-      </div>
+        </div>
+      )}
+
+      {/* ── floating test summary while browsing the bank ── */}
+      {view === "builder" && test && showFloat && (
+        <div className="fixed inset-x-0 bottom-4 z-40 flex justify-center px-4 print:hidden">
+          <div className="flex max-w-full items-center gap-2 rounded-full border bg-background/95 py-1.5 pr-1.5 pl-4 shadow-lg backdrop-blur">
+            <ProgressRing value={test.totalMarks} max={ringMax} />
+            <span
+              key={test.questions.length}
+              className="animate-[pulse_0.7s_ease-in-out_1] text-sm font-medium whitespace-nowrap"
+            >
+              {test.questions.length} q · {test.totalMarks} marks
+            </span>
+            {undoState && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-7 gap-1 text-xs"
+                onClick={undoRemove}
+              >
+                <RotateCcw className="size-3" aria-hidden />
+                Undo remove
+              </Button>
+            )}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="h-7 text-xs"
+              onClick={() =>
+                resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+              }
+            >
+              View test
+            </Button>
+            <Button
+              size="sm"
+              className="h-7 gap-1 text-xs"
+              onClick={() => setDownloadOpen(true)}
+            >
+              <Download className="size-3" aria-hidden />
+              PDF
+            </Button>
+          </div>
+        </div>
+      )}
+
+      {/* ── full question view (SME: View — every part before adding) ── */}
+      <Dialog
+        open={viewing !== null}
+        onOpenChange={(o) => {
+          if (!o) setViewing(null);
+        }}
+      >
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle>Question preview</DialogTitle>
+            <DialogDescription>
+              {viewing
+                ? `Every part of this ${pluralMarks(viewing.marks)} question, with its mark scheme — check it before adding it to the test.`
+                : ""}
+            </DialogDescription>
+          </DialogHeader>
+          {viewing && (
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center gap-1.5">
+                <Badge variant="outline" className="h-5 px-1.5 font-mono text-[10px]">
+                  [{viewing.marks}]
+                </Badge>
+                {viewing.difficulty && (
+                  <Badge
+                    variant="outline"
+                    className={`h-5 px-1.5 text-[10px] ${difficultyBadgeClass(viewing.difficulty)}`}
+                  >
+                    {capDifficulty(viewing.difficulty)}
+                  </Badge>
+                )}
+                <span className="font-mono text-[10px] text-muted-foreground">
+                  {viewing.subtopic.code} · {viewing.subtopic.title}
+                </span>
+              </div>
+              <div className="max-h-[50vh] space-y-4 overflow-y-auto pr-1">
+                {viewing.parts.map((p) => (
+                  <div key={p.id}>
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-xs font-medium text-muted-foreground">
+                        ({String.fromCharCode(97 + p.order)}) {p.commandWord}
+                      </span>
+                      <span className="text-xs text-muted-foreground">[{p.marks}]</span>
+                    </div>
+                    <Markdown className="mt-1 [overflow-wrap:anywhere]">{p.problemMd}</Markdown>
+                    {p.choices &&
+                      p.choices.length > 0 &&
+                      p.choices.some((c) => c.label && c.textMd.trim()) && (
+                        <ChoiceList choices={p.choices} />
+                      )}
+                    {p.solutionMd && (
+                      <details className="mt-2 rounded bg-muted/40 p-2">
+                        <summary className="cursor-pointer text-xs font-medium">
+                          Mark scheme — part ({String.fromCharCode(97 + p.order)})
+                        </summary>
+                        <Markdown className="mt-1 text-xs [&]:[overflow-wrap:anywhere]">
+                          {p.solutionMd}
+                        </Markdown>
+                      </details>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <Button variant="outline" size="sm" onClick={() => setViewing(null)}>
+                  Close
+                </Button>
+                <Button
+                  size="sm"
+                  disabled={inTestIds.has(viewing.id)}
+                  onClick={() => {
+                    addQuestion(viewing);
+                    setViewing(null);
+                  }}
+                >
+                  {inTestIds.has(viewing.id) ? (
+                    "Already in test"
+                  ) : (
+                    <>
+                      <Plus className="size-3.5" aria-hidden />
+                      Add to test
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* ── Download PDF modal (SME: download flow + PDF settings) ── */}
       <Dialog open={downloadOpen} onOpenChange={setDownloadOpen}>
@@ -1483,10 +1938,7 @@ export function TestBuilderClient({
 
             {test && (
               <p className="flex items-center gap-2 text-sm">
-                <ProgressRing
-                  value={test.totalMarks}
-                  max={mode === "marks" ? Math.min(300, Math.max(1, Number(targetMarks) || 0)) || null : null}
-                />
+                <ProgressRing value={test.totalMarks} max={ringMax} />
                 <span>
                   Total: {test.questions.length} question
                   {test.questions.length === 1 ? "" : "s"} · {pluralMarks(test.totalMarks)}
@@ -1603,16 +2055,7 @@ function TestQuestion({
             <Markdown className="mt-1 [overflow-wrap:anywhere]">
               {forStudent ? stripTierLines(p.problemMd) : p.problemMd}
             </Markdown>
-            {hasChoices && (
-              <ul className="mt-1.5 list-none space-y-1 pl-1">
-                {p.choices!.map((choice) => (
-                  <li key={choice.label} className="text-[13px] [overflow-wrap:anywhere]">
-                    <span className="font-medium">{choice.label})</span>{" "}
-                    {normalizeChoiceText(choice.textMd)}
-                  </li>
-                ))}
-              </ul>
-            )}
+            {hasChoices && <ChoiceList choices={p.choices!} />}
             {!forStudent &&
               p.sourcePaper &&
               (p.sourcePaper.date ||

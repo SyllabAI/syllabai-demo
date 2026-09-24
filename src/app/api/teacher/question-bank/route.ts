@@ -12,6 +12,8 @@ import { toAssembledQuestion } from "@/lib/teacher/test-assembly";
  *   ?slug=<course>            required
  *   &subtopics=<csv codes>    optional filter (empty = whole bank)
  *   &difficulty=<easy|medium|hard>  optional
+ *   &q=<text>                 optional keyword search (problem, choice and
+ *                             subtopic-title substring, case-insensitive)
  *   &ids=<csv question ids>   explicit fetch (saved-test restore) —
  *                             bypasses filters, preserves the given order
  *   &offset=<n>&limit=<n>     pagination (limit clamped 1–60, default 40)
@@ -76,6 +78,7 @@ export async function GET(request: Request) {
   const wanted = subCodes.length > 0 ? new Set(subCodes) : null;
   const difficultyRaw = (searchParams.get("difficulty") ?? "").toLowerCase();
   const difficulty = ["easy", "medium", "hard"].includes(difficultyRaw) ? difficultyRaw : null;
+  const search = (searchParams.get("q") ?? "").trim().slice(0, 120).toLowerCase();
 
   type Row = ReturnType<typeof toAssembledQuestion> & { preview: string };
   const rows: Row[] = [];
@@ -97,7 +100,21 @@ export async function GET(request: Request) {
     }
   }
 
-  rows.sort(
+  // keyword search AFTER filter, BEFORE ordering/pagination (total reflects
+  // the searched set so "Load more" stays consistent)
+  const searched = search
+    ? rows.filter(
+        (r) =>
+          r.subtopic.title.toLowerCase().includes(search) ||
+          r.parts.some(
+            (p) =>
+              p.problemMd.toLowerCase().includes(search) ||
+              (p.choices ?? []).some((c) => c.textMd.toLowerCase().includes(search)),
+          ),
+      )
+    : rows;
+
+  searched.sort(
     (a, b) =>
       a.subtopic.code.localeCompare(b.subtopic.code) ||
       a.marks - b.marks ||
@@ -106,11 +123,11 @@ export async function GET(request: Request) {
 
   const offset = Math.max(0, Number(searchParams.get("offset") ?? "0") || 0);
   const limit = Math.min(MAX_LIMIT, Math.max(1, Number(searchParams.get("limit") ?? "40") || 40));
-  const page = rows.slice(offset, offset + limit);
-  const nextOffset = offset + limit < rows.length ? offset + limit : null;
+  const page = searched.slice(offset, offset + limit);
+  const nextOffset = offset + limit < searched.length ? offset + limit : null;
 
   return NextResponse.json(
-    { course: meta, questions: page, total: rows.length, nextOffset },
+    { course: meta, questions: page, total: searched.length, nextOffset },
     { headers: { "cache-control": "no-store" } },
   );
 }

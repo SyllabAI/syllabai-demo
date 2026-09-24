@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default async function TestBuilderPage({
   searchParams,
 }: {
-  searchParams: Promise<{ course?: string; subtopics?: string }>;
+  searchParams: Promise<{ course?: string; subtopics?: string; view?: string }>;
 }) {
   const params = await searchParams;
   const courses = (await listCourses())
@@ -33,6 +33,7 @@ export default async function TestBuilderPage({
       courses={courses}
       initialCourse={initialCourse}
       initialSubtopics={initialSubtopics}
+      initialView={params.view === "builder" ? "builder" : "tests"}
     />
   );
 }
