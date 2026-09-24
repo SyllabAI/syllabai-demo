@@ -39,8 +39,8 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-# upstream parse this build is pinned to (resources main @ audit time)
-RESOURCES_SHA = "ae6a5e40c63013bed69d7af1583fbb4a4d19b205"
+# upstream parse this build is pinned to (resources main @ T-KG-13 repairs)
+RESOURCES_SHA = "8d56fb8bd34ddc9cda7b89df00f1cb53e48a5c8d"
 RAW_BASE = f"https://raw.githubusercontent.com/SyllabAI/syllabai-resources/{RESOURCES_SHA}"
 DEFAULT_CACHE = Path("/home/z/my-project/work/spines-cache")
 
