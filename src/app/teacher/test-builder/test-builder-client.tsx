@@ -291,8 +291,16 @@ export function TestBuilderClient({
         body: JSON.stringify({
           slug: course,
           subtopics: [...selected],
-          targetMarks: mode === "marks" ? Math.max(1, Number(targetMarks) || 0) || null : null,
-          maxQuestions: mode === "count" ? Math.max(1, Number(maxQuestions) || 20) : null,
+          // clamp to the API's accepted ranges (marks ≤ 300, questions ≤ 50)
+          // so an out-of-range keystroke degrades gracefully instead of a 400
+          targetMarks:
+            mode === "marks"
+              ? Math.min(300, Math.max(1, Number(targetMarks) || 0)) || null
+              : null,
+          maxQuestions:
+            mode === "count"
+              ? Math.min(50, Math.max(1, Number(maxQuestions) || 20))
+              : null,
         }),
       });
       const payload = (await res.json()) as { test?: AssembledTest; error?: string };
@@ -304,7 +312,12 @@ export function TestBuilderClient({
         resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     } catch (err: unknown) {
-      setBuildError(err instanceof Error ? err.message : "failed to assemble test");
+      const raw = err instanceof Error ? err.message : "failed to assemble test";
+      setBuildError(
+        raw === "invalid payload"
+          ? "The settings are out of range — use a marks target of 1–300 or up to 50 questions."
+          : raw,
+      );
     } finally {
       setBuilding(false);
     }
