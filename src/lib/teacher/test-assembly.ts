@@ -56,6 +56,33 @@ interface PoolEntry {
   subTitle: string;
 }
 
+/** Corpus question → wire-format question (shared by assembly and the
+ *  question-bank browser — one mapping, one shape). */
+export function toAssembledQuestion(
+  q: ExamQuestionTopic["questions"][number],
+  subCode: string,
+  subTitle: string,
+): AssembledQuestion {
+  return {
+    id: q.id,
+    marks: q.totalMarks,
+    difficulty: q.difficulty,
+    subtopic: { code: subCode, title: subTitle },
+    parts: q.parts.map((p) => ({
+      id: p.id,
+      order: p.order,
+      marks: p.marks,
+      questionType: p.questionType,
+      commandWord: p.commandWord,
+      specPointCodes: p.specPointCodes,
+      choices: p.choices,
+      sourcePaper: p.sourcePaper,
+      problemMd: p.problemMd,
+      solutionMd: p.solutionMd,
+    })),
+  };
+}
+
 export function assembleTest(
   bundle: CourseBundle,
   setSlugs: Set<string>,
@@ -109,24 +136,9 @@ export function assembleTest(
     }
   }
 
-  const questions: AssembledQuestion[] = chosen.map(({ q, subCode, subTitle }) => ({
-    id: q.id,
-    marks: q.totalMarks,
-    difficulty: q.difficulty,
-    subtopic: { code: subCode, title: subTitle },
-    parts: q.parts.map((p) => ({
-      id: p.id,
-      order: p.order,
-      marks: p.marks,
-      questionType: p.questionType,
-      commandWord: p.commandWord,
-      specPointCodes: p.specPointCodes,
-      choices: p.choices,
-      sourcePaper: p.sourcePaper,
-      problemMd: p.problemMd,
-      solutionMd: p.solutionMd,
-    })),
-  }));
+  const questions: AssembledQuestion[] = chosen.map(({ q, subCode, subTitle }) =>
+    toAssembledQuestion(q, subCode, subTitle),
+  );
 
   const totalMarks = questions.reduce((acc, q) => acc + q.marks, 0);
   const subtopics = [...new Map(questions.map((q) => [q.subtopic.code, q.subtopic])).values()]

@@ -112,6 +112,9 @@ export interface SavedTest {
   subtopics: string[];
   targetMarks: number | null;
   maxQuestions: number | null;
+  /** Explicit question list (builder-era saves). Legacy saves omit it —
+   *  they only kept the auto-build controls and must be re-generated. */
+  questionIds?: string[];
   createdAt: string;
 }
 
