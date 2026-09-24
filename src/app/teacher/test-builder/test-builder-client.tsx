@@ -31,8 +31,8 @@
  *   - saved tests persist the EXPLICIT question list (fixes the old
  *     controls-only save semantics); legacy saves fall back to controls;
  *   - corpus choice-text repair at render (camel-boundary space);
- *   - drag-to-reorder in the paper (@dnd-kit, grip handle + keyboard
- *     sensor) alongside ↑/↓ arrows and a type-the-position "move to
+ *   - drag-to-reorder in the paper (@dnd-kit, grip handle with pointer/
+ *     touch sensor) alongside ↑/↓ arrows and a type-the-position "move to
  *     position" input for long papers;
  *   - the WHOLE builder state (course, filters, auto-build controls,
  *     name, paper, pdf settings, hand-added ids) persists as a versioned
@@ -45,7 +45,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   DndContext,
-  KeyboardSensor,
   PointerSensor,
   closestCenter,
   useSensor,
@@ -55,7 +54,6 @@ import {
 import {
   SortableContext,
   arrayMove,
-  sortableKeyboardCoordinates,
   useSortable,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
@@ -274,6 +272,12 @@ function pluralMarks(n: number): string {
   return `${n} mark${n === 1 ? "" : "s"}`;
 }
 
+/** Stable fingerprint of the committed paper: saved name + explicit question
+ *  order. Same name+ids ⟺ the builder state is already in "Your tests". */
+function paperKey(name: string, ids: string[]): string {
+  return `${name}::${ids.join(",")}`;
+}
+
 function difficultyBadgeClass(d: string | null): string {
   switch ((d ?? "").toLowerCase()) {
     case "easy":
@@ -440,15 +444,17 @@ export function TestBuilderClient({
   const [viewing, setViewing] = useState<BankQuestion | null>(null);
   // hand-added (or restored) questions survive auto-build rebuilds
   const manualIdsRef = useRef<Set<string>>(new Set());
+  // key of the paper content last committed to "Your tests" (save or open).
+  // When the current builder state matches it, no draft is kept and the
+  // landing hides the "unsaved draft" chip — the draft can never claim a
+  // saved paper is unsaved. State (not a ref) so render can read it.
+  const [committedKey, setCommittedKey] = useState<string | null>(null);
   // undo for removing a question from the paper (8 s window)
   const [undoState, setUndoState] = useState<{ q: AssembledQuestion; index: number } | null>(null);
   const undoTimerRef = useRef<number | null>(null);
   // floating test summary while browsing the bank
   const [showFloat, setShowFloat] = useState(false);
   // ── draft persistence (whole builder state across refresh) ──────────────
-  // hasDraft: a draft was actually restored from localStorage this session —
-  // drives the landing "resume / discard" affordance
-  const [hasDraft, setHasDraft] = useState(false);
   const hydratedRef = useRef(false);
 
   function goBuilder() {
@@ -472,41 +478,47 @@ export function TestBuilderClient({
     if (undoTimerRef.current) window.clearTimeout(undoTimerRef.current);
   }, []);
 
-  // ── restore the draft once on mount (before other effects so the
+  // ── restore the draft once on mount (before the browser paints, so the
   // course/bank fetches re-run against the restored course) ────────────────
+  // The restore is deferred one microtask: synchronous setState inside an
+  // effect body is a react-hooks/set-state-in-effect violation, and the
+  // course-fetch effect's `cancelled` guard already absorbs the ordering
+  // (default-course fetch starts, is cancelled, re-runs on the restored
+  // course) — one extra cheap request, no stale writes.
   useEffect(() => {
-    const d = readBuilderDraft(courses);
-    if (d) {
-      setCourse(d.course);
-      setSelected(new Set(d.selected));
-      setMode(d.mode === "count" ? "count" : "marks");
-      setTargetMarks(typeof d.targetMarks === "string" && d.targetMarks ? d.targetMarks : "40");
-      setMaxQuestions(typeof d.maxQuestions === "string" && d.maxQuestions ? d.maxQuestions : "20");
-      setDifficulty(
-        d.difficulty === "easy" || d.difficulty === "medium" || d.difficulty === "hard"
-          ? d.difficulty
-          : "all",
-      );
-      setTestName(typeof d.testName === "string" ? d.testName : "");
-      setTest(d.test ?? null);
-      setStale(Boolean(d.stale));
-      if (d.pdf) {
-        setPdf((p) => ({
-          ...p,
-          copy: d.pdf!.copy === "student" ? "student" : "teacher",
-          coverPage: Boolean(d.pdf!.coverPage),
-          answerSpace: Boolean(d.pdf!.answerSpace),
-          answerLines:
-            typeof d.pdf!.answerLines === "number"
-              ? Math.min(8, Math.max(1, Math.round(d.pdf!.answerLines)))
-              : 3,
-          noSplit: Boolean(d.pdf!.noSplit),
-        }));
-      }
-      manualIdsRef.current = new Set(d.manualIds);
-      setHasDraft(true);
-    }
-    hydratedRef.current = true;
+    queueMicrotask(() => {
+      const d = readBuilderDraft(courses);
+      if (d) {
+        setCourse(d.course);
+        setSelected(new Set(d.selected));
+        setMode(d.mode === "count" ? "count" : "marks");
+        setTargetMarks(typeof d.targetMarks === "string" && d.targetMarks ? d.targetMarks : "40");
+        setMaxQuestions(typeof d.maxQuestions === "string" && d.maxQuestions ? d.maxQuestions : "20");
+        setDifficulty(
+          d.difficulty === "easy" || d.difficulty === "medium" || d.difficulty === "hard"
+            ? d.difficulty
+            : "all",
+        );
+        setTestName(typeof d.testName === "string" ? d.testName : "");
+        setTest(d.test ?? null);
+        setStale(Boolean(d.stale));
+        if (d.pdf) {
+          setPdf((p) => ({
+            ...p,
+            copy: d.pdf!.copy === "student" ? "student" : "teacher",
+            coverPage: Boolean(d.pdf!.coverPage),
+            answerSpace: Boolean(d.pdf!.answerSpace),
+            answerLines:
+              typeof d.pdf!.answerLines === "number"
+                ? Math.min(8, Math.max(1, Math.round(d.pdf!.answerLines)))
+                : 3,
+            noSplit: Boolean(d.pdf!.noSplit),
+          }));
+        }
+        manualIdsRef.current = new Set(d.manualIds);
+        }
+      hydratedRef.current = true;
+    });
   }, [courses]);
 
   // ── persist the whole builder state as a draft (debounced); manual ids
@@ -516,6 +528,19 @@ export function TestBuilderClient({
     if (!hydratedRef.current || !course) return;
     const timer = window.setTimeout(() => {
       try {
+        if (
+          test &&
+          paperKey(testName, test.questions.map((q) => q.id)) === committedKey
+        ) {
+          // the paper is already committed to "Your tests" — no draft
+          window.localStorage.removeItem(DRAFT_KEY);
+          return;
+        }
+        if (!test && selected.size === 0 && testName.trim() === "") {
+          // nothing worth resuming (e.g. right after Discard) — no draft
+          window.localStorage.removeItem(DRAFT_KEY);
+          return;
+        }
         const draft: BuilderDraft = {
           v: 1,
           course,
@@ -825,10 +850,12 @@ export function TestBuilderClient({
     });
   }
 
-  // drag-to-reorder sensors (grip handle: pointer + keyboard)
+  // drag-to-reorder sensor: pointer/touch on the grip handle. Keyboard users
+  // reorder via the ↑/↓ buttons and the type-a-position box instead — the
+  // dnd-kit keyboard sensor never resolves a new `over` in this tall-row
+  // layout (verified in local E2E), so it would lift without moving.
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
-    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
   );
 
   function handleDragEnd({ active, over }: DragEndEvent) {
@@ -908,7 +935,6 @@ export function TestBuilderClient({
     setBuildError(null);
     setUndoState(null);
     manualIdsRef.current = new Set();
-    setHasDraft(false);
     try {
       window.localStorage.removeItem(DRAFT_KEY);
     } catch {
@@ -918,7 +944,6 @@ export function TestBuilderClient({
 
   /** explicit Save commits the work — the draft is no longer needed. */
   function clearDraftAfterSave() {
-    setHasDraft(false);
     try {
       window.localStorage.removeItem(DRAFT_KEY);
     } catch {
@@ -995,12 +1020,13 @@ export function TestBuilderClient({
     if (!course) return;
     if (!test && selected.size === 0) return;
     const meta = courses.find((c) => c.slug === course);
+    const finalName =
+      testName.trim() ||
+      (test
+        ? `${test.course.label} — ${test.questions.length}q · ${test.totalMarks} marks`
+        : `${meta?.label ?? course} — ${selected.size} subtopic${selected.size === 1 ? "" : "s"}`);
     save({
-      name:
-        testName.trim() ||
-        (test
-          ? `${test.course.label} — ${test.questions.length}q · ${test.totalMarks} marks`
-          : `${meta?.label ?? course} — ${selected.size} subtopic${selected.size === 1 ? "" : "s"}`),
+      name: finalName,
       course,
       courseCode: meta?.code ?? test?.course.code ?? "",
       subtopics: [...selected],
@@ -1008,6 +1034,9 @@ export function TestBuilderClient({
       maxQuestions: mode === "count" ? Number(maxQuestions) || null : null,
       questionIds: test ? test.questions.map((q) => q.id) : undefined,
     });
+    // the name input reflects what was actually saved (single-name semantics)
+    if (finalName !== testName) setTestName(finalName);
+    setCommittedKey(paperKey(finalName, test ? test.questions.map((q) => q.id) : []));
     setSavedFlash(true);
     window.setTimeout(() => setSavedFlash(false), 2200);
     clearDraftAfterSave();
@@ -1035,6 +1064,7 @@ export function TestBuilderClient({
     if (t.questionIds && t.questionIds.length > 0) {
       // builder-era save — restore the explicit paper (order preserved);
       // restored questions count as hand-placed for rebuild keeps
+      setCommittedKey(paperKey(t.name, t.questionIds));
       manualIdsRef.current = new Set(t.questionIds);
       setBuilding(true);
       setBuildError(null);
@@ -1129,6 +1159,30 @@ export function TestBuilderClient({
               Create test
             </Button>
           </div>
+          {view === "tests" && test &&
+            paperKey(testName, test.questions.map((q) => q.id)) !== committedKey && (
+            /* builder holds uncommitted work — offer to finish it or throw it away */
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-primary/30 bg-primary/5 p-3">
+              <div className="min-w-0">
+                <p className="truncate text-sm font-medium">
+                  Unsaved draft — {testName || test.title || "Untitled test"}
+                </p>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  {test.questions.length} question{test.questions.length === 1 ? "" : "s"} ·{" "}
+                  {pluralMarks(test.totalMarks)} — kept in this browser; it is only in “Your
+                  tests” once saved.
+                </p>
+              </div>
+              <div className="flex shrink-0 items-center gap-2">
+                <Button size="sm" className="h-8 text-xs" onClick={goBuilder}>
+                  Resume
+                </Button>
+                <Button size="sm" variant="outline" className="h-8 text-xs" onClick={discardDraft}>
+                  Discard
+                </Button>
+              </div>
+            </div>
+          )}
           {tests.length === 0 ? (
             <div className="rounded-lg border border-dashed p-10 text-center">
               <ClipboardList className="mx-auto size-8 text-muted-foreground/60" aria-hidden />
@@ -1814,20 +1868,32 @@ export function TestBuilderClient({
                   </p>
                 </header>
 
-                {test.questions.map((q, qi) => (
-                  <TestQuestion
-                    key={q.id}
-                    q={q}
-                    index={qi}
-                    total={test.questions.length}
-                    forStudent={pdf.copy === "student"}
-                    noSplit={pdf.noSplit}
-                    answerSpace={pdf.answerSpace}
-                    answerLines={pdf.answerLines}
-                    onMove={moveQuestion}
-                    onRemove={removeQuestion}
-                  />
-                ))}
+                <DndContext
+                  sensors={sensors}
+                  collisionDetection={closestCenter}
+                  onDragEnd={handleDragEnd}
+                >
+                  <SortableContext
+                    items={test.questions.map((q) => q.id)}
+                    strategy={verticalListSortingStrategy}
+                  >
+                    {test.questions.map((q, qi) => (
+                      <SortableTestQuestion
+                        key={q.id}
+                        q={q}
+                        index={qi}
+                        total={test.questions.length}
+                        forStudent={pdf.copy === "student"}
+                        noSplit={pdf.noSplit}
+                        answerSpace={pdf.answerSpace}
+                        answerLines={pdf.answerLines}
+                        onMove={moveQuestion}
+                        onMoveTo={moveQuestionTo}
+                        onRemove={removeQuestion}
+                      />
+                    ))}
+                  </SortableContext>
+                </DndContext>
 
                 {pdf.copy === "teacher" && (
                   <footer className="border-t pt-2 text-[10px] leading-relaxed text-muted-foreground">
@@ -2173,6 +2239,91 @@ export function TestBuilderClient({
 
 /* ── paper question block (shared by screen preview and print) ──────────── */
 
+/** Type-a-position jump box — the long-paper alternative to repeated ↑/↓
+ *  presses (and to dragging across 20 questions). Uncontrolled on purpose:
+ *  `key={index}` remounts it whenever the row's position changes, so the
+ *  displayed number is always the fresh position with zero effect state. */
+function PositionInput({
+  index,
+  total,
+  onCommit,
+}: {
+  index: number;
+  total: number;
+  onCommit: (pos: number) => void;
+}) {
+  return (
+    <input
+      key={index}
+      type="number"
+      min={1}
+      max={total}
+      defaultValue={index + 1}
+      aria-label={`Move question ${index + 1} to position (1–${total})`}
+      title={`Type a position (1–${total}), press Enter to move this question there`}
+      className="h-6 w-11 rounded-md border border-input bg-transparent px-1 text-center font-mono text-[11px] tabular-nums outline-none focus-visible:ring-2 focus-visible:ring-ring print:hidden"
+      onBlur={(e) => {
+        const n = Number.parseInt(e.currentTarget.value, 10);
+        if (!Number.isNaN(n) && n >= 1 && n <= total && n - 1 !== index) onCommit(n - 1);
+        else e.currentTarget.value = String(index + 1);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          e.currentTarget.blur();
+        }
+      }}
+    />
+  );
+}
+
+/** Drag-enabled shell around a paper question: a grip handle (pointer +
+ *  touch sensor) that starts a dnd-kit sort, plus the position jump box.
+ *  The student copy renders the plain TestQuestion — reordering is a
+ *  teacher affordance, and the paper chrome must stay printable. */
+function SortableTestQuestion(props: React.ComponentProps<typeof TestQuestion>) {
+  const { attributes, listeners, setNodeRef, setActivatorNodeRef, transform, transition, isDragging } = useSortable({
+    id: props.q.id,
+    disabled: props.forStudent,
+  });
+  if (props.forStudent) return <TestQuestion {...props} />;
+  return (
+    <div
+      ref={setNodeRef}
+      style={{
+        transform: CSS.Translate.toString(transform),
+        transition,
+        position: "relative",
+        zIndex: isDragging ? 20 : undefined,
+      }}
+      className={isDragging ? "rounded-md bg-background opacity-90 shadow-lg ring-1 ring-border" : undefined}
+    >
+      <TestQuestion
+        {...props}
+        dragHandle={
+          <button
+            type="button"
+            ref={setActivatorNodeRef}
+            className="inline-flex size-6 shrink-0 cursor-grab touch-none items-center justify-center rounded-md text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:cursor-grabbing"
+            aria-label={`Drag question ${props.index + 1} to reorder`}
+            {...attributes}
+            {...listeners}
+          >
+            <GripVertical className="size-3.5" aria-hidden />
+          </button>
+        }
+        positionInput={
+          <PositionInput
+            index={props.index}
+            total={props.total}
+            onCommit={(pos) => props.onMoveTo(props.index, pos)}
+          />
+        }
+      />
+    </div>
+  );
+}
+
 function TestQuestion({
   q,
   index,
@@ -2183,6 +2334,8 @@ function TestQuestion({
   answerLines,
   onMove,
   onRemove,
+  dragHandle,
+  positionInput,
 }: {
   q: AssembledQuestion;
   index: number;
@@ -2192,7 +2345,10 @@ function TestQuestion({
   answerSpace: boolean;
   answerLines: number;
   onMove: (i: number, dir: -1 | 1) => void;
+  onMoveTo: (i: number, pos: number) => void;
   onRemove: (i: number) => void;
+  dragHandle?: React.ReactNode;
+  positionInput?: React.ReactNode;
 }) {
   return (
     <div className={noSplit ? "break-inside-avoid" : undefined}>
@@ -2210,6 +2366,8 @@ function TestQuestion({
               {q.subtopic.code}
             </span>
           )}
+          {dragHandle}
+          {positionInput}
           <Button
             variant="ghost"
             size="icon"
