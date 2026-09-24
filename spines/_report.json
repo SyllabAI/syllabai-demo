@@ -1,6 +1,6 @@
 {
- "resourcesSha": "8d56fb8bd34ddc9cda7b89df00f1cb53e48a5c8d",
- "generatedUtc": "2026-09-24T15:21:21Z",
+ "resourcesSha": "19a5b4d0f68721adf43467e8c7f494636da71b34",
+ "generatedUtc": "2026-09-24T16:52:48Z",
  "courses": {
   "ial-biology-18": {
    "qual": "ial-biology",
@@ -218,8 +218,8 @@
    "counts": {
     "topics": 2,
     "subtopics": 10,
-    "specPoints": 76,
-    "parsePool": 141,
+    "specPoints": 36,
+    "parsePool": 101,
     "orphans": 17
    },
    "warnings": []
@@ -238,7 +238,7 @@
     "topics": 3,
     "subtopics": 16,
     "specPoints": 48,
-    "parsePool": 141,
+    "parsePool": 101,
     "orphans": 17
    },
    "warnings": []
@@ -462,8 +462,8 @@
    "counts": {
     "topics": 9,
     "subtopics": 31,
-    "specPoints": 204,
-    "parsePool": 242,
+    "specPoints": 200,
+    "parsePool": 238,
     "orphans": 38
    },
    "warnings": [

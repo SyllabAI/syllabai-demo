@@ -39,8 +39,9 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-# upstream parse this build is pinned to (resources main @ T-KG-13 repairs)
-RESOURCES_SHA = "8d56fb8bd34ddc9cda7b89df00f1cb53e48a5c8d"
+# upstream parse this build is pinned to (resources main @ T-KG-14 repairs:
+# admin-junk removal, geo table rebuilds, modular unit applicability)
+RESOURCES_SHA = "19a5b4d0f68721adf43467e8c7f494636da71b34"
 RAW_BASE = f"https://raw.githubusercontent.com/SyllabAI/syllabai-resources/{RESOURCES_SHA}"
 DEFAULT_CACHE = Path("/home/z/my-project/work/spines-cache")
 
@@ -243,7 +244,7 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
             page = (row.get("provenance") or {}).get("page")
             titles = canon[num]
             if len(titles) == 1 or not page:
-                return num, titles[0]
+                return num, titles[0][0]
             best = min(titles, key=lambda tt: abs(tt[1] - page))
             return num, best[0]
         if num:
