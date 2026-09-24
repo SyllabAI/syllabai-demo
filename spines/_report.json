@@ -1,6 +1,6 @@
 {
- "resourcesSha": "ae6a5e40c63013bed69d7af1583fbb4a4d19b205",
- "generatedUtc": "2026-09-24T13:27:17Z",
+ "resourcesSha": "8d56fb8bd34ddc9cda7b89df00f1cb53e48a5c8d",
+ "generatedUtc": "2026-09-24T15:21:21Z",
  "courses": {
   "ial-biology-18": {
    "qual": "ial-biology",
@@ -217,15 +217,12 @@
    },
    "counts": {
     "topics": 2,
-    "subtopics": 11,
-    "specPoints": 86,
-    "parsePool": 185,
+    "subtopics": 10,
+    "specPoints": 76,
+    "parsePool": 141,
     "orphans": 17
    },
-   "warnings": [
-    "duplicate subtopic title 'Financial' in section 'The preparation of financial statements' (official key 2) — suffixed with key",
-    "duplicate subtopic title 'Financial' in section 'The preparation of financial statements' (official key 5) — suffixed with key"
-   ]
+   "warnings": []
   },
   "igcse-accounting-17-introduction-to-bookkeeping-and-accounting": {
    "qual": "igcse-accounting",
@@ -239,9 +236,9 @@
    },
    "counts": {
     "topics": 3,
-    "subtopics": 18,
-    "specPoints": 82,
-    "parsePool": 185,
+    "subtopics": 16,
+    "specPoints": 48,
+    "parsePool": 141,
     "orphans": 17
    },
    "warnings": []
