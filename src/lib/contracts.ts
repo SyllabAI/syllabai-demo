@@ -47,6 +47,23 @@ export const CurriculumIdentity = z.object({
 });
 
 // ── curriculum skeleton (from graph/relationships.yaml, RULE_DERIVED) ──
+/**
+ * Paper/unit applicability — the upstream canonical object copied verbatim
+ * (T-KG-16 derivation; T-KG-17 propagation). Every field is optional because
+ * coverage is per-row: rows with no printed home (SX front matter, the
+ * geography cross-paper AO/skills rows) simply carry no object. `rule` is the
+ * printed-spec provenance sentence — shown as tooltip text, never edited.
+ */
+export const SpecApplicability = z.object({
+  papers: z.array(z.string()).optional(),
+  unit_scope: z.string().nullish(),
+  tier: z.string().nullish(),
+  coursework: z.boolean().nullish(),
+  double_award_shared: z.boolean().nullish(),
+  rule: z.string().optional(),
+});
+export type SpecApplicability = z.infer<typeof SpecApplicability>;
+
 export const CurriculumNode = z.object({
   code: z.string(), // "4CH1-1.1" | SME-native "spcpt_*" / section-topic slugs
   family: z.string(), // SUBJECT | TOPIC | SUBTOPIC | SPEC_POINT | PRACTICAL
@@ -56,6 +73,8 @@ export const CurriculumNode = z.object({
   provenanceTier: ProvenanceTier,
   /** corpus-native ordering (SME-native trees); code-sorted when absent */
   order: z.number().optional(),
+  /** paper/unit assessment home — official-spec trees only (T-KG-17) */
+  applicability: SpecApplicability.optional(),
 });
 
 export const CurriculumEdge = z.object({

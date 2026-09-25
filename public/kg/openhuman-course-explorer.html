@@ -299,7 +299,7 @@ g.edgeHovering .edge.hoveredEdge{opacity:1}
  <div class="contextRelationshipSummary" id="contextRelationshipSummary" aria-live="polite"></div>
  <div class="provNote">Authoritative curriculum structure is canonical. Prerequisite and related-knowledge links in this prototype are inferred/illustrative and must not be promoted to educational truth without validation.</div>
 </div>
-<div id="panel"><button id="close">×</button><div id="p-title"></div><div id="p-type" class="type"></div><div class="row"><span id="m1">Learner state</span><strong id="primary">-</strong></div><div class="bar"><span id="barFill"></span></div><div class="row"><span id="m2">Review</span><strong id="secondary">-</strong></div><div class="row"><span>Source</span><strong id="sourceTag">Pearson Edexcel</strong></div><div class="section">Official curriculum</div><div id="context" class="meta"></div><div class="section">Specification statement</div><div id="statement" class="quote meta"></div><div class="section">Connections</div><div id="links" class="list"></div><div class="section">Why am I seeing this?</div><div id="why" class="list"></div><div id="panelPriority" style="display:none"></div><div class="section">Learner / class overlay</div><div id="evidence" class="list"></div><div class="section">Assessment</div><div id="assessment" class="list"></div><div id="learningSurface" class="learningSurface" style="display:none"></div><div id="contextLearningPath" class="contextLearningPath"></div><div id="interventionCycleHost"></div>
+<div id="panel"><button id="close">×</button><div id="p-title"></div><div id="p-type" class="type"></div><div class="row"><span id="m1">Learner state</span><strong id="primary">-</strong></div><div class="bar"><span id="barFill"></span></div><div class="row"><span id="m2">Review</span><strong id="secondary">-</strong></div><div class="row"><span>Source</span><strong id="sourceTag">Pearson Edexcel</strong></div><div class="section">Official curriculum</div><div id="context" class="meta"></div><div class="section">Specification statement</div><div id="statement" class="quote meta"></div><div id="apChips" style="margin-top:7px"></div><div class="section">Connections</div><div id="links" class="list"></div><div class="section">Why am I seeing this?</div><div id="why" class="list"></div><div id="panelPriority" style="display:none"></div><div class="section">Learner / class overlay</div><div id="evidence" class="list"></div><div class="section">Assessment</div><div id="assessment" class="list"></div><div id="learningSurface" class="learningSurface" style="display:none"></div><div id="contextLearningPath" class="contextLearningPath"></div><div id="interventionCycleHost"></div>
 <div id="evidencePriorityPanel" class="evidencePriorityPanel"></div><div id="pathway" class="pathway" style="display:none"></div><div class="actions"><button class="action" id="learnBtn" aria-label="Open learning surface">Learning surface</button><button class="action" id="practiceBtn" aria-label="Practice next">Practice next</button><button class="action" id="pathBtn" aria-label="Show learning path">Learning path</button><button class="action" id="tutorBtn" aria-label="Ask tutor">Ask tutor</button></div></div>
 </div>
 <div id="commandPalette" class="kbdOverlay" role="dialog" aria-modal="true" aria-label="Command palette"><div class="kbdDialog"><div class="kbdHeader"><h3>Command palette</h3><p>Navigate, explore, and start a learning action.</p><input id="commandInput" class="kbdSearch" autocomplete="off" placeholder="Search commands…" aria-label="Search commands"></div><div id="commandList" class="kbdList"></div><div class="kbdFooter">↑ ↓ move · Enter run · Esc close</div></div></div>
@@ -394,7 +394,7 @@ function syncCanonicalKG(){
 // projection should satisfy; Pixi/D3 runtime fields never cross this boundary.
 const GRAPH_CONTRACT={version:'1.0',nodeTypes:new Set(['Subject','Section','SubTopic','SpecificationPoint','ExamPaper']),edgeTypes:new Set(['hier','pre','rel','assess']),learnerOverlay:{mastery:'number|null',confidence:'number|null',fluency:'number|null',evidence:'number',reviewDue:'boolean',misconception:'string|null'}};
 function projectNode(base){
-  return {id:String(base.id),type:base.type,label:base.label||'',pointId:base.pointId||null,statement:base.statement||null,section:base.section||null,subtopic:base.subtopic||null,meta:base.meta||null,learner:learner(base)||null,visible:visibleForMode(base)};
+  return {id:String(base.id),type:base.type,label:base.label||'',pointId:base.pointId||null,statement:base.statement||null,applicability:base.applicability||null,section:base.section||null,subtopic:base.subtopic||null,meta:base.meta||null,learner:learner(base)||null,visible:visibleForMode(base)};
 }
 function projectEdge(e){return {source:String(e[0]),target:String(e[1]),type:e[2]};}
 function validateGraphViewModel(vm){
@@ -425,7 +425,7 @@ function makeBase(){
      const [x,y]=subAnchors[st[0]]; add({id:st[0],type:'SubTopic',section:sec,label:st[1],x,y,rx:18});
      const pts=pointsForSub(st);pts.forEach((pt,j)=>{
        const [px,py]=makePointPlacement(sec,st[0],j,pts.length);
-       const [ox,oy]=makePointOffset(j,pts.length); add({id:'p:'+pt.id,pointId:pt.id,type:'SpecificationPoint',label:pt.id,statement:pt.text,section:sec,subtopic:st[1],x:px,y:py,localX:ox,localY:oy,rx:8});
+       const [ox,oy]=makePointOffset(j,pts.length); add({id:'p:'+pt.id,pointId:pt.id,type:'SpecificationPoint',label:pt.id,statement:pt.text,applicability:pt.applicability||null,section:sec,subtopic:st[1],x:px,y:py,localX:ox,localY:oy,rx:8});
      });
    });
  });
@@ -681,7 +681,7 @@ function learnerSummary(n){
  return {count:pts.length,measured:measured.length,mastery:avg('mastery'),confidence:avg('confidence'),fluency:avg('fluency'),evidence:vals.reduce((x,q)=>x+(q.evidence||0),0),reviewDue:vals.some(q=>q.reviewDue),misconceptions:vals.filter(q=>q.misconception).length};
 }
 function ensureSubtopics(section){const arr=subtopics[section],map=nodeBy();for(const st of arr){if(!map.has(st[0])){const [x,y]=subAnchors[st[0]];state.nodes.push({id:st[0],type:'SubTopic',section,label:st[1],x,y,homeX:x,homeY:y,vx:0,vy:0})}}}
-function ensurePoints(subId){const n=nodeBy().get(subId);if(!n)return;const def=Object.values(subtopics).flat().find(x=>x[0]===subId);if(!def)return;const pts=pointsForSub(def);const map=nodeBy();pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [x,y]=makePointPlacement(def[0][0],subId,i,pts.length);const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,section:def[0][0],subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})})}
+function ensurePoints(subId){const n=nodeBy().get(subId);if(!n)return;const def=Object.values(subtopics).flat().find(x=>x[0]===subId);if(!def)return;const pts=pointsForSub(def);const map=nodeBy();pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [x,y]=makePointPlacement(def[0][0],subId,i,pts.length);const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:def[0][0],subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})})}
 function renderPos(n){
  const a=state.appearing.get(n.id);
  if(a && n.type==='SpecificationPoint' && n._renderX!=null) return {x:n._renderX,y:n._renderY};
@@ -1459,7 +1459,7 @@ function renderWhy(n){
    if(p){p.style.display='block';p.innerHTML=`<b>Recommended next action</b><br>${action}`;}return;
  }
  const l=learner(n),rec=nextBestAction(n);
- if(!l){el.innerHTML='<div><b>Evidence</b></div><div>• This node is part of the official Chemistry specification.</div><div style="margin-top:6px"><b>Signal</b> · Not measured</div><div><b>Priority</b> · Monitor</div><div><b>Action</b> · Explore or measure learning evidence.</div>';if(p){p.style.display='block';p.innerHTML='<b>Recommended next action</b><br>Explore or measure learning evidence.';}return;}
+ if(!l){el.innerHTML='<div><b>Evidence</b></div><div>• This node is part of the official '+(window.__KG_SUBJECT_LABEL||'Chemistry')+' specification.</div><div style="margin-top:6px"><b>Signal</b> · Not measured</div><div><b>Priority</b> · Monitor</div><div><b>Action</b> · Explore or measure learning evidence.</div>';if(p){p.style.display='block';p.innerHTML='<b>Recommended next action</b><br>Explore or measure learning evidence.';}return;}
  const evidence=[];if(l.reviewDue)evidence.push('review is due');if(l.misconception)evidence.push(`misconception signal: ${l.misconception}`);if(l.evidence!=null&&l.evidence<3)evidence.push(`limited evidence (${l.evidence} record${l.evidence===1?'':'s'})`);if(l.mastery!=null&&l.mastery<55)evidence.push(`mastery ${l.mastery}%`);if(l.confidence!=null&&l.mastery!=null&&l.confidence<l.mastery-15)evidence.push('confidence trails mastery');
  const signal=l.misconception?'misconception':(l.reviewDue?'review due':(l.mastery!=null&&l.mastery<55?'developing mastery':'measured'));
  const priority=l.misconception?'High':(l.reviewDue||(l.mastery!=null&&l.mastery<55)?'Medium':'Monitor');
@@ -1527,9 +1527,10 @@ function openPanel(id){state.panelNodeId=id;
    document.getElementById('m2').textContent='Coverage';
    document.getElementById('secondary').textContent=sum?`${sum.measured}/${sum.count} measured`:'Contextual';
  }
- const ctx=n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:(n.type==='Subject'?'International GCSE Chemistry':`Section ${n.section||''}`);
+ const ctx=n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:(n.type==='Subject'?(window.__KG_SUBJECT_LABEL||'International GCSE Chemistry'):`Section ${n.section||''}`);
  document.getElementById('context').innerHTML=ctx;
  document.getElementById('statement').textContent=n.statement||n.meta||'Curriculum structure node.';
+ const apEl=document.getElementById('apChips');if(apEl)apEl.innerHTML=(n.type==='SpecificationPoint'&&n.applicability)?kgApplicabilityChips(n.applicability):'';
  const links=relFor(n).map(e=>{const other=nodeBy().get(e[0]===id?e[1]:e[0]);if(!other)return '';const relation=e[2]==='hier'?'curriculum hierarchy':e[2]==='pre'?'Prerequisite · inferred prototype link':e[2]==='assess'?'assessment coverage':'Related knowledge · inferred prototype link';return `<div>${other.label||other.pointId} <span style="color:#8b9193">· ${relation}</span></div>`}).join('');
  document.getElementById('links').innerHTML=links||'<div>No direct relationships currently visible.</div>'; renderWhy(n);
  if(state.lens==='student'){
@@ -3052,6 +3053,31 @@ document.getElementById('tutorBtn').onclick=()=>runLearningAction('tutor',nodeBy
 initExplorationUI();initAnalysisUI();initMinimapUI();fitInitial();draw();bootSimulation();
 
 // ============================================================================
+// applicability chips (T-KG-17c) — the canonical papers/unit/tier/coursework
+// homes rendered in the node detail panel. Values are the kg_export.py
+// verbatim passthrough of the T-KG-16 canonical applicability object; the
+// only presentation rules are cosmetic and mirror the Next.js spec explorer
+// ("1C" -> "Paper 1C", "U1" -> "Unit 1", "U1F" -> "Unit 1 (Foundation)").
+// Absent applicability -> no chips (58 SX-front-matter-style rows stay null
+// by design). Zero invention: nothing here derives or mutates data.
+// ============================================================================
+function kgPaperLabel(p){return p.length<=4?('Paper '+p):p;}
+function kgUnitLabel(u){const m=/^U(\d+)([FH])?$/.exec(u);if(!m)return u;const t=m[2]==='F'?' (Foundation)':m[2]==='H'?' (Higher)':'';return 'Unit '+m[1]+t;}
+function kgApplicabilityChips(a){
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const chip=t=>'<span class="chip">'+t+'</span>';
+  const out=[];
+  for(const p of (a.papers||[]))out.push(chip(esc(kgPaperLabel(p))));
+  if(a.unit_scope)out.push(chip(esc(kgUnitLabel(a.unit_scope))));
+  if(a.tier)out.push(chip(esc(a.tier)));
+  if(a.coursework)out.push(chip('Coursework (internally assessed)'));
+  if(a.double_award_shared)out.push(chip('Also in Double Award'));
+  if(!out.length)return '';
+  const tip=a.rule?esc(a.rule):'Printed assessment home from the Pearson specification (content summaries and assessment overviews).';
+  return '<div style="font-size:8px;text-transform:uppercase;letter-spacing:.3px;color:#7b8386;margin-bottom:1px">Assessed in</div>'+out.join('')+'<div style="margin-top:4px;font-size:8px;line-height:1.5;color:#7b8386">'+tip+'</div>';
+}
+
+// ============================================================================
 // course loader fork (syllabai-demo) — data-decoupled operation.
 // ?course=<slug>  ->  fetch /kg/data/<slug>.json (scripts/kg_export.py output,
 // generated from content/<slug>/curriculum.json), validate against
@@ -3151,6 +3177,7 @@ initExplorationUI();initAnalysisUI();initMinimapUI();fitInitial();draw();bootSim
     document.title=kg.subjectLabel+' — Knowledge Graph';
     const hudT=document.querySelector('#hud .title');if(hudT)hudT.textContent=kg.subjectLabel;
     const hudS=document.querySelector('#hud .subtitle');if(hudS)hudS.textContent=subtitle;
+    window.__KG_SUBJECT_LABEL=kg.subjectLabel;
     const ts=document.querySelector('.treeScope');
     if(ts)ts.textContent='';
     if(ts){const b1=document.createElement('div');b1.textContent=[meta.board,meta.level,meta.subject].filter(Boolean).join(' ');const b2=document.createElement('div');b2.textContent=kg.points.length+' SpecificationPoints';ts.appendChild(b1);ts.appendChild(b2);}

@@ -67,7 +67,56 @@ PATCHES = [
     # P3: icon() falls back to the extra per-subject path library
     (" g.innerHTML=paths[kind]||paths.topic;return g;",
      " g.innerHTML=paths[kind]||KG_ICON_EXTRA[kind]||paths.topic;return g;", 1),
+    # --- applicability chips (T-KG-17c) ---------------------------------------
+    # P4: panel DOM gains a chips container under the statement
+    ("<div class=\"section\">Specification statement</div><div id=\"statement\" class=\"quote meta\"></div><div class=\"section\">Connections</div>",
+     "<div class=\"section\">Specification statement</div><div id=\"statement\" class=\"quote meta\"></div><div id=\"apChips\" style=\"margin-top:7px\"></div><div class=\"section\">Connections</div>", 1),
+    # P5: renderer contract boundary carries applicability
+    ("pointId:base.pointId||null,statement:base.statement||null,section:base.section||null",
+     "pointId:base.pointId||null,statement:base.statement||null,applicability:base.applicability||null,section:base.section||null", 1),
+    # P6/P7: both SpecificationPoint node-creation sites pass the field through
+    ("add({id:'p:'+pt.id,pointId:pt.id,type:'SpecificationPoint',label:pt.id,statement:pt.text,section:sec,subtopic:st[1],x:px,y:py,localX:ox,localY:oy,rx:8});",
+     "add({id:'p:'+pt.id,pointId:pt.id,type:'SpecificationPoint',label:pt.id,statement:pt.text,applicability:pt.applicability||null,section:sec,subtopic:st[1],x:px,y:py,localX:ox,localY:oy,rx:8});", 1),
+    ("state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,section:def[0][0],subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})})}",
+     "state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:def[0][0],subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})})}", 1),
+    # P8: panel paints the chips whenever a spec point carries applicability
+    (" document.getElementById('statement').textContent=n.statement||n.meta||'Curriculum structure node.';",
+     " document.getElementById('statement').textContent=n.statement||n.meta||'Curriculum structure node.';\n const apEl=document.getElementById('apChips');if(apEl)apEl.innerHTML=(n.type==='SpecificationPoint'&&n.applicability)?kgApplicabilityChips(n.applicability):'';", 1),
+    # P9/P10: subject-agnostic panel text — v77 hardcoded 'Chemistry' in the
+    # crumb and the why-evidence line; the loader publishes the real subject
+    # label and these fall back to the v77 wording only without ?course=
+    ("const ctx=n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:(n.type==='Subject'?'International GCSE Chemistry':`Section ${n.section||''}`);",
+     "const ctx=n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:(n.type==='Subject'?(window.__KG_SUBJECT_LABEL||'International GCSE Chemistry'):`Section ${n.section||''}`);", 1),
+    ("<div>• This node is part of the official Chemistry specification.</div>",
+     "<div>• This node is part of the official '+(window.__KG_SUBJECT_LABEL||'Chemistry')+' specification.</div>", 1),
 ]
+
+HELPERS = """
+// ============================================================================
+// applicability chips (T-KG-17c) — the canonical papers/unit/tier/coursework
+// homes rendered in the node detail panel. Values are the kg_export.py
+// verbatim passthrough of the T-KG-16 canonical applicability object; the
+// only presentation rules are cosmetic and mirror the Next.js spec explorer
+// ("1C" -> "Paper 1C", "U1" -> "Unit 1", "U1F" -> "Unit 1 (Foundation)").
+// Absent applicability -> no chips (58 SX-front-matter-style rows stay null
+// by design). Zero invention: nothing here derives or mutates data.
+// ============================================================================
+function kgPaperLabel(p){return p.length<=4?('Paper '+p):p;}
+function kgUnitLabel(u){const m=/^U(\\d+)([FH])?$/.exec(u);if(!m)return u;const t=m[2]==='F'?' (Foundation)':m[2]==='H'?' (Higher)':'';return 'Unit '+m[1]+t;}
+function kgApplicabilityChips(a){
+  const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const chip=t=>'<span class="chip">'+t+'</span>';
+  const out=[];
+  for(const p of (a.papers||[]))out.push(chip(esc(kgPaperLabel(p))));
+  if(a.unit_scope)out.push(chip(esc(kgUnitLabel(a.unit_scope))));
+  if(a.tier)out.push(chip(esc(a.tier)));
+  if(a.coursework)out.push(chip('Coursework (internally assessed)'));
+  if(a.double_award_shared)out.push(chip('Also in Double Award'));
+  if(!out.length)return '';
+  const tip=a.rule?esc(a.rule):'Printed assessment home from the Pearson specification (content summaries and assessment overviews).';
+  return '<div style="font-size:8px;text-transform:uppercase;letter-spacing:.3px;color:#7b8386;margin-bottom:1px">Assessed in</div>'+out.join('')+'<div style="margin-top:4px;font-size:8px;line-height:1.5;color:#7b8386">'+tip+'</div>';
+}
+"""
 
 LOADER = """
 // ============================================================================
@@ -170,6 +219,7 @@ LOADER = """
     document.title=kg.subjectLabel+' — Knowledge Graph';
     const hudT=document.querySelector('#hud .title');if(hudT)hudT.textContent=kg.subjectLabel;
     const hudS=document.querySelector('#hud .subtitle');if(hudS)hudS.textContent=subtitle;
+    window.__KG_SUBJECT_LABEL=kg.subjectLabel;
     const ts=document.querySelector('.treeScope');
     if(ts)ts.textContent='';
     if(ts){const b1=document.createElement('div');b1.textContent=[meta.board,meta.level,meta.subject].filter(Boolean).join(' ');const b2=document.createElement('div');b2.textContent=kg.points.length+' SpecificationPoints';ts.appendChild(b1);ts.appendChild(b2);}
@@ -196,12 +246,12 @@ def main() -> int:
             print(f"PATCH FAIL ({n} hits, expected {expected}): {old[:60]!r}", file=sys.stderr)
             return 1
         html = html.replace(old, new)
-    # insert the loader just before the closing </script> of the main block
+    # insert the chips helpers + loader just before the closing </script>
     close = html.rfind("</script>")
     if close == -1:
         print("no </script> found", file=sys.stderr)
         return 1
-    html = html[:close] + LOADER + "\n" + html[close:]
+    html = html[:close] + HELPERS + LOADER + "\n" + html[close:]
     # gate: the assembled script must parse (a syntax error would silently
     # kill the whole build — renderer AND loader)
     import pathlib

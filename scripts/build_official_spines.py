@@ -406,7 +406,7 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
                   "title": reg.get("subject") or qual, "description": None,
                   "parents": [], "provenanceTier": "RULE_DERIVED", "order": 0})
 
-    n_sub, n_pts, n_recovered = 0, 0, 0
+    n_sub, n_pts, n_recovered, n_app = 0, 0, 0, 0
     ordered = sorted(topics, key=topic_sort_key)   # after re-parent pruning
     for t_idx, num in enumerate(ordered, start=1):
         t = topics[num]
@@ -496,10 +496,19 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
                     lead = title if title.endswith(":") else title + ":"
                     title = lead + " \u2022 " + " \u2022 ".join(items)
                     n_recovered += 1
-                nodes.append({"code": pid, "family": "SPEC_POINT",
-                              "title": title, "description": None,
-                              "parents": [s_code], "provenanceTier": "RULE_DERIVED",
-                              "order": n_pts + 1})
+                # paper/unit applicability: the upstream canonical object is
+                # copied VERBATIM (papers/unit_scope/tier/coursework/
+                # double_award_shared/rule — T-KG-16 derivation). Rows without
+                # a printed home (SX front matter) simply carry no field.
+                app = r.get("applicability") or None
+                node = {"code": pid, "family": "SPEC_POINT",
+                        "title": title, "description": None,
+                        "parents": [s_code], "provenanceTier": "RULE_DERIVED",
+                        "order": n_pts + 1}
+                if app:
+                    node["applicability"] = app
+                    n_app += 1
+                nodes.append(node)
                 edges.append({"source": s_code, "relation": "PART_OF",
                               "target": pid, "provenanceTier": "RULE_DERIVED"})
                 n_pts += 1
@@ -532,6 +541,9 @@ def build_course(slug: str, qual: str, registry: dict, cache: Path,
     if n_recovered:
         meta["subItemRecovery"] = {"specPoints": n_recovered,
                                    "rule": "text (+':') + ' • ' + sub_items inline"}
+    if n_app:
+        meta["applicability"] = {"specPoints": n_app,
+                                 "rule": "canonical applicability object copied verbatim (papers/unit_scope/tier/coursework/double_award_shared/rule)"}
     return {"meta": meta, "curriculum": curriculum}
 
 
