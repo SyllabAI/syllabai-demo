@@ -85,7 +85,7 @@ export function CourseShell({
       items: [
         { href: `${base}/exam-questions`, label: "Exam Questions", icon: FileQuestion },
         { href: `${base}/exam-questions/saved`, label: "Saved questions", icon: Bookmark, exact: pathname.endsWith("/saved") },
-        { href: `${base}/past-papers`, label: "Past Papers", icon: ScrollText, disabled: !data.hasPastPapers, badge: data.hasPastPapers ? undefined : "roadmap" },
+        { href: `${base}/past-papers`, label: "Past Papers", icon: ScrollText, disabled: !data.hasPastPapers && !data.hasCorpusPapers, badge: data.hasPastPapers || data.hasCorpusPapers ? undefined : "roadmap" },
         { href: `${base}/practice-papers`, label: "Practice Papers", icon: Files },
         { href: "#", label: "Target Test", icon: Target, disabled: true, badge: "roadmap" },
       ],

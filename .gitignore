@@ -74,3 +74,4 @@ scripts/github_analysis_result.json
 .env
 tool-results/
 worklog.md
+upload/

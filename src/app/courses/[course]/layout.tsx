@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
 import { hasPastPapers } from "@/lib/past-papers";
+import { courseHasCorpusPapers } from "@/lib/pastpapers-corpus";
 import { CourseShell, type SidebarData } from "@/components/hub/course-shell";
 import { LastOpenedTracker } from "@/components/hub/last-opened-tracker";
 
@@ -39,6 +40,7 @@ export default async function CourseLayout({
     notesBySubtopic: hub.notesBySubtopic,
     setsBySubtopic: hub.setListsBySubtopic,
     hasPastPapers: hasPastPapers(hub.questionTopics),
+    hasCorpusPapers: courseHasCorpusPapers(slug),
   };
 
   return (

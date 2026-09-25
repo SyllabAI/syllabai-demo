@@ -1,20 +1,41 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronRight, ScrollText } from "lucide-react";
+import { ChevronRight, FileText, Puzzle, ScrollText } from "lucide-react";
 import { loadHubCourse } from "@/lib/courses";
-import { collectPastPapers, paperEstTime } from "@/lib/past-papers";
+import { collectPastPapers, paperEstTime, type PastPaper } from "@/lib/past-papers";
+import {
+  corpusPapersForCourse,
+  corpusSpecsForCourse,
+  corpusIndex,
+  groupBySession,
+  prettyBytes,
+  sessionLabel,
+  type CorpusPaperEntry,
+} from "@/lib/pastpapers-corpus";
 import { CourseHeader } from "@/components/hub/course-header";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { InteractiveChip } from "@/components/pastpapers/interactive-chip";
+import { MockResultsStrip } from "@/components/pastpapers/mock-results-strip";
 
 export const dynamic = "force-dynamic";
 
 /**
- * Past Papers index (Task 22) — the real-provenance archive. Papers exist
- * ONLY where the corpus attests them (sourcePaper on question parts), and
- * every paper is labelled a partial reconstruction. Courses without
- * provenance get an honest empty state pointing at the question banks and
- * the deterministic practice papers.
+ * Past Papers — the student archive (SME-style), built on the
+ * syllabai-pastpapers corpus.
+ *
+ *   Mode 1 · Papers   — every corpus paper grouped by session (SME layout):
+ *                       QP / MS / Split into the mobile-first pdf.js viewer,
+ *                       plus timed Mock runs graded against the MS.
+ *   Mode 2 · Interactive — where the parsed question corpus attests a paper
+ *                       (sourcePaper provenance) the row links into the real
+ *                       Exam-Questions player; everything else shows an
+ *                       honest "not parsed yet" roadmap chip.
+ *
+ * Honesty: corpus PDFs are AI-IDENTIFIED (operator ratification pending);
+ * the index is derived from the canonical corpus layout. Papers exist here
+ * ONLY because the archive holds them.
  */
 export default async function PastPapersPage({
   params,
@@ -27,16 +48,44 @@ export default async function PastPapersPage({
 
   const { meta } = hub;
   const base = `/courses/${meta.slug}`;
-  const papers = collectPastPapers(hub.questionTopics);
-  const heldQuestions = papers.reduce((a, p) => a + p.questions.length, 0);
 
-  // group by session label for a browsable archive (SME past-paper style)
-  const bySession = new Map<string, typeof papers>();
+  // Mode 1 — the PDF archive
+  const papers = corpusPapersForCourse(slug);
+  const sessions = groupBySession(papers);
+  const specMap = corpusSpecsForCourse(slug);
+
+  // Mode 2 — interactive reconstructions from the parsed question corpus.
+  // The corpus attests papers in FIVE different metadata shapes (verified by
+  // walking questions.json across courses): "June 2021 | WCH11/01" (IAL),
+  // "2023 June | 4MA1/1H", "2014 January | 1P" (code only), "2020 | Ja1CR"
+  // (glued session prefix), "Specimen paper | 4MA1/2H". parseReconstruction
+  // normalises each into (session ids, unit, variant) to match corpus rows.
+  const reconstructions = collectPastPapers(hub.questionTopics);
+  const matchedKeys = new Set<string>();
+  const matchedReconKeys = new Set<string>();
+  /** corpus `${sessionId}:${dir}` → reconstruction player key */
+  const matchKeys = new Map<string, string>();
   for (const p of papers) {
-    const session = p.date;
-    bySession.set(session, [...(bySession.get(session) ?? []), p]);
+    for (const r of reconstructions) {
+      const parsed = parseReconstruction(r.date, r.number);
+      if (!parsed) continue;
+      if (parsed.unit && parsed.unit !== p.unit.toUpperCase()) continue;
+      if (parsed.variant !== p.variant.toUpperCase()) continue;
+      if (parsed.sessionIds.length > 0 && !parsed.sessionIds.includes(p.sessionId)) continue;
+      matchedKeys.add(`${p.sessionId}:${p.dir}`);
+      matchedReconKeys.add(r.key);
+      matchKeys.set(`${p.sessionId}:${p.dir}`, r.key);
+      break;
+    }
   }
-  const sessions = [...bySession.entries()];
+  const interactiveCount = matchedKeys.size;
+  // reconstructions with NO corpus PDF counterpart keep their own archive list
+  const unmatchedReconstructions = reconstructions.filter((r) => !matchedReconKeys.has(r.key));
+
+  const specNote =
+    specMap == null
+      ? "This course has no specification mapped into the archive yet."
+      : undefined;
 
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
@@ -44,70 +93,262 @@ export default async function PastPapersPage({
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Past Papers`}
         crumb="Past Papers"
-        description="Every question we hold from real Edexcel past papers, grouped by session and played back in original paper order — partial reconstructions, not the full official papers."
+        description="Official past papers grouped by session — view the question paper and mark scheme side by side, solve in your notebook, run a timed mock, or play a paper interactively where its questions are already parsed."
       >
         {papers.length > 0 && (
           <Badge variant="secondary" className="font-medium">
-            {papers.length} papers · {heldQuestions} questions held
+            {papers.length} papers · {sessions.length} session{sessions.length === 1 ? "" : "s"}
+            {interactiveCount > 0 ? ` · ${interactiveCount} interactive` : ""}
           </Badge>
         )}
       </CourseHeader>
 
       {papers.length === 0 ? (
-        <Card className="border-dashed mt-6">
-          <CardContent className="flex flex-col items-start gap-3 p-6">
-            <p className="flex items-center gap-2 text-sm font-medium">
-              <ScrollText className="size-4 text-primary" aria-hidden />
-              No past-paper provenance for this course yet.
-            </p>
-            <p className="text-sm text-muted-foreground">
-              The questions in this bundle don&apos;t carry source-paper references. You can still
-              practise by topic, or try the assembled practice papers — same questions, honest
-              framing.
-            </p>
-            <div className="flex flex-wrap gap-2 text-sm font-semibold text-primary">
-              <Link href={`${base}/exam-questions`} className="hover:underline">
-                Browse topic questions →
-              </Link>
-              <Link href={`${base}/practice-papers`} className="hover:underline">
-                Practice Papers →
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="mt-6 space-y-4">
+          <Card className="border-dashed">
+            <CardContent className="flex flex-col items-start gap-3 p-6">
+              <p className="flex items-center gap-2 text-sm font-medium">
+                <ScrollText className="size-4 text-primary" aria-hidden />
+                No past papers mapped for this course yet.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                {specNote ??
+                  "The syllabai-pastpapers archive doesn't hold this specification yet. You can still practise by topic, or try the assembled practice papers."}
+              </p>
+              <div className="flex flex-wrap gap-2 text-sm font-semibold text-primary">
+                <Link href={`${base}/exam-questions`} className="hover:underline">
+                  Browse topic questions →
+                </Link>
+                <Link href={`${base}/practice-papers`} className="hover:underline">
+                  Practice Papers →
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+          {unmatchedReconstructions.length > 0 && (
+            <ReconstructionArchive base={base} papers={unmatchedReconstructions} />
+          )}
+        </div>
       ) : (
-        <div className="mt-6 space-y-6">
-          {sessions.map(([session, group]) => (
-            <section key={session} aria-label={session} className="space-y-2">
+        <div className="mt-6 space-y-5">
+          {/* provenance / modes banner */}
+          <div className="rounded-xl border bg-muted/30 p-3 text-xs leading-relaxed text-muted-foreground print:hidden">
+            <p>
+              <span className="font-semibold text-foreground">Two ways to use a paper:</span> open
+              the <span className="font-medium text-foreground">Question Paper</span> and{" "}
+              <span className="font-medium text-foreground">Mark Scheme</span> PDFs (side-by-side
+              split on desktop, an A/B toggle on mobile) and self-mark, or run a{" "}
+              <span className="font-medium text-foreground">Mock</span> — fullscreen QP with the
+              official timer, then grade against the MS.
+            </p>
+            <p className="mt-1">
+              Official Pearson Edexcel documents streamed from the{" "}
+              <span className="font-mono text-[11px]">syllabai-pastpapers</span> archive
+              (AI-IDENTIFIED provenance, operator ratification pending · index generated{" "}
+              {corpusIndex.meta.generatedAt.slice(0, 10)}).
+            </p>
+          </div>
+
+          <MockResultsStrip course={meta.slug} />
+
+          {/* SME-style session sections */}
+          {sessions.map(([sessionId, group]) => (
+            <section key={sessionId} aria-label={sessionLabel(sessionId)} className="space-y-2">
               <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-                {session}
+                {sessionLabel(sessionId)}
               </h2>
               <ul className="overflow-hidden rounded-xl border">
-                {group.map((p, i) => (
-                  <li key={p.key} className={i > 0 ? "border-t" : undefined}>
-                    <Link
-                      href={`${base}/past-papers/${p.key}`}
-                      className="flex items-center gap-3 px-4 py-3 transition-colors hover:bg-muted"
-                    >
-                      <span className="min-w-0 flex-1">
-                        <span className="block font-mono text-sm font-semibold">{p.number}</span>
-                        <span className="block text-xs text-muted-foreground">
-                          {p.questions.length} question{p.questions.length === 1 ? "" : "s"} ·{" "}
-                          {p.totalMarks} marks · {paperEstTime(p.totalMarks)}
-                        </span>
-                      </span>
-                      <ChevronRight
-                        className="size-4 shrink-0 text-muted-foreground/60"
-                        aria-hidden
-                      />
-                    </Link>
+                {group.map((p) => (
+                  <li
+                    key={p.dir}
+                    className="border-b last:border-b-0 transition-colors hover:bg-muted/50"
+                  >
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-2 px-3 py-2.5 sm:px-4">
+                      <div className="min-w-0 flex-1 basis-52">
+                        <p className="flex flex-wrap items-center gap-1.5">
+                          <span className="font-mono text-sm font-semibold">{p.ref}</span>
+                          <span className="text-xs text-muted-foreground">{p.title}</span>
+                          {p.variantChip && (
+                            <Badge variant="outline" className="text-[10px]">
+                              {p.variantChip}
+                            </Badge>
+                          )}
+                          {matchedKeys.has(`${p.sessionId}:${p.dir}`) && (
+                            <Badge
+                              variant="outline"
+                              className="gap-1 border-primary/40 text-[10px] text-primary"
+                            >
+                              <Puzzle className="size-3" aria-hidden />
+                              playable
+                            </Badge>
+                          )}
+                        </p>
+                        <p className="mt-0.5 text-[11px] text-muted-foreground">
+                          {p.specTitle}
+                          {p.durationMin != null
+                            ? ` · ${Math.floor(p.durationMin / 60)}h${p.durationMin % 60 ? ` ${p.durationMin % 60}m` : ""} official`
+                            : ""}
+                          {p.qpBytes ? ` · QP ${prettyBytes(p.qpBytes)}` : ""}
+                          {p.msBytes ? ` · MS ${prettyBytes(p.msBytes)}` : ""}
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        {p.qpBytes ? (
+                          <Button asChild size="sm" variant="secondary" className="h-7 text-xs">
+                            <Link href={`${base}/past-papers/view/${p.sessionId}/${p.dir}?doc=qp`}>
+                              <FileText className="size-3.5" aria-hidden />
+                              Question Paper
+                            </Link>
+                          </Button>
+                        ) : (
+                          <span
+                            className="inline-flex h-7 items-center rounded-md px-2 text-xs text-muted-foreground/50"
+                            title="No question paper held for this paper"
+                          >
+                            Question Paper
+                          </span>
+                        )}
+                        {p.msBytes ? (
+                          <Button asChild size="sm" variant="outline" className="h-7 text-xs">
+                            <Link href={`${base}/past-papers/view/${p.sessionId}/${p.dir}?doc=ms`}>
+                              Mark Scheme
+                            </Link>
+                          </Button>
+                        ) : (
+                          <span
+                            className="inline-flex h-7 items-center rounded-md px-2 text-xs text-muted-foreground/50"
+                            title="No mark scheme held for this paper"
+                          >
+                            Mark Scheme
+                          </span>
+                        )}
+                        {p.qpBytes && p.msBytes && (
+                          <Button asChild size="sm" variant="outline" className="h-7 text-xs">
+                            <Link
+                              href={`${base}/past-papers/view/${p.sessionId}/${p.dir}?doc=split`}
+                              aria-label={`${p.ref} — split view (question paper and mark scheme)`}
+                            >
+                              Split
+                            </Link>
+                          </Button>
+                        )}
+                        {p.qpBytes && (
+                          <Button asChild size="sm" variant="outline" className="h-7 gap-1 text-xs">
+                            <Link
+                              href={`${base}/past-papers/view/${p.sessionId}/${p.dir}?mode=mock`}
+                              aria-label={`${p.ref} — start timed mock`}
+                            >
+                              Mock
+                            </Link>
+                          </Button>
+                        )}
+                        <InteractiveChip
+                          href={matchKeys.has(`${p.sessionId}:${p.dir}`) ? `${base}/past-papers/${matchKeys.get(`${p.sessionId}:${p.dir}`)}` : null}
+                          paperRef={p.ref}
+                          interactiveCount={interactiveCount}
+                        />
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
             </section>
           ))}
+
+          {/* reconstructions with no PDF counterpart keep their honest archive */}
+          {unmatchedReconstructions.length > 0 && (
+            <ReconstructionArchive base={base} papers={unmatchedReconstructions} />
+          )}
         </div>
       )}
     </div>
+  );
+}
+
+/**
+ * Normalise a corpus reconstruction's sourcePaper metadata into corpus-match
+ * keys. Returns null when the metadata is too thin to match honestly (e.g.
+ * "Pre2017" with no paper number) — such rows just stay in the fallback
+ * archive instead of pretending.
+ */
+function parseReconstruction(
+  date: string,
+  number: string,
+): { sessionIds: string[]; unit: string | null; variant: string } | null {
+  const d = (date ?? "").trim();
+  const n = (number ?? "").trim();
+  if (!n) return null;
+
+  const year = d.match(/\d{4}/)?.[0];
+  const dl = d.toLowerCase();
+  const months: string[] = [];
+  if (dl.includes("jan")) months.push("01");
+  if (dl.includes("jun") && !dl.includes("jan")) months.push("06");
+  if (dl.includes("oct")) months.push("10");
+  if (dl.includes("nov")) months.push("11");
+
+  let unit: string | null = null;
+  let variant: string | null = null;
+  const ref = n.match(/^([A-Za-z0-9]+)\/([0-9A-Za-z]+)$/);
+  if (ref) {
+    // full official ref: "4CH1/1C", "WCH11/01"
+    unit = ref[1].toUpperCase();
+    variant = ref[2].toUpperCase();
+  } else {
+    // glued session prefix + paper code: "Ja1CR", "Jan1CR", "Ju1c", "1P"
+    const m = n.match(/^(jan|jun|ja|ju|nov|oct)?\s*([0-9][0-9A-Za-z]*)$/i);
+    if (!m) return null;
+    variant = m[2].toUpperCase();
+    const pref = m[1]?.toLowerCase();
+    if (pref && months.length === 0) {
+      if (pref === "jan" || pref === "ja") months.push("01");
+      else if (pref === "jun" || pref === "ju") months.push("06");
+      else if (pref === "oct") months.push("10");
+      else if (pref === "nov") months.push("11");
+    }
+  }
+  if (!variant) return null;
+
+  const sessionIds: string[] = [];
+  if (dl.includes("specimen")) {
+    sessionIds.push("specimen");
+  } else if (year) {
+    if (months.length) for (const mm of months) sessionIds.push(`${year}-${mm}`);
+    else for (const mm of ["01", "02", "06", "10", "11"]) sessionIds.push(`${year}-${mm}`);
+  }
+  return { sessionIds, unit, variant };
+}
+
+/** Archive of interactive reconstructions that have no PDF counterpart. */
+function ReconstructionArchive({ base, papers }: { base: string; papers: PastPaper[] }) {
+  return (
+    <section aria-label="Interactive reconstructions" className="space-y-2">
+      <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+        Interactive reconstructions
+      </h2>
+      <p className="text-xs text-muted-foreground">
+        Papers the question corpus has parsed (partial reconstructions — the questions we hold, in
+        paper order). These predate the PDF archive and stay playable here.
+      </p>
+      <ul className="overflow-hidden rounded-xl border">
+        {papers.map((p, i) => (
+          <li key={p.key} className={i > 0 ? "border-t" : undefined}>
+            <Link
+              href={`${base}/past-papers/${p.key}`}
+              className="flex items-center gap-3 px-4 py-3 transition-colors hover:bg-muted"
+            >
+              <span className="min-w-0 flex-1">
+                <span className="block font-mono text-sm font-semibold">{p.number}</span>
+                <span className="block text-xs text-muted-foreground">
+                  {p.date} · {p.questions.length} question{p.questions.length === 1 ? "" : "s"} ·{" "}
+                  {p.totalMarks} marks · {paperEstTime(p.totalMarks)}
+                </span>
+              </span>
+              <ChevronRight className="size-4 shrink-0 text-muted-foreground/60" aria-hidden />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }

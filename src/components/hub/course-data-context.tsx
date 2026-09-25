@@ -30,6 +30,8 @@ export interface SidebarData {
   setsBySubtopic: Record<string, { slug: string; title: string; count: number }[]>;
   /** does the bundle carry real past-paper provenance (sourcePaper on parts)? */
   hasPastPapers?: boolean;
+  /** does the syllabai-pastpapers archive hold PDFs mapped to this course? */
+  hasCorpusPapers?: boolean;
 }
 
 const CourseDataContext = createContext<SidebarData | null>(null);
