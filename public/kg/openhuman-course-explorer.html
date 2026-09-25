@@ -1590,10 +1590,7 @@ function startNodeDrag(e,n){
  // pointer actually moves the node (pointermove reheats). Plain clicks keep
  // the graph still, which also keeps double-click targets stationary.
 }
-// demo trim (user request): touch-and-hold / right-click no longer opens the
-// explore menu — long-press keeps only its expand/collapse affordance. The
-// menu stays reachable via keyboard X and the drawer's "Explore network" button.
-svg.addEventListener('contextmenu',e=>{e.preventDefault();e.stopPropagation();hidePeek()});
+svg.addEventListener('contextmenu',e=>{e.preventDefault();e.stopPropagation();hidePeek();const __n=nodeAtEvent(e);if(__n)openExploreMenu(__n,e.clientX+6,e.clientY+6)});
 // v77 fix: CAPTURE phase — startNodeDrag stopPropagation()s bubble pointerdowns on nodes,
 // so gesture cancellation must happen here to also cover node grabs.
 svg.addEventListener('pointerdown',()=>{cancelActivationCenter();cancelCameraAnim()},true);
