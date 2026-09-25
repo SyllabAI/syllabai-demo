@@ -39,9 +39,10 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 
-# upstream parse this build is pinned to (resources main @ T-KG-15: geo
-# Paper-2 fieldwork Rural/Urban rows captured; T-KG-14 repairs beneath)
-RESOURCES_SHA = "2dd126f12264a8d5645f6776203f8b20bd39054b"
+# upstream parse this build is pinned to (resources main @ T-KG-16: paper/unit
+# applicability derived for the remaining quals — spines don't consume it, so
+# this is a provenance pin bump; T-KG-15/14 repairs beneath)
+RESOURCES_SHA = "888bca4abfe545ce86784fe0ea9a9698209b3ddf"
 RAW_BASE = f"https://raw.githubusercontent.com/SyllabAI/syllabai-resources/{RESOURCES_SHA}"
 DEFAULT_CACHE = Path("/home/z/my-project/work/spines-cache")
 
