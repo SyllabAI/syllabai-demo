@@ -394,3 +394,52 @@
   background: var(--gold-tint);
   color: var(--gold);
 }
+
+/* --- Past Papers viewer (pdf-pane v3): pdf.js text layer + find highlights ---
+   The text layer hosts transparent absolutely-positioned spans produced by
+   pdf.js TextLayer; spans position themselves with
+   calc(var(--scale-factor) * Npx) inline styles, so the holder must carry
+   --scale-factor (PdfPane sets it on every paint). Highlights live below the
+   text layer so selection still works over marked ranges. */
+.pp-textLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 1;
+  line-height: 1;
+  text-size-adjust: none;
+  forced-color-adjust: none;
+  transform-origin: 0 0;
+  z-index: 2;
+}
+.pp-textLayer :is(span, br) {
+  color: transparent;
+  position: absolute;
+  white-space: pre;
+  cursor: text;
+  transform-origin: 0% 0%;
+}
+.pp-textLayer span.markedContent {
+  top: 0;
+  height: 0;
+}
+.pp-textLayer ::selection {
+  background: rgba(59, 130, 246, 0.35);
+}
+.pp-hl-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+.pp-hl {
+  position: absolute;
+  border-radius: 2px;
+  background: rgba(250, 204, 21, 0.45);
+  box-shadow: 0 0 0 1px rgba(202, 138, 4, 0.35);
+}
+.pp-hl-current {
+  background: rgba(251, 146, 60, 0.5);
+  box-shadow: 0 0 0 2px rgba(234, 88, 12, 0.6);
+}

@@ -10,13 +10,16 @@
  *
  *   mock — exam simulation. The QP goes fullscreen with the OFFICIAL exam
  *          duration (attested durations from the corpus mapping; unverified
- *          papers show an editable estimate, honestly labelled). Time-up or
- *          "Finish" hands over to the grading screen: the MS beside a mark
- *          tally the student enters themselves; the result is saved to the
- *          local SIMULATED overlay (lib/mock-results.ts) and never any
- *          canonical store.
+ *          papers show an editable estimate, honestly labelled). A lazy
+ *          question jump (detected from the QP text) helps navigate. Time-up
+ *          or "Finish" hands over to the grading screen: the MS beside a
+ *          mark tally the student enters themselves — either whole-paper or
+ *          per-question rows (structure lazily auto-detected from the MS
+ *          text on this device, honestly labelled, manual fallback). The
+ *          result is saved to the local SIMULATED overlay (lib/mock-results.ts)
+ *          and never any canonical store.
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -25,7 +28,11 @@ import {
   CheckCircle2,
   Hourglass,
   Info,
+  ListChecks,
+  Loader2,
+  Plus,
   Timer,
+  Trash2,
   X,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -34,12 +41,26 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { PdfPane } from "@/components/pastpapers/pdf-pane";
+import { PdfPane, type PdfPaneHandle } from "@/components/pastpapers/pdf-pane";
 import { corpusRawUrl, type CorpusPaperEntry } from "@/lib/pastpapers-shared";
 import { formatSpent, saveMockResult } from "@/lib/mock-results";
+import {
+  detectMsStructure,
+  detectQpQuestions,
+  type QpQuestion,
+} from "@/lib/ms-questions";
 
 type Doc = "qp" | "ms" | "split";
 type MockPhase = "intro" | "running" | "grading";
+type BreakState = "loading" | "ready";
+type BreakSource = "detected" | "manual";
+
+interface BreakRow {
+  key: string;
+  label: string;
+  marks: string;
+  max: string;
+}
 
 export interface PaperViewerClientProps {
   course: string;
@@ -78,6 +99,16 @@ export function PaperViewerClient({
   const [saved, setSaved] = useState(false);
   const startedAtRef = useRef<number>(0);
 
+  // per-question scoring — the LAZY alternative to a repo-wide question
+  // index: structure is extracted from THIS paper's MS text at grading time
+  // (via the pane's text index), labelled "auto-detected", manual fallback.
+  const qpPaneRef = useRef<PdfPaneHandle | null>(null);
+  const msPaneRef = useRef<PdfPaneHandle | null>(null);
+  const [breakState, setBreakState] = useState<BreakState>("loading");
+  const [breakSource, setBreakSource] = useState<BreakSource>("manual");
+  const [rows, setRows] = useState<BreakRow[]>([]);
+  const [qpQuestions, setQpQuestions] = useState<QpQuestion[] | null>(null);
+
   const qpUrl = paper.qpPath ? corpusRawUrl(paper.qpPath) : null;
   const msUrl = paper.msPath ? corpusRawUrl(paper.msPath) : null;
   const backHref = `/courses/${course}/past-papers`;
@@ -107,6 +138,7 @@ export function PaperViewerClient({
     setSaved(false);
     setMarks("");
     setEndedHow("self");
+    setQpQuestions(null);
     setMockPhase("running");
     // best-effort browser fullscreen (mobile Safari ignores it; the CSS
     // fullscreen overlay below is the real guarantee)
@@ -127,6 +159,19 @@ export function PaperViewerClient({
     const m = Number.parseInt(marks, 10);
     const t = Number.parseInt(total, 10);
     if (Number.isNaN(m) || Number.isNaN(t)) return;
+    // optional per-question tally — only rows the student actually filled
+    const breakdown = rows
+      .map((r) => ({
+        label: r.label.trim(),
+        marks: Number.parseInt(r.marks, 10),
+        max: Number.parseInt(r.max, 10),
+      }))
+      .filter((q) => q.label !== "" && !Number.isNaN(q.marks))
+      .map((q) => ({
+        label: q.label,
+        marks: q.marks,
+        max: Number.isNaN(q.max) ? null : q.max,
+      }));
     saveMockResult({
       id: `${course}:${paper.sessionId}:${paper.dir}:${startedAtRef.current}`,
       course,
@@ -139,6 +184,7 @@ export function PaperViewerClient({
       marks: m,
       total: t,
       ended: endedHow,
+      ...(breakdown.length > 0 ? { questions: breakdown } : {}),
     });
     setSaved(true);
     window.setTimeout(() => router.push(backHref), 900);
@@ -150,6 +196,89 @@ export function PaperViewerClient({
     const m = paper.durationMin % 60;
     return h ? `${h}h${m ? ` ${m}m` : ""}` : `${m}m`;
   }, [paper.durationMin]);
+
+  // ── per-question breakdown: lazy structure detection at grading time ─────
+  useEffect(() => {
+    if (mode !== "mock" || mockPhase !== "grading") return;
+    let alive = true;
+    void (async () => {
+      // the MS pane's text index powers this — no second download, no
+      // repo-wide question DB; null (scanned/unparseable MS) → manual rows
+      const doc = await msPaneRef.current?.extractLines();
+      if (!alive) return;
+      const detected = doc ? detectMsStructure(doc.flatMap((d) => d.lines)) : null;
+      if (detected) {
+        setRows(
+          detected.map((r, i) => ({
+            key: `q${i}`,
+            label: r.label,
+            marks: "",
+            max: r.max != null ? String(r.max) : "",
+          })),
+        );
+        setBreakSource("detected");
+      } else {
+        setRows([{ key: "q0", label: "", marks: "", max: "" }]);
+        setBreakSource("manual");
+      }
+      setBreakState("ready");
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [mode, mockPhase]);
+
+  // ── mock overlay: lazy question jump (from QP text, honest fallback) ─────
+  useEffect(() => {
+    if (mode !== "mock" || mockPhase !== "running") return;
+    let alive = true;
+    void (async () => {
+      const doc = await qpPaneRef.current?.extractLines();
+      if (!alive || !doc) return;
+      const qs = detectQpQuestions(doc.flatMap((d) => d.lines));
+      if (alive && qs) setQpQuestions(qs.slice(0, 30));
+    })();
+    return () => {
+      alive = false;
+    };
+  }, [mode, mockPhase]);
+
+  const updateRow = useCallback((key: string, field: keyof BreakRow, value: string) => {
+    setRows((rs) => rs.map((r) => (r.key === key ? { ...r, [field]: value } : r)));
+  }, []);
+
+  const addRow = useCallback(() => {
+    setRows((rs) => [...rs, { key: `q${Date.now()}`, label: "", marks: "", max: "" }]);
+  }, []);
+
+  const removeRow = useCallback((key: string) => {
+    setRows((rs) =>
+      rs.length > 1
+        ? rs.filter((r) => r.key !== key)
+        : [{ key: `q${Date.now()}`, label: "", marks: "", max: "" }],
+    );
+  }, []);
+
+  /** Sums over filled rows — "complete" requires marks+max in EVERY row. */
+  const rowSum = useMemo(() => {
+    if (breakState !== "ready" || rows.length === 0) return null;
+    let marks = 0;
+    let max = 0;
+    let any = false;
+    let complete = true;
+    for (const r of rows) {
+      const m = Number.parseInt(r.marks, 10);
+      const x = Number.parseInt(r.max, 10);
+      if (Number.isNaN(m) || Number.isNaN(x)) {
+        complete = false;
+        continue;
+      }
+      marks += m;
+      max += x;
+      any = true;
+    }
+    return { marks, max, complete: complete && any };
+  }, [breakState, rows]);
 
   const mmss = (sec: number) => {
     const m = Math.floor(sec / 60);
@@ -182,6 +311,24 @@ export function PaperViewerClient({
             <CheckCircle2 className="size-4" aria-hidden />
             Finish & grade
           </Button>
+          {qpQuestions && (
+            <select
+              aria-label="Jump to question"
+              value=""
+              onChange={(e) => {
+                const page = Number(e.target.value);
+                if (page >= 1) qpPaneRef.current?.scrollToPage(page);
+              }}
+              className="h-8 rounded-md border bg-background px-1.5 text-xs"
+            >
+              <option value="">Jump to…</option>
+              {qpQuestions.map((q) => (
+                <option key={q.label} value={q.page}>
+                  {q.label}
+                </option>
+              ))}
+            </select>
+          )}
           <Button
             size="sm"
             variant="ghost"
@@ -198,6 +345,7 @@ export function PaperViewerClient({
         </p>
         {qpUrl ? (
           <PdfPane
+            ref={qpPaneRef}
             url={qpUrl}
             downloadUrl={qpUrl}
             label={`Question paper — ${paper.ref}`}
@@ -281,8 +429,105 @@ export function PaperViewerClient({
           </CardContent>
         </Card>
 
+        {/* per-question tally — detected from THIS MS's text on this device,
+            or plain manual rows; always optional, never claimed authoritative */}
+        <Card className="border-dashed">
+          <CardContent className="space-y-3 p-4">
+            <div className="flex flex-wrap items-center gap-2">
+              <ListChecks className="size-4 text-primary" aria-hidden />
+              <h3 className="text-sm font-semibold">
+                Question breakdown{" "}
+                <span className="font-normal text-muted-foreground">(optional)</span>
+              </h3>
+              {breakState === "loading" ? (
+                <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                  <Loader2 className="size-3 animate-spin" aria-hidden />
+                  reading the mark scheme…
+                </span>
+              ) : breakSource === "detected" ? (
+                <Badge
+                  variant="outline"
+                  className="text-[10px]"
+                  title="Extracted from the mark scheme text in this browser — check it against the paper"
+                >
+                  auto-detected — check totals
+                </Badge>
+              ) : null}
+              <Button size="sm" variant="ghost" className="ml-auto h-7 text-xs" onClick={addRow}>
+                <Plus className="size-3.5" aria-hidden />
+                Add question
+              </Button>
+            </div>
+            {breakState === "ready" && (
+              <div className="space-y-1.5">
+                {rows.map((r, i) => (
+                  <div key={r.key} className="flex items-center gap-1.5">
+                    <Input
+                      value={r.label}
+                      onChange={(e) => updateRow(r.key, "label", e.target.value)}
+                      placeholder="e.g. 2(a)"
+                      aria-label={`Question ${i + 1} label`}
+                      className="h-8 w-24 shrink-0 text-xs sm:w-28"
+                    />
+                    <Input
+                      value={r.marks}
+                      onChange={(e) => updateRow(r.key, "marks", e.target.value)}
+                      inputMode="numeric"
+                      placeholder="mark"
+                      aria-label={`Question ${i + 1} marks scored`}
+                      className="h-8 w-16 shrink-0 text-right text-xs"
+                    />
+                    <span className="shrink-0 text-xs text-muted-foreground">/</span>
+                    <Input
+                      value={r.max}
+                      onChange={(e) => updateRow(r.key, "max", e.target.value)}
+                      inputMode="numeric"
+                      placeholder="max"
+                      aria-label={`Question ${i + 1} marks available`}
+                      className="h-8 w-16 shrink-0 text-right text-xs"
+                    />
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      className="h-8 w-8 shrink-0 px-0 text-muted-foreground"
+                      onClick={() => removeRow(r.key)}
+                      aria-label={`Remove question row ${i + 1}`}
+                    >
+                      <Trash2 className="size-3.5" aria-hidden />
+                    </Button>
+                  </div>
+                ))}
+                <div className="flex flex-wrap items-center gap-2 pt-1">
+                  <span className="text-xs text-muted-foreground">
+                    {rowSum === null
+                      ? "Enter what you scored per question — or just use the totals above."
+                      : rowSum.complete
+                        ? `Rows sum to ${rowSum.marks} / ${rowSum.max}.`
+                        : `Rows sum to ${rowSum.marks ?? "?"} / ${rowSum.max ?? "?!"} — fill marks and max in every row to use them.`}
+                  </span>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="ml-auto h-7 text-xs"
+                    disabled={!rowSum?.complete}
+                    onClick={() => {
+                      if (rowSum?.complete) {
+                        setMarks(String(rowSum.marks));
+                        setTotal(String(rowSum.max));
+                      }
+                    }}
+                  >
+                    Use for totals
+                  </Button>
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+
         {msUrl ? (
           <PdfPane
+            ref={msPaneRef}
             url={msUrl}
             downloadUrl={msUrl}
             label={`Mark scheme — ${paper.ref}`}

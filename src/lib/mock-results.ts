@@ -25,6 +25,11 @@ export interface MockResult {
   total: number;
   /** how it ended */
   ended: "time-up" | "self" | "exited";
+  /**
+   * Optional per-question tally (v2 additive field — older records lack it).
+   * `max` is null when the student left the marks-available cell empty.
+   */
+  questions?: Array<{ label: string; marks: number; max: number | null }>;
 }
 
 const KEY = "syllabai.mockResults.v1";
