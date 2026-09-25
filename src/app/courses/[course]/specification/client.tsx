@@ -23,7 +23,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { Filter, GraduationCap, Layers, ListChecks } from "lucide-react";
+import { Filter, GraduationCap, Layers, ListChecks, Lock } from "lucide-react";
 import type { SpecApplicability } from "@/lib/contracts";
 
 export interface SpecPointVM {
@@ -131,6 +131,26 @@ export function SpecificationExplorer({ topics, totalPoints }: Props) {
     return n;
   }, [topics, paper, unit, tier]);
 
+  /** A dimension with exactly one value in this qualification — nothing to
+   *  filter, so render it as a locked fact instead of an interactive select. */
+  const renderLocked = (
+    key: string,
+    icon: React.ReactNode,
+    labelText: string,
+    value: string,
+  ) => (
+    <div key={key} className="flex flex-col gap-1.5">
+      <Label className="flex items-center gap-1.5 text-xs text-muted-foreground">
+        {icon}
+        {labelText}
+      </Label>
+      <div className="flex h-9 items-center gap-2 rounded-md border border-dashed px-3 text-sm text-muted-foreground">
+        <Lock className="size-3.5 shrink-0" aria-hidden />
+        <span>Every statement · {value}</span>
+      </div>
+    </div>
+  );
+
   const renderSelect = (
     id: string,
     icon: React.ReactNode,
@@ -183,12 +203,24 @@ export function SpecificationExplorer({ topics, totalPoints }: Props) {
             </div>
           </CardHeader>
           <CardContent className="grid gap-4 sm:grid-cols-3">
-            {renderSelect("flt-paper", <ListChecks className="size-3.5" aria-hidden />, "Paper", paper, setPaper, paperOptions)}
-            {renderSelect("flt-unit", <Layers className="size-3.5" aria-hidden />, "Unit", unit, setUnit, unitOptions)}
-            {renderSelect("flt-tier", <GraduationCap className="size-3.5" aria-hidden />, "Tier", tier, setTier, tierOptions)}
+            {paperOptions.length >= 2 &&
+              renderSelect("flt-paper", <ListChecks className="size-3.5" aria-hidden />, "Paper", paper, setPaper, paperOptions)}
+            {paperOptions.length === 1 &&
+              renderLocked("lk-paper", <ListChecks className="size-3.5" aria-hidden />, "Paper", paperLabel(paperOptions[0].value))}
+            {unitOptions.length >= 2 &&
+              renderSelect("flt-unit", <Layers className="size-3.5" aria-hidden />, "Unit", unit, setUnit, unitOptions)}
+            {unitOptions.length === 1 &&
+              renderLocked("lk-unit", <Layers className="size-3.5" aria-hidden />, "Unit", unitLabel(unitOptions[0].value))}
+            {tierOptions.length >= 2 &&
+              renderSelect("flt-tier", <GraduationCap className="size-3.5" aria-hidden />, "Tier", tier, setTier, tierOptions)}
+            {tierOptions.length === 1 &&
+              renderLocked("lk-tier", <GraduationCap className="size-3.5" aria-hidden />, "Tier", tierOptions[0].value)}
             <p className="text-xs leading-relaxed text-muted-foreground sm:col-span-3">
               Assessment homes come from the parsed Pearson specification (content
               summaries &amp; assessment overviews). Hover a chip for the printed rule.
+              Filters appear only where the qualification has that structure — a
+              linear IGCSE has no unit scope, and only Maths A splits Foundation /
+              Higher tiers.
             </p>
           </CardContent>
         </Card>
