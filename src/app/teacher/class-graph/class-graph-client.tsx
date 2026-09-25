@@ -4,7 +4,7 @@
  * Class knowledge graph — the teacher lens over the same subject graph
  * (TEACHER-2, spec: syllabai/syllabai TEACHER_ARCHITECTURE.md §13 + §16).
  *
- * The student graph (/knowledge-graph) answers "what do I know?"; this lens
+ * The student graph answers "what do I know?"; this lens
  * answers "what have I taught, what does my class understand, and where is
  * intervention needed?":
  *   - every subtopic carries a teaching-coverage overlay (teacher-toggled,

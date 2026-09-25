@@ -7,7 +7,6 @@ import {
   FlaskConical,
   GraduationCap,
   LayoutDashboard,
-  Network,
   ScrollText,
   ShieldCheck,
   Sparkles,
@@ -60,12 +59,6 @@ export default async function HubPage() {
       icon: BookOpen,
       title: "4CH1 Learning Hub",
       desc: "The fully-loaded pilot course — revision notes, exam questions by topic, flashcards and strengths & weaknesses.",
-    },
-    {
-      href: "/knowledge-graph",
-      icon: Network,
-      title: "Knowledge Graph",
-      desc: "Official spec anchor + the T-C11 concept web (provenance-shown). Graph → resource → question navigation.",
     },
     {
       href: "/practice",

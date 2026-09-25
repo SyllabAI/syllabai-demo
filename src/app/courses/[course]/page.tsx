@@ -263,12 +263,6 @@ export default async function CourseHubPage({
                   <ListTree className="size-4" aria-hidden />
                   Specification tree
                 </Link>
-                <Link
-                  href="/knowledge-graph"
-                  className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-muted"
-                >
-                  View parsed spec <ArrowRight className="size-4" aria-hidden />
-                </Link>
               </div>
             </CardContent>
           </Card>
