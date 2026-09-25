@@ -52,8 +52,17 @@ function buildIndex(
       }
     }
   }
-  // NOTE: CONCEPT segments removed with the /knowledge-graph surface — their
-  // result URL pointed there; notes + questions remain indexed.
+  for (const c of graph.nodes) {
+    segments.push({
+      kind: "CONCEPT",
+      ref: c.code,
+      title: c.title,
+      specPointCode: c.specPoints[0] ?? null,
+      text: [c.summary ?? "", ...c.aliases].join(" · "),
+      tokens: new Map(),
+      url: `/knowledge-graph`,
+    });
+  }
   const df = new Map<string, number>();
   for (const s of segments) {
     const seen = new Set<string>();

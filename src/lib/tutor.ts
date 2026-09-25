@@ -62,7 +62,7 @@ export async function tutorTurn(req: TutorTurnRequest): Promise<TutorTurnResult>
       answer:
         `I can't answer that with grounded evidence from the bundled 4CH1 corpus, so I'm refusing rather than guessing — the production tutor does the same (evidence sufficiency gate).\n\n` +
         (topicHints
-          ? `Closest corpus material I found:\n${topicHints}\n\nTry naming the concept or spec point differently, or browse the Revision Notes surface.`
+          ? `Closest corpus material I found:\n${topicHints}\n\nTry naming the concept or spec point differently, or browse the Revision Notes / Knowledge Graph surfaces.`
           : `Try asking about a topic in the bundled corpus (e.g. “Explain ionic bonding”, “What does 4CH1-1.1 say about states of matter?”, or “Give me a mark-scheme style answer for a separation techniques question”).`),
       citations,
       provider: provider.id,

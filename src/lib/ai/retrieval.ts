@@ -89,9 +89,19 @@ export function buildCorpusIndex(
     }
   }
 
-  // NOTE: CONCEPT segments removed with the /knowledge-graph surface — their
-  // only consumer URL was that route; concept content remains available via
-  // notes/questions retrieval.
+  for (const sp of graph.nodes) {
+    if (sp.family === "CONCEPT" || sp.family === "MISCONCEPTION") {
+      segments.push({
+        kind: "CONCEPT",
+        ref: sp.code,
+        title: sp.title,
+        specPointCode: sp.specPoints[0] ?? null,
+        text: [sp.summary ?? "", ...sp.aliases].filter(Boolean).join(" · "),
+        tokens: new Map(),
+        url: `/knowledge-graph?node=${encodeURIComponent(sp.code)}`,
+      });
+    }
+  }
 
   // df for idf
   const df = new Map<string, number>();

@@ -25,8 +25,10 @@ import {
   LayoutDashboard,
   LogIn,
   LogOut,
+  Network,
   Sparkles,
   User,
+  Waypoints,
   Zap,
 } from "lucide-react";
 import {
@@ -56,6 +58,8 @@ const TOOLS = [
 const DEMO_TOOLS = [
   { href: "/tutor", label: "AI Tutor", icon: Sparkles },
   { href: "/practice", label: "Practice", icon: Zap },
+  { href: "/knowledge-graph", label: "Knowledge Graph", icon: Network },
+  { href: "/graph-explorer", label: "Graph Explorer (OpenHuman)", icon: Waypoints },
   { href: "/learner", label: "Learner Overlay", icon: User },
   { href: "/experiments", label: "Experiments", icon: FlaskConical },
 ] as const;
@@ -70,8 +74,11 @@ export function AppShell({
   const pathname = usePathname();
   const identity = useIdentity();
   // course pages manage their own horizontal rhythm (course shell + resource
-  // panel); every other page gets the centred content column
+  // panel); the graph surfaces are full-bleed (the visualizer canvas wants
+  // the whole viewport); every other page gets the centred content column
   const inCourse = pathname.startsWith("/courses/");
+  const inExplorer =
+    pathname.startsWith("/graph-explorer") || pathname.startsWith("/knowledge-graph");
 
   return (
     <div className="min-h-screen bg-background">
@@ -163,8 +170,8 @@ export function AppShell({
       </header>
 
       {/* content */}
-      <main className={cn("min-w-0 flex-1", !inCourse && "px-4 py-6 sm:px-6 lg:px-8")}>
-        {inCourse ? children : <div className="mx-auto w-full max-w-6xl">{children}</div>}
+      <main className={cn("min-w-0 flex-1", !inCourse && !inExplorer && "px-4 py-6 sm:px-6 lg:px-8")}>
+        {inCourse || inExplorer ? children : <div className="mx-auto w-full max-w-6xl">{children}</div>}
       </main>
 
       {/* footer — provenance + demo discipline live here, not in the learner
