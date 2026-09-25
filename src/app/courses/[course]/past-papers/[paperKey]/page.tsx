@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
 import { collectPastPapers, findPastPaper, paperEstTime } from "@/lib/past-papers";
 import { Breadcrumbs, ExamCodePill } from "@/components/hub/chrome";
-import { ResourcePanel } from "@/components/hub/resource-panel";
 import { Badge } from "@/components/ui/badge";
 import { QuestionPlayer } from "@/app/courses/[course]/exam-questions/[topicSlug]/question-player";
 
@@ -29,10 +28,10 @@ export default async function PastPaperPage({
   const { meta } = hub;
 
   return (
-    <div className="flex w-full">
-      <ResourcePanel variant="questions" />
-      <div className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl space-y-5">
+    // NOTE: no ResourcePanel here either — paper playback is linear, the
+    // Exam-Questions topic tree is noise (same reasoning as the PDF viewer).
+    <div className="px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl space-y-5">
         <Breadcrumbs
           items={[
             { label: meta.level, href: "/courses" },
@@ -70,7 +69,6 @@ export default async function PastPaperPage({
           subtopicTitle={null}
           questions={paper.questions}
         />
-        </div>
       </div>
     </div>
   );

@@ -6,11 +6,20 @@ import {
   sessionLabel as sessionLabelOf,
 } from "@/lib/pastpapers-corpus";
 import { Breadcrumbs, ExamCodePill } from "@/components/hub/chrome";
-import { ResourcePanel } from "@/components/hub/resource-panel";
 import { Badge } from "@/components/ui/badge";
 import { PaperViewerClient } from "@/components/pastpapers/paper-viewer-client";
 
 export const dynamic = "force-dynamic";
+
+/** PDFs stream from raw.githubusercontent.com — warm the connection early. */
+function PreconnectCorpus() {
+  return (
+    <>
+      <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+    </>
+  );
+}
 
 /**
  * One corpus paper — PDF viewer (view / split) and mock-exam runner.
@@ -40,38 +49,40 @@ export default async function CorpusPaperPage({
   const mockMode = mode === "mock";
 
   return (
-    <div className="flex w-full">
-      <ResourcePanel variant="questions" />
-      <div className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl space-y-5">
-          <Breadcrumbs
-            items={[
-              { label: meta.level, href: "/courses" },
-              { label: meta.subject, href: `/courses/${meta.slug}` },
-              { label: "Past Papers", href: `/courses/${meta.slug}/past-papers` },
-              { label: `${sessionLabelOf(session)} · ${paper.ref}` },
-            ]}
-          />
+    <div className="px-4 py-6 sm:px-6 lg:px-8">
+      <PreconnectCorpus />
+      {/* NOTE: no ResourcePanel here — a paper is a linear document, the
+          spec-topic tree (an Exam-Questions navigation affordance) is noise
+          on a paper viewer and stole 288px from the PDF panes. The course
+          sidebar + breadcrumbs carry navigation. */}
+      <div className="mx-auto max-w-6xl space-y-5">
+        <Breadcrumbs
+          items={[
+            { label: meta.level, href: "/courses" },
+            { label: meta.subject, href: `/courses/${meta.slug}` },
+            { label: "Past Papers", href: `/courses/${meta.slug}/past-papers` },
+            { label: `${sessionLabelOf(session)} · ${paper.ref}` },
+          ]}
+        />
 
-          <header className="flex flex-wrap items-center gap-2">
-            <h1 className="text-2xl font-bold tracking-tight">
-              {paper.ref} — {sessionLabelOf(session)}
-            </h1>
-            <ExamCodePill code={meta.code} />
-            <Badge variant="outline" className="text-[10px]">
-              AI-IDENTIFIED corpus
-            </Badge>
-          </header>
+        <header className="flex flex-wrap items-center gap-2">
+          <h1 className="text-2xl font-bold tracking-tight">
+            {paper.ref} — {sessionLabelOf(session)}
+          </h1>
+          <ExamCodePill code={meta.code} />
+          <Badge variant="outline" className="text-[10px]">
+            AI-IDENTIFIED corpus
+          </Badge>
+        </header>
 
-          <PaperViewerClient
-            course={meta.slug}
-            paper={paper}
-            sessionLabelStr={sessionLabelOf(session)}
-            initialDoc={docParam}
-            mode={mockMode ? "mock" : "view"}
-            metaGeneratedAt={corpusIndex.meta.generatedAt}
-          />
-        </div>
+        <PaperViewerClient
+          course={meta.slug}
+          paper={paper}
+          sessionLabelStr={sessionLabelOf(session)}
+          initialDoc={docParam}
+          mode={mockMode ? "mock" : "view"}
+          metaGeneratedAt={corpusIndex.meta.generatedAt}
+        />
       </div>
     </div>
   );

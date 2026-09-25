@@ -287,7 +287,7 @@ export function PaperViewerClient({
             downloadUrl={msUrl}
             label={`Mark scheme — ${paper.ref}`}
             active
-            className="min-h-[60vh] flex-1"
+            className="h-[60vh] flex-1"
           />
         ) : (
           <p className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
@@ -458,7 +458,7 @@ export function PaperViewerClient({
             label={`Question paper — ${paper.ref}`}
             active={doc === "qp" || doc === "split"}
             className={cn(
-              "min-h-[70vh]",
+              "h-[70vh] lg:h-[calc(100vh-16rem)]",
               doc === "ms" && "hidden",
               doc === "split" && "lg:block", // mobile split falls back to QP-only
             )}
@@ -471,7 +471,7 @@ export function PaperViewerClient({
             label={`Mark scheme — ${paper.ref}`}
             active={doc === "ms" || doc === "split"}
             className={cn(
-              "min-h-[70vh]",
+              "h-[70vh] lg:h-[calc(100vh-16rem)]",
               doc === "qp" && "hidden",
               doc === "split" && "hidden lg:block",
             )}

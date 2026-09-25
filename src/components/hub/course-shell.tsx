@@ -319,13 +319,17 @@ function MobileDrawerInner({
           ))}
         </nav>
 
-        {/* resource-flavoured topic tree (mobile navigation) */}
-        <div className="mt-5 border-t pt-4">
-          <p className="sr-only">Topics</p>
-          <div onClickCapture={onNavigate} role="presentation">
-            <TopicTreeWithIndex variant={variant} activeSubtopic={activeSubtopic} />
+        {/* resource-flavoured topic tree (mobile navigation). Papers are
+            linear documents — the Exam-Questions spec tree is noise on
+            past-paper routes, same reasoning as the desktop ResourcePanel. */}
+        {!pathname.includes("/past-papers") && (
+          <div className="mt-5 border-t pt-4">
+            <p className="sr-only">Topics</p>
+            <div onClickCapture={onNavigate} role="presentation">
+              <TopicTreeWithIndex variant={variant} activeSubtopic={activeSubtopic} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

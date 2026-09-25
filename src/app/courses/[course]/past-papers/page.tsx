@@ -21,6 +21,16 @@ import { MockResultsStrip } from "@/components/pastpapers/mock-results-strip";
 
 export const dynamic = "force-dynamic";
 
+/** PDFs stream from raw.githubusercontent.com — warm the connection early. */
+function PreconnectCorpus() {
+  return (
+    <>
+      <link rel="preconnect" href="https://raw.githubusercontent.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
+    </>
+  );
+}
+
 /**
  * Past Papers — the student archive (SME-style), built on the
  * syllabai-pastpapers corpus.
@@ -89,6 +99,7 @@ export default async function PastPapersPage({
 
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
+      <PreconnectCorpus />
       <CourseHeader
         meta={meta}
         title={`Edexcel ${meta.level} ${meta.label} Past Papers`}
