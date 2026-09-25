@@ -341,7 +341,11 @@ export function NoteCla({
                     </div>
                   )}
                   <p className="text-[10px] text-muted-foreground">
-                    {m.provider === "mock" ? "demo fallback provider" : `Answered by ${m.provider ?? "?"}`}
+                    {m.provider === "unavailable"
+                      ? "no AI provider answered — structured fallback shown"
+                      : m.provider === "mock"
+                        ? "demo fallback provider"
+                        : `Answered by ${m.provider ?? "?"}`}
                     {m.model ? ` · ${m.model}` : ""} · mode {m.mode}
                     {typeof m.evidenceCount === "number" ? ` · ${m.evidenceCount} note section${m.evidenceCount === 1 ? "" : "s"}` : ""}
                     {typeof m.latencyMs === "number" ? ` · ${m.latencyMs}ms` : ""}

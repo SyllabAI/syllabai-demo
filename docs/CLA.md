@@ -78,6 +78,19 @@ contains that content — the Tutor answers it; the note-anchored CLA does not).
   it catches "asked about a different topic", not phrasing variance).
 - **Mock provider works offline** (as with the Tutor); the answer footer labels
   the provider honestly ("demo fallback provider" for mock).
+- **Provider configuration on deployments (s134).** The `zai` adapter runs in
+  two modes: env-var mode when `ZAI_BASE_URL` + `ZAI_API_KEY` + `ZAI_TOKEN` are
+  set (optionally `ZAI_MODEL`, `ZAI_USER_ID`, `ZAI_CHAT_ID`) — the only mode
+  that works on serverless hosts, where the SDK's file-only `.z-ai-config`
+  cannot exist; and SDK mode in the sandbox, where that file is preinstalled.
+  The three env values gate engagement together: a partial config falls
+  through to the clearly-labeled mock rather than failing every call at 401
+  (the endpoint requires `Authorization` + `X-Z-AI-From` + `X-Token` — probed
+  live). Without either configuration, `zai.available()` is false and the pool
+  falls through to the mock — deployments never see the runtime
+  "Configuration file not found" error. A provider that throws is never
+  credited in the answer footer (`provider: "unavailable"`, rendered as "no AI
+  provider answered — structured fallback shown").
 - **Citations are read-only badges.** Each cites a section of the note being
   read (labels like "Title · §3"). In-page anchor scrolling was considered and
   dropped — heading ids are not stable in the Markdown renderer.

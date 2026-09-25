@@ -257,8 +257,10 @@ export async function claTurn(req: ClaTurnRequest): Promise<ClaTurnResult> {
       mode: req.mode,
       context,
       citations,
-      provider: provider.id,
-      model: provider.model,
+      // a provider that THREW did not answer — never credit it as if it had
+      // (the footer must not read "Answered by zai · glm" over a failure)
+      provider: "unavailable",
+      model: null,
       refused: true,
       evidenceCount: segments.length,
       latencyMs: Date.now() - started,
