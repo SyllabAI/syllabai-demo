@@ -8,6 +8,7 @@ import {
   Files,
   GraduationCap,
   Lightbulb,
+  ListTree,
   ScrollText,
   Target,
 } from "lucide-react";
@@ -255,6 +256,13 @@ export default async function CourseHubPage({
                 <Badge variant="outline" className="font-mono text-[10px]">
                   data: {cfg.dataMode}
                 </Badge>
+                <Link
+                  href={`/courses/${meta.slug}/specification`}
+                  className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-muted"
+                >
+                  <ListTree className="size-4" aria-hidden />
+                  Specification tree
+                </Link>
                 <Link
                   href="/knowledge-graph"
                   className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-muted"

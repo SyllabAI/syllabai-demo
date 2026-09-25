@@ -1,32 +1,74 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { ArrowRight, FileQuestion } from "lucide-react";
+import { ArrowRight, FileQuestion, Filter } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { loadHubCourse } from "@/lib/courses";
+import { getCourseBundle, loadHubCourse } from "@/lib/courses";
+import { getDataProvider } from "@/lib/data";
 import { CourseHeader } from "@/components/hub/course-header";
 import { NumberedLabel } from "@/components/hub/chrome";
 import { AddToTestLink } from "@/components/teacher/add-to-test-link";
 
 export const dynamic = "force-dynamic";
 
+/** "1C" → "Paper 1C"; full paper codes (4MA1/1F) pass through verbatim. */
+function paperLabel(p: string): string {
+  return p.length <= 4 ? `Paper ${p}` : p;
+}
+
 /**
  * Exam Questions bank index (SME pattern, research §6.1): question sets
  * grouped under their numbered topic, with count pills and a per-set link —
  * an exam-question analogue of the notes index, driven by the same tree.
+ *
+ * T-KG-17: `?paper=` scopes the bank to sets whose anchored spec points are
+ * assessed in that paper (the canonical T-KG-16 applicability, joined via
+ * the parts' specPointCodes) — revision scoped the way the exam is sat.
  */
 export default async function ExamQuestionsIndexPage({
   params,
   searchParams,
 }: {
   params: Promise<{ course: string }>;
-  searchParams: Promise<{ spec?: string }>;
+  searchParams: Promise<{ spec?: string; paper?: string }>;
 }) {
   const { course: slug } = await params;
-  const { spec } = await searchParams;
+  const { spec, paper } = await searchParams;
   const hub = await loadHubCourse(slug);
   if (!hub) notFound();
   const { meta, stats } = hub;
+
+  // spec-point → papers (+ coursework pseudo-tag) for the part-level join
+  const bundle = await getCourseBundle(slug);
+  const curriculum =
+    bundle?.curriculum ?? (hub.viaProvider ? await getDataProvider().curriculum() : null);
+  const appByCode = new Map(
+    (curriculum?.nodes ?? [])
+      .filter((n) => n.family === "SPEC_POINT" && n.applicability)
+      .map((n) => [n.code, n.applicability!]),
+  );
+  const COURSEWORK = "__coursework__";
+  const papersOfSet = (setSlug: string): Set<string> => {
+    const out = new Set<string>();
+    const set = hub.questionTopics.find((t) => t.slug === setSlug);
+    for (const q of set?.questions ?? [])
+      for (const p of q.parts) {
+        for (const c of p.specPointCodes ?? []) {
+          const a = appByCode.get(c);
+          if (!a) continue;
+          for (const x of a.papers ?? []) out.add(x);
+          if ((a.papers ?? []).length === 0 && a.coursework) out.add(COURSEWORK);
+        }
+      }
+    return out;
+  };
+  const setPapers = new Map(hub.questionTopics.map((t) => [t.slug, papersOfSet(t.slug)]));
+
+  const paperOptions = [...new Set([...setPapers.values()].flatMap((s) => [...s]))].sort(
+    (a, b) => a.localeCompare(b, undefined, { numeric: true }),
+  );
+  const paperLabelOf = (p: string) => (p === COURSEWORK ? "Coursework" : paperLabel(p));
+  const paperActive = paper ?? null;
 
   // legacy deep links used ?spec=4CH1-1.1 — jump straight to the set that
   // anchors that spec point when it has one canonical home
@@ -37,6 +79,9 @@ export default async function ExamQuestionsIndexPage({
   }
   const base = `/courses/${meta.slug}`;
 
+  const inScope = (setSlug: string) =>
+    !paperActive || (setPapers.get(setSlug)?.has(paperActive) ?? false);
+
   const groups = hub.index.tree.topics
     .map((t) => ({
       topic: t,
@@ -45,13 +90,13 @@ export default async function ExamQuestionsIndexPage({
         return hub.setsBySubtopic[
           t.subtopics.find((s) => hub.setsBySubtopic[s.code]?.includes(set.slug))?.code ?? ""
         ]?.includes(set.slug);
-      }),
+      }).filter((set) => inScope(set.slug)),
     }))
     .filter((g) => g.sets.length > 0);
 
   const unplaced = hub.questionTopics.filter(
     (set) => !groups.some((g) => g.sets.some((s) => s.slug === set.slug)),
-  );
+  ).filter((set) => inScope(set.slug));
 
   return (
     <div className="px-4 py-6 sm:px-6 lg:px-8">
@@ -61,6 +106,38 @@ export default async function ExamQuestionsIndexPage({
         crumb="Exam Questions"
         description={`Exam-style questions organised by topic — ${stats.questions} questions across ${stats.questionSets} sets, with parts, command words, mark schemes and self-marking.`}
       />
+
+      {paperOptions.length > 1 && (
+        <div className="flex flex-wrap items-center gap-1.5 rounded-lg border bg-card px-3 py-2.5">
+          <span className="mr-1 flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
+            <Filter className="size-3.5" aria-hidden />
+            Assessed in
+          </span>
+          <Link
+            href={`${base}/exam-questions`}
+            className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
+              paperActive === null
+                ? "border-primary/40 bg-primary/10 text-primary"
+                : "text-muted-foreground hover:bg-muted"
+            }`}
+          >
+            All papers
+          </Link>
+          {paperOptions.map((p) => (
+            <Link
+              key={p}
+              href={`${base}/exam-questions?paper=${encodeURIComponent(p)}`}
+              className={`rounded-full border px-2.5 py-1 text-xs font-medium transition-colors ${
+                paperActive === p
+                  ? "border-primary/40 bg-primary/10 text-primary"
+                  : "text-muted-foreground hover:bg-muted"
+              }`}
+            >
+              {paperLabelOf(p)}
+            </Link>
+          ))}
+        </div>
+      )}
 
       <div className="mt-6 space-y-5">
         {groups.map(({ topic, sets }) => (
@@ -146,7 +223,19 @@ export default async function ExamQuestionsIndexPage({
         {groups.length === 0 && unplaced.length === 0 && (
           <Card>
             <CardContent className="p-6 text-sm text-muted-foreground">
-              No question sets imported for this course yet.
+              {paperActive ? (
+                <>
+                  No imported question sets are anchored to spec points assessed in{" "}
+                  <span className="font-medium text-foreground">{paperLabelOf(paperActive)}</span>{" "}
+                  yet — the corpus currently covers other papers for this course.{" "}
+                  <Link href={`${base}/exam-questions`} className="underline hover:text-foreground">
+                    Clear the paper scope
+                  </Link>
+                  .
+                </>
+              ) : (
+                "No question sets imported for this course yet."
+              )}
             </CardContent>
           </Card>
         )}
