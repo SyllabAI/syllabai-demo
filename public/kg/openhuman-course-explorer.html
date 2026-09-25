@@ -1489,7 +1489,7 @@ function renderLearningSurface(action,n){
    el.innerHTML=`<div class="learningSurfaceTitle">Practice surface</div><div class="learningSurfaceKicker">Target · <b>${targetText}</b></div><div class="learningSignal"><b>Why now</b><br>${learnerSignalText(target||n)}</div><div style="margin-top:8px"><b>Curriculum target</b><br>${statement}</div><div class="pedagogyRail"><span class="pedagogyStep active">Understand</span><span class="pedagogyStep">Hint</span><span class="pedagogyStep">Approach</span><span class="pedagogyStep">Student attempt</span><span class="pedagogyStep">Smart Mark</span><span class="pedagogyStep">Feedback</span><span class="pedagogyStep">Improvement</span></div><div class="learningActionMini"><b>Practice readiness</b><br><span class="muted">This prototype has not attached a validated exam question to this SpecificationPoint. No question has been invented here.</span></div><div class="learningSurfaceNote">Targeting is driven by the current learner-state demo overlay and recommendation model; serving requires validated assessment content.</div>`;
  }else if(action==='tutor'){
    el.style.display='block';
-   const l=learner(target||n),crumb=(target?.pointId?`Chemistry · Section ${target.section} · ${target.subtopic}`:`Chemistry · ${n.label}`);
+   const l=learner(target||n),crumb=(target?.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${target.section} · ${target.subtopic}`:`${window.__KG_SUBJECT_LABEL||'Chemistry'} · ${n.label}`);
    el.innerHTML=`<div class="learningSurfaceTitle">Tutor context</div><div class="learningSurfaceKicker">Grounded context · <b>${targetText}</b></div><div style="margin-top:8px"><b>Curriculum context</b><br>${crumb}</div><div class="learningSignal"><b>Evidence available to tutor</b><br>${learnerSignalText(target||n)}</div><div style="margin-top:8px"><b>Specification statement</b><br>${statement}</div><div class="learningActionMini"><b>Progressive tutoring</b><br>Start with understanding and clarification; move to hints, approach, step-by-step support, student attempt, marking, feedback and improvement as appropriate.</div><div class="learningSurfaceNote">Tutor generation is not executed by this static prototype. The surface defines the grounded context that a governed Tutor should receive.</div>`;
  }else if(action==='path'){
    const rec=nextBestAction(n);el.style.display=rec?'block':'none';
@@ -1497,7 +1497,7 @@ function renderLearningSurface(action,n){
  }else{
    el.style.display='block';
    const rec=nextBestAction(n),l=learner(n);
-   el.innerHTML=`<div class="learningSurfaceTitle">Learning surface</div><div class="learningSurfaceKicker">A structured view of curriculum, evidence and next action.</div><div style="margin-top:8px"><b>Current curriculum</b><br>${n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:n.label}</div><div class="learningSignal"><b>Evidence</b><br>${learnerSignalText(n)}</div><div style="margin-top:8px"><b>Next useful action</b><br>${rec?`${rec.action} · ${rec.target.pointId||rec.target.label}`:'No recommendation is available for this scope yet.'}</div><div class="learningSurfaceNote">Curriculum semantics remain authoritative; learner state and recommendations are overlays.</div>`;
+   el.innerHTML=`<div class="learningSurfaceTitle">Learning surface</div><div class="learningSurfaceKicker">A structured view of curriculum, evidence and next action.</div><div style="margin-top:8px"><b>Current curriculum</b><br>${n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:n.label}</div><div class="learningSignal"><b>Evidence</b><br>${learnerSignalText(n)}</div><div style="margin-top:8px"><b>Next useful action</b><br>${rec?`${rec.action} · ${rec.target.pointId||rec.target.label}`:'No recommendation is available for this scope yet.'}</div><div class="learningSurfaceNote">Curriculum semantics remain authoritative; learner state and recommendations are overlays.</div>`;
  }
 }
 function setActionAvailability(n){
@@ -3019,7 +3019,7 @@ const search=document.getElementById('search'),searchResults=document.getElement
 function searchItems(q){
  const qq=q.trim().toLowerCase(); if(!qq){searchResults.classList.remove('show');searchResults.innerHTML='';return}
  const scored=state.nodes.map(n=>{const hay=(n.label+' '+(n.statement||'')+' '+(n.pointId||'')).toLowerCase();let score=hay.includes(qq)?1:0;if((n.pointId||'').toLowerCase()===qq)score=3;else if((n.label||'').toLowerCase().startsWith(qq))score=2;return {n,score}}).filter(x=>x.score).sort((a,b)=>b.score-a.score||(a.n.label||'').localeCompare(b.n.label||'')).slice(0,8);
- searchResults.innerHTML=scored.map(({n})=>{const crumb=n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:(n.type==='SubTopic'?`Chemistry · Section ${n.section}`:'Chemistry');return `<div class="searchResult" data-id="${n.id}"><strong>${n.pointId||n.label}</strong><small>${n.pointId?n.label:n.type} · ${crumb}</small></div>`}).join('')||'<div class="searchResult"><small>No matching curriculum node.</small></div>';
+ searchResults.innerHTML=scored.map(({n})=>{const crumb=n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:(n.type==='SubTopic'?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section}`:(window.__KG_SUBJECT_LABEL||'Chemistry'));return `<div class="searchResult" data-id="${n.id}"><strong>${n.pointId||n.label}</strong><small>${n.pointId?n.label:n.type} · ${crumb}</small></div>`}).join('')||'<div class="searchResult"><small>No matching curriculum node.</small></div>';
  searchResults.classList.add('show');searchResults.querySelectorAll('[data-id]').forEach(x=>x.onclick=()=>{const n=nodeBy().get(x.dataset.id);if(n){search.value=n.pointId||n.label;navigateToSearchResult(n.id)}});
 }
 search.addEventListener('input',()=>searchItems(search.value));
@@ -3177,6 +3177,8 @@ function kgApplicabilityChips(a){
     document.title=kg.subjectLabel+' — Knowledge Graph';
     const hudT=document.querySelector('#hud .title');if(hudT)hudT.textContent=kg.subjectLabel;
     const hudS=document.querySelector('#hud .subtitle');if(hudS)hudS.textContent=subtitle;
+    // the static placeholder is a v77 chemistry-ism — rebrand per course
+    const se=document.getElementById('search');if(se)se.placeholder='Search '+(kg.subjectLabel||'').toLowerCase()+', topics, specification points...';
     window.__KG_SUBJECT_LABEL=kg.subjectLabel;
     const ts=document.querySelector('.treeScope');
     if(ts)ts.textContent='';

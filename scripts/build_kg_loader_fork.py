@@ -89,6 +89,16 @@ PATCHES = [
      "const ctx=n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:(n.type==='Subject'?(window.__KG_SUBJECT_LABEL||'International GCSE Chemistry'):`Section ${n.section||''}`);", 1),
     ("<div>• This node is part of the official Chemistry specification.</div>",
      "<div>• This node is part of the official '+(window.__KG_SUBJECT_LABEL||'Chemistry')+' specification.</div>", 1),
+    # P11-P13: subject-agnostic crumbs — the search-result rows, the tutor
+    # action card and the learning-surface "Current curriculum" line still
+    # hardcoded 'Chemistry' after P9/P10 (surfaced as "Maths B shows Chemistry
+    # breadcrumbs"); same guard pattern, v77 wording without ?course=
+    ("const l=learner(target||n),crumb=(target?.pointId?`Chemistry · Section ${target.section} · ${target.subtopic}`:`Chemistry · ${n.label}`);",
+     "const l=learner(target||n),crumb=(target?.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${target.section} · ${target.subtopic}`:`${window.__KG_SUBJECT_LABEL||'Chemistry'} · ${n.label}`);", 1),
+    ("<b>Current curriculum</b><br>${n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:n.label}</div>",
+     "<b>Current curriculum</b><br>${n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:n.label}</div>", 1),
+    ("const crumb=n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:(n.type==='SubTopic'?`Chemistry · Section ${n.section}`:'Chemistry');",
+     "const crumb=n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:(n.type==='SubTopic'?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section}`:(window.__KG_SUBJECT_LABEL||'Chemistry'));", 1),
 ]
 
 HELPERS = """
@@ -219,6 +229,8 @@ LOADER = """
     document.title=kg.subjectLabel+' — Knowledge Graph';
     const hudT=document.querySelector('#hud .title');if(hudT)hudT.textContent=kg.subjectLabel;
     const hudS=document.querySelector('#hud .subtitle');if(hudS)hudS.textContent=subtitle;
+    // the static placeholder is a v77 chemistry-ism — rebrand per course
+    const se=document.getElementById('search');if(se)se.placeholder='Search '+(kg.subjectLabel||'').toLowerCase()+', topics, specification points...';
     window.__KG_SUBJECT_LABEL=kg.subjectLabel;
     const ts=document.querySelector('.treeScope');
     if(ts)ts.textContent='';
