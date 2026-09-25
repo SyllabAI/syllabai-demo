@@ -166,7 +166,9 @@ def export_course(slug: str, registry: dict[str, dict]) -> dict:
         if len(sub_codes) != 1:
             raise ExportError(f"{slug}: SPEC_POINT {p['code']} has {len(sub_codes)} "
                               f"SUBTOPIC parents ({parents})")
-        points_list.append({"id": pid, "text": p["title"]})
+        points_list.append({"id": pid, "text": p["title"],
+                            **({"applicability": p["applicability"]}
+                               if p.get("applicability") else {})})
         point_subs[sub_id_of[sub_codes[0]]].append(pid)
 
     # numeric ids must order strictly within a section (port of pointOrd gate)
@@ -215,12 +217,15 @@ def export_course(slug: str, registry: dict[str, dict]) -> dict:
             kg_nodes.append({"id": sid, "type": "SubTopic", "section": key, "label": title})
     for pt in points_list:
         short = len(pt["id"]) <= 12
-        kg_nodes.append({
+        node = {
             "id": "p:" + pt["id"], "pointId": pt["id"], "type": "SpecificationPoint",
             "label": pt["id"] if short else (pt["text"][:48] + "…"
                                              if len(pt["text"]) > 48 else pt["text"]),
             "statement": pt["text"],
-        })
+        }
+        if pt.get("applicability"):
+            node["applicability"] = pt["applicability"]
+        kg_nodes.append(node)
 
     edges = [["subject", "sec" + key, "hier"] for key in subtopics_tbl]
     for key, defs in subtopics_tbl.items():
@@ -261,10 +266,13 @@ def export_course(slug: str, registry: dict[str, dict]) -> dict:
             "curriculumCode": qual_code,
             "syllabusVersion": cur.get("syllabusVersion"),
             "source": f"content/{slug}/curriculum.json (curriculum truth, RULE_DERIVED)",
-            "exporter": "scripts/kg_export.py v1",
+            "exporter": "scripts/kg_export.py v1.1 (applicability passthrough)",
             "generatedUtc": dt.datetime.now(dt.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "notes": ("v1: hier edges only — curriculum.json carries no prerequisite, "
-                      "relation or paper metadata; none are invented."),
+            "notes": ("v1.1: hier edges only — no prerequisite, relation or "
+                      "assessment edges are invented. SpecificationPoint nodes "
+                      "and points carry the canonical applicability object "
+                      "(printed paper/unit/tier/coursework homes, T-KG-16) "
+                      "verbatim from the pinned parse; absent where not derived."),
             "counts": {
                 "nodes": len(kg_nodes),
                 "edges": len(edges),
