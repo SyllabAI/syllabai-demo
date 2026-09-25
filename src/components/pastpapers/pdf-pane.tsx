@@ -77,6 +77,7 @@ import {
   ChevronUp,
   Download,
   Loader2,
+  Maximize2,
   Minus,
   Plus,
   RotateCcw,
@@ -196,6 +197,7 @@ export const PdfPane = forwardRef<PdfPaneHandle, PdfPaneProps>(function PdfPane(
   ref,
 ) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLDivElement | null>(null);
   const holderRefs = useRef(new Map<number, HTMLDivElement>());
   const docRef = useRef<PdfDoc | null>(null);
   const tasksRef = useRef(new Map<number, RenderTask>());
@@ -245,6 +247,28 @@ export const PdfPane = forwardRef<PdfPaneHandle, PdfPaneProps>(function PdfPane(
   const [findQuery, setFindQuery] = useState("");
   const [matchInfo, setMatchInfo] = useState<{ count: number; index: number } | null>(null);
   const [indexProgress, setIndexProgress] = useState<{ done: number; total: number } | null>(null);
+
+  // ── fullscreen (per-pane "the PDF is the screen") ────────────────────────
+  // Element.requestFullscreen is unsupported on iPhone Safari (and older
+  // Android WebView), so the button only renders when the API exists; Esc /
+  // the browser UI exits as usual.
+  const [canFullscreen, setCanFullscreen] = useState(false);
+  useEffect(() => {
+    setCanFullscreen(
+      typeof rootRef.current?.requestFullscreen === "function" &&
+        !/iP(hone|ad|od)/.test(navigator.userAgent),
+    );
+  }, []);
+
+  const toggleFullscreen = useCallback(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    if (document.fullscreenElement) {
+      void document.exitFullscreen().catch(() => undefined);
+    } else {
+      void el.requestFullscreen().catch(() => undefined);
+    }
+  }, []);
 
   // ── geometry ─────────────────────────────────────────────────────────────
   /** Fit scale for a page of width baseW at the current zoom. */
@@ -955,8 +979,9 @@ export const PdfPane = forwardRef<PdfPaneHandle, PdfPaneProps>(function PdfPane(
 
   return (
     <div
+      ref={rootRef}
       className={cn(
-        "relative flex min-h-0 flex-col overflow-hidden rounded-lg border bg-muted/30",
+        "pp-pane relative flex min-h-0 flex-col overflow-hidden rounded-lg border bg-muted/30",
         className,
       )}
       onPointerDownCapture={claimSelf}
@@ -1036,6 +1061,18 @@ export const PdfPane = forwardRef<PdfPaneHandle, PdfPaneProps>(function PdfPane(
             >
               <Search className="size-3.5" aria-hidden />
             </Button>
+            {canFullscreen && (
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-7 px-1.5"
+                onClick={toggleFullscreen}
+                aria-label="Fullscreen"
+                title="Fullscreen"
+              >
+                <Maximize2 className="size-3.5" aria-hidden />
+              </Button>
+            )}
           </div>
         )}
         {downloadUrl && (

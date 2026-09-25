@@ -35,6 +35,7 @@ import {
   Trash2,
   X,
 } from "lucide-react";
+import { ExamCodePill } from "@/components/hub/chrome";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -70,6 +71,8 @@ export interface PaperViewerClientProps {
   mode: "view" | "mock";
   /** corpus provenance string for the honesty note */
   metaGeneratedAt: string;
+  /** spec exam code pill (e.g. 4CH1) — shown in the compact toolbar row */
+  examCode?: string;
 }
 
 export function PaperViewerClient({
@@ -79,6 +82,7 @@ export function PaperViewerClient({
   initialDoc,
   mode,
   metaGeneratedAt,
+  examCode,
 }: PaperViewerClientProps) {
   const router = useRouter();
   const isSplitCapable = Boolean(paper.qpBytes && paper.msBytes);
@@ -364,7 +368,7 @@ export function PaperViewerClient({
   // ── MOCK: grading screen ─────────────────────────────────────────────────
   if (mockPhase === "grading" && mode === "mock") {
     return (
-      <div className="flex min-h-[70vh] flex-col gap-3">
+      <div className="flex min-h-[70vh] flex-col gap-3 pb-6">
         <div className="flex flex-wrap items-center gap-2">
           <Button asChild size="sm" variant="ghost" className="h-8">
             <Link href={backHref}>
@@ -532,7 +536,11 @@ export function PaperViewerClient({
             downloadUrl={msUrl}
             label={`Mark scheme — ${paper.ref}`}
             active
-            className="h-[60vh] flex-1"
+            /* NO flex-1 here: in this auto-height column flex-basis 0% +
+               min-height:auto lets the document content stretch the pane to
+               its full 40k-page height (the page scrolled 43,380px in E2E).
+               A plain h-[60vh] keeps the pane bounded with internal scroll. */
+            className="h-[60vh]"
           />
         ) : (
           <p className="rounded-md border border-dashed p-4 text-sm text-muted-foreground">
@@ -546,7 +554,7 @@ export function PaperViewerClient({
   // ── MOCK: intro ──────────────────────────────────────────────────────────
   if (mode === "mock") {
     return (
-      <div className="space-y-4">
+      <div className="space-y-4 pb-6">
         <Button asChild size="sm" variant="ghost" className="h-8">
           <Link href={backHref}>
             <ArrowLeft className="size-4" aria-hidden />
@@ -616,20 +624,34 @@ export function PaperViewerClient({
   }
 
   // ── VIEW mode ────────────────────────────────────────────────────────────
+  // Layout discipline: the panes fill the viewport below the app header
+  // (56px) + this page's 12px top padding — on mobile the sticky course
+  // "Menu" bar (49px) is added. Everything else collapses into ONE compact
+  // toolbar row; the old breadcrumb + h1 hero + footer note (≈140px) are
+  // gone, and the mobile A/B pill floats over the pane instead of pushing it
+  // down. Height numbers must stay in sync with the viewer page's padding.
   return (
-    <div className="flex min-h-[75vh] flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-2">
+    <div className="flex h-[calc(100vh-7.5rem)] min-h-[420px] flex-col gap-2 lg:h-[calc(100vh-4.5rem)]">
+      <div className="flex shrink-0 flex-wrap items-center gap-2">
         <Button asChild size="sm" variant="ghost" className="h-8">
           <Link href={backHref}>
             <ArrowLeft className="size-4" aria-hidden />
             Past Papers
           </Link>
         </Button>
-        <span className="font-mono text-sm font-semibold">{paper.ref}</span>
-        <span className="text-xs text-muted-foreground">
+        <h1 className="font-mono text-sm font-semibold tracking-tight">{paper.ref}</h1>
+        <span className="hidden min-w-0 truncate text-xs text-muted-foreground md:inline">
           {paper.title}
           {paper.variantChip ? ` · ${paper.variantChip}` : ""} · {sessionLabelStr}
         </span>
+        {examCode && <ExamCodePill code={examCode} className="hidden py-1 text-[11px] sm:inline-flex" />}
+        <Badge
+          variant="outline"
+          className="hidden text-[10px] md:inline-flex"
+          title={`AI-IDENTIFIED corpus — provenance ratification pending · index generated ${metaGeneratedAt.slice(0, 10)}`}
+        >
+          AI-IDENTIFIED
+        </Badge>
         {/* doc switch — three states on desktop (QP | MS | Split) */}
         <div className="ml-auto hidden items-center gap-1 rounded-lg border p-1 sm:flex" role="tablist" aria-label="Document view">
           <Button
@@ -668,34 +690,42 @@ export function PaperViewerClient({
         </div>
       </div>
 
-      {/* mobile A/B toggle — sticky pill, preserves each doc's scroll */}
-      {isSplitCapable && (
-        <div
-          className="sticky top-2 z-30 flex items-center justify-center gap-1 self-center rounded-full border bg-background/95 p-1 shadow-sm backdrop-blur sm:hidden"
-          role="tablist"
-          aria-label="Switch document"
-        >
-          {/* mobile pill: doc === "split" behaves as "qp" (CSS below) */}
-          {(["qp", "ms"] as const).map((d) => (
-            <button
-              key={d}
-              role="tab"
-              aria-selected={doc === d || (doc === "split" && d === "qp")}
-              className={cn(
-                "h-8 rounded-full px-4 text-xs font-medium transition-colors",
-                doc === d || (doc === "split" && d === "qp")
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground",
-              )}
-              onClick={() => setDoc(d)}
-            >
-              {d === "qp" ? "Question paper" : "Mark scheme"}
-            </button>
-          ))}
-        </div>
-      )}
-
-      <div className={cn("grid min-h-0 flex-1 gap-2", isSplitCapable && doc === "split" && "lg:grid-cols-2")}>
+      {/* pane area — flex row for a single doc, 2-col grid for desktop split.
+          Panes are h-full: no fixed 70vh/16rem math, the area below the
+          toolbar row is the PDF's to fill. */}
+      <div
+        className={cn(
+          "relative flex min-h-0 flex-1 gap-2",
+          isSplitCapable && doc === "split" && "lg:grid lg:grid-cols-2",
+        )}
+      >
+        {/* mobile A/B toggle — floats over the pane's bottom edge so it costs
+            zero vertical space; preserves each doc's scroll */}
+        {isSplitCapable && (
+          <div
+            className="absolute bottom-3 left-1/2 z-30 flex -translate-x-1/2 items-center gap-1 rounded-full border bg-background/95 p-1 shadow-md backdrop-blur sm:hidden"
+            role="tablist"
+            aria-label="Switch document"
+          >
+            {/* mobile pill: doc === "split" behaves as "qp" (CSS below) */}
+            {(["qp", "ms"] as const).map((d) => (
+              <button
+                key={d}
+                role="tab"
+                aria-selected={doc === d || (doc === "split" && d === "qp")}
+                className={cn(
+                  "h-8 rounded-full px-4 text-xs font-medium transition-colors",
+                  doc === d || (doc === "split" && d === "qp")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground",
+                )}
+                onClick={() => setDoc(d)}
+              >
+                {d === "qp" ? "Question paper" : "Mark scheme"}
+              </button>
+            ))}
+          </div>
+        )}
         {qpUrl && (
           <PdfPane
             url={qpUrl}
@@ -703,7 +733,7 @@ export function PaperViewerClient({
             label={`Question paper — ${paper.ref}`}
             active={doc === "qp" || doc === "split"}
             className={cn(
-              "h-[70vh] lg:h-[calc(100vh-16rem)]",
+              "h-full min-h-0 w-full flex-1",
               doc === "ms" && "hidden",
               doc === "split" && "lg:block", // mobile split falls back to QP-only
             )}
@@ -716,7 +746,7 @@ export function PaperViewerClient({
             label={`Mark scheme — ${paper.ref}`}
             active={doc === "ms" || doc === "split"}
             className={cn(
-              "h-[70vh] lg:h-[calc(100vh-16rem)]",
+              "h-full min-h-0 w-full flex-1",
               doc === "qp" && "hidden",
               doc === "split" && "hidden lg:block",
             )}
@@ -728,12 +758,6 @@ export function PaperViewerClient({
           </p>
         )}
       </div>
-
-      <p className="text-center text-[10px] text-muted-foreground">
-        Official Pearson Edexcel documents streamed from the syllabai-pastpapers archive
-        (AI-IDENTIFIED provenance, operator ratification pending · index generated{" "}
-        {metaGeneratedAt.slice(0, 10)}).
-      </p>
     </div>
   );
 }

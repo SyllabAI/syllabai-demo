@@ -5,8 +5,6 @@ import {
   findCorpusPaper,
   sessionLabel as sessionLabelOf,
 } from "@/lib/pastpapers-corpus";
-import { Breadcrumbs, ExamCodePill } from "@/components/hub/chrome";
-import { Badge } from "@/components/ui/badge";
 import { PaperViewerClient } from "@/components/pastpapers/paper-viewer-client";
 
 export const dynamic = "force-dynamic";
@@ -28,6 +26,14 @@ function PreconnectCorpus() {
  * ?mode=mock starts the mock-exam flow (fullscreen QP + official timer).
  * The paper's identity is resolved strictly from the committed corpus index —
  * no paper exists here that the syllabai-pastpapers repo doesn't hold.
+ *
+ * Layout discipline (user-reported: the PDF viewport was drowning in chrome —
+ * 232px of breadcrumb/h1/toolbar above the panes plus the 256px sidebar):
+ * this route renders NO breadcrumb row, NO h1 hero, and NO max-width cap.
+ * Identity, exam code and the AI-IDENTIFIED provenance badge live in the
+ * viewer's single compact toolbar row; navigation = course sidebar
+ * (auto-collapsed to the rail on this route) + the back link. Every spared
+ * pixel goes to the PDF panes, which fill the remaining viewport exactly.
  */
 export default async function CorpusPaperPage({
   params,
@@ -49,41 +55,21 @@ export default async function CorpusPaperPage({
   const mockMode = mode === "mock";
 
   return (
-    <div className="px-4 py-6 sm:px-6 lg:px-8">
+    // No bottom padding: the viewer fills to the fold exactly — any bottom
+    // padding becomes a pointless page scroll (footer is omitted here too).
+    <div className="px-3 pt-3 sm:px-5 lg:px-6 lg:pt-3">
       <PreconnectCorpus />
-      {/* NOTE: no ResourcePanel here — a paper is a linear document, the
-          spec-topic tree (an Exam-Questions navigation affordance) is noise
-          on a paper viewer and stole 288px from the PDF panes. The course
-          sidebar + breadcrumbs carry navigation. */}
-      <div className="mx-auto max-w-6xl space-y-5">
-        <Breadcrumbs
-          items={[
-            { label: meta.level, href: "/courses" },
-            { label: meta.subject, href: `/courses/${meta.slug}` },
-            { label: "Past Papers", href: `/courses/${meta.slug}/past-papers` },
-            { label: `${sessionLabelOf(session)} · ${paper.ref}` },
-          ]}
-        />
-
-        <header className="flex flex-wrap items-center gap-2">
-          <h1 className="text-2xl font-bold tracking-tight">
-            {paper.ref} — {sessionLabelOf(session)}
-          </h1>
-          <ExamCodePill code={meta.code} />
-          <Badge variant="outline" className="text-[10px]">
-            AI-IDENTIFIED corpus
-          </Badge>
-        </header>
-
-        <PaperViewerClient
-          course={meta.slug}
-          paper={paper}
-          sessionLabelStr={sessionLabelOf(session)}
-          initialDoc={docParam}
-          mode={mockMode ? "mock" : "view"}
-          metaGeneratedAt={corpusIndex.meta.generatedAt}
-        />
-      </div>
+      {/* NOTE: no ResourcePanel here either — a paper is a linear document;
+          the spec-topic tree stole 288px and is exam-questions navigation. */}
+      <PaperViewerClient
+        course={meta.slug}
+        paper={paper}
+        sessionLabelStr={sessionLabelOf(session)}
+        initialDoc={docParam}
+        mode={mockMode ? "mock" : "view"}
+        metaGeneratedAt={corpusIndex.meta.generatedAt}
+        examCode={meta.code}
+      />
     </div>
   );
 }

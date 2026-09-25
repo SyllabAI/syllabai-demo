@@ -10,7 +10,7 @@
  *     mount themselves, exactly like SaveMyExams' second column;
  *   - on mobile the tree is reachable from the course drawer instead.
  */
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -37,6 +37,7 @@ import {
   type SidebarVariant,
 } from "@/components/hub/course-data-context";
 import { TopicTreeWithIndex, useActiveSubtopic } from "@/components/hub/topic-tree";
+import { isDocumentFocusRoute } from "@/lib/focus-routes";
 
 export type { SidebarData, SidebarVariant } from "@/components/hub/course-data-context";
 
@@ -51,6 +52,25 @@ export function CourseShell({
 
   const [open, setOpen] = useState(false); // mobile drawer
   const [hidden, setHidden] = useState(false); // desktop collapse ("Hide menu")
+
+  // Document-focus routes (past-paper viewer / interactive player) collapse
+  // the sidebar to the 44px rail automatically — on those screens the PDF is
+  // the whole point (user-reported: "such a small viewport for the pdf").
+  // Leaving the route restores the prior state, but ONLY if we collapsed it
+  // (a manual "Hide menu" by the user is never undone).
+  const focusRoute = isDocumentFocusRoute(pathname);
+  const autoCollapsedRef = useRef(false);
+  useEffect(() => {
+    if (focusRoute) {
+      if (!autoCollapsedRef.current) {
+        autoCollapsedRef.current = true;
+        setHidden(true);
+      }
+    } else if (autoCollapsedRef.current) {
+      autoCollapsedRef.current = false;
+      setHidden(false);
+    }
+  }, [focusRoute]);
 
   const variant: SidebarVariant = useMemo(() => {
     if (pathname.includes("/revision-notes")) return "notes";
@@ -98,7 +118,7 @@ export function CourseShell({
   // own re-open button, so the sidebar could never be toggled back open.
   const rail = (
     <aside
-      className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-11 shrink-0 flex-col items-center border-r bg-background pt-3 lg:flex"
+      className="sticky top-14 hidden h-[calc(100vh-3.5rem-1px)] w-11 shrink-0 flex-col items-center border-r bg-background pt-3 lg:flex"
       aria-label="Course navigation"
     >
       <Button
@@ -191,7 +211,7 @@ export function CourseShell({
 
   return (
     <CourseDataProvider data={data}>
-      <div className="flex min-h-[calc(100vh-3.5rem)]">
+      <div className="flex min-h-[calc(100vh-3.5rem-1px)]">
         {/* mobile drawer: nav groups + the resource topic tree */}
         {open && (
           <div className="fixed inset-0 z-40 lg:hidden" role="dialog" aria-modal="true">
@@ -214,7 +234,7 @@ export function CourseShell({
           rail
         ) : (
           <aside
-            className="sticky top-14 hidden h-[calc(100vh-3.5rem)] w-64 shrink-0 border-r bg-background lg:block"
+            className="sticky top-14 hidden h-[calc(100vh-3.5rem-1px)] w-64 shrink-0 border-r bg-background lg:block"
             aria-label="Course navigation"
           >
             {sidebar}

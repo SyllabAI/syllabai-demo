@@ -43,6 +43,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { clearIdentity, useIdentity } from "@/lib/identity";
+import { isDocumentFocusRoute } from "@/lib/focus-routes";
 import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
@@ -173,7 +174,11 @@ export function AppShell({
         {inCourse || inExplorer ? children : <div className="mx-auto w-full max-w-6xl">{children}</div>}
       </main>
 
-      {/* footer — provenance + demo discipline live here, not in the learner path */}
+      {/* footer — provenance + demo discipline live here, not in the learner
+          path. On document-focus routes (paper viewer / player) it is omitted
+          entirely: the panes fill the viewport exactly, and a footer below the
+          fold would create a pointless 200px page scroll. */}
+      {!isDocumentFocusRoute(pathname) && (
       <footer className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 print:hidden">
         <div className="flex flex-wrap items-center gap-1.5 border-t pt-4">
           <ThemeToggle variant="row" />
@@ -199,6 +204,7 @@ export function AppShell({
           2026-09-17).
         </p>
       </footer>
+      )}
     </div>
   );
 }
