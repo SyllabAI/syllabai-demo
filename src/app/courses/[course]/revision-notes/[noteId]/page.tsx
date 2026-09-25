@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, CircleHelp, ExternalLink, FileQuestion, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, CircleHelp, ExternalLink, FileQuestion } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { loadHubCourse } from "@/lib/courses";
@@ -8,6 +8,7 @@ import { sanitizeNoteBody } from "@/lib/note-body-fix";
 import { Markdown } from "@/components/markdown";
 import { Breadcrumbs } from "@/components/hub/chrome";
 import { ResourcePanel } from "@/components/hub/resource-panel";
+import { NoteCla } from "@/components/cla/note-cla";
 import { NoteFootnote } from "./note-footnote";
 
 export const dynamic = "force-dynamic";
@@ -40,11 +41,6 @@ export default async function NoteReaderPage({
   const index = hub.notes.findIndex((n) => n.noteId === note.noteId);
   const prev = hub.notes[index - 1];
   const next = hub.notes[index + 1];
-
-  const anchorSpec = note.specPointCodes[0] ?? null;
-  const askHref = `/tutor?q=${encodeURIComponent(
-    `Explain "${note.title}" and what specification ${anchorSpec ?? ""} requires`,
-  )}${anchorSpec ? `&spec=${encodeURIComponent(anchorSpec)}` : ""}`;
 
   // the corpus bodies often repeat the page title as a leading H1 (+ H2) —
   // drop those duplicates so the reader sees one title, like SME (one H1 +
@@ -99,24 +95,18 @@ export default async function NoteReaderPage({
             </div>
           </header>
 
-          {/* guided study banner (SME anatomy) — anchors the grounded tutor */}
-          {note.guidedStudy && (
-            <div className="flex flex-wrap items-center gap-3 rounded-lg border border-primary/30 bg-primary/5 px-4 py-3">
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                <Sparkles className="size-4 text-primary" aria-hidden />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold">Guided study available on this topic</p>
-                <p className="text-xs text-muted-foreground">
-                  Chat with the AI tutor about this topic — answers cite the corpus and say so
-                  when evidence is thin.
-                </p>
-              </div>
-              <Button asChild size="sm" className="gap-1.5">
-                <a href={askHref}>Ask about this</a>
-              </Button>
-            </div>
-          )}
+          {/* contextual help (CLA) — the note-anchored assistant. The guided-
+              study banner (SME anatomy) and the floating CLA button both open
+              the SAME overlay: asking about THIS note is the CLA's job now;
+              the free Tutor stays in the nav for whole-corpus questions */}
+          <NoteCla
+            course={meta.slug}
+            noteId={note.noteId}
+            noteTitle={note.title}
+            specPointCodes={note.specPointCodes}
+            subtopicTitle={subtopic?.title ?? null}
+            guidedStudy={note.guidedStudy}
+          />
 
           <Markdown>{bodyMd}</Markdown>
 
