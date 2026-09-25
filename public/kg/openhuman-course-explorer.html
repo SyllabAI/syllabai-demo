@@ -354,7 +354,7 @@ var subPointCounts={
  '3a':8,'3b':8,'3c':6,
  '4a':6,'4b':12,'4c':4,'4d':6,'4e':5,'4f':4,'4g':6,'4h':7
 };
-var pointsBySubtopic=new Map();
+var pointsBySubtopic=new Map();var sectionPoints={};
 for(const sec of Object.keys(subtopics)){let offset=0;const secPoints=points.filter(p=>pointOrd(p.id).sec===sec);for(const def of subtopics[sec]){const count=subPointCounts[def[0]]||0;pointsBySubtopic.set(def[0],secPoints.slice(offset,offset+count));offset+=count;}}
 function pointsForSub(def){return pointsBySubtopic.get(def[0])||[]}
 function validateSubtopicPointMapping(){
@@ -429,11 +429,20 @@ function makeBase(){
      });
    });
  });
+ Object.keys(sectionPoints).forEach(sec=>{
+   const pts=sectionPoints[sec]||[];
+   pts.forEach((pt,j)=>{
+     const [cx,cy]=sectionAnchors[sec]||[750,420];
+     const [ox,oy]=makePointOffset(j,pts.length);
+     add({id:'p:'+pt.id,pointId:pt.id,type:'SpecificationPoint',label:pt.id,statement:pt.text,applicability:pt.applicability||null,section:sec,subtopic:sections[sec]?sections[sec].label:pt.id,x:cx+ox,y:cy+oy,localX:ox,localY:oy,rx:8});
+   });
+ });
  state.edges.push(['subject','sec1','hier'],['subject','sec2','hier'],['subject','sec3','hier'],['subject','sec4','hier']);
  Object.keys(subtopics).forEach(sec=>subtopics[sec].forEach(st=>{
    state.edges.push(['sec'+sec,st[0],'hier']);
    pointsForSub(st).forEach(pt=>state.edges.push([st[0],'p:'+pt.id,'hier']));
  }));
+ Object.keys(sectionPoints).forEach(sec=>(sectionPoints[sec]||[]).forEach(pt=>state.edges.push(['sec'+sec,'p:'+pt.id,'hier'])));
  for(const sec of ['1','2','3','4']){state.edges.push(['sec'+sec,'paper1','assess'],['sec'+sec,'paper2','assess']);}
  const edgeValidation=validateSemanticEdges();
  if(!edgeValidation.ok) throw new Error(`Invalid semantic edge endpoint: ${edgeValidation.invalid[0].join(' → ')}`);
@@ -449,7 +458,7 @@ function validateSemanticEdges(){
 }
 
 makeBase();
-function parentSubtopicId(n){return n.type==='SpecificationPoint'?subtopics[n.section]?.find(st=>st[1]===n.subtopic)?.[0]:null}
+function parentSubtopicId(n){if(n.type!=='SpecificationPoint')return null;const sid=subtopics[n.section]?.find(st=>st[1]===n.subtopic)?.[0];return sid||('sec'+n.section)}
 function isSpecRevealed(n){if(n.type!=='SpecificationPoint')return true;if(state.revealedOverride.has(n.id))return true;if(state.appearing.has(n.id))return true;const pid=parentSubtopicId(n);return !!pid&&state.expanded.has(pid)}
 function visibleForMode(n){if(!isSpecRevealed(n))return false;if(state.mode==='assessment')return n.type==='ExamPaper'||n.type==='SpecificationPoint'||n.type==='SubTopic'||n.type==='Section';if(state.mode==='progress')return n.type==='SpecificationPoint'||n.type==='SubTopic'||n.type==='Section'||n.id==='subject';if(state.mode==='knowledge')return n.type!=='ExamPaper'||state.selected?.startsWith('p:');return true}
 function nodeBy(){return new Map(state.nodes.map(n=>[n.id,n]))}
@@ -681,7 +690,7 @@ function learnerSummary(n){
  return {count:pts.length,measured:measured.length,mastery:avg('mastery'),confidence:avg('confidence'),fluency:avg('fluency'),evidence:vals.reduce((x,q)=>x+(q.evidence||0),0),reviewDue:vals.some(q=>q.reviewDue),misconceptions:vals.filter(q=>q.misconception).length};
 }
 function ensureSubtopics(section){const arr=subtopics[section],map=nodeBy();for(const st of arr){if(!map.has(st[0])){const [x,y]=subAnchors[st[0]];state.nodes.push({id:st[0],type:'SubTopic',section,label:st[1],x,y,homeX:x,homeY:y,vx:0,vy:0})}}}
-function ensurePoints(subId){const n=nodeBy().get(subId);if(!n)return;const def=Object.values(subtopics).flat().find(x=>x[0]===subId);if(!def)return;const pts=pointsForSub(def);const map=nodeBy();pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [x,y]=makePointPlacement(def[0][0],subId,i,pts.length);const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:def[0][0],subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})})}
+function ensurePoints(subId){const n=nodeBy().get(subId);if(!n)return;const def=Object.values(subtopics).flat().find(x=>x[0]===subId);const map=nodeBy();if(def){const sec=Object.keys(subtopics).find(k=>subtopics[k].some(x=>x[0]===subId))||n.section;const pts=pointsForSub(def);pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [x,y]=makePointPlacement(def[0][0],subId,i,pts.length);const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:sec,subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})});return}if(n.type!=='Section')return;const sec=n.section;const pts=sectionPoints[sec]||[];pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [cx,cy]=sectionAnchors[sec]||[n.x,n.y];const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:sec,subtopic:sections[sec]?sections[sec].label:p.id,x:cx+ox,y:cy+oy,homeX:cx+ox,homeY:cy+oy,localX:ox,localY:oy,vx:0,vy:0})})}
 function renderPos(n){
  const a=state.appearing.get(n.id);
  if(a && n.type==='SpecificationPoint' && n._renderX!=null) return {x:n._renderX,y:n._renderY};
@@ -798,15 +807,21 @@ function scopeSubtopics(n){
  return [];
 }
 function expandScopeNode(n){
- const defs=scopeSubtopics(n);if(!defs.length)return;
+ const defs=scopeSubtopics(n);
+ const isSec=n.type==='Section',isSubj=n.type==='Subject';
+ const attIds=isSec?(sectionPoints[n.section]||[]).map(pt=>'p:'+pt.id):(isSubj?Object.keys(sectionPoints).flatMap(sec=>(sectionPoints[sec]||[]).map(pt=>'p:'+pt.id)):[]);
+ if(!defs.length&&!attIds.length)return;
  // A scope action is a hierarchical bulk operation: ensure every descendant
  // SubTopic and SpecificationPoint exists, then reveal each SpecificationPoint
  // from its OWN direct SubTopic. The Section/Subject is never used as the
  // visual origin of a SpecificationPoint bloom.
  defs.forEach(def=>ensurePoints(def[0]));
  const subIds=defs.map(def=>def[0]);
- const allExpanded=subIds.every(id=>state.expanded.has(id));
- const pointIds=defs.flatMap(def=>pointsForSub(def).map(pt=>'p:'+pt.id)).filter(pid=>nodeBy().has(pid));
+ const pointIds=defs.flatMap(def=>pointsForSub(def).map(pt=>'p:'+pt.id)).concat(attIds).filter(pid=>nodeBy().has(pid));
+ const scopeKeys=isSec?[n.id]:(isSubj?Object.keys(sections).map(sec=>'sec'+sec):[]);
+ const allExpanded=subIds.every(id=>state.expanded.has(id))&&(!attIds.length||scopeKeys.every(k=>state.expanded.has(k)));
+ const secOfPid={};Object.keys(sectionPoints).forEach(sec=>(sectionPoints[sec]||[]).forEach(pt=>{secOfPid['p:'+pt.id]=sec}));
+ const attReveal=attIds.filter(pid=>{const sk='sec'+secOfPid[pid];return sk&&!state.expanded.has(sk)});
  if(allExpanded){
    subIds.forEach(id=>state.expanded.delete(id));
    if(n.type==='Section')state.expanded.delete(n.id);
@@ -822,6 +837,7 @@ function expandScopeNode(n){
      const def=Object.values(subtopics).flat().find(x=>x[0]===subId);
      if(def)pointsForSub(def).forEach(pt=>revealIds.push('p:'+pt.id));
    });
+   attReveal.forEach(pid=>{if(!revealIds.includes(pid))revealIds.push(pid)});
    if(revealIds.length)revealNodesAnimated(revealIds);else refresh();
  }
 }
@@ -1722,7 +1738,20 @@ function renderTree(){
      }
      row.append(sb,pts);children.appendChild(row);
    }
-   head.onclick=()=>{const ids=subsIds(sec); const all=ids.every(id=>state.expanded.has(id)); if(all){ids.forEach(id=>state.expanded.delete(id))}else{ids.forEach(id=>state.expanded.add(id));ids.forEach(id=>ensurePoints(id))}; renderTree(); refresh()};
+   const att=sectionPoints[sec.section]||[];
+   const attIds=att.map(pt=>'p:'+pt.id);
+   if(att.length){
+     const pts=document.createElement('div');pts.className='treePoints';pts.style.display='block';
+     att.map(pt=>map.get('p:'+pt.id)).filter(Boolean).sort((a,b)=>String(a.pointId).localeCompare(String(b.pointId),undefined,{numeric:true})).forEach(ptn=>{
+       const pr=document.createElement('div');pr.className='treePoint';
+       const l=learner(ptn);if(l)pr.classList.add('measured');
+       const badge=document.createElement('span');badge.className='treeBadge';badge.textContent=l?(l.reviewDue?'REVIEW':l.misconception?'SIGNAL':l.mastery!=null?`${l.mastery}%`:'MEASURED'):'NOT MEASURED';
+       const pb=document.createElement('button');pb.type='button';pb.id=`tree-node-${ptn.id}`;pb.setAttribute('role','treeitem');pb.setAttribute('aria-label',`${ptn.pointId||''} · ${ptn.label}`);pb.textContent=`${ptn.pointId} · ${ptn.label}`;pb.onclick=()=>{state.keyboardNodeId=ptn.id;setView('graph');selectNode(ptn.id,{open:true,center:false})};
+       pr.append(badge,pb);pts.appendChild(pr);
+     });
+     children.appendChild(pts);
+   }
+   head.onclick=()=>{const ids=subsIds(sec); const all=ids.every(id=>state.expanded.has(id))&&(!attIds.length||state.expanded.has(sec.id)); if(all){ids.forEach(id=>state.expanded.delete(id));if(attIds.length)state.expanded.delete(sec.id)}else{ids.forEach(id=>state.expanded.add(id));ids.forEach(id=>ensurePoints(id));if(attIds.length){state.expanded.add(sec.id);ensurePoints(sec.id)}}; renderTree(); refresh()};
    card.append(head,children);wrap.appendChild(card);
  }
  function subsIds(sec){return state.nodes.filter(n=>n.type==='SubTopic'&&n.section===sec.section).map(n=>n.id)}
@@ -1986,7 +2015,7 @@ function keyboardCurrentNode(){return state.keyboardNodeId?nodeBy().get(state.ke
 function focusGraphNode(n,activate=false){if(!n)return;state.keyboardNodeId=n.id;if(activate)selectNode(n.id,{open:true,center:true,updateKeyboard:false});else{state.selected=null;state.focused=n.id;state.focusMode=true;state.recommendation=nextBestAction(n);state.pathMode=false;document.getElementById('panel').classList.remove('show');refresh()}requestAnimationFrame(()=>svg.focus({preventScroll:true}))}
 function visibleKeyboardNodes(){return state.nodes.filter(n=>visibleForMode(n)&&state.typeVisibility.has(n.type)&&(!state.connectedOnly||!state.connectedSet||state.connectedSet.has(n.id)||state.pinned.has(n.id))&&n.type!=='ExamPaper'&&n.x!=null&&n.y!=null)}
 function parentOf(n){if(!n)return null;if(n.type==='SpecificationPoint'){const pid=parentSubtopicId(n);return pid?nodeBy().get(pid):null}if(n.type==='SubTopic')return nodeBy().get('sec'+n.section)||null;if(n.type==='Section')return nodeBy().get('subject')||null;return null}
-function childrenOf(n){if(!n)return[];if(n.type==='Subject')return state.nodes.filter(x=>x.type==='Section'&&visibleForMode(x));if(n.type==='Section')return state.nodes.filter(x=>x.type==='SubTopic'&&x.section===n.section&&visibleForMode(x));if(n.type==='SubTopic')return state.nodes.filter(x=>x.type==='SpecificationPoint'&&parentSubtopicId(x)===n.id&&visibleForMode(x));return[]}
+function childrenOf(n){if(!n)return[];if(n.type==='Subject')return state.nodes.filter(x=>x.type==='Section'&&visibleForMode(x));if(n.type==='Section'){const subs=state.nodes.filter(x=>x.type==='SubTopic'&&x.section===n.section&&visibleForMode(x));if(subs.length)return subs;return state.nodes.filter(x=>x.type==='SpecificationPoint'&&parentSubtopicId(x)===n.id&&visibleForMode(x))}if(n.type==='SubTopic')return state.nodes.filter(x=>x.type==='SpecificationPoint'&&parentSubtopicId(x)===n.id&&visibleForMode(x));return[]}
 function siblingsOf(n){const p=parentOf(n);return p?childrenOf(p):[n]}
 function moveSelection(dir){const cur=keyboardCurrentNode();if(!cur)return;if(dir==='parent'){const p=parentOf(cur);if(p)focusGraphNode(p,false);return}if(dir==='child'){const kids=childrenOf(cur);if(kids.length){focusGraphNode(kids[0],false);return}if(['Subject','Section','SubTopic'].includes(cur.type)){expandNode(cur.id);requestAnimationFrame(()=>{const next=childrenOf(cur)[0];if(next)focusGraphNode(next,false)})}return}const sib=siblingsOf(cur),i=sib.findIndex(x=>x.id===cur.id),ni=dir==='prev'?Math.max(0,i-1):Math.min(sib.length-1,i+1);if(sib[ni]&&sib[ni].id!==cur.id)focusGraphNode(sib[ni],false)}
 function nextVisibleNode(delta){const list=visibleKeyboardNodes();if(!list.length)return false;const cur=keyboardCurrentNode();let i=cur?list.findIndex(x=>x.id===cur.id):-1;if(i<0)i=delta>0?-1:list.length;if((delta>0&&i>=list.length-1)||(delta<0&&i<=0))return false;const ni=i+delta;focusGraphNode(list[ni]);return true}
@@ -3124,6 +3153,27 @@ function kgApplicabilityChips(a){
       pointsBySubtopic.set(kv[0],arr);
       subPointCounts[kv[0]]=arr.length;
     }
+    // P14: collapse synthesized passthrough subtopics — some exported specs
+    // have no subtopic layer (e.g. IGCSE Maths B: 10 topics, spec points
+    // hanging straight off each topic), and kg_export.py then emits exactly
+    // one subtopic per section whose label repeats the section label. That is
+    // a meaningless middle hop — collapse it and attach the points directly
+    // to the Section node (makeBase renders them around the section anchor;
+    // parentSubtopicId/expandScopeNode/ensurePoints/childrenOf all understand
+    // section-attached points). Single-sub sections whose name DIFFERS from
+    // the section label (modular science part-buckets like "Physical
+    // chemistry: Part" -> "Energetics") carry real information and are kept.
+    sectionPoints={};
+    Object.keys(subtopics).forEach(sec=>{
+      const arr=subtopics[sec];
+      if(arr.length!==1)return;
+      const secLabel=sections[sec]&&sections[sec].label!=null?String(sections[sec].label):'';
+      if(!secLabel||String(arr[0][1]).trim().toLowerCase()!==secLabel.trim().toLowerCase())return;
+      sectionPoints[sec]=(pointsBySubtopic.get(arr[0][0])||[]).slice();
+      pointsBySubtopic.delete(arr[0][0]);
+      delete subPointCounts[arr[0][0]];
+      subtopics[sec]=[];
+    });
     sectionAnchors=kg.sectionAnchors;
     subAnchors={};
     Object.keys(subtopics).forEach(s=>{
@@ -3184,8 +3234,12 @@ function kgApplicabilityChips(a){
     if(ts)ts.textContent='';
     if(ts){const b1=document.createElement('div');b1.textContent=[meta.board,meta.level,meta.subject].filter(Boolean).join(' ');const b2=document.createElement('div');b2.textContent=kg.points.length+' SpecificationPoints';ts.appendChild(b1);ts.appendChild(b2);}
     window.__KG_STATUS='ready';
-    done={type:'syllabai-kg:ready',payload:{course:slug,counts:{nodes:kg.nodes.length,edges:kg.edges.length,
-      specPoints:kg.points.length}}};
+    // counts reflect the RENDERED graph (passthrough subtopics collapsed):
+    // nodes = subject + sections + remaining subs + every spec point;
+    // edges = subject->sec + sec->sub + node->point (hier only, no assess)
+    const nSubs=Object.values(subtopics).reduce((a,b)=>a+b.length,0);
+    done={type:'syllabai-kg:ready',payload:{course:slug,counts:{nodes:1+Object.keys(sections).length+nSubs+kg.points.length,
+      edges:Object.keys(sections).length+nSubs+kg.points.length,specPoints:kg.points.length}}};
     post(done.type,done.payload);
   }catch(err){
     window.__KG_STATUS='error: '+String(err&&err.message||err);

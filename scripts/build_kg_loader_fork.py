@@ -13,6 +13,11 @@ The fork is a copy of the byte-faithful v77 build with:
      topicIconKey dispatcher. With no pack active the original chemistry
      table runs unchanged; the loader activates the course's pack before the
      first draw. Chemistry pack == original table (golden-gated).
+  4. P14 passthrough subtopic collapse: course data whose spec has no
+     subtopic layer (e.g. IGCSE Maths B) is exported with one synthetic
+     subtopic per section duplicating the section label; the loader collapses
+     those and attaches the points directly to the Section node (graph,
+     tree, drawer, search, keyboard all support section-attached points).
 
 Gates: node --check (syntax) + kg_icon_gate.js (typo guard, chemistry
 snapshot, subject->family coverage).
@@ -99,6 +104,56 @@ PATCHES = [
      "<b>Current curriculum</b><br>${n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:n.label}</div>", 1),
     ("const crumb=n.pointId?`Chemistry · Section ${n.section} · ${n.subtopic}`:(n.type==='SubTopic'?`Chemistry · Section ${n.section}`:'Chemistry');",
      "const crumb=n.pointId?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section} · ${n.subtopic}`:(n.type==='SubTopic'?`${window.__KG_SUBJECT_LABEL||'Chemistry'} · Section ${n.section}`:(window.__KG_SUBJECT_LABEL||'Chemistry'));", 1),
+    # --- P14: passthrough subtopic collapse (Maths B flat-spec fix) ----------
+    # Specs with no subtopic layer (IGCSE Maths B: 10 topics, IAL Physics, all
+    # IAL Maths modules, ICT, Business, Further Maths, ...) were exported with
+    # exactly one synthetic subtopic per section whose label repeats the
+    # section label — a meaningless middle hop in the graph. The loader now
+    # collapses those and attaches their points directly to the Section node.
+    # Rule precision (verified against all 49 exported courses): collapse iff
+    # a section has exactly one subtopic AND the subtopic label equals the
+    # section label (case/space-insensitive). Single-sub sections whose name
+    # differs (modular science part-buckets "Physical chemistry: Part" ->
+    # "Energetics") carry real information and are kept (5 across the corpus).
+    # Inline chemistry (no ?course=) has sectionPoints=={} -> zero effect.
+    # P14a: module table for section-attached points
+    ("var pointsBySubtopic=new Map();",
+     "var pointsBySubtopic=new Map();var sectionPoints={};", 1),
+    # P14b: makeBase creates points around the section anchor for collapsed
+    # sections (subtopic field carries the section label so every crumb
+    # template renders "Subject · Section N · Label" unchanged)
+    ("   });\n });\n state.edges.push(['subject','sec1','hier']",
+     "   });\n });\n Object.keys(sectionPoints).forEach(sec=>{\n   const pts=sectionPoints[sec]||[];\n   pts.forEach((pt,j)=>{\n     const [cx,cy]=sectionAnchors[sec]||[750,420];\n     const [ox,oy]=makePointOffset(j,pts.length);\n     add({id:'p:'+pt.id,pointId:pt.id,type:'SpecificationPoint',label:pt.id,statement:pt.text,applicability:pt.applicability||null,section:sec,subtopic:sections[sec]?sections[sec].label:pt.id,x:cx+ox,y:cy+oy,localX:ox,localY:oy,rx:8});\n   });\n });\n state.edges.push(['subject','sec1','hier']", 1),
+    # P14c: makeBase edges — section -> point hier edges for attached points
+    (" }));\n for(const sec of ['1','2','3','4']){",
+     " }));\n Object.keys(sectionPoints).forEach(sec=>(sectionPoints[sec]||[]).forEach(pt=>state.edges.push(['sec'+sec,'p:'+pt.id,'hier'])));\n for(const sec of ['1','2','3','4']){", 1),
+    # P14d: parentSubtopicId — collapsed points resolve to their Section id
+    # (state.expanded on the Section then gates reveal uniformly)
+    ("function parentSubtopicId(n){return n.type==='SpecificationPoint'?subtopics[n.section]?.find(st=>st[1]===n.subtopic)?.[0]:null}",
+     "function parentSubtopicId(n){if(n.type!=='SpecificationPoint')return null;const sid=subtopics[n.section]?.find(st=>st[1]===n.subtopic)?.[0];return sid||('sec'+n.section)}", 1),
+    # P14e1: expandScopeNode — Section/Subject scope gains attached points
+    ("function expandScopeNode(n){\n const defs=scopeSubtopics(n);if(!defs.length)return;",
+     "function expandScopeNode(n){\n const defs=scopeSubtopics(n);\n const isSec=n.type==='Section',isSubj=n.type==='Subject';\n const attIds=isSec?(sectionPoints[n.section]||[]).map(pt=>'p:'+pt.id):(isSubj?Object.keys(sectionPoints).flatMap(sec=>(sectionPoints[sec]||[]).map(pt=>'p:'+pt.id)):[]);\n if(!defs.length&&!attIds.length)return;", 1),
+    # P14e2: toggle semantics — a section counts as expanded when its own id
+    # is in state.expanded; attached points reveal/collapse with the scope
+    (" const subIds=defs.map(def=>def[0]);\n const allExpanded=subIds.every(id=>state.expanded.has(id));\n const pointIds=defs.flatMap(def=>pointsForSub(def).map(pt=>'p:'+pt.id)).filter(pid=>nodeBy().has(pid));",
+     " const subIds=defs.map(def=>def[0]);\n const pointIds=defs.flatMap(def=>pointsForSub(def).map(pt=>'p:'+pt.id)).concat(attIds).filter(pid=>nodeBy().has(pid));\n const scopeKeys=isSec?[n.id]:(isSubj?Object.keys(sections).map(sec=>'sec'+sec):[]);\n const allExpanded=subIds.every(id=>state.expanded.has(id))&&(!attIds.length||scopeKeys.every(k=>state.expanded.has(k)));\n const secOfPid={};Object.keys(sectionPoints).forEach(sec=>(sectionPoints[sec]||[]).forEach(pt=>{secOfPid['p:'+pt.id]=sec}));\n const attReveal=attIds.filter(pid=>{const sk='sec'+secOfPid[pid];return sk&&!state.expanded.has(sk)});", 1),
+    # P14e3: reveal pass includes newly-scoped attached points
+    ("   });\n   if(revealIds.length)revealNodesAnimated(revealIds);else refresh();\n }\n}\nfunction expandNode(id){",
+     "   });\n   attReveal.forEach(pid=>{if(!revealIds.includes(pid))revealIds.push(pid)});\n   if(revealIds.length)revealNodesAnimated(revealIds);else refresh();\n }\n}\nfunction expandNode(id){", 1),
+    # P14f: ensurePoints — (a) lazy re-create of section-attached points after
+    # an animated collapse; (b) latent fix: the subtopic path derived the
+    # node's section from def[0][0] (first CHAR of the sub id), wrong for
+    # two-digit sections (10a -> '1'); it now resolves the owning section key
+    ("function ensurePoints(subId){const n=nodeBy().get(subId);if(!n)return;const def=Object.values(subtopics).flat().find(x=>x[0]===subId);if(!def)return;const pts=pointsForSub(def);const map=nodeBy();pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [x,y]=makePointPlacement(def[0][0],subId,i,pts.length);const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:def[0][0],subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})})}",
+     "function ensurePoints(subId){const n=nodeBy().get(subId);if(!n)return;const def=Object.values(subtopics).flat().find(x=>x[0]===subId);const map=nodeBy();if(def){const sec=Object.keys(subtopics).find(k=>subtopics[k].some(x=>x[0]===subId))||n.section;const pts=pointsForSub(def);pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [x,y]=makePointPlacement(def[0][0],subId,i,pts.length);const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:sec,subtopic:def[1],x,y,homeX:x,homeY:y,localX:ox,localY:oy,vx:0,vy:0})});return}if(n.type!=='Section')return;const sec=n.section;const pts=sectionPoints[sec]||[];pts.forEach((p,i)=>{if(map.has('p:'+p.id))return;const [cx,cy]=sectionAnchors[sec]||[n.x,n.y];const [ox,oy]=makePointOffset(i,pts.length);state.nodes.push({id:'p:'+p.id,pointId:p.id,type:'SpecificationPoint',label:p.id,statement:p.text,applicability:p.applicability||null,section:sec,subtopic:sections[sec]?sections[sec].label:p.id,x:cx+ox,y:cy+oy,homeX:cx+ox,homeY:cy+oy,localX:ox,localY:oy,vx:0,vy:0})})}", 1),
+    # P14g: curriculum tree — collapsed sections list their points flat under
+    # the section card; the head toggles graph-side reveal too
+    ("   head.onclick=()=>{const ids=subsIds(sec); const all=ids.every(id=>state.expanded.has(id)); if(all){ids.forEach(id=>state.expanded.delete(id))}else{ids.forEach(id=>state.expanded.add(id));ids.forEach(id=>ensurePoints(id))}; renderTree(); refresh()};\n   card.append(head,children);wrap.appendChild(card);",
+     "   const att=sectionPoints[sec.section]||[];\n   const attIds=att.map(pt=>'p:'+pt.id);\n   if(att.length){\n     const pts=document.createElement('div');pts.className='treePoints';pts.style.display='block';\n     att.map(pt=>map.get('p:'+pt.id)).filter(Boolean).sort((a,b)=>String(a.pointId).localeCompare(String(b.pointId),undefined,{numeric:true})).forEach(ptn=>{\n       const pr=document.createElement('div');pr.className='treePoint';\n       const l=learner(ptn);if(l)pr.classList.add('measured');\n       const badge=document.createElement('span');badge.className='treeBadge';badge.textContent=l?(l.reviewDue?'REVIEW':l.misconception?'SIGNAL':l.mastery!=null?`${l.mastery}%`:'MEASURED'):'NOT MEASURED';\n       const pb=document.createElement('button');pb.type='button';pb.id=`tree-node-${ptn.id}`;pb.setAttribute('role','treeitem');pb.setAttribute('aria-label',`${ptn.pointId||''} · ${ptn.label}`);pb.textContent=`${ptn.pointId} · ${ptn.label}`;pb.onclick=()=>{state.keyboardNodeId=ptn.id;setView('graph');selectNode(ptn.id,{open:true,center:false})};\n       pr.append(badge,pb);pts.appendChild(pr);\n     });\n     children.appendChild(pts);\n   }\n   head.onclick=()=>{const ids=subsIds(sec); const all=ids.every(id=>state.expanded.has(id))&&(!attIds.length||state.expanded.has(sec.id)); if(all){ids.forEach(id=>state.expanded.delete(id));if(attIds.length)state.expanded.delete(sec.id)}else{ids.forEach(id=>state.expanded.add(id));ids.forEach(id=>ensurePoints(id));if(attIds.length){state.expanded.add(sec.id);ensurePoints(sec.id)}}; renderTree(); refresh()};\n   card.append(head,children);wrap.appendChild(card);", 1),
+    # P14h: keyboard descent — a sub-less Section yields its attached points
+    ("if(n.type==='Section')return state.nodes.filter(x=>x.type==='SubTopic'&&x.section===n.section&&visibleForMode(x));",
+     "if(n.type==='Section'){const subs=state.nodes.filter(x=>x.type==='SubTopic'&&x.section===n.section&&visibleForMode(x));if(subs.length)return subs;return state.nodes.filter(x=>x.type==='SpecificationPoint'&&parentSubtopicId(x)===n.id&&visibleForMode(x))}", 1),
 ]
 
 HELPERS = """
@@ -176,6 +231,27 @@ LOADER = """
       pointsBySubtopic.set(kv[0],arr);
       subPointCounts[kv[0]]=arr.length;
     }
+    // P14: collapse synthesized passthrough subtopics — some exported specs
+    // have no subtopic layer (e.g. IGCSE Maths B: 10 topics, spec points
+    // hanging straight off each topic), and kg_export.py then emits exactly
+    // one subtopic per section whose label repeats the section label. That is
+    // a meaningless middle hop — collapse it and attach the points directly
+    // to the Section node (makeBase renders them around the section anchor;
+    // parentSubtopicId/expandScopeNode/ensurePoints/childrenOf all understand
+    // section-attached points). Single-sub sections whose name DIFFERS from
+    // the section label (modular science part-buckets like "Physical
+    // chemistry: Part" -> "Energetics") carry real information and are kept.
+    sectionPoints={};
+    Object.keys(subtopics).forEach(sec=>{
+      const arr=subtopics[sec];
+      if(arr.length!==1)return;
+      const secLabel=sections[sec]&&sections[sec].label!=null?String(sections[sec].label):'';
+      if(!secLabel||String(arr[0][1]).trim().toLowerCase()!==secLabel.trim().toLowerCase())return;
+      sectionPoints[sec]=(pointsBySubtopic.get(arr[0][0])||[]).slice();
+      pointsBySubtopic.delete(arr[0][0]);
+      delete subPointCounts[arr[0][0]];
+      subtopics[sec]=[];
+    });
     sectionAnchors=kg.sectionAnchors;
     subAnchors={};
     Object.keys(subtopics).forEach(s=>{
@@ -236,8 +312,12 @@ LOADER = """
     if(ts)ts.textContent='';
     if(ts){const b1=document.createElement('div');b1.textContent=[meta.board,meta.level,meta.subject].filter(Boolean).join(' ');const b2=document.createElement('div');b2.textContent=kg.points.length+' SpecificationPoints';ts.appendChild(b1);ts.appendChild(b2);}
     window.__KG_STATUS='ready';
-    done={type:'syllabai-kg:ready',payload:{course:slug,counts:{nodes:kg.nodes.length,edges:kg.edges.length,
-      specPoints:kg.points.length}}};
+    // counts reflect the RENDERED graph (passthrough subtopics collapsed):
+    // nodes = subject + sections + remaining subs + every spec point;
+    // edges = subject->sec + sec->sub + node->point (hier only, no assess)
+    const nSubs=Object.values(subtopics).reduce((a,b)=>a+b.length,0);
+    done={type:'syllabai-kg:ready',payload:{course:slug,counts:{nodes:1+Object.keys(sections).length+nSubs+kg.points.length,
+      edges:Object.keys(sections).length+nSubs+kg.points.length,specPoints:kg.points.length}}};
     post(done.type,done.payload);
   }catch(err){
     window.__KG_STATUS='error: '+String(err&&err.message||err);
