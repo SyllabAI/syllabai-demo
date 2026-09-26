@@ -75,19 +75,27 @@ const COURSE_SPECS: Record<string, CourseSpecMap> = {
     // retired 4CH0 line (last sat Jan 2019) — same subject, shown badged
     legacySpecs: [`${IG}/chemistry/4ch0`],
   },
-  "igcse-physics-19": { specs: [`${IG}/physics/4ph1`] },
-  "igcse-biology-19": { specs: [`${IG}/biology/4bi1`] },
-  "igcse-maths-a-18-foundation": { specs: [`${IG}/mathematics-a/4ma1`], tier: "F" },
-  "igcse-maths-a-18-higher": { specs: [`${IG}/mathematics-a/4ma1`], tier: "H" },
-  "igcse-maths-b-16": { specs: [`${IG}/mathematics-b/4mb1`] },
-  "igcse-further-maths-19": { specs: [`${IG}/further-pure-mathematics/4pm1`] },
+  "igcse-physics-19": {
+    specs: [`${IG}/physics/4ph1`],
+    // retired 4PH0 line (last sat Jan 2019) — same subject, shown badged
+    legacySpecs: [`${IG}/physics/4ph0`],
+  },
+  "igcse-biology-19": {
+    specs: [`${IG}/biology/4bi1`],
+    // retired 4BI0 line (last sat Jan 2019) — same subject, shown badged
+    legacySpecs: [`${IG}/biology/4bi0`],
+  },
+  "igcse-maths-a-18-foundation": { specs: [`${IG}/mathematics-a/4ma1`], tier: "F", legacySpecs: [`${IG}/mathematics-a/4ma0`] },
+  "igcse-maths-a-18-higher": { specs: [`${IG}/mathematics-a/4ma1`], tier: "H", legacySpecs: [`${IG}/mathematics-a/4ma0`] },
+  "igcse-maths-b-16": { specs: [`${IG}/mathematics-b/4mb1`], legacySpecs: [`${IG}/mathematics-b/4mb0`] },
+  "igcse-further-maths-19": { specs: [`${IG}/further-pure-mathematics/4pm1`], legacySpecs: [`${IG}/further-pure-mathematics/4pm0`] },
   "igcse-accounting-17-financial-statements": { specs: [`${IG}/accounting/4ac1`] },
   "igcse-accounting-17-introduction-to-bookkeeping-and-accounting": {
     specs: [`${IG}/accounting/4ac1`],
   },
   "igcse-business-19": { specs: [`${IG}/business/4bs1`] },
-  "igcse-economics-17": { specs: [`${IG}/economics/4ec1`] },
-  "igcse-ict-17": { specs: [`${IG}/ict/4it1`] },
+  "igcse-economics-17": { specs: [`${IG}/economics/4ec1`], legacySpecs: [`${IG}/economics/4ec0`] },
+  "igcse-ict-17": { specs: [`${IG}/ict/4it1`], legacySpecs: [`${IG}/ict/4it0`] },
   "igcse-english-language-a-16-paper-1-non-fiction-texts-and-transactional-writing": {
     specs: [`${IG}/english-language-a/4ea1`],
   },
@@ -99,12 +107,18 @@ const COURSE_SPECS: Record<string, CourseSpecMap> = {
   "igcse-geography-19": { specs: [`${IG}/geography/4ge1`] },
   "ial-chemistry-17": {
     specs: [`${IA}/chemistry/wch11`, `${IA}/chemistry/wch12`, `${IA}/chemistry/wch13`, `${IA}/chemistry/wch14`, `${IA}/chemistry/wch15`, `${IA}/chemistry/wch16`],
+    // retired 2008-spec units (WCH01–06, last sat Jan 2019)
+    legacySpecs: [`${IA}/chemistry/wch01`, `${IA}/chemistry/wch02`, `${IA}/chemistry/wch03`, `${IA}/chemistry/wch04`, `${IA}/chemistry/wch05`, `${IA}/chemistry/wch06`],
   },
   "ial-physics-19": {
     specs: [`${IA}/physics/wph11`, `${IA}/physics/wph12`, `${IA}/physics/wph13`, `${IA}/physics/wph14`, `${IA}/physics/wph15`, `${IA}/physics/wph16`],
+    // retired 2008-spec units (WPH01–06)
+    legacySpecs: [`${IA}/physics/wph01`, `${IA}/physics/wph02`, `${IA}/physics/wph03`, `${IA}/physics/wph04`, `${IA}/physics/wph05`, `${IA}/physics/wph06`],
   },
   "ial-biology-18": {
     specs: [`${IA}/biology/wbi11`, `${IA}/biology/wbi12`, `${IA}/biology/wbi13`, `${IA}/biology/wbi14`, `${IA}/biology/wbi15`, `${IA}/biology/wbi16`],
+    // retired 2008-spec units (WBI01–06)
+    legacySpecs: [`${IA}/biology/wbi01`, `${IA}/biology/wbi02`, `${IA}/biology/wbi03`, `${IA}/biology/wbi04`, `${IA}/biology/wbi05`, `${IA}/biology/wbi06`],
   },
   "ial-maths-20-pure-1": { specs: [`${IA}/mathematics/mathematics-2018`], units: ["WMA11"] },
   "ial-maths-20-pure-2": { specs: [`${IA}/mathematics/mathematics-2018`], units: ["WMA12"] },
@@ -145,17 +159,34 @@ const OFFICIAL_DURATIONS: Record<string, number> = {
   "4MA1/1HR": 120, "4MA1/2HR": 120, "4MA1/1FR": 90, "4MA1/2FR": 90,
   // IGCSE Further Pure Maths: Papers 1 & 2 = 2h
   "4PM1/1": 120, "4PM1/2": 120,
+  // IGCSE Maths B: papers = 2h
   "4MB1/1": 120, "4MB1/2": 120,
   // IAL 2018 sciences: units 1/2 = 1h30, unit 3 = 1h20, units 4/5 = 1h45 (Phy 1h35), unit 6 = 1h50
   WCH11: 90, WCH12: 90, WCH13: 80, WCH14: 105, WCH15: 105, WCH16: 110,
   WPH11: 90, WPH12: 90, WPH13: 80, WPH14: 95, WPH15: 95, WPH16: 110,
   WBI11: 90, WBI12: 90, WBI13: 80, WBI14: 105, WBI15: 105, WBI16: 110,
+  // Legacy IGCSE Biology 4BI0 (official 4BI0 spec: Paper 1 = 2h, Paper 2 = 1h)
+  "4BI0/1B": 120, "4BI0/1BR": 120, "4BI0/2B": 60, "4BI0/2BR": 60,
+  // Legacy IGCSE Physics 4PH0 (official 4PH0 spec: Paper 1 = 2h, Paper 2 = 1h)
+  "4PH0/1P": 120, "4PH0/2P": 60,
+  // Legacy IGCSE Maths A 4MA0 (official spec: F papers 1h30, H papers 2h)
+  "4MA0/1F": 90, "4MA0/2F": 90, "4MA0/3H": 120, "4MA0/4H": 120,
+  "4MA0/1FR": 90, "4MA0/2FR": 90, "4MA0/3HR": 120, "4MA0/4HR": 120,
+  // Legacy Maths B 4MB0 (official spec: each paper 2h30)
+  "4MB0/01": 150, "4MB0/01R": 150, "4MB0/02": 150, "4MB0/02R": 150,
+  // Legacy Further Pure Maths 4PM0 (official spec: each paper 2h)
+  "4PM0/01": 120, "4PM0/02": 120,
+  // Old IAL 2008-spec units 1 & 2 = 1h30 (Pearson SAMs); WBI03 = 1h30 (spec)
+  // Units 3–6 (chem/phys) unattested → editable estimate like everything else
+  WCH01: 90, WCH02: 90, WPH01: 90, WPH02: 90, WBI01: 90, WBI02: 90, WBI03: 90,
   // IAL 2018 maths modules: 1h30 each
   WMA11: 90, WMA12: 90, WMA13: 90, WMA14: 90,
   WME01: 90, WME02: 90, WME03: 90,
   WST01: 90, WST02: 90, WST03: 90,
   WDM11: 90,
   WFM01: 90, WFM02: 90, WFM03: 90,
+  // zero-padded unit variants (dirs are "4MB1-01" style → ref "4MB1/01")
+  "4MB1/01": 120, "4MB1/02": 120, "4PM1/01": 120, "4PM1/02": 120,
 };
 
 function officialDuration(ref: string): number | null {
