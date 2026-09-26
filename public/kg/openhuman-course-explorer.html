@@ -1337,7 +1337,7 @@ function hierarchyPath(n){
  if(!n)return [];
  const map=nodeBy(), out=[];
  if(n.type==='SpecificationPoint'){
-   const sub=map.get(parentSubtopicId(n)); if(sub)out.push(sub);
+   const sub=map.get(parentSubtopicId(n)); if(sub&&sub.type!=='Section')out.push(sub);
    const sec=map.get('sec'+n.section); if(sec)out.push(sec);
    out.push(map.get('subject'));
  }else if(n.type==='SubTopic'){

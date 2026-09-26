@@ -154,6 +154,13 @@ PATCHES = [
     # P14h: keyboard descent — a sub-less Section yields its attached points
     ("if(n.type==='Section')return state.nodes.filter(x=>x.type==='SubTopic'&&x.section===n.section&&visibleForMode(x));",
      "if(n.type==='Section'){const subs=state.nodes.filter(x=>x.type==='SubTopic'&&x.section===n.section&&visibleForMode(x));if(subs.length)return subs;return state.nodes.filter(x=>x.type==='SpecificationPoint'&&parentSubtopicId(x)===n.id&&visibleForMode(x))}", 1),
+    # P14i: breadcrumbs — hierarchyPath pushes parentSubtopicId(n) as the
+    # "sub" hop, but for section-attached points (P14d fallback) that id IS
+    # the section, so the section label rendered twice
+    # ("Physics/Mechanics/Mechanics/7"). Skip the hop when it resolves to a
+    # Section node; real SubTopic hops in kept/multi-sub courses are untouched.
+    ("   const sub=map.get(parentSubtopicId(n)); if(sub)out.push(sub);",
+     "   const sub=map.get(parentSubtopicId(n)); if(sub&&sub.type!=='Section')out.push(sub);", 1),
 ]
 
 HELPERS = """
