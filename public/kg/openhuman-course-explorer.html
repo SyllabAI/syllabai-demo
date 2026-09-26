@@ -3230,9 +3230,16 @@ function kgApplicabilityChips(a){
     // the static placeholder is a v77 chemistry-ism — rebrand per course
     const se=document.getElementById('search');if(se)se.placeholder='Search '+(kg.subjectLabel||'').toLowerCase()+', topics, specification points...';
     window.__KG_SUBJECT_LABEL=kg.subjectLabel;
+    const qualLabel=[meta.board,meta.level,meta.subject].filter(Boolean).join(' ')||kg.subjectLabel;
     const ts=document.querySelector('.treeScope');
     if(ts)ts.textContent='';
-    if(ts){const b1=document.createElement('div');b1.textContent=[meta.board,meta.level,meta.subject].filter(Boolean).join(' ');const b2=document.createElement('div');b2.textContent=kg.points.length+' SpecificationPoints';ts.appendChild(b1);ts.appendChild(b2);}
+    if(ts){const b1=document.createElement('div');b1.textContent=qualLabel;const b2=document.createElement('div');b2.textContent=kg.points.length+' SpecificationPoints';ts.appendChild(b1);ts.appendChild(b2);}
+    // the v77 static aria-label on #graph is a chemistry-ism ("...for Pearson
+    // Edexcel International GCSE Chemistry") — rebrand per course so screen
+    // readers announce the real qualification + subject; the static markup
+    // stays untouched for the inline 4CH1 build (no ?course=)
+    const gEl=document.getElementById('graph');
+    if(gEl)gEl.setAttribute('aria-label','SyllabAI knowledge graph for '+qualLabel+'. Use Tab to enter the graph, arrow keys to navigate, Enter to open, and Space to expand or open a specification point.');
     window.__KG_STATUS='ready';
     // counts reflect the RENDERED graph (passthrough subtopics collapsed):
     // nodes = subject + sections + remaining subs + every spec point;
