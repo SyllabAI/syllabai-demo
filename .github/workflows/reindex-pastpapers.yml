@@ -45,22 +45,27 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bun scripts/build_pastpapers_index.ts
 
-      - name: Commit & push only when the corpus tree changed
+      - name: Commit & push only when the corpus papers changed
         env:
           SOURCE: ${{ github.event.client_payload.source }}
           SOURCE_SHA: ${{ github.event.client_payload.sha }}
         run: |
-          OLD=$(git show HEAD:src/data/pastpapers-index.json \
-            | python3 -c "import json,sys; print(json.load(sys.stdin)['meta']['treeSha'])")
-          NEW=$(python3 -c "import json; print(json.load(open('src/data/pastpapers-index.json'))['meta']['treeSha'])")
+          # hash the paper inventory (specs), not the whole tree: docs/workflow
+          # commits in the corpus repo bump its treeSha but change no papers
+          SPEC_HASH() {
+            python3 -c "import json,sys,hashlib; d=json.load(sys.stdin); print(hashlib.sha256(json.dumps(d['specs'],sort_keys=True).encode()).hexdigest())"
+          }
+          OLD=$(git show HEAD:src/data/pastpapers-index.json | SPEC_HASH)
+          NEW=$(cat src/data/pastpapers-index.json | SPEC_HASH)
           if [ "$OLD" = "$NEW" ]; then
             git checkout -- src/data/pastpapers-index.json
-            echo "Corpus tree unchanged (${NEW:0:12}) — nothing to commit."
+            echo "Paper inventory unchanged — nothing to commit."
           else
+            TREE=$(python3 -c "import json; print(json.load(open('src/data/pastpapers-index.json'))['meta']['treeSha'])")
             git config user.name "syllabai-reindex-bot"
             git config user.email "noreply@syllab.ai"
             git add src/data/pastpapers-index.json
-            git commit -m "chore(pastpapers): auto-reindex (corpus tree ${NEW:0:12}${SOURCE:+, from ${SOURCE}@${SOURCE_SHA:0:12}})"
+            git commit -m "chore(pastpapers): auto-reindex (corpus tree ${TREE:0:12}${SOURCE:+, from ${SOURCE}@${SOURCE_SHA:0:12}})"
             git push
-            echo "Pushed auto-reindex commit for tree ${NEW:0:12} — Vercel will deploy."
+            echo "Pushed auto-reindex commit for tree ${TREE:0:12} — Vercel will deploy."
           fi
