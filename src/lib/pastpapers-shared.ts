@@ -55,6 +55,8 @@ export interface CorpusPaperEntry {
   ref: string;
   /** human title, e.g. "Paper 1C" / "Unit 1" */
   title: string;
+  /** "Legacy spec" chip for retired-spec papers surfaced in the same archive */
+  specBadge: string | null;
   /** "Timezone R" / "Variant A" chip, when applicable */
   variantChip: string | null;
   qpBytes?: number;

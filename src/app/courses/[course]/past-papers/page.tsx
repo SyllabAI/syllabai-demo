@@ -179,6 +179,11 @@ export default async function PastPapersPage({
                         <p className="flex flex-wrap items-center gap-1.5">
                           <span className="font-mono text-sm font-semibold">{p.ref}</span>
                           <span className="text-xs text-muted-foreground">{p.title}</span>
+                          {p.specBadge && (
+                            <Badge variant="outline" className="text-[10px] text-muted-foreground">
+                              {p.specBadge}
+                            </Badge>
+                          )}
                           {p.variantChip && (
                             <Badge variant="outline" className="text-[10px]">
                               {p.variantChip}

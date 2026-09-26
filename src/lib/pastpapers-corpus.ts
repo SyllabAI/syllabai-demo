@@ -56,6 +56,10 @@ export type { CorpusPaperEntry } from "@/lib/pastpapers-shared";
 /** Which corpus specs a demo course draws from, plus optional filters. */
 interface CourseSpecMap {
   specs: string[];
+  /** Retired specs surfaced in the SAME archive, badged "Legacy spec"
+   *  (e.g. 4CH0 papers predate the 4CH1 course). Kept separate from
+   *  `specs` so the current-spec mapping stays the primary identity. */
+  legacySpecs?: string[];
   /** IAL maths 2018 lives in ONE spec folder — filter by unit code prefix. */
   units?: string[];
   /** 4MA1 tier filter: "F" (foundation) or "H" (higher). */
@@ -66,7 +70,11 @@ const IG = "pearson-edexcel/international-gcse";
 const IA = "pearson-edexcel/international-a-level";
 
 const COURSE_SPECS: Record<string, CourseSpecMap> = {
-  "igcse-chemistry-19": { specs: [`${IG}/chemistry/4ch1`] },
+  "igcse-chemistry-19": {
+    specs: [`${IG}/chemistry/4ch1`],
+    // retired 4CH0 line (last sat Jan 2019) — same subject, shown badged
+    legacySpecs: [`${IG}/chemistry/4ch0`],
+  },
   "igcse-physics-19": { specs: [`${IG}/physics/4ph1`] },
   "igcse-biology-19": { specs: [`${IG}/biology/4bi1`] },
   "igcse-maths-a-18-foundation": { specs: [`${IG}/mathematics-a/4ma1`], tier: "F" },
@@ -126,6 +134,10 @@ export function corpusSpecsForCourse(slug: string): CourseSpecMap | null {
 const OFFICIAL_DURATIONS: Record<string, number> = {
   // IGCSE Sciences (2017 linear): Paper 1 = 2h, Paper 2 = 1h10 (Chem) / 1h15 (Phy/Bio)
   "4CH1/1C": 120, "4CH1/1CR": 120, "4CH1/2C": 70, "4CH1/2CR": 70,
+  // Legacy IGCSE Chemistry 4CH0 (last sat Jan 2019; official 4CH0 spec:
+  // Paper 1 = 2 hours, Paper 2 = 1 hour — qualifications.pearson.com;
+  // R variants are the same papers in a different timezone)
+  "4CH0/1C": 120, "4CH0/1CR": 120, "4CH0/2C": 60, "4CH0/2CR": 60,
   "4PH1/1P": 120, "4PH1/1PR": 120, "4PH1/2P": 75, "4PH1/2PR": 75,
   "4BI1/1B": 120, "4BI1/1BR": 120, "4BI1/2B": 75, "4BI1/2BR": 75,
   // IGCSE Maths A: Higher 1H/2H = 2h, Foundation 1F/2F = 1h30
@@ -158,6 +170,7 @@ function buildEntry(
   spec: CorpusSpec,
   sessionId: string,
   p: CorpusPaper,
+  legacy = false,
 ): CorpusPaperEntry | null {
   // split dir at the LAST dash: "4CH1-1C" → 4CH1 + 1C; "WMA11-01A" → WMA11 + 01A
   const cut = p.d.lastIndexOf("-");
@@ -193,6 +206,7 @@ function buildEntry(
     variant,
     ref,
     title,
+    specBadge: legacy ? "Legacy spec" : null,
     variantChip,
     qpBytes: p.qp,
     msBytes: p.ms,
@@ -212,13 +226,15 @@ export function corpusPapersForCourse(slug: string): CorpusPaperEntry[] {
   const map = COURSE_SPECS[slug];
   if (!map) return [];
   const out: CorpusPaperEntry[] = [];
-  for (const specKey of map.specs) {
+  const legacySet = new Set(map.legacySpecs ?? []);
+  for (const specKey of [...map.specs, ...(map.legacySpecs ?? [])]) {
     const spec = corpusIndex.specs[specKey];
     if (!spec) continue;
+    const legacy = legacySet.has(specKey);
     for (const session of spec.sessions as CorpusSession[]) {
       for (const p of session.papers as CorpusPaper[]) {
         if (p.qp == null && p.ms == null) continue;
-        const entry = buildEntry(specKey, spec, session.id, p);
+        const entry = buildEntry(specKey, spec, session.id, p, legacy);
         if (!entry) continue;
         if (map.units && !map.units.includes(entry.unit)) continue;
         if (map.tier) {
