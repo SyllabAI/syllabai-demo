@@ -27,6 +27,9 @@ export interface PastPaper {
   /** original paper reference, e.g. "WCH11/01" */
   number: string;
   questions: ExamQuestion[];
+  /** original paper question number per entry (aligned with `questions`);
+   * null when the provenance didn't carry one. Drives coverage math. */
+  questionNumbers: Array<number | null>;
   totalMarks: number;
 }
 
@@ -95,15 +98,16 @@ export function collectPastPapers(banks: QuestionBankLike[]): PastPaper[] {
 
   const papers: PastPaper[] = [...byKey.entries()].map(([key, e]) => {
     // original paper order: by question number, then corpus order as tiebreak
-    const questions = e.items
+    const ordered = e.items
       .map((i, idx) => ({ ...i, idx }))
-      .sort((a, b) => (a.qn - b.qn) || (a.idx - b.idx))
-      .map((i) => i.q);
+      .sort((a, b) => (a.qn - b.qn) || (a.idx - b.idx));
+    const questions = ordered.map((i) => i.q);
     return {
       key,
       date: e.date,
       number: e.number,
       questions,
+      questionNumbers: ordered.map((i) => (Number.isFinite(i.qn) && i.qn > 0 ? i.qn : null)),
       totalMarks: questions.reduce((a, q) => a + (q.totalMarks || 0), 0),
     };
   });

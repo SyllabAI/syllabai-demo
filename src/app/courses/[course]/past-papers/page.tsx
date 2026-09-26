@@ -12,6 +12,14 @@ import {
   sessionLabel,
   type CorpusPaperEntry,
 } from "@/lib/pastpapers-corpus";
+import {
+  matchReconstructions,
+  computeCoverage,
+  coverageChipLabel,
+  coverageTitle,
+  blueprintFor,
+  type ReconstructionCoverage,
+} from "@/lib/pastpapers-reconstruction";
 import { CourseHeader } from "@/components/hub/course-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -66,29 +74,20 @@ export default async function PastPapersPage({
 
   // Mode 2 — interactive reconstructions from the parsed question corpus.
   // The corpus attests papers in FIVE different metadata shapes (verified by
-  // walking questions.json across courses): "June 2021 | WCH11/01" (IAL),
-  // "2023 June | 4MA1/1H", "2014 January | 1P" (code only), "2020 | Ja1CR"
-  // (glued session prefix), "Specimen paper | 4MA1/2H". parseReconstruction
-  // normalises each into (session ids, unit, variant) to match corpus rows.
+  // walking questions.json across courses); matchReconstruction normalises
+  // each into (session ids, unit, variant) to match corpus rows.
   const reconstructions = collectPastPapers(hub.questionTopics);
-  const matchedKeys = new Set<string>();
-  const matchedReconKeys = new Set<string>();
-  /** corpus `${sessionId}:${dir}` → reconstruction player key */
-  const matchKeys = new Map<string, string>();
-  for (const p of papers) {
-    for (const r of reconstructions) {
-      const parsed = parseReconstruction(r.date, r.number);
-      if (!parsed) continue;
-      if (parsed.unit && parsed.unit !== p.unit.toUpperCase()) continue;
-      if (parsed.variant !== p.variant.toUpperCase()) continue;
-      if (parsed.sessionIds.length > 0 && !parsed.sessionIds.includes(p.sessionId)) continue;
-      matchedKeys.add(`${p.sessionId}:${p.dir}`);
-      matchedReconKeys.add(r.key);
-      matchKeys.set(`${p.sessionId}:${p.dir}`, r.key);
-      break;
-    }
+  const { matchKeys, matchedReconKeys, reconForCorpus } = matchReconstructions(
+    papers,
+    reconstructions,
+  );
+  // coverage per matched row — official per-question totals (extracted from
+  // the corpus QP PDFs at build time) vs what the parsed corpus holds.
+  const coverages = new Map<string, ReconstructionCoverage | null>();
+  for (const [corpusKey, recon] of reconForCorpus) {
+    coverages.set(corpusKey, computeCoverage(recon, blueprintFor(corpusKey)));
   }
-  const interactiveCount = matchedKeys.size;
+  const interactiveCount = matchKeys.size;
   // reconstructions with NO corpus PDF counterpart keep their own archive list
   const unmatchedReconstructions = reconstructions.filter((r) => !matchedReconKeys.has(r.key));
 
@@ -189,7 +188,7 @@ export default async function PastPapersPage({
                               {p.variantChip}
                             </Badge>
                           )}
-                          {matchedKeys.has(`${p.sessionId}:${p.dir}`) && (
+                          {matchKeys.has(`${p.sessionId}:${p.dir}`) && (
                             <Badge
                               variant="outline"
                               className="gap-1 border-primary/40 text-[10px] text-primary"
@@ -262,6 +261,10 @@ export default async function PastPapersPage({
                           href={matchKeys.has(`${p.sessionId}:${p.dir}`) ? `${base}/past-papers/${matchKeys.get(`${p.sessionId}:${p.dir}`)}` : null}
                           paperRef={p.ref}
                           interactiveCount={interactiveCount}
+                          coverageLabel={coverageChipLabel(coverages.get(`${p.sessionId}:${p.dir}`) ?? null)}
+                          coverageTitle={coverages.get(`${p.sessionId}:${p.dir}`)
+                            ? coverageTitle(coverages.get(`${p.sessionId}:${p.dir}`)!)
+                            : null}
                         />
                       </div>
                     </div>
@@ -279,60 +282,6 @@ export default async function PastPapersPage({
       )}
     </div>
   );
-}
-
-/**
- * Normalise a corpus reconstruction's sourcePaper metadata into corpus-match
- * keys. Returns null when the metadata is too thin to match honestly (e.g.
- * "Pre2017" with no paper number) — such rows just stay in the fallback
- * archive instead of pretending.
- */
-function parseReconstruction(
-  date: string,
-  number: string,
-): { sessionIds: string[]; unit: string | null; variant: string } | null {
-  const d = (date ?? "").trim();
-  const n = (number ?? "").trim();
-  if (!n) return null;
-
-  const year = d.match(/\d{4}/)?.[0];
-  const dl = d.toLowerCase();
-  const months: string[] = [];
-  if (dl.includes("jan")) months.push("01");
-  if (dl.includes("jun") && !dl.includes("jan")) months.push("06");
-  if (dl.includes("oct")) months.push("10");
-  if (dl.includes("nov")) months.push("11");
-
-  let unit: string | null = null;
-  let variant: string | null = null;
-  const ref = n.match(/^([A-Za-z0-9]+)\/([0-9A-Za-z]+)$/);
-  if (ref) {
-    // full official ref: "4CH1/1C", "WCH11/01"
-    unit = ref[1].toUpperCase();
-    variant = ref[2].toUpperCase();
-  } else {
-    // glued session prefix + paper code: "Ja1CR", "Jan1CR", "Ju1c", "1P"
-    const m = n.match(/^(jan|jun|ja|ju|nov|oct)?\s*([0-9][0-9A-Za-z]*)$/i);
-    if (!m) return null;
-    variant = m[2].toUpperCase();
-    const pref = m[1]?.toLowerCase();
-    if (pref && months.length === 0) {
-      if (pref === "jan" || pref === "ja") months.push("01");
-      else if (pref === "jun" || pref === "ju") months.push("06");
-      else if (pref === "oct") months.push("10");
-      else if (pref === "nov") months.push("11");
-    }
-  }
-  if (!variant) return null;
-
-  const sessionIds: string[] = [];
-  if (dl.includes("specimen")) {
-    sessionIds.push("specimen");
-  } else if (year) {
-    if (months.length) for (const mm of months) sessionIds.push(`${year}-${mm}`);
-    else for (const mm of ["01", "02", "06", "10", "11"]) sessionIds.push(`${year}-${mm}`);
-  }
-  return { sessionIds, unit, variant };
 }
 
 /** Archive of interactive reconstructions that have no PDF counterpart. */

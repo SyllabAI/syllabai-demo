@@ -1,6 +1,14 @@
 import { notFound } from "next/navigation";
 import { loadHubCourse } from "@/lib/courses";
 import { collectPastPapers, findPastPaper, paperEstTime } from "@/lib/past-papers";
+import {
+  matchReconstructions,
+  computeCoverage,
+  coverageTitle,
+  blueprintFor,
+  type ReconstructionCoverage,
+} from "@/lib/pastpapers-reconstruction";
+import { corpusPapersForCourse } from "@/lib/pastpapers-corpus";
 import { Breadcrumbs, ExamCodePill } from "@/components/hub/chrome";
 import { Badge } from "@/components/ui/badge";
 import { QuestionPlayer } from "@/app/courses/[course]/exam-questions/[topicSlug]/question-player";
@@ -24,6 +32,14 @@ export default async function PastPaperPage({
 
   const paper = findPastPaper(collectPastPapers(hub.questionTopics), paperKey);
   if (!paper) notFound();
+
+  // coverage — find the corpus row this reconstruction matches, then compare
+  // against the official per-question totals extracted from the corpus QP.
+  let coverage: ReconstructionCoverage | null = null;
+  const corpusKey = matchReconstructions(corpusPapersForCourse(slug), [paper])
+    .reconForCorpus.keys()
+    .next().value;
+  if (corpusKey) coverage = computeCoverage(paper, blueprintFor(corpusKey));
 
   const { meta } = hub;
 
@@ -55,9 +71,15 @@ export default async function PastPaperPage({
             {paper.questions.length} questions · {paper.totalMarks} marks ·{" "}
             {paperEstTime(paper.totalMarks)}
           </p>
-          <Badge variant="secondary" className="font-medium">
-            Reconstructed — {paper.questions.length} question
-            {paper.questions.length === 1 ? "" : "s"} held from this paper, in paper order
+          <Badge
+            variant="secondary"
+            className={
+              coverage?.state === "partial" ? "border border-amber-500/40 bg-amber-500/10 font-medium" : "font-medium"
+            }
+          >
+            {coverage
+              ? coverageTitle(coverage)
+              : `Reconstructed — ${paper.questions.length} question${paper.questions.length === 1 ? "" : "s"} held from this paper, in paper order`}
           </Badge>
         </header>
 

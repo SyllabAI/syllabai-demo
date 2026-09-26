@@ -75,3 +75,6 @@ scripts/github_analysis_result.json
 tool-results/
 worklog.md
 upload/
+
+# offline QP blueprint cache (scripts/build_paper_blueprints.ts)
+.blueprint-cache/

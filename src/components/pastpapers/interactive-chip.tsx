@@ -7,7 +7,9 @@
  *   matched — the parsed question corpus holds questions from THIS paper
  *             (sourcePaper provenance), so the row links into the real
  *             Exam-Questions player: deterministic MCQ marking, self-mark +
- *             Smart Mark for structured parts, mark-scheme modals.
+ *             Smart Mark for structured parts, mark-scheme modals. When the
+ *             official paper totals are known (blueprints), the chip also
+ *             shows coverage — "10/10" complete, amber "6/7" partial.
  *
  *   roadmap — the paper exists as a PDF but isn't parsed yet. The chip opens
  *             a popover explaining the pipeline; it never pretends to play.
@@ -21,19 +23,42 @@ export function InteractiveChip({
   href,
   paperRef,
   interactiveCount,
+  coverageLabel = null,
+  coverageTitle = null,
 }: {
   /** reconstruction player route when matched, null for roadmap state */
   href: string | null;
   paperRef: string;
   /** how many papers on this course ARE interactive (for the roadmap copy) */
   interactiveCount: number;
+  /** held/official question count, e.g. "10/10" — null when unverified */
+  coverageLabel?: string | null;
+  /** human coverage summary (title/aria) */
+  coverageTitle?: string | null;
 }) {
   if (href) {
+    const title = coverageTitle ?? `Interactive reconstruction of ${paperRef}`;
     return (
-      <Button asChild size="sm" variant="outline" className="h-7 gap-1.5 border-primary/40 text-xs text-primary">
-        <Link href={href}>
+      <Button
+        asChild
+        size="sm"
+        variant="outline"
+        className="h-7 gap-1.5 border-primary/40 text-xs text-primary"
+      >
+        <Link href={href} title={title} aria-label={`Interactive reconstruction of ${paperRef} — ${title}`}>
           <Sparkles className="size-3.5" aria-hidden />
           Interactive
+          {coverageLabel ? (
+            <span
+              className={
+                Number(coverageLabel.split("/")[0]) === Number(coverageLabel.split("/")[1])
+                  ? "rounded-sm bg-primary/10 px-1 font-semibold"
+                  : "rounded-sm bg-amber-500/15 px-1 font-semibold text-amber-700 dark:text-amber-400"
+              }
+            >
+              {coverageLabel}
+            </span>
+          ) : null}
         </Link>
       </Button>
     );
