@@ -1,0 +1,66 @@
+# reindex-pastpapers — zero-touch corpus → demo pipeline.
+#
+# Rebuilds src/data/pastpapers-index.json from SyllabAI/syllabai-pastpapers
+# and commits it when the corpus git tree changed. Three triggers:
+#   1. repository_dispatch "corpus-updated" — sent by the corpus repo's
+#      notify-demo-reindex workflow on every push that touches papers
+#   2. workflow_dispatch — manual re-run from the Actions tab
+#   3. daily cron — safety net for missed dispatches
+#
+# The commit push itself triggers the Vercel deploy, so a corpus push
+# reaches syllabai-demo with NO manual step. Commits made with the default
+# GITHUB_TOKEN do not re-trigger this workflow (no loops). The index build
+# compares treeSha before/after: a same-tree rebuild (fresh generatedAt,
+# identical data) is discarded instead of committed — the daily cron stays
+# silent unless the corpus actually moved.
+
+name: reindex-pastpapers
+
+on:
+  repository_dispatch:
+    types: [corpus-updated]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *" # daily safety net (UTC)
+
+concurrency:
+  group: reindex-pastpapers
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  reindex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Rebuild index from corpus git tree
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bun scripts/build_pastpapers_index.ts
+
+      - name: Commit & push only when the corpus tree changed
+        env:
+          SOURCE: ${{ github.event.client_payload.source }}
+          SOURCE_SHA: ${{ github.event.client_payload.sha }}
+        run: |
+          OLD=$(git show HEAD:src/data/pastpapers-index.json \
+            | python3 -c "import json,sys; print(json.load(sys.stdin)['meta']['treeSha'])")
+          NEW=$(python3 -c "import json; print(json.load(open('src/data/pastpapers-index.json'))['meta']['treeSha'])")
+          if [ "$OLD" = "$NEW" ]; then
+            git checkout -- src/data/pastpapers-index.json
+            echo "Corpus tree unchanged (${NEW:0:12}) — nothing to commit."
+          else
+            git config user.name "syllabai-reindex-bot"
+            git config user.email "noreply@syllab.ai"
+            git add src/data/pastpapers-index.json
+            git commit -m "chore(pastpapers): auto-reindex (corpus tree ${NEW:0:12}${SOURCE:+, from ${SOURCE}@${SOURCE_SHA:0:12}})"
+            git push
+            echo "Pushed auto-reindex commit for tree ${NEW:0:12} — Vercel will deploy."
+          fi
