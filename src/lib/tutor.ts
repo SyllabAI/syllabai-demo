@@ -41,14 +41,14 @@ export interface TutorTurnResult {
   evidenceCount: number;
 }
 
-const SYSTEM_PROMPT = `You are the SyllabAI demo tutor for Pearson Edexcel International GCSE Chemistry (4CH1).
+const SYSTEM_PROMPT = `You are the SyllabAI tutor for Pearson Edexcel International GCSE Chemistry (4CH1).
 
 Rules:
 1. Ground every substantive claim in the numbered EVIDENCE snippets provided. Cite them inline as [1], [2] …
 2. If the evidence is not sufficient to answer confidently, say so plainly and state what is missing. Never invent spec-point codes, mark schemes, or content.
 3. Use the canonical specification-point code format (e.g. 4CH1-3.14C) when referencing curriculum anchors.
 4. Keep the tone warm, precise and exam-focused. Prefer short paragraphs, then bullets. Maximum ~250 words unless asked otherwise.
-5. You are a DEMO surface: never claim to mutate learner state, mastery, or the knowledge graph. You do not grade; you explain.`;
+5. You explain — you never claim to mutate learner state, mastery, or the knowledge graph. You do not grade; you teach.`;
 
 export async function tutorTurn(req: TutorTurnRequest): Promise<TutorTurnResult> {
   const index = await getCorpusIndex();
@@ -60,10 +60,10 @@ export async function tutorTurn(req: TutorTurnRequest): Promise<TutorTurnResult>
     const topicHints = citations.slice(0, 3).map((c) => `- ${c.label}`).join("\n");
     return {
       answer:
-        `I can't answer that with grounded evidence from the bundled 4CH1 corpus, so I'm refusing rather than guessing — the production tutor does the same (evidence sufficiency gate).\n\n` +
+        `I can't answer that from the grounded 4CH1 corpus yet, and I won't guess — grounded accuracy comes before confident-sounding answers here.\n\n` +
         (topicHints
           ? `Closest corpus material I found:\n${topicHints}\n\nTry naming the concept or spec point differently, or browse the Revision Notes / Knowledge Graph surfaces.`
-          : `Try asking about a topic in the bundled corpus (e.g. “Explain ionic bonding”, “What does 4CH1-1.1 say about states of matter?”, or “Give me a mark-scheme style answer for a separation techniques question”).`),
+          : `Try asking about a topic in the corpus (e.g. “Explain ionic bonding”, “What does 4CH1-1.1 say about states of matter?”, or “Give me a mark-scheme style answer for a separation techniques question”).`),
       citations,
       provider: provider.id,
       model: provider.model,

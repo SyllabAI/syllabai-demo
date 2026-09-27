@@ -7,10 +7,10 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 const Body = z.object({
-  question: z.string().min(1).max(600),
+  question: z.string().min(1).max(2000),
   history: z
     .array(z.object({ role: z.enum(["user", "assistant"]), content: z.string().max(4000) }))
-    .max(12)
+    .max(16)
     .default([]),
 });
 

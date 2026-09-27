@@ -43,7 +43,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { clearIdentity, useIdentity } from "@/lib/identity";
-import { isDocumentFocusRoute } from "@/lib/focus-routes";
+import { isImmersiveRoute } from "@/lib/focus-routes";
 import { cn } from "@/lib/utils";
 import type { PublicConfig } from "@/lib/config";
 
@@ -75,10 +75,14 @@ export function AppShell({
   const identity = useIdentity();
   // course pages manage their own horizontal rhythm (course shell + resource
   // panel); the graph surfaces are full-bleed (the visualizer canvas wants
-  // the whole viewport); every other page gets the centred content column
+  // the whole viewport); the tutor workspace is an immersive app surface
+  // (its own rail + header + composer, sized to the viewport); every other
+  // page gets the centred content column
   const inCourse = pathname.startsWith("/courses/");
   const inExplorer =
     pathname.startsWith("/graph-explorer") || pathname.startsWith("/knowledge-graph");
+  const inTutor = pathname.startsWith("/tutor");
+  const bare = inCourse || inExplorer || inTutor;
 
   return (
     <div className="min-h-screen bg-background">
@@ -170,15 +174,16 @@ export function AppShell({
       </header>
 
       {/* content */}
-      <main className={cn("min-w-0 flex-1", !inCourse && !inExplorer && "px-4 py-6 sm:px-6 lg:px-8")}>
-        {inCourse || inExplorer ? children : <div className="mx-auto w-full max-w-6xl">{children}</div>}
+      <main className={cn("min-w-0 flex-1", !bare && "px-4 py-6 sm:px-6 lg:px-8")}>
+        {bare ? children : <div className="mx-auto w-full max-w-6xl">{children}</div>}
       </main>
 
       {/* footer — provenance + demo discipline live here, not in the learner
           path. On document-focus routes (paper viewer / player) it is omitted
           entirely: the panes fill the viewport exactly, and a footer below the
-          fold would create a pointless 200px page scroll. */}
-      {!isDocumentFocusRoute(pathname) && (
+          fold would create a pointless 200px page scroll. Immersive app
+          surfaces (tutor) omit it for the same viewport reason. */}
+      {!isImmersiveRoute(pathname) && (
       <footer className="mx-auto w-full max-w-6xl px-4 pb-10 sm:px-6 lg:px-8 print:hidden">
         <div className="flex flex-wrap items-center gap-1.5 border-t pt-4">
           <ThemeToggle variant="row" />
