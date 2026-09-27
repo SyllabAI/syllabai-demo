@@ -531,7 +531,8 @@ function learningCardMetrics(n){
 }
 function specMorphProgress(n){const m=state.specMorph.get(n.id);return m?m.value:(state.expandedSpecs.has(n.id)?1:0)}
 function collisionRadius(n){if(n.type==='SpecificationPoint'){const p=specMorphProgress(n);if(p<=0.02)return 7;const z=specBoxSize(n);return 7+(Math.max(z.w,z.h)/2-7)*p}return radius(n)}
-function learner(n){if(n.type!=='SpecificationPoint')return null;return demo[n.pointId]||null}
+let LIVE_LEARNER=null;
+function learner(n){if(n.type!=='SpecificationPoint')return null;if(LIVE_LEARNER)return LIVE_LEARNER[n.pointId]||null;return demo[n.pointId]||null}
 function descendantSpecPoints(n){
  if(n.type==='SpecificationPoint')return [n];
  if(n.type==='SubTopic')return state.nodes.filter(x=>x.type==='SpecificationPoint'&&x.subtopic===n.label&&x.section===n.section);
@@ -3112,6 +3113,9 @@ function kgApplicabilityChips(a){
 // generated from content/<slug>/curriculum.json), validate against
 // GRAPH_CONTRACT v1.0, swap the module data tables and rebuild through the
 // renderer's own makeBase() pipeline. No ?course= -> inline 4CH1 as-is.
+// syllabai-kg:learner (host -> renderer) -> live learner overlay keyed by
+// point id {mastery,confidence,fluency,evidence,reviewDue,misconception};
+// gates the embedded OpenHuman sample map off entirely (KG phase 1).
 // ============================================================================
 (async function(){
   const slug=new URLSearchParams(location.search).get('course');
@@ -3123,6 +3127,14 @@ function kgApplicabilityChips(a){
   let done=null;
   window.addEventListener('message',ev=>{
     if(ev&&ev.data&&ev.data.type==='syllabai-kg:host-ready'&&done) post(done.type,done.payload);
+    else if(ev&&ev.data&&ev.data.type==='syllabai-kg:learner'&&ev.data.course===slug){
+      // KG phase 1: the host derives a browser-local learner overlay from its
+      // progress store and pushes it in — it replaces the embedded sample map
+      // entirely (honesty: the sample must never masquerade as measurement).
+      const incoming=ev.data.overlay;
+      LIVE_LEARNER=(incoming&&typeof incoming==='object')?incoming:{};
+      if(typeof draw==='function'&&state&&state.nodes&&state.nodes.length){try{draw();}catch(e){}}
+    }
   });
   try{
     const res=await fetch('/kg/data/'+encodeURIComponent(slug)+'.json',{cache:'no-cache'});
