@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Learner overlay derivation — KG phase 1.
+ * Learner overlay derivation — KG phase 1 (derivation), extended in phase 2.
  *
  * The v77 renderer ships a dormant learner-state engine: GRAPH_CONTRACT v1.0
  * declares a per-spec-point `learnerOverlay` (mastery / confidence / fluency /
@@ -23,18 +23,22 @@
  *     "Not measured" state (gray ring, no band). Nothing is invented.
  *   - notes read / flashcards rated contribute to `evidence` (exposure —
  *     the renderer's thin-evidence heuristic), not to mastery.
- *   - `reviewDue` is a 7-day recency heuristic on measured points below
- *     strong mastery (the Ebbinghaus decay model lands in phase 2 — until
- *     then this stays a plainly-commented demo heuristic).
- *   - confidence / fluency / misconception stay null in phase 1 (attempt-
- *     slider telemetry and the SME pitfall pipeline are later phases).
+ *   - `reviewDue` is the forgetting-decay model (lib/forgetting.ts): a point
+ *     is due when its Ebbinghaus-decayed effective mastery crosses the band
+ *     threshold above where it was demonstrated (τ = 30/90/365 days — demo
+ *     parameters, same shape as the web workbench's nightly job).
+ *   - confidence / fluency / misconception stay null (attempt-slider
+ *     telemetry and the SME pitfall pipeline are later phases).
  *
  * The result is pushed into the iframe over postMessage (`syllabai-kg:learner`)
  * by the knowledge-graph host; the renderer gates its embedded sample off the
- * moment a live overlay arrives.
+ * moment a live overlay arrives. Phase 2 layers the My State / History drawer
+ * on top of the same derivation (lib/kg-learner-state.ts) — this module keeps
+ * the shared pieces: the content bridge, the per-point accumulators and the
+ * overlay build itself.
  */
-import { useEffect, useMemo, useState } from "react";
 import { useCourseProgress, type CourseProgress } from "./progress";
+import { isReviewDue } from "./forgetting";
 
 /** One spec point's learner state — shapes exactly match the renderer's
  *  GRAPH_CONTRACT v1.0 learnerOverlay declaration. */
@@ -66,7 +70,7 @@ export interface LearnerOverlay {
   stats: LearnerOverlayStats;
 }
 
-interface LearnerBridge {
+export interface LearnerBridge {
   course: string;
   codePrefix: string | null;
   totalPoints: number;
@@ -81,7 +85,8 @@ interface LearnerBridge {
 
 const bridgeCache = new Map<string, Promise<LearnerBridge | null>>();
 
-function fetchBridge(course: string): Promise<LearnerBridge | null> {
+/** Fetch (and memoize) the content-id → spec-point bridge for one course. */
+export function fetchBridge(course: string): Promise<LearnerBridge | null> {
   const hit = bridgeCache.get(course);
   if (hit) return hit;
   const promise = fetch(`/api/kg-learner-bridge?course=${encodeURIComponent(course)}`)
@@ -93,13 +98,31 @@ function fetchBridge(course: string): Promise<LearnerBridge | null> {
 
 // ── derivation ──────────────────────────────────────────────────────────
 
-const REVIEW_AFTER_MS = 7 * 24 * 60 * 60 * 1000; // demo heuristic, see header
-const STRONG_MASTERY = 80; // mirrors the renderer's LEARNER_THRESHOLDS
-
 /** Strip a bundle's "4CH1-" style prefix; IAL bundles carry bare codes. */
-function normalizeCode(code: string, prefix: string | null): string {
+export function normalizeCode(code: string, prefix: string | null): string {
   if (prefix && code.startsWith(`${prefix}-`)) return code.slice(prefix.length + 1);
   return code;
+}
+
+/** Per-point accumulation detail — what the phase-2 drawer builds its
+ *  stored→effective mastery rows and review queue from. */
+export interface PointDetail {
+  pointId: string;
+  /** null = no marked attempt on this point (exposure only) */
+  mastery: number | null;
+  attempts: number;
+  exposure: number;
+  /** last evidence of ANY kind (display: "last activity") */
+  lastAt: number;
+  /** last MARKED attempt — the decay anchor (reading a note is exposure,
+   *  not practice: it must not refresh the memory-decay clock) */
+  lastAttemptAt: number;
+  reviewDue: boolean;
+}
+
+export interface LearnerModel extends LearnerOverlay {
+  /** per-point detail for every touched point (empty if no evidence) */
+  details: PointDetail[];
 }
 
 interface Accumulator {
@@ -107,14 +130,15 @@ interface Accumulator {
   weight: number;
   attempts: number;
   lastAt: number;
+  lastAttemptAt: number;
   exposure: number;
 }
 
-function buildOverlay(
+export function buildOverlay(
   progress: CourseProgress,
   bridge: LearnerBridge,
   now: number,
-): LearnerOverlay {
+): LearnerModel {
   const pointIds = new Set(bridge.pointIds);
   const acc = new Map<string, Accumulator>();
 
@@ -128,7 +152,7 @@ function buildOverlay(
       if (!pointIds.has(id)) continue;
       let a = acc.get(id);
       if (!a) {
-        a = { weightedSum: 0, weight: 0, attempts: 0, lastAt: 0, exposure: 0 };
+        a = { weightedSum: 0, weight: 0, attempts: 0, lastAt: 0, lastAttemptAt: 0, exposure: 0 };
         acc.set(id, a);
       }
       apply(a);
@@ -148,6 +172,7 @@ function buildOverlay(
       a.weight += weight;
       a.attempts += 1;
       a.lastAt = Math.max(a.lastAt, event.at);
+      a.lastAttemptAt = Math.max(a.lastAttemptAt, event.at);
     });
   }
   for (const [questionId, event] of Object.entries(progress.mcqAnswers)) {
@@ -158,6 +183,7 @@ function buildOverlay(
       a.weight += 1;
       a.attempts += 1;
       a.lastAt = Math.max(a.lastAt, event.at);
+      a.lastAttemptAt = Math.max(a.lastAttemptAt, event.at);
     });
   }
 
@@ -187,13 +213,17 @@ function buildOverlay(
   }
 
   const entries: Record<string, LearnerOverlayEntry> = {};
+  const details: PointDetail[] = [];
   let measured = 0;
   let reviewDueCount = 0;
   for (const [pointId, a] of acc) {
     const hasAttempts = a.attempts > 0;
     const mastery = hasAttempts ? Math.round((a.weightedSum / a.weight) * 100) : null;
+    // decay-model review flag (phase 2): due once effective mastery — decayed
+    // from the last MARKED attempt, not from exposure — crosses the threshold
+    // above where the point was demonstrated
     const reviewDue =
-      mastery != null && mastery < STRONG_MASTERY && now - a.lastAt > REVIEW_AFTER_MS;
+      mastery != null && a.lastAttemptAt > 0 && isReviewDue(mastery, a.lastAttemptAt, now);
     if (mastery != null) measured += 1;
     if (reviewDue) reviewDueCount += 1;
     entries[pointId] = {
@@ -204,10 +234,20 @@ function buildOverlay(
       reviewDue,
       misconception: null,
     };
+    details.push({
+      pointId,
+      mastery,
+      attempts: a.attempts,
+      exposure: a.exposure,
+      lastAt: a.lastAt,
+      lastAttemptAt: a.lastAttemptAt,
+      reviewDue,
+    });
   }
 
   return {
     entries,
+    details,
     stats: {
       measured,
       touched: acc.size,
@@ -221,55 +261,9 @@ function buildOverlay(
   };
 }
 
-// ── react binding ───────────────────────────────────────────────────────
+// ── shared empty stats (server snapshot / bridge failure) ───────────────
 
-export interface LearnerOverlayState {
-  entries: Record<string, LearnerOverlayEntry>;
-  stats: LearnerOverlayStats;
-  /** bridge fetch failed — the host chip explains, the graph stays honest */
-  bridgeError: boolean;
-}
-
-/**
- * Live learner overlay for one course: derives from the course's progress
- * store (reactive — any practice/notes/flashcard interaction re-derives and
- * the host re-posts into the iframe) joined against the content bridge.
- */
-export function useLearnerOverlay(course: string): LearnerOverlayState | null {
-  const progress = useCourseProgress(course);
-  const [bridge, setBridge] = useState<LearnerBridge | null>(null);
-  const [failed, setFailed] = useState(false);
-
-  // reset derived-fetch state on course switch during render (react.dev —
-  // "adjusting state when a prop changes"), then fetch below
-  const [prevCourse, setPrevCourse] = useState(course);
-  if (prevCourse !== course) {
-    setPrevCourse(course);
-    setBridge(null);
-    setFailed(false);
-  }
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchBridge(course).then((b) => {
-      if (cancelled) return;
-      if (b) setBridge(b);
-      else setFailed(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [course]);
-
-  return useMemo(() => {
-    if (failed) return { entries: {}, stats: emptyStats, bridgeError: true };
-    if (!bridge) return null;
-    const derived = buildOverlay(progress, bridge, Date.now());
-    return { entries: derived.entries, stats: derived.stats, bridgeError: false };
-  }, [progress, bridge, failed]);
-}
-
-const emptyStats: LearnerOverlayStats = {
+export const emptyStats: LearnerOverlayStats = {
   measured: 0,
   touched: 0,
   total: 0,

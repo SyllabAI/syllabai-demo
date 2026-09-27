@@ -19,7 +19,6 @@ import { useSearchParams } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
   ChevronDown,
   ExternalLink,
@@ -29,7 +28,8 @@ import {
   Network,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useLearnerOverlay } from "@/lib/learner-state";
+import { useLearnerState } from "@/lib/kg-learner-state";
+import { LearnerStateDrawer } from "./state-drawer";
 
 interface CourseLite {
   slug: string;
@@ -63,11 +63,12 @@ export function KnowledgeGraphClient({ courses }: { courses: CourseLite[] }) {
   // invalid or missing deep links fall back to the pilot course
   const activeCourse = courses.some((c) => c.slug === course) ? course : DEFAULT_COURSE;
 
-  // learner overlay (KG phase 1): derived from the browser-local progress
-  // store + the content bridge, pushed into the renderer's dormant
-  // learner-state engine over postMessage. Re-derived live — any practice /
-  // notes / flashcard interaction on this course re-paints the graph.
-  const learner = useLearnerOverlay(activeCourse);
+  // learner state (KG phases 1 + 2): derived from the browser-local progress
+  // store + the content bridge in ONE pass — `overlay` is pushed into the
+  // renderer's dormant learner-state engine over postMessage (re-derives live
+  // on progress changes), `drawer` feeds the My State / History sheet.
+  const { overlay: learner, drawer } = useLearnerState(activeCourse);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const postLearnerOverlay = useCallback(() => {
     if (!learner || learner.bridgeError) return;
@@ -178,62 +179,22 @@ export function KnowledgeGraphClient({ courses }: { courses: CourseLite[] }) {
           </Badge>
         )}
 
-        {/* learner overlay chip — what the colors on the graph mean */}
+        {/* learner state chip — opens the My State / History drawer (the
+            phase-1 legend popover folded into the drawer, one derivation) */}
         {learner && !learner.bridgeError && learner.stats.total > 0 && (
-          <Popover>
-            <PopoverTrigger asChild>
-              <Badge
-                variant="outline"
-                className="hidden cursor-pointer gap-1.5 py-1 font-mono text-[10px] text-muted-foreground md:inline-flex"
-              >
-                <Gauge className="size-3 shrink-0" aria-hidden />
-                {learner.stats.measured > 0
-                  ? `learner overlay · ${learner.stats.measured}/${learner.stats.total} measured`
-                  : `learner overlay · no evidence yet`}
-              </Badge>
-            </PopoverTrigger>
-            <PopoverContent align="start" className="w-80 text-xs">
-              <p className="text-sm font-semibold">Learner-state overlay</p>
-              <p className="mt-1 text-muted-foreground">
-                Derived live from this browser&apos;s progress on the course and
-                pushed into the graph engine —{" "}
-                <span className="font-medium text-foreground">
-                  simulated, browser-local
-                </span>
-                ; it never writes to course data.
-              </p>
-              <ul className="mt-2 space-y-1 text-muted-foreground">
-                <li>
-                  Node color = demonstrated mastery (&lt;55 low · 55–69
-                  developing · 70–79 good · ≥80 strong); rings flag review-due
-                  points.
-                </li>
-                <li>
-                  Mastery comes from marked attempts only — self-marked
-                  questions and MCQ answers. Notes read and flashcards rated
-                  add exposure, never mastery.
-                </li>
-              </ul>
-              <div className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 border-t pt-2 font-mono text-[11px]">
-                <span className="text-muted-foreground">marked attempts</span>
-                <span className="text-right">{learner.stats.attempts}</span>
-                <span className="text-muted-foreground">awaiting marks</span>
-                <span className="text-right">{learner.stats.awaitingMarks}</span>
-                <span className="text-muted-foreground">review due</span>
-                <span className="text-right">{learner.stats.reviewDue}</span>
-                <span className="text-muted-foreground">exposure only</span>
-                <span className="text-right">
-                  {Math.max(0, learner.stats.touched - learner.stats.measured)}
-                </span>
-              </div>
-              {learner.stats.measured === 0 && (
-                <p className="mt-2 text-muted-foreground">
-                  Answer and self-mark a question in Practice or Exam Questions,
-                  then come back — the graph lights up where you have evidence.
-                </p>
-              )}
-            </PopoverContent>
-          </Popover>
+          <Button
+            variant="outline"
+            size="sm"
+            className="h-8 gap-1.5 px-2 font-mono text-[10px] text-muted-foreground"
+            aria-haspopup="dialog"
+            onClick={() => setDrawerOpen(true)}
+          >
+            <Gauge className="size-3.5 shrink-0" aria-hidden />
+            <span className="tabular-nums">{learner.stats.measured}/{learner.stats.total}</span>
+            <span className="hidden lg:inline">
+              {learner.stats.measured > 0 ? "measured · my state" : "no evidence · my state"}
+            </span>
+          </Button>
         )}
 
         <span className="ml-auto" />
@@ -296,6 +257,14 @@ export function KnowledgeGraphClient({ courses }: { courses: CourseLite[] }) {
           <Maximize2 className="size-3.5" aria-hidden />
         </Button>
       </div>
+
+      {/* My State / History drawer (KG phase 2) — same derivation as the graph */}
+      <LearnerStateDrawer
+        open={drawerOpen}
+        onOpenChange={setDrawerOpen}
+        courseLabel={current?.label ?? "this course"}
+        drawer={drawer}
+      />
 
       {/* explorer canvas */}
       <div className="relative" style={{ height: "calc(100dvh - 3.5rem - 3rem)" }}>

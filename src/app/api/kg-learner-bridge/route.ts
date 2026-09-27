@@ -105,11 +105,15 @@ export function GET(request: Request) {
   const codePrefix = kg.meta?.code ?? null;
 
   const noteCodes: Record<string, string[]> = {};
-  const notesRaw = safeRead<
-    { notes?: { noteId?: string; specPointCodes?: string[] }[] }[]
-  >(join(process.cwd(), "content", slug, "notes.json"));
+  interface NoteRef {
+    noteId?: string;
+    specPointCodes?: string[];
+  }
   // notes.json is a top-level array in current bundles; accept {notes:[]} too
-  const noteList = Array.isArray(notesRaw)
+  const notesRaw = safeRead<NoteRef[] | { notes?: NoteRef[] }>(
+    join(process.cwd(), "content", slug, "notes.json"),
+  );
+  const noteList: NoteRef[] = Array.isArray(notesRaw)
     ? notesRaw
     : (notesRaw?.notes ?? []);
   for (const note of noteList) {
