@@ -64,6 +64,10 @@ interface CourseSpecMap {
   units?: string[];
   /** 4MA1 tier filter: "F" (foundation) or "H" (higher). */
   tier?: "F" | "H";
+  /** Per-science split of one corpus spec — 4SD0's three sciences share the
+   *  spec folder (1B/1C/1P + R variants; the qualification has no Paper 2s),
+   *  so each demo course filters to its own science's variants. */
+  variants?: string[];
 }
 
 const IG = "pearson-edexcel/international-gcse";
@@ -105,6 +109,21 @@ const COURSE_SPECS: Record<string, CourseSpecMap> = {
   "igcse-english-language-a-16-paper-3-coursework": { specs: [`${IG}/english-language-a/4ea1`] },
   "igcse-english-literature-16": { specs: [`${IG}/english-literature/4et1`] },
   "igcse-geography-19": { specs: [`${IG}/geography/4ge1`] },
+  // Science Double Award 4SD0: one corpus spec, split per science by variant.
+  // The qualification assesses via Paper 1B/1C/1P (+ timezone R) only — it has
+  // no Paper 2s, so the variant lists are intentionally 1-series only.
+  "igcse-science-double-award-17-biology": {
+    specs: [`${IG}/science-double-award/4sd0`],
+    variants: ["1B", "1BR"],
+  },
+  "igcse-science-double-award-17-chemistry": {
+    specs: [`${IG}/science-double-award/4sd0`],
+    variants: ["1C", "1CR"],
+  },
+  "igcse-science-double-award-17-physics": {
+    specs: [`${IG}/science-double-award/4sd0`],
+    variants: ["1P", "1PR"],
+  },
   "ial-chemistry-17": {
     specs: [`${IA}/chemistry/wch11`, `${IA}/chemistry/wch12`, `${IA}/chemistry/wch13`, `${IA}/chemistry/wch14`, `${IA}/chemistry/wch15`, `${IA}/chemistry/wch16`],
     // retired 2008-spec units (WCH01–06, last sat Jan 2019)
@@ -161,6 +180,10 @@ const OFFICIAL_DURATIONS: Record<string, number> = {
   "4PM1/1": 120, "4PM1/2": 120,
   // IGCSE Maths B: papers = 2h
   "4MB1/1": 120, "4MB1/2": 120,
+  // IGCSE Science Double Award 4SD0: Paper 1B/1C/1P = 2h each (attested on
+  // the QP covers, 2019-2025 sessions); no Paper 2s exist in the qualification
+  "4SD0/1B": 120, "4SD0/1BR": 120, "4SD0/1C": 120, "4SD0/1CR": 120,
+  "4SD0/1P": 120, "4SD0/1PR": 120,
   // IAL 2018 sciences: units 1/2 = 1h30, unit 3 = 1h20, units 4/5 = 1h45 (Phy 1h35), unit 6 = 1h50
   WCH11: 90, WCH12: 90, WCH13: 80, WCH14: 105, WCH15: 105, WCH16: 110,
   WPH11: 90, WPH12: 90, WPH13: 80, WPH14: 95, WPH15: 95, WPH16: 110,
@@ -268,6 +291,7 @@ export function corpusPapersForCourse(slug: string): CorpusPaperEntry[] {
         const entry = buildEntry(specKey, spec, session.id, p, legacy);
         if (!entry) continue;
         if (map.units && !map.units.includes(entry.unit)) continue;
+        if (map.variants && !map.variants.includes(entry.variant)) continue;
         if (map.tier) {
           // 4MA1 variants: 1F/2F (foundation), 1H/2H (higher), optional R suffix
           const isH = entry.variant.includes("H");
