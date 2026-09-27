@@ -66,7 +66,9 @@ interface CourseSpecMap {
   tier?: "F" | "H";
   /** Per-science split of one corpus spec — 4SD0's three sciences share the
    *  spec folder (1B/1C/1P + R variants; the qualification has no Paper 2s),
-   *  so each demo course filters to its own science's variants. */
+   *  so each demo course filters to its own science's variants. Also used for
+   *  the double-award courses' legacySpecs: 4SC0-era physics = 4PH0 1-series
+   *  (the legacy Double Award comprised ONLY the three Paper 1s — spec Issue 3). */
   variants?: string[];
 }
 
@@ -112,6 +114,16 @@ const COURSE_SPECS: Record<string, CourseSpecMap> = {
   // Science Double Award 4SD0: one corpus spec, split per science by variant.
   // The qualification assesses via Paper 1B/1C/1P (+ timezone R) only — it has
   // no Paper 2s, so the variant lists are intentionally 1-series only.
+  //
+  // Legacy (4SC0) era, same principle one generation earlier: the Double Award
+  // comprised ONLY the three Paper 1s (4SC0/1B/1C/1P, 2h each — spec Issue 3),
+  // and those papers ARE the single sciences' Paper 1s (4BI0/4CH0/4PH0) — the
+  // covers print both codes (e.g. "4PH0/1PR" + "4SC0/1PR"), Pearson's own DAM
+  // catalogs the 4xx0 papers under the Science (Double Award) subject, and the
+  // only 4SC0_-named assets are three June-2011 mark schemes. So the legacy
+  // archive for this course is the 4ph0 spec's 1-series, badged "Legacy spec";
+  // a 4sc0 spec folder would be fabrication (no such question papers exist).
+  // 2-series 4PH0 papers (single-award extension) surface via igcse-physics-19.
   "igcse-science-double-award-17-biology": {
     specs: [`${IG}/science-double-award/4sd0`],
     variants: ["1B", "1BR"],
@@ -122,6 +134,8 @@ const COURSE_SPECS: Record<string, CourseSpecMap> = {
   },
   "igcse-science-double-award-17-physics": {
     specs: [`${IG}/science-double-award/4sd0`],
+    // retired 4SC0 line: its Physics Paper 1 = 4PH0 Paper 1 (1P/1PR, 2011-2019)
+    legacySpecs: [`${IG}/physics/4ph0`],
     variants: ["1P", "1PR"],
   },
   "ial-chemistry-17": {
@@ -190,8 +204,9 @@ const OFFICIAL_DURATIONS: Record<string, number> = {
   WBI11: 90, WBI12: 90, WBI13: 80, WBI14: 105, WBI15: 105, WBI16: 110,
   // Legacy IGCSE Biology 4BI0 (official 4BI0 spec: Paper 1 = 2h, Paper 2 = 1h)
   "4BI0/1B": 120, "4BI0/1BR": 120, "4BI0/2B": 60, "4BI0/2BR": 60,
-  // Legacy IGCSE Physics 4PH0 (official 4PH0 spec: Paper 1 = 2h, Paper 2 = 1h)
-  "4PH0/1P": 120, "4PH0/2P": 60,
+  // Legacy IGCSE Physics 4PH0 (official 4PH0 spec: Paper 1 = 2h, Paper 2 = 1h;
+  // R durations attested on the 2013-2018 R-variant covers — 4SC0-wave 2026-09-28)
+  "4PH0/1P": 120, "4PH0/2P": 60, "4PH0/1PR": 120, "4PH0/2PR": 60,
   // Legacy IGCSE Maths A 4MA0 (official spec: F papers 1h30, H papers 2h)
   "4MA0/1F": 90, "4MA0/2F": 90, "4MA0/3H": 120, "4MA0/4H": 120,
   "4MA0/1FR": 90, "4MA0/2FR": 90, "4MA0/3HR": 120, "4MA0/4HR": 120,
