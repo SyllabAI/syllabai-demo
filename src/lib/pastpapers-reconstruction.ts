@@ -39,9 +39,19 @@ export function parseReconstruction(
   const d = (date ?? "").trim();
   const n = (number ?? "").trim();
   if (!n) return null;
+  // "Jun 2023 (R)" — Pearson regional variants are physically different papers
+  // (4ET1-02R etc.), so the marker must carry into the matched dir, never
+  // collapse onto the non-regional row.
+  const regional = /\(\s*r\s*\)/i.test(d);
 
   const year = d.match(/\d{4}/)?.[0];
   const dl = d.toLowerCase();
+  // "June 16" / "Jan 13" / "Nov 19" — 2-digit year shorthand for real sessions
+  // (2011+ IGCSE/IAL era → 20yy). "Pre 17" stays unparseable: a range marker,
+  // not a year.
+  const shortYear =
+    !year && !dl.includes("pre") ? d.match(/\b(\d{2})\b/)?.[1] : undefined;
+  const yearNorm = year ?? (shortYear ? `20${shortYear}` : undefined);
   const months: string[] = [];
   if (dl.includes("jan")) months.push("01");
   if (dl.includes("jun") && !dl.includes("jan")) months.push("06");
@@ -54,29 +64,47 @@ export function parseReconstruction(
   if (ref) {
     // full official ref: "4CH1/1C", "WCH11/01"
     unit = ref[1].toUpperCase();
-    variant = ref[2].toUpperCase();
+    // corpus metadata occasionally OCRs zero as letter O ("4EA1/O1") —
+    // variants are digits + R/A suffixes, so normalise
+    variant = ref[2].toUpperCase().replace(/O/g, "0");
   } else {
-    // glued session prefix + paper code: "Ja1CR", "Jan1CR", "Ju1c", "1P"
-    const m = n.match(/^(jan|jun|ja|ju|nov|oct)?\s*([0-9][0-9A-Za-z]*)$/i);
-    if (!m) return null;
-    variant = m[2].toUpperCase();
-    const pref = m[1]?.toLowerCase();
-    if (pref && months.length === 0) {
-      if (pref === "jan" || pref === "ja") months.push("01");
-      else if (pref === "jun" || pref === "ju") months.push("06");
-      else if (pref === "oct") months.push("10");
-      else if (pref === "nov") months.push("11");
+    // "Paper 1", "Paper 2: Section B" — business/econ/ICT/accounting style;
+    // the paper ordinal maps onto the corpus's 01/02 dirs, unit comes from
+    // the course context (never guessed here)
+    const paper = n.match(/^Paper\s*([0-9]+)(R)?(?:\s*[:\-].*)?$/i);
+    if (paper) {
+      const ordinal = paper[1];
+      variant =
+        (ordinal.length >= 2 ? ordinal : `0${ordinal}`) +
+        (paper[2]?.toUpperCase() ?? "");
+    } else {
+      // glued session prefix + paper code: "Ja1CR", "Jan1CR", "Ju1c", "1P"
+      const m = n.match(/^(jan|jun|ja|ju|nov|oct)?\s*([0-9][0-9A-Za-z]*)$/i);
+      if (!m) return null;
+      variant = m[2].toUpperCase();
+      const pref = m[1]?.toLowerCase();
+      if (pref && months.length === 0) {
+        if (pref === "jan" || pref === "ja") months.push("01");
+        else if (pref === "jun" || pref === "ju") months.push("06");
+        else if (pref === "oct") months.push("10");
+        else if (pref === "nov") months.push("11");
+      }
     }
   }
   if (!variant) return null;
+  if (regional && !variant.endsWith("R")) variant += "R";
 
   const sessionIds: string[] = [];
   if (dl.includes("specimen")) {
     sessionIds.push("specimen");
-  } else if (year) {
-    if (months.length) for (const mm of months) sessionIds.push(`${year}-${mm}`);
-    else for (const mm of ["01", "02", "06", "10", "11"]) sessionIds.push(`${year}-${mm}`);
+  } else if (yearNorm) {
+    if (months.length) for (const mm of months) sessionIds.push(`${yearNorm}-${mm}`);
+    else for (const mm of ["01", "02", "06", "10", "11"]) sessionIds.push(`${yearNorm}-${mm}`);
   }
+  // Without a year (or specimen) the session is unpinnable — matching ANY
+  // session would pair a reconstruction with an arbitrary paper. Stay honest:
+  // no parse rather than a guess.
+  if (sessionIds.length === 0) return null;
   return { sessionIds, unit, variant };
 }
 
@@ -129,6 +157,10 @@ export interface PaperBlueprint {
   paperTotal: number | null;
   /** question numbers whose marks were inferred from the paper total (extraction gap) */
   inferred: string[];
+  /** optional-choice paper ("answer two questions from..."): per-question
+   *  footers legitimately exceed the paper total because students answer a
+   *  subset — `total` is the full offered sum, `paperTotal` the answerable one */
+  optional?: true;
 }
 
 interface BlueprintsFile {
@@ -149,6 +181,9 @@ export interface ReconstructionCoverage {
   officialQuestions: number;
   heldMarks: number;
   officialMarks: number;
+  /** optional-choice paper: marks a student actually answers (paper total),
+   *  null for normal papers where officialMarks already is that */
+  officialAnswerableMarks: number | null;
   /** official question numbers the corpus does not hold */
   missing: number[];
   /** held question numbers that are not in the official paper */
@@ -191,6 +226,7 @@ export function computeCoverage(
   const extra = heldQs.filter((n) => !bp.marks[String(n)]);
   const officialMarks = bp.total;
   const heldMarks = [...heldMarksByQn.values()].reduce((a, b) => a + b, 0) + unknownQnMarks;
+  const officialAnswerableMarks = bp.optional === true ? bp.paperTotal : null;
 
   const inferred = bp.inferred.map(Number);
 
@@ -201,6 +237,7 @@ export function computeCoverage(
       officialQuestions: officialQs.length,
       heldMarks,
       officialMarks,
+      officialAnswerableMarks,
       missing,
       extra,
       inferred,
@@ -213,6 +250,7 @@ export function computeCoverage(
       officialQuestions: officialQs.length,
       heldMarks,
       officialMarks,
+      officialAnswerableMarks,
       missing,
       extra,
       inferred,
@@ -224,6 +262,7 @@ export function computeCoverage(
     officialQuestions: officialQs.length,
     heldMarks,
     officialMarks,
+    officialAnswerableMarks,
     missing,
     extra,
     inferred,
@@ -241,14 +280,35 @@ export function coverageChipLabel(c: ReconstructionCoverage | null): string | nu
  * complete = Q-set and marks both match; marks-differ = Q-set matches but the
  * parsed corpus allocates marks slightly differently; partial = questions are
  * missing; unverified = no official blueprint extracted for this paper.
+ * Optional-choice papers say "offered" — per-question footers exceed what a
+ * student answers, so the raw totals read differently.
  */
 export function coverageTitle(c: ReconstructionCoverage): string {
   const q = `Q${c.missing.slice(0, 5).join(", Q")}${c.missing.length > 5 ? ` +${c.missing.length - 5} more` : ""}`;
+  if (c.officialAnswerableMarks != null) {
+    const marks = `${c.heldMarks}/${c.officialMarks} marks offered by the official paper (students answer ${c.officialAnswerableMarks})`;
+    switch (c.state) {
+      case "complete":
+        return `Complete reconstruction — all ${c.officialQuestions} questions held, every optional-choice question included · ${marks}`;
+      case "marks-differ":
+        return `All ${c.officialQuestions} questions held · ${marks} — parsed marks differ slightly from the official paper`;
+      case "partial":
+        return `Partial reconstruction — ${c.heldQuestions} of ${c.officialQuestions} questions held${c.missing.length ? ` (missing ${q})` : ""} · ${marks}`;
+      case "unverified":
+        return `Reconstruction — ${c.heldQuestions} questions held; official paper totals unavailable for verification`;
+    }
+  }
   switch (c.state) {
     case "complete":
       return `Complete reconstruction — all ${c.officialQuestions} questions · ${c.heldMarks}/${c.officialMarks} marks match the official paper`;
-    case "marks-differ":
+    case "marks-differ": {
+      // two honest flavours: near-total corpora with ±1 mark reallocations,
+      // vs corpora that hold only some of every question's parts
+      if (c.heldMarks < c.officialMarks * 0.85) {
+        return `Every official question is represented, but the corpus holds only part of each — ${c.heldMarks} of ${c.officialMarks} marks' worth vs the official paper`;
+      }
       return `All ${c.officialQuestions} questions held · ${c.heldMarks}/${c.officialMarks} marks — parsed marks differ slightly from the official paper`;
+    }
     case "partial":
       return `Partial reconstruction — ${c.heldQuestions} of ${c.officialQuestions} questions held${c.missing.length ? ` (missing ${q})` : ""} · ${c.heldMarks}/${c.officialMarks} marks vs the official paper`;
     case "unverified":

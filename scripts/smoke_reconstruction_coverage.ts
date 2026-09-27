@@ -50,7 +50,11 @@ for (const [key, b] of Object.entries(bp.papers)) {
   const sum = Object.values(b.marks).reduce((a, x) => a + x, 0);
   if (sum !== b.total) bpBad++;
   for (const inf of b.inferred) if (!b.marks[inf]) bpBad++;
-  if (Object.keys(b.marks).length < 3) bpBad++;
+  // two-question papers (4AC1 style) are allowed only because the builder
+  // cross-checks them against the stated paper total
+  if (Object.keys(b.marks).length < 2) bpBad++;
+  if (Object.keys(b.marks).length === 2 && !(b.paperTotal != null && Math.abs(sum - b.paperTotal) <= 2)) bpBad++;
+  if ((b as { optional?: boolean }).optional && !(b.paperTotal != null && sum > b.paperTotal)) bpBad++;
 }
 check(bpBad === 0, `all blueprints internally consistent (${bpBad} bad)`);
 
@@ -86,6 +90,21 @@ console.log("anchors:");
   // a row without a blueprint (specimen) → null → UI stays "unverified"
   const cov = computeCoverage(reconForCorpus.get("specimen:4CH1-1C") ?? null, blueprintFor("specimen:4CH1-1C"));
   check(cov === null || cov.state === "unverified", `specimen 1C unverified or unmatched (${cov?.state ?? "null"})`);
+}
+
+// ── 2b. optional-choice + two-question anchors ─────────────────────────
+{
+  // Geography 4GE1-01: rubric "answer two questions from Q1,2,3 / one from
+  // Q4,5,6" → footers sum to 135 while the paper awards 70
+  const gbp = blueprintFor("2024-06:4GE1-01");
+  check(gbp?.optional === true, `Jun 2024 4GE1-01 blueprint optional-choice (${gbp ? `optional=${String(!!gbp.optional)}` : "missing"})`);
+  check(gbp?.total === 135 && gbp?.paperTotal === 70, `Jun 2024 4GE1-01 totals 135 offered / 70 answerable (${gbp?.total}/${gbp?.paperTotal})`);
+}
+{
+  // Accounting 4AC1-02: genuine two-question paper (2×25 = 50 = paper total)
+  const abp = blueprintFor("2023-06:4AC1-02");
+  check(!!abp && Object.keys(abp.marks).length === 2, `Jun 2023 4AC1-02 two-question blueprint (${abp ? `${Object.keys(abp.marks).length} Qs` : "missing"})`);
+  check(abp?.total === 50 && abp?.paperTotal === 50, `Jun 2023 4AC1-02 totals 50/50 (${abp?.total}/${abp?.paperTotal})`);
 }
 
 // ── 3. sweep all registry courses ──────────────────────────────────────────

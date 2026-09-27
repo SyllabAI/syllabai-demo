@@ -61,6 +61,8 @@ async function fetchCachedPdf(qpPath: string): Promise<Buffer | null> {
 interface RawExtraction {
   marks: Map<number, number>;
   paperTotal: number | null;
+  /** rubric says "answer N questions from ..." — optional-choice paper */
+  optionalChoice: boolean;
 }
 
 const PER_Q = /Total for Question\s*(\d+)\s*(?:=|is)?\s*(\d+)\s*marks?/gi;
@@ -85,8 +87,13 @@ async function extractFromPdf(buf: Buffer): Promise<RawExtraction | null> {
   }
   const ptMatch = [...norm.matchAll(PAPER_TOTAL)].at(-1);
   const paperTotal = ptMatch ? Number(ptMatch[1]) : null;
-  if (marks.size < 3) return null;
-  return { marks, paperTotal };
+  // Optional-choice papers (e.g. 4GE1: "In Section A, answer two questions
+  // from Questions 1, 2 and 3") legitimately print per-question footers that
+  // sum to MORE than the paper total — students answer a subset.
+  const optionalChoice =
+    /Answer\s+(one|two|three|four)\s+questions?\s+from/i.test(norm.slice(0, 3000));
+  if (marks.size < 2) return null;
+  return { marks, paperTotal, optionalChoice };
 }
 
 /** Resolve extraction gaps; null when the blueprint can't be trusted. */
@@ -95,17 +102,26 @@ function finalize(raw: RawExtraction): {
   total: number;
   paperTotal: number | null;
   inferred: string[];
+  optional?: true;
 } | null {
   const qns = [...raw.marks.keys()].sort((a, b) => a - b);
   const maxQn = qns[qns.length - 1];
   // plausibility guards
-  if (maxQn > 40 || qns.length < 3) return null;
+  if (maxQn > 40 || qns.length < 2) return null;
+  // two-question papers are real (4AC1: two 25-mark constructs) but only
+  // trustworthy when the stated paper total independently confirms them
+  if (qns.length === 2 && raw.paperTotal == null) return null;
   const gaps: number[] = [];
   for (let n = 1; n <= maxQn; n++) if (!raw.marks.has(n)) gaps.push(n);
   const inferred: string[] = [];
   let sum = qns.reduce((a, n) => a + (raw.marks.get(n) ?? 0), 0);
 
-  if (gaps.length === 1 && raw.paperTotal != null) {
+  // optional-choice: footers deliberately exceed the paper total (students
+  // answer a subset), so the total can neither validate the sum nor fill gaps
+  const optional =
+    raw.optionalChoice === true && raw.paperTotal != null && sum - raw.paperTotal > 2;
+
+  if (gaps.length === 1 && raw.paperTotal != null && !optional) {
     const fill = raw.paperTotal - sum;
     if (fill > 0 && fill <= 60) {
       raw.marks.set(gaps[0], fill);
@@ -118,13 +134,20 @@ function finalize(raw: RawExtraction): {
     return null; // multi-gap: cannot distribute the paper total honestly
   }
 
-  // final sanity: total must be plausible and (when stated) match the paper total
+  // final sanity: total must be plausible and (when stated, non-choice) match
+  // the paper total
   if (sum < 20 || sum > 300) return null;
-  if (raw.paperTotal != null && Math.abs(sum - raw.paperTotal) > 2) return null;
+  if (!optional && raw.paperTotal != null && Math.abs(sum - raw.paperTotal) > 2) return null;
 
   const marks: Record<string, number> = {};
   for (const n of [...raw.marks.keys()].sort((a, b) => a - b)) marks[String(n)] = raw.marks.get(n)!;
-  return { marks, total: sum, paperTotal: raw.paperTotal, inferred };
+  return {
+    marks,
+    total: sum,
+    paperTotal: raw.paperTotal,
+    inferred,
+    ...(optional ? { optional: true as const } : {}),
+  };
 }
 
 // ── main ───────────────────────────────────────────────────────────────────
