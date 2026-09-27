@@ -20,12 +20,16 @@ Checks:
       every questions.json topic block == kg meta == index entry)
   C3  corpus invariants: 49 everywhere, no duplicate slugs, spine/content-map
       pointers resolve, spec-point counts agree at every layer
+  C4  unit layer (where a curriculum carries UNIT nodes): SUBJECT -> UNIT ->
+      TOPIC integrity, "Unit N (CODE)" titles, and per-topic unanimity of
+      SPEC_POINT applicability.unit_scope (the unit home derivation)
 
 Usage:
   python3 scripts/content_tag_audit.py [--repo-root .]
 Exits non-zero if any FAIL.
 """
 import argparse
+import collections
 import datetime
 import json
 import re
@@ -44,6 +48,7 @@ BOARDS_OK = {"Pearson Edexcel"}
 STATUSES_OK = {"full", "pilot"}
 CODE_RE = re.compile(r"^[A-Z0-9/]+$")   # 4XMAF/4XMAH modular units use a slash
 YEAR_RE = re.compile(r"^\d{4}(?:-\d{2,4})?(?: \(Issue \d+\))?$")  # "2017 (Issue 3)"
+UNIT_TITLE_RE = re.compile(r"^Unit \d+ \([A-Z]{3}\d{2}\)$")  # "Unit 1 (WPH11)"
 
 findings = []  # (severity, course_or '-', check_id, message)
 
@@ -145,6 +150,56 @@ def main():
             finding("FAIL", slug, "C1-year", f"curriculum.syllabusVersion malformed: {cur_tags['syllabusVersion']!r}")
         if cur_tags["level"] not in LEVELS_OK:
             finding("FAIL", slug, "C1-level", f"unexpected level: {cur_tags['level']!r}")
+
+        # C4: unit layer (where present) — SUBJECT -> UNIT -> TOPIC integrity;
+        # unit titles, parents, and per-topic unanimity of point unit_scope
+        c4_nodes = cur.get("nodes") or []
+        c4_units = [n for n in c4_nodes if n.get("family") == "UNIT"]
+        if c4_units:
+            c4_subj = next((n for n in c4_nodes if n.get("family") == "SUBJECT"), None)
+            c4_topic_codes = {n.get("code") for n in c4_nodes if n.get("family") == "TOPIC"}
+            c4_unit_codes = set()
+            for u in c4_units:
+                uc = u.get("code") or ""
+                c4_unit_codes.add(uc)
+                m = re.search(r"U(\d+)$", uc)
+                if not m:
+                    finding("FAIL", slug, "C4-unit", f"UNIT code unparseable: {uc!r}")
+                if not UNIT_TITLE_RE.match(u.get("title") or ""):
+                    finding("FAIL", slug, "C4-unit",
+                            f"UNIT title not 'Unit N (CODE)': {u.get('title')!r}")
+                want_parents = [c4_subj["code"]] if c4_subj else None
+                if list(u.get("parents") or []) != want_parents:
+                    finding("FAIL", slug, "C4-unit",
+                            f"UNIT {uc} parents {u.get('parents')!r} != {want_parents!r}")
+            c4_unit_of_topic = {}
+            for t in (n for n in c4_nodes if n.get("family") == "TOPIC"):
+                ups = [p for p in (t.get("parents") or []) if p in c4_unit_codes]
+                if len(ups) != 1:
+                    finding("FAIL", slug, "C4-unit",
+                            f"TOPIC {t.get('code')} has {len(ups)} UNIT parents {ups!r}")
+                else:
+                    c4_unit_of_topic[t.get("code")] = ups[0]
+            # unit homes: unanimous SPEC_POINT applicability.unit_scope per topic
+            c4_top_of_sub = {}
+            for st in (n for n in c4_nodes if n.get("family") == "SUBTOPIC"):
+                tp = [p for p in (st.get("parents") or []) if p in c4_topic_codes]
+                if len(tp) == 1:
+                    c4_top_of_sub[st.get("code")] = tp[0]
+            c4_votes = collections.defaultdict(collections.Counter)
+            for p in (n for n in c4_nodes if n.get("family") == "SPEC_POINT"):
+                us = (p.get("applicability") or {}).get("unit_scope")
+                for par in p.get("parents") or []:
+                    t = c4_top_of_sub.get(par)
+                    if t and us:
+                        c4_votes[t][us] += 1
+            for tcode, ucode in c4_unit_of_topic.items():
+                m = re.search(r"U(\d+)$", ucode or "")
+                want_scope = "U" + m.group(1) if m else None
+                v = c4_votes.get(tcode, {})
+                if want_scope is None or set(v) != {want_scope}:
+                    finding("FAIL", slug, "C4-unit",
+                            f"topic {tcode} parent {ucode} vs point unit_scope votes {dict(v)}")
 
         # registry <-> curriculum
         r = reg_courses.get(slug)

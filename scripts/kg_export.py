@@ -6,6 +6,12 @@
 Contract: GRAPH_CONTRACT v1.0 — node types Subject / Section / SubTopic /
 SpecificationPoint / ExamPaper; edge types hier / pre / rel / assess.
 
+v1.2: curricula that carry a UNIT family layer (IAL sciences) export the
+printed units as Sections, their TOPICs as SubTopics, and consume the
+curriculum SUBTOPIC layer as the point-mapping level (points attach to
+their topic directly). Curricula without UNIT nodes export exactly as
+v1.1 — byte-identical shapes.
+
 v1 ships hier edges only: curriculum.json carries no prerequisite, relation or
 paper metadata, and the corpus discipline forbids inventing edges. The 4CH1
 counts cross-check against the prototype's hand-curated dataset (1 Subject /
@@ -114,43 +120,104 @@ def export_course(slug: str, registry: dict[str, dict]) -> dict:
     if not topics:
         raise ExportError(f"{slug}: no TOPIC nodes")
 
+    units = [n for n in nodes if n["family"] == "UNIT"]
+    unit_layer = bool(units)
+
     # --- sections (curriculum order) -------------------------------------
-    sec_key_of = {}          # topic code -> "1".."N"
-    sections_tbl = {}        # "1" -> {label, color}
-    for i, t in enumerate(topics, start=1):
-        key = str(i)
-        sec_key_of[t["code"]] = key
-        sections_tbl[key] = {
-            "label": t["title"],
-            "color": SECTION_COLORS[(i - 1) % len(SECTION_COLORS)],
-        }
+    if unit_layer:
+        # v1.2 unit-layer path: UNIT nodes are the printed spec units and
+        # export as Sections; TOPICs export as SubTopics under their unit;
+        # curriculum SUBTOPICs are consumed as the point-mapping level.
+        def _unit_num(u):
+            m = re.search(r"U(\d+)$", u["code"])
+            if not m:
+                raise ExportError(f"{slug}: UNIT {u['code']} has no unit number")
+            return int(m.group(1))
 
-    # --- subtopics, grouped under their section ---------------------------
-    subs_by_section: dict[str, list[dict]] = collections.defaultdict(list)
-    sub_id_of: dict[str, str] = {}   # subtopic code -> build id ("1a")
-    for st in subtopics:
-        parents = st.get("parents") or []
-        topic_code = next((p for p in parents if p in sec_key_of), None)
-        if topic_code is None:
-            raise ExportError(f"{slug}: SUBTOPIC {st['code']} has no TOPIC parent")
-        subs_by_section[topic_code].append(st)
-    subtopics_tbl: dict[str, list[list[str]]] = {}
-    for topic_code, sts in subs_by_section.items():
-        key = sec_key_of[topic_code]
-        defs = []
-        for j, st in enumerate(sts):
-            sid = key + sub_letter(j)
-            sub_id_of[st["code"]] = sid
-            defs.append([sid, st["title"]])
-        subtopics_tbl[key] = defs
+        units.sort(key=_unit_num)
+        sections_tbl = {}        # printed unit number -> {label, color}
+        for i, u in enumerate(units, start=1):
+            key = str(_unit_num(u))
+            if key in sections_tbl:
+                raise ExportError(f"{slug}: duplicate unit number {key}")
+            sections_tbl[key] = {
+                "label": u["title"],
+                "color": SECTION_COLORS[(i - 1) % len(SECTION_COLORS)],
+            }
+        unit_key_of = {u["code"]: str(_unit_num(u)) for u in units}
 
-    # duplicate subtopic titles within a section would break the build's
-    # parentSubtopicId() title matching — refuse rather than guess
-    for topic_code, sts in subs_by_section.items():
-        titles = [st["title"] for st in sts]
-        if len(set(titles)) != len(titles):
-            raise ExportError(f"{slug}: duplicate subtopic titles in section "
-                              f"{sec_key_of[topic_code]} ({topic_code})")
+        # topics grouped under their unit (array order = spec order)
+        subs_by_unit: dict[str, list[dict]] = collections.defaultdict(list)
+        for t in topics:
+            up = [p for p in (t.get("parents") or []) if p in unit_key_of]
+            if len(up) != 1:
+                raise ExportError(f"{slug}: TOPIC {t['code']} has {len(up)} UNIT parents")
+            subs_by_unit[up[0]].append(t)
+        subtopics_tbl: dict[str, list[list[str]]] = {}
+        sub_id_of: dict[str, str] = {}   # topic code -> build id ("1a")
+        for unit_code, ts in subs_by_unit.items():
+            key = unit_key_of[unit_code]
+            defs = []
+            for j, t in enumerate(ts):
+                sid = key + sub_letter(j)
+                sub_id_of[t["code"]] = sid
+                defs.append([sid, t["title"]])
+            subtopics_tbl[key] = defs
+
+        # duplicate topic titles within a unit would break the build's
+        # parentSubtopicId() title matching — refuse rather than guess
+        for unit_code, ts in subs_by_unit.items():
+            titles = [t["title"] for t in ts]
+            if len(set(titles)) != len(titles):
+                raise ExportError(f"{slug}: duplicate topic titles in unit "
+                                  f"{unit_key_of[unit_code]} ({unit_code})")
+
+        # curriculum SUBTOPICs resolve into exactly one topic each and map
+        # that topic's build id, so points attach to their topic directly
+        topic_sid = dict(sub_id_of)
+        for st in subtopics:
+            tp = [p for p in (st.get("parents") or []) if p in topic_sid]
+            if len(tp) != 1:
+                raise ExportError(f"{slug}: SUBTOPIC {st['code']} has "
+                                  f"{len(tp)} TOPIC parents")
+            sub_id_of[st["code"]] = topic_sid[tp[0]]
+    else:
+        sec_key_of = {}          # topic code -> "1".."N"
+        sections_tbl = {}        # "1" -> {label, color}
+        for i, t in enumerate(topics, start=1):
+            key = str(i)
+            sec_key_of[t["code"]] = key
+            sections_tbl[key] = {
+                "label": t["title"],
+                "color": SECTION_COLORS[(i - 1) % len(SECTION_COLORS)],
+            }
+
+        # --- subtopics, grouped under their section -----------------------
+        subs_by_section: dict[str, list[dict]] = collections.defaultdict(list)
+        sub_id_of: dict[str, str] = {}   # subtopic code -> build id ("1a")
+        for st in subtopics:
+            parents = st.get("parents") or []
+            topic_code = next((p for p in parents if p in sec_key_of), None)
+            if topic_code is None:
+                raise ExportError(f"{slug}: SUBTOPIC {st['code']} has no TOPIC parent")
+            subs_by_section[topic_code].append(st)
+        subtopics_tbl: dict[str, list[list[str]]] = {}
+        for topic_code, sts in subs_by_section.items():
+            key = sec_key_of[topic_code]
+            defs = []
+            for j, st in enumerate(sts):
+                sid = key + sub_letter(j)
+                sub_id_of[st["code"]] = sid
+                defs.append([sid, st["title"]])
+            subtopics_tbl[key] = defs
+
+        # duplicate subtopic titles within a section would break the build's
+        # parentSubtopicId() title matching — refuse rather than guess
+        for topic_code, sts in subs_by_section.items():
+            titles = [st["title"] for st in sts]
+            if len(set(titles)) != len(titles):
+                raise ExportError(f"{slug}: duplicate subtopic titles in section "
+                                  f"{sec_key_of[topic_code]} ({topic_code})")
 
     # --- points: explicit subtopic mapping (from curriculum parents) ------
     points_list = []
@@ -266,13 +333,18 @@ def export_course(slug: str, registry: dict[str, dict]) -> dict:
             "curriculumCode": qual_code,
             "syllabusVersion": cur.get("syllabusVersion"),
             "source": f"content/{slug}/curriculum.json (curriculum truth, RULE_DERIVED)",
-            "exporter": "scripts/kg_export.py v1.1 (applicability passthrough)",
+            "exporter": ("scripts/kg_export.py v1.2 (unit layer + applicability passthrough)"
+                         if unit_layer else
+                         "scripts/kg_export.py v1.1 (applicability passthrough)"),
             "generatedUtc": dt.datetime.now(dt.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "notes": ("v1.1: hier edges only — no prerequisite, relation or "
                       "assessment edges are invented. SpecificationPoint nodes "
                       "and points carry the canonical applicability object "
                       "(printed paper/unit/tier/coursework homes, T-KG-16) "
-                      "verbatim from the pinned parse; absent where not derived."),
+                      "verbatim from the pinned parse; absent where not derived."
+                      + (" Unit layer: printed UNIT nodes export as Sections, "
+                         "topics as SubTopics; the curriculum SUBTOPIC layer is "
+                         "consumed as the point-mapping level." if unit_layer else "")),
             "counts": {
                 "nodes": len(kg_nodes),
                 "edges": len(edges),
