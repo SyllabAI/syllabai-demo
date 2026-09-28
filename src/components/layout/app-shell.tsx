@@ -136,6 +136,32 @@ export function AppShell({
                   </Link>
                 </DropdownMenuItem>
               ))}
+
+              {/* Mobile UX audit (2026-09-28) P1: the header Sign in/out
+                  buttons are `hidden sm:inline-flex`, so on phones there was
+                  NO way to sign in/out (or see the identity gating the
+                  teacher surfaces). The menu item mirrors them below sm,
+                  where the header buttons don't render. */}
+              <DropdownMenuSeparator className="sm:hidden" />
+              {identity ? (
+                <DropdownMenuItem
+                  className="cursor-pointer gap-2 sm:hidden"
+                  onSelect={() => clearIdentity()}
+                >
+                  <LogOut className="size-4" aria-hidden />
+                  <span className="flex-1">Sign out</span>
+                  <span className="max-w-32 truncate text-[11px] text-muted-foreground">
+                    {identity.email}
+                  </span>
+                </DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem asChild className="cursor-pointer sm:hidden">
+                  <Link href="/login">
+                    <LogIn className="size-4" aria-hidden />
+                    <span className="flex-1">Sign in</span>
+                  </Link>
+                </DropdownMenuItem>
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
 

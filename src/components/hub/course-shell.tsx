@@ -345,7 +345,17 @@ function MobileDrawerInner({
         {!pathname.includes("/past-papers") && (
           <div className="mt-5 border-t pt-4">
             <p className="sr-only">Topics</p>
-            <div onClickCapture={onNavigate} role="presentation">
+            {/* Mobile UX audit (2026-09-28) P1: close ONLY on real navigation
+                (leaf links / "View all topics"). The old onClickCapture fired
+                on the expand/collapse <button>s too — the drawer unmounted,
+                TopicTree's expanded state reset on remount, and no topic
+                beyond the auto-expanded one could ever be browsed on mobile. */}
+            <div
+              role="presentation"
+              onClick={(e) => {
+                if ((e.target as HTMLElement).closest("a")) onNavigate();
+              }}
+            >
               <TopicTreeWithIndex variant={variant} activeSubtopic={activeSubtopic} />
             </div>
           </div>
