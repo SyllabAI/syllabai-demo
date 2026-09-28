@@ -83,6 +83,13 @@ interface LearnerBridgePayload {
   questionCodes: Record<string, string[]>;
   partParent: Record<string, string>;
   flashcardCodes: Record<string, string[]>;
+  /** spec-point id → statement text (from the same exported kg file as
+   *  pointIds — lets dashboard-scale surfaces name a point without a
+   *  second bundle read). Bare ids, no text for absent points. */
+  pointTexts: Record<string, string>;
+  /** note id → display title (same notes.json read as noteCodes) —
+   *  lets surfaces link "the note covering this point" by name. */
+  noteTitles: Record<string, string>;
   misconceptions: BridgeMisconception[];
   /** sim-learner disclaimer for drawer labelling — null when no states exist */
   misconceptionDisclaimer: string | null;
@@ -118,7 +125,10 @@ export function GET(request: Request) {
   const cached = cache.get(slug);
   if (cached) return NextResponse.json(cached);
 
-  const kg = safeRead<{ points?: { id?: string }[]; meta?: { code?: string } }>(
+  const kg = safeRead<{
+    points?: { id?: string; text?: string }[];
+    meta?: { code?: string };
+  }>(
     join(process.cwd(), "public", "kg", "data", `${slug}.json`),
   );
   if (!kg || !Array.isArray(kg.points)) {
@@ -129,10 +139,17 @@ export function GET(request: Request) {
   }
   const pointIds = kg.points.map((p) => String(p?.id ?? "")).filter(Boolean);
   const codePrefix = kg.meta?.code ?? null;
+  const pointTexts: Record<string, string> = {};
+  for (const p of kg.points) {
+    const id = String(p?.id ?? "");
+    const text = typeof p?.text === "string" ? p.text : "";
+    if (id && text) pointTexts[id] = text;
+  }
 
   const noteCodes: Record<string, string[]> = {};
   interface NoteRef {
     noteId?: string;
+    title?: string;
     specPointCodes?: string[];
   }
   // notes.json is a top-level array in current bundles; accept {notes:[]} too
@@ -142,9 +159,11 @@ export function GET(request: Request) {
   const noteList: NoteRef[] = Array.isArray(notesRaw)
     ? notesRaw
     : (notesRaw?.notes ?? []);
+  const noteTitles: Record<string, string> = {};
   for (const note of noteList) {
     if (note.noteId && Array.isArray(note.specPointCodes)) {
       noteCodes[note.noteId] = note.specPointCodes.map(String);
+      if (typeof note.title === "string" && note.title) noteTitles[note.noteId] = note.title;
     }
   }
 
@@ -264,6 +283,8 @@ export function GET(request: Request) {
     questionCodes,
     partParent,
     flashcardCodes,
+    pointTexts,
+    noteTitles,
     misconceptions,
     misconceptionDisclaimer: misconceptions.length ? (sim?.disclaimer ?? null) : null,
   };
