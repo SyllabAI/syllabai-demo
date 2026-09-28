@@ -34,6 +34,7 @@ import {
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -93,11 +94,11 @@ export function TeacherClient({
   const [state, setState] = useState<{
     course: string;
     data?: TeacherCourseData;
-    error?: boolean;
+    error?: string;
   } | null>(null);
   const loading = course !== null && state?.course !== course;
   const data = state?.course === course ? state.data : undefined;
-  const loadFailed = state?.course === course ? Boolean(state.error) : false;
+  const loadError = state?.course === course ? state.error : undefined;
 
   useEffect(() => {
     if (!course) return;
@@ -110,8 +111,12 @@ export function TeacherClient({
       .then((payload) => {
         if (!cancelled) setState({ course, data: payload });
       })
-      .catch(() => {
-        if (!cancelled) setState({ course, error: true });
+      .catch((err) => {
+        if (!cancelled)
+          setState({
+            course,
+            error: err instanceof Error ? err.message : "failed to load course data",
+          });
       });
     return () => {
       cancelled = true;
@@ -180,6 +185,16 @@ export function TeacherClient({
 
       <TeacherNav />
 
+      {loadError && (
+        <Alert variant="destructive">
+          <AlertTitle>Course data unavailable</AlertTitle>
+          <AlertDescription>
+            {loadError}. The snapshot cards below are blank because the request failed — switch
+            subject and back to retry.
+          </AlertDescription>
+        </Alert>
+      )}
+
       {/* subject selector — teachers work subject-first (§3) */}
       <div className="flex flex-wrap items-center gap-3">
         <div className="relative">
@@ -203,7 +218,7 @@ export function TeacherClient({
           </Badge>
         )}
         <span className="text-[11px] text-muted-foreground">
-          Class: {data?.class.className ?? "—"}
+          Class: {loading ? "…" : loadError ? "unavailable" : (data?.class.className ?? "—")}
         </span>
       </div>
 

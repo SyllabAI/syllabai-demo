@@ -118,7 +118,7 @@ export function CourseShell({
   // own re-open button, so the sidebar could never be toggled back open.
   const rail = (
     <aside
-      className="sticky top-14 hidden h-[calc(100vh-3.5rem-1px)] w-11 shrink-0 flex-col items-center border-r bg-background pt-3 lg:flex"
+      className="sticky top-14 hidden h-[calc(100dvh-3.5rem-1px)] w-11 shrink-0 flex-col items-center border-r bg-background pt-3 lg:flex"
       aria-label="Course navigation"
     >
       <Button
@@ -211,7 +211,7 @@ export function CourseShell({
 
   return (
     <CourseDataProvider data={data}>
-      <div className="flex min-h-[calc(100vh-3.5rem-1px)]">
+      <div className="flex min-h-[calc(100dvh-3.5rem-1px)]">
         {/* mobile drawer: nav groups + the resource topic tree */}
         {open && (
           <div className="fixed inset-0 z-40 lg:hidden" role="dialog" aria-modal="true">
@@ -234,7 +234,7 @@ export function CourseShell({
           rail
         ) : (
           <aside
-            className="sticky top-14 hidden h-[calc(100vh-3.5rem-1px)] w-64 shrink-0 border-r bg-background lg:block"
+            className="sticky top-14 hidden h-[calc(100dvh-3.5rem-1px)] w-64 shrink-0 border-r bg-background lg:block"
             aria-label="Course navigation"
           >
             {sidebar}
@@ -281,7 +281,7 @@ function MobileDrawerInner({
     <div className="flex h-full flex-col">
       <div className="flex items-center justify-between px-4 py-3">
         <span className="text-sm font-semibold tracking-tight">{data.course.label ?? data.course.subject}</span>
-        <Button variant="ghost" size="icon" className="size-8" onClick={onNavigate} aria-label="Close menu">
+        <Button variant="ghost" size="icon" className="size-9" onClick={onNavigate} aria-label="Close menu">
           <X className="size-4" aria-hidden />
         </Button>
       </div>

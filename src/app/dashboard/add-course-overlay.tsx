@@ -169,7 +169,7 @@ export function AddCourseOverlay({
               disabled={!level}
             />
             <div
-              className="max-h-[42vh] space-y-1.5 overflow-y-auto pr-1"
+              className="max-h-[42dvh] space-y-1.5 overflow-y-auto pr-1"
               aria-live="polite"
             >
               {!level ? (

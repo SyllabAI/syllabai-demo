@@ -451,7 +451,9 @@
    toolbar + scroll area flex to the full height. */
 .pp-pane:fullscreen {
   width: 100vw;
+  /* dvh cascade fallback: browsers without dvh keep 100vh above */
   height: 100vh;
+  height: 100dvh;
   max-width: none;
   max-height: none;
   border: 0;

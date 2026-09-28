@@ -240,7 +240,6 @@ export function KnowledgeGraphClient({ courses }: { courses: CourseLite[] }) {
           asChild
           variant="outline"
           size="icon"
-          className="size-8"
           aria-label="Open this course graph in a new tab"
         >
           <a href={iframeSrc} target="_blank" rel="noreferrer">
@@ -250,7 +249,7 @@ export function KnowledgeGraphClient({ courses }: { courses: CourseLite[] }) {
         <Button
           variant="outline"
           size="icon"
-          className="size-8"
+          
           aria-label="Toggle fullscreen"
           onClick={toggleFullscreen}
         >

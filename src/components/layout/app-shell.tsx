@@ -87,7 +87,7 @@ export function AppShell({
   const bare = inCourse || inExplorer || inTutor;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-dvh bg-background">
       {/* solid header (SME parity): a translucent bar lets large H1 text bleed
           through on scroll and reads as a rendering glitch (UX audit 2026-09-19) */}
       <header className="sticky top-0 z-40 border-b bg-background print:hidden">
@@ -104,7 +104,7 @@ export function AppShell({
           <DropdownMenu>
             <DropdownMenuTrigger
               className={cn(
-                "inline-flex h-9 items-center gap-1.5 rounded-md px-3 text-sm font-medium transition-colors",
+                "inline-flex h-10 items-center gap-1.5 rounded-md px-3 text-sm font-medium transition-colors",
                 "hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
               )}
             >
