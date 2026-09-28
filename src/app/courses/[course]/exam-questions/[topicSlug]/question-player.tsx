@@ -21,10 +21,13 @@
  *   - "View answer" → full-screen mark-scheme modal (topic pill, question
  *     restated with Show more, AND-joined marking points with [N mark] tags,
  *     your typed answers shown alongside for comparison);
- *   - "Question help" → the grounded tutor anchored to the question.
+ *   - "Question help" → the question↔note help panel (revision notes joined
+ *     through the question's spec-point codes), with the grounded tutor as
+ *     the escape hatch.
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
+  BookOpen,
   Bookmark,
   BookmarkCheck,
   CheckCircle2,
@@ -45,6 +48,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
+import { QuestionHelpPanel } from "@/components/question-help-panel";
 import { Markdown } from "@/components/markdown";
 import { PartProblem } from "@/components/part-problem";
 import {
@@ -314,6 +318,7 @@ function QuestionBody({
 }) {
   const progress = useCourseProgress(course);
   const [scoreDraft, setScoreDraft] = useState<string>("");
+  const [helpOpen, setHelpOpen] = useState(false);
   const anchorSpec = question.parts.flatMap((p) => p.specPointCodes)[0] ?? null;
   const helpHref = `/tutor?q=${encodeURIComponent(
     `Help me with this exam question: ${firstLine(question)} — walk me through how to answer it`,
@@ -398,14 +403,31 @@ function QuestionBody({
           </span>
         )}
         <div className="ml-auto flex items-center gap-2">
-          <Button asChild size="sm" variant="ghost" className="gap-1.5 text-xs">
-            <a href={helpHref}>Question help</a>
+          <Button
+            size="sm"
+            variant="ghost"
+            className="gap-1.5 text-xs"
+            onClick={() => setHelpOpen((o) => !o)}
+            aria-expanded={helpOpen}
+          >
+            <BookOpen className="size-3.5" aria-hidden /> Question help
           </Button>
           <Button size="sm" variant="outline" onClick={onViewModel}>
             View answer
           </Button>
         </div>
       </div>
+
+      {/* the question↔note cross-link: notes joined through the question's
+          spec-point codes, bodies lazy on expand (web parity, ADR-026) */}
+      {helpOpen && (
+        <QuestionHelpPanel
+          course={course}
+          questionId={question.id}
+          specPointCodes={question.parts.flatMap((p) => p.specPointCodes)}
+          tutorHref={helpHref}
+        />
+      )}
     </div>
   );
 }

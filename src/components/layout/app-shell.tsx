@@ -14,6 +14,7 @@ import { usePathname } from "next/navigation";
 import {
   Atom,
   BookOpen,
+  BookOpenCheck,
   BrainCircuit,
   ChevronDown,
   CircleHelp,
@@ -57,6 +58,7 @@ const TOOLS = [
 
 const DEMO_TOOLS = [
   { href: "/tutor", label: "AI Tutor", icon: Sparkles },
+  { href: "/assistant", label: "Assistant", icon: BookOpenCheck },
   { href: "/practice", label: "Practice", icon: Zap },
   { href: "/knowledge-graph", label: "Knowledge Graph", icon: Network },
   { href: "/graph-explorer", label: "Graph Explorer (OpenHuman)", icon: Waypoints },
