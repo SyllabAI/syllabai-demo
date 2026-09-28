@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * My learning state / History drawer — KG phase 2.
+ * My learning state / History drawer — KG phase 2 + 3.
  *
  * The host-side answer to the web workbench's StateView + HistoryView, built
  * over the same derivation that paints the graph (lib/kg-learner-state.ts —
@@ -9,26 +9,29 @@
  *
  *   - My state: stored → effective mastery per touched spec point
  *     (Ebbinghaus decay, demo parameters), the decay-derived review queue
- *     with deep links into mapped revision notes, exposure-only points and
- *     the awaiting-marks count.
+ *     with deep links into mapped revision notes, the misconception watch
+ *     (phase 3 — sim learner states over the course corpus, SIMULATED),
+ *     exposure-only points and the awaiting-marks count.
  *   - History: the recorded evidence stream — facts only (what was answered,
  *     how it was marked, when), mirroring the web workbench's honesty rules:
  *     typed drafts without a self-score show "awaiting marks", never a guess.
  *
  * Everything is browser-local progress evidence — SIMULATED by design, and
- * labelled so on the sheet itself. No misconception card: the demo has no
- * distractor→misconception evidence yet (phase 3), and an always-empty card
- * would promise a capability the data cannot back.
+ * labelled so on the sheet itself. The misconception card shows only what
+ * the course corpus + seeded sim learner actually carry (active / watching);
+ * courses without a corpus render no card rather than an empty promise.
  */
 import Link from "next/link";
 import {
   BookOpen,
   CalendarClock,
+  Eye,
   Gauge,
   Hourglass,
   Info,
   ListChecks,
   ScanEye,
+  TriangleAlert,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -49,6 +52,7 @@ import {
   formatRelative,
   type LearnerDrawerState,
   type LearnerEvent,
+  type MisconceptionWatch,
   type PointState,
 } from "@/lib/kg-learner-state";
 
@@ -138,6 +142,74 @@ function NoteLink({ noteId }: { noteId: string }) {
   );
 }
 
+function MisconceptionWatchCard({ watch }: { watch: MisconceptionWatch }) {
+  const active = watch.items.filter((m) => m.active);
+  const watching = watch.items.filter((m) => !m.active);
+  return (
+    <section className="rounded-lg border">
+      <header className="flex flex-wrap items-center gap-2 border-b px-3 py-2">
+        <TriangleAlert className="size-4 text-destructive" aria-hidden />
+        <h3 className="text-sm font-semibold">Misconception watch</h3>
+        <Badge variant="outline" className="font-mono text-[10px] text-muted-foreground">
+          {active.length} active · {watching.length} watching
+        </Badge>
+        <Badge variant="outline" className="ml-auto text-[10px] text-muted-foreground">
+          SIMULATED
+        </Badge>
+      </header>
+      <div className="px-3 py-2">
+        <ul className="divide-y">
+          {watch.items.map((m) => (
+            <li key={m.id} className="flex items-start gap-2 py-2 first:pt-0 last:pb-0">
+              {m.active ? (
+                <TriangleAlert
+                  className="mt-0.5 size-3.5 shrink-0 text-destructive"
+                  aria-hidden
+                />
+              ) : (
+                <Eye className="mt-0.5 size-3.5 shrink-0 text-muted-foreground" aria-hidden />
+              )}
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <Badge
+                    variant="outline"
+                    className={
+                      m.active
+                        ? "border-destructive/40 text-[10px] text-destructive"
+                        : "text-[10px] text-muted-foreground"
+                    }
+                  >
+                    {m.active ? "active" : "watching"}
+                  </Badge>
+                  <span className="text-xs font-medium">{m.title}</span>
+                </div>
+                <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="text-[10px] text-muted-foreground">
+                    {Math.round(m.probability * 100)}% likelihood · {m.evidenceCount} evidence
+                    {m.evidenceCount === 1 ? " signal" : " signals"}
+                  </span>
+                  <PointChips codes={m.points} />
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <footer className="border-t px-3 py-2">
+        <p className="flex items-start gap-1.5 text-[10px] leading-relaxed text-muted-foreground">
+          <Info className="mt-0.5 size-3 shrink-0" aria-hidden />
+          <span>
+            {watch.disclaimer ??
+              "Simulated demo learner state over the course misconception corpus."} The
+            patterns themselves are SME / mark-scheme-documented; the active / watching
+            state is a deterministic demo overlay, not measured evidence.
+          </span>
+        </p>
+      </footer>
+    </section>
+  );
+}
+
 function StateTab({ drawer }: { drawer: LearnerDrawerState }) {
   const stats = drawer.stats;
   const exposureOnly = Math.max(0, stats.touched - stats.measured);
@@ -169,6 +241,11 @@ function StateTab({ drawer }: { drawer: LearnerDrawerState }) {
           tone="text-warn"
         />
       </div>
+
+      {/* misconception watch (phase 3) — only when the course corpus carries one */}
+      {drawer.misconceptionWatch && drawer.misconceptionWatch.items.length > 0 && (
+        <MisconceptionWatchCard watch={drawer.misconceptionWatch} />
+      )}
 
       {/* review queue */}
       <section className="rounded-lg border">
@@ -287,6 +364,15 @@ function StateTab({ drawer }: { drawer: LearnerDrawerState }) {
                       <span className="w-20 shrink-0 text-right text-[11px] tabular-nums text-muted-foreground">
                         {p.stored}% → {p.effective}%
                       </span>
+                      {p.misconception && (
+                        <Badge
+                          variant="outline"
+                          className="shrink-0 border-destructive/40 text-[10px] text-destructive"
+                          title={p.misconception}
+                        >
+                          misconception
+                        </Badge>
+                      )}
                       {p.reviewDue && (
                         <Badge
                           variant="outline"
@@ -297,7 +383,16 @@ function StateTab({ drawer }: { drawer: LearnerDrawerState }) {
                       )}
                     </div>
                   ) : (
-                    <div className="mt-1">
+                    <div className="mt-1 flex flex-wrap items-center gap-1.5">
+                      {p.misconception && (
+                        <Badge
+                          variant="outline"
+                          className="border-destructive/40 text-[10px] text-destructive"
+                          title={p.misconception}
+                        >
+                          misconception — unmeasured point
+                        </Badge>
+                      )}
                       <Badge variant="outline" className="text-[10px] text-muted-foreground">
                         exposure only — no marked attempt
                       </Badge>

@@ -27,8 +27,14 @@
  *     is due when its Ebbinghaus-decayed effective mastery crosses the band
  *     threshold above where it was demonstrated (τ = 30/90/365 days — demo
  *     parameters, same shape as the web workbench's nightly job).
- *   - confidence / fluency / misconception stay null (attempt-slider
- *     telemetry and the SME pitfall pipeline are later phases).
+ *   - `misconception` (KG phase 3) comes from the content bridge: the course's
+ *     misconception corpus (SME/mark-scheme provenance) supplies content and
+ *     spec-point mapping, the seeded sim learner supplies state (probability /
+ *     active / evidenceCount — SIMULATED, deterministic). Active states ride
+ *     the overlay as the renderer's misconception signal; they NEVER invent
+ *     mastery — points without marked attempts stay "Not measured".
+ *   - confidence / fluency stay null (attempt-slider telemetry is a later
+ *     phase).
  *
  * The result is pushed into the iframe over postMessage (`syllabai-kg:learner`)
  * by the knowledge-graph host; the renderer gates its embedded sample off the
@@ -63,6 +69,8 @@ export interface LearnerOverlayStats {
   /** typed answer drafts whose question was never self-scored */
   awaitingMarks: number;
   reviewDue: number;
+  /** points under an ACTIVE simulated misconception (KG phase 3) */
+  misconceptions: number;
 }
 
 export interface LearnerOverlay {
@@ -79,6 +87,25 @@ export interface LearnerBridge {
   questionCodes: Record<string, string[]>;
   partParent: Record<string, string>;
   flashcardCodes: Record<string, string[]>;
+  /** KG phase 3 — corpus content × sim-learner state (empty for courses
+   *  without a misconception corpus; see api/kg-learner-bridge) */
+  misconceptions: BridgeMisconception[];
+  misconceptionDisclaimer: string | null;
+}
+
+/** One watched misconception — content from the corpus, state from the seeded
+ *  sim learner (SIMULATED). `label` is the short string carried on the
+ *  renderer's misconception glyph. */
+export interface BridgeMisconception {
+  id: string;
+  title: string;
+  label: string;
+  summary: string | null;
+  /** raw (curriculum-prefixed) spec-point codes */
+  points: string[];
+  probability: number;
+  active: boolean;
+  evidenceCount: number;
 }
 
 // ── bridge fetch (per-course, in-process cache) ─────────────────────────
@@ -118,6 +145,8 @@ export interface PointDetail {
    *  not practice: it must not refresh the memory-decay clock) */
   lastAttemptAt: number;
   reviewDue: boolean;
+  /** active simulated misconception label — never mastery evidence */
+  misconception: string | null;
 }
 
 export interface LearnerModel extends LearnerOverlay {
@@ -242,7 +271,51 @@ export function buildOverlay(
       lastAt: a.lastAt,
       lastAttemptAt: a.lastAttemptAt,
       reviewDue,
+      misconception: null,
     });
+  }
+
+  // ── misconception watch (KG phase 3 — SIMULATED, see header) ──────
+  // Active sim states ride the overlay as the renderer's misconception
+  // signal (glyph + teacher queue + next-best-action). They never invent
+  // mastery: a misconception-only point keeps mastery null → the renderer
+  // still shows "Not measured" for it. Strongest state wins per point.
+  // Misconception-only points ride the OVERLAY only — they stay out of the
+  // per-point details (the drawer's mastery table is evidence-derived); the
+  // drawer's watch card is their surface.
+  const watched = new Map<string, { label: string; active: boolean; probability: number }>();
+  for (const m of bridge.misconceptions ?? []) {
+    for (const raw of m.points) {
+      const id = normalizeCode(raw, bridge.codePrefix);
+      if (!pointIds.has(id)) continue;
+      const prev = watched.get(id);
+      if (
+        !prev ||
+        (m.active && !prev.active) ||
+        (m.active === prev.active && m.probability > prev.probability)
+      ) {
+        watched.set(id, { label: m.label, active: m.active, probability: m.probability });
+      }
+    }
+  }
+  let misPoints = 0;
+  for (const [pointId, w] of watched) {
+    const existing = entries[pointId];
+    if (existing) {
+      existing.misconception = w.label;
+    } else {
+      entries[pointId] = {
+        mastery: null,
+        confidence: null,
+        fluency: null,
+        evidence: 0,
+        reviewDue: false,
+        misconception: w.label,
+      };
+    }
+    const detail = details.find((d) => d.pointId === pointId);
+    if (detail) detail.misconception = w.label;
+    if (w.active) misPoints += 1;
   }
 
   return {
@@ -257,6 +330,7 @@ export function buildOverlay(
       flashcards,
       awaitingMarks,
       reviewDue: reviewDueCount,
+      misconceptions: misPoints,
     },
   };
 }
@@ -272,4 +346,5 @@ export const emptyStats: LearnerOverlayStats = {
   flashcards: 0,
   awaitingMarks: 0,
   reviewDue: 0,
+  misconceptions: 0,
 };

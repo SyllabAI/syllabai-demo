@@ -21,6 +21,15 @@ import { join } from "node:path";
  *                           only reference points the renderer actually has)
  *                           + the curriculum code used as the "4CH1-" style
  *                           prefix on some bundles' specPointCodes
+ *   - concept-graph.json  → KG phase 3: MISCONCEPTION nodes (SME/mark-scheme
+ *                           provenance) joined to spec points via their
+ *                           MISCONCEPTION_OF / WRONG_ANSWER_PATTERN edges into
+ *                           CONCEPT nodes (which carry the specPoints)
+ *   - learner-sim.json    → the seeded demo learner's misconception states
+ *                           (probability / active / evidenceCount) — SIMULATED,
+ *                           deterministic; only courses carrying BOTH a corpus
+ *                           and sim states produce entries, everything else
+ *                           gets an honest empty list
  *
  * Codes only — no question text, note bodies or answers cross this boundary.
  * Responses are cached in-process; the bundles are immutable between deploys.
@@ -51,6 +60,20 @@ interface QuestionSet {
   questions?: Question[];
 }
 
+/** One watched misconception — content from the corpus, state from the sim
+ *  learner. `label` is the short overlay string the renderer glyph carries. */
+interface BridgeMisconception {
+  id: string;
+  title: string;
+  label: string;
+  summary: string | null;
+  /** raw spec-point codes the misconception maps onto (curriculum-prefixed) */
+  points: string[];
+  probability: number;
+  active: boolean;
+  evidenceCount: number;
+}
+
 interface LearnerBridgePayload {
   course: string;
   codePrefix: string | null;
@@ -60,6 +83,9 @@ interface LearnerBridgePayload {
   questionCodes: Record<string, string[]>;
   partParent: Record<string, string>;
   flashcardCodes: Record<string, string[]>;
+  misconceptions: BridgeMisconception[];
+  /** sim-learner disclaimer for drawer labelling — null when no states exist */
+  misconceptionDisclaimer: string | null;
 }
 
 const cache = new Map<string, LearnerBridgePayload>();
@@ -155,6 +181,80 @@ export function GET(request: Request) {
     if (codes.length) flashcardCodes[id] = codes;
   }
 
+  // ── misconceptions (KG phase 3) — corpus content × sim-learner state ──
+  interface GraphNode {
+    code?: string;
+    family?: string;
+    title?: string;
+    aliases?: string[];
+    summary?: string | null;
+    specPoints?: string[];
+  }
+  interface GraphEdge {
+    source?: string;
+    target?: string;
+    relation?: string;
+  }
+  interface SimState {
+    misconceptionNodeId?: string;
+    probability?: number;
+    active?: boolean;
+    evidenceCount?: number;
+  }
+  interface SimLearner {
+    disclaimer?: string;
+    misconceptionStates?: SimState[];
+  }
+  const graph = safeRead<{ nodes?: GraphNode[]; edges?: GraphEdge[] }>(
+    join(process.cwd(), "content", slug, "concept-graph.json"),
+  );
+  const sim = safeRead<SimLearner>(
+    join(process.cwd(), "content", slug, "learner-sim.json"),
+  );
+  const misNodes = new Map<string, GraphNode>();
+  const conceptPoints = new Map<string, string[]>();
+  for (const node of graph?.nodes ?? []) {
+    if (!node.code) continue;
+    if (node.family === "MISCONCEPTION") misNodes.set(node.code, node);
+    else if (node.family === "CONCEPT") conceptPoints.set(node.code, node.specPoints ?? []);
+  }
+  // MISCONCEPTION_OF / WRONG_ANSWER_PATTERN edges into concepts that carry
+  // spec points — the corpus's own mapping, nothing inferred here
+  const pointsByMis = new Map<string, Set<string>>();
+  for (const edge of graph?.edges ?? []) {
+    if (!edge.source || !misNodes.has(edge.source)) continue;
+    if (edge.relation !== "MISCONCEPTION_OF" && edge.relation !== "WRONG_ANSWER_PATTERN") continue;
+    const pts = edge.target ? conceptPoints.get(edge.target) : undefined;
+    if (!pts?.length) continue;
+    const set = pointsByMis.get(edge.source) ?? new Set<string>();
+    pts.forEach((p) => set.add(p));
+    pointsByMis.set(edge.source, set);
+  }
+  const misconceptions: BridgeMisconception[] = [];
+  for (const state of sim?.misconceptionStates ?? []) {
+    const id = state.misconceptionNodeId ?? "";
+    const node = misNodes.get(id);
+    const points = [...(pointsByMis.get(id) ?? [])];
+    if (!node || !node.title || points.length === 0) continue;
+    const rawLabel = node.aliases?.[0] ?? node.title;
+    misconceptions.push({
+      id,
+      title: node.title,
+      label: rawLabel.length > 64 ? `${rawLabel.slice(0, 63)}\u2026` : rawLabel,
+      summary: node.summary ?? null,
+      points,
+      probability: Math.min(1, Math.max(0, state.probability ?? 0)),
+      active: state.active ?? false,
+      evidenceCount: Math.max(0, state.evidenceCount ?? 0),
+    });
+  }
+  misconceptions.sort(
+    (a, b) =>
+      Number(b.active) - Number(a.active) ||
+      b.probability - a.probability ||
+      a.id.localeCompare(b.id),
+  );
+
   const payload: LearnerBridgePayload = {
     course: slug,
     codePrefix,
@@ -164,6 +264,8 @@ export function GET(request: Request) {
     questionCodes,
     partParent,
     flashcardCodes,
+    misconceptions,
+    misconceptionDisclaimer: misconceptions.length ? (sim?.disclaimer ?? null) : null,
   };
   cache.set(slug, payload);
   return NextResponse.json(payload);

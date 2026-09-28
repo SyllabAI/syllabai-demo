@@ -16,14 +16,19 @@
  *     count. Bands mirror the renderer's paint (low <55 · developing 55–69 ·
  *     good 70–79 · strong ≥80) — computed on the EFFECTIVE number, like the
  *     web workbench's decayed bands.
+ *   - Misconception watch (KG phase 3): the seeded sim learner's active /
+ *     watching misconception states over the course's misconception corpus
+ *     (SME/mark-scheme provenance). SIMULATED states, labelled as such — the
+ *     demo has no distractor→misconception telemetry, so nothing here claims
+ *     measured evidence; the corpus content itself is real, the STATE is the
+ *     deterministic demo overlay.
  *   - History: the recorded evidence stream, newest first — facts only (what
  *     was answered, how it was marked, where it came from), never advice and
  *     no re-derived mastery. Typed drafts on questions without a self-score
  *     show the honest "awaiting marks" state; once a part is self-scored the
  *     draft is represented by its marked event, not by a stale awaiting row.
- *   - No misconception card: the demo has no distractor→misconception
- *     evidence yet (that pipeline is phase 3) — inventing an empty one would
- *     promise a capability the data can't back.
+ *     Simulated misconception states are NOT history events — history is
+ *     what the learner did, not what a model guesses.
  *
  * Everything derives from the browser-local progress store (SIMULATED,
  * browser-local, never written to course data) — the derivation is live, so
@@ -69,6 +74,8 @@ export interface PointState {
   dueAt: number;
   /** revision notes mapped to this point (deep-linkable) */
   noteIds: string[];
+  /** active simulated misconception label — display only, never mastery */
+  misconception: string | null;
 }
 
 export interface ReviewItem {
@@ -81,6 +88,26 @@ export interface ReviewItem {
 }
 
 export type LearnerEventKind = "marked" | "awaiting" | "exposure";
+
+/** One sim-learner misconception state for the My State watch card
+ *  (KG phase 3). Content = corpus; state = SIMULATED. */
+export interface MisconceptionWatchItem {
+  id: string;
+  title: string;
+  label: string;
+  summary: string | null;
+  /** normalized spec-point ids present in the exported spine */
+  points: string[];
+  probability: number;
+  active: boolean;
+  evidenceCount: number;
+}
+
+export interface MisconceptionWatch {
+  items: MisconceptionWatchItem[];
+  /** the seeded sim learner's own disclaimer, verbatim */
+  disclaimer: string | null;
+}
 
 export interface LearnerEvent {
   id: string;
@@ -106,6 +133,8 @@ export interface LearnerDrawerState {
   /** not due yet, but crossing their threshold within the window — the
    *  decay model made legible (capped) */
   upcoming: ReviewItem[];
+  /** misconception watch (KG phase 3) — null when the course has no corpus */
+  misconceptionWatch: MisconceptionWatch | null;
   /** recorded evidence stream, newest first (capped) */
   events: LearnerEvent[];
   /** number of recorded signals before the display cap */
@@ -203,6 +232,7 @@ function buildDrawerState(
       reviewDue: d.reviewDue,
       dueAt: stored == null ? d.lastAt : reviewDueAt(stored, d.lastAttemptAt),
       noteIds: notesByPoint.get(d.pointId) ?? [],
+      misconception: d.misconception,
     };
   });
   // review-due first (stalest due date first), then measured rows weakest
@@ -329,11 +359,34 @@ function buildDrawerState(
 
   events.sort((a, b) => b.at - a.at || a.id.localeCompare(b.id));
 
+  // ── misconception watch (KG phase 3) — active first, then probability ──
+  const watchItems: MisconceptionWatchItem[] = (bridge.misconceptions ?? [])
+    .map((m) => ({
+      id: m.id,
+      title: m.title,
+      label: m.label,
+      summary: m.summary,
+      points: toPointIds(m.points),
+      probability: m.probability,
+      active: m.active,
+      evidenceCount: m.evidenceCount,
+    }))
+    .filter((m) => m.points.length > 0)
+    .sort(
+      (a, b) =>
+        Number(b.active) - Number(a.active) ||
+        b.probability - a.probability ||
+        a.id.localeCompare(b.id),
+    );
+
   return {
     stats: model.stats,
     pointStates,
     reviewQueue,
     upcoming,
+    misconceptionWatch: watchItems.length
+      ? { items: watchItems, disclaimer: bridge.misconceptionDisclaimer }
+      : null,
     events: events.slice(0, EVENTS_CAP),
     eventCount: events.length,
   };
