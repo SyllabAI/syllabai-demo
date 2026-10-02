@@ -37,6 +37,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Markdown } from "@/components/markdown";
+import { normalizeMathDelimiters } from "@/lib/mathNormalize";
 import type { TutorCitation } from "@/lib/contracts";
 import { cn } from "@/lib/utils";
 
@@ -325,7 +326,7 @@ export function NoteCla({
                       Honest refusal — bounded to this note
                     </p>
                   )}
-                  <Markdown className="text-sm [&_p]:text-sm">{m.content}</Markdown>
+                  <Markdown className="text-sm [&_p]:text-sm">{normalizeMathDelimiters(m.content)}</Markdown>
                   {m.citations && m.citations.length > 0 && !m.refused && (
                     <div className="flex flex-wrap gap-1 pt-0.5">
                       {m.citations.map((c) => (
