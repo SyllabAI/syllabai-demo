@@ -46,6 +46,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Markdown } from "@/components/markdown";
+import { normalizeMathDelimiters } from "@/lib/mathNormalize";
 import { useCourseProgress } from "@/lib/progress";
 import type { TutorCitation } from "@/lib/contracts";
 import { cn } from "@/lib/utils";
@@ -550,7 +551,7 @@ export function AssistantClient({
                   Honest refusal — the anchored material does not support this
                 </p>
               )}
-              <Markdown className="text-sm [&_p]:text-sm">{m.content}</Markdown>
+              <Markdown className="text-sm [&_p]:text-sm">{normalizeMathDelimiters(m.content)}</Markdown>
               {m.citations && m.citations.length > 0 && !m.refused && (
                 <div className="flex flex-wrap gap-1 pt-0.5">
                   {m.citations.map((c) => {

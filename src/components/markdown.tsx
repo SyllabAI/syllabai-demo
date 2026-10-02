@@ -4,12 +4,12 @@ import "katex/dist/katex.min.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
 import rehypeRaw from "rehype-raw";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { normalizeCorpusMath, sanitizeMathTex } from "@/lib/math-fix";
 import { normalizeCorpusEmphasis } from "@/lib/emphasis-fix";
+import { rehypeKatexMhchem } from "@/lib/rehypeKatexMhchem";
 
 /**
  * Markdown renderer for corpus content (SME notes, questions, solutions,
@@ -145,7 +145,15 @@ export function Markdown({
         rehypePlugins={[
           rehypeRaw,
           rehypeFixMathValues,
-          [rehypeKatex, { throwOnError: false, errorColor: "#b91c1c", strict: "ignore" }],
+          // T-C51: upstream rehype-katex replaced by the LOCAL
+          // rehypeKatexMhchem (s142, ported back from hub main) — the
+          // upstream plugin can land on a different katex module instance
+          // than `katex/contrib/mhchem` registers on, which rendered every
+          // \ce{} as red error text; importing BOTH katex and the mhchem
+          // side-effect inside the plugin makes renderer and macro
+          // registration share one instance by construction. Same options
+          // as before; behaviour is a faithful rehype-katex@7.0.1 port.
+          [rehypeKatexMhchem, { throwOnError: false, errorColor: "#b91c1c", strict: "ignore" }],
         ]}
         components={{
           h1: ({ children }) => (
