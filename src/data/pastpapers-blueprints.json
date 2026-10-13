@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generatedAt": "2026-09-28T09:30:32.660Z",
-  "treeSha": "029c6ec920ada225a8c1964e393f11871449d4e9",
-  "papers": 250,
+  "generatedAt": "2026-10-13T09:34:45.270Z",
+  "treeSha": "137fe803f7c1b0b4f36fb76528b60ebeaeb9be37",
+  "papers": 258,
   "inferredGaps": 3
  },
  "papers": {
@@ -624,6 +624,15 @@
    },
    "total": 100,
    "paperTotal": 100,
+   "inferred": []
+  },
+  "2019-06:4AC1-02": {
+   "marks": {
+    "1": 25,
+    "2": 25
+   },
+   "total": 50,
+   "paperTotal": 50,
    "inferred": []
   },
   "2019-06:4CH1-1C": {
@@ -1871,6 +1880,15 @@
    "paperTotal": 100,
    "inferred": []
   },
+  "2021-06:4AC1-02": {
+   "marks": {
+    "1": 25,
+    "2": 25
+   },
+   "total": 50,
+   "paperTotal": 50,
+   "inferred": []
+  },
   "2021-06:4BI1-1B": {
    "marks": {
     "1": 6,
@@ -2717,6 +2735,15 @@
    "paperTotal": 100,
    "inferred": []
   },
+  "2021-11:4AC1-02": {
+   "marks": {
+    "1": 25,
+    "2": 25
+   },
+   "total": 50,
+   "paperTotal": 50,
+   "inferred": []
+  },
   "2021-11:4BI1-1B": {
    "marks": {
     "1": 4,
@@ -2747,6 +2774,50 @@
    },
    "total": 70,
    "paperTotal": 70,
+   "inferred": []
+  },
+  "2021-11:4BS1-01": {
+   "marks": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+   },
+   "total": 80,
+   "paperTotal": 80,
+   "inferred": []
+  },
+  "2021-11:4BS1-02": {
+   "marks": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+   },
+   "total": 80,
+   "paperTotal": 80,
+   "inferred": []
+  },
+  "2021-11:4EC1-01": {
+   "marks": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+   },
+   "total": 80,
+   "paperTotal": 80,
+   "inferred": []
+  },
+  "2021-11:4EC1-02": {
+   "marks": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+   },
+   "total": 80,
+   "paperTotal": 80,
    "inferred": []
   },
   "2021-11:4MA1-1H": {
@@ -3531,6 +3602,17 @@
    "inferred": []
   },
   "2022-06:4EC1-02": {
+   "marks": {
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20
+   },
+   "total": 80,
+   "paperTotal": 80,
+   "inferred": []
+  },
+  "2022-06:4EC1-02R": {
    "marks": {
     "1": 20,
     "2": 20,
